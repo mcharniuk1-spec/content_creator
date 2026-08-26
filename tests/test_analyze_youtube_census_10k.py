@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from analyze_youtube_census_10k import classify_video, select_top_references  # noqa: E402
+from analyze_youtube_census_10k import classify_video, select_top_references, validate_evidence_identity  # noqa: E402
 
 
 def cohort_row(video_id: str = "video-1", creator_id: str = "creator-1") -> dict:
@@ -69,3 +69,24 @@ def test_top_reference_selection_enforces_one_video_per_creator() -> None:
     assert len(selected) == 100
     assert len({row["native_channel_id"] for row in selected}) == 100
     assert [row["reference_rank"] for row in selected] == list(range(1, 101))
+
+
+def test_terminal_evidence_gate_requires_exact_cohort_identity() -> None:
+    cohort_ids = {"video-1", "video-2"}
+    validate_evidence_identity(
+        cohort_ids,
+        {"video-1": {}, "video-2": {}},
+        {"video-1": {}, "video-2": {}},
+        allow_partial=False,
+    )
+    try:
+        validate_evidence_identity(
+            cohort_ids,
+            {"video-1": {}, "foreign": {}},
+            {"video-1": {}, "video-2": {}},
+            allow_partial=False,
+        )
+    except ValueError as error:
+        assert "foreign evidence" in str(error)
+    else:
+        raise AssertionError("foreign transcript identity passed the terminal gate")

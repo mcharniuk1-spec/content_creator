@@ -56,11 +56,14 @@ def load_transcripts(run_dir: Path) -> dict[str, dict[str, Any]]:
     for path in sorted((run_dir / "normalized" / "transcripts").glob("*.json")):
         try:
             row = json.loads(path.read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, OSError):
-            continue
+        except (json.JSONDecodeError, OSError) as exc:
+            raise ValueError(f"invalid transcript manifest: {path}") from exc
         video_id = row.get("native_video_id")
-        if video_id:
-            rows[video_id] = row
+        if not video_id or video_id != path.stem:
+            raise ValueError(f"transcript filename/payload identity mismatch: {path}")
+        if video_id in rows:
+            raise ValueError(f"duplicate transcript identity: {video_id}")
+        rows[video_id] = row
     return rows
 
 
@@ -69,12 +72,39 @@ def load_frame_manifests(run_dir: Path) -> dict[str, dict[str, Any]]:
     for path in sorted((run_dir / "normalized" / "frame-manifests").glob("*.json")):
         try:
             row = json.loads(path.read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, OSError):
-            continue
+        except (json.JSONDecodeError, OSError) as exc:
+            raise ValueError(f"invalid frame manifest: {path}") from exc
         video_id = row.get("native_video_id")
-        if video_id:
-            rows[video_id] = row
+        if not video_id or video_id != path.stem:
+            raise ValueError(f"frame filename/payload identity mismatch: {path}")
+        if video_id in rows:
+            raise ValueError(f"duplicate frame identity: {video_id}")
+        rows[video_id] = row
     return rows
+
+
+def validate_evidence_identity(
+    cohort_ids: set[str],
+    transcripts: dict[str, dict[str, Any]],
+    frames: dict[str, dict[str, Any]],
+    *,
+    allow_partial: bool,
+) -> None:
+    transcript_ids = set(transcripts)
+    frame_ids = set(frames)
+    foreign_transcripts = transcript_ids - cohort_ids
+    foreign_frames = frame_ids - cohort_ids
+    if foreign_transcripts or foreign_frames:
+        raise ValueError(
+            "foreign evidence identities: "
+            f"transcripts={sorted(foreign_transcripts)[:5]}, frames={sorted(foreign_frames)[:5]}"
+        )
+    if not allow_partial and (transcript_ids != cohort_ids or frame_ids != cohort_ids):
+        raise ValueError(
+            "evidence identity sets incomplete: "
+            f"transcripts={len(transcript_ids)}/{len(cohort_ids)}, "
+            f"frames={len(frame_ids)}/{len(cohort_ids)}"
+        )
 
 
 def classify_video(
@@ -264,6 +294,9 @@ def main() -> int:
     cohort = load_jsonl(run_dir / "derived" / "video-cohort.jsonl")
     if len(cohort) != 10000:
         raise ValueError(f"expected exactly 10,000 cohort rows, got {len(cohort)}")
+    cohort_ids = {row["native_video_id"] for row in cohort}
+    if len(cohort_ids) != len(cohort):
+        raise ValueError("cohort contains duplicate native_video_id values")
     creator_views: dict[str, list[int]] = defaultdict(list)
     for row in cohort:
         if row.get("view_count") is not None:
@@ -274,10 +307,7 @@ def main() -> int:
     }
     transcripts = load_transcripts(run_dir)
     frames = load_frame_manifests(run_dir)
-    if not args.allow_partial and (len(transcripts) != len(cohort) or len(frames) != len(cohort)):
-        raise ValueError(
-            f"evidence manifests incomplete: transcripts={len(transcripts)}, frames={len(frames)}, cohort={len(cohort)}"
-        )
+    validate_evidence_identity(cohort_ids, transcripts, frames, allow_partial=args.allow_partial)
     analyzed = [
         classify_video(
             row,

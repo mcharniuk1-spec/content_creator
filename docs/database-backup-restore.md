@@ -41,6 +41,18 @@ backups/
 6. Insert a `backup_receipt` row with scope, hashes, sizes, retention, and restore state.
 7. Never copy secret configuration or `keys.md` into the archive.
 
+Build the run-local manifest only after transcript and frame collection has stopped and the
+analysis outputs are frozen:
+
+```bash
+python3 scripts/build_run_artifact_manifest.py \
+  --run-dir runs/20260826-youtube-video-census-10k-v1
+```
+
+The command writes `receipts/terminal-artifact-manifest.jsonl` plus a compact summary with the
+manifest SHA-256, per-root file counts, and byte totals. It is local-only and intentionally not
+projected to GitHub, Notion, or Obsidian.
+
 Example command after local credential resolution:
 
 ```bash

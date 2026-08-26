@@ -37,6 +37,13 @@ class DiskReserveError(RuntimeError):
     pass
 
 
+def reusable_attempt(payload: dict[str, Any], success_field: str, success_value: str) -> bool:
+    """Keep observed/permanent outcomes, but retry route-level terminal gaps on resume."""
+    if payload.get(success_field) == success_value:
+        return True
+    return payload.get("collector_version") == COLLECTOR_VERSION and payload.get("gap_reason") not in TERMINAL_GAPS
+
+
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     if not path.is_file():
         return []
@@ -186,7 +193,7 @@ def collect_one_transcript(run_dir: Path, row: dict[str, Any], timeout: int, min
     normalized = run_dir / "normalized" / "transcripts" / f"{video_id}.json"
     if normalized.is_file():
         existing = json.loads(normalized.read_text(encoding="utf-8"))
-        if existing.get("availability") == "observed" or existing.get("collector_version") == COLLECTOR_VERSION:
+        if reusable_attempt(existing, "availability", "observed"):
             return existing
     ensure_disk_reserve(run_dir, minimum_free_bytes)
     raw_dir = run_dir / "raw" / "subtitles" / video_id
@@ -267,7 +274,9 @@ def collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, min
     video_id = row["native_video_id"]
     manifest_path = run_dir / "normalized" / "frame-manifests" / f"{video_id}.json"
     if manifest_path.is_file():
-        return json.loads(manifest_path.read_text(encoding="utf-8"))
+        existing = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if reusable_attempt(existing, "status", "observed"):
+            return existing
     ensure_disk_reserve(run_dir, minimum_free_bytes)
     raw_dir = run_dir / "raw" / "storyboards" / video_id
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -299,6 +308,7 @@ def collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, min
             "terminal_class": gap if gap in TERMINAL_GAPS else None,
             "frames": [],
             "artifact_run_key": run_dir.name,
+            "collector_version": COLLECTOR_VERSION,
         }
     else:
         message = BytesParser(policy=policy.default).parsebytes(mhtml.read_bytes())
@@ -348,6 +358,7 @@ def collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, min
                 },
                 "frames": frames,
                 "artifact_run_key": run_dir.name,
+                "collector_version": COLLECTOR_VERSION,
             }
         else:
             result = {
@@ -358,6 +369,7 @@ def collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, min
                 "gap_reason": "storyboard_has_no_images",
                 "frames": [],
                 "artifact_run_key": run_dir.name,
+                "collector_version": COLLECTOR_VERSION,
             }
     write_json(manifest_path, result)
     write_json(run_dir / "receipts" / "storyboards" / f"{video_id}.json", {

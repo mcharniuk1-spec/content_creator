@@ -32,3 +32,20 @@ def test_project_relative_paths_only(tmp_path):
         assert "inside project root" in str(error)
     else:
         raise AssertionError("outside path accepted")
+
+
+def test_loader_terminal_gate_requires_exact_identity_sets():
+    cohort_ids = {"a", "b"}
+    evidence = {"a": (Path("a.json"), {}), "b": (Path("b.json"), {})}
+    MODULE.validate_evidence_identity(cohort_ids, evidence, evidence, allow_partial=False)
+    try:
+        MODULE.validate_evidence_identity(
+            cohort_ids,
+            {"a": (Path("a.json"), {})},
+            evidence,
+            allow_partial=False,
+        )
+    except ValueError as error:
+        assert "identity sets incomplete" in str(error)
+    else:
+        raise AssertionError("incomplete evidence identity set passed")

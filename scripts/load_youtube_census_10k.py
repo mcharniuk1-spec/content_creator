@@ -62,13 +62,35 @@ def relative(path: Path) -> str:
 
 
 def get_json_files(directory: Path) -> dict[str, tuple[Path, dict[str, Any]]]:
-    result = {}
+    result: dict[str, tuple[Path, dict[str, Any]]] = {}
     for path in sorted(directory.glob("*.json")):
         payload = json.loads(path.read_text(encoding="utf-8"))
         video_id = payload.get("native_video_id")
-        if video_id:
-            result[video_id] = (path, payload)
+        if not video_id or video_id != path.stem:
+            raise ValueError(f"evidence filename/payload identity mismatch: {path}")
+        if video_id in result:
+            raise ValueError(f"duplicate evidence identity: {video_id}")
+        result[video_id] = (path, payload)
     return result
+
+
+def validate_evidence_identity(
+    cohort_ids: set[str],
+    transcripts: dict[str, tuple[Path, dict[str, Any]]],
+    frames: dict[str, tuple[Path, dict[str, Any]]],
+    *,
+    allow_partial: bool,
+) -> None:
+    transcript_ids = set(transcripts)
+    frame_ids = set(frames)
+    if transcript_ids - cohort_ids or frame_ids - cohort_ids:
+        raise ValueError("evidence contains identities outside the frozen cohort")
+    if not allow_partial and (transcript_ids != cohort_ids or frame_ids != cohort_ids):
+        raise ValueError(
+            "evidence identity sets incomplete: "
+            f"transcripts={len(transcript_ids)}/{len(cohort_ids)}, "
+            f"frames={len(frame_ids)}/{len(cohort_ids)}"
+        )
 
 
 def insert_artifact(connection: psycopg.Connection, *, run_id: int | None, content_id: int | None,
@@ -282,8 +304,12 @@ def main() -> int:
     frames = get_json_files(run_dir / "normalized" / "frame-manifests")
     if len(cohort) != 10000 or len(analyses) != 10000:
         raise ValueError("loader requires exactly 10,000 cohort and analysis rows")
-    if not args.allow_partial and (len(transcripts) != 10000 or len(frames) != 10000):
-        raise ValueError(f"evidence manifests incomplete: transcripts={len(transcripts)}, frames={len(frames)}")
+    cohort_ids = {row["native_video_id"] for row in cohort}
+    if len(cohort_ids) != len(cohort):
+        raise ValueError("cohort contains duplicate native_video_id values")
+    if set(analyses) != cohort_ids:
+        raise ValueError("analysis identity set does not exactly match the frozen cohort")
+    validate_evidence_identity(cohort_ids, transcripts, frames, allow_partial=args.allow_partial)
     counts: Counter[str] = Counter()
     with psycopg.connect(args.dsn) as connection, connection.transaction():
         connection.execute("SET search_path=north_hux,public")

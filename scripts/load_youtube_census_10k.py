@@ -54,6 +54,53 @@ def canonical_transcript_kind(value: str | None) -> str:
     return "native_caption"
 
 
+def get_or_create_transcript(
+    connection: psycopg.Connection,
+    *,
+    content_id: int,
+    payload: dict[str, Any],
+    transcript_uri: str,
+    transcript_sha256: str,
+) -> int:
+    lock_key = f"transcript:{content_id}:{transcript_sha256}"
+    connection.execute("SELECT pg_advisory_xact_lock(hashtextextended(%s,0))", (lock_key,))
+    existing = connection.execute(
+        """SELECT transcript_id FROM transcript_identity
+           WHERE content_id=%s AND transcript_sha256=%s""",
+        (content_id, transcript_sha256),
+    ).fetchone()
+    if existing:
+        return existing[0]
+    existing = connection.execute(
+        """SELECT transcript_id FROM transcript
+           WHERE content_id=%s AND transcript_sha256=%s
+           ORDER BY transcript_id LIMIT 1""",
+        (content_id, transcript_sha256),
+    ).fetchone()
+    if existing:
+        transcript_id = existing[0]
+    else:
+        transcript_id = connection.execute(
+            """INSERT INTO transcript
+               (content_id,source_kind,language_code,model_name,model_version,quality_state,
+                transcript_uri,transcript_sha256)
+               VALUES (%s,%s,%s,'public-subtitle-route',%s,'usable',%s,%s)
+               RETURNING transcript_id""",
+            (content_id, canonical_transcript_kind(payload.get("source_kind")), payload.get("language"),
+             payload.get("normalization_method") or "v1", transcript_uri, transcript_sha256),
+        ).fetchone()[0]
+    connection.execute(
+        """INSERT INTO transcript_identity (content_id,transcript_sha256,transcript_id)
+           VALUES (%s,%s,%s) ON CONFLICT DO NOTHING""",
+        (content_id, transcript_sha256, transcript_id),
+    )
+    return connection.execute(
+        """SELECT transcript_id FROM transcript_identity
+           WHERE content_id=%s AND transcript_sha256=%s""",
+        (content_id, transcript_sha256),
+    ).fetchone()[0]
+
+
 def relative(path: Path) -> str:
     resolved = path.resolve()
     if not resolved.is_relative_to(ROOT):
@@ -120,18 +167,16 @@ def insert_edge(connection: psycopg.Connection, parent: str, child: str, edge: s
 
 
 def get_or_create_job(connection: psycopg.Connection, run_id: int, adapter_id: int, kind: str) -> int:
-    row = connection.execute(
-        """SELECT job_id FROM collection_job WHERE run_id=%s AND adapter_id=%s
-           AND platform='youtube' AND job_type=%s AND target_stratum='10k-broad-screen-v1'
-           ORDER BY job_id LIMIT 1""", (run_id, adapter_id, kind),
-    ).fetchone()
-    if row:
-        return row[0]
-    return connection.execute(
+    connection.execute(
         """INSERT INTO collection_job
            (run_id,adapter_id,platform,job_type,target_stratum,status,cursor_state,started_at)
            VALUES (%s,%s,'youtube',%s,'10k-broad-screen-v1','running','{}'::jsonb,now())
-           RETURNING job_id""", (run_id, adapter_id, kind),
+           ON CONFLICT DO NOTHING""", (run_id, adapter_id, kind),
+    )
+    return connection.execute(
+        """SELECT job_id FROM collection_job WHERE run_id=%s AND adapter_id=%s
+           AND platform='youtube' AND job_type=%s AND target_stratum='10k-broad-screen-v1'
+           ORDER BY job_id LIMIT 1""", (run_id, adapter_id, kind),
     ).fetchone()[0]
 
 
@@ -144,10 +189,54 @@ def source(connection: psycopg.Connection, run_id: int, source_type: str, native
            ON CONFLICT (platform,source_type,native_id) DO NOTHING""",
         (run_id, source_type, native_id, url, role, rights),
     )
-    return connection.execute(
+    source_id = connection.execute(
         "SELECT source_id FROM source_registry WHERE platform='youtube' AND source_type=%s AND native_id=%s",
         (source_type, native_id),
     ).fetchone()[0]
+    observe_source(connection, run_id, source_id, role, rights)
+    return source_id
+
+
+def observe_source(connection: psycopg.Connection, run_id: int, source_id: int, role: str, rights: str) -> None:
+    connection.execute(
+        """INSERT INTO run_source_observation
+           (run_id,source_id,source_role,discovery_route,rights_state,observed_at)
+           VALUES (%s,%s,%s,'official-api-public-evidence',%s,now())
+           ON CONFLICT DO NOTHING""",
+        (run_id, source_id, role, rights),
+    )
+
+
+def insert_artifact_attempt(
+    connection: psycopg.Connection,
+    *,
+    run_id: int,
+    content_id: int,
+    stage: str,
+    state: str,
+    method: str,
+    reason_code: str | None,
+    artifact_uri: str,
+    artifact_sha256: str,
+    captured_at: datetime,
+) -> int:
+    latest = connection.execute(
+        """SELECT attempt_number,state,artifact_sha256 FROM artifact_attempt
+           WHERE run_id=%s AND content_id=%s AND stage=%s
+           ORDER BY attempt_number DESC LIMIT 1""",
+        (run_id, content_id, stage),
+    ).fetchone()
+    if latest and latest[1] == state and latest[2] == artifact_sha256:
+        return latest[0]
+    attempt_number = (latest[0] + 1) if latest else 1
+    connection.execute(
+        """INSERT INTO artifact_attempt
+           (run_id,content_id,stage,attempt_number,state,method,reason_code,artifact_uri,artifact_sha256,captured_at)
+           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+        (run_id, content_id, stage, attempt_number, state, method, reason_code,
+         artifact_uri, artifact_sha256, captured_at),
+    )
+    return attempt_number
 
 
 def load_campaign(connection: psycopg.Connection, run_id: int, campaign_dir: Path, evidence_artifact: str) -> Counter:
@@ -361,6 +450,8 @@ def main() -> int:
         account_ids: dict[str, int] = {}
         content_ids: dict[str, int] = {}
         metadata_artifacts: dict[str, str] = {}
+        transcript_artifacts: dict[str, str] = {}
+        frame_artifacts: dict[str, str] = {}
         for row in cohort:
             channel_id = row["native_channel_id"]
             if channel_id not in account_ids:
@@ -414,12 +505,9 @@ def main() -> int:
                 connection.execute(
                     """INSERT INTO metric_snapshot
                        (content_id,metric_definition_id,observed_at,metric_value,availability_state,is_estimated)
-                       SELECT %s,%s,%s,%s,%s,false WHERE NOT EXISTS (
-                           SELECT 1 FROM metric_snapshot WHERE content_id=%s AND metric_definition_id=%s AND observed_at=%s
-                       )""",
+                       VALUES (%s,%s,%s,%s,%s,false) ON CONFLICT DO NOTHING""",
                     (content_id, metric_ids[key], observed_at, value,
-                     "observed" if value is not None else "not_exposed",
-                     content_id, metric_ids[key], observed_at),
+                     "observed" if value is not None else "not_exposed"),
                 )
             metadata_hash = row_sha(row)
             metadata_artifacts[video_id] = insert_artifact(
@@ -434,12 +522,17 @@ def main() -> int:
             content_id = content_ids[video_id]
             path_hash = sha(path)
             state = "observed" if payload.get("availability") == "observed" else "gap"
-            connection.execute(
-                """INSERT INTO artifact_attempt
-                   (run_id,content_id,stage,attempt_number,state,method,reason_code,artifact_uri,artifact_sha256,captured_at)
-                   VALUES (%s,%s,'transcript',1,%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING""",
-                (run_id, content_id, state, payload.get("normalization_method") or "public_subtitle_route",
-                 payload.get("gap_reason") if state == "gap" else None, relative(path), path_hash, stamp(payload.get("captured_at"))),
+            insert_artifact_attempt(
+                connection,
+                run_id=run_id,
+                content_id=content_id,
+                stage="transcript",
+                state=state,
+                method=payload.get("normalization_method") or "public_subtitle_route",
+                reason_code=payload.get("gap_reason") if state == "gap" else None,
+                artifact_uri=relative(path),
+                artifact_sha256=path_hash,
+                captured_at=stamp(payload.get("captured_at")),
             )
             transcript_artifact = insert_artifact(
                 connection, run_id=run_id, content_id=content_id, kind="transcript",
@@ -449,21 +542,16 @@ def main() -> int:
                 public_safe=False, source_hashes=[payload.get("source_sha256", "")],
                 tool_key="youtube_evidence_10k", tool_version="v2",
             )
+            transcript_artifacts[video_id] = transcript_artifact
             insert_edge(connection, metadata_artifacts[video_id], transcript_artifact, "normalizes")
             if state == "observed":
-                connection.execute(
-                    """INSERT INTO transcript
-                       (content_id,source_kind,language_code,model_name,model_version,quality_state,transcript_uri,transcript_sha256)
-                       SELECT %s,%s,%s,'public-subtitle-route',%s,'usable',%s,%s WHERE NOT EXISTS (
-                           SELECT 1 FROM transcript WHERE content_id=%s AND transcript_sha256=%s
-                       )""",
-                    (content_id, canonical_transcript_kind(payload.get("source_kind")), payload.get("language"),
-                     payload.get("normalization_method") or "v1", relative(path), path_hash, content_id, path_hash),
+                transcript_id = get_or_create_transcript(
+                    connection,
+                    content_id=content_id,
+                    payload=payload,
+                    transcript_uri=relative(path),
+                    transcript_sha256=path_hash,
                 )
-                transcript_id = connection.execute(
-                    "SELECT transcript_id FROM transcript WHERE content_id=%s AND transcript_sha256=%s",
-                    (content_id, path_hash),
-                ).fetchone()[0]
                 for idx, segment in enumerate(payload.get("speech_segments") or payload.get("segments") or []):
                     connection.execute(
                         """INSERT INTO transcript_segment
@@ -479,13 +567,17 @@ def main() -> int:
             content_id = content_ids[video_id]
             path_hash = sha(path)
             state = "observed" if payload.get("status") == "observed" else "gap"
-            connection.execute(
-                """INSERT INTO artifact_attempt
-                   (run_id,content_id,stage,attempt_number,state,method,reason_code,artifact_uri,artifact_sha256,captured_at)
-                   VALUES (%s,%s,'frames',1,%s,'youtube_public_storyboard',%s,%s,%s,now())
-                   ON CONFLICT DO NOTHING""",
-                (run_id, content_id, state, payload.get("gap_reason") if state == "gap" else None,
-                 relative(path), path_hash),
+            insert_artifact_attempt(
+                connection,
+                run_id=run_id,
+                content_id=content_id,
+                stage="frames",
+                state=state,
+                method="youtube_public_storyboard",
+                reason_code=payload.get("gap_reason") if state == "gap" else None,
+                artifact_uri=relative(path),
+                artifact_sha256=path_hash,
+                captured_at=datetime.now(UTC),
             )
             frame_artifact = insert_artifact(
                 connection, run_id=run_id, content_id=content_id, kind="frame_manifest",
@@ -495,6 +587,7 @@ def main() -> int:
                 source_hashes=[(payload.get("media") or {}).get("sha256", "")],
                 tool_key="youtube_evidence_10k", tool_version="v2",
             )
+            frame_artifacts[video_id] = frame_artifact
             insert_edge(connection, metadata_artifacts[video_id], frame_artifact, "derived_from")
             if state == "observed":
                 media = payload["media"]
@@ -527,7 +620,12 @@ def main() -> int:
         for video_id, analysis in analyses.items():
             content_id = content_ids[video_id]
             analysis_hash = row_sha(analysis)
-            input_hash = hashlib.sha256((metadata_artifacts[video_id] + analysis_file_hash).encode()).hexdigest()
+            parent_artifacts = [metadata_artifacts[video_id]]
+            if video_id in transcript_artifacts:
+                parent_artifacts.append(transcript_artifacts[video_id])
+            if video_id in frame_artifacts:
+                parent_artifacts.append(frame_artifacts[video_id])
+            input_hash = hashlib.sha256(("|".join(sorted(parent_artifacts)) + "|" + analysis_file_hash).encode()).hexdigest()
             connection.execute(
                 """INSERT INTO content_analysis_artifact
                    (run_id,content_id,analyzer_key,analyzer_version,input_bundle_sha256,analysis_uri,
@@ -543,7 +641,8 @@ def main() -> int:
                 maker="youtube-census-lexical", review="passed_with_limitations", public_safe=False,
                 source_hashes=[analysis_file_hash], tool_key="analyze_youtube_census_10k", tool_version="v2",
             )
-            insert_edge(connection, metadata_artifacts[video_id], analysis_artifact, "analyzes")
+            for parent_artifact in parent_artifacts:
+                insert_edge(connection, parent_artifact, analysis_artifact, "analyzes")
             counts["analyses"] += 1
         if args.campaign_dir:
             counts.update(load_campaign(connection, run_id, args.campaign_dir.resolve(), evidence_summary_artifact))

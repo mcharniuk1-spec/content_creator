@@ -8,7 +8,7 @@ Status: `IMPLEMENTED / EVIDENCE_COLLECTION_ACTIVE / PASS_WITH_LIMITATIONS`
 - Deterministic strategic subset: 2,949 relevance-positive videos. It is the denominator for topic, format, hook, storytelling, CTA, and descriptive public-metric distributions.
 - Prior calibration: 300 accounts / 900 videos; independent review accepted 211/250 sampled candidates.
 - Evidence layer: content-addressed transcript and frame attempts, de-rolled timestamped speech, typed gaps, local-only storyboard frames, public metric snapshots, and bounded calibration comments.
-- Database: PostgreSQL migrations through `008`, shared artifact lineage, current-state Studio gates, transcript segments, frame pointers, analysis artifacts, strategy, scripts, shots, and EDL segments.
+- Database: PostgreSQL migrations through `009`, shared artifact lineage, canonical transcript identity, run/source observations, corrected current-state Studio gates, terminal freeze receipts, transcript segments, frame pointers, analysis artifacts, strategy, scripts, shots, and EDL segments.
 - Strategy: two product-manager creator tracks, eight search territories, seven recurring franchises, and a ten-episode sequence.
 - Studio package: ten original 30-second scripts, 100 timecoded shots, 100 separate 9:16 SVG frame files, ten contact indexes, and ten validated EDL plans.
 - Report: 42-page English market-to-Studio PDF, rendered and visually inspected; terminal regeneration waits for the evidence freeze.

@@ -12,6 +12,9 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
+import time
+from contextlib import contextmanager
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, datetime, timedelta
 from email import policy
@@ -37,6 +40,10 @@ class DiskReserveError(RuntimeError):
     pass
 
 
+class ConcurrentClaimError(ValueError):
+    pass
+
+
 def reusable_attempt(payload: dict[str, Any], success_field: str, success_value: str) -> bool:
     """Keep observed/permanent outcomes, but retry route-level terminal gaps on resume."""
     if payload.get(success_field) == success_value:
@@ -51,17 +58,49 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
 
 
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text("".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows), encoding="utf-8")
-    temporary.replace(path)
+    atomic_write_text(path, "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows))
 
 
 def write_json(path: Path, value: dict[str, Any]) -> None:
+    atomic_write_text(path, json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
+
+
+def atomic_write_text(path: Path, value: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    temporary.replace(path)
+    descriptor, temporary_name = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    temporary = Path(temporary_name)
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
+            handle.write(value)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, path)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+@contextmanager
+def artifact_claim(run_dir: Path, stage: str, video_id: str, stale_seconds: int):
+    claim_path = run_dir / "locks" / stage / f"{video_id}.lock"
+    claim_path.parent.mkdir(parents=True, exist_ok=True)
+    for attempt in range(2):
+        try:
+            descriptor = os.open(claim_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+            with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
+                handle.write(json.dumps({"pid": os.getpid(), "created_at": datetime.now(UTC).isoformat()}))
+                handle.flush()
+                os.fsync(handle.fileno())
+            break
+        except FileExistsError as exc:
+            age = time.time() - claim_path.stat().st_mtime
+            if attempt == 0 and age > stale_seconds:
+                claim_path.unlink(missing_ok=True)
+                continue
+            raise ConcurrentClaimError(f"active artifact claim: {stage}/{video_id}") from exc
+    try:
+        yield
+    finally:
+        claim_path.unlink(missing_ok=True)
 
 
 def sha256(path: Path) -> str:
@@ -73,9 +112,48 @@ def sha256(path: Path) -> str:
 
 
 def ensure_disk_reserve(path: Path, minimum_free_bytes: int, free_override: int | None = None) -> None:
+    if minimum_free_bytes <= 0:
+        raise ValueError("minimum disk reserve must be positive")
     free = free_override if free_override is not None else shutil.disk_usage(path).free
     if free < minimum_free_bytes:
         raise DiskReserveError(f"free disk {free} is below reserve {minimum_free_bytes}")
+
+
+def run_local_artifact(run_dir: Path, uri: str | None) -> Path | None:
+    if not uri:
+        return None
+    candidate = (run_dir / uri).resolve()
+    return candidate if candidate.is_relative_to(run_dir.resolve()) else None
+
+
+def transcript_artifact_valid(run_dir: Path, path: Path, payload: dict[str, Any]) -> bool:
+    if payload.get("native_video_id") != path.stem:
+        return False
+    if payload.get("availability") != "observed":
+        return bool(payload.get("gap_reason"))
+    source = run_local_artifact(run_dir, payload.get("source_uri"))
+    metadata = run_local_artifact(run_dir, payload.get("source_metadata_uri"))
+    return bool(
+        source and source.is_file() and sha256(source) == payload.get("source_sha256")
+        and metadata and metadata.is_file() and sha256(metadata) == payload.get("source_metadata_sha256")
+    )
+
+
+def frame_artifact_valid(run_dir: Path, path: Path, payload: dict[str, Any]) -> bool:
+    if payload.get("native_video_id") != path.stem:
+        return False
+    if payload.get("status") != "observed":
+        return bool(payload.get("gap_reason"))
+    media = payload.get("media") or {}
+    media_path = run_local_artifact(run_dir, media.get("asset_uri"))
+    if not media_path or not media_path.is_file() or sha256(media_path) != media.get("sha256"):
+        return False
+    frames = payload.get("frames") or []
+    for frame in frames:
+        frame_path = run_local_artifact(run_dir, frame.get("frame_uri"))
+        if not frame_path or not frame_path.is_file() or sha256(frame_path) != frame.get("sha256"):
+            return False
+    return bool(frames)
 
 
 def hardlink_or_copy(source: Path, target: Path) -> None:
@@ -171,8 +249,6 @@ def transcript_result_from_vtt(run_dir: Path, row: dict[str, Any], info: dict[st
             "artifact_run_key": run_dir.name,
             "collector_version": COLLECTOR_VERSION,
         }
-    normalized = run_dir / "normalized" / "transcripts" / f"{video_id}.json"
-    write_json(normalized, result)
     receipt = {
         "schema": "archflow.command-receipt.v1",
         "label": "public_subtitle_collection",
@@ -188,12 +264,12 @@ def transcript_result_from_vtt(run_dir: Path, row: dict[str, Any], info: dict[st
     return result
 
 
-def collect_one_transcript(run_dir: Path, row: dict[str, Any], timeout: int, minimum_free_bytes: int) -> dict[str, Any]:
+def _collect_one_transcript(run_dir: Path, row: dict[str, Any], timeout: int, minimum_free_bytes: int) -> dict[str, Any]:
     video_id = row["native_video_id"]
     normalized = run_dir / "normalized" / "transcripts" / f"{video_id}.json"
     if normalized.is_file():
         existing = json.loads(normalized.read_text(encoding="utf-8"))
-        if reusable_attempt(existing, "availability", "observed"):
+        if reusable_attempt(existing, "availability", "observed") and transcript_artifact_valid(run_dir, normalized, existing):
             return existing
     ensure_disk_reserve(run_dir, minimum_free_bytes)
     raw_dir = run_dir / "raw" / "subtitles" / video_id
@@ -224,7 +300,13 @@ def collect_one_transcript(run_dir: Path, row: dict[str, Any], timeout: int, min
     result["source_metadata_uri"] = info_path.relative_to(run_dir).as_posix()
     result["source_metadata_sha256"] = sha256(info_path)
     write_json(normalized, result)
+    ensure_disk_reserve(run_dir, minimum_free_bytes)
     return result
+
+
+def collect_one_transcript(run_dir: Path, row: dict[str, Any], timeout: int, minimum_free_bytes: int) -> dict[str, Any]:
+    with artifact_claim(run_dir, "transcripts", row["native_video_id"], max(300, timeout * 2)):
+        return _collect_one_transcript(run_dir, row, timeout, minimum_free_bytes)
 
 
 def reuse_transcripts(run_dir: Path, source_run: Path, cohort_ids: set[str]) -> int:
@@ -235,7 +317,17 @@ def reuse_transcripts(run_dir: Path, source_run: Path, cohort_ids: set[str]) -> 
             continue
         target_normalized = run_dir / "normalized" / "transcripts" / source_normalized.name
         if target_normalized.is_file():
-            continue
+            existing = json.loads(target_normalized.read_text(encoding="utf-8"))
+            source_payload = json.loads(source_normalized.read_text(encoding="utf-8"))
+            metadata_uri = source_payload.get("source_metadata_uri")
+            if metadata_uri:
+                source_metadata = source_run / metadata_uri
+                if not source_metadata.is_file() or sha256(source_metadata) != source_payload.get("source_metadata_sha256"):
+                    raise ValueError(f"baseline transcript metadata mismatch: {video_id}")
+                hardlink_or_copy(source_metadata, run_dir / metadata_uri)
+            if transcript_artifact_valid(run_dir, target_normalized, existing):
+                continue
+            target_normalized.unlink()
         payload = json.loads(source_normalized.read_text(encoding="utf-8"))
         source_uri = payload.get("source_uri")
         if source_uri:
@@ -243,6 +335,12 @@ def reuse_transcripts(run_dir: Path, source_run: Path, cohort_ids: set[str]) -> 
             if not source_artifact.is_file() or sha256(source_artifact) != payload.get("source_sha256"):
                 raise ValueError(f"baseline transcript source mismatch: {video_id}")
             hardlink_or_copy(source_artifact, run_dir / source_uri)
+        metadata_uri = payload.get("source_metadata_uri")
+        if metadata_uri:
+            source_metadata = source_run / metadata_uri
+            if not source_metadata.is_file() or sha256(source_metadata) != payload.get("source_metadata_sha256"):
+                raise ValueError(f"baseline transcript metadata mismatch: {video_id}")
+            hardlink_or_copy(source_metadata, run_dir / metadata_uri)
         payload["schema"] = "north-hux.youtube-transcript-artifact.v3"
         payload["artifact_run_key"] = run_dir.name
         payload["reused_from_run_key"] = source_run.name
@@ -270,12 +368,12 @@ def compact_jpeg(payload: bytes, output: Path) -> tuple[int, int]:
     return width, height
 
 
-def collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, minimum_free_bytes: int, max_frames: int) -> dict[str, Any]:
+def _collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, minimum_free_bytes: int, max_frames: int) -> dict[str, Any]:
     video_id = row["native_video_id"]
     manifest_path = run_dir / "normalized" / "frame-manifests" / f"{video_id}.json"
     if manifest_path.is_file():
         existing = json.loads(manifest_path.read_text(encoding="utf-8"))
-        if reusable_attempt(existing, "status", "observed"):
+        if reusable_attempt(existing, "status", "observed") and frame_artifact_valid(run_dir, manifest_path, existing):
             return existing
     ensure_disk_reserve(run_dir, minimum_free_bytes)
     raw_dir = run_dir / "raw" / "storyboards" / video_id
@@ -383,7 +481,13 @@ def collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, min
         "stderr_sha256": hashlib.sha256(stderr.encode()).hexdigest(),
         "status": result["status"],
     })
+    ensure_disk_reserve(run_dir, minimum_free_bytes)
     return result
+
+
+def collect_one_storyboard(run_dir: Path, row: dict[str, Any], timeout: int, minimum_free_bytes: int, max_frames: int) -> dict[str, Any]:
+    with artifact_claim(run_dir, "frames", row["native_video_id"], max(300, timeout * 2)):
+        return _collect_one_storyboard(run_dir, row, timeout, minimum_free_bytes, max_frames)
 
 
 def reuse_frames(run_dir: Path, source_run: Path, cohort_ids: set[str]) -> int:
@@ -438,28 +542,51 @@ def run_stage(
     limit: int | None,
 ) -> dict[str, Any]:
     cohort = load_jsonl(run_dir / "derived" / "video-cohort.jsonl")
-    if not cohort:
-        raise ValueError("video cohort is missing")
+    if len(cohort) != 10000:
+        raise ValueError(f"video cohort must contain exactly 10,000 rows, got {len(cohort)}")
     cohort_ids = {row["native_video_id"] for row in cohort}
+    if len(cohort_ids) != len(cohort):
+        raise ValueError("video cohort contains duplicate identities")
+    creator_counts: dict[str, int] = {}
+    for row in cohort:
+        creator = row["native_channel_id"]
+        creator_counts[creator] = creator_counts.get(creator, 0) + 1
+    if max(creator_counts.values()) / len(cohort) > 0.01:
+        raise ValueError("video cohort violates the 1% maximum creator contribution")
     reused = reuse_transcripts(run_dir, source_run, cohort_ids) if stage == "transcripts" else reuse_frames(run_dir, source_run, cohort_ids)
     pending = cohort[offset: offset + limit if limit is not None else None]
     function: Callable[..., dict[str, Any]] = collect_one_transcript if stage == "transcripts" else collect_one_storyboard
     terminal_streak = 0
     processed = 0
-    batch_size = max(workers, workers * 10)
+    batch_size = workers
+    strike_receipt = run_dir / "receipts" / f"{stage}-strike-state-{offset}-{limit if limit is not None else 'end'}.json"
     for batch_start in range(0, len(pending), batch_size):
         batch = pending[batch_start:batch_start + batch_size]
+        ensure_disk_reserve(run_dir, minimum_free_bytes + workers * 256 * 1024 * 1024)
         with ThreadPoolExecutor(max_workers=workers) as executor:
             futures = {
                 executor.submit(function, run_dir, row, timeout, minimum_free_bytes, max_frames)
                 if stage == "frames" else executor.submit(function, run_dir, row, timeout, minimum_free_bytes): row
                 for row in batch
             }
+            completed: dict[str, dict[str, Any]] = {}
             for future in as_completed(futures):
-                result = future.result()
+                completed[futures[future]["native_video_id"]] = future.result()
+            for row in batch:
+                result = completed[row["native_video_id"]]
                 processed += 1
                 gap = result.get("gap_reason")
                 terminal_streak = terminal_streak + 1 if gap in TERMINAL_GAPS else 0
+                write_json(strike_receipt, {
+                    "schema": "north-hux.youtube-evidence-strike-state.v1",
+                    "stage": stage,
+                    "offset": offset,
+                    "limit": limit,
+                    "processed": processed,
+                    "terminal_streak": terminal_streak,
+                    "last_gap_reason": gap,
+                    "updated_at": datetime.now(UTC).isoformat(),
+                })
                 if terminal_streak >= 5:
                     raise ValueError(f"five consecutive terminal {stage} failures: {gap}")
         if processed and processed % 100 == 0:
@@ -504,11 +631,15 @@ def main() -> int:
     try:
         if args.workers < 1 or args.workers > 8 or args.max_frames < 1 or args.max_frames > 12:
             raise ValueError("workers must be 1-8 and max-frames 1-12")
+        if args.min_free_gib <= 0 or args.offset < 0 or (args.limit is not None and args.limit <= 0):
+            raise ValueError("min-free-gib must be positive; offset/limit must define a positive slice")
         summary = run_stage(
             args.run_dir.resolve(), args.source_run_dir.resolve(), args.stage, args.workers,
             args.timeout_seconds, round(args.min_free_gib * 1024 ** 3), args.max_frames, args.offset, args.limit,
         )
-        print(json.dumps({"schema": "north-hux.youtube-evidence-10k-stage.v1", "status": "pass_with_limitations" if summary.get("gaps") else "pass", **summary}, sort_keys=True))
+        total = summary.get("artifacts_total", summary.get("manifests_total", 0))
+        status = "active_partial" if total != 10000 else ("pass_with_limitations" if summary.get("gaps") else "pass")
+        print(json.dumps({"schema": "north-hux.youtube-evidence-10k-stage.v1", "status": status, **summary}, sort_keys=True))
         return 0
     except (OSError, ValueError, json.JSONDecodeError, subprocess.SubprocessError, DiskReserveError) as exc:
         print(json.dumps({"status": "error", "error_code": type(exc).__name__, "message": str(exc)[:500]}))

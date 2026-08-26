@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.build_run_artifact_manifest import build_manifest, sha256, write_jsonl
+from scripts.build_run_artifact_manifest import build_manifest, sha256, stable_sha256, write_jsonl
 
 
 def test_build_manifest_hashes_bounded_roots_deterministically(tmp_path: Path) -> None:
@@ -41,3 +41,16 @@ def test_build_manifest_rejects_unbounded_parent_root(tmp_path: Path) -> None:
     run.mkdir()
     with pytest.raises(ValueError, match="run-relative"):
         build_manifest(run, ("../outside",))
+
+
+def test_build_manifest_rejects_overlapping_roots_and_hashes_stable_file(tmp_path: Path) -> None:
+    run = tmp_path / "run-1"
+    nested = run / "raw" / "nested"
+    nested.mkdir(parents=True)
+    artifact = nested / "value.txt"
+    artifact.write_text("value\n", encoding="utf-8")
+    digest, size = stable_sha256(artifact)
+    assert digest == sha256(artifact)
+    assert size == artifact.stat().st_size
+    with pytest.raises(ValueError, match="overlap"):
+        build_manifest(run, ("raw", "raw/nested"))

@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import statistics
+import tempfile
 from collections import Counter, defaultdict, deque
 from datetime import UTC, datetime
 from pathlib import Path
@@ -32,11 +34,24 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
 
 
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
+    atomic_write_text(
+        path,
         "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows),
-        encoding="utf-8",
     )
+
+
+def atomic_write_text(path: Path, value: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, temporary_name = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    temporary = Path(temporary_name)
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
+            handle.write(value)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, path)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def median(values: list[float | int | None]) -> float | None:
@@ -341,9 +356,9 @@ def main() -> int:
     write_jsonl(run_dir / "derived" / "top-reference-cohort-10k.jsonl", top_references)
     source_comments = load_jsonl(args.source_run_dir / "derived" / "comments.jsonl") if args.source_run_dir else []
     summary = build_summary(run_dir, cohort, analyzed, transcripts, frames, source_comments)
-    (run_dir / "derived" / "analysis-summary-10k.json").write_text(
+    atomic_write_text(
+        run_dir / "derived" / "analysis-summary-10k.json",
         json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
     )
     print(json.dumps(summary["claims_boundary"], sort_keys=True))
     return 0

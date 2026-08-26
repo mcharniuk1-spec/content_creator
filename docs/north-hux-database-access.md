@@ -37,7 +37,7 @@ pg_ctl -D .local/postgres stop
 
 ## How it is constructed
 
-The base migration is `migrations/002_north_hux_market_intelligence.sql`. `003_signal_to_studio.sql` adds the append-only Studio mirror and initial social-candidate view. `004_comment_transcript_provenance.sql` adds append-only reply-edge provenance. `005_social_studio_review_gate.sql` replaces the candidate gate with explicit 12-axis evidence reviews, maker/reviewer separation, a versioned social contract, and a public-safe content release review. Every major table uses a generated identity primary key; portable social candidate identities use a versioned SHA-256 formula instead of database sequences. Natural uniqueness is enforced separately for platform/native IDs and canonical URLs. Foreign keys preserve the research chain.
+The base migration is `migrations/002_north_hux_market_intelligence.sql`. `003_signal_to_studio.sql` adds the append-only Studio mirror and initial social-candidate view. `004_comment_transcript_provenance.sql` adds append-only reply-edge provenance. `005_social_studio_review_gate.sql` adds 12-axis evidence reviews and versioned release gates. Migrations `006`–`009` add source-type identity, evidence/strategy/Studio lineage, corrected current-state gates, canonical transcript identity, run/source observations, and terminal freeze receipts. Every major table uses a generated identity primary key or an explicit natural identity; portable social candidate identities use versioned SHA-256 formulas. Foreign keys preserve the research chain.
 
 | Layer | Tables | Purpose |
 |---|---|---|

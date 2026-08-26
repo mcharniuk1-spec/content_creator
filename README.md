@@ -9,7 +9,7 @@ The project is intentionally separated from the ArchFlow website and product run
 - The deterministic YouTube broad screen is frozen at 10,000 public videos from 1,010 creators. It is not 10,000 qualified competitors; current strategic distributions use 2,949 deterministic analysis-eligible videos.
 - A 300-account / 900-video calibration was independently reviewed at `PASS_WITH_LIMITATIONS`; 211/250 reviewed candidates were accepted.
 - Public transcript and compact storyboard collection is running with independent denominators, typed gaps, content hashes, and a 15 GiB free-disk reserve.
-- Local PostgreSQL migrations through `008` provide evidence attempts, full transcript segments, frame pointers, analysis lineage, strategy releases, ten scripts, 100 shot plans, and validated EDL seams.
+- Local PostgreSQL migrations through `009` provide evidence attempts, canonical transcript identity, run/source observations, full transcript segments, frame pointers, analysis lineage, terminal freeze receipts, strategy releases, ten scripts, 100 shot plans, and validated EDL seams.
 - Ten original 30-second YouTube-first scripts and 100 separate 9:16 SVG frame plans are available under `outputs/video-plans/north-hux-youtube-10-v1/`.
 - The detailed English market-to-Studio report is generated under `outputs/reports/` and must be regenerated after the terminal evidence freeze.
 - Agent Reach currently proves read-only backends only for YouTube (`yt-dlp`), RSS (`feedparser`), and generic web pages (`Jina Reader`). Other named social channels are not yet proved reachable.

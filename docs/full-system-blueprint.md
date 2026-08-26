@@ -49,7 +49,7 @@ flowchart LR
 | Studio / EDL | Assemble a validated timeline and media requirements | Approved shots | `EditDecisionList`, rough-cut instructions | Owner media, provider, Resolve, and publication gates remain separate |
 | Learning | Read owned post-publication analytics | Published content and owned analytics | Experiment results and strategy supersession | No causal claim from competitor public metrics |
 
-Every engine exchanges an `ArtifactEnvelope`: stable artifact ID; run/content identity; type and schema version; project-relative URI; SHA-256; upstream hashes; tool/version; epistemic and rights state; maker/reviewer; review/public-safety state; and supersession edge. Migrations `007` and `008` implement the strategy/Studio and shared-lineage seams.
+Every engine exchanges an `ArtifactEnvelope`: stable artifact ID; run/content identity; type and schema version; project-relative URI; SHA-256; upstream hashes; tool/version; epistemic and rights state; maker/reviewer; review/public-safety state; and supersession edge. Migrations `007`–`009` implement the strategy/Studio seams, shared lineage, canonical transcript identity, run/source observations, corrected release gating, and terminal freeze receipts.
 
 ## Two creator tracks
 

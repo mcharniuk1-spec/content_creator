@@ -1,0 +1,134 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 4000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "picture_in_picture",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "keyword_emphasis",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-019-F01",
+      "image_path": "frames/SF-019-F01.svg",
+      "motion": "slow_observation motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "THIS FAILED",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "sound_cue": "voice_anchor aligned to the failure result boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "failure result",
+      "transition": "cut_on_sound",
+      "visual_change": "Ignored Warning: failure result; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "picture_in_picture",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "on_cut",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-019-F02",
+      "image_path": "frames/SF-019-F02.svg",
+      "motion": "slow_observation motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "FIRST CAUSE",
+      "sequence_number": 2,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the first cause boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "first cause",
+      "transition": "cut_on_sound",
+      "visual_change": "Ignored Warning: first cause; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "picture_in_picture",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "on_cut",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-019-F03",
+      "image_path": "frames/SF-019-F03.svg",
+      "motion": "slow_observation motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "IMPACT",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the human impact boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "human impact",
+      "transition": "cut_on_sound",
+      "visual_change": "Ignored Warning: human impact; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "picture_in_picture",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "keyword_emphasis",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-019-F04",
+      "image_path": "frames/SF-019-F04.svg",
+      "motion": "slow_observation motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "BACK TO YOU",
+      "sequence_number": 4,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the return to speaker boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "return to speaker",
+      "transition": "cut_on_sound",
+      "visual_change": "Ignored Warning: return to speaker; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-019",
+  "kind": "hook_broll",
+  "name": "Ignored Warning",
+  "purpose": "Show the cost of ignoring a visible warning",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-005"
+    ],
+    "export_id": "SIGEXP-SF-019",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:14ce101ab8f567795a7faf7c081b87686b5c499a90157cfd3e63f97df443a74b",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-004"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "picture_in_picture",
+    "broll_function": "establish_context",
+    "cta_exit": "loop_to_open",
+    "hook_mechanism": "consequence",
+    "pacing_profile": "slow_observation",
+    "proof_form": "process_trace",
+    "risk_class": "low",
+    "sound_role": "voice_anchor",
+    "text_role": "question_card",
+    "transition_family": "cut_on_sound",
+    "viewer_job": "compare_options",
+    "visual_grammar": "kinetic_type"
+  },
+  "version": "1.0.0"
+}

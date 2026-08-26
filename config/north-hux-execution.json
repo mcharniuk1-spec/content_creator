@@ -1,0 +1,70 @@
+{
+  "project": "north-hux-market-intelligence",
+  "run_id": "20260825-north-hux-collection-v1",
+  "owner": "Max",
+  "timezone": "Europe/Sofia",
+  "scope": {
+    "platforms": ["instagram", "tiktok", "youtube"],
+    "content_formats": ["reels", "tiktok_videos", "youtube_shorts"],
+    "audience_regions": ["US", "CA", "GB", "AU", "IE", "NZ", "EU27"],
+    "primary_language": "en",
+    "language_policy": "english_preferred_not_required",
+    "eu_countries": [
+      "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark",
+      "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland",
+      "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland",
+      "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"
+    ],
+    "quota_policy": "none",
+    "stratification_policy": "descriptive_only",
+    "discovery_window_days": 180,
+    "creator_baseline_days": 365,
+    "account_target_per_platform": {"minimum": 10000, "maximum": 12000},
+    "final_target_definition": "qualified_platform_accounts",
+    "deep_multimodal_start": 200,
+    "deep_multimodal_max_initial": 500,
+    "local_retention": {
+      "approved": true,
+      "artifacts": ["comments", "transcripts", "media", "frames"],
+      "duration_policy": "pending_explicit_retention_period"
+    },
+    "notion_projection": {
+      "public_projection_approved": true,
+      "sharing_state": "owner_stated_public_not_connector_verified"
+    }
+  },
+  "archetypes": [
+    "product_company_operator",
+    "agent_builder_operator"
+  ],
+  "category_order": [
+    "accounts",
+    "posts",
+    "stats",
+    "captions",
+    "comments",
+    "transcripts",
+    "video",
+    "frames",
+    "taxonomy",
+    "review",
+    "notion_projection",
+    "obsidian_projection"
+  ],
+  "five_strike": {
+    "max_strikes_per_failure_key": 5,
+    "retryable": ["timeout", "rate_limit", "transient_network", "provider_5xx", "temporary_file_lock"],
+    "non_retryable": ["auth", "rights", "terms", "robots", "not_found", "schema_invalid", "credential_missing", "policy_block"],
+    "backoff_seconds": [2, 5, 15, 45, 120],
+    "after_fifth_strike": "quarantine_and_require_review",
+    "never_retry_entire_batch": true
+  },
+  "progress_states": ["planned", "queued", "in_progress", "partial", "verified", "blocked", "quarantined"],
+  "epistemic_states": ["observed", "derived", "classified", "inferred", "hypothesized", "gap"],
+  "external_writes": {
+    "notion": "approved_target_only",
+    "obsidian": "approved_global_vault_only",
+    "social_platforms": "never",
+    "publishing": "blocked"
+  }
+}

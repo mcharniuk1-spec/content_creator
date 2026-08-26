@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<rect width="540" height="960" fill="#0f1b2a"/>
+<rect x="44" y="96" width="452" height="768" rx="28" fill="none" stroke="#f2c879" stroke-opacity=".16" stroke-dasharray="10 10"/>
+<text x="44" y="58" font-family="Arial,sans-serif" font-size="20" fill="#f2c879" opacity=".74">SF-017 · 04:00–05:00 · voice_over</text>
+<text x="270" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#f2c879">THE RULE</text>
+<text x="270" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#f2c879" opacity=".66">bounded rule</text>
+<text x="270" y="410" text-anchor="middle" font-family="Arial,sans-serif" font-size="110" font-weight="800" fill="#62b5ff" opacity=".92">05</text><rect x="92" y="470" width="356" height="22" rx="11" fill="#f2c879" opacity=".18"/><rect x="150" y="520" width="240" height="22" rx="11" fill="#f2c879" opacity=".12"/>
+<rect x="64" y="820" width="412" height="64" rx="18" fill="#f2c879" opacity=".10"/>
+<text x="84" y="848" font-family="Arial,sans-serif" font-size="15" fill="#f2c879" opacity=".72">B-ROLL: demonstrate_process</text>
+<text x="84" y="872" font-family="Arial,sans-serif" font-size="15" fill="#f2c879" opacity=".72">CUT: hard_cut · TEXT: editable</text>
+<text x="270" y="925" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#f2c879" opacity=".48">LOCAL PREVIS · EXTERNAL PROVIDER NOT RUN</text>
+</svg>

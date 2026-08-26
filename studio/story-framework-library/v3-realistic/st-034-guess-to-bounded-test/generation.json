@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-034",
+  "title": "Guess to Bounded Test",
+  "source_story": "../v2/st-034-guess-to-bounded-test/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult technical educator in their mid 30s, shoulder-length dark hair, rust cardigan over a plain white top",
+  "location_lock": "small shared studio with a standing desk, paper planning wall, shelf and soft daylight",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-034 Guess to Bounded Test\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult technical educator in their mid 30s, shoulder-length dark hair, rust cardigan over a plain white top. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: small shared studio with a standing desk, paper planning wall, shelf and soft daylight. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: two-version test. Trigger prop: dice. Proof prop: test card. Obstacle: the team argues from taste.\nSix panels in reading order:\n1 wide still: notices the dice; show The dice changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the two-version test; show The hero and persistent two-version test share one scene; objective: turn a creative opinion into a test. Emotional register: orientation.\n3 close still: sees the two-version test blocked; show The two-version test is visibly blocked by the team argues from taste; consequence: production time can be wasted. Emotional register: concern.\n4 medium still: defines one variable and one decision rule; show The hero defines one variable and one decision rule; the same two-version test changes state on screen. Emotional register: agency.\n5 macro still: checks the test card; show The changed two-version test remains visible while the test card is isolated. Emotional register: confidence-with-caution.\n6 wide still: confirms the changed two-version test; show The same two-version test reaches its resolved state: the hypothesis becomes falsifiable. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'A small test may not generalize.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-034-F01.png",
+    "frames/ST-034-F02.png",
+    "frames/ST-034-F03.png",
+    "frames/ST-034-F04.png",
+    "frames/ST-034-F05.png",
+    "frames/ST-034-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "7c2ac4ca152e68dd879c82203515114dc8545b53eacc5bf18550baf8adf0a911",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "788de14e9d4822141e66692e6888847e4f5ae0d7b17ecc1bf4a7898dcc85772e",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-034-F01",
+      "file": "frames/ST-034-F01.png",
+      "sha256": "da9d86910ebe095f4398ea583146b0727fe910474e7764ec7d21dc3a0681ebf0",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 123.46,
+      "luma_stddev": 68.73,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-034-F02",
+      "file": "frames/ST-034-F02.png",
+      "sha256": "2f4b743a36a6c2445c7b0480737110be5bfeefba0d38dd19c38f46910a010854",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 133.62,
+      "luma_stddev": 70.63,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-034-F03",
+      "file": "frames/ST-034-F03.png",
+      "sha256": "63141d2e5c9297991e3eb511704d0e9f5c1eae4d522f42b75d5b0758c7d2d506",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 114.63,
+      "luma_stddev": 62.57,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-034-F04",
+      "file": "frames/ST-034-F04.png",
+      "sha256": "bd74f40a8944d6b180883e4d67f4162866d84f1ad1a372601b58e47edba05297",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 127.93,
+      "luma_stddev": 71.84,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-034-F05",
+      "file": "frames/ST-034-F05.png",
+      "sha256": "8b69eca6aab0fa980db145a1be6c904e2dbcc893c8c5035edd78f0c3367a8bfb",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 148.26,
+      "luma_stddev": 57.52,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-034-F06",
+      "file": "frames/ST-034-F06.png",
+      "sha256": "09748f00776cc62ada0b976327e7a68802e5cc76ad48b3db1e4eee353e571e3d",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 133.73,
+      "luma_stddev": 75.6,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

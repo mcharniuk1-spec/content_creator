@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-008",
+  "title": "Rollback Ready",
+  "source_story": "../v2/st-008-rollback-ready/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult content strategist in their late 30s, straight dark bob, moss-green blouse and black trousers",
+  "location_lock": "quiet meeting room with an unbranded whiteboard, task cards, simple table and window light",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-008 Rollback Ready\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult content strategist in their late 30s, straight dark bob, moss-green blouse and black trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: quiet meeting room with an unbranded whiteboard, task cards, simple table and window light. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: safe change set. Trigger prop: reverse arrow. Proof prop: rollback test. Obstacle: the forward path has no recovery step.\nSix panels in reading order:\n1 close still: notices the reverse arrow; show The reverse arrow changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the safe change set; show The hero and persistent safe change set share one scene; objective: prove a change is reversible. Emotional register: orientation.\n3 medium still: sees the safe change set blocked; show The safe change set is visibly blocked by the forward path has no recovery step; consequence: a small error could become persistent. Emotional register: concern.\n4 over_shoulder still: rewinds from recovery to the missing backup; show The hero rewinds from recovery to the missing backup; the same safe change set changes state on screen. Emotional register: agency.\n5 macro still: checks the rollback test; show The changed safe change set remains visible while the rollback test is isolated. Emotional register: confidence-with-caution.\n6 wide still: confirms the changed safe change set; show The same safe change set reaches its resolved state: the change remains bounded. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'A storyboard does not execute deployment.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-008-F01.png",
+    "frames/ST-008-F02.png",
+    "frames/ST-008-F03.png",
+    "frames/ST-008-F04.png",
+    "frames/ST-008-F05.png",
+    "frames/ST-008-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "9a562aca004c192c1a4368dcc73e74edb08a90963f69fcf63cce67747ba802f3",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "90d11083800b781fb300a709164b7159bda95ba23493ea17c9cc007b087a986b",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-008-F01",
+      "file": "frames/ST-008-F01.png",
+      "sha256": "adb042fdfd6f0a4930e3d2e5356a4eeff2f780db4c911576eaaaa7dc8359c999",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 114.59,
+      "luma_stddev": 63.2,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-008-F02",
+      "file": "frames/ST-008-F02.png",
+      "sha256": "a2f777daf1fdba770af75e08df25b82b969aa173748c0fa02442c6696602b79f",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 135.44,
+      "luma_stddev": 64.18,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-008-F03",
+      "file": "frames/ST-008-F03.png",
+      "sha256": "a39844cd0f9535ab844645eac2081c6fc3e3c9c3527b5577055892805dd7bcef",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 136.58,
+      "luma_stddev": 69.3,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-008-F04",
+      "file": "frames/ST-008-F04.png",
+      "sha256": "f6a1acef989828192f43229b60f71b88ed5806cfdd6882b33d4a207c4ca60bcd",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 93.8,
+      "luma_stddev": 68.26,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-008-F05",
+      "file": "frames/ST-008-F05.png",
+      "sha256": "8176ca0a4e4e69a22bada2203fa2f66bbaa8ab4160c94172eac0d9049d52d138",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 97.23,
+      "luma_stddev": 58.62,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-008-F06",
+      "file": "frames/ST-008-F06.png",
+      "sha256": "2df8a1f15cf10a27f695542c26337a534e8bea54894f0df84cfb0c19558ed52b",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 134.75,
+      "luma_stddev": 65.29,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

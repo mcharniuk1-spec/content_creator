@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/content-case.schema.json",
+  "title": "ContentCase",
+  "type": "object",
+  "required": [
+    "case_id", "objective", "campaign_domains", "audiences", "channels", "owner_role", "risk_class",
+    "source_allowlist", "capability_receipt_id", "research_brief_id", "source_record_ids", "evidence_card_ids",
+    "creative_candidate_ids", "candidate_set_hash", "selected_video_ids", "artifact_ids", "review_ids",
+    "owner_state", "provider_execution", "publication_state", "knowledge_candidate_ids", "errors", "repair_count",
+    "created_at", "updated_at"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^CASE-[A-Z0-9-]+$"},
+    "objective": {"type": "string", "minLength": 1},
+    "campaign_domains": {"type": "array", "items": {"enum": ["archflow_onboarding", "hotel_revenue"]}, "minItems": 1, "uniqueItems": true},
+    "audiences": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "channels": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "owner_role": {"type": "string", "minLength": 1},
+    "risk_class": {"enum": ["LOW_LOCAL", "MEDIUM_RESEARCH", "HIGH_EXTERNAL"]},
+    "source_allowlist": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "capability_receipt_id": {"type": "string"},
+    "structured_context_id": {"type": ["string", "null"]},
+    "research_brief_id": {"type": "string"},
+    "research_task_ids": {"type": "array", "items": {"type": "string"}},
+    "responsibility_ids": {"type": "array", "items": {"type": "string"}},
+    "source_record_ids": {"type": "array", "items": {"type": "string"}},
+    "evidence_card_ids": {"type": "array", "items": {"type": "string"}},
+    "creative_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "candidate_set_hash": {"type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$"},
+    "selected_video_ids": {"type": "array", "items": {"type": "string", "pattern": "^V(0[1-9]|1[0-5])$"}, "minItems": 0, "maxItems": 15, "uniqueItems": true},
+    "artifact_ids": {"type": "array", "items": {"type": "string"}},
+    "review_ids": {"type": "array", "items": {"type": "string"}},
+    "owner_state": {"enum": ["OWNER_REVIEW_PENDING", "REVISE", "APPROVED_FOR_NEXT_GATE"]},
+    "figma_state": {"enum": ["NOT_CHECKED", "BLOCKED", "IMPORT_PACKAGE_READY", "READBACK_VERIFIED"]},
+    "provider_execution": {"const": false},
+    "publication_state": {"const": "BLOCKED"},
+    "knowledge_candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "errors": {"type": "array", "items": {"type": "object"}},
+    "repair_count": {"type": "integer", "minimum": 0, "maximum": 3},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}
+

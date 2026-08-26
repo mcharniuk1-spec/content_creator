@@ -1,0 +1,32 @@
+{
+  "schema": "content-engine.studio-signal-interface.v1",
+  "active_mode": "file_backed_with_verified_postgresql_mirror",
+  "active_manifest": "outputs/signal-to-studio/v1/manifest.json",
+  "active_records": "outputs/signal-to-studio/v1/records.jsonl",
+  "record_schema": "schemas/signal-to-studio.schema.json",
+  "studio_framework_schema": "schemas/studio-framework.schema.json",
+  "postgresql": {
+    "state": "VERIFIED_LOCAL",
+    "database": "north_hux",
+    "view": "north_hux.v_signal_to_studio_v1",
+    "snapshot_table": "north_hux.studio_signal_export",
+    "social_candidate_view": "north_hux.v_social_studio_candidate_v1",
+    "migrations": [
+      "migrations/003_signal_to_studio.sql",
+      "migrations/005_social_studio_review_gate.sql"
+    ],
+    "migration_state": "APPLIED",
+    "verified_export_count": 60,
+    "verified_social_candidates": 64,
+    "eligible_social_candidates": 0,
+    "eligibility_rule": "qualified account + unexpired passed rights + content-specific evidence + 12 explicit axis reviews with maker/reviewer separation + active reviewed social contract + public-safe content release review",
+    "social_contract_state": "INACTIVE_NOT_CREATED"
+  },
+  "rules": [
+    "Signal owns provenance, evidence, rights, freshness, and epistemic state.",
+    "Studio owns clean-room timing, composition, A-roll/B-roll, captions, transitions, and prompts.",
+    "Null never becomes zero.",
+    "Exports are immutable snapshots; corrections use supersession.",
+    "External provider execution remains NOT_RUN."
+  ]
+}

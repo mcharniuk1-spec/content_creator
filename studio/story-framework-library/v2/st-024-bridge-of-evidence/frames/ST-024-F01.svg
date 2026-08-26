@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#FF9BA6"/></marker></defs>
+<rect width="540" height="960" fill="#25131A"/><rect x="34" y="78" width="472" height="790" rx="28" fill="none" stroke="#F7E7C9" stroke-opacity=".14"/>
+<text x="34" y="48" font-family="Arial,sans-serif" font-size="17" fill="#F7E7C9" opacity=".72">ST-024 · 0–1s · object_metaphor</text>
+<text x="270" y="132" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="800" fill="#F7E7C9">WATCH THE OBJECT</text><rect x="58" y="235" width="424" height="430" rx="24" fill="#F7E7C9" opacity=".035"/>
+<g data-entity-id="ENT-target" data-state="unoriented" data-operation="attach" data-visible-entities="ENT-hero,ENT-trigger" data-affected-entities="ENT-trigger" data-proof-visible="false" data-limitation=""><circle cx="90" cy="475" r="34" fill="#FF9BA6"/><path d="M90 513v116m0-62l-48 118m48-118l56 118" stroke="#F7E7C9" stroke-width="13" stroke-linecap="round"/><path d="M90 537l-54 38m54-38l55 26" stroke="#F7E7C9" stroke-width="13" stroke-linecap="round"/><path d="M192 418Q270 312 348 418" fill="none" stroke="#FF9BA6" stroke-width="11"/><circle cx="192" cy="418" r="14" fill="#F7E7C9"/><circle cx="348" cy="418" r="14" fill="#FF9BA6"/><text x="270" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#F7E7C9">bridge</text></g>
+<rect x="58" y="700" width="424" height="72" rx="18" fill="#F7E7C9" opacity=".08"/>
+<text x="76" y="729" font-family="Arial,sans-serif" font-size="16" fill="#F7E7C9" opacity=".82">BEFORE · target = absent</text>
+<text x="76" y="757" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#FF9BA6">AFTER · target = unoriented</text>
+<rect x="58" y="795" width="424" height="82" rx="18" fill="#F7E7C9" opacity=".09"/><text x="76" y="815" font-family="Arial,sans-serif" font-size="13" fill="#F7E7C9" opacity=".80">ACTION · notices the bridge</text><text x="76" y="833" font-family="Arial,sans-serif" font-size="13" fill="#F7E7C9" opacity=".80">CUT · Open a precise question with a visible changed</text><text x="76" y="851" font-family="Arial,sans-serif" font-size="13" fill="#F7E7C9" opacity=".80">object.</text>
+<text x="270" y="923" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#F7E7C9" opacity=".48">ORIGINAL LOCAL PREVIS · EXTERNAL PROVIDER NOT RUN</text>
+</svg>

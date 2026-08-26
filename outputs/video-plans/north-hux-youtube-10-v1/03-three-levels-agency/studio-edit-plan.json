@@ -1,0 +1,402 @@
+{
+  "audio_policy": "Original creator voice only; no cloning or synthetic likeness.",
+  "creator_media_state": "not_received",
+  "evidence_policy": "Only deterministic UI/diagrams may carry proof. AI B-roll is context-only.",
+  "provider_generation_state": "blocked_approval",
+  "publication_state": "blocked_approval",
+  "resolve_mutation_state": "blocked_approval",
+  "schema": "north-hux.studio-edit-plan.v1",
+  "script_key": "three-levels-agency",
+  "timeline": [
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 2000,
+      "evidence_role": "none",
+      "frame_sha256": "e247f1eaf4dd382953dc695bb3c4f650cf2bb305fab877be18c7ecce3162a16a",
+      "frame_uri": "03-three-levels-agency/frames/01.svg",
+      "generation_state": "not_run",
+      "narration": "The same workflow can contain three different levels of agency.",
+      "on_screen_text": "The same workflow can contain three different agents.",
+      "rights_state": "owner_media_required",
+      "shot_index": 1,
+      "source_evidence_ids": [],
+      "start_ms": 0,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 5000,
+      "evidence_role": "context",
+      "frame_sha256": "a9f02074413980453d4fb91285d22d261fa4395861e7f70a6dc692d294e0a400",
+      "frame_uri": "03-three-levels-agency/frames/02.svg",
+      "generation_state": "not_run",
+      "narration": "An assistant drafts. A copilot recommends. A delegated agent executes inside a boundary.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 2,
+      "source_evidence_ids": [],
+      "start_ms": 2000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: An assistant drafts. A copilot recommends. A delegated agent executes inside a boundary.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 8000,
+      "evidence_role": "none",
+      "frame_sha256": "21493c89b77fb5794956de058927286f805025520f42ae27e4ffe69f3a17bea0",
+      "frame_uri": "03-three-levels-agency/frames/03.svg",
+      "generation_state": "not_run",
+      "narration": "Use the same customer request and change only decision authority.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 3,
+      "source_evidence_ids": [],
+      "start_ms": 5000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Capture an owned deterministic prototype or render the supplied diagram",
+        "prompt": "Use only owned/synthetic example data. Screen must visibly support the claim; no competitor UI reuse."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "screen_demo",
+      "end_ms": 11000,
+      "evidence_role": "proof",
+      "frame_sha256": "0aef45c2b3c25ac3deb4bacba372d800686b8fb8d6745d8f6d39f7b69557aca1",
+      "frame_uri": "03-three-levels-agency/frames/04.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 4,
+      "source_evidence_ids": [],
+      "start_ms": 8000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Side-by-side authority ladder: DRAFT → RECOMMEND → EXECUTE, with reversibility and review controls.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 14000,
+      "evidence_role": "none",
+      "frame_sha256": "78dd269bd4b36c847185423b4b3b489ed2d89963fc0f6c7a2b50561cd44555ff",
+      "frame_uri": "03-three-levels-agency/frames/05.svg",
+      "generation_state": "not_run",
+      "narration": "Drafting is easy to reverse. Recommendations need evidence. Execution needs permissions, limits, and rollback.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 5,
+      "source_evidence_ids": [],
+      "start_ms": 11000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 18000,
+      "evidence_role": "proof",
+      "frame_sha256": "2d197283f67218a246126ad93be2ba0bddc2636883f0a2893660cf0e6c02ee98",
+      "frame_uri": "03-three-levels-agency/frames/06.svg",
+      "generation_state": "not_run",
+      "narration": "Do not buy the most autonomous option by default.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 6,
+      "source_evidence_ids": [],
+      "start_ms": 14000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Side-by-side authority ladder: DRAFT → RECOMMEND → EXECUTE, with reversibility and review controls.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve provider, prompt, budget, and rights before generation",
+        "prompt": "Three ascending illuminated platforms in an abstract operations space; no humanoid robots, text, charts, or claimed results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "ai_generated_broll",
+      "end_ms": 20000,
+      "evidence_role": "context",
+      "frame_sha256": "59cd9ba0ad69b3c241c92eb643069b4d4c4f4b9c6ebf90edf4ea91ef2452897c",
+      "frame_uri": "03-three-levels-agency/frames/07.svg",
+      "generation_state": "blocked_approval",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "provider_review_required",
+      "shot_index": 7,
+      "source_evidence_ids": [],
+      "start_ms": 18000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Optional two-second metaphorical context insert. It must not carry evidence, results, UI, numbers, people, likeness, or logos.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 24000,
+      "evidence_role": "none",
+      "frame_sha256": "2e87927de336b8300949a5580eecc3aa9eafe07c70d74031fbee1d0cbc6c4e1b",
+      "frame_uri": "03-three-levels-agency/frames/08.svg",
+      "generation_state": "not_run",
+      "narration": "Choose the lowest agency level that produces the business result.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 8,
+      "source_evidence_ids": [],
+      "start_ms": 20000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 26000,
+      "evidence_role": "context",
+      "frame_sha256": "626b15b1f155cbd64eb79fbb52145a09a84836116a999ddb16d400b7eed5cdbe",
+      "frame_uri": "03-three-levels-agency/frames/09.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Which level is your workflow actually ready for?",
+      "rights_state": "original_plan",
+      "shot_index": 9,
+      "source_evidence_ids": [],
+      "start_ms": 24000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: Which level is your workflow actually ready for?",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve CTA and brand lockup",
+        "prompt": "Render deterministically from North Hux typography and color tokens."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "end_card",
+      "end_ms": 30000,
+      "evidence_role": "none",
+      "frame_sha256": "d71fe17918c96e157862c543fcf532d2303c4e1f2704931b7bbb13e512fac33d",
+      "frame_uri": "03-three-levels-agency/frames/10.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Which level is your workflow actually ready for?",
+      "rights_state": "original_plan",
+      "shot_index": 10,
+      "source_evidence_ids": [],
+      "start_ms": 26000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "North Hux end card: Which level is your workflow actually ready for?",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    }
+  ]
+}

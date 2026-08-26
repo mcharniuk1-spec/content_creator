@@ -1,0 +1,1212 @@
+{
+  "external_provider_state": "NOT_RUN",
+  "frame_count": 390,
+  "framework_count": 60,
+  "generated_at": "2026-08-25T00:00:00+03:00",
+  "generation_route": "deterministic_local_provider_disabled",
+  "image_format": "svg",
+  "records": [
+    {
+      "framework_id": "SF-001",
+      "kind": "hook",
+      "path": "sf-001-visual-mismatch",
+      "record_hash": "sha256:3a041969cfb46a4c4a754f9ffc2d065af950313b4a10df761077011a42f1f9ee",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "establish_context",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "visual_anomaly",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "observed_artifact",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_anchor",
+        "text_role": "headline_only",
+        "transition_family": "hard_cut",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-002",
+      "kind": "hook",
+      "path": "sf-002-silent-freeze",
+      "record_hash": "sha256:de9d1d5d599d882bc689ca588ade3a6ff3337125d25018d74b4ef466c5d8fce2",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "next_step",
+        "hook_mechanism": "visual_anomaly",
+        "pacing_profile": "measured_beat",
+        "proof_form": "calculation",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_plus_accent",
+        "text_role": "question_card",
+        "transition_family": "match_on_action",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-003",
+      "kind": "hook",
+      "path": "sf-003-inverted-result",
+      "record_hash": "sha256:8879477891368189fdb52d7dc3f9bd31eb128808d6f36fb270bb0423ced994ad",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "visual_anomaly",
+        "pacing_profile": "held_reveal",
+        "proof_form": "paraphrased_source",
+        "risk_class": "source_dependent",
+        "sound_role": "music_pulse",
+        "text_role": "keyword_captions",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-004",
+      "kind": "hook",
+      "path": "sf-004-wrong-tool-macro",
+      "record_hash": "sha256:c2e2921f3b8791760896f160137774f592b23b33aa3faac0bd7c8b2d35136a5c",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "prove_state",
+        "cta_exit": "recap",
+        "hook_mechanism": "visual_anomaly",
+        "pacing_profile": "slow_observation",
+        "proof_form": "process_trace",
+        "risk_class": "source_dependent",
+        "sound_role": "accent_sfx",
+        "text_role": "proof_callout",
+        "transition_family": "push",
+        "viewer_job": "compare_options",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-005",
+      "kind": "hook",
+      "path": "sf-005-abrupt-scale-shift",
+      "record_hash": "sha256:d70d787ddff5229748c7df64743c3b810273c249362cf313f036d5d2c4fd6bc9",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "contrast",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "visual_anomaly",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "constraint",
+        "risk_class": "source_dependent",
+        "sound_role": "silence_drop",
+        "text_role": "labels",
+        "transition_family": "wipe",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-006",
+      "kind": "hook",
+      "path": "sf-006-missing-object",
+      "record_hash": "sha256:daa2a31db20d86d47bbaf65e51d0479cc1c2b2bac8b9beb19dad2b7db97601bc",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "attention_reset",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "visual_anomaly",
+        "pacing_profile": "measured_beat",
+        "proof_form": "worked_example",
+        "risk_class": "source_dependent",
+        "sound_role": "ambient_bed",
+        "text_role": "step_counter",
+        "transition_family": "dissolve",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-007",
+      "kind": "hook_intro",
+      "path": "sf-007-hidden-bottleneck",
+      "record_hash": "sha256:129c4ce7931626045ba34b8ba55e861608690cefa28faecbba9ceb57c0deb213",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "diagnostic_question",
+        "pacing_profile": "measured_beat",
+        "proof_form": "process_trace",
+        "risk_class": "source_dependent",
+        "sound_role": "silence_drop",
+        "text_role": "step_counter",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-008",
+      "kind": "hook_intro",
+      "path": "sf-008-risk-check",
+      "record_hash": "sha256:94573e360fca7cb7e968a8d24d38d7117fb42482c7ddc6f57fbacd5b91a9139d",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "prove_state",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "diagnostic_question",
+        "pacing_profile": "held_reveal",
+        "proof_form": "constraint",
+        "risk_class": "source_dependent",
+        "sound_role": "ambient_bed",
+        "text_role": "no_text",
+        "transition_family": "push",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-009",
+      "kind": "hook_intro",
+      "path": "sf-009-cost-leak",
+      "record_hash": "sha256:8e6cb5dc13e617e314c7af72b57586c8f85b8e652930cd71150ad78cad724c2b",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "contrast",
+        "cta_exit": "next_step",
+        "hook_mechanism": "diagnostic_question",
+        "pacing_profile": "slow_observation",
+        "proof_form": "worked_example",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_anchor",
+        "text_role": "headline_only",
+        "transition_family": "wipe",
+        "viewer_job": "compare_options",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-010",
+      "kind": "hook_intro",
+      "path": "sf-010-tool-fit",
+      "record_hash": "sha256:4970f0a57e0ada03e34fc02fd628b1656230fb8dcf72fc7e5fb1b3a1cf057841",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "attention_reset",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "diagnostic_question",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "observed_artifact",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_plus_accent",
+        "text_role": "question_card",
+        "transition_family": "dissolve",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-011",
+      "kind": "hook_intro",
+      "path": "sf-011-owner-gap",
+      "record_hash": "sha256:77da1ff76d30d8b27b5acd43ceb5b331ff311c4c8da73860e76850863ebdf2ad",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "establish_context",
+        "cta_exit": "recap",
+        "hook_mechanism": "diagnostic_question",
+        "pacing_profile": "measured_beat",
+        "proof_form": "calculation",
+        "risk_class": "source_dependent",
+        "sound_role": "music_pulse",
+        "text_role": "keyword_captions",
+        "transition_family": "cut_on_sound",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-012",
+      "kind": "hook_intro",
+      "path": "sf-012-proof-gap",
+      "record_hash": "sha256:0321abea236e481b0e95254da66bea54b3cb86156d5f003091fc7a4cde0258b9",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "diagnostic_question",
+        "pacing_profile": "held_reveal",
+        "proof_form": "paraphrased_source",
+        "risk_class": "source_dependent",
+        "sound_role": "accent_sfx",
+        "text_role": "proof_callout",
+        "transition_family": "none",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-013",
+      "kind": "hook_intro",
+      "path": "sf-013-faster-made-slower",
+      "record_hash": "sha256:dba5ff69197a6f9ed8df898942b0a75ffd23b6a53c57df96e10d81e057874468",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "contrast",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "contradiction",
+        "pacing_profile": "held_reveal",
+        "proof_form": "observed_artifact",
+        "risk_class": "source_dependent",
+        "sound_role": "music_pulse",
+        "text_role": "proof_callout",
+        "transition_family": "wipe",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-014",
+      "kind": "hook_intro",
+      "path": "sf-014-automation-needs-a-gate",
+      "record_hash": "sha256:4cda39829f79d38b33c7a5536acc604594f58189d2c73da614e7c16cea15ce36",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "attention_reset",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "contradiction",
+        "pacing_profile": "slow_observation",
+        "proof_form": "calculation",
+        "risk_class": "source_dependent",
+        "sound_role": "accent_sfx",
+        "text_role": "labels",
+        "transition_family": "dissolve",
+        "viewer_job": "compare_options",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-015",
+      "kind": "hook_intro",
+      "path": "sf-015-more-data-less-clarity",
+      "record_hash": "sha256:97b73767ad59c0bcb5a695304d7c401f5d409635bad64c96081fe2f2e8dc2156",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "establish_context",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "contradiction",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "paraphrased_source",
+        "risk_class": "source_dependent",
+        "sound_role": "silence_drop",
+        "text_role": "step_counter",
+        "transition_family": "cut_on_sound",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-016",
+      "kind": "hook_intro",
+      "path": "sf-016-busy-is-not-progress",
+      "record_hash": "sha256:080327e2f8e5d88f4e750eb3bd0d6f020d1a01f682626cbb317a3d9854516e72",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "next_step",
+        "hook_mechanism": "contradiction",
+        "pacing_profile": "measured_beat",
+        "proof_form": "process_trace",
+        "risk_class": "source_dependent",
+        "sound_role": "ambient_bed",
+        "text_role": "no_text",
+        "transition_family": "none",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-017",
+      "kind": "hook_intro",
+      "path": "sf-017-ai-is-not-autonomy",
+      "record_hash": "sha256:935f9f108f8a244bb467c67b2b654640d156dd6b069140ad0bddaa6031e1a4e2",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "contradiction",
+        "pacing_profile": "held_reveal",
+        "proof_form": "constraint",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_anchor",
+        "text_role": "headline_only",
+        "transition_family": "hard_cut",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-018",
+      "kind": "hook_intro",
+      "path": "sf-018-feature-is-not-outcome",
+      "record_hash": "sha256:41af9e82fbcc66015a96c3213f483b5c7b6d380352f66749db157d000af411ac",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "prove_state",
+        "cta_exit": "recap",
+        "hook_mechanism": "contradiction",
+        "pacing_profile": "slow_observation",
+        "proof_form": "worked_example",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_plus_accent",
+        "text_role": "question_card",
+        "transition_family": "match_on_action",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-019",
+      "kind": "hook_broll",
+      "path": "sf-019-ignored-warning",
+      "record_hash": "sha256:14ce101ab8f567795a7faf7c081b87686b5c499a90157cfd3e63f97df443a74b",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "establish_context",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "consequence",
+        "pacing_profile": "slow_observation",
+        "proof_form": "process_trace",
+        "risk_class": "low",
+        "sound_role": "voice_anchor",
+        "text_role": "question_card",
+        "transition_family": "cut_on_sound",
+        "viewer_job": "compare_options",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-020",
+      "kind": "hook_broll",
+      "path": "sf-020-one-bad-handoff",
+      "record_hash": "sha256:6e72401c7a8b69ed4e3849e4a0064a57b4bb765c0f97061b66573d56594c9438",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "consequence",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "constraint",
+        "risk_class": "low",
+        "sound_role": "voice_plus_accent",
+        "text_role": "keyword_captions",
+        "transition_family": "none",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-021",
+      "kind": "hook_broll",
+      "path": "sf-021-stale-metric",
+      "record_hash": "sha256:c7e837dbdcec82ac5c94d30f9aa102ca99241aa80ba0e631c83b9681555620cd",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "consequence",
+        "pacing_profile": "measured_beat",
+        "proof_form": "worked_example",
+        "risk_class": "low",
+        "sound_role": "music_pulse",
+        "text_role": "proof_callout",
+        "transition_family": "hard_cut",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-022",
+      "kind": "hook_broll",
+      "path": "sf-022-missing-is-not-zero",
+      "record_hash": "sha256:ec43ebcf3684b87aba763d980d1d7018b7455a6164bab9c5032395ffa5502559",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "prove_state",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "consequence",
+        "pacing_profile": "held_reveal",
+        "proof_form": "observed_artifact",
+        "risk_class": "low",
+        "sound_role": "accent_sfx",
+        "text_role": "labels",
+        "transition_family": "match_on_action",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-023",
+      "kind": "hook_broll",
+      "path": "sf-023-bypassed-approval",
+      "record_hash": "sha256:a79e4b9f23f2f1256b6b4d261b0ffbe02cde12323a72020b39adefc9c3778ec8",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "contrast",
+        "cta_exit": "next_step",
+        "hook_mechanism": "consequence",
+        "pacing_profile": "slow_observation",
+        "proof_form": "calculation",
+        "risk_class": "low",
+        "sound_role": "silence_drop",
+        "text_role": "step_counter",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-024",
+      "kind": "hook_broll",
+      "path": "sf-024-hidden-rollback",
+      "record_hash": "sha256:c857302f245d737c0c74e30dd77fedf1a81168469c34e1a53010d7e06608b6e9",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "attention_reset",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "consequence",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "paraphrased_source",
+        "risk_class": "low",
+        "sound_role": "ambient_bed",
+        "text_role": "no_text",
+        "transition_family": "push",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-025",
+      "kind": "intro_broll",
+      "path": "sf-025-clutter-to-map",
+      "record_hash": "sha256:d6c6c38de1595800813661f86fd54ce14a7c3279fa7d7d33684bdb2264d21276",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "recap",
+        "hook_mechanism": "before_after",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "observed_artifact",
+        "risk_class": "low",
+        "sound_role": "silence_drop",
+        "text_role": "no_text",
+        "transition_family": "hard_cut",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-026",
+      "kind": "intro_broll",
+      "path": "sf-026-manual-to-governed",
+      "record_hash": "sha256:b4d3223adb3fd1ccdd0bc1a8086ec63a3fbe0e6167b2b27554d4d3c18e23c3f8",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "prove_state",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "before_after",
+        "pacing_profile": "measured_beat",
+        "proof_form": "calculation",
+        "risk_class": "low",
+        "sound_role": "ambient_bed",
+        "text_role": "headline_only",
+        "transition_family": "match_on_action",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-027",
+      "kind": "intro_broll",
+      "path": "sf-027-claim-to-receipt",
+      "record_hash": "sha256:5af86839d89d5ae5a9c71d77749fa72f1254aee8f800d80598f0a13e2b082cf8",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "contrast",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "before_after",
+        "pacing_profile": "held_reveal",
+        "proof_form": "paraphrased_source",
+        "risk_class": "low",
+        "sound_role": "voice_anchor",
+        "text_role": "question_card",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-028",
+      "kind": "intro_broll",
+      "path": "sf-028-inbox-to-queue",
+      "record_hash": "sha256:1e0446d9c74e3a75f3162c99b3f90495f67563d26508fa3aa8cfa771f654384e",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "attention_reset",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "before_after",
+        "pacing_profile": "slow_observation",
+        "proof_form": "process_trace",
+        "risk_class": "low",
+        "sound_role": "voice_plus_accent",
+        "text_role": "keyword_captions",
+        "transition_family": "push",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-029",
+      "kind": "intro_broll",
+      "path": "sf-029-flat-list-to-graph",
+      "record_hash": "sha256:d547d446b88013c1fe5a18656fc15bbcaaa890c9c18cfc20e93670217bc43951",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "establish_context",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "before_after",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "constraint",
+        "risk_class": "low",
+        "sound_role": "music_pulse",
+        "text_role": "proof_callout",
+        "transition_family": "wipe",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-030",
+      "kind": "intro_broll",
+      "path": "sf-030-guessing-to-experiment",
+      "record_hash": "sha256:fb2ff380b0270d89844efca997c7b1b16d29317bf8839acbd2cd63d74699c14a",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "next_step",
+        "hook_mechanism": "before_after",
+        "pacing_profile": "measured_beat",
+        "proof_form": "worked_example",
+        "risk_class": "low",
+        "sound_role": "accent_sfx",
+        "text_role": "labels",
+        "transition_family": "dissolve",
+        "viewer_job": "compare_options",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-031",
+      "kind": "hook_intro",
+      "path": "sf-031-three-warning-signs",
+      "record_hash": "sha256:2ebbc6db536bb9edb1bfb5f023c0edcd2022c2717fd1b71b60fd7a54ff12ecef",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "contrast",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "countdown",
+        "pacing_profile": "measured_beat",
+        "proof_form": "process_trace",
+        "risk_class": "source_dependent",
+        "sound_role": "music_pulse",
+        "text_role": "labels",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-032",
+      "kind": "hook_intro",
+      "path": "sf-032-three-fast-checks",
+      "record_hash": "sha256:b98e88fbafe79de418abe4ac9a624590b6800ddca95ea39e980e7473b8bf5d5c",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "attention_reset",
+        "cta_exit": "recap",
+        "hook_mechanism": "countdown",
+        "pacing_profile": "held_reveal",
+        "proof_form": "constraint",
+        "risk_class": "source_dependent",
+        "sound_role": "accent_sfx",
+        "text_role": "step_counter",
+        "transition_family": "push",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-033",
+      "kind": "hook_intro",
+      "path": "sf-033-five-system-layers",
+      "record_hash": "sha256:16f15f0b6406f9c8fada47b9b3c6cec20acd3605961ffd09247685df4eacb1dc",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "establish_context",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "countdown",
+        "pacing_profile": "slow_observation",
+        "proof_form": "worked_example",
+        "risk_class": "source_dependent",
+        "sound_role": "silence_drop",
+        "text_role": "no_text",
+        "transition_family": "wipe",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-034",
+      "kind": "hook_intro",
+      "path": "sf-034-four-common-mistakes",
+      "record_hash": "sha256:a027a40099971f69f776b3c08a5ebafcc11f0ed54f7c72b76351469cbeb838a5",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "countdown",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "observed_artifact",
+        "risk_class": "source_dependent",
+        "sound_role": "ambient_bed",
+        "text_role": "headline_only",
+        "transition_family": "dissolve",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-035",
+      "kind": "hook_intro",
+      "path": "sf-035-three-cut-rules",
+      "record_hash": "sha256:2e243a2264eb270e20ca43c85cb26538b92a7a02a29acc81312469003d4aaee4",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "countdown",
+        "pacing_profile": "measured_beat",
+        "proof_form": "calculation",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_anchor",
+        "text_role": "question_card",
+        "transition_family": "cut_on_sound",
+        "viewer_job": "compare_options",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-036",
+      "kind": "hook_intro",
+      "path": "sf-036-five-proof-states",
+      "record_hash": "sha256:befb50c1f8f4be0ca63f21684a9e1261653f4fa33c16792549cd7781c9e5e7e0",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "prove_state",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "countdown",
+        "pacing_profile": "held_reveal",
+        "proof_form": "paraphrased_source",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_plus_accent",
+        "text_role": "keyword_captions",
+        "transition_family": "none",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-037",
+      "kind": "hook_broll",
+      "path": "sf-037-domino-chain",
+      "record_hash": "sha256:2e0d2b7bb47819b88adb8a01baa220e2a131aa45ca91048f0eaa92d044c3f0fb",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "establish_context",
+        "cta_exit": "next_step",
+        "hook_mechanism": "object_demo",
+        "pacing_profile": "held_reveal",
+        "proof_form": "observed_artifact",
+        "risk_class": "low",
+        "sound_role": "voice_anchor",
+        "text_role": "keyword_captions",
+        "transition_family": "wipe",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-038",
+      "kind": "hook_broll",
+      "path": "sf-038-transparent-box",
+      "record_hash": "sha256:e34b5e674557190a8d11d3037e3d01e72c2905050a7d788ce2695d8809a53ff0",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "object_demo",
+        "pacing_profile": "slow_observation",
+        "proof_form": "calculation",
+        "risk_class": "low",
+        "sound_role": "voice_plus_accent",
+        "text_role": "proof_callout",
+        "transition_family": "dissolve",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-039",
+      "kind": "hook_broll",
+      "path": "sf-039-leaking-bucket",
+      "record_hash": "sha256:752f7c55a284485fe5498975b890f555498348080b7a22360375927a0027b27f",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "recap",
+        "hook_mechanism": "object_demo",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "paraphrased_source",
+        "risk_class": "low",
+        "sound_role": "music_pulse",
+        "text_role": "labels",
+        "transition_family": "cut_on_sound",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-040",
+      "kind": "hook_broll",
+      "path": "sf-040-red-string-trace",
+      "record_hash": "sha256:f5bd82e98f759a8093e5dd8ec92cbb20dc8994d4e5460ab513ea0d8f390df298",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "prove_state",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "object_demo",
+        "pacing_profile": "measured_beat",
+        "proof_form": "process_trace",
+        "risk_class": "low",
+        "sound_role": "accent_sfx",
+        "text_role": "step_counter",
+        "transition_family": "none",
+        "viewer_job": "compare_options",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-041",
+      "kind": "hook_broll",
+      "path": "sf-041-balance-scale",
+      "record_hash": "sha256:b6b28cc10659d7f02882c1fe4e8d297b75cac4f9f4383b8c5a885376aacb9702",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "contrast",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "object_demo",
+        "pacing_profile": "held_reveal",
+        "proof_form": "constraint",
+        "risk_class": "low",
+        "sound_role": "silence_drop",
+        "text_role": "no_text",
+        "transition_family": "hard_cut",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-042",
+      "kind": "hook_broll",
+      "path": "sf-042-lock-and-key",
+      "record_hash": "sha256:00b73fa70b03bc2d115f92311bce1d6d3698e01e5cf3520afa440369edaf8fa9",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "attention_reset",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "object_demo",
+        "pacing_profile": "slow_observation",
+        "proof_form": "worked_example",
+        "risk_class": "low",
+        "sound_role": "ambient_bed",
+        "text_role": "headline_only",
+        "transition_family": "match_on_action",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-043",
+      "kind": "hook_broll",
+      "path": "sf-043-receipt-reveal",
+      "record_hash": "sha256:8a0f5d92ee321fc18119440f80295e7aaacf035499685031a620ca15406e2265",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "reveal",
+        "pacing_profile": "slow_observation",
+        "proof_form": "process_trace",
+        "risk_class": "low",
+        "sound_role": "silence_drop",
+        "text_role": "headline_only",
+        "transition_family": "cut_on_sound",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-044",
+      "kind": "hook_broll",
+      "path": "sf-044-screen-proof",
+      "record_hash": "sha256:24ec0771ed6fe507d2864f432e240b91bcbe35d97b48cdfd4c5aa089766709b4",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "prove_state",
+        "cta_exit": "next_step",
+        "hook_mechanism": "reveal",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "constraint",
+        "risk_class": "low",
+        "sound_role": "ambient_bed",
+        "text_role": "question_card",
+        "transition_family": "none",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-045",
+      "kind": "hook_broll",
+      "path": "sf-045-calculation-reveal",
+      "record_hash": "sha256:d8393d79349586909566bbfe120da402646122900c0f90a09064e026787563fb",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "contrast",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "reveal",
+        "pacing_profile": "measured_beat",
+        "proof_form": "worked_example",
+        "risk_class": "low",
+        "sound_role": "voice_anchor",
+        "text_role": "keyword_captions",
+        "transition_family": "hard_cut",
+        "viewer_job": "compare_options",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-046",
+      "kind": "hook_broll",
+      "path": "sf-046-annotation-peel",
+      "record_hash": "sha256:26a1994a932f85fa3c43fc48d35eaaefc90928b316fd7d2a19d2b1ca793a00f3",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "attention_reset",
+        "cta_exit": "recap",
+        "hook_mechanism": "reveal",
+        "pacing_profile": "held_reveal",
+        "proof_form": "observed_artifact",
+        "risk_class": "low",
+        "sound_role": "voice_plus_accent",
+        "text_role": "proof_callout",
+        "transition_family": "match_on_action",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-047",
+      "kind": "hook_broll",
+      "path": "sf-047-source-stack",
+      "record_hash": "sha256:7e550eaf29307afda711ef15f14c56e2fad1f2aa2e50646d7c52151d191d5d9e",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "establish_context",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "reveal",
+        "pacing_profile": "slow_observation",
+        "proof_form": "calculation",
+        "risk_class": "low",
+        "sound_role": "music_pulse",
+        "text_role": "labels",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-048",
+      "kind": "hook_broll",
+      "path": "sf-048-constraint-card",
+      "record_hash": "sha256:d7ecd633d4bb15cbc8efae3bc7f48e1d2baa281f91d857f2a968e9608eac5d1f",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "reveal",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "paraphrased_source",
+        "risk_class": "low",
+        "sound_role": "accent_sfx",
+        "text_role": "step_counter",
+        "transition_family": "push",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-049",
+      "kind": "intro_broll",
+      "path": "sf-049-missed-handoff",
+      "record_hash": "sha256:2d648f5b20e0780b771cb7f42716cf8b7e2c16c9149b12393c8c4eba1d68aa76",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "contrast",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "story_in_progress",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "observed_artifact",
+        "risk_class": "source_dependent",
+        "sound_role": "music_pulse",
+        "text_role": "step_counter",
+        "transition_family": "hard_cut",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-050",
+      "kind": "intro_broll",
+      "path": "sf-050-late-night-alert",
+      "record_hash": "sha256:fd778bbedeff88e294dab093ad71d76d80f062be687835bc188e96c5925dca41",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "attention_reset",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "story_in_progress",
+        "pacing_profile": "measured_beat",
+        "proof_form": "calculation",
+        "risk_class": "source_dependent",
+        "sound_role": "accent_sfx",
+        "text_role": "no_text",
+        "transition_family": "match_on_action",
+        "viewer_job": "compare_options",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-051",
+      "kind": "intro_broll",
+      "path": "sf-051-launch-day-choice",
+      "record_hash": "sha256:fdd9a3df130686ed311e033c81d378a7a0c60304dec6af994fb904ac35df1746",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "establish_context",
+        "cta_exit": "next_step",
+        "hook_mechanism": "story_in_progress",
+        "pacing_profile": "held_reveal",
+        "proof_form": "paraphrased_source",
+        "risk_class": "source_dependent",
+        "sound_role": "silence_drop",
+        "text_role": "headline_only",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-052",
+      "kind": "intro_broll",
+      "path": "sf-052-review-collision",
+      "record_hash": "sha256:5680f51c848e0b0b55cd06b8201339fc5e6fa6579c89e3d700cc6b45a855bb65",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "story_in_progress",
+        "pacing_profile": "slow_observation",
+        "proof_form": "process_trace",
+        "risk_class": "source_dependent",
+        "sound_role": "ambient_bed",
+        "text_role": "question_card",
+        "transition_family": "push",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "layered_pip"
+      }
+    },
+    {
+      "framework_id": "SF-053",
+      "kind": "intro_broll",
+      "path": "sf-053-one-minute-audit",
+      "record_hash": "sha256:3ede4c91aca78195980e0dbeb5f01575a79f8dc1da991ac529e69111fa4ce8dc",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "recap",
+        "hook_mechanism": "story_in_progress",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "constraint",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_anchor",
+        "text_role": "keyword_captions",
+        "transition_family": "wipe",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-054",
+      "kind": "intro_broll",
+      "path": "sf-054-choice-at-the-threshold",
+      "record_hash": "sha256:847938797ff0b2f540e872e4add75bbd2b86184cd08f613ae7f1fbbd9ecf5359",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "prove_state",
+        "cta_exit": "loop_to_open",
+        "hook_mechanism": "story_in_progress",
+        "pacing_profile": "measured_beat",
+        "proof_form": "worked_example",
+        "risk_class": "source_dependent",
+        "sound_role": "voice_plus_accent",
+        "text_role": "proof_callout",
+        "transition_family": "dissolve",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-055",
+      "kind": "broll",
+      "path": "sf-055-hands-build-the-system",
+      "record_hash": "sha256:15cdcd93912ed925b7b427d3c25e57e2b912a7495c350f6774ca1b068a477886",
+      "taxonomy": {
+        "a_roll_integration": "picture_in_picture",
+        "broll_function": "establish_context",
+        "cta_exit": "no_cta",
+        "hook_mechanism": "direct_promise",
+        "pacing_profile": "measured_beat",
+        "proof_form": "process_trace",
+        "risk_class": "low",
+        "sound_role": "voice_anchor",
+        "text_role": "proof_callout",
+        "transition_family": "graphic_reveal",
+        "viewer_job": "compare_options",
+        "visual_grammar": "kinetic_type"
+      }
+    },
+    {
+      "framework_id": "SF-056",
+      "kind": "broll",
+      "path": "sf-056-macro-tool-sequence",
+      "record_hash": "sha256:7f609d97685c701be5fce7182844f05a32093a1c6f9f6caeb8761070087cf692",
+      "taxonomy": {
+        "a_roll_integration": "return_cut",
+        "broll_function": "concretize_abstraction",
+        "cta_exit": "comment_prompt",
+        "hook_mechanism": "direct_promise",
+        "pacing_profile": "held_reveal",
+        "proof_form": "constraint",
+        "risk_class": "low",
+        "sound_role": "voice_plus_accent",
+        "text_role": "labels",
+        "transition_family": "push",
+        "viewer_job": "verify_claim",
+        "visual_grammar": "split_screen"
+      }
+    },
+    {
+      "framework_id": "SF-057",
+      "kind": "broll",
+      "path": "sf-057-environment-transformation",
+      "record_hash": "sha256:4e177320bfc81f430ec8d10e62dc1398c0afcecc19b171bde82f89bcb620fe14",
+      "taxonomy": {
+        "a_roll_integration": "absent",
+        "broll_function": "demonstrate_process",
+        "cta_exit": "answer_question",
+        "hook_mechanism": "direct_promise",
+        "pacing_profile": "slow_observation",
+        "proof_form": "worked_example",
+        "risk_class": "low",
+        "sound_role": "music_pulse",
+        "text_role": "step_counter",
+        "transition_family": "wipe",
+        "viewer_job": "imagine_outcome",
+        "visual_grammar": "object_macro"
+      }
+    },
+    {
+      "framework_id": "SF-058",
+      "kind": "broll",
+      "path": "sf-058-screen-to-real-match",
+      "record_hash": "sha256:b8fbc3815e6e004bc028b01bee0db250fa7e3d3152b14bfb0100fe77ec99571f",
+      "taxonomy": {
+        "a_roll_integration": "full_open",
+        "broll_function": "prove_state",
+        "cta_exit": "next_step",
+        "hook_mechanism": "direct_promise",
+        "pacing_profile": "rapid_beat",
+        "proof_form": "observed_artifact",
+        "risk_class": "low",
+        "sound_role": "accent_sfx",
+        "text_role": "no_text",
+        "transition_family": "dissolve",
+        "viewer_job": "identify_problem",
+        "visual_grammar": "mock_screen_capture"
+      }
+    },
+    {
+      "framework_id": "SF-059",
+      "kind": "broll",
+      "path": "sf-059-rhythmic-assembly",
+      "record_hash": "sha256:9190aa0366f722e2c346fe3de863707788a1049d4f935fbe3a4f904baf27be0a",
+      "taxonomy": {
+        "a_roll_integration": "delayed_reveal",
+        "broll_function": "contrast",
+        "cta_exit": "save_reference",
+        "hook_mechanism": "direct_promise",
+        "pacing_profile": "measured_beat",
+        "proof_form": "calculation",
+        "risk_class": "low",
+        "sound_role": "silence_drop",
+        "text_role": "headline_only",
+        "transition_family": "cut_on_sound",
+        "viewer_job": "assess_risk",
+        "visual_grammar": "diagram_build"
+      }
+    },
+    {
+      "framework_id": "SF-060",
+      "kind": "broll",
+      "path": "sf-060-closing-the-loop",
+      "record_hash": "sha256:dd1a4227189a9ce6dad743e350b95108c61e2448512f53966d468a68ded5ee08",
+      "taxonomy": {
+        "a_roll_integration": "voice_over_broll",
+        "broll_function": "attention_reset",
+        "cta_exit": "recap",
+        "hook_mechanism": "direct_promise",
+        "pacing_profile": "held_reveal",
+        "proof_form": "paraphrased_source",
+        "risk_class": "low",
+        "sound_role": "ambient_bed",
+        "text_role": "question_card",
+        "transition_family": "none",
+        "viewer_job": "learn_mechanism",
+        "visual_grammar": "layered_pip"
+      }
+    }
+  ],
+  "schema": "studio-framework-library.v1",
+  "version": "1.0.0"
+}

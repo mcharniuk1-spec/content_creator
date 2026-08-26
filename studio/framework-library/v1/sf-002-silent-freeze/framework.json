@@ -1,0 +1,157 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 5000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-002-F01",
+      "image_path": "frames/SF-002-F01.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "WAIT",
+      "sequence_number": 1,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the anomaly boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "anomaly",
+      "transition": "match_on_action",
+      "visual_change": "Silent Freeze: anomaly; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-002-F02",
+      "image_path": "frames/SF-002-F02.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "WHAT CHANGED?",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the name tension boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "name tension",
+      "transition": "match_on_action",
+      "visual_change": "Silent Freeze: name tension; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-002-F03",
+      "image_path": "frames/SF-002-F03.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "THE CLUE",
+      "sequence_number": 3,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the orient boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "orient",
+      "transition": "match_on_action",
+      "visual_change": "Silent Freeze: orient; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-002-F04",
+      "image_path": "frames/SF-002-F04.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "NOW IT FITS",
+      "sequence_number": 4,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the payoff boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "payoff",
+      "transition": "match_on_action",
+      "visual_change": "Silent Freeze: payoff; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-002-F05",
+      "image_path": "frames/SF-002-F05.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "RETURN",
+      "sequence_number": 5,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the clean exit boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "clean exit",
+      "transition": "match_on_action",
+      "visual_change": "Silent Freeze: clean exit; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-002",
+  "kind": "hook",
+  "name": "Silent Freeze",
+  "purpose": "Create a deliberate attention reset",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-001"
+    ],
+    "export_id": "SIGEXP-SF-002",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:de9d1d5d599d882bc689ca588ade3a6ff3337125d25018d74b4ef466c5d8fce2",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-001"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "delayed_reveal",
+    "broll_function": "concretize_abstraction",
+    "cta_exit": "next_step",
+    "hook_mechanism": "visual_anomaly",
+    "pacing_profile": "measured_beat",
+    "proof_form": "calculation",
+    "risk_class": "source_dependent",
+    "sound_role": "voice_plus_accent",
+    "text_role": "question_card",
+    "transition_family": "match_on_action",
+    "viewer_job": "assess_risk",
+    "visual_grammar": "split_screen"
+  },
+  "version": "1.0.0"
+}

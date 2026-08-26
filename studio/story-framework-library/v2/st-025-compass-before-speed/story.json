@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:c23b1b8826d24aa2021a91be276cbf677fc8241b0f458043b2352367853495cd",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#0D1C2E",
+      "#70B8FF",
+      "#F2CE82",
+      "#FF746D"
+    ],
+    "proof_prop": "decision criteria",
+    "scene": "a route-planning table",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "bounded route",
+    "trigger_prop": "compass",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a project lead",
+      "visual_token": "hero-025"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "compass",
+      "visual_token": "compass"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "bounded route",
+      "visual_token": "bounded-route"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the team accelerates before agreeing direction",
+      "visual_token": "obstacle-object_metaphor"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "decision criteria",
+      "visual_token": "decision-criteria"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "object_metaphor",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-025-F01",
+      "handback_visible": false,
+      "hero_action": "notices the compass",
+      "image_path": "frames/ST-025-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a project lead in a route-planning table. The compass changes before the objective is secure. Keep ENT-target `bounded route` persistent and visibly transform it through `sets direction and stop conditions before moving`; show ENT-proof `decision criteria` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:bounded route=absent; ENT-proof:decision criteria=hidden → ENT-target:bounded route=unoriented; ENT-proof:decision criteria=hidden.",
+      "on_screen_text": "WATCH THE OBJECT",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "macro",
+      "start_ms": 0,
+      "state_after": "ENT-target:bounded route=unoriented; ENT-proof:decision criteria=hidden",
+      "state_before": "ENT-target:bounded route=absent; ENT-proof:decision criteria=hidden",
+      "story_question": "What unusual object is doing?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "gate",
+      "visual_state": "The compass changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-025-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-025-F02",
+      "handback_visible": false,
+      "hero_action": "locates the bounded route",
+      "image_path": "frames/ST-025-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a project lead in a route-planning table. The hero and persistent bounded route share one scene; objective: choose the next useful action. Keep ENT-target `bounded route` persistent and visibly transform it through `sets direction and stop conditions before moving`; show ENT-proof `decision criteria` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to choose the next useful action.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:bounded route=unoriented; ENT-proof:decision criteria=hidden → ENT-target:bounded route=present-unresolved; ENT-proof:decision criteria=hidden.",
+      "on_screen_text": "MAP IT TO THE SYSTEM",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:bounded route=present-unresolved; ENT-proof:decision criteria=hidden",
+      "state_before": "ENT-target:bounded route=unoriented; ENT-proof:decision criteria=hidden",
+      "story_question": "What system does the object stand for?",
+      "transition": "pull_out motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "gate",
+      "visual_state": "The hero and persistent bounded route share one scene; objective: choose the next useful action."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "tilt_down",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-025-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-025-F03",
+      "handback_visible": false,
+      "hero_action": "sets direction and stop conditions before moving",
+      "image_path": "frames/ST-025-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a project lead in a route-planning table. The hero sets direction and stop conditions before moving; the same bounded route changes state on screen. Keep ENT-target `bounded route` persistent and visibly transform it through `sets direction and stop conditions before moving`; show ENT-proof `decision criteria` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to set direction and stop conditions before moving.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:bounded route=present-unresolved; ENT-proof:decision criteria=hidden → ENT-target:bounded route=transformed; ENT-proof:decision criteria=hidden.",
+      "on_screen_text": "SHOW THE MECHANISM",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "start_ms": 2000,
+      "state_after": "ENT-target:bounded route=transformed; ENT-proof:decision criteria=hidden",
+      "state_before": "ENT-target:bounded route=present-unresolved; ENT-proof:decision criteria=hidden",
+      "story_question": "How does the object expose the mechanism?",
+      "transition": "tilt_down motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "gate",
+      "visual_state": "The hero sets direction and stop conditions before moving; the same bounded route changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "locked",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-025-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-025-F04",
+      "handback_visible": false,
+      "hero_action": "sees the bounded route blocked",
+      "image_path": "frames/ST-025-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a project lead in a route-planning table. The bounded route is visibly blocked by the team accelerates before agreeing direction; consequence: effort could compound in the wrong lane. Keep ENT-target `bounded route` persistent and visibly transform it through `sets direction and stop conditions before moving`; show ENT-proof `decision criteria` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But the team accelerates before agreeing direction.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:bounded route=transformed; ENT-proof:decision criteria=hidden → ENT-target:bounded route=blocked; ENT-proof:decision criteria=hidden.",
+      "on_screen_text": "RESISTANCE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "close",
+      "start_ms": 3000,
+      "state_after": "ENT-target:bounded route=blocked; ENT-proof:decision criteria=hidden",
+      "state_before": "ENT-target:bounded route=transformed; ENT-proof:decision criteria=hidden",
+      "story_question": "Where does resistance appear?",
+      "transition": "locked motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "gate",
+      "visual_state": "The bounded route is visibly blocked by the team accelerates before agreeing direction; consequence: effort could compound in the wrong lane."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-025-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-025-F05",
+      "handback_visible": false,
+      "hero_action": "checks the decision criteria",
+      "image_path": "frames/ST-025-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a project lead in a route-planning table. The changed bounded route remains visible while the decision criteria is isolated. Keep ENT-target `bounded route` persistent and visibly transform it through `sets direction and stop conditions before moving`; show ENT-proof `decision criteria` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the decision criteria, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:bounded route=blocked; ENT-proof:decision criteria=hidden → ENT-target:bounded route=changed-pending-review; ENT-proof:decision criteria=visible.",
+      "on_screen_text": "TEST THE MAPPING",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `object_metaphor` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "diagram",
+      "start_ms": 4000,
+      "state_after": "ENT-target:bounded route=changed-pending-review; ENT-proof:decision criteria=visible",
+      "state_before": "ENT-target:bounded route=blocked; ENT-proof:decision criteria=hidden",
+      "story_question": "What observable state proves the mapping?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "gate",
+      "visual_state": "The changed bounded route remains visible while the decision criteria is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "handback",
+      "beat_roles": [
+        "handback",
+        "limitation",
+        "payoff"
+      ],
+      "broll_function": "emotional_texture",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the visual argument and hand it back.",
+      "cause_frame_ids": [
+        "ST-025-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-025-F06",
+      "handback_visible": true,
+      "hero_action": "returns the resolved target to the viewer",
+      "image_path": "frames/ST-025-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a project lead in a route-planning table. The resolved bounded route stays visible while the sequence returns to A-roll: speed follows a visible route. Keep ENT-target `bounded route` persistent and visibly transform it through `sets direction and stop conditions before moving`; show ENT-proof `decision criteria` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the visual argument and hand it back.",
+      "limitation_visible": true,
+      "narration": "The bounded result: speed follows a visible route.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:bounded route=changed-pending-review; ENT-proof:decision criteria=visible → ENT-target:bounded route=resolved-with-boundary; ENT-proof:decision criteria=visible.",
+      "on_screen_text": "RETURN TO REALITY",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `object_metaphor` advances through `handback` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:bounded route=resolved-with-boundary; ENT-proof:decision criteria=visible",
+      "state_before": "ENT-target:bounded route=changed-pending-review; ENT-proof:decision criteria=visible",
+      "story_question": "What rule returns to the real workflow?",
+      "transition": "pull_out motivated by close the visual argument and hand it back.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "gate",
+      "visual_state": "The resolved bounded route stays visible while the sequence returns to A-roll: speed follows a visible route."
+    }
+  ],
+  "kind": "hook_broll",
+  "narrative": {
+    "action_chain": [
+      "notice the compass",
+      "sets direction and stop conditions before moving",
+      "inspect the decision criteria"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The compass changes state before the objective is secure.",
+    "limitation": "The compass stands for criteria, not certainty.",
+    "objective": "choose the next useful action",
+    "obstacle": "the team accelerates before agreeing direction",
+    "payoff": "speed follows a visible route",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "decision criteria",
+    "protagonist": "a project lead",
+    "setup": "a route-planning table",
+    "stakes": "effort could compound in the wrong lane"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:8a415f5e45f4c5540993bc9715f622a4f028dd64a8f240b175ae3df9fae001f0",
+  "story_id": "ST-025",
+  "title": "Compass Before Speed",
+  "variation_axes": {
+    "operation_type": "gate",
+    "proof_mechanism": "decision criteria; boundary=The compass stands for criteria, not certainty.",
+    "scene_topology": "object_metaphor::a route-planning table",
+    "target_transformation": "bounded route: unresolved -> speed follows a visible route"
+  },
+  "variation_fingerprint": "sha256:d45fdea54bf2cf8d982370e095a1e0c21f3b8ac3c74113438f3e611f2115ff0e",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:5c27abfe1e76242ed2e9982c5d9f2ed591ab253defb02e227ababa55146e4310"
+}

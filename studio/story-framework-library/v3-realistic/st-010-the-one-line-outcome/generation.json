@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-010",
+  "title": "The One-Line Outcome",
+  "source_story": "../v2/st-010-the-one-line-outcome/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult data steward in their mid 30s, natural coiled hair, slate shirt and warm-gray trousers",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-010 The One-Line Outcome\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult data steward in their mid 30s, natural coiled hair, slate shirt and warm-gray trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: bounded promise. Trigger prop: pencil. Proof prop: scope bracket. Obstacle: the opening promises too many outcomes.\nSix panels in reading order:\n1 close still: notices the pencil; show The pencil changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the bounded promise; show The hero and persistent bounded promise share one scene; objective: compress a complex workflow honestly. Emotional register: orientation.\n3 medium still: sees the bounded promise blocked; show The bounded promise is visibly blocked by the opening promises too many outcomes; consequence: the viewer cannot predict the lesson. Emotional register: concern.\n4 over_shoulder still: removes claims until one mechanism remains; show The hero removes claims until one mechanism remains; the same bounded promise changes state on screen. Emotional register: agency.\n5 macro still: checks the scope bracket; show The changed bounded promise remains visible while the scope bracket is isolated. Emotional register: confidence-with-caution.\n6 wide still: confirms the changed bounded promise; show The same bounded promise reaches its resolved state: the hook and payoff match. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Compression must not delete limitations.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-010-F01.png",
+    "frames/ST-010-F02.png",
+    "frames/ST-010-F03.png",
+    "frames/ST-010-F04.png",
+    "frames/ST-010-F05.png",
+    "frames/ST-010-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "aa6fdb61db867fe9288f1f4758f07023d01227a6fcfade181d81ab7cf7dbeb13",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "45ebd0893815925b5779ffe1cd1207a7e400d9c886a446680c9cf6f8505a38bd",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-010-F01",
+      "file": "frames/ST-010-F01.png",
+      "sha256": "8d7431eac95d3c2fe079e024204026d9ba366767b61c345309b41d5c238f214b",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 62.94,
+      "luma_stddev": 44.36,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-010-F02",
+      "file": "frames/ST-010-F02.png",
+      "sha256": "6e6448ed680e0b33366052166cd169b6a90a2b493950ca0400c780b2e39c4fee",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 90.67,
+      "luma_stddev": 65.91,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-010-F03",
+      "file": "frames/ST-010-F03.png",
+      "sha256": "44ed2c3149dba80b96a310018256a32168b302d9b74bbcf6d9fd153653ab5aed",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 84.76,
+      "luma_stddev": 65.84,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-010-F04",
+      "file": "frames/ST-010-F04.png",
+      "sha256": "e104eb284ac6b31e13757086af31a30b428d967fa2f284620112ff7d975684f3",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 75.45,
+      "luma_stddev": 67.01,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-010-F05",
+      "file": "frames/ST-010-F05.png",
+      "sha256": "e6dee0aad925a10c88c2a3fd4167ecab4574de65fec0bd335a5fff83b04410b4",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 115.93,
+      "luma_stddev": 58.87,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-010-F06",
+      "file": "frames/ST-010-F06.png",
+      "sha256": "a17ed7811aeafc739ceca1ea0e7b8dc8b4e86d731899d22b0c1f3935d91cfcb8",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 89.81,
+      "luma_stddev": 64.25,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

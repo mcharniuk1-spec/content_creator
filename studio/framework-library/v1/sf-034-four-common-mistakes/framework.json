@@ -1,0 +1,203 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 7000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "layered_pip clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-034-F01",
+      "image_path": "frames/SF-034-F01.svg",
+      "motion": "rapid_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "3 THINGS",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "sound_cue": "ambient_bed aligned to the number promise boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "number promise",
+      "transition": "dissolve",
+      "visual_change": "Four Common Mistakes: number promise; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "layered_pip clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-034-F02",
+      "image_path": "frames/SF-034-F02.svg",
+      "motion": "rapid_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "01",
+      "sequence_number": 2,
+      "shot_scale": "medium",
+      "sound_cue": "ambient_bed aligned to the item one boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "item one",
+      "transition": "dissolve",
+      "visual_change": "Four Common Mistakes: item one; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "layered_pip clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-034-F03",
+      "image_path": "frames/SF-034-F03.svg",
+      "motion": "rapid_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "02",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "sound_cue": "ambient_bed aligned to the item two boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "item two",
+      "transition": "dissolve",
+      "visual_change": "Four Common Mistakes: item two; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "layered_pip clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-034-F04",
+      "image_path": "frames/SF-034-F04.svg",
+      "motion": "rapid_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "03",
+      "sequence_number": 4,
+      "shot_scale": "medium",
+      "sound_cue": "ambient_bed aligned to the item three boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "item three",
+      "transition": "dissolve",
+      "visual_change": "Four Common Mistakes: item three; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "layered_pip clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-034-F05",
+      "image_path": "frames/SF-034-F05.svg",
+      "motion": "rapid_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "THE PATTERN",
+      "sequence_number": 5,
+      "shot_scale": "medium",
+      "sound_cue": "ambient_bed aligned to the pattern boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "pattern",
+      "transition": "dissolve",
+      "visual_change": "Four Common Mistakes: pattern; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "continuous",
+      "composition": "layered_pip clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 6000,
+      "frame_id": "SF-034-F06",
+      "image_path": "frames/SF-034-F06.svg",
+      "motion": "rapid_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "BRIDGE",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "sound_cue": "ambient_bed aligned to the bridge detail boundary; licensed or original audio only.",
+      "start_ms": 5000,
+      "story_function": "bridge detail",
+      "transition": "dissolve",
+      "visual_change": "Four Common Mistakes: bridge detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "continuous",
+      "composition": "layered_pip clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 7000,
+      "frame_id": "SF-034-F07",
+      "image_path": "frames/SF-034-F07.svg",
+      "motion": "rapid_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "SAVE",
+      "sequence_number": 7,
+      "shot_scale": "medium",
+      "sound_cue": "ambient_bed aligned to the save exit boundary; licensed or original audio only.",
+      "start_ms": 6000,
+      "story_function": "save exit",
+      "transition": "dissolve",
+      "visual_change": "Four Common Mistakes: save exit; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-034",
+  "kind": "hook_intro",
+  "name": "Four Common Mistakes",
+  "purpose": "Expose predictable errors",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-007"
+    ],
+    "export_id": "SIGEXP-SF-034",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:a027a40099971f69f776b3c08a5ebafcc11f0ed54f7c72b76351469cbeb838a5",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-005"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "full_open",
+    "broll_function": "concretize_abstraction",
+    "cta_exit": "no_cta",
+    "hook_mechanism": "countdown",
+    "pacing_profile": "rapid_beat",
+    "proof_form": "observed_artifact",
+    "risk_class": "source_dependent",
+    "sound_role": "ambient_bed",
+    "text_role": "headline_only",
+    "transition_family": "dissolve",
+    "viewer_job": "learn_mechanism",
+    "visual_grammar": "layered_pip"
+  },
+  "version": "1.0.0"
+}

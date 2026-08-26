@@ -1,0 +1,180 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 6000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "keyword_emphasis",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-027-F01",
+      "image_path": "frames/SF-027-F01.svg",
+      "motion": "held_reveal motion; use graphic_reveal only at this state boundary.",
+      "on_screen_text": "BEFORE",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "sound_cue": "voice_anchor aligned to the before boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "before",
+      "transition": "graphic_reveal",
+      "visual_change": "Claim to Receipt: before; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "on_cut",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-027-F02",
+      "image_path": "frames/SF-027-F02.svg",
+      "motion": "held_reveal motion; use graphic_reveal only at this state boundary.",
+      "on_screen_text": "FRICTION",
+      "sequence_number": 2,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the friction boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "friction",
+      "transition": "graphic_reveal",
+      "visual_change": "Claim to Receipt: friction; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "on_cut",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-027-F03",
+      "image_path": "frames/SF-027-F03.svg",
+      "motion": "held_reveal motion; use graphic_reveal only at this state boundary.",
+      "on_screen_text": "CHANGE",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the change action boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "change action",
+      "transition": "graphic_reveal",
+      "visual_change": "Claim to Receipt: change action; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "keyword_emphasis",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-027-F04",
+      "image_path": "frames/SF-027-F04.svg",
+      "motion": "held_reveal motion; use graphic_reveal only at this state boundary.",
+      "on_screen_text": "AFTER",
+      "sequence_number": 4,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the after boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "after",
+      "transition": "graphic_reveal",
+      "visual_change": "Claim to Receipt: after; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "on_cut",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-027-F05",
+      "image_path": "frames/SF-027-F05.svg",
+      "motion": "held_reveal motion; use graphic_reveal only at this state boundary.",
+      "on_screen_text": "LIMIT",
+      "sequence_number": 5,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the limitation boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "limitation",
+      "transition": "graphic_reveal",
+      "visual_change": "Claim to Receipt: limitation; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "continuous",
+      "composition": "kinetic_type clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 6000,
+      "frame_id": "SF-027-F06",
+      "image_path": "frames/SF-027-F06.svg",
+      "motion": "held_reveal motion; use graphic_reveal only at this state boundary.",
+      "on_screen_text": "COMPARE",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "sound_cue": "voice_anchor aligned to the hold comparison boundary; licensed or original audio only.",
+      "start_ms": 5000,
+      "story_function": "hold comparison",
+      "transition": "graphic_reveal",
+      "visual_change": "Claim to Receipt: hold comparison; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-027",
+  "kind": "intro_broll",
+  "name": "Claim to Receipt",
+  "purpose": "Turn an assertion into inspectable evidence",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-006"
+    ],
+    "export_id": "SIGEXP-SF-027",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:5af86839d89d5ae5a9c71d77749fa72f1254aee8f800d80598f0a13e2b082cf8",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-004"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "voice_over_broll",
+    "broll_function": "contrast",
+    "cta_exit": "no_cta",
+    "hook_mechanism": "before_after",
+    "pacing_profile": "held_reveal",
+    "proof_form": "paraphrased_source",
+    "risk_class": "low",
+    "sound_role": "voice_anchor",
+    "text_role": "question_card",
+    "transition_family": "graphic_reveal",
+    "viewer_job": "identify_problem",
+    "visual_grammar": "kinetic_type"
+  },
+  "version": "1.0.0"
+}

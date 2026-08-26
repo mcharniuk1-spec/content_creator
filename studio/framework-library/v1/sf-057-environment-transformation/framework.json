@@ -1,0 +1,180 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 6000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "demonstrate_process",
+      "caption_relation": "keyword_emphasis",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-057-F01",
+      "image_path": "frames/SF-057-F01.svg",
+      "motion": "slow_observation motion; use wipe only at this state boundary.",
+      "on_screen_text": "CONTEXT",
+      "sequence_number": 1,
+      "shot_scale": "macro",
+      "sound_cue": "music_pulse aligned to the establish boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "establish",
+      "transition": "wipe",
+      "visual_change": "Environment Transformation: establish; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "demonstrate_process",
+      "caption_relation": "on_cut",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-057-F02",
+      "image_path": "frames/SF-057-F02.svg",
+      "motion": "slow_observation motion; use wipe only at this state boundary.",
+      "on_screen_text": "STEP 1",
+      "sequence_number": 2,
+      "shot_scale": "macro",
+      "sound_cue": "music_pulse aligned to the action one boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "action one",
+      "transition": "wipe",
+      "visual_change": "Environment Transformation: action one; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "demonstrate_process",
+      "caption_relation": "on_cut",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-057-F03",
+      "image_path": "frames/SF-057-F03.svg",
+      "motion": "slow_observation motion; use wipe only at this state boundary.",
+      "on_screen_text": "STEP 2",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the action two boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "action two",
+      "transition": "wipe",
+      "visual_change": "Environment Transformation: action two; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "demonstrate_process",
+      "caption_relation": "keyword_emphasis",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-057-F04",
+      "image_path": "frames/SF-057-F04.svg",
+      "motion": "slow_observation motion; use wipe only at this state boundary.",
+      "on_screen_text": "DETAIL",
+      "sequence_number": 4,
+      "shot_scale": "macro",
+      "sound_cue": "music_pulse aligned to the detail boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "detail",
+      "transition": "wipe",
+      "visual_change": "Environment Transformation: detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "demonstrate_process",
+      "caption_relation": "on_cut",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-057-F05",
+      "image_path": "frames/SF-057-F05.svg",
+      "motion": "slow_observation motion; use wipe only at this state boundary.",
+      "on_screen_text": "DONE",
+      "sequence_number": 5,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the completed state boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "completed state",
+      "transition": "wipe",
+      "visual_change": "Environment Transformation: completed state; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "demonstrate_process",
+      "caption_relation": "continuous",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 6000,
+      "frame_id": "SF-057-F06",
+      "image_path": "frames/SF-057-F06.svg",
+      "motion": "slow_observation motion; use wipe only at this state boundary.",
+      "on_screen_text": "RETURN",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the A-roll return boundary; licensed or original audio only.",
+      "start_ms": 5000,
+      "story_function": "A-roll return",
+      "transition": "wipe",
+      "visual_change": "Environment Transformation: A-roll return; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-057",
+  "kind": "broll",
+  "name": "Environment Transformation",
+  "purpose": "Establish place and change over time",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-012"
+    ],
+    "export_id": "SIGEXP-SF-057",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:4e177320bfc81f430ec8d10e62dc1398c0afcecc19b171bde82f89bcb620fe14",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-008"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "absent",
+    "broll_function": "demonstrate_process",
+    "cta_exit": "answer_question",
+    "hook_mechanism": "direct_promise",
+    "pacing_profile": "slow_observation",
+    "proof_form": "worked_example",
+    "risk_class": "low",
+    "sound_role": "music_pulse",
+    "text_role": "step_counter",
+    "transition_family": "wipe",
+    "viewer_job": "imagine_outcome",
+    "visual_grammar": "object_macro"
+  },
+  "version": "1.0.0"
+}

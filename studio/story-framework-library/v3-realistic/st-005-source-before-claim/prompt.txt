@@ -1,0 +1,19 @@
+Use case: photorealistic-natural
+Asset type: six-panel vertical social-video storyboard reference for ST-005 Source Before Claim
+Primary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.
+Subject continuity: fictional non-identifiable adult workflow coordinator in their late 40s, short salt-and-pepper hair, soft blue shirt and dark jeans. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.
+Scene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.
+Persistent target: cited script. Trigger prop: magnifier. Proof prop: source map. Obstacle: the draft has no evidence parent.
+Six panels in reading order:
+1 extreme_close still: notices the magnifier; show The magnifier changes before the objective is secure. Emotional register: surprise.
+2 wide still: locates the cited script; show The hero and persistent cited script share one scene; objective: turn a claim into cited explanation. Emotional register: orientation.
+3 medium still: sees the cited script blocked; show The cited script is visibly blocked by the draft has no evidence parent; consequence: the audience could mistake opinion for fact. Emotional register: concern.
+4 over_shoulder still: traces the sentence to a dated source; show The hero attempts to trace the sentence to a dated source; the cited script visibly responds. Emotional register: agency.
+5 macro still: checks the source map; show The changed cited script remains visible while the source map is isolated. Emotional register: confidence-with-caution.
+6 medium still: returns the resolved target to the viewer; show The resolved cited script stays visible while the sequence returns to A-roll: the claim becomes bounded and inspectable. Emotional register: relief.
+Final panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'One source may still be incomplete or contested.', but render no words.
+Style/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.
+Composition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.
+Lighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.
+Constraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.
+Avoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.

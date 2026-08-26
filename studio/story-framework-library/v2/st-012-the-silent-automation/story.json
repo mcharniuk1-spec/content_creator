@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:b02153463863a899d5fca0836329f1d24e4b802816813b2d33bf701e84bbab93",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#16112A",
+      "#B6A1FF",
+      "#FFE078",
+      "#FF758F"
+    ],
+    "proof_prop": "event log",
+    "scene": "an automation console",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "restored trigger",
+    "trigger_prop": "bell",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a workflow owner",
+      "visual_token": "hero-012"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "bell",
+      "visual_token": "bell"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "restored trigger",
+      "visual_token": "restored-trigger"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "no error appears on the main screen",
+      "visual_token": "obstacle-diagnostic_mystery"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "event log",
+      "visual_token": "event-log"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "diagnostic_mystery",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-012-F01",
+      "handback_visible": false,
+      "hero_action": "notices the bell",
+      "image_path": "frames/ST-012-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a workflow owner in an automation console. The bell changes before the objective is secure. Keep ENT-target `restored trigger` persistent and visibly transform it through `follows the last successful event`; show ENT-proof `event log` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:restored trigger=absent; ENT-proof:event log=hidden → ENT-target:restored trigger=unoriented; ENT-proof:event log=hidden.",
+      "on_screen_text": "SPOT THE CLUE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 1,
+      "shot_scale": "macro",
+      "start_ms": 0,
+      "state_after": "ENT-target:restored trigger=unoriented; ENT-proof:event log=hidden",
+      "state_before": "ENT-target:restored trigger=absent; ENT-proof:event log=hidden",
+      "story_question": "Which clue explains the symptom?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The bell changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-012-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-012-F02",
+      "handback_visible": false,
+      "hero_action": "locates the restored trigger",
+      "image_path": "frames/ST-012-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a workflow owner in an automation console. The hero and persistent restored trigger share one scene; objective: find why a task stopped. Keep ENT-target `restored trigger` persistent and visibly transform it through `follows the last successful event`; show ENT-proof `event log` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to find why a task stopped.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:restored trigger=unoriented; ENT-proof:event log=hidden → ENT-target:restored trigger=present-unresolved; ENT-proof:event log=hidden.",
+      "on_screen_text": "LOCATE THE SYMPTOM",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:restored trigger=present-unresolved; ENT-proof:event log=hidden",
+      "state_before": "ENT-target:restored trigger=unoriented; ENT-proof:event log=hidden",
+      "story_question": "Where does the symptom live?",
+      "transition": "pull_out motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The hero and persistent restored trigger share one scene; objective: find why a task stopped."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-012-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-012-F03",
+      "handback_visible": false,
+      "hero_action": "sees the restored trigger blocked",
+      "image_path": "frames/ST-012-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a workflow owner in an automation console. The restored trigger is visibly blocked by no error appears on the main screen; consequence: work can silently accumulate. Keep ENT-target `restored trigger` persistent and visibly transform it through `follows the last successful event`; show ENT-proof `event log` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But no error appears on the main screen.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:restored trigger=present-unresolved; ENT-proof:event log=hidden → ENT-target:restored trigger=blocked; ENT-proof:event log=hidden.",
+      "on_screen_text": "RULE OUT THE OBVIOUS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 3,
+      "shot_scale": "close",
+      "start_ms": 2000,
+      "state_after": "ENT-target:restored trigger=blocked; ENT-proof:event log=hidden",
+      "state_before": "ENT-target:restored trigger=present-unresolved; ENT-proof:event log=hidden",
+      "story_question": "Which tempting explanation is wrong?",
+      "transition": "pan_right motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The restored trigger is visibly blocked by no error appears on the main screen; consequence: work can silently accumulate."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "attempt",
+      "beat_roles": [
+        "attempt"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "push_in",
+      "camera_motivation": "Show an attempted causal operation on the target.",
+      "cause_frame_ids": [
+        "ST-012-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-012-F04",
+      "handback_visible": false,
+      "hero_action": "follows the last successful event",
+      "image_path": "frames/ST-012-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a workflow owner in an automation console. The hero attempts to follow the last successful event; the restored trigger visibly responds. Keep ENT-target `restored trigger` persistent and visibly transform it through `follows the last successful event`; show ENT-proof `event log` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show an attempted causal operation on the target.",
+      "limitation_visible": false,
+      "narration": "The first visible move is to follow the last successful event.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:restored trigger=blocked; ENT-proof:event log=hidden → ENT-target:restored trigger=acted-on; ENT-proof:event log=hidden.",
+      "on_screen_text": "TEST ONE CAUSE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `attempt` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 4,
+      "shot_scale": "over_shoulder",
+      "start_ms": 3000,
+      "state_after": "ENT-target:restored trigger=acted-on; ENT-proof:event log=hidden",
+      "state_before": "ENT-target:restored trigger=blocked; ENT-proof:event log=hidden",
+      "story_question": "How does the hero test the clue?",
+      "transition": "push_in motivated by show an attempted causal operation on the target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The hero attempts to follow the last successful event; the restored trigger visibly responds."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-012-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-012-F05",
+      "handback_visible": false,
+      "hero_action": "checks the event log",
+      "image_path": "frames/ST-012-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a workflow owner in an automation console. The changed restored trigger remains visible while the event log is isolated. Keep ENT-target `restored trigger` persistent and visibly transform it through `follows the last successful event`; show ENT-proof `event log` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the event log, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:restored trigger=acted-on; ENT-proof:event log=hidden → ENT-target:restored trigger=changed-pending-review; ENT-proof:event log=visible.",
+      "on_screen_text": "THE TRACE",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:restored trigger=changed-pending-review; ENT-proof:event log=visible",
+      "state_before": "ENT-target:restored trigger=acted-on; ENT-proof:event log=hidden",
+      "story_question": "What artifact resolves the diagnosis?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The changed restored trigger remains visible while the event log is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "payoff",
+      "beat_roles": [
+        "payoff",
+        "limitation",
+        "handback"
+      ],
+      "broll_function": "contrast",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the opening question with the changed target.",
+      "cause_frame_ids": [
+        "ST-012-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-012-F06",
+      "handback_visible": true,
+      "hero_action": "confirms the changed restored trigger",
+      "image_path": "frames/ST-012-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a workflow owner in an automation console. The same restored trigger reaches its resolved state: the broken trigger becomes visible. Keep ENT-target `restored trigger` persistent and visibly transform it through `follows the last successful event`; show ENT-proof `event log` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the opening question with the changed target.",
+      "limitation_visible": true,
+      "narration": "Now the broken trigger becomes visible.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:restored trigger=changed-pending-review; ENT-proof:event log=visible → ENT-target:restored trigger=resolved-with-boundary; ENT-proof:event log=visible.",
+      "on_screen_text": "DIAGNOSIS",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `payoff` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:restored trigger=resolved-with-boundary; ENT-proof:event log=visible",
+      "state_before": "ENT-target:restored trigger=changed-pending-review; ENT-proof:event log=visible",
+      "story_question": "What answer closes the question?",
+      "transition": "pull_out motivated by close the opening question with the changed target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The same restored trigger reaches its resolved state: the broken trigger becomes visible."
+    }
+  ],
+  "kind": "hook_intro",
+  "narrative": {
+    "action_chain": [
+      "notice the bell",
+      "follows the last successful event",
+      "inspect the event log"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The bell changes state before the objective is secure.",
+    "limitation": "A log can reveal sequence, not intent.",
+    "objective": "find why a task stopped",
+    "obstacle": "no error appears on the main screen",
+    "payoff": "the broken trigger becomes visible",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "event log",
+    "protagonist": "a workflow owner",
+    "setup": "an automation console",
+    "stakes": "work can silently accumulate"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:976f8832e57dcb29a11691ee1bdd6ec857e4bd63a56717be14335c37ed26f1c7",
+  "story_id": "ST-012",
+  "title": "The Silent Automation",
+  "variation_axes": {
+    "operation_type": "inspect",
+    "proof_mechanism": "event log; boundary=A log can reveal sequence, not intent.",
+    "scene_topology": "diagnostic_mystery::an automation console",
+    "target_transformation": "restored trigger: unresolved -> the broken trigger becomes visible"
+  },
+  "variation_fingerprint": "sha256:115ed578c25aac061f2d0584b6b3340a77bde66c08304e491eab1c40248e1941",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:f6e97c0c335c04ebec99c87e83a44a9d9238232d6a84e6b7f43402f68760469e"
+}

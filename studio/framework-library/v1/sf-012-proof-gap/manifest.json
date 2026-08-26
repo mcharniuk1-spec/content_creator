@@ -1,0 +1,21 @@
+{
+  "external_provider_state": "NOT_RUN",
+  "files": {
+    "contact-sheet.svg": "052d2c07eb11139369ed8b44e7c25484baa466f7f567e452af798ec5960c84ff",
+    "frames/SF-012-F01.svg": "9a07bfa44406d3622c0e290cdab57748fc21e4bd9f9b505c94d0a2006959c21c",
+    "frames/SF-012-F02.svg": "1944bc275b3c1eaf655fd6a89db421a6055b3d143251fd500f69429ce7fd15a2",
+    "frames/SF-012-F03.svg": "add42e216d14775b6aacbf6c16894ac29c2d59a625742b3c152122522de12945",
+    "frames/SF-012-F04.svg": "496f5950b13b89cc11a0aa2f92f47cc552b1a23ef05729859015ec85bb041291",
+    "frames/SF-012-F05.svg": "9378c4c8c7acd370290c72ddc0000e7059d5f12b6617bca5f98a21d6a1c2f2ce",
+    "frames/SF-012-F06.svg": "45aa212d855ad8d470de5a29ee010fbbe1086055639a4d32c564622174ee1b00",
+    "frames/SF-012-F07.svg": "59ecc83cb837def17dfe173090d29b220af1558edbac345d5ddb42a50364bd43",
+    "frames/SF-012-F08.svg": "608cbf3c17d20fe185f365e403b51597cebfbad048c6cbf0e7277280deb96a2d",
+    "frames/SF-012-F09.svg": "92868148857fc0e3dc226e451072f6c1669799ce8819e3152ce3cb59ce5df22e",
+    "framework.json": "6437c264cf49928fa9c0f6c2f929dfd33e20fbe27ee2b97bd1f8e2bde3bda43e",
+    "prompt.md": "4e78088a33691d3814d5fd4d00d62e84a57250053b480281396df8a894f85139",
+    "report.md": "4bda22565ca58fbfb4ab5933efac5c657c81c418609a1d174c26c8317d7e1beb",
+    "signal-export.json": "9479e5fd8cc19a1da7d3fc94123448a3fa7b5a97167aaa8bcafe88f813f49e20"
+  },
+  "framework_id": "SF-012",
+  "schema": "studio-framework-package-manifest.v1"
+}

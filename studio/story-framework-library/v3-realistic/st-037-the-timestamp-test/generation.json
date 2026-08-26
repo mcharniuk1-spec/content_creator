@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-037",
+  "title": "The Timestamp Test",
+  "source_story": "../v2/st-037-the-timestamp-test/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult systems operator in their mid 40s, cropped auburn hair, charcoal sweater and neutral trousers",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-037 The Timestamp Test\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult systems operator in their mid 40s, cropped auburn hair, charcoal sweater and neutral trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: freshness verdict. Trigger prop: clock. Proof prop: observed-at field. Obstacle: the chart title omits observed time.\nSix panels in reading order:\n1 close still: notices the clock; show The clock changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the freshness verdict; show The hero and persistent freshness verdict share one scene; objective: decide whether a metric is current. Emotional register: orientation.\n3 macro still: sees the freshness verdict blocked; show The freshness verdict is visibly blocked by the chart title omits observed time; consequence: old data may guide a new decision. Emotional register: concern.\n4 over_shoulder still: reveals the timestamp before the number; show The hero reveals the timestamp before the number; the same freshness verdict changes state on screen. Emotional register: agency.\n5 macro still: checks the observed-at field; show The changed freshness verdict remains visible while the observed-at field is isolated. Emotional register: confidence-with-caution.\n6 medium still: bounds the result with observed-at field; show The observed-at field and changed freshness verdict remain visible; boundary: Fresh data can still be incomplete. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Fresh data can still be incomplete.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-037-F01.png",
+    "frames/ST-037-F02.png",
+    "frames/ST-037-F03.png",
+    "frames/ST-037-F04.png",
+    "frames/ST-037-F05.png",
+    "frames/ST-037-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "680becdbbf3f616a1e101ad0cdfd615bf6b25fbffe4c4429b8e32ffc5f774c70",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "bb15dcfeffffd39377727cf0af5470893305a2ee935f8551592e349ba4217a6e",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-037-F01",
+      "file": "frames/ST-037-F01.png",
+      "sha256": "af2cd63b912321dae37772ca804823ee6c071bdd5ae03625177b601d23615fa9",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 106.17,
+      "luma_stddev": 55.6,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-037-F02",
+      "file": "frames/ST-037-F02.png",
+      "sha256": "e772d2fc6486c4e159f027b436959c01147f1dff9ad204292875981f0a60c425",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 84.51,
+      "luma_stddev": 61.97,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-037-F03",
+      "file": "frames/ST-037-F03.png",
+      "sha256": "6a658bbc48b4fccffdcd75a87bbb3a27596a1ffcb386e76d52758317f5d55c2a",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 106.18,
+      "luma_stddev": 62.33,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-037-F04",
+      "file": "frames/ST-037-F04.png",
+      "sha256": "32e946762e39d4327f0c5ae3b6fd6d7d7174b8625e0cea25e17c2791fd66e4b9",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 71.91,
+      "luma_stddev": 56.78,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-037-F05",
+      "file": "frames/ST-037-F05.png",
+      "sha256": "153e61a92e881c1f768e1f04627cdf12ac5b9820a1ab80d8904afbe4c5e93958",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 127.07,
+      "luma_stddev": 63.88,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-037-F06",
+      "file": "frames/ST-037-F06.png",
+      "sha256": "fb69f2c79e26b0840c179250892a676702accbe2e9d8cfdc29371effa9d364e0",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 73.07,
+      "luma_stddev": 57.12,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:f4cc4e87e822d8491671c94995e62d1b11e5c7108d5821e2b2243d28954a5fb6",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#0B211A",
+      "#85D69A",
+      "#F5E1A4",
+      "#FF8169"
+    ],
+    "proof_prop": "verb markers",
+    "scene": "a frame wall",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "action frames",
+    "trigger_prop": "script strip",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a storyboard artist",
+      "visual_token": "hero-048"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "script strip",
+      "visual_token": "script-strip"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "action frames",
+      "visual_token": "action-frames"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the draft contains only abstract nouns",
+      "visual_token": "obstacle-process_handback"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "verb markers",
+      "visual_token": "verb-markers"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "process_handback",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-048-F01",
+      "handback_visible": false,
+      "hero_action": "notices the script strip",
+      "image_path": "frames/ST-048-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a storyboard artist in a frame wall. The script strip changes before the objective is secure. Keep ENT-target `action frames` persistent and visibly transform it through `replaces each abstraction with a hero verb and prop`; show ENT-proof `verb markers` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:action frames=absent; ENT-proof:verb markers=hidden → ENT-target:action frames=unoriented; ENT-proof:verb markers=hidden.",
+      "on_screen_text": "WATCH IT COMPLETE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "start_ms": 0,
+      "state_after": "ENT-target:action frames=unoriented; ENT-proof:verb markers=hidden",
+      "state_before": "ENT-target:action frames=absent; ENT-proof:verb markers=hidden",
+      "story_question": "What process will finish on screen?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The script strip changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-048-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-048-F02",
+      "handback_visible": false,
+      "hero_action": "locates the action frames",
+      "image_path": "frames/ST-048-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a storyboard artist in a frame wall. The hero and persistent action frames share one scene; objective: turn narration into visible actions. Keep ENT-target `action frames` persistent and visibly transform it through `replaces each abstraction with a hero verb and prop`; show ENT-proof `verb markers` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to turn narration into visible actions.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:action frames=unoriented; ENT-proof:verb markers=hidden → ENT-target:action frames=present-unresolved; ENT-proof:verb markers=hidden.",
+      "on_screen_text": "INPUT ENTERS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:action frames=present-unresolved; ENT-proof:verb markers=hidden",
+      "state_before": "ENT-target:action frames=unoriented; ENT-proof:verb markers=hidden",
+      "story_question": "What input enters?",
+      "transition": "pan_right motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The hero and persistent action frames share one scene; objective: turn narration into visible actions."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "attempt",
+      "beat_roles": [
+        "attempt"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "match_move",
+      "camera_motivation": "Show an attempted causal operation on the target.",
+      "cause_frame_ids": [
+        "ST-048-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-048-F03",
+      "handback_visible": false,
+      "hero_action": "replaces each abstraction with a hero verb and prop",
+      "image_path": "frames/ST-048-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a storyboard artist in a frame wall. The hero attempts to replace each abstraction with a hero verb and prop; the action frames visibly responds. Keep ENT-target `action frames` persistent and visibly transform it through `replaces each abstraction with a hero verb and prop`; show ENT-proof `verb markers` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show an attempted causal operation on the target.",
+      "limitation_visible": false,
+      "narration": "The first visible move is to replace each abstraction with a hero verb and prop.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:action frames=present-unresolved; ENT-proof:verb markers=hidden → ENT-target:action frames=acted-on; ENT-proof:verb markers=hidden.",
+      "on_screen_text": "FIRST CHANGE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `attempt` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "start_ms": 2000,
+      "state_after": "ENT-target:action frames=acted-on; ENT-proof:verb markers=hidden",
+      "state_before": "ENT-target:action frames=present-unresolved; ENT-proof:verb markers=hidden",
+      "story_question": "What first transformation occurs?",
+      "transition": "match_move motivated by show an attempted causal operation on the target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The hero attempts to replace each abstraction with a hero verb and prop; the action frames visibly responds."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-048-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-048-F04",
+      "handback_visible": false,
+      "hero_action": "replaces each abstraction with a hero verb and prop",
+      "image_path": "frames/ST-048-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a storyboard artist in a frame wall. The hero replaces each abstraction with a hero verb and prop; the same action frames changes state on screen. Keep ENT-target `action frames` persistent and visibly transform it through `replaces each abstraction with a hero verb and prop`; show ENT-proof `verb markers` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to replace each abstraction with a hero verb and prop.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:action frames=acted-on; ENT-proof:verb markers=hidden → ENT-target:action frames=transformed; ENT-proof:verb markers=hidden.",
+      "on_screen_text": "MECHANISM MOVES",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "over_shoulder",
+      "start_ms": 3000,
+      "state_after": "ENT-target:action frames=transformed; ENT-proof:verb markers=hidden",
+      "state_before": "ENT-target:action frames=acted-on; ENT-proof:verb markers=hidden",
+      "story_question": "How does the mechanism complete?",
+      "transition": "pan_right motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The hero replaces each abstraction with a hero verb and prop; the same action frames changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-048-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-048-F05",
+      "handback_visible": false,
+      "hero_action": "checks the verb markers",
+      "image_path": "frames/ST-048-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a storyboard artist in a frame wall. The changed action frames remains visible while the verb markers is isolated. Keep ENT-target `action frames` persistent and visibly transform it through `replaces each abstraction with a hero verb and prop`; show ENT-proof `verb markers` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the verb markers, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:action frames=transformed; ENT-proof:verb markers=hidden → ENT-target:action frames=changed-pending-review; ENT-proof:verb markers=visible.",
+      "on_screen_text": "CHECK THE OUTPUT",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `process_handback` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:action frames=changed-pending-review; ENT-proof:verb markers=visible",
+      "state_before": "ENT-target:action frames=transformed; ENT-proof:verb markers=hidden",
+      "story_question": "What output can be checked?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The changed action frames remains visible while the verb markers is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "handback",
+      "beat_roles": [
+        "handback",
+        "limitation",
+        "payoff"
+      ],
+      "broll_function": "emotional_texture",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the visual argument and hand it back.",
+      "cause_frame_ids": [
+        "ST-048-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-048-F06",
+      "handback_visible": true,
+      "hero_action": "returns the resolved target to the viewer",
+      "image_path": "frames/ST-048-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a storyboard artist in a frame wall. The resolved action frames stays visible while the sequence returns to A-roll: every frame performs part of the sentence. Keep ENT-target `action frames` persistent and visibly transform it through `replaces each abstraction with a hero verb and prop`; show ENT-proof `verb markers` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the visual argument and hand it back.",
+      "limitation_visible": true,
+      "narration": "The bounded result: every frame performs part of the sentence.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:action frames=changed-pending-review; ENT-proof:verb markers=visible → ENT-target:action frames=resolved-with-boundary; ENT-proof:verb markers=visible.",
+      "on_screen_text": "BACK TO THE SPEAKER",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `process_handback` advances through `handback` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:action frames=resolved-with-boundary; ENT-proof:verb markers=visible",
+      "state_before": "ENT-target:action frames=changed-pending-review; ENT-proof:verb markers=visible",
+      "story_question": "How does the sequence return to the speaker?",
+      "transition": "pull_out motivated by close the visual argument and hand it back.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The resolved action frames stays visible while the sequence returns to A-roll: every frame performs part of the sentence."
+    }
+  ],
+  "kind": "broll",
+  "narrative": {
+    "action_chain": [
+      "notice the script strip",
+      "replaces each abstraction with a hero verb and prop",
+      "inspect the verb markers"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The script strip changes state before the objective is secure.",
+    "limitation": "Some ideas still require diagrams or UI.",
+    "objective": "turn narration into visible actions",
+    "obstacle": "the draft contains only abstract nouns",
+    "payoff": "every frame performs part of the sentence",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "verb markers",
+    "protagonist": "a storyboard artist",
+    "setup": "a frame wall",
+    "stakes": "B-roll becomes decorative"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:b91aedfa5a8acc341dd06403463b3caa59073d78f39301439cd11e7ca9bb6e43",
+  "story_id": "ST-048",
+  "title": "Script to Frame",
+  "variation_axes": {
+    "operation_type": "transfer",
+    "proof_mechanism": "verb markers; boundary=Some ideas still require diagrams or UI.",
+    "scene_topology": "process_handback::a frame wall",
+    "target_transformation": "action frames: unresolved -> every frame performs part of the sentence"
+  },
+  "variation_fingerprint": "sha256:ef778940bfc0f85b41152228ce14b169ef4aa617c66bb7bf9a396aabe8690cde",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:113e2b85cf9289c82bd8c778b8d482818d7a27ff922e8d07b660a44030def9ad"
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "../schemas/source-manifest.schema.json",
+  "manifest_id": "bootstrap-sources-20260811",
+  "observed_at": "2026-08-11",
+  "sources": [
+    {
+      "source_id": "repo-openmontage",
+      "name": "OpenMontage",
+      "canonical_url": "https://github.com/calesthio/OpenMontage",
+      "source_class": "public_repository",
+      "license": "AGPL-3.0",
+      "status": "reference_only",
+      "verified_facts": [
+        "agent-first video-production pipelines",
+        "scene plan and edit-decision artifacts",
+        "FFmpeg, Remotion, and HyperFrames composition paths",
+        "not a native all-social research, Figma, contact-sheet, or PDF-report system"
+      ],
+      "allowed_now": ["official documentation and architecture research"],
+      "blocked_now": ["clone", "install", "run", "provider call", "media download", "code reuse", "hosted deployment"],
+      "review_required": ["license", "supply chain", "security", "runtime sandbox", "fixture benchmark"]
+    },
+    {
+      "source_id": "repo-sherlock",
+      "name": "Sherlock",
+      "canonical_url": "https://github.com/sherlock-project/sherlock",
+      "pinned_commit": "9100f9d40a3274bd46f4ce903c5c6fee6f3745bc",
+      "source_class": "public_repository",
+      "license": "MIT",
+      "status": "reference_only",
+      "verified_facts": [
+        "heuristic public username candidate discovery",
+        "not content, trend, caption, thread, video, engagement, or ownership analysis",
+        "results can contain false positives and false negatives"
+      ],
+      "allowed_now": ["official documentation and schema research"],
+      "blocked_now": ["clone", "install", "run", "person or prospect discovery", "identity inference", "proxy or WAF evasion"],
+      "review_required": ["owned or consented handle", "site allowlist", "terms", "version and manifest pin", "independent ownership verification"]
+    },
+    {
+      "source_id": "repo-content-creator",
+      "name": "Owner content_creator placeholder",
+      "canonical_url": "https://github.com/mcharniuk1-spec/content_creator",
+      "pinned_commit": "b2b98aafad3a14abae90d7bd42ab5753c6ce12e2",
+      "source_class": "owner_public_repository",
+      "license": "UNDECLARED",
+      "status": "placeholder_empty",
+      "verified_facts": [
+        "default branch main",
+        "one 22-byte README only",
+        "no implementation, workflow, schema, dependency manifest, tests, CI, assets, detected language, or declared license"
+      ],
+      "allowed_now": ["read-only existence and placeholder-state verification"],
+      "blocked_now": ["push", "import", "claiming inherited capability"],
+      "review_required": ["license", "governance", "security", "exact push target", "public-safety scan", "owner approval"]
+    },
+    {
+      "source_id": "repo-open-generative-ai",
+      "name": "Open-Generative-AI",
+      "canonical_url": "https://github.com/Anil-matcha/Open-Generative-AI",
+      "source_class": "public_repository",
+      "license": "MIT",
+      "status": "reference_only",
+      "verified_facts": [
+        "model/provider exploration surface",
+        "must not become the Content Engine policy, identity, approval, or evidence core"
+      ],
+      "allowed_now": ["official documentation and adapter-pattern research"],
+      "blocked_now": ["install", "model download", "provider configuration", "media call", "face swap", "unapproved lip sync", "safety bypass"],
+      "review_required": ["provider docs", "data handling", "rights", "cost", "content class", "security"]
+    },
+    {
+      "source_id": "archflow-onboarding-context",
+      "name": "ArchFlow onboarding and knowledge-reliability context",
+      "source_class": "allowlisted_local_context",
+      "status": "bounded_context_only",
+      "verified_facts": [
+        "governed source-grounded onboarding",
+        "role-safe first meaningful task",
+        "operator retains approval and escalation authority"
+      ],
+      "allowed_now": ["bounded local retrieval through the handoff allowlist"],
+      "blocked_now": ["broad private corpus ingestion", "copying private source text into public outputs"]
+    },
+    {
+      "source_id": "archflow-hotel-context",
+      "name": "Hotel Revenue Control demonstrator context",
+      "source_class": "allowlisted_local_context",
+      "status": "bounded_context_only",
+      "verified_facts": [
+        "local demonstrator",
+        "simulated PMS adapter paths",
+        "advisory recommendations",
+        "no live hotel writeback or validated commercial outcome"
+      ],
+      "allowed_now": ["bounded local retrieval through the handoff allowlist"],
+      "blocked_now": ["claiming live integrations", "claiming customer outcomes", "using private hotel data"]
+    }
+  ]
+}
+

@@ -1,0 +1,4016 @@
+{
+  "schema": "content-engine.realistic-frame-manifest.v1",
+  "generated_at": "2026-08-26",
+  "story_count": 50,
+  "frame_count": 300,
+  "dimensions": [
+    540,
+    960
+  ],
+  "source_frame_evidence": "NONE_DB_FRAME_COUNT_ZERO",
+  "interpretation_boundary": "fictional clean-room previsualizations, not observed-source reconstructions",
+  "blank_risk_count": 0,
+  "mean_luma_stddev": 60.55,
+  "stories": [
+    {
+      "story_id": "ST-001",
+      "path": "st-001-deadline-brief",
+      "source_sheet_sha256": "df9981d9d75f5e2fa918bc6a72da8c961079d375a6b4292bbcd3b9f3183a3ebd",
+      "review_sheet_sha256": "e000dfce2d4d6264759a63310ae19ef8bb6c37d04b6e87a83be48700c2b0f350",
+      "frames": [
+        {
+          "frame_id": "ST-001-F01",
+          "file": "frames/ST-001-F01.png",
+          "sha256": "e906b1286b3fa3d599fe665f84ebec5bca6d82ad4be7c280bb5b0cdd96e33c90",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.25,
+          "luma_stddev": 45.72,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-001-F02",
+          "file": "frames/ST-001-F02.png",
+          "sha256": "ba0c0593b027a83546b392d0ad0f093cc7b7387a3267bb4016086151117be594",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 96.14,
+          "luma_stddev": 55.63,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-001-F03",
+          "file": "frames/ST-001-F03.png",
+          "sha256": "868a23ed7d210d02967adaeac0a6d1c2833f8e75b24d0748a702513b1412919e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 81.95,
+          "luma_stddev": 56.63,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-001-F04",
+          "file": "frames/ST-001-F04.png",
+          "sha256": "33ce425565864ae56372c440e2427507c46c1926d045d599426dc27211d2b9e8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 76.99,
+          "luma_stddev": 57.67,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-001-F05",
+          "file": "frames/ST-001-F05.png",
+          "sha256": "49771ca54eb2735ec6b383645553681da3c584058a15a5f7ba090843ec6a1cfe",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 111.76,
+          "luma_stddev": 59.23,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-001-F06",
+          "file": "frames/ST-001-F06.png",
+          "sha256": "2604908c8a60005dbec71a5c3c866b29fe6a86f72f5163c06b367baf4d371145",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 90.1,
+          "luma_stddev": 58.04,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-002",
+      "path": "st-002-approval-at-the-threshold",
+      "source_sheet_sha256": "8ab5808971601a3531e34b9f62614b3d2377f45b1a73476de206c5109d195db8",
+      "review_sheet_sha256": "7eeb082814735a60fb13113237e06d0be61d835f1222ac815e98ca706ada6ee8",
+      "frames": [
+        {
+          "frame_id": "ST-002-F01",
+          "file": "frames/ST-002-F01.png",
+          "sha256": "630e8b05b93aa23aa99fb5a10eb583648da91ec6080dc28a3c4e26841ea4a8d8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 61.49,
+          "luma_stddev": 44.11,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-002-F02",
+          "file": "frames/ST-002-F02.png",
+          "sha256": "60d4f0ecd82c4a622a2a481150c94274e366bafdaf70336c67c283776a2770b4",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 89.78,
+          "luma_stddev": 56.54,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-002-F03",
+          "file": "frames/ST-002-F03.png",
+          "sha256": "6e78458a5e02c00bf56f2c8eeea6fbe2e61ec03fc98f466756143aa1c187db8c",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 46.99,
+          "luma_stddev": 43.87,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-002-F04",
+          "file": "frames/ST-002-F04.png",
+          "sha256": "43a77c8f4ffcc94b53628ff487831413b26bd2375f4b0b8a971399693fe82300",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 70.69,
+          "luma_stddev": 55.32,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-002-F05",
+          "file": "frames/ST-002-F05.png",
+          "sha256": "bb1c74576e5ed1988e4b5909b204935fee78011282ba1f95cb137d9734cc70f8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 80.38,
+          "luma_stddev": 51.38,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-002-F06",
+          "file": "frames/ST-002-F06.png",
+          "sha256": "ca9acc85d453707baa684625a9e6c93c3f7ab2ec0533b0599b561de7c0ac1352",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 79.68,
+          "luma_stddev": 59.15,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-003",
+      "path": "st-003-the-stale-dashboard",
+      "source_sheet_sha256": "87baee249d1fcf88e04fe5cd44e1f36a31d2fde86cf9bbc0f194c0ce942ef920",
+      "review_sheet_sha256": "684823d6c50d4da397e664287c626eef9f070e708f6aa2dec4ebde19c4c4e6c4",
+      "frames": [
+        {
+          "frame_id": "ST-003-F01",
+          "file": "frames/ST-003-F01.png",
+          "sha256": "ee29041b3358d2ec91d319796f6ae375fb468496dfa594443b58c730a1074d07",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 124.55,
+          "luma_stddev": 52.98,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-003-F02",
+          "file": "frames/ST-003-F02.png",
+          "sha256": "434d495a18b37370c2b5f8070771926437c7fd7f608ddcb6d5ebc299b6a0c59c",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 139.16,
+          "luma_stddev": 62.44,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-003-F03",
+          "file": "frames/ST-003-F03.png",
+          "sha256": "5028c25524fd76cd87072d98d9deb6e9e8668adab7097e4cdf62d1edfae366b1",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 133.3,
+          "luma_stddev": 66.24,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-003-F04",
+          "file": "frames/ST-003-F04.png",
+          "sha256": "c17e9b45fbc125c46f4f6a214491201c1322b88ed37ae1c6fd27ea6bae1eae2e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 125.48,
+          "luma_stddev": 73.33,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-003-F05",
+          "file": "frames/ST-003-F05.png",
+          "sha256": "03000d829fc19b848e954a50dd23a7ef2429491283fca60024e8794b370b9738",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 179.42,
+          "luma_stddev": 58.54,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-003-F06",
+          "file": "frames/ST-003-F06.png",
+          "sha256": "e0eb7fcaf0137fe40500f0cfca8b49ce6df7b999b374e4d465dd0d9c46a09d16",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 132.73,
+          "luma_stddev": 69.44,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-004",
+      "path": "st-004-queue-under-pressure",
+      "source_sheet_sha256": "b66c84b7ca62f200c94ecef92825826886d119331044f61003c16769b1c1388d",
+      "review_sheet_sha256": "589f78c49723fec9b8a8c0ad4b7bb046fe51c3379a831190056d11d3a3e0986e",
+      "frames": [
+        {
+          "frame_id": "ST-004-F01",
+          "file": "frames/ST-004-F01.png",
+          "sha256": "f531efadfaa701e1e1d45efc7934f8b2b032479b37c41e17462eda90ff4ab50e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 96.56,
+          "luma_stddev": 64.79,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-004-F02",
+          "file": "frames/ST-004-F02.png",
+          "sha256": "855b08ab8185ee3c635d6b45810ec28dd7c013610f83fdc0edd25a5f4ea4592f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.11,
+          "luma_stddev": 66.65,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-004-F03",
+          "file": "frames/ST-004-F03.png",
+          "sha256": "99ad339f4d9e0666254ce19a2fc45a0eb70ce61b97e961d5001a55d458eaa6ff",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 89.77,
+          "luma_stddev": 64.03,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-004-F04",
+          "file": "frames/ST-004-F04.png",
+          "sha256": "1b4ba5b95d046abd39418ab8b2cc5e94657fc28665f9f73cec620ae317c6d745",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 81.03,
+          "luma_stddev": 56.83,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-004-F05",
+          "file": "frames/ST-004-F05.png",
+          "sha256": "0b2652b5a5f68c9a3f2805c32d57d840ae5fa8fb624ccb23e3a0f7855f344f2f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 117.08,
+          "luma_stddev": 51.31,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-004-F06",
+          "file": "frames/ST-004-F06.png",
+          "sha256": "bec5825685ce95eb60555e7681523a3a0cefda05f0479fb3199d23480a576b63",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.46,
+          "luma_stddev": 67.24,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-005",
+      "path": "st-005-source-before-claim",
+      "source_sheet_sha256": "e25be450c07c80f9715e1325c4a54f0e96e0d0516a865d0ec88fc122712c4193",
+      "review_sheet_sha256": "c2c721a46fe9468fbc05a3629bdaa600a54987527e794f945c1d425d26432ed6",
+      "frames": [
+        {
+          "frame_id": "ST-005-F01",
+          "file": "frames/ST-005-F01.png",
+          "sha256": "6668b88490276a0cd3f01836ebd7800c80fb02cdd8520bfdef323958da0272d3",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 100.1,
+          "luma_stddev": 46.61,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-005-F02",
+          "file": "frames/ST-005-F02.png",
+          "sha256": "6fcb53e4de67243d8e223599856b3af58d98108a135c7d20d288d89043581999",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 112.36,
+          "luma_stddev": 55.23,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-005-F03",
+          "file": "frames/ST-005-F03.png",
+          "sha256": "14efac7a536958aebb39a0cbf716ee0be041db63a77963628fbe3956f57ab1e0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 113.37,
+          "luma_stddev": 48.38,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-005-F04",
+          "file": "frames/ST-005-F04.png",
+          "sha256": "1d036587ddb0f5868f28bf8d70994de42844a606c61c124fa7c5b52c8f78553f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 115.21,
+          "luma_stddev": 49.61,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-005-F05",
+          "file": "frames/ST-005-F05.png",
+          "sha256": "c9a4a65888dd95e0fef2a81e89d1b1a719899f6c387eb7eacfc942bef47547ca",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 132.15,
+          "luma_stddev": 42.96,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-005-F06",
+          "file": "frames/ST-005-F06.png",
+          "sha256": "0bdad969874de469c2ad83d1548248f2da954c33ffc31d36dd9ae07ad9f40fdc",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 152.39,
+          "luma_stddev": 55.65,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-006",
+      "path": "st-006-the-rebuilt-handoff",
+      "source_sheet_sha256": "cc7c5cb31e3d7495426b6e82d93bfe500706b43aab5c5524e71f709b1fc0c837",
+      "review_sheet_sha256": "521d6718ac0edf44d67e818fcec4f8cc96802e8c633204984172c74a76505833",
+      "frames": [
+        {
+          "frame_id": "ST-006-F01",
+          "file": "frames/ST-006-F01.png",
+          "sha256": "328fe2e7aae71f7d72140f1c53feb801d3d1a4ed17860de20935b937da4cb809",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 104.57,
+          "luma_stddev": 50.62,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-006-F02",
+          "file": "frames/ST-006-F02.png",
+          "sha256": "49b1f83cc962fe9aef8b675418b21b41f8710507236c9f2771002fd6773086ce",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 89.84,
+          "luma_stddev": 58.45,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-006-F03",
+          "file": "frames/ST-006-F03.png",
+          "sha256": "531720d0d5cb456af8b71ebf43b6c708a90bf2dda3685a59a88e7ffb73c47626",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 91.09,
+          "luma_stddev": 52.79,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-006-F04",
+          "file": "frames/ST-006-F04.png",
+          "sha256": "87b355795c15c92c255f78ea70c22dfc186a880bd040b0f65d22e1cd1b5044c2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 82.38,
+          "luma_stddev": 63.42,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-006-F05",
+          "file": "frames/ST-006-F05.png",
+          "sha256": "e8c8fb106542de8d8e02f6647e9074eb37c37bdb2ad377a3c4b4e946be6cc300",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 108.58,
+          "luma_stddev": 64.81,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-006-F06",
+          "file": "frames/ST-006-F06.png",
+          "sha256": "9aa4ca872170d897995d6b7d16c7e52b47a6d8c785229512fcadf263196a4412",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 88.61,
+          "luma_stddev": 61.02,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-007",
+      "path": "st-007-from-noise-to-signal",
+      "source_sheet_sha256": "6aa07b0d31841f78a56f6d793c5ad392e44f4587a9fd9f95725de8f6d93aec2a",
+      "review_sheet_sha256": "1e11bd053b5b13df94bd7d66d133f30114e5c6ada8c172da449de09503b2b4c5",
+      "frames": [
+        {
+          "frame_id": "ST-007-F01",
+          "file": "frames/ST-007-F01.png",
+          "sha256": "d6e1d67c23d6e1bb4e6451844aa59b82dc53ee10fc9674e8d43fec5fb1b3fa80",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 104.15,
+          "luma_stddev": 61.72,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-007-F02",
+          "file": "frames/ST-007-F02.png",
+          "sha256": "0fe16952933d7e17197b3483cd8e0f6a5646a59bce721c350022b5d91d2c9d9b",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.35,
+          "luma_stddev": 63.81,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-007-F03",
+          "file": "frames/ST-007-F03.png",
+          "sha256": "19fcf0807fdcca8a6ffdc5015f31871de5b21e8b645852c2b46a10ac96821d06",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.62,
+          "luma_stddev": 58.86,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-007-F04",
+          "file": "frames/ST-007-F04.png",
+          "sha256": "1949cf1cdaf6c91ad1ed35bbc2e165a126df916f51f4180a48b139c84bedbe5f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 87.89,
+          "luma_stddev": 66.56,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-007-F05",
+          "file": "frames/ST-007-F05.png",
+          "sha256": "d2162dfe563e0f5c49dba27797e0f55197225c18548d36967a1da7d8a540afa4",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.57,
+          "luma_stddev": 56.22,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-007-F06",
+          "file": "frames/ST-007-F06.png",
+          "sha256": "c392ddbc7b804e9038ccb06ce2f5b95fcbd9b46ea5dab1fdca5be45fea010b05",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 103.85,
+          "luma_stddev": 63.53,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-008",
+      "path": "st-008-rollback-ready",
+      "source_sheet_sha256": "9a562aca004c192c1a4368dcc73e74edb08a90963f69fcf63cce67747ba802f3",
+      "review_sheet_sha256": "90d11083800b781fb300a709164b7159bda95ba23493ea17c9cc007b087a986b",
+      "frames": [
+        {
+          "frame_id": "ST-008-F01",
+          "file": "frames/ST-008-F01.png",
+          "sha256": "adb042fdfd6f0a4930e3d2e5356a4eeff2f780db4c911576eaaaa7dc8359c999",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 114.59,
+          "luma_stddev": 63.2,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-008-F02",
+          "file": "frames/ST-008-F02.png",
+          "sha256": "a2f777daf1fdba770af75e08df25b82b969aa173748c0fa02442c6696602b79f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 135.44,
+          "luma_stddev": 64.18,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-008-F03",
+          "file": "frames/ST-008-F03.png",
+          "sha256": "a39844cd0f9535ab844645eac2081c6fc3e3c9c3527b5577055892805dd7bcef",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 136.58,
+          "luma_stddev": 69.3,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-008-F04",
+          "file": "frames/ST-008-F04.png",
+          "sha256": "f6a1acef989828192f43229b60f71b88ed5806cfdd6882b33d4a207c4ca60bcd",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.8,
+          "luma_stddev": 68.26,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-008-F05",
+          "file": "frames/ST-008-F05.png",
+          "sha256": "8176ca0a4e4e69a22bada2203fa2f66bbaa8ab4160c94172eac0d9049d52d138",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 97.23,
+          "luma_stddev": 58.62,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-008-F06",
+          "file": "frames/ST-008-F06.png",
+          "sha256": "2df8a1f15cf10a27f695542c26337a534e8bea54894f0df84cfb0c19558ed52b",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 134.75,
+          "luma_stddev": 65.29,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-009",
+      "path": "st-009-the-clearer-screen",
+      "source_sheet_sha256": "6483cf4b5682df55377768ef06c0d672849f2b98db04b751e1bf25eab79658c6",
+      "review_sheet_sha256": "8e7aafaeb3e54be801a7f89c11d50c8845f281689fa90b2439e22b8d717b928f",
+      "frames": [
+        {
+          "frame_id": "ST-009-F01",
+          "file": "frames/ST-009-F01.png",
+          "sha256": "ca259b78c4d63441c714b6479555371c603c8d2294d45b5423f71e6898c0b3b5",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.17,
+          "luma_stddev": 65.74,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-009-F02",
+          "file": "frames/ST-009-F02.png",
+          "sha256": "41653abcae7fd6f734b2de3e15ffe1bcaa327479ce7423e8c3c7b22a482fa31d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 102.42,
+          "luma_stddev": 68.29,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-009-F03",
+          "file": "frames/ST-009-F03.png",
+          "sha256": "4630221d12e54f1cc4382c1f89e58afd56b8eada515b5dd7cabc6919be025490",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.6,
+          "luma_stddev": 66.19,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-009-F04",
+          "file": "frames/ST-009-F04.png",
+          "sha256": "b704920ff9eeaeec53f4c2233a4a28a0e2d1a40e974e009f08547d1a0ea9b509",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.35,
+          "luma_stddev": 64.41,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-009-F05",
+          "file": "frames/ST-009-F05.png",
+          "sha256": "063198736a8795072e471442da5e5e326153d5671597b8249a45e1bdb1ba3c95",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 150.19,
+          "luma_stddev": 70.0,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-009-F06",
+          "file": "frames/ST-009-F06.png",
+          "sha256": "9fe79565e505c450839c326e1f174ce863666921408c979b5ca787d2115ba358",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 127.24,
+          "luma_stddev": 77.01,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-010",
+      "path": "st-010-the-one-line-outcome",
+      "source_sheet_sha256": "aa6fdb61db867fe9288f1f4758f07023d01227a6fcfade181d81ab7cf7dbeb13",
+      "review_sheet_sha256": "45ebd0893815925b5779ffe1cd1207a7e400d9c886a446680c9cf6f8505a38bd",
+      "frames": [
+        {
+          "frame_id": "ST-010-F01",
+          "file": "frames/ST-010-F01.png",
+          "sha256": "8d7431eac95d3c2fe079e024204026d9ba366767b61c345309b41d5c238f214b",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 62.94,
+          "luma_stddev": 44.36,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-010-F02",
+          "file": "frames/ST-010-F02.png",
+          "sha256": "6e6448ed680e0b33366052166cd169b6a90a2b493950ca0400c780b2e39c4fee",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 90.67,
+          "luma_stddev": 65.91,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-010-F03",
+          "file": "frames/ST-010-F03.png",
+          "sha256": "44ed2c3149dba80b96a310018256a32168b302d9b74bbcf6d9fd153653ab5aed",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 84.76,
+          "luma_stddev": 65.84,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-010-F04",
+          "file": "frames/ST-010-F04.png",
+          "sha256": "e104eb284ac6b31e13757086af31a30b428d967fa2f284620112ff7d975684f3",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 75.45,
+          "luma_stddev": 67.01,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-010-F05",
+          "file": "frames/ST-010-F05.png",
+          "sha256": "e6dee0aad925a10c88c2a3fd4167ecab4574de65fec0bd335a5fff83b04410b4",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 115.93,
+          "luma_stddev": 58.87,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-010-F06",
+          "file": "frames/ST-010-F06.png",
+          "sha256": "a17ed7811aeafc739ceca1ea0e7b8dc8b4e86d731899d22b0c1f3935d91cfcb8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 89.81,
+          "luma_stddev": 64.25,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-011",
+      "path": "st-011-why-the-number-dropped",
+      "source_sheet_sha256": "660683a1beb54e2fe3f86c3d0b6fb4d4182ae03e498f79b275a6bad72b5394d7",
+      "review_sheet_sha256": "853169eba8f59659bed29918a36456d58b8350dbb4f3838f5a7d2d106f0c6ec4",
+      "frames": [
+        {
+          "frame_id": "ST-011-F01",
+          "file": "frames/ST-011-F01.png",
+          "sha256": "3448811c88dc339a6694857ed62c7e5c6c370f9e4f0f540331db910d045a0c28",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 126.85,
+          "luma_stddev": 57.55,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-011-F02",
+          "file": "frames/ST-011-F02.png",
+          "sha256": "1155831498fc9e237c9477cd74f4083f634ab749db55382f2a8dc9a8a1214ecb",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 129.24,
+          "luma_stddev": 59.13,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-011-F03",
+          "file": "frames/ST-011-F03.png",
+          "sha256": "94da300800932abdda0167a1a9fcc03ebf2126fea61fbd6feada39d03d586be3",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 129.98,
+          "luma_stddev": 61.91,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-011-F04",
+          "file": "frames/ST-011-F04.png",
+          "sha256": "881ceaad1125306f2b6b1795d9b83caffd2e7b2ba18b62a09aad2b2c96ed0cfe",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 132.05,
+          "luma_stddev": 62.14,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-011-F05",
+          "file": "frames/ST-011-F05.png",
+          "sha256": "d00af453e54abd3996b477a5d32eddf04329b5e47b0d1d4eb28814d1a75e6590",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 133.91,
+          "luma_stddev": 63.05,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-011-F06",
+          "file": "frames/ST-011-F06.png",
+          "sha256": "7b1dc02b2f038e8753fc884498d3ff351acc1267890650e186a3ee83f4561019",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 131.15,
+          "luma_stddev": 59.95,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-012",
+      "path": "st-012-the-silent-automation",
+      "source_sheet_sha256": "8137bbf0691ffbbd692483bb996f188c001cae8f401c1d28c7a3119165c85582",
+      "review_sheet_sha256": "e3a52b34e2ea6ac1f1ce9d8fcef51e0375f987106f0e884bf7a197ffbc1a622f",
+      "frames": [
+        {
+          "frame_id": "ST-012-F01",
+          "file": "frames/ST-012-F01.png",
+          "sha256": "d626d3d3b5ab635fcf01a71388aceee0a9d2b58dd2c31b769f363f081d758d59",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 117.51,
+          "luma_stddev": 81.78,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-012-F02",
+          "file": "frames/ST-012-F02.png",
+          "sha256": "20ad291246f8b0f5f8d58452e3a5a7b45972163cd7224600a35f33a3d6832d1d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 138.17,
+          "luma_stddev": 62.82,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-012-F03",
+          "file": "frames/ST-012-F03.png",
+          "sha256": "fabea18a72f8ee6d8f0727a39cb3f7423b875d947ebd3e650f72197fba5a62b7",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.21,
+          "luma_stddev": 78.68,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-012-F04",
+          "file": "frames/ST-012-F04.png",
+          "sha256": "69de9168aa0ef006836c59cb9657ce659fc1687d68415754f230522d065602bb",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 120.95,
+          "luma_stddev": 76.21,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-012-F05",
+          "file": "frames/ST-012-F05.png",
+          "sha256": "1d19b372a572933ee90148c9a77d5c513d553de2b270f98d6561bd0fe157649d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 135.62,
+          "luma_stddev": 67.05,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-012-F06",
+          "file": "frames/ST-012-F06.png",
+          "sha256": "b8158ed47c21503b98d1b7b147255acf7748c3209636ab18afc74b58c06a082e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 121.0,
+          "luma_stddev": 71.1,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-013",
+      "path": "st-013-duplicate-in-the-queue",
+      "source_sheet_sha256": "2831cfebc065d236aca90846d57f052a616522f7852a5d6e1b7487da1127b3a8",
+      "review_sheet_sha256": "7f5690f652b1fdf8eb6489f83684c431919fe47d5b414ed8d877f6c311771837",
+      "frames": [
+        {
+          "frame_id": "ST-013-F01",
+          "file": "frames/ST-013-F01.png",
+          "sha256": "83dda09a5b7ef53464151e7077245718d14a1a2ef66420813a470d55e99126f8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.11,
+          "luma_stddev": 48.96,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-013-F02",
+          "file": "frames/ST-013-F02.png",
+          "sha256": "07971b4974e43d71e69b6b5e83c02d15f22623a32a423c5760c2c27b1a114bc1",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 101.21,
+          "luma_stddev": 64.12,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-013-F03",
+          "file": "frames/ST-013-F03.png",
+          "sha256": "b02086947eba639dffcea6fd925a69ca0112073496b0c591d81b5597e24920d6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 89.99,
+          "luma_stddev": 62.25,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-013-F04",
+          "file": "frames/ST-013-F04.png",
+          "sha256": "6f2aaa04b02c8314b2a39a65cc2a550f69920bcdcd0ce73a7674da1fe8422582",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 96.31,
+          "luma_stddev": 61.52,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-013-F05",
+          "file": "frames/ST-013-F05.png",
+          "sha256": "e82369055cc0b7e65fa3172591ea67a0e96b551674bd2ed1d09796d8fe75c1ca",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.71,
+          "luma_stddev": 61.42,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-013-F06",
+          "file": "frames/ST-013-F06.png",
+          "sha256": "7ba197b0c6b9a41dedd1f56832a7c072ac49d6e54361a04fafd13df8a8fbfbfb",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 92.14,
+          "luma_stddev": 65.58,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-014",
+      "path": "st-014-where-the-caption-went",
+      "source_sheet_sha256": "39ab5ffa6d1f50967eb0a8ea19ec14aca05bae3071f5017315e61072fae8a43c",
+      "review_sheet_sha256": "ab4039abcb591d375df18a85e127de254f73dcf9e7bb9745fa38b852e3bdcb71",
+      "frames": [
+        {
+          "frame_id": "ST-014-F01",
+          "file": "frames/ST-014-F01.png",
+          "sha256": "50d0eba8a9f070d161c8fda89e75bd8772734bc851188dce1075ac710f5e9ca0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 94.53,
+          "luma_stddev": 62.75,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-014-F02",
+          "file": "frames/ST-014-F02.png",
+          "sha256": "709007515ac25ac7e09d3df9a168682fcdb80cb21841488c2eaa6c5cf9b3b302",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.53,
+          "luma_stddev": 62.25,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-014-F03",
+          "file": "frames/ST-014-F03.png",
+          "sha256": "057005b3eb3ec19619a1e481e7abdd8a09b93965aa4521da60b9c6afec5f8f44",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 100.44,
+          "luma_stddev": 60.67,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-014-F04",
+          "file": "frames/ST-014-F04.png",
+          "sha256": "361ba51b06b4e0cec66d0498dea03b4a662c0268268933eef571bc2ab1f4e517",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 72.87,
+          "luma_stddev": 47.16,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-014-F05",
+          "file": "frames/ST-014-F05.png",
+          "sha256": "614c68bf66298e276187e9568ee1ab46766ef2e1b83d025c0069e73d0d8b9705",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.75,
+          "luma_stddev": 45.99,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-014-F06",
+          "file": "frames/ST-014-F06.png",
+          "sha256": "5cfe7305b9ba348e4bb6505dccfcee70089836021409c1142967a4ccf6a90618",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.79,
+          "luma_stddev": 62.14,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-015",
+      "path": "st-015-the-broken-source-link",
+      "source_sheet_sha256": "9601f7c551d575f4afb59e6c296e313cb3769399ed431cdd4506e4d1c815b0f8",
+      "review_sheet_sha256": "ed015e6e35e9e9af1d3eb9fcbbc6cea0005559dba94da69ff3cc6c3a0b1cb367",
+      "frames": [
+        {
+          "frame_id": "ST-015-F01",
+          "file": "frames/ST-015-F01.png",
+          "sha256": "691b0953fee9d2a0c47b9ea2291fafdfac6c61ebf2d9cb0d67ac007dffe4a115",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.03,
+          "luma_stddev": 39.59,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-015-F02",
+          "file": "frames/ST-015-F02.png",
+          "sha256": "19efa98d0344fb5eb035710b0a818cc8b6e8386380f6a036c1f9a2f6ea5fe42a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.76,
+          "luma_stddev": 47.81,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-015-F03",
+          "file": "frames/ST-015-F03.png",
+          "sha256": "ecb76fab5f3e517dd5b4b51bd708d3cef44ba68154735c8a2c6bd781b480319c",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.66,
+          "luma_stddev": 57.9,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-015-F04",
+          "file": "frames/ST-015-F04.png",
+          "sha256": "a722c7238fda1146de3a68521b656925f25af21739d48b6e567380eb5f67a375",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.44,
+          "luma_stddev": 52.18,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-015-F05",
+          "file": "frames/ST-015-F05.png",
+          "sha256": "bc40d304ec7f84419b2467f76ed071e00d0c78a8bea9036d974807afaaa5e8cb",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 127.99,
+          "luma_stddev": 81.21,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-015-F06",
+          "file": "frames/ST-015-F06.png",
+          "sha256": "c731155d7540d28b21230ad1450c8fae0920b36dcc61de643e4499add3945b7e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 103.89,
+          "luma_stddev": 44.57,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-016",
+      "path": "st-016-clicking-faster-failed",
+      "source_sheet_sha256": "b50695fc50962b81062312bb10b2f4991a12ab3b5f670e90329bacb117236bf6",
+      "review_sheet_sha256": "0593968d0867174aa0b32c36c82aff90580cc67ef03a7e0b652a55a9a3f6ec9a",
+      "frames": [
+        {
+          "frame_id": "ST-016-F01",
+          "file": "frames/ST-016-F01.png",
+          "sha256": "77dd5b982b7e3be000b29d8022027a93cea4b14795011632c77c83bcd82f3b16",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 126.11,
+          "luma_stddev": 59.82,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-016-F02",
+          "file": "frames/ST-016-F02.png",
+          "sha256": "569f295d1658812bd064c18e5bf28750076f16dd60e4ecab726117817705abb6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.73,
+          "luma_stddev": 56.78,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-016-F03",
+          "file": "frames/ST-016-F03.png",
+          "sha256": "b1341e21ab9d30cf924b702953c1824331dc85f08c3e5a2ae4ff5213c8120b18",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 120.4,
+          "luma_stddev": 63.53,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-016-F04",
+          "file": "frames/ST-016-F04.png",
+          "sha256": "b5cc75c71209698572c133fb063bd93508aa1b31036d9fcfd6a2799f79c70acb",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 127.41,
+          "luma_stddev": 57.45,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-016-F05",
+          "file": "frames/ST-016-F05.png",
+          "sha256": "681390822ff2701957acda891794baa9dc1f4531b4f002b3ff428305c48b87ea",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 111.31,
+          "luma_stddev": 57.46,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-016-F06",
+          "file": "frames/ST-016-F06.png",
+          "sha256": "3cfaa12126ac12aff1a0d95dcb71e117cb12d9659e630062fe8910ba18e946c6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 103.8,
+          "luma_stddev": 60.69,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-017",
+      "path": "st-017-more-cuts-less-meaning",
+      "source_sheet_sha256": "d19fd536eac3e119440dbd078ec601512ca0e40ac5b1748f5cd7ce9d94740928",
+      "review_sheet_sha256": "eefebbe3e6aa8ebd4fb283256b795d89ef7868f728256ef822c6928607b4dc2d",
+      "frames": [
+        {
+          "frame_id": "ST-017-F01",
+          "file": "frames/ST-017-F01.png",
+          "sha256": "47c2b2fca7067e9dedfa9ac41b747a4af442c28633c42a39534d2032f312b467",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 119.43,
+          "luma_stddev": 65.6,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-017-F02",
+          "file": "frames/ST-017-F02.png",
+          "sha256": "0f6a54deb41ddb90ad26828286c2ce0b51ed45ed4bd4ccae632adc6c30905832",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 135.64,
+          "luma_stddev": 61.32,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-017-F03",
+          "file": "frames/ST-017-F03.png",
+          "sha256": "fe2f55ca74a5199231730cde8d9c1b7cc0b1b851c09c5dab09be29c71d34dc04",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 130.76,
+          "luma_stddev": 69.89,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-017-F04",
+          "file": "frames/ST-017-F04.png",
+          "sha256": "4cfdfecc69887a25825f62172f7a1c8c4b5760b31616c0bf48a811e2d5d07e44",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 100.59,
+          "luma_stddev": 68.86,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-017-F05",
+          "file": "frames/ST-017-F05.png",
+          "sha256": "f0af1a5e9428ddce416bf6690fbe9cf07f1f37df88eb4fbd81656745284061f8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 135.87,
+          "luma_stddev": 67.11,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-017-F06",
+          "file": "frames/ST-017-F06.png",
+          "sha256": "2546220add2eadcc6d4aa917090ae5d0cf92b05c077d4e22117eecbbb84761bc",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 136.01,
+          "luma_stddev": 66.08,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-018",
+      "path": "st-018-the-missing-owner",
+      "source_sheet_sha256": "1408a6a6b1ea1bf587a3a7a92f5e88674e7044a1e09e263097d84083fa783fc1",
+      "review_sheet_sha256": "9d5b9547a3bf312bcbf473139017f5126c273999ac145aa96c65a0b02a3d3f4f",
+      "frames": [
+        {
+          "frame_id": "ST-018-F01",
+          "file": "frames/ST-018-F01.png",
+          "sha256": "35b9b538506c929df8c573f0eb486bb45d37e69fba13af7d729d2b1bd12540b6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.71,
+          "luma_stddev": 62.48,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-018-F02",
+          "file": "frames/ST-018-F02.png",
+          "sha256": "045176fa75c7603f558d79b3c1f0be142180c51f7bf132618575ec4e17983b06",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.3,
+          "luma_stddev": 64.49,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-018-F03",
+          "file": "frames/ST-018-F03.png",
+          "sha256": "65d8b7d12ee726bd8e0f2588dfe92a3412aa29b39db95c0c83d8dae20e6887fa",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 81.35,
+          "luma_stddev": 66.44,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-018-F04",
+          "file": "frames/ST-018-F04.png",
+          "sha256": "13318eb76b1f717858c4437033d55264ccb15cb19540e4df4236c40197759674",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 83.7,
+          "luma_stddev": 52.03,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-018-F05",
+          "file": "frames/ST-018-F05.png",
+          "sha256": "ceb3aae1e2b44cbff9711a7ca32d15236540860a20e9fc5f4e402116e00f0c3d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 94.82,
+          "luma_stddev": 62.92,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-018-F06",
+          "file": "frames/ST-018-F06.png",
+          "sha256": "e0bfd62c7d618e96c73481e20e3eba0c9801cce9a702b4af791d730a9a962852",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 97.73,
+          "luma_stddev": 57.82,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-019",
+      "path": "st-019-upload-without-redaction",
+      "source_sheet_sha256": "e69bb38751eb91b252cab8b495fc9cee3cf56d566cf32b2223ea528810a828f5",
+      "review_sheet_sha256": "28a8e5516fb14f6b8bcbd7ad00c845a51ca5a3de029248dc7f1d089d04d391c8",
+      "frames": [
+        {
+          "frame_id": "ST-019-F01",
+          "file": "frames/ST-019-F01.png",
+          "sha256": "d101d161f705deb135557715f01ab9fa8203874d82c893014921bb7f90cde825",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 109.55,
+          "luma_stddev": 64.05,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-019-F02",
+          "file": "frames/ST-019-F02.png",
+          "sha256": "4f6f6a8dcb43389854c9eecbefeee17ce0d9020fc17f17f9ae42be0e475a8ca9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 87.5,
+          "luma_stddev": 57.69,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-019-F03",
+          "file": "frames/ST-019-F03.png",
+          "sha256": "5c35b01e112eb8a292c3320571d376cb30b4e28546a6b1638a92dac4c6ab60ec",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 70.59,
+          "luma_stddev": 59.86,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-019-F04",
+          "file": "frames/ST-019-F04.png",
+          "sha256": "a32c4c637091303ba58753bc73f8ff48fe9e90634d97a1631608ad80570bdb33",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.55,
+          "luma_stddev": 70.65,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-019-F05",
+          "file": "frames/ST-019-F05.png",
+          "sha256": "56b904ee7513b9dbf4ded411aaa27cce5ac36f184aaac97d990c39e6502d59ad",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 81.25,
+          "luma_stddev": 57.05,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-019-F06",
+          "file": "frames/ST-019-F06.png",
+          "sha256": "32d749f72478b5a194d27464d11a3d1508bddaaa6bb2ebaf311de2b1ea2c7f6a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.25,
+          "luma_stddev": 66.79,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-020",
+      "path": "st-020-the-unreadable-proof",
+      "source_sheet_sha256": "79cf53e2634018c96f48d8ccbd3634cd1a435349afa49bc648e1b38a231501af",
+      "review_sheet_sha256": "a8fc053a3af0dca40f4986741e3d0a0e212b1c07abef43e2844f02579d8954f1",
+      "frames": [
+        {
+          "frame_id": "ST-020-F01",
+          "file": "frames/ST-020-F01.png",
+          "sha256": "0cf69ed4a72a115aa90b3117dcd0f1f11bbc588df8bc7b2ada49f918498f627f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 89.09,
+          "luma_stddev": 49.59,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-020-F02",
+          "file": "frames/ST-020-F02.png",
+          "sha256": "96bb6503efa74260fabb76d68876bb34b10422f85c4fd971e6b5d4b17247958b",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.56,
+          "luma_stddev": 58.39,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-020-F03",
+          "file": "frames/ST-020-F03.png",
+          "sha256": "2a25fddc53c009c8c60e0a1006b7e2caad7fdd7affb1a4ef9b264df6a3648206",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 82.57,
+          "luma_stddev": 58.8,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-020-F04",
+          "file": "frames/ST-020-F04.png",
+          "sha256": "fd4b4e4638359a80e6ae4fa8b38d89ab5d1dffeea1d977c270f2942a6a03bc68",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.35,
+          "luma_stddev": 57.95,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-020-F05",
+          "file": "frames/ST-020-F05.png",
+          "sha256": "a31fe46cfabd86b96cce272cdce5469dada6aca763c3468b4b51805d1a42d173",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 91.85,
+          "luma_stddev": 59.62,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-020-F06",
+          "file": "frames/ST-020-F06.png",
+          "sha256": "5b16a0f4150cef4ba5152cd9c9cc33f2b46aacc1a832ce14cd9716068bfc4235",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 82.0,
+          "luma_stddev": 44.54,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-021",
+      "path": "st-021-domino-dependency",
+      "source_sheet_sha256": "5175d082cf8b7a337ac43b99e1a43670e6808273c749a91523c5aa7c4444094e",
+      "review_sheet_sha256": "6b29b761bd642baddfaf23b994d3e583bde01ee3d66adbee87c6917c27ef9d10",
+      "frames": [
+        {
+          "frame_id": "ST-021-F01",
+          "file": "frames/ST-021-F01.png",
+          "sha256": "a5e64cc9082a5eeea326c64de8aaaf9661c5633a51e0bc986508375c5ad56ba0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 97.08,
+          "luma_stddev": 59.52,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-021-F02",
+          "file": "frames/ST-021-F02.png",
+          "sha256": "4b06f33daf33036e799de917759a59d96ba185a54952158a856257595d87781d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.18,
+          "luma_stddev": 59.32,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-021-F03",
+          "file": "frames/ST-021-F03.png",
+          "sha256": "ec268d264a771eb764f3a3992ac5bdac798de1785a88f8b47db2a4060ca6dfb3",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 101.42,
+          "luma_stddev": 59.07,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-021-F04",
+          "file": "frames/ST-021-F04.png",
+          "sha256": "f064f11bad317a1932cc59259253856070aae221a0022d7027d823357c1b6571",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 109.18,
+          "luma_stddev": 71.4,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-021-F05",
+          "file": "frames/ST-021-F05.png",
+          "sha256": "cf544e33c151fa0a5cdd1fe3b7d5ea525a0548543188b0bf1f3176ffdea36aa5",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 136.36,
+          "luma_stddev": 56.64,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-021-F06",
+          "file": "frames/ST-021-F06.png",
+          "sha256": "b45da76909e36bbecd1d37f13026c40aab24c3db9e83a9f786a48ce962a7ecb9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.66,
+          "luma_stddev": 62.21,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-022",
+      "path": "st-022-leaking-attention",
+      "source_sheet_sha256": "b39a6a82c5f6dc362620b5a252970cff27f1c9932e20097f3a12188ca7af284e",
+      "review_sheet_sha256": "b8336b620a6b72c1fc11e43c0df291564767a873a3a26ac94feb87450ff0f403",
+      "frames": [
+        {
+          "frame_id": "ST-022-F01",
+          "file": "frames/ST-022-F01.png",
+          "sha256": "d062c09134879f3b0b194ba4a3878df905693598c6ff4261ec82c745fcde1819",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 117.62,
+          "luma_stddev": 62.17,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-022-F02",
+          "file": "frames/ST-022-F02.png",
+          "sha256": "c81b1ca91c043c19071c6dbc9da5b60c5b0d2db2d896cd29ae97ab9dc44d2a67",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 103.9,
+          "luma_stddev": 65.71,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-022-F03",
+          "file": "frames/ST-022-F03.png",
+          "sha256": "00370933932e0f2e90e06a95c52c5b17526f3404b229aa235d34bab021e2cfbf",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.15,
+          "luma_stddev": 65.16,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-022-F04",
+          "file": "frames/ST-022-F04.png",
+          "sha256": "f33ccb2a5bdc4f0e341ec82f2e8c0409392b0c3790638d4ce261df892cd6619d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 115.9,
+          "luma_stddev": 71.78,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-022-F05",
+          "file": "frames/ST-022-F05.png",
+          "sha256": "b35bea9e4b89c3a60e3cc86f69ee8ba4592133e2cc32fc2ec419a0f298d9a70c",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.4,
+          "luma_stddev": 61.33,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-022-F06",
+          "file": "frames/ST-022-F06.png",
+          "sha256": "a8304246f65470d18ca60c2f13f441a9224a4fbd143f6d59b3e0d92c996b60be",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.92,
+          "luma_stddev": 65.18,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-023",
+      "path": "st-023-lock-and-key-permission",
+      "source_sheet_sha256": "147f196721e0ff6eede6ae28685a994479fb64d0558add5fb83f0c02b553c99e",
+      "review_sheet_sha256": "5d016a87c84adbb788e05fa05b5418e6c4222efe25da4183ebd311ea2472d4e1",
+      "frames": [
+        {
+          "frame_id": "ST-023-F01",
+          "file": "frames/ST-023-F01.png",
+          "sha256": "7d7e3e740addc43e55a61ac924a99664fb2d8e118ecc27023985053a9cfd98d6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.5,
+          "luma_stddev": 54.16,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-023-F02",
+          "file": "frames/ST-023-F02.png",
+          "sha256": "f02554d61e474bb162f5f5419d8013c8ad43417b6033c82813d8a51f68ebbbe2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.94,
+          "luma_stddev": 70.83,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-023-F03",
+          "file": "frames/ST-023-F03.png",
+          "sha256": "e7f46696dd3253d14b1becbe6d5e4ffe5f657f2658b0eaf4c3292965d9ae97b7",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 95.02,
+          "luma_stddev": 64.18,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-023-F04",
+          "file": "frames/ST-023-F04.png",
+          "sha256": "835c68612519bef25a0f614aab31df42348ae2ed12fc19475e8ab48bf8b7f479",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.11,
+          "luma_stddev": 65.5,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-023-F05",
+          "file": "frames/ST-023-F05.png",
+          "sha256": "62864c34cdee8433ccfbd0c46fdab09e665b177f7f0e1eef8de0c698ea73b104",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.41,
+          "luma_stddev": 62.94,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-023-F06",
+          "file": "frames/ST-023-F06.png",
+          "sha256": "00c8eea85d02c740fda2919cae690b75147ff67b8245fbc692705651e4d87f1d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 100.95,
+          "luma_stddev": 68.73,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-024",
+      "path": "st-024-bridge-of-evidence",
+      "source_sheet_sha256": "787a5fdb9f5079cb6267fff0f5ac01dfd4261a4b4ba35c753fd7126e5e029908",
+      "review_sheet_sha256": "0e77afd43f6b002498e35a2b78cda1e0c92174f30a9b380b7b6d376347ccad16",
+      "frames": [
+        {
+          "frame_id": "ST-024-F01",
+          "file": "frames/ST-024-F01.png",
+          "sha256": "8eaf2afd9094147d689728263e6291706f93c05cf5f4e601a4052ba5d4616bdf",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 94.53,
+          "luma_stddev": 65.19,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-024-F02",
+          "file": "frames/ST-024-F02.png",
+          "sha256": "253e226cfdf56b441078fb19ed0e1f8e76aabf2434aa0c9dc73b77435fd3ebf9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 112.05,
+          "luma_stddev": 58.85,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-024-F03",
+          "file": "frames/ST-024-F03.png",
+          "sha256": "cafe162458e969d13ae9b5a43df14b4743252ccf6ff12bd803dde7dd5a99301c",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.07,
+          "luma_stddev": 56.48,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-024-F04",
+          "file": "frames/ST-024-F04.png",
+          "sha256": "9477278ce95d004da8db2aab921b1f6362da96e844925455bf615b241032f845",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 116.23,
+          "luma_stddev": 56.99,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-024-F05",
+          "file": "frames/ST-024-F05.png",
+          "sha256": "47ad29219d2fc820e418bf159cfccd6569dc0804e85c1a808632d801d6d1290d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 117.44,
+          "luma_stddev": 58.13,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-024-F06",
+          "file": "frames/ST-024-F06.png",
+          "sha256": "71c0d134da03c2e8fda538caf151c422703c54a0504d349ce1dd0b14c3663504",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 111.15,
+          "luma_stddev": 55.84,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-025",
+      "path": "st-025-compass-before-speed",
+      "source_sheet_sha256": "3854a2582b6c38ba85397dd9fab46cace0d7188563eb49069e7fda8a2a277821",
+      "review_sheet_sha256": "63b9e7a2bdf8254d37adb08d0436e317b1be6932e04bb11c927a1fd19dbd568b",
+      "frames": [
+        {
+          "frame_id": "ST-025-F01",
+          "file": "frames/ST-025-F01.png",
+          "sha256": "a6055633bcc7e40a7eebb636afe4efa6b07b59cf4a49062be0c35cc98d085a18",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 127.76,
+          "luma_stddev": 49.24,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-025-F02",
+          "file": "frames/ST-025-F02.png",
+          "sha256": "f3a7fd57fe6fa6e7353b1fca79f3c701051f2153af0c5fc7a729ccfc8b8fdb0f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 129.03,
+          "luma_stddev": 52.55,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-025-F03",
+          "file": "frames/ST-025-F03.png",
+          "sha256": "7995ece67f684919b3bc3a8111dd9ac957829d0cf661b4ac358a0006b637be5f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 141.08,
+          "luma_stddev": 44.58,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-025-F04",
+          "file": "frames/ST-025-F04.png",
+          "sha256": "4e24dd83ca4fd8dbb9155b8297ec8f87f5bca2e9a1ce264e9f4ca2a64bc16b3a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 121.7,
+          "luma_stddev": 56.51,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-025-F05",
+          "file": "frames/ST-025-F05.png",
+          "sha256": "522d69d73d92ae8f311923749613ceccc0d69ef41afc22a270acbd70570c9ee9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 153.61,
+          "luma_stddev": 43.39,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-025-F06",
+          "file": "frames/ST-025-F06.png",
+          "sha256": "636f2cc1bf1d2dd04171cb2272d502c9fbbe5de9ed75143444418f8eff8350dc",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 151.08,
+          "luma_stddev": 48.23,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-026",
+      "path": "st-026-three-checks-before-publish",
+      "source_sheet_sha256": "541ce40eb876f401cc71ef02fcb302e5901c55ef0c19ebe3833bd416e75bbfbd",
+      "review_sheet_sha256": "d0c1b658934034c7913de9c3acd20498f58e09ef6bd05a7ebe23704b7cdf3cb6",
+      "frames": [
+        {
+          "frame_id": "ST-026-F01",
+          "file": "frames/ST-026-F01.png",
+          "sha256": "0ab5c0d22ce71a94bea474e14d90de8625aa9668101fc625921feb6f1efa91da",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 135.0,
+          "luma_stddev": 71.02,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-026-F02",
+          "file": "frames/ST-026-F02.png",
+          "sha256": "af6adc8554423efabdc3195eda1db5a1827849d74603e2c62031a5ea20228084",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 137.69,
+          "luma_stddev": 59.07,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-026-F03",
+          "file": "frames/ST-026-F03.png",
+          "sha256": "f7586401a127e4f9f97e4fe3570b7ba961e157a8dd756e428ed2fe6479834ee0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 131.71,
+          "luma_stddev": 62.65,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-026-F04",
+          "file": "frames/ST-026-F04.png",
+          "sha256": "0185a0b9ac68657a73477f20b54f353ebb8ddabdd76c676ed6be4b02628c53e0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 136.25,
+          "luma_stddev": 60.89,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-026-F05",
+          "file": "frames/ST-026-F05.png",
+          "sha256": "f72ed13685a68e06f8aa61d942489e999f19969a20df49b76b7e27ab9ac01c62",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 130.32,
+          "luma_stddev": 59.81,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-026-F06",
+          "file": "frames/ST-026-F06.png",
+          "sha256": "7f16bc63eb9c1e62c648901907d701665f35eb2d03e269e7081e3cbcc8c20e84",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 143.57,
+          "luma_stddev": 56.47,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-027",
+      "path": "st-027-three-frames-to-explain",
+      "source_sheet_sha256": "b9785a9084d058b80d932db2730fd1ea637cd445ad4c20a042bf7d7793ee7025",
+      "review_sheet_sha256": "199228632858dc8ff5e59d933eae2a4c1cc4855907b1a363916edddb741d367c",
+      "frames": [
+        {
+          "frame_id": "ST-027-F01",
+          "file": "frames/ST-027-F01.png",
+          "sha256": "b5d361d5c63a8610720bf67638652b1c3be88c8a040cda9dc374ae2760ec9602",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 111.74,
+          "luma_stddev": 57.07,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-027-F02",
+          "file": "frames/ST-027-F02.png",
+          "sha256": "ef1a8cf5000764f2a876fce7196ca7f645034586e22abcfddcbfad42b48eb40a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 112.29,
+          "luma_stddev": 53.72,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-027-F03",
+          "file": "frames/ST-027-F03.png",
+          "sha256": "a5c93b48e8438d07302eab6657286d4eb16879c22f5d524b96c460834f9ed139",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 108.43,
+          "luma_stddev": 58.93,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-027-F04",
+          "file": "frames/ST-027-F04.png",
+          "sha256": "2793ea5ce458e40a5bfd76134d0d033ab262c82ad39010c29fdfcf0016bfea55",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.99,
+          "luma_stddev": 59.42,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-027-F05",
+          "file": "frames/ST-027-F05.png",
+          "sha256": "ca9b8b24f6bf2d2344716f186dd9d59e5cac0e8d985ab645041372abafe844b9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 122.78,
+          "luma_stddev": 37.09,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-027-F06",
+          "file": "frames/ST-027-F06.png",
+          "sha256": "73f72bdbae258b4f6c5a47a056ba7b87d3f8c83056af14d8d87f6d449933a124",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 108.06,
+          "luma_stddev": 56.27,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-028",
+      "path": "st-028-five-proof-states",
+      "source_sheet_sha256": "4d3777fe810a6a2a0d0978655b2fdfe8001095fcda768f9b0c5009332bff90fd",
+      "review_sheet_sha256": "9e59c8f0bccf4985f8d16e5bbb69dd439324e50eb91b1a6e6811bcd30cfe01a0",
+      "frames": [
+        {
+          "frame_id": "ST-028-F01",
+          "file": "frames/ST-028-F01.png",
+          "sha256": "43404d4033f813e7d59f3fa60d6a117407c88800cb70b4f6fb184c543494d51a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 92.37,
+          "luma_stddev": 58.4,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-028-F02",
+          "file": "frames/ST-028-F02.png",
+          "sha256": "86c81440fd04c803551ec241fcceb02adc702454cae8b8e73ddfd200f510a072",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.36,
+          "luma_stddev": 58.33,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-028-F03",
+          "file": "frames/ST-028-F03.png",
+          "sha256": "10a85ec545b6d32f8007008913f6751b34db95bfd497550fc418ee400ae206f0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.25,
+          "luma_stddev": 66.11,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-028-F04",
+          "file": "frames/ST-028-F04.png",
+          "sha256": "1cf9df89fb158a861523bf36de4e5b0eba3133778b425c704a6f6d472c8dcce3",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.78,
+          "luma_stddev": 63.83,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-028-F05",
+          "file": "frames/ST-028-F05.png",
+          "sha256": "d4b636f0f2b89d62c390b5db3add739de779d19a04dcfe53bb559d8678b62445",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 140.38,
+          "luma_stddev": 64.74,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-028-F06",
+          "file": "frames/ST-028-F06.png",
+          "sha256": "8c32304b57a7d8df3e452add04db145c1637f6f0eff5595d9103105ea364344f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.13,
+          "luma_stddev": 59.89,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-029",
+      "path": "st-029-four-cuts-with-purpose",
+      "source_sheet_sha256": "3a50168a1c9ed54e9333daba7f5d3102538f8864efb7216c0ec658535d31e6d0",
+      "review_sheet_sha256": "1840bf699df0d156bdff4eb3dab5c5c9c0264fa41d05e147e7497db32ce83f81",
+      "frames": [
+        {
+          "frame_id": "ST-029-F01",
+          "file": "frames/ST-029-F01.png",
+          "sha256": "61dbac84306077784e7a46f4e9c2a92419ee065f76dcd5dea4a448a65ce54493",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 108.68,
+          "luma_stddev": 69.45,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-029-F02",
+          "file": "frames/ST-029-F02.png",
+          "sha256": "244a2215feb47935db10b124a926b1515222085fada16c94b6fc9e4ff72c66de",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 77.66,
+          "luma_stddev": 54.19,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-029-F03",
+          "file": "frames/ST-029-F03.png",
+          "sha256": "9de9e5ebf4b70799ae5afac278d71cf6d310fd49a685189cd1edbac8b499396b",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 78.02,
+          "luma_stddev": 56.97,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-029-F04",
+          "file": "frames/ST-029-F04.png",
+          "sha256": "57ca1d429466f77593a2cd698f98ca6052d78266e191b7d2612911176d581333",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 75.81,
+          "luma_stddev": 55.6,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-029-F05",
+          "file": "frames/ST-029-F05.png",
+          "sha256": "2012be4c34e4a54ef7d10aeba4ab5881c8811bad9ff24425edeb9455857ab605",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 87.25,
+          "luma_stddev": 62.93,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-029-F06",
+          "file": "frames/ST-029-F06.png",
+          "sha256": "9ecb34521fff5c255f8f389cb52421a35b171b4a6e9404df1f8a04f9e1fedc28",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 82.93,
+          "luma_stddev": 56.57,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-030",
+      "path": "st-030-three-steps-to-a-hook",
+      "source_sheet_sha256": "25bb07d3454d46578f7fc7f8281be88d9f2905efd9567f5ea39a062b97e74172",
+      "review_sheet_sha256": "ad919ba3d9e1ce9a7bccf36fcb5a4a2fb187468a25813e533f59ecd45fcc9d1d",
+      "frames": [
+        {
+          "frame_id": "ST-030-F01",
+          "file": "frames/ST-030-F01.png",
+          "sha256": "db9f97c64f3ed3a3b69219855deb7812aa490d4c283355c139d2c62fadbc0cf7",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.92,
+          "luma_stddev": 70.36,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-030-F02",
+          "file": "frames/ST-030-F02.png",
+          "sha256": "4b143a40b3480e8ff02ea48f9f362d6d33ca6cad472474f894df86e8eec8c2dc",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 144.01,
+          "luma_stddev": 70.99,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-030-F03",
+          "file": "frames/ST-030-F03.png",
+          "sha256": "85e6cb3bf5df30724ca4f5773b1316050e3afa10fe3a13935f71efb2ea3c75fe",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 123.32,
+          "luma_stddev": 73.91,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-030-F04",
+          "file": "frames/ST-030-F04.png",
+          "sha256": "a14ce171d95d50697a7a542127a0f4ff8296dbd9a2422bbab1c701dbd7677e4e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 122.78,
+          "luma_stddev": 74.5,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-030-F05",
+          "file": "frames/ST-030-F05.png",
+          "sha256": "1be5abe098320bd4ff896e01262530984f179981de65f345b6b4124b4c2c4b85",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 136.3,
+          "luma_stddev": 68.51,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-030-F06",
+          "file": "frames/ST-030-F06.png",
+          "sha256": "d19a220b79f3755d262443e66ada568582ad797dc1faf8c2de0d572d362a6a38",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 135.94,
+          "luma_stddev": 71.34,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-031",
+      "path": "st-031-inbox-to-ordered-queue",
+      "source_sheet_sha256": "7865c0e6747123a1a099f614853f8802e787fb87cf270359d48faf4003912d1e",
+      "review_sheet_sha256": "2a272fd6e2bc814c2c68a76a4b436fb862259452b10ccf7d0e72f6d126e2ee6f",
+      "frames": [
+        {
+          "frame_id": "ST-031-F01",
+          "file": "frames/ST-031-F01.png",
+          "sha256": "ae1ea705ee0710e1f7e7a01eae342c25bde84478bca5baaef2feea5f09835301",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 91.63,
+          "luma_stddev": 55.19,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-031-F02",
+          "file": "frames/ST-031-F02.png",
+          "sha256": "8b5d0a54e675e60a4a036bdea53538f25bb70ab81148265c4f68f4d5f857cb47",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.9,
+          "luma_stddev": 51.16,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-031-F03",
+          "file": "frames/ST-031-F03.png",
+          "sha256": "3b9edbb69aed7763b47effc57949883bea8dd631a8c33bad2f188be991d2c9fd",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 115.12,
+          "luma_stddev": 52.24,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-031-F04",
+          "file": "frames/ST-031-F04.png",
+          "sha256": "5f2722584c05c706b6e0beeeeab3b32ce68f3e2e5d5ab82ad9bd7e434a5e5084",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.8,
+          "luma_stddev": 51.91,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-031-F05",
+          "file": "frames/ST-031-F05.png",
+          "sha256": "fc5759cfe9aaf6e128f4a87193b5847c8fb58bb24e157ba90893e28a31c8a4a5",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 115.75,
+          "luma_stddev": 48.55,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-031-F06",
+          "file": "frames/ST-031-F06.png",
+          "sha256": "52ea5b98a41570937787f1a63dd475e716c6ac5de3d43c40baa2ce41168d42ea",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 104.21,
+          "luma_stddev": 53.65,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-032",
+      "path": "st-032-flat-list-to-source-map",
+      "source_sheet_sha256": "f61b4d482b97fb9ea448fd93487b94791657289e30bb0ecc9aed2bd0838f4d13",
+      "review_sheet_sha256": "8cf904e027e61a0cd6d161ad43d9fcfd3ebdf86bd5d3d506091f94d4abedf243",
+      "frames": [
+        {
+          "frame_id": "ST-032-F01",
+          "file": "frames/ST-032-F01.png",
+          "sha256": "d727b65d9061637c741793facab0095100fac5ee68f89254316156913e9e5b73",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 92.6,
+          "luma_stddev": 67.38,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-032-F02",
+          "file": "frames/ST-032-F02.png",
+          "sha256": "af70f9cb534098f3fd11d4d93bf6514bfdf933cd9d856f63c2d3fe6c19de2a26",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 100.29,
+          "luma_stddev": 73.35,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-032-F03",
+          "file": "frames/ST-032-F03.png",
+          "sha256": "9a669f46f6ef5b06ec4e67d93100efef7d2b4352c232c8c65816bd9d62a146c5",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.89,
+          "luma_stddev": 78.03,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-032-F04",
+          "file": "frames/ST-032-F04.png",
+          "sha256": "b9ff09a1b9e2b17fe7f417f923b59f0d192f4968b6bae32e8b74b0f20c98f432",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 86.75,
+          "luma_stddev": 76.37,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-032-F05",
+          "file": "frames/ST-032-F05.png",
+          "sha256": "bbd6d8b1a16831bcaad48e061c97a6a12e950b68cd8f1448c547a249145a505d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 141.0,
+          "luma_stddev": 64.84,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-032-F06",
+          "file": "frames/ST-032-F06.png",
+          "sha256": "48465f260555dd039063a80034fd5a52c4dac649f1c42097c08d56b68c9f68a0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 96.51,
+          "luma_stddev": 71.51,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-033",
+      "path": "st-033-manual-copy-to-checked-export",
+      "source_sheet_sha256": "a38a8eb2dd2ffb4851620403d2133b3a932f53f98d8ed1ec3af8306cc6effa00",
+      "review_sheet_sha256": "88a2e63f8d3d7ccfd5b4d8167ae1cc2f7dd580994e48e7b2aab6c66ad535e382",
+      "frames": [
+        {
+          "frame_id": "ST-033-F01",
+          "file": "frames/ST-033-F01.png",
+          "sha256": "e7c1199036c90e99e06171b0d1e2fd8b2d505a5bad84e23292d017c22d93efd8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 101.61,
+          "luma_stddev": 48.56,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-033-F02",
+          "file": "frames/ST-033-F02.png",
+          "sha256": "bc0e493a9a1a3b960ea34b372814004dfb585c8d80eec7362a3648a9960e65b2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 114.07,
+          "luma_stddev": 62.26,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-033-F03",
+          "file": "frames/ST-033-F03.png",
+          "sha256": "7c906db6fd4d47e1d5ae32b372315ea4c6c7cf719054137c2ca1b5c5c2a64e73",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 123.72,
+          "luma_stddev": 60.87,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-033-F04",
+          "file": "frames/ST-033-F04.png",
+          "sha256": "7856b2a4febb18937f04febadfdd23fd7dee7570f7072ae82aad83a0a3347292",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 126.4,
+          "luma_stddev": 63.01,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-033-F05",
+          "file": "frames/ST-033-F05.png",
+          "sha256": "4b5f2a9ce517c6477ad15b5c66470cadd958d28444cab71eca921aac68a83179",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 122.71,
+          "luma_stddev": 59.63,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-033-F06",
+          "file": "frames/ST-033-F06.png",
+          "sha256": "9cc3490a6e7a1d83bc32467742b16aee21f4a831c2b894a55fd10bd67b0363ab",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 119.15,
+          "luma_stddev": 66.42,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-034",
+      "path": "st-034-guess-to-bounded-test",
+      "source_sheet_sha256": "7c2ac4ca152e68dd879c82203515114dc8545b53eacc5bf18550baf8adf0a911",
+      "review_sheet_sha256": "788de14e9d4822141e66692e6888847e4f5ae0d7b17ecc1bf4a7898dcc85772e",
+      "frames": [
+        {
+          "frame_id": "ST-034-F01",
+          "file": "frames/ST-034-F01.png",
+          "sha256": "da9d86910ebe095f4398ea583146b0727fe910474e7764ec7d21dc3a0681ebf0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 123.46,
+          "luma_stddev": 68.73,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-034-F02",
+          "file": "frames/ST-034-F02.png",
+          "sha256": "2f4b743a36a6c2445c7b0480737110be5bfeefba0d38dd19c38f46910a010854",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 133.62,
+          "luma_stddev": 70.63,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-034-F03",
+          "file": "frames/ST-034-F03.png",
+          "sha256": "63141d2e5c9297991e3eb511704d0e9f5c1eae4d522f42b75d5b0758c7d2d506",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 114.63,
+          "luma_stddev": 62.57,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-034-F04",
+          "file": "frames/ST-034-F04.png",
+          "sha256": "bd74f40a8944d6b180883e4d67f4162866d84f1ad1a372601b58e47edba05297",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 127.93,
+          "luma_stddev": 71.84,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-034-F05",
+          "file": "frames/ST-034-F05.png",
+          "sha256": "8b69eca6aab0fa980db145a1be6c904e2dbcc893c8c5035edd78f0c3367a8bfb",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 148.26,
+          "luma_stddev": 57.52,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-034-F06",
+          "file": "frames/ST-034-F06.png",
+          "sha256": "09748f00776cc62ada0b976327e7a68802e5cc76ad48b3db1e4eee353e571e3d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 133.73,
+          "luma_stddev": 75.6,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-035",
+      "path": "st-035-cluttered-frame-to-one-action",
+      "source_sheet_sha256": "52312cdb8d39433fdaaff78cdc9569d17681166203c473270ad7fdf4060eb3d0",
+      "review_sheet_sha256": "5850cb633cbf846fafcdb02965eaaa1580e3ebc1a0130ae3fe3c7dbe27abd823",
+      "frames": [
+        {
+          "frame_id": "ST-035-F01",
+          "file": "frames/ST-035-F01.png",
+          "sha256": "580e935e5501a56d4647faf274ae3b9ed6a820b381665b24240871a2ce8bc45b",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 109.22,
+          "luma_stddev": 55.78,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-035-F02",
+          "file": "frames/ST-035-F02.png",
+          "sha256": "4c1dfa39edd142aaf0d7a3b82f0b1431527ffe025606a2e35c50084544d353be",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 111.54,
+          "luma_stddev": 48.99,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-035-F03",
+          "file": "frames/ST-035-F03.png",
+          "sha256": "e0940476a3a86152a4f85ef4a72e9ad94fa348c8285714ae3e65a758dbda21d1",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 102.33,
+          "luma_stddev": 43.96,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-035-F04",
+          "file": "frames/ST-035-F04.png",
+          "sha256": "a637b86847850671e0aea50fdbd73663bf47afc48324348d8fe7b327a299b9ae",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.42,
+          "luma_stddev": 41.87,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-035-F05",
+          "file": "frames/ST-035-F05.png",
+          "sha256": "ae329f0f5622d9aed59d5d159328144acd1dd277c876575c028f363330eafe49",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 101.05,
+          "luma_stddev": 46.89,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-035-F06",
+          "file": "frames/ST-035-F06.png",
+          "sha256": "9d1d171920bed8ee32c3b7bd2158b8a6e966e5095a7bcefd8d7bb7139dfb6f47",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.45,
+          "luma_stddev": 45.91,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-036",
+      "path": "st-036-receipt-behind-the-claim",
+      "source_sheet_sha256": "1cbd54a9d8e4d6ef16d23b9ed625674f6fb991a6304b5c8d5a83b215d4f9fc36",
+      "review_sheet_sha256": "672ec53241c158fe34744e886a325c98338b211213c4ea142fe5f56ff273354d",
+      "frames": [
+        {
+          "frame_id": "ST-036-F01",
+          "file": "frames/ST-036-F01.png",
+          "sha256": "17957fb6731165a3f72b8ed1d0886af20ba2e5aee90589adcf035105fa2bd215",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 103.16,
+          "luma_stddev": 44.14,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-036-F02",
+          "file": "frames/ST-036-F02.png",
+          "sha256": "607ca80709be81cd54e98d609151ebfd4502bdeadfa08350c3c9c4ac615ccf76",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.17,
+          "luma_stddev": 59.19,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-036-F03",
+          "file": "frames/ST-036-F03.png",
+          "sha256": "8b4fb13df008177c57d769dda71179481a4d6e754781c7aa07a47b8e3edf2918",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 137.13,
+          "luma_stddev": 74.41,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-036-F04",
+          "file": "frames/ST-036-F04.png",
+          "sha256": "1c40acd2c6331dbfa3e7a7c8188dcba99a012bad7e78e57f69878498bda518e1",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.63,
+          "luma_stddev": 55.93,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-036-F05",
+          "file": "frames/ST-036-F05.png",
+          "sha256": "7be06473eb35aa6e075866eecff763c698c9295bea1a14db604edb0f1e048fe0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 126.8,
+          "luma_stddev": 66.49,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-036-F06",
+          "file": "frames/ST-036-F06.png",
+          "sha256": "80405979f6ce2dd6dabc8f1f4803f17f3d2e0daf34919d66136db65780791eb3",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.78,
+          "luma_stddev": 60.51,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-037",
+      "path": "st-037-the-timestamp-test",
+      "source_sheet_sha256": "680becdbbf3f616a1e101ad0cdfd615bf6b25fbffe4c4429b8e32ffc5f774c70",
+      "review_sheet_sha256": "bb15dcfeffffd39377727cf0af5470893305a2ee935f8551592e349ba4217a6e",
+      "frames": [
+        {
+          "frame_id": "ST-037-F01",
+          "file": "frames/ST-037-F01.png",
+          "sha256": "af2cd63b912321dae37772ca804823ee6c071bdd5ae03625177b601d23615fa9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.17,
+          "luma_stddev": 55.6,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-037-F02",
+          "file": "frames/ST-037-F02.png",
+          "sha256": "e772d2fc6486c4e159f027b436959c01147f1dff9ad204292875981f0a60c425",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 84.51,
+          "luma_stddev": 61.97,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-037-F03",
+          "file": "frames/ST-037-F03.png",
+          "sha256": "6a658bbc48b4fccffdcd75a87bbb3a27596a1ffcb386e76d52758317f5d55c2a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.18,
+          "luma_stddev": 62.33,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-037-F04",
+          "file": "frames/ST-037-F04.png",
+          "sha256": "32e946762e39d4327f0c5ae3b6fd6d7d7174b8625e0cea25e17c2791fd66e4b9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 71.91,
+          "luma_stddev": 56.78,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-037-F05",
+          "file": "frames/ST-037-F05.png",
+          "sha256": "153e61a92e881c1f768e1f04627cdf12ac5b9820a1ab80d8904afbe4c5e93958",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 127.07,
+          "luma_stddev": 63.88,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-037-F06",
+          "file": "frames/ST-037-F06.png",
+          "sha256": "fb69f2c79e26b0840c179250892a676702accbe2e9d8cfdc29371effa9d364e0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 73.07,
+          "luma_stddev": 57.12,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-038",
+      "path": "st-038-the-diff-tells-the-story",
+      "source_sheet_sha256": "d825c945f55d2207fa0f29880481aaa8f5f04e393d15c296d5f1a2f298030b32",
+      "review_sheet_sha256": "0796e7c889bd9203b16c5fa1dd6131c0585c6358db6d750ebdf70630dd2f675d",
+      "frames": [
+        {
+          "frame_id": "ST-038-F01",
+          "file": "frames/ST-038-F01.png",
+          "sha256": "6f1a2299ef29eeccfcb8e5e98caf1dac67c23c730920070ff355f816f52b61a7",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 101.97,
+          "luma_stddev": 65.8,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-038-F02",
+          "file": "frames/ST-038-F02.png",
+          "sha256": "54f71f8be6d25e02179dfcf172fb2ce1510e378dc3b4965f6cae4fcaa4562530",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 92.09,
+          "luma_stddev": 56.34,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-038-F03",
+          "file": "frames/ST-038-F03.png",
+          "sha256": "6836add46c9a50fc8cd2fac2e4aae17287c392684e4cead93a1808b68f8073e5",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 121.68,
+          "luma_stddev": 50.58,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-038-F04",
+          "file": "frames/ST-038-F04.png",
+          "sha256": "699a7a9c55a2dd7cae656bd6e51e8f6fd65c558dc2bfe4848f1bf3145b6805e1",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 69.94,
+          "luma_stddev": 61.38,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-038-F05",
+          "file": "frames/ST-038-F05.png",
+          "sha256": "7140d2722fa23d330a1948fd2d72af818145745eeacf058de6e01ed185f0fa17",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 114.92,
+          "luma_stddev": 67.38,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-038-F06",
+          "file": "frames/ST-038-F06.png",
+          "sha256": "0d0e3301708610bd0a57f14b42c3302d726504a7f65ff4317a0b3089f42af92e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 69.55,
+          "luma_stddev": 46.04,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-039",
+      "path": "st-039-source-stack-reveal",
+      "source_sheet_sha256": "63223212f36297bf4eb4643934eb79fcec0e5de2a70c72cc73b7364c5a29eb52",
+      "review_sheet_sha256": "aa55f230b770c035d8e7d3efb9e48ac0ef6952ae911fafc49333f12654f2010c",
+      "frames": [
+        {
+          "frame_id": "ST-039-F01",
+          "file": "frames/ST-039-F01.png",
+          "sha256": "3c25d861bb72d80604d81e93f0dba9de54125ab879621408b31bd07be40f93a8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 120.23,
+          "luma_stddev": 64.59,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-039-F02",
+          "file": "frames/ST-039-F02.png",
+          "sha256": "ccf07dc22c7f551c6fe29b6c8ee20f8c8e13dd40dc907776b23ab159dbff0900",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.91,
+          "luma_stddev": 67.22,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-039-F03",
+          "file": "frames/ST-039-F03.png",
+          "sha256": "6edf98f8bf73da69fbd87665a2c17ff56ea21c82738c652a8be83a414a5a6666",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 148.48,
+          "luma_stddev": 54.78,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-039-F04",
+          "file": "frames/ST-039-F04.png",
+          "sha256": "89ccb11fa7f6ef189e47ac9cfa32e6ad456aa4bbd61c24875c78fb78989f91fe",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 125.18,
+          "luma_stddev": 68.9,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-039-F05",
+          "file": "frames/ST-039-F05.png",
+          "sha256": "d40f545d6d12f419fa7f512adddb484c62dab994e4171c25dd7af79fdaf8b20f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 127.55,
+          "luma_stddev": 64.23,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-039-F06",
+          "file": "frames/ST-039-F06.png",
+          "sha256": "fa807a144f129c881e9dbe3553315c66e7f805086036b5f1f7f80f217aec01a0",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 112.98,
+          "luma_stddev": 69.93,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-040",
+      "path": "st-040-boundary-card-first",
+      "source_sheet_sha256": "038326d8584a147c9c22e062625b9c0fcfdb6fb9e85c021c95bf989bee80b2c0",
+      "review_sheet_sha256": "902dacbd11285a62b154b7a476006325ef764bca391df552015809de35f68146",
+      "frames": [
+        {
+          "frame_id": "ST-040-F01",
+          "file": "frames/ST-040-F01.png",
+          "sha256": "53babd5b84f32885a42e326f2aad6f89398ff1d91c216a090cc4467570994e78",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 104.63,
+          "luma_stddev": 68.99,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-040-F02",
+          "file": "frames/ST-040-F02.png",
+          "sha256": "6c44d3738060d6652ff660d6ba7fe16043fc2457ac9756b50d26218e089bddd3",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 114.18,
+          "luma_stddev": 53.29,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-040-F03",
+          "file": "frames/ST-040-F03.png",
+          "sha256": "f5ebc11de926e239a6f886b8f7bbb69a6e9242754e0c685b36daccedd3144a4a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 173.19,
+          "luma_stddev": 27.06,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-040-F04",
+          "file": "frames/ST-040-F04.png",
+          "sha256": "b03ccfb232a1f44bab54b0cf97ca207da47e82666d98b598740059d87d7eb517",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 121.75,
+          "luma_stddev": 69.28,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-040-F05",
+          "file": "frames/ST-040-F05.png",
+          "sha256": "55cb36acd0b2a3f7e67a9e0bfdd43975e949eaa96a709eee9a7966892ad1688f",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.56,
+          "luma_stddev": 61.63,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-040-F06",
+          "file": "frames/ST-040-F06.png",
+          "sha256": "c6b533dc300b0219f62959d61afcb06d8009a9b10a53c6b16eb002d62acebb0e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 128.36,
+          "luma_stddev": 63.45,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-041",
+      "path": "st-041-more-data-less-clarity",
+      "source_sheet_sha256": "d49f3c2ea6bead947860982109eb00d44671a7eacd596cae78b2e3f644d2a254",
+      "review_sheet_sha256": "42ef84e654583e4503a9f855654896bc4b2a2c4e75e696adf99597e26669c1f4",
+      "frames": [
+        {
+          "frame_id": "ST-041-F01",
+          "file": "frames/ST-041-F01.png",
+          "sha256": "5370bf0bf970661e84c172f0fa7597cf46da098d0f486cc836bd63f01ca31085",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 87.89,
+          "luma_stddev": 58.96,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-041-F02",
+          "file": "frames/ST-041-F02.png",
+          "sha256": "d4c0c1b9b45b33a4e1487a8eb69560972fc1703e2fc51b5923055a7ccf49607a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 86.81,
+          "luma_stddev": 59.4,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-041-F03",
+          "file": "frames/ST-041-F03.png",
+          "sha256": "4331e9c219d68b6b09a682bfb7d5ad1174af318b10eceae7581a6a7c6eb63398",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 88.24,
+          "luma_stddev": 53.47,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-041-F04",
+          "file": "frames/ST-041-F04.png",
+          "sha256": "44792126d58dfe28cfa74d785ee5033f1efe7a10bfb008777bd42a339f58c8d8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 88.38,
+          "luma_stddev": 56.07,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-041-F05",
+          "file": "frames/ST-041-F05.png",
+          "sha256": "6c255fe97f17b8f7747ce1ffb43317e1c201ace869e32260d87fb3d2b187c868",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 78.33,
+          "luma_stddev": 52.66,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-041-F06",
+          "file": "frames/ST-041-F06.png",
+          "sha256": "38c7da3734365317dff8eeda465610efac7b3827ca7e7f4794065595c7aa56d8",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 86.75,
+          "luma_stddev": 58.03,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-042",
+      "path": "st-042-faster-tool-slower-workflow",
+      "source_sheet_sha256": "e572aa6a96ac75eca5356eb4ca70e914803efb724243518738fefd37805986df",
+      "review_sheet_sha256": "a71fc0544865c8100cbd42713e6b609899c29ffd7cba34afdcbee8a1c58d4dd8",
+      "frames": [
+        {
+          "frame_id": "ST-042-F01",
+          "file": "frames/ST-042-F01.png",
+          "sha256": "770abd0df42e59d09dcd987c929545a88dd0754d1060feddd988fe765d1b7572",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 78.14,
+          "luma_stddev": 62.45,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-042-F02",
+          "file": "frames/ST-042-F02.png",
+          "sha256": "c0701de6d0211217cefcac595e0cab724040e2da1884346981a17b5c98566335",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 75.11,
+          "luma_stddev": 62.71,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-042-F03",
+          "file": "frames/ST-042-F03.png",
+          "sha256": "ce6e20d252f4338e7ace361f37354e6b90f03e54db40f60564cd14efdf2b2eb6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 118.37,
+          "luma_stddev": 64.88,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-042-F04",
+          "file": "frames/ST-042-F04.png",
+          "sha256": "e90d70fcb881188083c8e3d3c0c1cea12b6ec6e6af95012ce80e2d7703b1370b",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.76,
+          "luma_stddev": 64.25,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-042-F05",
+          "file": "frames/ST-042-F05.png",
+          "sha256": "5bd74a1cf807fa50eed2d8e3b45961843d7a9d58593516514fda4df80326286e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 139.82,
+          "luma_stddev": 55.22,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-042-F06",
+          "file": "frames/ST-042-F06.png",
+          "sha256": "eea1dbd26bfdb39d908ff11bd2df234915c726b71c6adda3a385a577712358a1",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 90.97,
+          "luma_stddev": 66.25,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-043",
+      "path": "st-043-automation-needs-a-gate",
+      "source_sheet_sha256": "9efd2e67ca920e944a50f18932747d392ab83c7c3f83a2023bda015a558a473c",
+      "review_sheet_sha256": "43696e785b6183dcd77e1bce6597d540387265fd9a30e526ccf155df20f6c6b7",
+      "frames": [
+        {
+          "frame_id": "ST-043-F01",
+          "file": "frames/ST-043-F01.png",
+          "sha256": "f8aab41bc180b911245194b5736424e032187cc191c9fdcfa1d3ac7d07a35c61",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 114.67,
+          "luma_stddev": 62.86,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-043-F02",
+          "file": "frames/ST-043-F02.png",
+          "sha256": "1267027fe9b633c2a6560b6586b48770c616e4fc14a765e3f0ad345b59ade586",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 123.11,
+          "luma_stddev": 75.58,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-043-F03",
+          "file": "frames/ST-043-F03.png",
+          "sha256": "d62e737f77d4aaa429fcc92c0dbad24d7aff433e7db1eb7753e34e15461851cf",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 110.64,
+          "luma_stddev": 62.1,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-043-F04",
+          "file": "frames/ST-043-F04.png",
+          "sha256": "997a4d9eb4d7a4fc44f32e5c35782c847d5d4525d32be31968f7bb119ba32b99",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 124.7,
+          "luma_stddev": 73.05,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-043-F05",
+          "file": "frames/ST-043-F05.png",
+          "sha256": "ed223ea1062ca61458dd85d036d1e3e718ab837814bced5657f3c01854bdf730",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 105.67,
+          "luma_stddev": 62.51,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-043-F06",
+          "file": "frames/ST-043-F06.png",
+          "sha256": "811e380429c8f9a3bc89c67a6b8f88d95d5b160fbe1aab61a469b5432d1448e4",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 125.34,
+          "luma_stddev": 71.72,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-044",
+      "path": "st-044-movement-without-progress",
+      "source_sheet_sha256": "a58859141fd7c5e9b1030ef37a1b917bb5056c409df4a7bd20c0f5c0c11c3560",
+      "review_sheet_sha256": "685f94bae4dc8d062927569c992084b76f150e4d08fae64ac9061cdb05ded269",
+      "frames": [
+        {
+          "frame_id": "ST-044-F01",
+          "file": "frames/ST-044-F01.png",
+          "sha256": "203deaa8cce2a45240c2dcef14809c4cd31e2204989a9d400a8bba9cde6ba007",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 150.22,
+          "luma_stddev": 65.42,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-044-F02",
+          "file": "frames/ST-044-F02.png",
+          "sha256": "3042ac2b6c33e80197cc03922c3edaa50f9ae4eeac114905206582572e538438",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 137.02,
+          "luma_stddev": 67.08,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-044-F03",
+          "file": "frames/ST-044-F03.png",
+          "sha256": "8063c6417c5be3d217e8794f12e68903f2db9b4d81c2a30fc5aecf339fca9b82",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 128.35,
+          "luma_stddev": 70.43,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-044-F04",
+          "file": "frames/ST-044-F04.png",
+          "sha256": "5380cf4d89e661bde7512a013662e6a06a7570895445c0500677423885ceb404",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 128.88,
+          "luma_stddev": 61.65,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-044-F05",
+          "file": "frames/ST-044-F05.png",
+          "sha256": "19ff1b67049e42a538582773f7eb5d0cb48032f8c8c63c06431d87fd8f152240",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 119.95,
+          "luma_stddev": 36.25,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-044-F06",
+          "file": "frames/ST-044-F06.png",
+          "sha256": "8fdb5ac5b052b9c8786a1d6c96433a9a9250a96ad7e5d407188aa70fd3f24aa2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 140.35,
+          "luma_stddev": 56.23,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-045",
+      "path": "st-045-beautiful-frame-weak-proof",
+      "source_sheet_sha256": "facd48783b93ef8d508886d07787bb913667bc1566e00827d0adabd88c4a8d0a",
+      "review_sheet_sha256": "72ca66a600c3ed7ecb9b37cc890f20fc43c6ad343ea3158639b3bb0be669fb28",
+      "frames": [
+        {
+          "frame_id": "ST-045-F01",
+          "file": "frames/ST-045-F01.png",
+          "sha256": "6e1f617b4dd4b385781fef8de6c25cc583c35ab91867be138a046e634dcc5e8a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.49,
+          "luma_stddev": 58.64,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-045-F02",
+          "file": "frames/ST-045-F02.png",
+          "sha256": "f95a2e2c57baa6303a4cce7e41f54f1d1ee06c3293912e23ea2a9766a259d17a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 101.88,
+          "luma_stddev": 51.88,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-045-F03",
+          "file": "frames/ST-045-F03.png",
+          "sha256": "1778afb350ee6486293079ee25467feb4fa54ed3068b2a6df1eec5aaff84c7a2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.67,
+          "luma_stddev": 57.47,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-045-F04",
+          "file": "frames/ST-045-F04.png",
+          "sha256": "4e7ac9fb83ac7f2004bff725c1e310a293cd1994e4edaf1044cd9882be89a0b2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 95.91,
+          "luma_stddev": 52.21,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-045-F05",
+          "file": "frames/ST-045-F05.png",
+          "sha256": "44ed62acd6ce6cad7ab5129e2c3629b68be2c40b84bf78a6e92fa9306cf2e659",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 112.71,
+          "luma_stddev": 58.09,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-045-F06",
+          "file": "frames/ST-045-F06.png",
+          "sha256": "252fb2b23621eadbba6ec1128ce66b2c6a61c1f165fde2a3e486dba3108044ea",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 101.71,
+          "luma_stddev": 57.83,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-046",
+      "path": "st-046-question-to-answer",
+      "source_sheet_sha256": "6985cc3df09fd57c99616ff40021643883620b7fe84d7d4edb1a53e8617858f0",
+      "review_sheet_sha256": "a1e8060138acd10c6fa4feba607fa9a361b4d7ad46cb3dfdb6d87175e1294441",
+      "frames": [
+        {
+          "frame_id": "ST-046-F01",
+          "file": "frames/ST-046-F01.png",
+          "sha256": "7a14676b2c4e157d66a7eabad0c018d8d422493244460ed0a47dcddf4eb45f76",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 114.85,
+          "luma_stddev": 63.74,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-046-F02",
+          "file": "frames/ST-046-F02.png",
+          "sha256": "dd1c5eeb976c02840bc27f5b803eab33c5d620775d31bf1bd07d3ad39a138fbf",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.24,
+          "luma_stddev": 58.13,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-046-F03",
+          "file": "frames/ST-046-F03.png",
+          "sha256": "49002fff0ac0d4082ddf9db2ab4c3359e014de0b57000c3656750d5b998a62a2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 107.12,
+          "luma_stddev": 59.04,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-046-F04",
+          "file": "frames/ST-046-F04.png",
+          "sha256": "02ffc8180e54261d94be5b024d70d49dc74f9a2385882ae1b0f106a1415059e4",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 96.97,
+          "luma_stddev": 60.53,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-046-F05",
+          "file": "frames/ST-046-F05.png",
+          "sha256": "a15cb96043ffebbe08e1015b64174c43a294c2a7e16168b109052d5cbfd886ef",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 102.12,
+          "luma_stddev": 77.54,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-046-F06",
+          "file": "frames/ST-046-F06.png",
+          "sha256": "38035bdafca513634349da3ffd9f28ada41bec23ade17c72411f0e404992e6ab",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.6,
+          "luma_stddev": 58.77,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-047",
+      "path": "st-047-source-to-script",
+      "source_sheet_sha256": "01cce0ec38a17979882a98af39c57613513e432e935aa0f5a367cb176db397e0",
+      "review_sheet_sha256": "eb9fae3d4c89a6acf46889e99284d6f4aedce00b8b10b39e9999d6104dab889d",
+      "frames": [
+        {
+          "frame_id": "ST-047-F01",
+          "file": "frames/ST-047-F01.png",
+          "sha256": "0ac8816769a95123e3e51a670aed3cfd6af40a13392b4b0f2b40c07ef2d6ce96",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 98.05,
+          "luma_stddev": 63.08,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-047-F02",
+          "file": "frames/ST-047-F02.png",
+          "sha256": "ff02a7de6aacf49a0fe57c558c65b22599920f5c7c3ea347b01167eebe982d50",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.84,
+          "luma_stddev": 57.2,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-047-F03",
+          "file": "frames/ST-047-F03.png",
+          "sha256": "e9a245efc192474467d95d273cdcee378b12981d4b4de79885d659d32f2c20cd",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 109.9,
+          "luma_stddev": 63.64,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-047-F04",
+          "file": "frames/ST-047-F04.png",
+          "sha256": "a76c5cff216877a5a4d4e4f0e377b2664fcfdde9f116db9b4de299c1381ec2c9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 83.78,
+          "luma_stddev": 55.54,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-047-F05",
+          "file": "frames/ST-047-F05.png",
+          "sha256": "bbc463ca10841e679408c0ea57aa6f7a5029dac8efdd1119e6570235b2f07bb2",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 118.09,
+          "luma_stddev": 64.98,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-047-F06",
+          "file": "frames/ST-047-F06.png",
+          "sha256": "398281584645c7a33bffc84fa519e7089795d6dfab49bf336949b38cf0c62375",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 93.14,
+          "luma_stddev": 49.98,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-048",
+      "path": "st-048-script-to-frame",
+      "source_sheet_sha256": "b9e33e9dda88b226219edffbf60884cac029e9d7641a32f3d884ca02500500ce",
+      "review_sheet_sha256": "94beb069aa5d14423506e21b8c7ab62b2053a39a850b2857a765732b78063d25",
+      "frames": [
+        {
+          "frame_id": "ST-048-F01",
+          "file": "frames/ST-048-F01.png",
+          "sha256": "d38f51b271e2d1921fb1850d232183d9daddf02752dd7f6e91afb7958d627ff9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 122.52,
+          "luma_stddev": 58.3,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-048-F02",
+          "file": "frames/ST-048-F02.png",
+          "sha256": "83b2f1003f4b5670cfe1227be23487ec72772f9402ab6315e1b15a2d41423bd9",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 126.59,
+          "luma_stddev": 67.72,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-048-F03",
+          "file": "frames/ST-048-F03.png",
+          "sha256": "a80ecd76911252d1e8882c46149343e8e4d1ad73b143b85f0c35f824aec153f7",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 111.98,
+          "luma_stddev": 66.07,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-048-F04",
+          "file": "frames/ST-048-F04.png",
+          "sha256": "dba7e717ef386f0e0d7db26feaed4bf30b26d5d9f970223fd175289088cf6dcd",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 113.29,
+          "luma_stddev": 74.99,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-048-F05",
+          "file": "frames/ST-048-F05.png",
+          "sha256": "03f0e6634289f3bfa541aae50c33fa8712bc1c9a794bfcb1f872762153a5e56d",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 169.48,
+          "luma_stddev": 35.66,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-048-F06",
+          "file": "frames/ST-048-F06.png",
+          "sha256": "1227cfcbcd47773b320a23e72bf90255ef052e518c142812433fec06b956093a",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 108.38,
+          "luma_stddev": 68.56,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-049",
+      "path": "st-049-frame-to-cut",
+      "source_sheet_sha256": "1bc4af09d395b00f526ce8e130bfb6f34c2d844883fd557669e049f80746b72e",
+      "review_sheet_sha256": "cec5af414a76417e3f6e197cbc9301fae084be03035de9967304e1eecf69226c",
+      "frames": [
+        {
+          "frame_id": "ST-049-F01",
+          "file": "frames/ST-049-F01.png",
+          "sha256": "97ac8142b8c346a6b336e1b57f18c034b318a89d999fa90daef6da9367967ae5",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 120.0,
+          "luma_stddev": 70.1,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-049-F02",
+          "file": "frames/ST-049-F02.png",
+          "sha256": "b1876139daf4109f9783babb55ded28f538e339de5f7f4fbbb7f097438ffe8f6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 124.76,
+          "luma_stddev": 63.47,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-049-F03",
+          "file": "frames/ST-049-F03.png",
+          "sha256": "de6f1c9d7fc445bdbd18eec2ebce87eadd6f573c50b56f3e1759c02db1d1ae95",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 92.92,
+          "luma_stddev": 65.44,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-049-F04",
+          "file": "frames/ST-049-F04.png",
+          "sha256": "e86a834d0732328e858c9d49425157c3f2e61accd8e32f85f1aaf3bae8c92644",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 75.85,
+          "luma_stddev": 64.47,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-049-F05",
+          "file": "frames/ST-049-F05.png",
+          "sha256": "f70a13343926062ceb29caa1564ffdf94ee4dacf37b907837c7a62f7813f512e",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 118.4,
+          "luma_stddev": 58.1,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-049-F06",
+          "file": "frames/ST-049-F06.png",
+          "sha256": "069bc1e2cf1c343a537871c4049f19b9d297932a9ccb3da5826548f8face6637",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 106.4,
+          "luma_stddev": 67.73,
+          "heuristic_blank_risk": false
+        }
+      ]
+    },
+    {
+      "story_id": "ST-050",
+      "path": "st-050-cut-to-review",
+      "source_sheet_sha256": "93da083719a6a811b45e34bc23a4fda967338142fdf036bca1841f156909d33b",
+      "review_sheet_sha256": "97c9dc99a0792c1d1467d372c1863e23f77bd490f189df38b3363d4fceec8f16",
+      "frames": [
+        {
+          "frame_id": "ST-050-F01",
+          "file": "frames/ST-050-F01.png",
+          "sha256": "0a68efb2695488239cc0f61ebd7f8cae5f0bd58c13794559c62fe5150ff88c93",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 102.19,
+          "luma_stddev": 65.71,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-050-F02",
+          "file": "frames/ST-050-F02.png",
+          "sha256": "754cd95249b54c5e3e369a2c15167a7e786f002884c155b1a19ca286e2d692fa",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 99.85,
+          "luma_stddev": 67.33,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-050-F03",
+          "file": "frames/ST-050-F03.png",
+          "sha256": "a8124702d59f9b696adf74f7a5a03403cdc89e2e0d17a48ffd913c0f6fa37474",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 92.47,
+          "luma_stddev": 57.69,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-050-F04",
+          "file": "frames/ST-050-F04.png",
+          "sha256": "5e02709496f292caf9693a888535bd252dca6ddabb42417e36a09763279242d6",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 88.9,
+          "luma_stddev": 66.86,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-050-F05",
+          "file": "frames/ST-050-F05.png",
+          "sha256": "456403b6f22999f34cbd68ebabf6bfbebd63226f0c9cc02194c0f2c3f5b586ae",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 125.8,
+          "luma_stddev": 60.8,
+          "heuristic_blank_risk": false
+        },
+        {
+          "frame_id": "ST-050-F06",
+          "file": "frames/ST-050-F06.png",
+          "sha256": "f9e6d15e149c5fdad2556854ee6d32949e87c28f36bafc547a89680030fcff77",
+          "dimensions": [
+            540,
+            960
+          ],
+          "luma_mean": 111.22,
+          "luma_stddev": 65.04,
+          "heuristic_blank_risk": false
+        }
+      ]
+    }
+  ]
+}

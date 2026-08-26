@@ -1,0 +1,19 @@
+Use case: photorealistic-natural
+Asset type: six-panel vertical social-video storyboard reference for ST-045 Beautiful Frame, Weak Proof
+Primary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.
+Subject continuity: fictional non-identifiable adult workflow coordinator in their late 40s, short salt-and-pepper hair, soft blue shirt and dark jeans. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.
+Scene continuity: believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.
+Persistent target: honest frame. Trigger prop: sparkle. Proof prop: evidence label. Obstacle: visual polish hides a missing source.
+Six panels in reading order:
+1 wide still: notices the sparkle; show The sparkle changes before the objective is secure. Emotional register: surprise.
+2 medium still: locates the honest frame; show The hero and persistent honest frame share one scene; objective: make an explanation trustworthy. Emotional register: orientation.
+3 close still: sees the honest frame blocked; show The honest frame is visibly blocked by visual polish hides a missing source; consequence: the audience may remember style as certainty. Emotional register: concern.
+4 diagram still: reduces decoration and exposes the evidence state; show The hero reduces decoration and exposes the evidence state; the same honest frame changes state on screen. Emotional register: agency.
+5 macro still: checks the evidence label; show The changed honest frame remains visible while the evidence label is isolated. Emotional register: confidence-with-caution.
+6 wide still: confirms the changed honest frame; show The same honest frame reaches its resolved state: clarity replaces borrowed authority. Emotional register: relief.
+Final panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'A plain frame is not automatically accurate.', but render no words.
+Style/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.
+Composition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.
+Lighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.
+Constraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.
+Avoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.

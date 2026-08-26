@@ -1,0 +1,16 @@
+{
+  "external_provider_state": "NOT_RUN",
+  "files": {
+    "contact-sheet.svg": "ed4480acef8c2367120bc51661fd86438136507f5f49bf50e0bbeb4568681fcb",
+    "frames/SF-043-F01.svg": "5fe8a374051ee7eb46944a0a940386fe005d36fd7919fbc538b4c45ad6aadb8e",
+    "frames/SF-043-F02.svg": "788306c9306d9318fb6178ad27def70d3d96d03ad513aaf6330ef48b1d655711",
+    "frames/SF-043-F03.svg": "b295601bcde1703bf1b4b9dbbf39db717f2e441876f92ee7a87f039ac2fcbb60",
+    "frames/SF-043-F04.svg": "ce31dd5017d1751572b269a823bf22ada2ab652ed2cfa69a709fef282bafff5a",
+    "framework.json": "ff17fb913cb62c4e192b1777a897065551c8b009177d76cb31f723dbc069928f",
+    "prompt.md": "520442bb9f5cf3e07980c404296aee7d05e42d28eaefa6f4598c6af222905359",
+    "report.md": "320065f1f60d94e3be228ff2151f01e54485adc161787935dc48271c453ad1a0",
+    "signal-export.json": "989c2efb085905cfb5cf101b5b67b438854c72d8e1a0e8abd8d85ee572023173"
+  },
+  "framework_id": "SF-043",
+  "schema": "studio-framework-package-manifest.v1"
+}

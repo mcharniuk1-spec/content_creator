@@ -1,0 +1,423 @@
+{
+  "adaptation_targets": [
+    "instagram_reels",
+    "tiktok"
+  ],
+  "claim_state": "evidence_bound_and_hypothesis_labeled",
+  "creator_media_state": "not_received",
+  "creator_track": "pm_integration",
+  "cta": "Build the queue before you activate execution.",
+  "evidence_boundary": {
+    "analysis_eligible_videos": 2949,
+    "broad_screen_videos": 10000,
+    "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
+  },
+  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "full_script": "Human review is not a safety strategy until you define the queue. Route work by ambiguity, reversibility, value, and risk. Low ambiguity and easy rollback can flow automatically. High value or irreversible action needs named approval and evidence. Measure queue age, override rate, and repeated exception types. The goal is not more review. It is review where human judgment changes the outcome.",
+  "hook": "Human review is not a safety strategy until you define the queue.",
+  "owner_state": "owner_review_pending",
+  "pillar": "human_review",
+  "primary_platform": "youtube_shorts",
+  "proof_visual": "Two-by-two routing matrix plus queue metrics: age, override rate, exception recurrence.",
+  "provider_generation_state": "blocked_approval",
+  "publication_state": "blocked_approval",
+  "resolve_mutation_state": "blocked_approval",
+  "schema": "north-hux.script-package.v1",
+  "script_key": "human-review-queue",
+  "sequence_position": 9,
+  "shots": [
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 2000,
+      "evidence_role": "none",
+      "frame_sha256": "97a3820328da01e201ec9d084907e5595e81d1c8101c43108d199b5abb89340a",
+      "frame_uri": "09-human-review-queue/frames/01.svg",
+      "generation_state": "not_run",
+      "narration": "Human review is not a safety strategy until you define the queue.",
+      "on_screen_text": "Human review is not a safety strategy until you define the queue.",
+      "rights_state": "owner_media_required",
+      "shot_index": 1,
+      "source_evidence_ids": [],
+      "start_ms": 0,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 5000,
+      "evidence_role": "context",
+      "frame_sha256": "445887f884e0c2565878d7db562153aaa293e90c31343a96239ff1ce53af7d90",
+      "frame_uri": "09-human-review-queue/frames/02.svg",
+      "generation_state": "not_run",
+      "narration": "Route work by ambiguity, reversibility, value, and risk.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 2,
+      "source_evidence_ids": [],
+      "start_ms": 2000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: Route work by ambiguity, reversibility, value, and risk.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 8000,
+      "evidence_role": "none",
+      "frame_sha256": "c23aae344f97fa6de8777849914a3a37c8c9b8845e6a56e171ca213440bb987b",
+      "frame_uri": "09-human-review-queue/frames/03.svg",
+      "generation_state": "not_run",
+      "narration": "Low ambiguity and easy rollback can flow automatically.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 3,
+      "source_evidence_ids": [],
+      "start_ms": 5000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Capture an owned deterministic prototype or render the supplied diagram",
+        "prompt": "Use only owned/synthetic example data. Screen must visibly support the claim; no competitor UI reuse."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "screen_demo",
+      "end_ms": 11000,
+      "evidence_role": "proof",
+      "frame_sha256": "bd9b377dfb682d432da0d2c29d8d8f6c74727c9e7577c38c275f5334d1ed4983",
+      "frame_uri": "09-human-review-queue/frames/04.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 4,
+      "source_evidence_ids": [],
+      "start_ms": 8000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Two-by-two routing matrix plus queue metrics: age, override rate, exception recurrence.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 14000,
+      "evidence_role": "none",
+      "frame_sha256": "191441a40f3c7724a0ce33e966e4e6b4bdf70d5a77ac4f98a4435d640ade2137",
+      "frame_uri": "09-human-review-queue/frames/05.svg",
+      "generation_state": "not_run",
+      "narration": "High value or irreversible action needs named approval and evidence.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 5,
+      "source_evidence_ids": [],
+      "start_ms": 11000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 18000,
+      "evidence_role": "proof",
+      "frame_sha256": "aa02f44500497a4ed3a89acb19f94459e0905a14d82c33319ed5b0255c0c1a64",
+      "frame_uri": "09-human-review-queue/frames/06.svg",
+      "generation_state": "not_run",
+      "narration": "Measure queue age, override rate, and repeated exception types.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 6,
+      "source_evidence_ids": [],
+      "start_ms": 14000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Two-by-two routing matrix plus queue metrics: age, override rate, exception recurrence.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve provider, prompt, budget, and rights before generation",
+        "prompt": "A calm human silhouette at a single illuminated checkpoint while routine paths continue; no faces, data, or product UI."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "ai_generated_broll",
+      "end_ms": 20000,
+      "evidence_role": "context",
+      "frame_sha256": "ff186361aa3c1a21f0df2cea3d174e1b84c4ae2a947f0f9b229138260929201c",
+      "frame_uri": "09-human-review-queue/frames/07.svg",
+      "generation_state": "blocked_approval",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "provider_review_required",
+      "shot_index": 7,
+      "source_evidence_ids": [],
+      "start_ms": 18000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Optional two-second metaphorical context insert. It must not carry evidence, results, UI, numbers, people, likeness, or logos.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 24000,
+      "evidence_role": "none",
+      "frame_sha256": "11a87ced7db254d0b7a5f3664c9cc1d847bd607e28a47040c3858fc4084769d5",
+      "frame_uri": "09-human-review-queue/frames/08.svg",
+      "generation_state": "not_run",
+      "narration": "The goal is not more review. It is review where human judgment changes the outcome.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 8,
+      "source_evidence_ids": [],
+      "start_ms": 20000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 26000,
+      "evidence_role": "context",
+      "frame_sha256": "84753bf74468af421573f5ed5a5b6a7d784ba7665ed496d5f317d9de1cf1fda3",
+      "frame_uri": "09-human-review-queue/frames/09.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Build the queue before you activate execution.",
+      "rights_state": "original_plan",
+      "shot_index": 9,
+      "source_evidence_ids": [],
+      "start_ms": 24000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: Build the queue before you activate execution.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve CTA and brand lockup",
+        "prompt": "Render deterministically from North Hux typography and color tokens."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "end_card",
+      "end_ms": 30000,
+      "evidence_role": "none",
+      "frame_sha256": "264e5cc3e75a9d5f65ae84dd1e50bbb5c1dff1a36b233e1cfb5eece07e9515da",
+      "frame_uri": "09-human-review-queue/frames/10.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Build the queue before you activate execution.",
+      "rights_state": "original_plan",
+      "shot_index": 10,
+      "source_evidence_ids": [],
+      "start_ms": 26000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "North Hux end card: Build the queue before you activate execution.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    }
+  ],
+  "target_duration_ms": 30000,
+  "title": "What Belongs in the Human Review Queue?",
+  "version": 1
+}

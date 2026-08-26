@@ -1,0 +1,226 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 8000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "keyword_emphasis",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-059-F01",
+      "image_path": "frames/SF-059-F01.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "CONTEXT",
+      "sequence_number": 1,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the establish boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "establish",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: establish; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "on_cut",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-059-F02",
+      "image_path": "frames/SF-059-F02.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "STEP 1",
+      "sequence_number": 2,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the action one boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "action one",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: action one; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "on_cut",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-059-F03",
+      "image_path": "frames/SF-059-F03.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "STEP 2",
+      "sequence_number": 3,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the action two boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "action two",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: action two; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "keyword_emphasis",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-059-F04",
+      "image_path": "frames/SF-059-F04.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "DETAIL",
+      "sequence_number": 4,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the detail boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "detail",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "on_cut",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-059-F05",
+      "image_path": "frames/SF-059-F05.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "DONE",
+      "sequence_number": 5,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the completed state boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "completed state",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: completed state; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "continuous",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 6000,
+      "frame_id": "SF-059-F06",
+      "image_path": "frames/SF-059-F06.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "BRIDGE",
+      "sequence_number": 6,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the bridge detail boundary; licensed or original audio only.",
+      "start_ms": 5000,
+      "story_function": "bridge detail",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: bridge detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "continuous",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 7000,
+      "frame_id": "SF-059-F07",
+      "image_path": "frames/SF-059-F07.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "HOLD",
+      "sequence_number": 7,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the proof hold boundary; licensed or original audio only.",
+      "start_ms": 6000,
+      "story_function": "proof hold",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: proof hold; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "contrast",
+      "caption_relation": "continuous",
+      "composition": "diagram_build clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 8000,
+      "frame_id": "SF-059-F08",
+      "image_path": "frames/SF-059-F08.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "RETURN",
+      "sequence_number": 8,
+      "shot_scale": "diagram",
+      "sound_cue": "silence_drop aligned to the A-roll return boundary; licensed or original audio only.",
+      "start_ms": 7000,
+      "story_function": "A-roll return",
+      "transition": "cut_on_sound",
+      "visual_change": "Rhythmic Assembly: A-roll return; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-059",
+  "kind": "broll",
+  "name": "Rhythmic Assembly",
+  "purpose": "Use repeated action as a pacing bed",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-012"
+    ],
+    "export_id": "SIGEXP-SF-059",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:9190aa0366f722e2c346fe3de863707788a1049d4f935fbe3a4f904baf27be0a",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-008"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "delayed_reveal",
+    "broll_function": "contrast",
+    "cta_exit": "save_reference",
+    "hook_mechanism": "direct_promise",
+    "pacing_profile": "measured_beat",
+    "proof_form": "calculation",
+    "risk_class": "low",
+    "sound_role": "silence_drop",
+    "text_role": "headline_only",
+    "transition_family": "cut_on_sound",
+    "viewer_job": "assess_risk",
+    "visual_grammar": "diagram_build"
+  },
+  "version": "1.0.0"
+}

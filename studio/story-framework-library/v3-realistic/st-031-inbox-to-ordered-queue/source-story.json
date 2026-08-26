@@ -1,0 +1,516 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:44d954ecaf3be5867d2fd9408eca0cb557225d56c3156a0aaf2745caadf17622",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#081720",
+      "#7DE2D1",
+      "#F7E8C6",
+      "#FF786E"
+    ],
+    "proof_prop": "routing rules",
+    "scene": "a digital intake wall",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "ordered queue",
+    "trigger_prop": "inbox",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "an operations coordinator",
+      "visual_token": "hero-031"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "inbox",
+      "visual_token": "inbox"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "ordered queue",
+      "visual_token": "ordered-queue"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "messages arrive without priority or owner",
+      "visual_token": "obstacle-before_after_transformation"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "routing rules",
+      "visual_token": "routing-rules"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "before_after_transformation",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "locked",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-031-F01",
+      "handback_visible": false,
+      "hero_action": "notices the inbox",
+      "image_path": "frames/ST-031-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric an operations coordinator in a digital intake wall. The inbox changes before the objective is secure. Keep ENT-target `ordered queue` persistent and visibly transform it through `classifies urgency, owner, and next state`; show ENT-proof `routing rules` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:ordered queue=absent; ENT-proof:routing rules=hidden \u2192 ENT-target:ordered queue=unoriented; ENT-proof:routing rules=hidden.",
+      "on_screen_text": "READ THE CONTRAST",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "wide",
+      "start_ms": 0,
+      "state_after": "ENT-target:ordered queue=unoriented; ENT-proof:routing rules=hidden",
+      "state_before": "ENT-target:ordered queue=absent; ENT-proof:routing rules=hidden",
+      "story_question": "Can the contrast be read instantly?",
+      "transition": "locked motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "sort",
+      "visual_state": "The inbox changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "locked",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-031-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-031-F02",
+      "handback_visible": false,
+      "hero_action": "locates the ordered queue",
+      "image_path": "frames/ST-031-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric an operations coordinator in a digital intake wall. The hero and persistent ordered queue share one scene; objective: turn chaotic requests into controlled work. Keep ENT-target `ordered queue` persistent and visibly transform it through `classifies urgency, owner, and next state`; show ENT-proof `routing rules` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to turn chaotic requests into controlled work.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:ordered queue=unoriented; ENT-proof:routing rules=hidden \u2192 ENT-target:ordered queue=present-unresolved; ENT-proof:routing rules=hidden.",
+      "on_screen_text": "BEFORE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:ordered queue=present-unresolved; ENT-proof:routing rules=hidden",
+      "state_before": "ENT-target:ordered queue=unoriented; ENT-proof:routing rules=hidden",
+      "story_question": "What is the before-state?",
+      "transition": "locked motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "sort",
+      "visual_state": "The hero and persistent ordered queue share one scene; objective: turn chaotic requests into controlled work."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "push_in",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-031-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-031-F03",
+      "handback_visible": false,
+      "hero_action": "sees the ordered queue blocked",
+      "image_path": "frames/ST-031-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric an operations coordinator in a digital intake wall. The ordered queue is visibly blocked by messages arrive without priority or owner; consequence: urgent work can disappear. Keep ENT-target `ordered queue` persistent and visibly transform it through `classifies urgency, owner, and next state`; show ENT-proof `routing rules` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But messages arrive without priority or owner.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:ordered queue=present-unresolved; ENT-proof:routing rules=hidden \u2192 ENT-target:ordered queue=blocked; ENT-proof:routing rules=hidden.",
+      "on_screen_text": "WHY IT STICKS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "close",
+      "start_ms": 2000,
+      "state_after": "ENT-target:ordered queue=blocked; ENT-proof:routing rules=hidden",
+      "state_before": "ENT-target:ordered queue=present-unresolved; ENT-proof:routing rules=hidden",
+      "story_question": "What friction keeps it stuck?",
+      "transition": "push_in motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "sort",
+      "visual_state": "The ordered queue is visibly blocked by messages arrive without priority or owner; consequence: urgent work can disappear."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-031-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-031-F04",
+      "handback_visible": false,
+      "hero_action": "classifies urgency, owner, and next state",
+      "image_path": "frames/ST-031-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric an operations coordinator in a digital intake wall. The hero classifies urgency, owner, and next state; the same ordered queue changes state on screen. Keep ENT-target `ordered queue` persistent and visibly transform it through `classifies urgency, owner, and next state`; show ENT-proof `routing rules` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to classify urgency, owner, and next state.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:ordered queue=blocked; ENT-proof:routing rules=hidden \u2192 ENT-target:ordered queue=transformed; ENT-proof:routing rules=hidden.",
+      "on_screen_text": "THE CONVERSION",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "medium",
+      "start_ms": 3000,
+      "state_after": "ENT-target:ordered queue=transformed; ENT-proof:routing rules=hidden",
+      "state_before": "ENT-target:ordered queue=blocked; ENT-proof:routing rules=hidden",
+      "story_question": "What visible transformation occurs?",
+      "transition": "pan_right motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "sort",
+      "visual_state": "The hero classifies urgency, owner, and next state; the same ordered queue changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-031-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-031-F05",
+      "handback_visible": false,
+      "hero_action": "checks the routing rules",
+      "image_path": "frames/ST-031-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric an operations coordinator in a digital intake wall. The changed ordered queue remains visible while the routing rules is isolated. Keep ENT-target `ordered queue` persistent and visibly transform it through `classifies urgency, owner, and next state`; show ENT-proof `routing rules` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the routing rules, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:ordered queue=transformed; ENT-proof:routing rules=hidden \u2192 ENT-target:ordered queue=changed-pending-review; ENT-proof:routing rules=visible.",
+      "on_screen_text": "CHECK THE AFTER",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `before_after_transformation` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:ordered queue=changed-pending-review; ENT-proof:routing rules=visible",
+      "state_before": "ENT-target:ordered queue=transformed; ENT-proof:routing rules=hidden",
+      "story_question": "What constraint keeps the after-state honest?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "sort",
+      "visual_state": "The changed ordered queue remains visible while the routing rules is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "payoff",
+      "beat_roles": [
+        "payoff",
+        "limitation",
+        "handback"
+      ],
+      "broll_function": "contrast",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the opening question with the changed target.",
+      "cause_frame_ids": [
+        "ST-031-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-031-F06",
+      "handback_visible": true,
+      "hero_action": "confirms the changed ordered queue",
+      "image_path": "frames/ST-031-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric an operations coordinator in a digital intake wall. The same ordered queue reaches its resolved state: the queue can be reviewed at a glance. Keep ENT-target `ordered queue` persistent and visibly transform it through `classifies urgency, owner, and next state`; show ENT-proof `routing rules` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the opening question with the changed target.",
+      "limitation_visible": true,
+      "narration": "Now the queue can be reviewed at a glance.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:ordered queue=changed-pending-review; ENT-proof:routing rules=visible \u2192 ENT-target:ordered queue=resolved-with-boundary; ENT-proof:routing rules=visible.",
+      "on_screen_text": "AFTER\u2014WITH A LIMIT",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `before_after_transformation` advances through `payoff` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "wide",
+      "start_ms": 5000,
+      "state_after": "ENT-target:ordered queue=resolved-with-boundary; ENT-proof:routing rules=visible",
+      "state_before": "ENT-target:ordered queue=changed-pending-review; ENT-proof:routing rules=visible",
+      "story_question": "What useful after-state remains?",
+      "transition": "pull_out motivated by close the opening question with the changed target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "sort",
+      "visual_state": "The same ordered queue reaches its resolved state: the queue can be reviewed at a glance."
+    }
+  ],
+  "kind": "intro_broll",
+  "narrative": {
+    "action_chain": [
+      "notice the inbox",
+      "classifies urgency, owner, and next state",
+      "inspect the routing rules"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The inbox changes state before the objective is secure.",
+    "limitation": "Routing quality depends on declared criteria.",
+    "objective": "turn chaotic requests into controlled work",
+    "obstacle": "messages arrive without priority or owner",
+    "payoff": "the queue can be reviewed at a glance",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "routing rules",
+    "protagonist": "an operations coordinator",
+    "setup": "a digital intake wall",
+    "stakes": "urgent work can disappear"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:f475725664e1d823583477419ce094ef18f69e60c5ce9405a46e920a7d6751d0",
+  "story_id": "ST-031",
+  "title": "Inbox to Ordered Queue",
+  "variation_axes": {
+    "operation_type": "sort",
+    "proof_mechanism": "routing rules; boundary=Routing quality depends on declared criteria.",
+    "scene_topology": "before_after_transformation::a digital intake wall",
+    "target_transformation": "ordered queue: unresolved -> the queue can be reviewed at a glance"
+  },
+  "variation_fingerprint": "sha256:976958976103b8fbc1c8dcdfa8fc5dec3bc6ec1e063a22f6f7198e517e01f940",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:f6497e888ab2174dec6dcbe142eecb074bf6676bb8cfefb43be1718f2e63b6f5"
+}

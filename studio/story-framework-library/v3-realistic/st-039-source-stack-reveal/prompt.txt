@@ -1,0 +1,19 @@
+Use case: photorealistic-natural
+Asset type: six-panel vertical social-video storyboard reference for ST-039 Source Stack Reveal
+Primary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.
+Subject continuity: fictional non-identifiable adult project lead in their early 50s, short gray hair, cream knit and navy work jacket. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.
+Scene continuity: small shared studio with a standing desk, paper planning wall, shelf and soft daylight. Same environment, props, time of day and left-to-right screen direction across all panels.
+Persistent target: claim map. Trigger prop: book stack. Proof prop: primary sources. Obstacle: one secondary summary dominates the draft.
+Six panels in reading order:
+1 close still: notices the book stack; show The book stack changes before the objective is secure. Emotional register: surprise.
+2 wide still: locates the claim map; show The hero and persistent claim map share one scene; objective: support a rule with independent parents. Emotional register: orientation.
+3 macro still: sees the claim map blocked; show The claim map is visibly blocked by one secondary summary dominates the draft; consequence: the rule may inherit its errors. Emotional register: concern.
+4 over_shoulder still: reveals primary parents behind the summary; show The hero reveals primary parents behind the summary; the same claim map changes state on screen. Emotional register: agency.
+5 macro still: checks the primary sources; show The changed claim map remains visible while the primary sources is isolated. Emotional register: confidence-with-caution.
+6 medium still: bounds the result with primary sources; show The primary sources and changed claim map remain visible; boundary: Agreement among sources is not causal proof. Emotional register: relief.
+Final panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Agreement among sources is not causal proof.', but render no words.
+Style/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.
+Composition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.
+Lighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.
+Constraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.
+Avoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.

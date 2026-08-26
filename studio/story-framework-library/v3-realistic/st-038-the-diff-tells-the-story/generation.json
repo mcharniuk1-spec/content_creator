@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-038",
+  "title": "The Diff Tells the Story",
+  "source_story": "../v2/st-038-the-diff-tells-the-story/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult content strategist in their late 30s, straight dark bob, moss-green blouse and black trousers",
+  "location_lock": "modest home-office project room with a cork decision board, wood desk, window and warm practical lamp",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-038 The Diff Tells the Story\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult content strategist in their late 30s, straight dark bob, moss-green blouse and black trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: modest home-office project room with a cork decision board, wood desk, window and warm practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: review decision. Trigger prop: diff marks. Proof prop: changed lines. Obstacle: the full file hides the relevant edit.\nSix panels in reading order:\n1 close still: notices the diff marks; show The diff marks changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the review decision; show The hero and persistent review decision share one scene; objective: explain what changed. Emotional register: orientation.\n3 macro still: sees the review decision blocked; show The review decision is visibly blocked by the full file hides the relevant edit; consequence: review time is wasted. Emotional register: concern.\n4 over_shoulder still: peels away unchanged context; show The hero peels away unchanged context; the same review decision changes state on screen. Emotional register: agency.\n5 macro still: checks the changed lines; show The changed review decision remains visible while the changed lines is isolated. Emotional register: confidence-with-caution.\n6 medium still: bounds the result with changed lines; show The changed lines and changed review decision remain visible; boundary: A diff does not prove runtime behavior. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'A diff does not prove runtime behavior.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-038-F01.png",
+    "frames/ST-038-F02.png",
+    "frames/ST-038-F03.png",
+    "frames/ST-038-F04.png",
+    "frames/ST-038-F05.png",
+    "frames/ST-038-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "d825c945f55d2207fa0f29880481aaa8f5f04e393d15c296d5f1a2f298030b32",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "0796e7c889bd9203b16c5fa1dd6131c0585c6358db6d750ebdf70630dd2f675d",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-038-F01",
+      "file": "frames/ST-038-F01.png",
+      "sha256": "6f1a2299ef29eeccfcb8e5e98caf1dac67c23c730920070ff355f816f52b61a7",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 101.97,
+      "luma_stddev": 65.8,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-038-F02",
+      "file": "frames/ST-038-F02.png",
+      "sha256": "54f71f8be6d25e02179dfcf172fb2ce1510e378dc3b4965f6cae4fcaa4562530",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 92.09,
+      "luma_stddev": 56.34,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-038-F03",
+      "file": "frames/ST-038-F03.png",
+      "sha256": "6836add46c9a50fc8cd2fac2e4aae17287c392684e4cead93a1808b68f8073e5",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 121.68,
+      "luma_stddev": 50.58,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-038-F04",
+      "file": "frames/ST-038-F04.png",
+      "sha256": "699a7a9c55a2dd7cae656bd6e51e8f6fd65c558dc2bfe4848f1bf3145b6805e1",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 69.94,
+      "luma_stddev": 61.38,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-038-F05",
+      "file": "frames/ST-038-F05.png",
+      "sha256": "7140d2722fa23d330a1948fd2d72af818145745eeacf058de6e01ed185f0fa17",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 114.92,
+      "luma_stddev": 67.38,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-038-F06",
+      "file": "frames/ST-038-F06.png",
+      "sha256": "0d0e3301708610bd0a57f14b42c3302d726504a7f65ff4317a0b3089f42af92e",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 69.55,
+      "luma_stddev": 46.04,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

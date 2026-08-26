@@ -1,0 +1,249 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 9000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-030-F01",
+      "image_path": "frames/SF-030-F01.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "BEFORE",
+      "sequence_number": 1,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the before boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "before",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: before; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-030-F02",
+      "image_path": "frames/SF-030-F02.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "FRICTION",
+      "sequence_number": 2,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the friction boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "friction",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: friction; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-030-F03",
+      "image_path": "frames/SF-030-F03.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "CHANGE",
+      "sequence_number": 3,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the change action boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "change action",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: change action; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-030-F04",
+      "image_path": "frames/SF-030-F04.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "AFTER",
+      "sequence_number": 4,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the after boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "after",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: after; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-030-F05",
+      "image_path": "frames/SF-030-F05.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "LIMIT",
+      "sequence_number": 5,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the limitation boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "limitation",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: limitation; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "continuous",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 6000,
+      "frame_id": "SF-030-F06",
+      "image_path": "frames/SF-030-F06.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "BRIDGE",
+      "sequence_number": 6,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the bridge detail boundary; licensed or original audio only.",
+      "start_ms": 5000,
+      "story_function": "bridge detail",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: bridge detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "continuous",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 7000,
+      "frame_id": "SF-030-F07",
+      "image_path": "frames/SF-030-F07.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "HOLD",
+      "sequence_number": 7,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the proof hold boundary; licensed or original audio only.",
+      "start_ms": 6000,
+      "story_function": "proof hold",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: proof hold; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "continuous",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 8000,
+      "frame_id": "SF-030-F08",
+      "image_path": "frames/SF-030-F08.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "CHECK",
+      "sequence_number": 8,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the counterpoint boundary; licensed or original audio only.",
+      "start_ms": 7000,
+      "story_function": "counterpoint",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: counterpoint; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "continuous",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 9000,
+      "frame_id": "SF-030-F09",
+      "image_path": "frames/SF-030-F09.svg",
+      "motion": "measured_beat motion; use dissolve only at this state boundary.",
+      "on_screen_text": "COMPARE",
+      "sequence_number": 9,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the hold comparison boundary; licensed or original audio only.",
+      "start_ms": 8000,
+      "story_function": "hold comparison",
+      "transition": "dissolve",
+      "visual_change": "Guessing to Experiment: hold comparison; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-030",
+  "kind": "intro_broll",
+  "name": "Guessing to Experiment",
+  "purpose": "Move from belief to a bounded test",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-006"
+    ],
+    "export_id": "SIGEXP-SF-030",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:fb2ff380b0270d89844efca997c7b1b16d29317bf8839acbd2cd63d74699c14a",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-004"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "absent",
+    "broll_function": "concretize_abstraction",
+    "cta_exit": "next_step",
+    "hook_mechanism": "before_after",
+    "pacing_profile": "measured_beat",
+    "proof_form": "worked_example",
+    "risk_class": "low",
+    "sound_role": "accent_sfx",
+    "text_role": "labels",
+    "transition_family": "dissolve",
+    "viewer_job": "compare_options",
+    "visual_grammar": "mock_screen_capture"
+  },
+  "version": "1.0.0"
+}

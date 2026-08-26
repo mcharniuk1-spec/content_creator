@@ -1,0 +1,518 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:29429fb35f4401372ffd407198ee8398bd96ca0c82a8978804e43b0888735398",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#16112A",
+      "#B6A1FF",
+      "#FFE078",
+      "#FF758F"
+    ],
+    "proof_prop": "beat map",
+    "scene": "an editing timeline",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "motivated cut",
+    "trigger_prop": "scissors",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a short-form editor",
+      "visual_token": "hero-017"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "scissors",
+      "visual_token": "scissors"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "motivated cut",
+      "visual_token": "motivated-cut"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "cuts occur without information change",
+      "visual_token": "obstacle-failed_attempt_correction"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "beat map",
+      "visual_token": "beat-map"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "failed_attempt_correction",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-017-F01",
+      "handback_visible": false,
+      "hero_action": "notices the scissors",
+      "image_path": "frames/ST-017-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `failed_attempt_correction` scene grammar. Anonymous geometric a short-form editor in an editing timeline. The scissors changes before the objective is secure. Keep ENT-target `motivated cut` persistent and visibly transform it through `removes cuts that do not change state`; show ENT-proof `beat map` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:motivated cut=absent; ENT-proof:beat map=hidden \u2192 ENT-target:motivated cut=unoriented; ENT-proof:beat map=hidden.",
+      "on_screen_text": "THE FIRST MOVE FAILS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `failed_attempt_correction` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "start_ms": 0,
+      "state_after": "ENT-target:motivated cut=unoriented; ENT-proof:beat map=hidden",
+      "state_before": "ENT-target:motivated cut=absent; ENT-proof:beat map=hidden",
+      "story_question": "Why did the obvious move fail?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The scissors changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-017-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-017-F02",
+      "handback_visible": false,
+      "hero_action": "locates the motivated cut",
+      "image_path": "frames/ST-017-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `failed_attempt_correction` scene grammar. Anonymous geometric a short-form editor in an editing timeline. The hero and persistent motivated cut share one scene; objective: keep a technical explanation clear. Keep ENT-target `motivated cut` persistent and visibly transform it through `removes cuts that do not change state`; show ENT-proof `beat map` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to keep a technical explanation clear.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:motivated cut=unoriented; ENT-proof:beat map=hidden \u2192 ENT-target:motivated cut=present-unresolved; ENT-proof:beat map=hidden.",
+      "on_screen_text": "WHAT WAS EXPECTED",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `failed_attempt_correction` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:motivated cut=present-unresolved; ENT-proof:beat map=hidden",
+      "state_before": "ENT-target:motivated cut=unoriented; ENT-proof:beat map=hidden",
+      "story_question": "What did the hero expect?",
+      "transition": "pull_out motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The hero and persistent motivated cut share one scene; objective: keep a technical explanation clear."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "attempt",
+      "beat_roles": [
+        "attempt"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Show an attempted causal operation on the target.",
+      "cause_frame_ids": [
+        "ST-017-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "failed-attempt",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-017-F03",
+      "handback_visible": false,
+      "hero_action": "removes cuts that do not change state",
+      "image_path": "frames/ST-017-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `failed_attempt_correction` scene grammar. Anonymous geometric a short-form editor in an editing timeline. The hero attempts to remove cuts that do not change state; the motivated cut visibly responds. Keep ENT-target `motivated cut` persistent and visibly transform it through `removes cuts that do not change state`; show ENT-proof `beat map` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show an attempted causal operation on the target.",
+      "limitation_visible": false,
+      "narration": "The first visible move is to remove cuts that do not change state.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:motivated cut=present-unresolved; ENT-proof:beat map=hidden \u2192 ENT-target:motivated cut=failed-attempt; ENT-proof:beat map=hidden.",
+      "on_screen_text": "TRY ONE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `failed_attempt_correction` advances through `attempt` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "over_shoulder",
+      "start_ms": 2000,
+      "state_after": "ENT-target:motivated cut=failed-attempt; ENT-proof:beat map=hidden",
+      "state_before": "ENT-target:motivated cut=present-unresolved; ENT-proof:beat map=hidden",
+      "story_question": "What first attempt is visible?",
+      "transition": "pan_right motivated by show an attempted causal operation on the target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The hero attempts to remove cuts that do not change state; the motivated cut visibly responds."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "locked",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-017-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "failed-attempt",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-017-F04",
+      "handback_visible": false,
+      "hero_action": "sees the motivated cut blocked",
+      "image_path": "frames/ST-017-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `failed_attempt_correction` scene grammar. Anonymous geometric a short-form editor in an editing timeline. The motivated cut is visibly blocked by cuts occur without information change; consequence: the viewer loses causal continuity. Keep ENT-target `motivated cut` persistent and visibly transform it through `removes cuts that do not change state`; show ENT-proof `beat map` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But cuts occur without information change.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:motivated cut=failed-attempt; ENT-proof:beat map=hidden \u2192 ENT-target:motivated cut=blocked; ENT-proof:beat map=hidden.",
+      "on_screen_text": "FAILURE REVEALS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `failed_attempt_correction` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "close",
+      "start_ms": 3000,
+      "state_after": "ENT-target:motivated cut=blocked; ENT-proof:beat map=hidden",
+      "state_before": "ENT-target:motivated cut=failed-attempt; ENT-proof:beat map=hidden",
+      "story_question": "Which failure becomes diagnostic?",
+      "transition": "locked motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The motivated cut is visibly blocked by cuts occur without information change; consequence: the viewer loses causal continuity."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "match_move",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-017-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-017-F05",
+      "handback_visible": false,
+      "hero_action": "removes cuts that do not change state",
+      "image_path": "frames/ST-017-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `failed_attempt_correction` scene grammar. Anonymous geometric a short-form editor in an editing timeline. The hero removes cuts that do not change state; the same motivated cut changes state on screen. Keep ENT-target `motivated cut` persistent and visibly transform it through `removes cuts that do not change state`; show ENT-proof `beat map` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to remove cuts that do not change state.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:motivated cut=blocked; ENT-proof:beat map=hidden \u2192 ENT-target:motivated cut=transformed; ENT-proof:beat map=hidden.",
+      "on_screen_text": "CORRECT THE PATH",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `failed_attempt_correction` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "wide",
+      "start_ms": 4000,
+      "state_after": "ENT-target:motivated cut=transformed; ENT-proof:beat map=hidden",
+      "state_before": "ENT-target:motivated cut=blocked; ENT-proof:beat map=hidden",
+      "story_question": "What corrected action follows?",
+      "transition": "match_move motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The hero removes cuts that do not change state; the same motivated cut changes state on screen."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "payoff",
+      "beat_roles": [
+        "payoff",
+        "limitation",
+        "handback"
+      ],
+      "broll_function": "contrast",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the opening question with the changed target.",
+      "cause_frame_ids": [
+        "ST-017-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-017-F06",
+      "handback_visible": true,
+      "hero_action": "confirms the changed motivated cut",
+      "image_path": "frames/ST-017-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `failed_attempt_correction` scene grammar. Anonymous geometric a short-form editor in an editing timeline. The same motivated cut reaches its resolved state: each remaining cut answers a question. Keep ENT-target `motivated cut` persistent and visibly transform it through `removes cuts that do not change state`; show ENT-proof `beat map` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the opening question with the changed target.",
+      "limitation_visible": true,
+      "narration": "Now each remaining cut answers a question.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:motivated cut=transformed; ENT-proof:beat map=hidden \u2192 ENT-target:motivated cut=resolved-with-boundary; ENT-proof:beat map=visible.",
+      "on_screen_text": "CHANGED STATE",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `failed_attempt_correction` advances through `payoff` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:motivated cut=resolved-with-boundary; ENT-proof:beat map=visible",
+      "state_before": "ENT-target:motivated cut=transformed; ENT-proof:beat map=hidden",
+      "story_question": "What changed because of the correction?",
+      "transition": "pull_out motivated by close the opening question with the changed target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle",
+        "ENT-proof"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The same motivated cut reaches its resolved state: each remaining cut answers a question."
+    }
+  ],
+  "kind": "intro_broll",
+  "narrative": {
+    "action_chain": [
+      "notice the scissors",
+      "removes cuts that do not change state",
+      "inspect the beat map"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The scissors changes state before the objective is secure.",
+    "limitation": "Pacing still requires audience testing.",
+    "objective": "keep a technical explanation clear",
+    "obstacle": "cuts occur without information change",
+    "payoff": "each remaining cut answers a question",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "beat map",
+    "protagonist": "a short-form editor",
+    "setup": "an editing timeline",
+    "stakes": "the viewer loses causal continuity"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:5e1024bc309f3c8a8b96f1dfae427fc07187453f26a413c3c072bbceab32720f",
+  "story_id": "ST-017",
+  "title": "More Cuts, Less Meaning",
+  "variation_axes": {
+    "operation_type": "remove",
+    "proof_mechanism": "beat map; boundary=Pacing still requires audience testing.",
+    "scene_topology": "failed_attempt_correction::an editing timeline",
+    "target_transformation": "motivated cut: unresolved -> each remaining cut answers a question"
+  },
+  "variation_fingerprint": "sha256:51e9a11331922d4f911187586c51b1b72780fffd5b0674328136fd4fc09d2ef2",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:72d345f257b893c0ecaf429c4cf98f8941c4a8872df391276829e0dda4311832"
+}

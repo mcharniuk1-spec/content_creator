@@ -1,0 +1,360 @@
+{
+  "schema": "content-engine.realistic-storyboard-library.v1",
+  "source_library": "studio/story-framework-library/v2",
+  "story_count": 50,
+  "planned_frame_count": 300,
+  "generation_strategy": "one six-panel clean-room contact sheet per story, then deterministic 9:16 review crops",
+  "source_frame_evidence": "NONE_DB_FRAME_COUNT_ZERO",
+  "records": [
+    {
+      "story_id": "ST-001",
+      "title": "Deadline Brief",
+      "path": "st-001-deadline-brief",
+      "prompt_sha256": "4edbe815c0b7d217c80564e62fd567e9b4ce54aacdc57ad3d3bfe78de830b877",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-002",
+      "title": "Approval at the Threshold",
+      "path": "st-002-approval-at-the-threshold",
+      "prompt_sha256": "35f188e5e6e3f0a081b73a7004dec6dc61c333cb7cd9652c89fb4bcae0414ff0",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-003",
+      "title": "The Stale Dashboard",
+      "path": "st-003-the-stale-dashboard",
+      "prompt_sha256": "33507b3a13d4efd24d12df75af262d7eb320e7c016ad9c534aa320b87b423e74",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-004",
+      "title": "Queue Under Pressure",
+      "path": "st-004-queue-under-pressure",
+      "prompt_sha256": "ff043c7ce4adb6d8d88246b5b38ed8b56f8643bbdf1847d18dd9eb8053d1366e",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-005",
+      "title": "Source Before Claim",
+      "path": "st-005-source-before-claim",
+      "prompt_sha256": "4bbf54051476263378d4d0f610cc2557734d0f5837faf9837327dd35646b7e9c",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-006",
+      "title": "The Rebuilt Handoff",
+      "path": "st-006-the-rebuilt-handoff",
+      "prompt_sha256": "00d581a03540b5bde9a0a53aea7bdb2b7a7ab9618add8576a662abdb276bc080",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-007",
+      "title": "From Noise to Signal",
+      "path": "st-007-from-noise-to-signal",
+      "prompt_sha256": "b076e5458a4e90f653c019a1a09156130ca29b6d760593a3736883c0af04f298",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-008",
+      "title": "Rollback Ready",
+      "path": "st-008-rollback-ready",
+      "prompt_sha256": "8d4ef47f5166acbdf3f60daa9cb0161a5b712b69de8b18bea8ad30e4fccb0f6f",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-009",
+      "title": "The Clearer Screen",
+      "path": "st-009-the-clearer-screen",
+      "prompt_sha256": "4cafa46af853abbdcd8f4c38cb6d50cebbd9696ed231862ad7986d92b0ea8606",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-010",
+      "title": "The One-Line Outcome",
+      "path": "st-010-the-one-line-outcome",
+      "prompt_sha256": "66081152a772e2c203cc092f2c0835b54de16286d44586cca48f9e8f1fb0ed97",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-011",
+      "title": "Why the Number Dropped",
+      "path": "st-011-why-the-number-dropped",
+      "prompt_sha256": "5873c4415fdb27af0ea5a4521c1cfea495edde6dae1e4522d27346a074e9e1e6",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-012",
+      "title": "The Silent Automation",
+      "path": "st-012-the-silent-automation",
+      "prompt_sha256": "7af624b4ef1f93873dfa6ae85bd724572250bffaa58095d219bd217ec3a6a5de",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-013",
+      "title": "Duplicate in the Queue",
+      "path": "st-013-duplicate-in-the-queue",
+      "prompt_sha256": "7e11a3403f6c05179fc6ab27f1cdb5bd81ec9f9ae79b19f4f8378d67470e3bbc",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-014",
+      "title": "Where the Caption Went",
+      "path": "st-014-where-the-caption-went",
+      "prompt_sha256": "2440e87052daa25d6ee182e400d5057e04c27d7b746b021442bb2fcff71a350f",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-015",
+      "title": "The Broken Source Link",
+      "path": "st-015-the-broken-source-link",
+      "prompt_sha256": "c2841a9da97ee5a7461e7ac676632b3ed86049f1c4b2ba175accc976634b48c0",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-016",
+      "title": "Clicking Faster Failed",
+      "path": "st-016-clicking-faster-failed",
+      "prompt_sha256": "cccb58c1a6149363e7b1b192a87dc85cadc846d459b80167a5e4279b29dc8a39",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-017",
+      "title": "More Cuts, Less Meaning",
+      "path": "st-017-more-cuts-less-meaning",
+      "prompt_sha256": "3f7c8db12ea4071a97687c8af39a049a2018dbbff72683ae6559612ff35472a6",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-018",
+      "title": "The Missing Owner",
+      "path": "st-018-the-missing-owner",
+      "prompt_sha256": "f014433cbd74467c6b71be55aaa2ddafde3ea501bc50c24ea7a9deb7d8a88df6",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-019",
+      "title": "Upload Without Redaction",
+      "path": "st-019-upload-without-redaction",
+      "prompt_sha256": "7bc979770ddede5df90f06216f487a2202683e4111ece2bdecef793f591f6e15",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-020",
+      "title": "The Unreadable Proof",
+      "path": "st-020-the-unreadable-proof",
+      "prompt_sha256": "c6e9a6025ae35c0dcb8f55da73f45234b05234456468df4a6e05caf8d1661305",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-021",
+      "title": "Domino Dependency",
+      "path": "st-021-domino-dependency",
+      "prompt_sha256": "c424f6dc5a4acc27071028e55d2ce635a7fa4a174bd7668bdaa903a4080796d9",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-022",
+      "title": "Leaking Attention",
+      "path": "st-022-leaking-attention",
+      "prompt_sha256": "cf3ab7acf9a383300195bc8694cb575fd6e57f4cce8bf9e385f2d29c747755d1",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-023",
+      "title": "Lock and Key Permission",
+      "path": "st-023-lock-and-key-permission",
+      "prompt_sha256": "d018a69f6755c9188e7905f6e81c82837aac51f0d5d6f21d7de76e5d628861bf",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-024",
+      "title": "Bridge of Evidence",
+      "path": "st-024-bridge-of-evidence",
+      "prompt_sha256": "1a40a5126194a3ad8ed27a1f385cb824948129ccc29edf09735ddc07dc45ed77",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-025",
+      "title": "Compass Before Speed",
+      "path": "st-025-compass-before-speed",
+      "prompt_sha256": "72a60e2e3741412255917d407c43e919686fbcf04da8b217c3b57791e2e4ea93",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-026",
+      "title": "Three Checks Before Publish",
+      "path": "st-026-three-checks-before-publish",
+      "prompt_sha256": "e57db80b1e453d3ca91267aa748f09604685267cf7fe2adb2c2fa062e572bb3d",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-027",
+      "title": "Three Frames to Explain",
+      "path": "st-027-three-frames-to-explain",
+      "prompt_sha256": "9caf129d596326490aeee65a71b646a753de921eca69b5844f2fcfa4d52e29ac",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-028",
+      "title": "Five Proof States",
+      "path": "st-028-five-proof-states",
+      "prompt_sha256": "aeb60629fa756841fd6feea2eefd2d97cff74031f60caea4f2b3d8827c7e210a",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-029",
+      "title": "Four Cuts With Purpose",
+      "path": "st-029-four-cuts-with-purpose",
+      "prompt_sha256": "ed7c1f13ab724363eecade8b575a5354b1d01773e1c1bd3c942e4176bb297ee4",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-030",
+      "title": "Three Steps to a Hook",
+      "path": "st-030-three-steps-to-a-hook",
+      "prompt_sha256": "e0cbcea616f7aff38e6a83b818a00ab41ebf00cac2363ca94fefb8fd77150aa3",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-031",
+      "title": "Inbox to Ordered Queue",
+      "path": "st-031-inbox-to-ordered-queue",
+      "prompt_sha256": "ef27dd9035d77534a498d601ea5d38b28ce8af4d0bf8528c8b0e508c98118ec8",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-032",
+      "title": "Flat List to Source Map",
+      "path": "st-032-flat-list-to-source-map",
+      "prompt_sha256": "f132473e2598f5ff60c9d2b4f1b726559c88a83fc9688bbd10a4ca84f3df156a",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-033",
+      "title": "Manual Copy to Checked Export",
+      "path": "st-033-manual-copy-to-checked-export",
+      "prompt_sha256": "884b47b0768848e5817df80f0cd5218f8595b62bd982ed9f2bdcce64d6e78ce8",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-034",
+      "title": "Guess to Bounded Test",
+      "path": "st-034-guess-to-bounded-test",
+      "prompt_sha256": "63486d8af153af05fa7c37ac9514d0912aa559f212c8c42ec18120bc0bb26315",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-035",
+      "title": "Cluttered Frame to One Action",
+      "path": "st-035-cluttered-frame-to-one-action",
+      "prompt_sha256": "481469749067f31235f714569406d51d71671f59bcd0b43be1bc0ce7e0b5a0c7",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-036",
+      "title": "Receipt Behind the Claim",
+      "path": "st-036-receipt-behind-the-claim",
+      "prompt_sha256": "064a3eda4e158b296745c01496461657d34abf1fd9f36017fcc1d061de75bf65",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-037",
+      "title": "The Timestamp Test",
+      "path": "st-037-the-timestamp-test",
+      "prompt_sha256": "9793fae1411128250d546f023974122600e3f5835df54c051d50301d31fb7f28",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-038",
+      "title": "The Diff Tells the Story",
+      "path": "st-038-the-diff-tells-the-story",
+      "prompt_sha256": "1bdcb1b4bc29762583d5d25b3ee1dee8633187abfaf1a0f8b3bd4927d59eaadf",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-039",
+      "title": "Source Stack Reveal",
+      "path": "st-039-source-stack-reveal",
+      "prompt_sha256": "d2ba0eb4c5a3bae589dfa126966a67adb7bc120c0967bd681184d75ab451a4b4",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-040",
+      "title": "Boundary Card First",
+      "path": "st-040-boundary-card-first",
+      "prompt_sha256": "b9c0cf2a741c24c6e2618b86e318e2804c5b51e9d0eb9c761d9fe22f8851bb1b",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-041",
+      "title": "More Data, Less Clarity",
+      "path": "st-041-more-data-less-clarity",
+      "prompt_sha256": "cf654649e92b80239f2c4fd500b3c2b53835c9d3d974626e91928cbb401fec3d",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-042",
+      "title": "Faster Tool, Slower Workflow",
+      "path": "st-042-faster-tool-slower-workflow",
+      "prompt_sha256": "bc35ba9da5da541d0f6b9bb52eb3dd38216b61da209f8a00a44719e8f7f65808",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-043",
+      "title": "Automation Needs a Gate",
+      "path": "st-043-automation-needs-a-gate",
+      "prompt_sha256": "1268e496457bfcb4419f0b9d232ec76ba24a74f10a3b5c05c4d87ee3601adcfb",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-044",
+      "title": "Movement Without Progress",
+      "path": "st-044-movement-without-progress",
+      "prompt_sha256": "8923bbafd79256dafea0f37a75aa0286a27459cc1f99934f024358675b6832c5",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-045",
+      "title": "Beautiful Frame, Weak Proof",
+      "path": "st-045-beautiful-frame-weak-proof",
+      "prompt_sha256": "9e2d11ad49fea13d86e641dc6ca720c9365f045a3fdd6d4ed51ea48e4c3f9353",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-046",
+      "title": "Question to Answer",
+      "path": "st-046-question-to-answer",
+      "prompt_sha256": "a35ceeb3839a0a3c2771664c7faf342e0950ea9562f1507879da6bcada8b67bc",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-047",
+      "title": "Source to Script",
+      "path": "st-047-source-to-script",
+      "prompt_sha256": "b2b3c10d7ffa8b13335c927639e2a41773524e016b96d636a0e4a59777f8134a",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-048",
+      "title": "Script to Frame",
+      "path": "st-048-script-to-frame",
+      "prompt_sha256": "ce6a0d013f075003cf721d958954820549f597501c2dbef6f02c3adcedfc3d21",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-049",
+      "title": "Frame to Cut",
+      "path": "st-049-frame-to-cut",
+      "prompt_sha256": "fea9a183c919279417ba5d612a04901b33f5a17a27e2f17eb6a28ed22961d265",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    },
+    {
+      "story_id": "ST-050",
+      "title": "Cut to Review",
+      "path": "st-050-cut-to-review",
+      "prompt_sha256": "752e744c0addf27e1002df62c380d1cbe418b9f90d269eb8f55d7aa41a501f14",
+      "state": "PROMPT_READY_IMAGE_NOT_RUN"
+    }
+  ]
+}

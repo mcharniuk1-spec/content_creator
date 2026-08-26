@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:f95a8634fc705bf3d27ced3d82288605ae652eead3dc9e60523c527645c9e6ab",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#0B211A",
+      "#85D69A",
+      "#F5E1A4",
+      "#FF8169"
+    ],
+    "proof_prop": "canonical ID",
+    "scene": "a record desk",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "merged record",
+    "trigger_prop": "two tags",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a data steward",
+      "visual_token": "hero-013"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "two tags",
+      "visual_token": "two-tags"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "merged record",
+      "visual_token": "merged-record"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "one entity appears under two labels",
+      "visual_token": "obstacle-diagnostic_mystery"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "canonical ID",
+      "visual_token": "canonical-id"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "diagnostic_mystery",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-013-F01",
+      "handback_visible": false,
+      "hero_action": "notices the two tags",
+      "image_path": "frames/ST-013-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a data steward in a record desk. The two tags changes before the objective is secure. Keep ENT-target `merged record` persistent and visibly transform it through `matches stable identifiers before merging`; show ENT-proof `canonical ID` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:merged record=absent; ENT-proof:canonical ID=hidden → ENT-target:merged record=unoriented; ENT-proof:canonical ID=hidden.",
+      "on_screen_text": "SPOT THE CLUE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 1,
+      "shot_scale": "macro",
+      "start_ms": 0,
+      "state_after": "ENT-target:merged record=unoriented; ENT-proof:canonical ID=hidden",
+      "state_before": "ENT-target:merged record=absent; ENT-proof:canonical ID=hidden",
+      "story_question": "Which clue explains the symptom?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The two tags changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-013-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-013-F02",
+      "handback_visible": false,
+      "hero_action": "locates the merged record",
+      "image_path": "frames/ST-013-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a data steward in a record desk. The hero and persistent merged record share one scene; objective: find why counts disagree. Keep ENT-target `merged record` persistent and visibly transform it through `matches stable identifiers before merging`; show ENT-proof `canonical ID` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to find why counts disagree.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:merged record=unoriented; ENT-proof:canonical ID=hidden → ENT-target:merged record=present-unresolved; ENT-proof:canonical ID=hidden.",
+      "on_screen_text": "LOCATE THE SYMPTOM",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:merged record=present-unresolved; ENT-proof:canonical ID=hidden",
+      "state_before": "ENT-target:merged record=unoriented; ENT-proof:canonical ID=hidden",
+      "story_question": "Where does the symptom live?",
+      "transition": "pull_out motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The hero and persistent merged record share one scene; objective: find why counts disagree."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-013-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-013-F03",
+      "handback_visible": false,
+      "hero_action": "sees the merged record blocked",
+      "image_path": "frames/ST-013-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a data steward in a record desk. The merged record is visibly blocked by one entity appears under two labels; consequence: reports may double-count the same object. Keep ENT-target `merged record` persistent and visibly transform it through `matches stable identifiers before merging`; show ENT-proof `canonical ID` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But one entity appears under two labels.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:merged record=present-unresolved; ENT-proof:canonical ID=hidden → ENT-target:merged record=blocked; ENT-proof:canonical ID=hidden.",
+      "on_screen_text": "RULE OUT THE OBVIOUS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 3,
+      "shot_scale": "close",
+      "start_ms": 2000,
+      "state_after": "ENT-target:merged record=blocked; ENT-proof:canonical ID=hidden",
+      "state_before": "ENT-target:merged record=present-unresolved; ENT-proof:canonical ID=hidden",
+      "story_question": "Which tempting explanation is wrong?",
+      "transition": "pan_right motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The merged record is visibly blocked by one entity appears under two labels; consequence: reports may double-count the same object."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "attempt",
+      "beat_roles": [
+        "attempt"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "push_in",
+      "camera_motivation": "Show an attempted causal operation on the target.",
+      "cause_frame_ids": [
+        "ST-013-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-013-F04",
+      "handback_visible": false,
+      "hero_action": "matches stable identifiers before merging",
+      "image_path": "frames/ST-013-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a data steward in a record desk. The hero attempts to match stable identifiers before merging; the merged record visibly responds. Keep ENT-target `merged record` persistent and visibly transform it through `matches stable identifiers before merging`; show ENT-proof `canonical ID` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show an attempted causal operation on the target.",
+      "limitation_visible": false,
+      "narration": "The first visible move is to match stable identifiers before merging.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:merged record=blocked; ENT-proof:canonical ID=hidden → ENT-target:merged record=acted-on; ENT-proof:canonical ID=hidden.",
+      "on_screen_text": "TEST ONE CAUSE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `attempt` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 4,
+      "shot_scale": "over_shoulder",
+      "start_ms": 3000,
+      "state_after": "ENT-target:merged record=acted-on; ENT-proof:canonical ID=hidden",
+      "state_before": "ENT-target:merged record=blocked; ENT-proof:canonical ID=hidden",
+      "story_question": "How does the hero test the clue?",
+      "transition": "push_in motivated by show an attempted causal operation on the target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The hero attempts to match stable identifiers before merging; the merged record visibly responds."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-013-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-013-F05",
+      "handback_visible": false,
+      "hero_action": "checks the canonical ID",
+      "image_path": "frames/ST-013-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a data steward in a record desk. The changed merged record remains visible while the canonical ID is isolated. Keep ENT-target `merged record` persistent and visibly transform it through `matches stable identifiers before merging`; show ENT-proof `canonical ID` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the canonical ID, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:merged record=acted-on; ENT-proof:canonical ID=hidden → ENT-target:merged record=changed-pending-review; ENT-proof:canonical ID=visible.",
+      "on_screen_text": "THE TRACE",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:merged record=changed-pending-review; ENT-proof:canonical ID=visible",
+      "state_before": "ENT-target:merged record=acted-on; ENT-proof:canonical ID=hidden",
+      "story_question": "What artifact resolves the diagnosis?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The changed merged record remains visible while the canonical ID is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "payoff",
+      "beat_roles": [
+        "payoff",
+        "limitation",
+        "handback"
+      ],
+      "broll_function": "contrast",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the opening question with the changed target.",
+      "cause_frame_ids": [
+        "ST-013-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-013-F06",
+      "handback_visible": true,
+      "hero_action": "confirms the changed merged record",
+      "image_path": "frames/ST-013-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `diagnostic_mystery` scene grammar. Anonymous geometric a data steward in a record desk. The same merged record reaches its resolved state: the duplicate is resolved without deleting evidence. Keep ENT-target `merged record` persistent and visibly transform it through `matches stable identifiers before merging`; show ENT-proof `canonical ID` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the opening question with the changed target.",
+      "limitation_visible": true,
+      "narration": "Now the duplicate is resolved without deleting evidence.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:merged record=changed-pending-review; ENT-proof:canonical ID=visible → ENT-target:merged record=resolved-with-boundary; ENT-proof:canonical ID=visible.",
+      "on_screen_text": "DIAGNOSIS",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `diagnostic_mystery` advances through `payoff` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:merged record=resolved-with-boundary; ENT-proof:canonical ID=visible",
+      "state_before": "ENT-target:merged record=changed-pending-review; ENT-proof:canonical ID=visible",
+      "story_question": "What answer closes the question?",
+      "transition": "pull_out motivated by close the opening question with the changed target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The same merged record reaches its resolved state: the duplicate is resolved without deleting evidence."
+    }
+  ],
+  "kind": "hook_intro",
+  "narrative": {
+    "action_chain": [
+      "notice the two tags",
+      "matches stable identifiers before merging",
+      "inspect the canonical ID"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The two tags changes state before the objective is secure.",
+    "limitation": "Entity resolution may require human review.",
+    "objective": "find why counts disagree",
+    "obstacle": "one entity appears under two labels",
+    "payoff": "the duplicate is resolved without deleting evidence",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "canonical ID",
+    "protagonist": "a data steward",
+    "setup": "a record desk",
+    "stakes": "reports may double-count the same object"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:339fc48508e2b455849518348debafb9775ac18335ecb6b8addccbce1b7d0f62",
+  "story_id": "ST-013",
+  "title": "Duplicate in the Queue",
+  "variation_axes": {
+    "operation_type": "route",
+    "proof_mechanism": "canonical ID; boundary=Entity resolution may require human review.",
+    "scene_topology": "diagnostic_mystery::a record desk",
+    "target_transformation": "merged record: unresolved -> the duplicate is resolved without deleting evidence"
+  },
+  "variation_fingerprint": "sha256:96fa948a05a9631baca9627bf064754a7f5d842054f128182bf3d89c43441f8a",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:67f739b9eba9056f6d23b834c671052f1c313e63819e22936ad8328e1f31569a"
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/figma-delivery.schema.json",
+  "title": "FigmaDeliveryManifest",
+  "type": "object",
+  "required": ["delivery_id", "expected_account_ref", "identity_state", "editor_access_state", "target_state", "owner_write_approval", "page_name", "video_sections", "write_state", "readback_state"],
+  "properties": {
+    "delivery_id": {"type": "string", "pattern": "^FIG-[A-Z0-9-]+$"},
+    "expected_account_ref": {"const": "owner_designated_content_account"},
+    "identity_state": {"enum": ["NOT_CHECKED", "AUTHENTICATED_WRONG_ACCOUNT", "AUTHENTICATED_MATCH"]},
+    "editor_access_state": {"enum": ["NOT_CHECKED", "DENIED", "EDITOR_ACCESS_CONFIRMED"]},
+    "target_state": {"enum": ["NOT_SET", "TARGET_FILE_CONFIRMED", "NEW_FILE_OR_PAGE_APPROVED"]},
+    "owner_write_approval": {"enum": ["PENDING", "APPROVED", "DENIED"]},
+    "file_key_masked": {"type": ["string", "null"]},
+    "page_name": {"type": "string", "minLength": 1},
+    "video_sections": {"type": "array", "minItems": 10, "maxItems": 15, "items": {"type": "object", "required": ["video_id", "manifest_hash", "frame_count", "contact_sheet_path"], "properties": {"video_id": {"type": "string"}, "manifest_hash": {"type": "string"}, "frame_count": {"type": "integer", "minimum": 8}, "contact_sheet_path": {"type": "string"}, "node_id": {"type": ["string", "null"]}}, "additionalProperties": false}},
+    "write_state": {"enum": ["NOT_AUTHORIZED", "READY_AFTER_APPROVAL", "WRITE_COMPLETE", "BLOCKED"]},
+    "readback_state": {"enum": ["NOT_RUN", "VERIFIED", "FAILED"]},
+    "screenshot_receipts": {"type": "array", "items": {"type": "string"}},
+    "block_reason": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
+

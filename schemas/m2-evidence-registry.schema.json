@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/m2-evidence-registry.schema.json",
+  "title": "M2FirstPartyEvidenceRegistry",
+  "type": "object",
+  "required": ["schema", "registry_id", "path_roots", "records"],
+  "properties": {
+    "schema": {"const": "m2.first-party-evidence-registry.v1"},
+    "registry_id": {"type": "string", "minLength": 1},
+    "path_roots": {
+      "type": "object",
+      "required": ["run_input", "output_dir"],
+      "properties": {"run_input": {"const": "."}, "output_dir": {"const": "burn-in/"}},
+      "additionalProperties": false
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "evidence_id", "path_root", "path", "sha256", "label", "scope"],
+        "properties": {
+          "source_id": {"type": "string", "pattern": "^SRC-M2-"},
+          "evidence_id": {"type": "string", "pattern": "^EVID-M2-"},
+          "path_root": {"enum": ["run_input", "output_dir"]},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+          "label": {"const": "FACT"},
+          "scope": {"enum": ["first_party_run_evidence", "generated_first_party_run_evidence"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

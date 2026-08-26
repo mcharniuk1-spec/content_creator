@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-046",
+  "title": "Question to Answer",
+  "source_story": "../v2/st-046-question-to-answer/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult evidence reviewer in their early 30s, natural curly hair, sand overshirt and black tee",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-046 Question to Answer\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult evidence reviewer in their early 30s, natural curly hair, sand overshirt and black tee. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: speaker return. Trigger prop: question card. Proof prop: answer card. Obstacle: the explanation branches into side topics.\nSix panels in reading order:\n1 close still: notices the question card; show The question card changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the speaker return; show The hero and persistent speaker return share one scene; objective: answer one audience question. Emotional register: orientation.\n3 medium still: moves question, mechanism, proof, then answer; show The hero attempts to move question, mechanism, proof, then answer; the speaker return visibly responds. Emotional register: concern.\n4 over_shoulder still: moves question, mechanism, proof, then answer; show The hero moves question, mechanism, proof, then answer; the same speaker return changes state on screen. Emotional register: agency.\n5 macro still: checks the answer card; show The changed speaker return remains visible while the answer card is isolated. Emotional register: confidence-with-caution.\n6 medium still: returns the resolved target to the viewer; show The resolved speaker return stays visible while the sequence returns to A-roll: the viewer returns to the speaker with closure. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Further detail belongs in a later segment.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-046-F01.png",
+    "frames/ST-046-F02.png",
+    "frames/ST-046-F03.png",
+    "frames/ST-046-F04.png",
+    "frames/ST-046-F05.png",
+    "frames/ST-046-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "6985cc3df09fd57c99616ff40021643883620b7fe84d7d4edb1a53e8617858f0",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "a1e8060138acd10c6fa4feba607fa9a361b4d7ad46cb3dfdb6d87175e1294441",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-046-F01",
+      "file": "frames/ST-046-F01.png",
+      "sha256": "7a14676b2c4e157d66a7eabad0c018d8d422493244460ed0a47dcddf4eb45f76",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 114.85,
+      "luma_stddev": 63.74,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-046-F02",
+      "file": "frames/ST-046-F02.png",
+      "sha256": "dd1c5eeb976c02840bc27f5b803eab33c5d620775d31bf1bd07d3ad39a138fbf",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 99.24,
+      "luma_stddev": 58.13,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-046-F03",
+      "file": "frames/ST-046-F03.png",
+      "sha256": "49002fff0ac0d4082ddf9db2ab4c3359e014de0b57000c3656750d5b998a62a2",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 107.12,
+      "luma_stddev": 59.04,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-046-F04",
+      "file": "frames/ST-046-F04.png",
+      "sha256": "02ffc8180e54261d94be5b024d70d49dc74f9a2385882ae1b0f106a1415059e4",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 96.97,
+      "luma_stddev": 60.53,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-046-F05",
+      "file": "frames/ST-046-F05.png",
+      "sha256": "a15cb96043ffebbe08e1015b64174c43a294c2a7e16168b109052d5cbfd886ef",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 102.12,
+      "luma_stddev": 77.54,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-046-F06",
+      "file": "frames/ST-046-F06.png",
+      "sha256": "38035bdafca513634349da3ffd9f28ada41bec23ade17c72411f0e404992e6ab",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 106.6,
+      "luma_stddev": 58.77,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

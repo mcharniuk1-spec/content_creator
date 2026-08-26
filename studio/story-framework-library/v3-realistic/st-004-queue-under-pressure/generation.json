@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-004",
+  "title": "Queue Under Pressure",
+  "source_story": "../v2/st-004-queue-under-pressure/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult technical educator in their mid 30s, shoulder-length dark hair, rust cardigan over a plain white top",
+  "location_lock": "believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-004 Queue Under Pressure\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult technical educator in their mid 30s, shoulder-length dark hair, rust cardigan over a plain white top. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: ordered queue. Trigger prop: queue ticket. Proof prop: priority rule. Obstacle: all tickets look identical.\nSix panels in reading order:\n1 extreme_close still: notices the queue ticket; show The queue ticket changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the ordered queue; show The hero and persistent ordered queue share one scene; objective: route the urgent request correctly. Emotional register: orientation.\n3 medium still: sees the ordered queue blocked; show The ordered queue is visibly blocked by all tickets look identical; consequence: a time-sensitive request may be buried. Emotional register: concern.\n4 over_shoulder still: marks urgency and owner before routing; show The hero attempts to mark urgency and owner before routing; the ordered queue visibly responds. Emotional register: agency.\n5 macro still: checks the priority rule; show The changed ordered queue remains visible while the priority rule is isolated. Emotional register: confidence-with-caution.\n6 medium still: returns the resolved target to the viewer; show The resolved ordered queue stays visible while the sequence returns to A-roll: the urgent item reaches the correct lane. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Priority is a declared rule, not inferred intent.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-004-F01.png",
+    "frames/ST-004-F02.png",
+    "frames/ST-004-F03.png",
+    "frames/ST-004-F04.png",
+    "frames/ST-004-F05.png",
+    "frames/ST-004-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "b66c84b7ca62f200c94ecef92825826886d119331044f61003c16769b1c1388d",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "589f78c49723fec9b8a8c0ad4b7bb046fe51c3379a831190056d11d3a3e0986e",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-004-F01",
+      "file": "frames/ST-004-F01.png",
+      "sha256": "f531efadfaa701e1e1d45efc7934f8b2b032479b37c41e17462eda90ff4ab50e",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 96.56,
+      "luma_stddev": 64.79,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-004-F02",
+      "file": "frames/ST-004-F02.png",
+      "sha256": "855b08ab8185ee3c635d6b45810ec28dd7c013610f83fdc0edd25a5f4ea4592f",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 105.11,
+      "luma_stddev": 66.65,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-004-F03",
+      "file": "frames/ST-004-F03.png",
+      "sha256": "99ad339f4d9e0666254ce19a2fc45a0eb70ce61b97e961d5001a55d458eaa6ff",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 89.77,
+      "luma_stddev": 64.03,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-004-F04",
+      "file": "frames/ST-004-F04.png",
+      "sha256": "1b4ba5b95d046abd39418ab8b2cc5e94657fc28665f9f73cec620ae317c6d745",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 81.03,
+      "luma_stddev": 56.83,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-004-F05",
+      "file": "frames/ST-004-F05.png",
+      "sha256": "0b2652b5a5f68c9a3f2805c32d57d840ae5fa8fb624ccb23e3a0f7855f344f2f",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 117.08,
+      "luma_stddev": 51.31,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-004-F06",
+      "file": "frames/ST-004-F06.png",
+      "sha256": "bec5825685ce95eb60555e7681523a3a0cefda05f0479fb3199d23480a576b63",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 105.46,
+      "luma_stddev": 67.24,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

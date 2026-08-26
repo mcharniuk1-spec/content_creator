@@ -1,0 +1,423 @@
+{
+  "adaptation_targets": [
+    "instagram_reels",
+    "tiktok"
+  ],
+  "claim_state": "evidence_bound_and_hypothesis_labeled",
+  "creator_media_state": "not_received",
+  "creator_track": "pm_integration",
+  "cta": "Save the five-question decision table.",
+  "evidence_boundary": {
+    "analysis_eligible_videos": 2949,
+    "broad_screen_videos": 10000,
+    "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
+  },
+  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "full_script": "Build or buy? Wrong first question. First ask which control surface your workflow needs. Can you inspect evidence, change permissions, replace a model, recover state, and export your history? A bought tool can be right when the workflow is standard and reversible. Build when differentiation, integration depth, or control is the product. Choose by constraints and exit cost, not demo excitement.",
+  "hook": "Build or buy? Wrong first question.",
+  "owner_state": "owner_review_pending",
+  "pillar": "business_integration",
+  "primary_platform": "youtube_shorts",
+  "proof_visual": "Decision table scoring differentiation, integration depth, control, reversibility, and exit cost.",
+  "provider_generation_state": "blocked_approval",
+  "publication_state": "blocked_approval",
+  "resolve_mutation_state": "blocked_approval",
+  "schema": "north-hux.script-package.v1",
+  "script_key": "build-buy-wrong-question",
+  "sequence_position": 5,
+  "shots": [
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 2000,
+      "evidence_role": "none",
+      "frame_sha256": "6ca58182c59604a45faeb7cc96f8ef3d0a15a76a790f8e3ca5ac550688fb3bd4",
+      "frame_uri": "05-build-buy-wrong-question/frames/01.svg",
+      "generation_state": "not_run",
+      "narration": "Build or buy? Wrong first question.",
+      "on_screen_text": "Build or buy? Wrong first question.",
+      "rights_state": "owner_media_required",
+      "shot_index": 1,
+      "source_evidence_ids": [],
+      "start_ms": 0,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 5000,
+      "evidence_role": "context",
+      "frame_sha256": "fcd3dc55ca5e99122e9c1cf54706cda6e7e9f12d0332018d1dc58f2617d9a2c6",
+      "frame_uri": "05-build-buy-wrong-question/frames/02.svg",
+      "generation_state": "not_run",
+      "narration": "First ask which control surface your workflow needs.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 2,
+      "source_evidence_ids": [],
+      "start_ms": 2000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: First ask which control surface your workflow needs.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 8000,
+      "evidence_role": "none",
+      "frame_sha256": "c9483d6beef8b96c371200f739ad77b1ec33797612e611ff5b22076d0a572f98",
+      "frame_uri": "05-build-buy-wrong-question/frames/03.svg",
+      "generation_state": "not_run",
+      "narration": "Can you inspect evidence, change permissions, replace a model, recover state, and export your history?",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 3,
+      "source_evidence_ids": [],
+      "start_ms": 5000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Capture an owned deterministic prototype or render the supplied diagram",
+        "prompt": "Use only owned/synthetic example data. Screen must visibly support the claim; no competitor UI reuse."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "screen_demo",
+      "end_ms": 11000,
+      "evidence_role": "proof",
+      "frame_sha256": "65e3f14e49f127019e0905116888031e642c8466690e0b6de58c88ea38c119f6",
+      "frame_uri": "05-build-buy-wrong-question/frames/04.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 4,
+      "source_evidence_ids": [],
+      "start_ms": 8000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Decision table scoring differentiation, integration depth, control, reversibility, and exit cost.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 14000,
+      "evidence_role": "none",
+      "frame_sha256": "8c6b7854ba296cb8e2b42efbcf3d2f67a53c487822d84839942932b60c99433b",
+      "frame_uri": "05-build-buy-wrong-question/frames/05.svg",
+      "generation_state": "not_run",
+      "narration": "A bought tool can be right when the workflow is standard and reversible.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 5,
+      "source_evidence_ids": [],
+      "start_ms": 11000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 18000,
+      "evidence_role": "proof",
+      "frame_sha256": "69de66392fb57d4cad7ddaafe254eb41ce9388b3d1b11ce28354bf79f7630309",
+      "frame_uri": "05-build-buy-wrong-question/frames/06.svg",
+      "generation_state": "not_run",
+      "narration": "Build when differentiation, integration depth, or control is the product.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 6,
+      "source_evidence_ids": [],
+      "start_ms": 14000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Decision table scoring differentiation, integration depth, control, reversibility, and exit cost.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve provider, prompt, budget, and rights before generation",
+        "prompt": "Two unlabeled architectural paths joining one operations hub; abstract strategic context with no brands, prices, or performance claims."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "ai_generated_broll",
+      "end_ms": 20000,
+      "evidence_role": "context",
+      "frame_sha256": "55da115424f6ad933d7bbad18d029e20c050d1d0c967a14b9d7ab3f6685b7a31",
+      "frame_uri": "05-build-buy-wrong-question/frames/07.svg",
+      "generation_state": "blocked_approval",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "provider_review_required",
+      "shot_index": 7,
+      "source_evidence_ids": [],
+      "start_ms": 18000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Optional two-second metaphorical context insert. It must not carry evidence, results, UI, numbers, people, likeness, or logos.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 24000,
+      "evidence_role": "none",
+      "frame_sha256": "7c5acd25a50b0a0c5374e5927c01930e0d1cb2f55f9f1348952ba78dc0aa4c0f",
+      "frame_uri": "05-build-buy-wrong-question/frames/08.svg",
+      "generation_state": "not_run",
+      "narration": "Choose by constraints and exit cost, not demo excitement.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 8,
+      "source_evidence_ids": [],
+      "start_ms": 20000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 26000,
+      "evidence_role": "context",
+      "frame_sha256": "26cfd011431550fdb3772ab9594179e6150453c2b680089c5bce600847fa7bd5",
+      "frame_uri": "05-build-buy-wrong-question/frames/09.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Save the five-question decision table.",
+      "rights_state": "original_plan",
+      "shot_index": 9,
+      "source_evidence_ids": [],
+      "start_ms": 24000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: Save the five-question decision table.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve CTA and brand lockup",
+        "prompt": "Render deterministically from North Hux typography and color tokens."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "end_card",
+      "end_ms": 30000,
+      "evidence_role": "none",
+      "frame_sha256": "66270b18bde46032d74973deb98dde60973e36cf9fc39fd703ffa0151b65221e",
+      "frame_uri": "05-build-buy-wrong-question/frames/10.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Save the five-question decision table.",
+      "rights_state": "original_plan",
+      "shot_index": 10,
+      "source_evidence_ids": [],
+      "start_ms": 26000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "North Hux end card: Save the five-question decision table.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    }
+  ],
+  "target_duration_ms": 30000,
+  "title": "Build vs Buy Is the Wrong First Question",
+  "version": 1
+}

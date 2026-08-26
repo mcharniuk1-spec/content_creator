@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:d6e3b7fbc8015817598fdb9e4f74a58072e3dccb3a3fac442acbc80fa09f4fa0",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#16112A",
+      "#B6A1FF",
+      "#FFE078",
+      "#FF758F"
+    ],
+    "proof_prop": "observed-at field",
+    "scene": "a monitor close-up",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "freshness verdict",
+    "trigger_prop": "clock",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a dashboard reviewer",
+      "visual_token": "hero-037"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "clock",
+      "visual_token": "clock"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "freshness verdict",
+      "visual_token": "freshness-verdict"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the chart title omits observed time",
+      "visual_token": "obstacle-proof_reveal"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "observed-at field",
+      "visual_token": "observed-at-field"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "proof_reveal",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-037-F01",
+      "handback_visible": false,
+      "hero_action": "notices the clock",
+      "image_path": "frames/ST-037-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `proof_reveal` scene grammar. Anonymous geometric a dashboard reviewer in a monitor close-up. The clock changes before the objective is secure. Keep ENT-target `freshness verdict` persistent and visibly transform it through `reveals the timestamp before the number`; show ENT-proof `observed-at field` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:freshness verdict=absent; ENT-proof:observed-at field=hidden \u2192 ENT-target:freshness verdict=unoriented; ENT-proof:observed-at field=hidden.",
+      "on_screen_text": "CLAIM WITHOUT PROOF",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `proof_reveal` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "start_ms": 0,
+      "state_after": "ENT-target:freshness verdict=unoriented; ENT-proof:observed-at field=hidden",
+      "state_before": "ENT-target:freshness verdict=absent; ENT-proof:observed-at field=hidden",
+      "story_question": "What claim is waiting for proof?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The clock changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-037-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-037-F02",
+      "handback_visible": false,
+      "hero_action": "locates the freshness verdict",
+      "image_path": "frames/ST-037-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `proof_reveal` scene grammar. Anonymous geometric a dashboard reviewer in a monitor close-up. The hero and persistent freshness verdict share one scene; objective: decide whether a metric is current. Keep ENT-target `freshness verdict` persistent and visibly transform it through `reveals the timestamp before the number`; show ENT-proof `observed-at field` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to decide whether a metric is current.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:freshness verdict=unoriented; ENT-proof:observed-at field=hidden \u2192 ENT-target:freshness verdict=present-unresolved; ENT-proof:observed-at field=hidden.",
+      "on_screen_text": "WHERE PROOF SHOULD BE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `proof_reveal` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:freshness verdict=present-unresolved; ENT-proof:observed-at field=hidden",
+      "state_before": "ENT-target:freshness verdict=unoriented; ENT-proof:observed-at field=hidden",
+      "story_question": "Where should proof exist?",
+      "transition": "pull_out motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The hero and persistent freshness verdict share one scene; objective: decide whether a metric is current."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "locked",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-037-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-037-F03",
+      "handback_visible": false,
+      "hero_action": "sees the freshness verdict blocked",
+      "image_path": "frames/ST-037-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `proof_reveal` scene grammar. Anonymous geometric a dashboard reviewer in a monitor close-up. The freshness verdict is visibly blocked by the chart title omits observed time; consequence: old data may guide a new decision. Keep ENT-target `freshness verdict` persistent and visibly transform it through `reveals the timestamp before the number`; show ENT-proof `observed-at field` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But the chart title omits observed time.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:freshness verdict=present-unresolved; ENT-proof:observed-at field=hidden \u2192 ENT-target:freshness verdict=blocked; ENT-proof:observed-at field=hidden.",
+      "on_screen_text": "THE MISSING FIELD",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `proof_reveal` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 3,
+      "shot_scale": "macro",
+      "start_ms": 2000,
+      "state_after": "ENT-target:freshness verdict=blocked; ENT-proof:observed-at field=hidden",
+      "state_before": "ENT-target:freshness verdict=present-unresolved; ENT-proof:observed-at field=hidden",
+      "story_question": "What missing field would invalidate it?",
+      "transition": "locked motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The freshness verdict is visibly blocked by the chart title omits observed time; consequence: old data may guide a new decision."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "tilt_down",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-037-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-037-F04",
+      "handback_visible": false,
+      "hero_action": "reveals the timestamp before the number",
+      "image_path": "frames/ST-037-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `proof_reveal` scene grammar. Anonymous geometric a dashboard reviewer in a monitor close-up. The hero reveals the timestamp before the number; the same freshness verdict changes state on screen. Keep ENT-target `freshness verdict` persistent and visibly transform it through `reveals the timestamp before the number`; show ENT-proof `observed-at field` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to reveal the timestamp before the number.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:freshness verdict=blocked; ENT-proof:observed-at field=hidden \u2192 ENT-target:freshness verdict=transformed; ENT-proof:observed-at field=hidden.",
+      "on_screen_text": "PEEL IT BACK",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `proof_reveal` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 4,
+      "shot_scale": "over_shoulder",
+      "start_ms": 3000,
+      "state_after": "ENT-target:freshness verdict=transformed; ENT-proof:observed-at field=hidden",
+      "state_before": "ENT-target:freshness verdict=blocked; ENT-proof:observed-at field=hidden",
+      "story_question": "How is the proof uncovered?",
+      "transition": "tilt_down motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The hero reveals the timestamp before the number; the same freshness verdict changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-037-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-037-F05",
+      "handback_visible": false,
+      "hero_action": "checks the observed-at field",
+      "image_path": "frames/ST-037-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `proof_reveal` scene grammar. Anonymous geometric a dashboard reviewer in a monitor close-up. The changed freshness verdict remains visible while the observed-at field is isolated. Keep ENT-target `freshness verdict` persistent and visibly transform it through `reveals the timestamp before the number`; show ENT-proof `observed-at field` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the observed-at field, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:freshness verdict=transformed; ENT-proof:observed-at field=hidden \u2192 ENT-target:freshness verdict=changed-pending-review; ENT-proof:observed-at field=visible.",
+      "on_screen_text": "INSPECT THE ARTIFACT",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `proof_reveal` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:freshness verdict=changed-pending-review; ENT-proof:observed-at field=visible",
+      "state_before": "ENT-target:freshness verdict=transformed; ENT-proof:observed-at field=hidden",
+      "story_question": "What exact artifact supports the claim?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The changed freshness verdict remains visible while the observed-at field is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "limitation",
+      "beat_roles": [
+        "limitation",
+        "payoff",
+        "handback"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "pull_out",
+      "camera_motivation": "State where the visible evidence stops.",
+      "cause_frame_ids": [
+        "ST-037-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-037-F06",
+      "handback_visible": true,
+      "hero_action": "bounds the result with observed-at field",
+      "image_path": "frames/ST-037-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `proof_reveal` scene grammar. Anonymous geometric a dashboard reviewer in a monitor close-up. The observed-at field and changed freshness verdict remain visible; boundary: Fresh data can still be incomplete. Keep ENT-target `freshness verdict` persistent and visibly transform it through `reveals the timestamp before the number`; show ENT-proof `observed-at field` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "State where the visible evidence stops.",
+      "limitation_visible": true,
+      "narration": "The evidence stops here: Fresh data can still be incomplete.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:freshness verdict=changed-pending-review; ENT-proof:observed-at field=visible \u2192 ENT-target:freshness verdict=resolved-with-boundary; ENT-proof:observed-at field=visible.",
+      "on_screen_text": "EVIDENCE STOPS HERE",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `proof_reveal` advances through `limitation` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:freshness verdict=resolved-with-boundary; ENT-proof:observed-at field=visible",
+      "state_before": "ENT-target:freshness verdict=changed-pending-review; ENT-proof:observed-at field=visible",
+      "story_question": "Where does the evidence stop?",
+      "transition": "pull_out motivated by state where the visible evidence stops.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The observed-at field and changed freshness verdict remain visible; boundary: Fresh data can still be incomplete."
+    }
+  ],
+  "kind": "hook_broll",
+  "narrative": {
+    "action_chain": [
+      "notice the clock",
+      "reveals the timestamp before the number",
+      "inspect the observed-at field"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The clock changes state before the objective is secure.",
+    "limitation": "Fresh data can still be incomplete.",
+    "objective": "decide whether a metric is current",
+    "obstacle": "the chart title omits observed time",
+    "payoff": "the viewer sees whether the metric is usable",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "observed-at field",
+    "protagonist": "a dashboard reviewer",
+    "setup": "a monitor close-up",
+    "stakes": "old data may guide a new decision"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:81bdf543c3e876b3088ee9d026634b24b0bea0f4e4a664c87090ced7df88c34b",
+  "story_id": "ST-037",
+  "title": "The Timestamp Test",
+  "variation_axes": {
+    "operation_type": "inspect",
+    "proof_mechanism": "observed-at field; boundary=Fresh data can still be incomplete.",
+    "scene_topology": "proof_reveal::a monitor close-up",
+    "target_transformation": "freshness verdict: unresolved -> the viewer sees whether the metric is usable"
+  },
+  "variation_fingerprint": "sha256:b13c05e84ce662332d50d689ae210186211346b370c8ded2dd9191577f7ead96",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:29d9a40730753c7781eef12cad2baf88958b5feedd560c53025854618b95015e"
+}

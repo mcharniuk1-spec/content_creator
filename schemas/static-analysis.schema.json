@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/static-analysis.schema.json",
+  "title": "StaticAnalysis",
+  "type": "object",
+  "required": ["analysis_id", "source_record_id", "canvas", "format", "page_count", "visible_text", "content_semantics", "reading_order", "layout_family", "zones", "typography", "imagery", "platform_fit", "abstract_pattern", "prohibited_similarity", "archflow_recomposition", "review"],
+  "properties": {
+    "analysis_id": {"type": "string", "pattern": "^SA-[A-Z0-9-]+$"},
+    "source_record_id": {"type": "string"},
+    "canvas": {
+      "type": "object",
+      "required": ["width", "height", "aspect_ratio"],
+      "properties": {
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1},
+        "aspect_ratio": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "format": {"enum": ["single", "carousel", "thread_images", "ad", "thumbnail"]},
+    "page_count": {"type": "integer", "minimum": 1},
+    "visible_text": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page_or_frame", "text", "transcription_state"],
+        "properties": {
+          "page_or_frame": {"type": "string"},
+          "text": {"type": "string"},
+          "transcription_state": {"enum": ["exact_public_text", "bounded_summary", "unavailable", "not_applicable"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "content_semantics": {
+      "type": "object",
+      "required": ["headline", "problem", "pain", "promise", "mechanism", "proof", "objection", "cta"],
+      "properties": {
+        "headline": {"type": ["string", "null"]},
+        "problem": {"type": ["string", "null"]},
+        "pain": {"type": ["string", "null"]},
+        "promise": {"type": ["string", "null"]},
+        "mechanism": {"type": ["string", "null"]},
+        "proof": {"type": ["string", "null"]},
+        "objection": {"type": ["string", "null"]},
+        "cta": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "reading_order": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "layout_family": {"type": "string"},
+    "grid": {"type": "object"},
+    "zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["zone_id", "role", "bbox_normalized", "hierarchy_rank", "text_density", "contrast_state"],
+        "properties": {
+          "zone_id": {"type": "string"},
+          "role": {"enum": ["headline", "evidence", "illustration", "ui", "cta", "source", "navigation", "other"]},
+          "bbox_normalized": {"type": "array", "prefixItems": [{"type": "number", "minimum": 0, "maximum": 1}, {"type": "number", "minimum": 0, "maximum": 1}, {"type": "number", "minimum": 0, "maximum": 1}, {"type": "number", "minimum": 0, "maximum": 1}], "minItems": 4, "maxItems": 4},
+          "hierarchy_rank": {"type": "integer", "minimum": 1},
+          "text_density": {"type": "string"},
+          "contrast_state": {"enum": ["pass", "risk", "fail", "unknown"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "typography": {"type": "object"},
+    "imagery": {"type": "object"},
+    "progression": {"type": ["object", "null"]},
+    "platform_fit": {"type": "object"},
+    "abstract_pattern": {"type": "string"},
+    "prohibited_similarity": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "archflow_recomposition": {"type": "object", "required": ["background_plate", "subject_plate", "illustration_or_ui_plate", "text_overlay", "status_and_source_labels", "combined_preview"]},
+    "review": {"type": "object", "required": ["maker", "reviewer", "verdict"], "properties": {"maker": {"type": "string"}, "reviewer": {"type": "string"}, "verdict": {"enum": ["PENDING", "APPROVE", "REVISE", "BLOCK"]}, "notes": {"type": ["string", "null"]}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

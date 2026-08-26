@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-009",
+  "title": "The Clearer Screen",
+  "source_story": "../v2/st-009-the-clearer-screen/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult project lead in their early 50s, short gray hair, cream knit and navy work jacket",
+  "location_lock": "believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-009 The Clearer Screen\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult project lead in their early 50s, short gray hair, cream knit and navy work jacket. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: single-action screen. Trigger prop: cursor. Proof prop: focus highlight. Obstacle: every control is highlighted at once.\nSix panels in reading order:\n1 close still: notices the cursor; show The cursor changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the single-action screen; show The hero and persistent single-action screen share one scene; objective: explain one interface state. Emotional register: orientation.\n3 medium still: sees the single-action screen blocked; show The single-action screen is visibly blocked by every control is highlighted at once; consequence: the viewer cannot locate the next action. Emotional register: concern.\n4 over_shoulder still: rewinds from a clean state to excess overlays; show The hero rewinds from a clean state to excess overlays; the same single-action screen changes state on screen. Emotional register: agency.\n5 macro still: checks the focus highlight; show The changed single-action screen remains visible while the focus highlight is isolated. Emotional register: confidence-with-caution.\n6 wide still: confirms the changed single-action screen; show The same single-action screen reaches its resolved state: one control carries the explanation. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'The interface is a generic mock, not branded UI.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-009-F01.png",
+    "frames/ST-009-F02.png",
+    "frames/ST-009-F03.png",
+    "frames/ST-009-F04.png",
+    "frames/ST-009-F05.png",
+    "frames/ST-009-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "6483cf4b5682df55377768ef06c0d672849f2b98db04b751e1bf25eab79658c6",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "8e7aafaeb3e54be801a7f89c11d50c8845f281689fa90b2439e22b8d717b928f",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-009-F01",
+      "file": "frames/ST-009-F01.png",
+      "sha256": "ca259b78c4d63441c714b6479555371c603c8d2294d45b5423f71e6898c0b3b5",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 106.17,
+      "luma_stddev": 65.74,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-009-F02",
+      "file": "frames/ST-009-F02.png",
+      "sha256": "41653abcae7fd6f734b2de3e15ffe1bcaa327479ce7423e8c3c7b22a482fa31d",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 102.42,
+      "luma_stddev": 68.29,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-009-F03",
+      "file": "frames/ST-009-F03.png",
+      "sha256": "4630221d12e54f1cc4382c1f89e58afd56b8eada515b5dd7cabc6919be025490",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 99.6,
+      "luma_stddev": 66.19,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-009-F04",
+      "file": "frames/ST-009-F04.png",
+      "sha256": "b704920ff9eeaeec53f4c2233a4a28a0e2d1a40e974e009f08547d1a0ea9b509",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 106.35,
+      "luma_stddev": 64.41,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-009-F05",
+      "file": "frames/ST-009-F05.png",
+      "sha256": "063198736a8795072e471442da5e5e326153d5671597b8249a45e1bdb1ba3c95",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 150.19,
+      "luma_stddev": 70.0,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-009-F06",
+      "file": "frames/ST-009-F06.png",
+      "sha256": "9fe79565e505c450839c326e1f174ce863666921408c979b5ca787d2115ba358",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 127.24,
+      "luma_stddev": 77.01,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

@@ -1,0 +1,55 @@
+{
+  "epistemic_state": "CLASSIFIED",
+  "evidence_ids": [
+    "EVID-WEB-009"
+  ],
+  "export_id": "SIGEXP-SF-037",
+  "export_version": 1,
+  "external_provider_state": "NOT_RUN",
+  "freshness": {
+    "observed_at": "2026-08-25T00:00:00+03:00",
+    "supersedes_export_id": null,
+    "valid_until": null
+  },
+  "generated_at": "2026-08-25T00:00:00+03:00",
+  "pattern": {
+    "a_roll_integration": "full_open",
+    "broll_function": "establish_context",
+    "cta_exit": "next_step",
+    "hook_mechanism": "object_demo",
+    "pacing_profile": "held_reveal",
+    "proof_form": "observed_artifact",
+    "risk_class": "low",
+    "sound_role": "voice_anchor",
+    "text_role": "keyword_captions",
+    "transition_family": "wipe",
+    "viewer_job": "identify_problem",
+    "visual_grammar": "kinetic_type"
+  },
+  "provenance": {
+    "raw_object_state": "NOT_AVAILABLE",
+    "record_hash": "sha256:2e0d2b7bb47819b88adb8a01baa220e2a131aa45ca91048f0eaa92d044c3f0fb",
+    "source_raw_hashes": []
+  },
+  "rights_decision_ids": [
+    "RIGHTS-PUBLIC-COMMENTARY-001"
+  ],
+  "rights_state": "metadata_commentary_only",
+  "schema": "signal-to-studio.v1",
+  "signal_record_id": "SIG-SF-037",
+  "source_ids": [
+    "SRC-WEB-008"
+  ],
+  "studio_constraints": {
+    "acceptance_checks": [
+      "Opening hook signal occurs in the first 1000 ms.",
+      "Every visual change has a story function and explicit A-roll state.",
+      "No source expression, brand UI, identity, or restricted media is reused."
+    ],
+    "aspect_ratio": "9:16",
+    "duration_ms": 4000,
+    "editable_text": true,
+    "safe_zone": "platform-ui-aware; 8% horizontal and 10% vertical local planning inset; verify per platform at production"
+  },
+  "taxonomy_version": "studio-shortform@1.0.0"
+}

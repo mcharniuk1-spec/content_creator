@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:728f3e6abf6c9c475e040a62499c897c6502c381914cf708dbbb36201aab10a7",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#0D1C2E",
+      "#70B8FF",
+      "#F2CE82",
+      "#FF746D"
+    ],
+    "proof_prop": "scope bracket",
+    "scene": "a drafting desk",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "bounded promise",
+    "trigger_prop": "pencil",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a technical writer",
+      "visual_token": "hero-010"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "pencil",
+      "visual_token": "pencil"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "bounded promise",
+      "visual_token": "bounded-promise"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the opening promises too many outcomes",
+      "visual_token": "obstacle-result_rewind"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "scope bracket",
+      "visual_token": "scope-bracket"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "result_rewind",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "resolved-preview",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-010-F01",
+      "handback_visible": false,
+      "hero_action": "notices the pencil",
+      "image_path": "frames/ST-010-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `result_rewind` scene grammar. Anonymous geometric a technical writer in a drafting desk. The pencil changes before the objective is secure. Keep ENT-target `bounded promise` persistent and visibly transform it through `removes claims until one mechanism remains`; show ENT-proof `scope bracket` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:bounded promise=absent; ENT-proof:scope bracket=hidden → ENT-target:bounded promise=resolved-preview; ENT-proof:scope bracket=hidden.",
+      "on_screen_text": "HERE'S THE RESULT",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `result_rewind` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "start_ms": 0,
+      "state_after": "ENT-target:bounded promise=resolved-preview; ENT-proof:scope bracket=hidden",
+      "state_before": "ENT-target:bounded promise=absent; ENT-proof:scope bracket=hidden",
+      "story_question": "How did this result appear?",
+      "transition": "pull_out motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The pencil changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "whip_pan",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-010-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "resolved-preview",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-010-F02",
+      "handback_visible": false,
+      "hero_action": "locates the bounded promise",
+      "image_path": "frames/ST-010-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `result_rewind` scene grammar. Anonymous geometric a technical writer in a drafting desk. The hero and persistent bounded promise share one scene; objective: compress a complex workflow honestly. Keep ENT-target `bounded promise` persistent and visibly transform it through `removes claims until one mechanism remains`; show ENT-proof `scope bracket` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to compress a complex workflow honestly.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:bounded promise=resolved-preview; ENT-proof:scope bracket=hidden → ENT-target:bounded promise=present-unresolved; ENT-proof:scope bracket=hidden.",
+      "on_screen_text": "REWIND",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `result_rewind` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:bounded promise=present-unresolved; ENT-proof:scope bracket=hidden",
+      "state_before": "ENT-target:bounded promise=resolved-preview; ENT-proof:scope bracket=hidden",
+      "story_question": "What was the original state?",
+      "transition": "whip_pan motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The hero and persistent bounded promise share one scene; objective: compress a complex workflow honestly."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "locked",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-010-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-010-F03",
+      "handback_visible": false,
+      "hero_action": "sees the bounded promise blocked",
+      "image_path": "frames/ST-010-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `result_rewind` scene grammar. Anonymous geometric a technical writer in a drafting desk. The bounded promise is visibly blocked by the opening promises too many outcomes; consequence: the viewer cannot predict the lesson. Keep ENT-target `bounded promise` persistent and visibly transform it through `removes claims until one mechanism remains`; show ENT-proof `scope bracket` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But the opening promises too many outcomes.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:bounded promise=present-unresolved; ENT-proof:scope bracket=hidden → ENT-target:bounded promise=blocked; ENT-proof:scope bracket=hidden.",
+      "on_screen_text": "THE MISSED STEP",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `result_rewind` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "start_ms": 2000,
+      "state_after": "ENT-target:bounded promise=blocked; ENT-proof:scope bracket=hidden",
+      "state_before": "ENT-target:bounded promise=present-unresolved; ENT-proof:scope bracket=hidden",
+      "story_question": "Where did the process break?",
+      "transition": "locked motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The bounded promise is visibly blocked by the opening promises too many outcomes; consequence: the viewer cannot predict the lesson."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-010-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-010-F04",
+      "handback_visible": false,
+      "hero_action": "removes claims until one mechanism remains",
+      "image_path": "frames/ST-010-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `result_rewind` scene grammar. Anonymous geometric a technical writer in a drafting desk. The hero removes claims until one mechanism remains; the same bounded promise changes state on screen. Keep ENT-target `bounded promise` persistent and visibly transform it through `removes claims until one mechanism remains`; show ENT-proof `scope bracket` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to remove claims until one mechanism remains.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:bounded promise=blocked; ENT-proof:scope bracket=hidden → ENT-target:bounded promise=transformed; ENT-proof:scope bracket=hidden.",
+      "on_screen_text": "THE TURNING MOVE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `result_rewind` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "over_shoulder",
+      "start_ms": 3000,
+      "state_after": "ENT-target:bounded promise=transformed; ENT-proof:scope bracket=hidden",
+      "state_before": "ENT-target:bounded promise=blocked; ENT-proof:scope bracket=hidden",
+      "story_question": "Which decisive step changed it?",
+      "transition": "pan_right motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The hero removes claims until one mechanism remains; the same bounded promise changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-010-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-010-F05",
+      "handback_visible": false,
+      "hero_action": "checks the scope bracket",
+      "image_path": "frames/ST-010-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `result_rewind` scene grammar. Anonymous geometric a technical writer in a drafting desk. The changed bounded promise remains visible while the scope bracket is isolated. Keep ENT-target `bounded promise` persistent and visibly transform it through `removes claims until one mechanism remains`; show ENT-proof `scope bracket` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the scope bracket, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:bounded promise=transformed; ENT-proof:scope bracket=hidden → ENT-target:bounded promise=changed-pending-review; ENT-proof:scope bracket=visible.",
+      "on_screen_text": "WHY IT HOLDS",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `result_rewind` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:bounded promise=changed-pending-review; ENT-proof:scope bracket=visible",
+      "state_before": "ENT-target:bounded promise=transformed; ENT-proof:scope bracket=hidden",
+      "story_question": "What evidence survives inspection?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The changed bounded promise remains visible while the scope bracket is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "payoff",
+      "beat_roles": [
+        "payoff",
+        "limitation",
+        "handback"
+      ],
+      "broll_function": "contrast",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the opening question with the changed target.",
+      "cause_frame_ids": [
+        "ST-010-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-010-F06",
+      "handback_visible": true,
+      "hero_action": "confirms the changed bounded promise",
+      "image_path": "frames/ST-010-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `result_rewind` scene grammar. Anonymous geometric a technical writer in a drafting desk. The same bounded promise reaches its resolved state: the hook and payoff match. Keep ENT-target `bounded promise` persistent and visibly transform it through `removes claims until one mechanism remains`; show ENT-proof `scope bracket` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the opening question with the changed target.",
+      "limitation_visible": true,
+      "narration": "Now the hook and payoff match.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:bounded promise=changed-pending-review; ENT-proof:scope bracket=visible → ENT-target:bounded promise=resolved-with-boundary; ENT-proof:scope bracket=visible.",
+      "on_screen_text": "BOUNDED RESULT",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `result_rewind` advances through `payoff` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "wide",
+      "start_ms": 5000,
+      "state_after": "ENT-target:bounded promise=resolved-with-boundary; ENT-proof:scope bracket=visible",
+      "state_before": "ENT-target:bounded promise=changed-pending-review; ENT-proof:scope bracket=visible",
+      "story_question": "What bounded result can be claimed?",
+      "transition": "pull_out motivated by close the opening question with the changed target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The same bounded promise reaches its resolved state: the hook and payoff match."
+    }
+  ],
+  "kind": "hook_broll",
+  "narrative": {
+    "action_chain": [
+      "notice the pencil",
+      "removes claims until one mechanism remains",
+      "inspect the scope bracket"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The pencil changes state before the objective is secure.",
+    "limitation": "Compression must not delete limitations.",
+    "objective": "compress a complex workflow honestly",
+    "obstacle": "the opening promises too many outcomes",
+    "payoff": "the hook and payoff match",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "scope bracket",
+    "protagonist": "a technical writer",
+    "setup": "a drafting desk",
+    "stakes": "the viewer cannot predict the lesson"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:9d396230f3a88bf45697471a3ac8f5249bf15be65b120bc4222323ab93865c25",
+  "story_id": "ST-010",
+  "title": "The One-Line Outcome",
+  "variation_axes": {
+    "operation_type": "remove",
+    "proof_mechanism": "scope bracket; boundary=Compression must not delete limitations.",
+    "scene_topology": "result_rewind::a drafting desk",
+    "target_transformation": "bounded promise: unresolved -> the hook and payoff match"
+  },
+  "variation_fingerprint": "sha256:3c1856c855770a81cfebac226132e06d9750acf2a115b1b919bb6ba5e336d465",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:74faa2ffc73f20c42fec789783b13e0a371c263929ee7b07dac2d354a01567cb"
+}

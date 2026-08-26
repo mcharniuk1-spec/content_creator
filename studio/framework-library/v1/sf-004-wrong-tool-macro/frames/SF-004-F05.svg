@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<rect width="540" height="960" fill="#231218"/>
+<rect x="44" y="96" width="452" height="768" rx="28" fill="none" stroke="#f9e6c8" stroke-opacity=".16" stroke-dasharray="10 10"/>
+<text x="44" y="58" font-family="Arial,sans-serif" font-size="20" fill="#f9e6c8" opacity=".74">SF-004 · 04:00–05:00 · picture_in_picture</text>
+<text x="270" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#f9e6c8">NOW IT FITS</text>
+<text x="270" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#f9e6c8" opacity=".66">payoff</text>
+<rect x="64" y="205" width="412" height="480" rx="28" fill="#f9e6c8" opacity=".08" stroke="#ff8f9d" stroke-width="4"/><rect x="92" y="252" width="356" height="74" rx="16" fill="#ff8f9d" opacity=".25"/><rect x="92" y="350" width="220" height="32" rx="10" fill="#f9e6c8" opacity=".18"/><rect x="92" y="404" width="300" height="32" rx="10" fill="#f9e6c8" opacity=".12"/><circle cx="410" cy="618" r="28" fill="#ff8f9d"/><rect x="370" y="650" width="96" height="130" rx="18" fill="#231218" stroke="#ff8f9d" stroke-width="4"/><circle cx="418" cy="694" r="20" fill="#ff8f9d"/><path d="M390 758q28-44 56 0" fill="#ff8f9d" opacity=".55"/>
+<rect x="64" y="820" width="412" height="64" rx="18" fill="#f9e6c8" opacity=".10"/>
+<text x="84" y="848" font-family="Arial,sans-serif" font-size="15" fill="#f9e6c8" opacity=".72">B-ROLL: prove_state</text>
+<text x="84" y="872" font-family="Arial,sans-serif" font-size="15" fill="#f9e6c8" opacity=".72">CUT: push · TEXT: editable</text>
+<text x="270" y="925" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#f9e6c8" opacity=".48">LOCAL PREVIS · EXTERNAL PROVIDER NOT RUN</text>
+</svg>

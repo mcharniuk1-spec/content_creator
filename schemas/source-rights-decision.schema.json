@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/source-rights-decision.schema.json",
+  "title": "SourceRightsDecision",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "source_record_id",
+    "source_kind",
+    "checked_at",
+    "rights_state",
+    "allowed_analysis",
+    "prohibited_reuse",
+    "storage_rule",
+    "reviewer_role",
+    "reviewer_actor_id",
+    "verdict",
+    "evidence"
+  ],
+  "properties": {
+    "decision_id": {"type": "string", "pattern": "^RIGHTS-[A-Z0-9-]+$"},
+    "source_record_id": {"type": "string", "pattern": "^(SRC|LCTX)-[A-Z0-9-]+$"},
+    "source_kind": {"enum": ["public_network", "local_context"]},
+    "checked_at": {"type": "string", "format": "date-time"},
+    "content_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "rights_state": {"enum": ["facts_only", "commentary_allowed", "permission_required", "blocked", "unknown"]},
+    "allowed_analysis": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "prohibited_reuse": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "storage_rule": {"type": "string", "minLength": 1},
+    "reviewer_role": {"const": "rights_and_privacy_guardian"},
+    "reviewer_actor_id": {"type": "string", "minLength": 1},
+    "verdict": {"enum": ["PASS", "REVISE", "BLOCK"]},
+    "evidence": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "notes": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"source_kind": {"const": "local_context"}}, "required": ["source_kind"]},
+      "then": {"required": ["content_sha256"], "properties": {"content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}}
+    },
+    {
+      "if": {"properties": {"verdict": {"const": "PASS"}}, "required": ["verdict"]},
+      "then": {"properties": {"rights_state": {"enum": ["facts_only", "commentary_allowed", "permission_required"]}}}
+    }
+  ],
+  "additionalProperties": false
+}

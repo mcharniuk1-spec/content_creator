@@ -1,0 +1,402 @@
+{
+  "audio_policy": "Original creator voice only; no cloning or synthetic likeness.",
+  "creator_media_state": "not_received",
+  "evidence_policy": "Only deterministic UI/diagrams may carry proof. AI B-roll is context-only.",
+  "provider_generation_state": "blocked_approval",
+  "publication_state": "blocked_approval",
+  "resolve_mutation_state": "blocked_approval",
+  "schema": "north-hux.studio-edit-plan.v1",
+  "script_key": "permission-not-yet",
+  "timeline": [
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 2000,
+      "evidence_role": "none",
+      "frame_sha256": "00476d1b0066d8a3227eaaf217e50d0f2bb5cf12911157922dad2cb6eebebdeb",
+      "frame_uri": "04-permission-not-yet/frames/01.svg",
+      "generation_state": "not_run",
+      "narration": "The dangerous permission is not read. It is irreversible write.",
+      "on_screen_text": "The dangerous permission is not read. It is irreversible write.",
+      "rights_state": "owner_media_required",
+      "shot_index": 1,
+      "source_evidence_ids": [],
+      "start_ms": 0,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 5000,
+      "evidence_role": "context",
+      "frame_sha256": "d1677eae3accae7966e8f96d57e4933c48fab525963ac6a85e25bc1da9bf1112",
+      "frame_uri": "04-permission-not-yet/frames/02.svg",
+      "generation_state": "not_run",
+      "narration": "Reading data creates exposure. Writing creates consequences.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 2,
+      "source_evidence_ids": [],
+      "start_ms": 2000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: Reading data creates exposure. Writing creates consequences.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 8000,
+      "evidence_role": "none",
+      "frame_sha256": "8e5857cbe58b9ce36a6409478e19367f09985890bcd636cc0c5227eedbc0da35",
+      "frame_uri": "04-permission-not-yet/frames/03.svg",
+      "generation_state": "not_run",
+      "narration": "Start with read, then propose, then reversible write, and only later bounded execution.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 3,
+      "source_evidence_ids": [],
+      "start_ms": 5000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Capture an owned deterministic prototype or render the supplied diagram",
+        "prompt": "Use only owned/synthetic example data. Screen must visibly support the claim; no competitor UI reuse."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "screen_demo",
+      "end_ms": 11000,
+      "evidence_role": "proof",
+      "frame_sha256": "d8de3fbb5e112f07e4dbfe5ca2baa01fa2aa611b9e98be634b0f45cb9c690e83",
+      "frame_uri": "04-permission-not-yet/frames/04.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 4,
+      "source_evidence_ids": [],
+      "start_ms": 8000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Permission matrix with READ, PROPOSE, REVERSIBLE WRITE, and EXECUTE; approval gate before irreversible action.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 14000,
+      "evidence_role": "none",
+      "frame_sha256": "748c98066710eea3213bcde32a7b056c06273d5d492bc215525957ce0282f097",
+      "frame_uri": "04-permission-not-yet/frames/05.svg",
+      "generation_state": "not_run",
+      "narration": "For every step, log the source, decision, tool call, and outcome.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 5,
+      "source_evidence_ids": [],
+      "start_ms": 11000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 18000,
+      "evidence_role": "proof",
+      "frame_sha256": "a87153892be4de262ca053cf6c46312e61f46ef56388fc42dee8dc5a47cd37f1",
+      "frame_uri": "04-permission-not-yet/frames/06.svg",
+      "generation_state": "not_run",
+      "narration": "If rollback is impossible, require human approval before the action.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 6,
+      "source_evidence_ids": [],
+      "start_ms": 14000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Permission matrix with READ, PROPOSE, REVERSIBLE WRITE, and EXECUTE; approval gate before irreversible action.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve provider, prompt, budget, and rights before generation",
+        "prompt": "A sealed red switch behind clear glass in a minimal control room; dramatic context only, no UI or operational evidence."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "ai_generated_broll",
+      "end_ms": 20000,
+      "evidence_role": "context",
+      "frame_sha256": "c74dd82354785f5b6f5924be8ce79c55dce36751db28b30bab9460024db7bbe7",
+      "frame_uri": "04-permission-not-yet/frames/07.svg",
+      "generation_state": "blocked_approval",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "provider_review_required",
+      "shot_index": 7,
+      "source_evidence_ids": [],
+      "start_ms": 18000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Optional two-second metaphorical context insert. It must not carry evidence, results, UI, numbers, people, likeness, or logos.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 24000,
+      "evidence_role": "none",
+      "frame_sha256": "333748c715bdf3b6885d73b745aeb12f327a549fb62f24a4ba3ee3633fd65b72",
+      "frame_uri": "04-permission-not-yet/frames/08.svg",
+      "generation_state": "not_run",
+      "narration": "Authority should expand after evidence, never before it.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 8,
+      "source_evidence_ids": [],
+      "start_ms": 20000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 26000,
+      "evidence_role": "context",
+      "frame_sha256": "ea90a8f2b46ed4499a3a7370e46bdf563bb43da3b8275d3c24eaf06dfba7fb81",
+      "frame_uri": "04-permission-not-yet/frames/09.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Audit one irreversible action today.",
+      "rights_state": "original_plan",
+      "shot_index": 9,
+      "source_evidence_ids": [],
+      "start_ms": 24000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: Audit one irreversible action today.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve CTA and brand lockup",
+        "prompt": "Render deterministically from North Hux typography and color tokens."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "end_card",
+      "end_ms": 30000,
+      "evidence_role": "none",
+      "frame_sha256": "b80d440f58bfb198edf01cbed223d2a383fb5f07f1f08a7651d9dd1475857b9d",
+      "frame_uri": "04-permission-not-yet/frames/10.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Audit one irreversible action today.",
+      "rights_state": "original_plan",
+      "shot_index": 10,
+      "source_evidence_ids": [],
+      "start_ms": 26000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "North Hux end card: Audit one irreversible action today.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 5000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "keyword_emphasis",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-050-F01",
+      "image_path": "frames/SF-050-F01.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "IN PROGRESS",
+      "sequence_number": 1,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the scene in progress boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "scene in progress",
+      "transition": "match_on_action",
+      "visual_change": "Late-Night Alert: scene in progress; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-050-F02",
+      "image_path": "frames/SF-050-F02.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "STAKES",
+      "sequence_number": 2,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the stakes boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "stakes",
+      "transition": "match_on_action",
+      "visual_change": "Late-Night Alert: stakes; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-050-F03",
+      "image_path": "frames/SF-050-F03.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "DECIDE",
+      "sequence_number": 3,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the decision boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "decision",
+      "transition": "match_on_action",
+      "visual_change": "Late-Night Alert: decision; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "keyword_emphasis",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-050-F04",
+      "image_path": "frames/SF-050-F04.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "RESULT",
+      "sequence_number": 4,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the result boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "result",
+      "transition": "match_on_action",
+      "visual_change": "Late-Night Alert: result; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-050-F05",
+      "image_path": "frames/SF-050-F05.svg",
+      "motion": "measured_beat motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "LESSON",
+      "sequence_number": 5,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the lesson boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "lesson",
+      "transition": "match_on_action",
+      "visual_change": "Late-Night Alert: lesson; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-050",
+  "kind": "intro_broll",
+  "name": "Late-Night Alert",
+  "purpose": "Start with an operational alert",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-011"
+    ],
+    "export_id": "SIGEXP-SF-050",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:fd778bbedeff88e294dab093ad71d76d80f062be687835bc188e96c5925dca41",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-001"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "delayed_reveal",
+    "broll_function": "attention_reset",
+    "cta_exit": "answer_question",
+    "hook_mechanism": "story_in_progress",
+    "pacing_profile": "measured_beat",
+    "proof_form": "calculation",
+    "risk_class": "source_dependent",
+    "sound_role": "accent_sfx",
+    "text_role": "no_text",
+    "transition_family": "match_on_action",
+    "viewer_job": "compare_options",
+    "visual_grammar": "mock_screen_capture"
+  },
+  "version": "1.0.0"
+}

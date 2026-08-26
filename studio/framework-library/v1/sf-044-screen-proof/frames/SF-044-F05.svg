@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<rect width="540" height="960" fill="#151126"/>
+<rect x="44" y="96" width="452" height="768" rx="28" fill="none" stroke="#f6d365" stroke-opacity=".16" stroke-dasharray="10 10"/>
+<text x="44" y="58" font-family="Arial,sans-serif" font-size="20" fill="#f6d365" opacity=".74">SF-044 · 04:00–05:00 · return_cut</text>
+<text x="270" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#f6d365">VERDICT</text>
+<text x="270" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#f6d365" opacity=".66">verdict</text>
+<rect x="58" y="210" width="424" height="470" rx="28" fill="#b89cff" opacity=".12"/><circle cx="270" cy="420" r="96" fill="#f6d365" opacity=".16"/><rect x="322" y="492" width="132" height="156" rx="22" fill="#f6d365" opacity=".88" stroke="#b89cff" stroke-width="5"/><circle cx="388" cy="548" r="26" fill="#b89cff"/><path d="M354 618q34-48 68 0" fill="#b89cff" opacity=".65"/><circle cx="270" cy="708" r="38" fill="#b89cff"/><path d="M210 790q60-90 120 0" fill="#b89cff" opacity=".55"/>
+<rect x="64" y="820" width="412" height="64" rx="18" fill="#f6d365" opacity=".10"/>
+<text x="84" y="848" font-family="Arial,sans-serif" font-size="15" fill="#f6d365" opacity=".72">B-ROLL: prove_state</text>
+<text x="84" y="872" font-family="Arial,sans-serif" font-size="15" fill="#f6d365" opacity=".72">CUT: none · TEXT: editable</text>
+<text x="270" y="925" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#f6d365" opacity=".48">LOCAL PREVIS · EXTERNAL PROVIDER NOT RUN</text>
+</svg>

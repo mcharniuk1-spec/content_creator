@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-030",
+  "title": "Three Steps to a Hook",
+  "source_story": "../v2/st-030-three-steps-to-a-hook/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult data steward in their mid 30s, natural coiled hair, slate shirt and warm-gray trousers",
+  "location_lock": "small shared studio with a standing desk, paper planning wall, shelf and soft daylight",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-030 Three Steps to a Hook\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult data steward in their mid 30s, natural coiled hair, slate shirt and warm-gray trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: small shared studio with a standing desk, paper planning wall, shelf and soft daylight. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: bounded hook. Trigger prop: three cards. Proof prop: hook test. Obstacle: the first line is broad and abstract.\nSix panels in reading order:\n1 close still: notices the three cards; show The three cards changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the bounded hook; show The hero and persistent bounded hook share one scene; objective: open with an honest curiosity loop. Emotional register: orientation.\n3 medium still: names the concrete problem, stake, and promised mechanism; show The hero attempts to name the concrete problem, stake, and promised mechanism; the bounded hook visibly responds. Emotional register: concern.\n4 medium still: names the concrete problem, stake, and promised mechanism; show The hero names the concrete problem, stake, and promised mechanism; the same bounded hook changes state on screen. Emotional register: agency.\n5 macro still: checks the hook test; show The changed bounded hook remains visible while the hook test is isolated. Emotional register: confidence-with-caution.\n6 wide still: returns the resolved target to the viewer; show The resolved bounded hook stays visible while the sequence returns to A-roll: the opening question matches the answer. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Avoid certainty beyond available proof.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-030-F01.png",
+    "frames/ST-030-F02.png",
+    "frames/ST-030-F03.png",
+    "frames/ST-030-F04.png",
+    "frames/ST-030-F05.png",
+    "frames/ST-030-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "25bb07d3454d46578f7fc7f8281be88d9f2905efd9567f5ea39a062b97e74172",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "ad919ba3d9e1ce9a7bccf36fcb5a4a2fb187468a25813e533f59ecd45fcc9d1d",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-030-F01",
+      "file": "frames/ST-030-F01.png",
+      "sha256": "db9f97c64f3ed3a3b69219855deb7812aa490d4c283355c139d2c62fadbc0cf7",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 110.92,
+      "luma_stddev": 70.36,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-030-F02",
+      "file": "frames/ST-030-F02.png",
+      "sha256": "4b143a40b3480e8ff02ea48f9f362d6d33ca6cad472474f894df86e8eec8c2dc",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 144.01,
+      "luma_stddev": 70.99,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-030-F03",
+      "file": "frames/ST-030-F03.png",
+      "sha256": "85e6cb3bf5df30724ca4f5773b1316050e3afa10fe3a13935f71efb2ea3c75fe",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 123.32,
+      "luma_stddev": 73.91,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-030-F04",
+      "file": "frames/ST-030-F04.png",
+      "sha256": "a14ce171d95d50697a7a542127a0f4ff8296dbd9a2422bbab1c701dbd7677e4e",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 122.78,
+      "luma_stddev": 74.5,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-030-F05",
+      "file": "frames/ST-030-F05.png",
+      "sha256": "1be5abe098320bd4ff896e01262530984f179981de65f345b6b4124b4c2c4b85",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 136.3,
+      "luma_stddev": 68.51,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-030-F06",
+      "file": "frames/ST-030-F06.png",
+      "sha256": "d19a220b79f3755d262443e66ada568582ad797dc1faf8c2de0d572d362a6a38",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 135.94,
+      "luma_stddev": 71.34,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

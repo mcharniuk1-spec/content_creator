@@ -1,0 +1,423 @@
+{
+  "adaptation_targets": [
+    "instagram_reels",
+    "tiktok"
+  ],
+  "claim_state": "evidence_bound_and_hypothesis_labeled",
+  "creator_media_state": "not_received",
+  "creator_track": "governed_agent_operations",
+  "cta": "Send this to whoever owns your release gate.",
+  "evidence_boundary": {
+    "analysis_eligible_videos": 2949,
+    "broad_screen_videos": 10000,
+    "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
+  },
+  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "full_script": "A passing eval is not permission to deploy. An eval measures behavior on a defined set. Production adds new users, tools, data, and failure costs. Separate quality evidence from release authority. Require outcome tests, trajectory checks, permission review, monitoring, and a rollback owner. Then release to the smallest reversible scope. Evaluation informs the gate. It does not replace the gate.",
+  "hook": "A passing eval is not permission to deploy.",
+  "owner_state": "owner_review_pending",
+  "pillar": "evaluation_and_evidence",
+  "primary_platform": "youtube_shorts",
+  "proof_visual": "Release gate showing QUALITY, TRAJECTORY, PERMISSIONS, MONITORING, and ROLLBACK as independent checks.",
+  "provider_generation_state": "blocked_approval",
+  "publication_state": "blocked_approval",
+  "resolve_mutation_state": "blocked_approval",
+  "schema": "north-hux.script-package.v1",
+  "script_key": "eval-not-permission",
+  "sequence_position": 7,
+  "shots": [
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 2000,
+      "evidence_role": "none",
+      "frame_sha256": "e0d31d1d95cac7173f6d6fe1d9374381be4e5967c1f89a919059a5d8aa1e90f9",
+      "frame_uri": "07-eval-not-permission/frames/01.svg",
+      "generation_state": "not_run",
+      "narration": "A passing eval is not permission to deploy.",
+      "on_screen_text": "A passing eval is not permission to deploy.",
+      "rights_state": "owner_media_required",
+      "shot_index": 1,
+      "source_evidence_ids": [],
+      "start_ms": 0,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 5000,
+      "evidence_role": "context",
+      "frame_sha256": "5f43eaeedfc069bc2f488c5eaadf021b401eb349d6615a882da2352728df09e5",
+      "frame_uri": "07-eval-not-permission/frames/02.svg",
+      "generation_state": "not_run",
+      "narration": "An eval measures behavior on a defined set. Production adds new users, tools, data, and failure costs.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 2,
+      "source_evidence_ids": [],
+      "start_ms": 2000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: An eval measures behavior on a defined set. Production adds new users, tools, data, and failure costs.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 8000,
+      "evidence_role": "none",
+      "frame_sha256": "6bd54b5cc6aff8f832faef8f5feac09d5e0ed684f27a62440247a0fa2fb8e800",
+      "frame_uri": "07-eval-not-permission/frames/03.svg",
+      "generation_state": "not_run",
+      "narration": "Separate quality evidence from release authority.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 3,
+      "source_evidence_ids": [],
+      "start_ms": 5000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Capture an owned deterministic prototype or render the supplied diagram",
+        "prompt": "Use only owned/synthetic example data. Screen must visibly support the claim; no competitor UI reuse."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "screen_demo",
+      "end_ms": 11000,
+      "evidence_role": "proof",
+      "frame_sha256": "df47cf769bace2c9b3ad6a4d7f7997c4a6646cb922e3120bfffb1a7df87ef70f",
+      "frame_uri": "07-eval-not-permission/frames/04.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 4,
+      "source_evidence_ids": [],
+      "start_ms": 8000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Release gate showing QUALITY, TRAJECTORY, PERMISSIONS, MONITORING, and ROLLBACK as independent checks.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 14000,
+      "evidence_role": "none",
+      "frame_sha256": "620c51fdb42d62b8339ab704bd36ed917d58cb1fd0ae0b6348a9864a5dceb584",
+      "frame_uri": "07-eval-not-permission/frames/05.svg",
+      "generation_state": "not_run",
+      "narration": "Require outcome tests, trajectory checks, permission review, monitoring, and a rollback owner.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 5,
+      "source_evidence_ids": [],
+      "start_ms": 11000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "single restrained accent"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 18000,
+      "evidence_role": "proof",
+      "frame_sha256": "bf517ec684b88206aa880e90444894f6b04a0f2a1284bb87bea533aeb8b8f3eb",
+      "frame_uri": "07-eval-not-permission/frames/06.svg",
+      "generation_state": "not_run",
+      "narration": "Then release to the smallest reversible scope.",
+      "on_screen_text": "",
+      "rights_state": "original_plan",
+      "shot_index": 6,
+      "source_evidence_ids": [],
+      "start_ms": 14000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Release gate showing QUALITY, TRAJECTORY, PERMISSIONS, MONITORING, and ROLLBACK as independent checks.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve provider, prompt, budget, and rights before generation",
+        "prompt": "A green test light stopping before a second guarded doorway; abstract context only, no test scores or deployment proof."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "ai_generated_broll",
+      "end_ms": 20000,
+      "evidence_role": "context",
+      "frame_sha256": "469c2013503111fdd271eb81e05fa0e06c1308b271300334b5fade698a936937",
+      "frame_uri": "07-eval-not-permission/frames/07.svg",
+      "generation_state": "blocked_approval",
+      "narration": "",
+      "on_screen_text": "",
+      "rights_state": "provider_review_required",
+      "shot_index": 7,
+      "source_evidence_ids": [],
+      "start_ms": 18000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Optional two-second metaphorical context insert. It must not carry evidence, results, UI, numbers, people, likeness, or logos.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Record original creator take",
+        "prompt": "Record two clean takes plus five seconds of room tone; neutral wardrobe; no synthetic likeness."
+      },
+      "audio": {
+        "creator_voice": true,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "creator_aroll",
+      "end_ms": 24000,
+      "evidence_role": "none",
+      "frame_sha256": "f5c5212e9c0679b300430495a451e74be0db77b532362fce957792c53f2b2ea4",
+      "frame_uri": "07-eval-not-permission/frames/08.svg",
+      "generation_state": "not_run",
+      "narration": "Evaluation informs the gate. It does not replace the gate.",
+      "on_screen_text": "",
+      "rights_state": "owner_media_required",
+      "shot_index": 8,
+      "source_evidence_ids": [],
+      "start_ms": 20000,
+      "transition": {
+        "in": "hard_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Creator speaking directly to camera. Chest-up 9:16, eye line at upper third, practical operator tone, natural hand movement, clean depth separation.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Review exact wording",
+        "prompt": "Render as deterministic motion typography/diagram; never fabricate screenshots, statistics, or results."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "deterministic_overlay",
+      "end_ms": 26000,
+      "evidence_role": "context",
+      "frame_sha256": "9578a159311ba770ed53ec57e143c59ec16779200ae9b3f47b8c3d2037a6904c",
+      "frame_uri": "07-eval-not-permission/frames/09.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Send this to whoever owns your release gate.",
+      "rights_state": "original_plan",
+      "shot_index": 9,
+      "source_evidence_ids": [],
+      "start_ms": 24000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "Kinetic type supports: Send this to whoever owns your release gate.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    },
+    {
+      "acceptance_checks": [
+        "9:16 safe zones pass",
+        "claim and visual agree",
+        "no unlicensed source media",
+        "AI B-roll is not evidence"
+      ],
+      "asset_requirement": {
+        "owner_action": "Approve CTA and brand lockup",
+        "prompt": "Render deterministically from North Hux typography and color tokens."
+      },
+      "audio": {
+        "creator_voice": false,
+        "music": "low instrumental bed",
+        "sfx": "none"
+      },
+      "capture_mode": "end_card",
+      "end_ms": 30000,
+      "evidence_role": "none",
+      "frame_sha256": "8b3e6df4dfcb70fde7cfa7c6f985de81c08243fd927cc87c7585707e2272e497",
+      "frame_uri": "07-eval-not-permission/frames/10.svg",
+      "generation_state": "not_run",
+      "narration": "",
+      "on_screen_text": "Send this to whoever owns your release gate.",
+      "rights_state": "original_plan",
+      "shot_index": 10,
+      "source_evidence_ids": [],
+      "start_ms": 26000,
+      "transition": {
+        "in": "match_cut",
+        "max_ms": 160,
+        "out": "hard_cut"
+      },
+      "visual_spec": {
+        "aspect_ratio": "9:16",
+        "composition": "North Hux end card: Send this to whoever owns your release gate.",
+        "safe_zone": "120px sides; 220px top/bottom"
+      }
+    }
+  ],
+  "target_duration_ms": 30000,
+  "title": "A Passing Eval Is Not Permission to Deploy",
+  "version": 1
+}

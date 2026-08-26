@@ -1,0 +1,39 @@
+{
+  "schema": "north-hux.youtube-census-config.v1",
+  "adapter_version": "youtube-data-api-v3-public@1.0.0",
+  "target_accounts": {"minimum": 10000, "maximum": 12000},
+  "calibration_accounts": {"minimum": 100, "maximum": 300},
+  "calibration_content": {
+    "qualified_accounts": 300,
+    "videos_per_account": 3,
+    "minimum_videos_per_account": 3,
+    "maximum_videos_per_account": 10,
+    "target_rows": 900
+  },
+  "qualification": {
+    "recent_uploads_per_channel": 10,
+    "fresh_days": 180,
+    "baseline_days": 365,
+    "minimum_relevant_videos": 3,
+    "minimum_short_candidates": 2,
+    "minimum_score": 8
+  },
+  "top_references": {"target_rows": 100, "videos_per_creator": 1},
+  "maximum_creator_contribution_fraction": 0.01,
+  "daily_limits": {"api_units": 10000, "search_calls": 100, "local_search_call_budget": 99},
+  "discovery": {"resource_type": "video", "video_duration": "short", "pages_per_cell": 1, "max_results_per_page": 50},
+  "request": {"timeout_seconds": 30, "max_attempts": 5, "min_interval_seconds": 0.3},
+  "retention": {"non_authorized_api_data_days": 30, "action": "refresh_or_delete"},
+  "orders": ["relevance", "date", "viewCount"],
+  "markets": ["US", "CA", "GB", "AU", "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE"],
+  "query_groups": [
+    {"track": "pm_ai_integration", "intent": "problem_selection", "queries": ["AI agents for business", "AI agents product management", "agentic AI business use cases", "AI product operations"]},
+    {"track": "pm_ai_integration", "intent": "workflow_and_adoption", "queries": ["AI agent business workflow", "AI automation product strategy", "enterprise AI agent adoption", "AI agents organizational change"]},
+    {"track": "pm_ai_integration", "intent": "value_and_cases", "queries": ["AI agent ROI business", "AI agents case study", "AI agents operations", "AI agent implementation business"]},
+    {"track": "governed_agent_operations", "intent": "building", "queries": ["build AI agents", "AI agent tutorial", "agentic workflow tutorial", "AI agents production"]},
+    {"track": "governed_agent_operations", "intent": "integration", "queries": ["MCP AI agents", "AI agent API integration", "LangGraph business agents", "n8n AI agent workflow"]},
+    {"track": "governed_agent_operations", "intent": "knowledge_and_state", "queries": ["AI agent RAG", "AI agent memory", "AI agent orchestration", "AI agent state management"]},
+    {"track": "governed_agent_operations", "intent": "evaluation_and_governance", "queries": ["AI agent evaluation", "AI agent observability", "AI agent security", "human in the loop AI agents"]},
+    {"track": "governed_agent_operations", "intent": "failure_and_recovery", "queries": ["AI agent guardrails", "AI agent failure analysis", "AI agent rollback", "AI agent reliability"]}
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<rect width="540" height="960" fill="#102019"/>
+<rect x="44" y="96" width="452" height="768" rx="28" fill="none" stroke="#f8d49d" stroke-opacity=".16" stroke-dasharray="10 10"/>
+<text x="44" y="58" font-family="Arial,sans-serif" font-size="20" fill="#f8d49d" opacity=".74">SF-021 · 01:00–02:00 · absent</text>
+<text x="270" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#f8d49d">FIRST CAUSE</text>
+<text x="270" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#f8d49d" opacity=".66">first cause</text>
+<circle cx="270" cy="430" r="142" fill="#85d18a" opacity=".18"/><circle cx="270" cy="430" r="82" fill="none" stroke="#85d18a" stroke-width="14"/><path d="M210 430h120M270 370v120" stroke="#f8d49d" stroke-width="10" stroke-linecap="round"/>
+<rect x="64" y="820" width="412" height="64" rx="18" fill="#f8d49d" opacity=".10"/>
+<text x="84" y="848" font-family="Arial,sans-serif" font-size="15" fill="#f8d49d" opacity=".72">B-ROLL: demonstrate_process</text>
+<text x="84" y="872" font-family="Arial,sans-serif" font-size="15" fill="#f8d49d" opacity=".72">CUT: hard_cut · TEXT: editable</text>
+<text x="270" y="925" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#f8d49d" opacity=".48">LOCAL PREVIS · EXTERNAL PROVIDER NOT RUN</text>
+</svg>

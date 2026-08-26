@@ -1,0 +1,157 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 5000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-038-F01",
+      "image_path": "frames/SF-038-F01.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "WATCH",
+      "sequence_number": 1,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the object action boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "object action",
+      "transition": "dissolve",
+      "visual_change": "Transparent Box: object action; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-038-F02",
+      "image_path": "frames/SF-038-F02.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "DETAIL",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the macro detail boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "macro detail",
+      "transition": "dissolve",
+      "visual_change": "Transparent Box: macro detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-038-F03",
+      "image_path": "frames/SF-038-F03.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "CAUSE",
+      "sequence_number": 3,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the cause boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "cause",
+      "transition": "dissolve",
+      "visual_change": "Transparent Box: cause; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-038-F04",
+      "image_path": "frames/SF-038-F04.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "RULE",
+      "sequence_number": 4,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the rule boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "rule",
+      "transition": "dissolve",
+      "visual_change": "Transparent Box: rule; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-038-F05",
+      "image_path": "frames/SF-038-F05.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "RESOLVE",
+      "sequence_number": 5,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the object resolves boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "object resolves",
+      "transition": "dissolve",
+      "visual_change": "Transparent Box: object resolves; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-038",
+  "kind": "hook_broll",
+  "name": "Transparent Box",
+  "purpose": "Make hidden system state visible",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-009"
+    ],
+    "export_id": "SIGEXP-SF-038",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:e34b5e674557190a8d11d3037e3d01e72c2905050a7d788ce2695d8809a53ff0",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-008"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "delayed_reveal",
+    "broll_function": "concretize_abstraction",
+    "cta_exit": "save_reference",
+    "hook_mechanism": "object_demo",
+    "pacing_profile": "slow_observation",
+    "proof_form": "calculation",
+    "risk_class": "low",
+    "sound_role": "voice_plus_accent",
+    "text_role": "proof_callout",
+    "transition_family": "dissolve",
+    "viewer_job": "assess_risk",
+    "visual_grammar": "split_screen"
+  },
+  "version": "1.0.0"
+}

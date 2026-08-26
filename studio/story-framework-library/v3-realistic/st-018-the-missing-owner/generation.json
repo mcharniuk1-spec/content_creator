@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-018",
+  "title": "The Missing Owner",
+  "source_story": "../v2/st-018-the-missing-owner/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult content strategist in their late 30s, straight dark bob, moss-green blouse and black trousers",
+  "location_lock": "believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-018 The Missing Owner\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult content strategist in their late 30s, straight dark bob, moss-green blouse and black trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: assigned decision. Trigger prop: name tag. Proof prop: ownership card. Obstacle: every task has a date but no owner.\nSix panels in reading order:\n1 close still: notices the name tag; show The name tag changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the assigned decision; show The hero and persistent assigned decision share one scene; objective: move one decision forward. Emotional register: orientation.\n3 over_shoulder still: adds one accountable role and review point; show The hero attempts to add one accountable role and review point; the assigned decision visibly responds. Emotional register: concern.\n4 close still: sees the assigned decision blocked; show The assigned decision is visibly blocked by every task has a date but no owner; consequence: the deadline can pass without action. Emotional register: agency.\n5 wide still: adds one accountable role and review point; show The hero adds one accountable role and review point; the same assigned decision changes state on screen. Emotional register: confidence-with-caution.\n6 medium still: confirms the changed assigned decision; show The same assigned decision reaches its resolved state: the next action has a visible owner. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Ownership labels do not guarantee completion.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-018-F01.png",
+    "frames/ST-018-F02.png",
+    "frames/ST-018-F03.png",
+    "frames/ST-018-F04.png",
+    "frames/ST-018-F05.png",
+    "frames/ST-018-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "1408a6a6b1ea1bf587a3a7a92f5e88674e7044a1e09e263097d84083fa783fc1",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "9d5b9547a3bf312bcbf473139017f5126c273999ac145aa96c65a0b02a3d3f4f",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-018-F01",
+      "file": "frames/ST-018-F01.png",
+      "sha256": "35b9b538506c929df8c573f0eb486bb45d37e69fba13af7d729d2b1bd12540b6",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 105.71,
+      "luma_stddev": 62.48,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-018-F02",
+      "file": "frames/ST-018-F02.png",
+      "sha256": "045176fa75c7603f558d79b3c1f0be142180c51f7bf132618575ec4e17983b06",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 105.3,
+      "luma_stddev": 64.49,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-018-F03",
+      "file": "frames/ST-018-F03.png",
+      "sha256": "65d8b7d12ee726bd8e0f2588dfe92a3412aa29b39db95c0c83d8dae20e6887fa",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 81.35,
+      "luma_stddev": 66.44,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-018-F04",
+      "file": "frames/ST-018-F04.png",
+      "sha256": "13318eb76b1f717858c4437033d55264ccb15cb19540e4df4236c40197759674",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 83.7,
+      "luma_stddev": 52.03,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-018-F05",
+      "file": "frames/ST-018-F05.png",
+      "sha256": "ceb3aae1e2b44cbff9711a7ca32d15236540860a20e9fc5f4e402116e00f0c3d",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 94.82,
+      "luma_stddev": 62.92,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-018-F06",
+      "file": "frames/ST-018-F06.png",
+      "sha256": "e0bfd62c7d618e96c73481e20e3eba0c9801cce9a702b4af791d730a9a962852",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 97.73,
+      "luma_stddev": 57.82,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

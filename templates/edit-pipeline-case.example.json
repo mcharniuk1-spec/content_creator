@@ -1,0 +1,19 @@
+{
+  "schema": "archflow.edit-pipeline-case.v1",
+  "case_id": "owner-approved-video-2026-08-25",
+  "rights": {
+    "status": "owner_owned_approved",
+    "consent": "approved",
+    "source_note": "Replace with the owner-approved source record."
+  },
+  "execution": {
+    "allow_local_render": true,
+    "allowed_media_roots": ["/absolute/path/to/approved/media"],
+    "allowed_output_roots": ["/absolute/path/to/approved/outputs"]
+  },
+  "policy": {
+    "provider_execution": false,
+    "generative_repair": "disabled",
+    "resolve_finishing": "optional"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 8000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "keyword_emphasis",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-011-F01",
+      "image_path": "frames/SF-011-F01.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "IS THIS YOU?",
+      "sequence_number": 1,
+      "shot_scale": "macro",
+      "sound_cue": "music_pulse aligned to the question boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "question",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: question; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "on_cut",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-011-F02",
+      "image_path": "frames/SF-011-F02.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "THE SYMPTOM",
+      "sequence_number": 2,
+      "shot_scale": "macro",
+      "sound_cue": "music_pulse aligned to the symptom boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "symptom",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: symptom; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "on_cut",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-011-F03",
+      "image_path": "frames/SF-011-F03.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "CHOOSE",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the choice boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "choice",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: choice; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "keyword_emphasis",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-011-F04",
+      "image_path": "frames/SF-011-F04.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "DIAGNOSIS",
+      "sequence_number": 4,
+      "shot_scale": "macro",
+      "sound_cue": "music_pulse aligned to the diagnosis boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "diagnosis",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: diagnosis; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "on_cut",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-011-F05",
+      "image_path": "frames/SF-011-F05.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "WHY",
+      "sequence_number": 5,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the mechanism boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "mechanism",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: mechanism; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "continuous",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 6000,
+      "frame_id": "SF-011-F06",
+      "image_path": "frames/SF-011-F06.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "BRIDGE",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the bridge detail boundary; licensed or original audio only.",
+      "start_ms": 5000,
+      "story_function": "bridge detail",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: bridge detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "continuous",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 7000,
+      "frame_id": "SF-011-F07",
+      "image_path": "frames/SF-011-F07.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "HOLD",
+      "sequence_number": 7,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the proof hold boundary; licensed or original audio only.",
+      "start_ms": 6000,
+      "story_function": "proof hold",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: proof hold; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "establish_context",
+      "caption_relation": "continuous",
+      "composition": "object_macro clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 8000,
+      "frame_id": "SF-011-F08",
+      "image_path": "frames/SF-011-F08.svg",
+      "motion": "measured_beat motion; use cut_on_sound only at this state boundary.",
+      "on_screen_text": "ANSWER",
+      "sequence_number": 8,
+      "shot_scale": "medium",
+      "sound_cue": "music_pulse aligned to the answer frame boundary; licensed or original audio only.",
+      "start_ms": 7000,
+      "story_function": "answer frame",
+      "transition": "cut_on_sound",
+      "visual_change": "Owner Gap: answer frame; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-011",
+  "kind": "hook_intro",
+  "name": "Owner Gap",
+  "purpose": "Reveal missing decision ownership",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-004"
+    ],
+    "export_id": "SIGEXP-SF-011",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:77da1ff76d30d8b27b5acd43ceb5b331ff311c4c8da73860e76850863ebdf2ad",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-004"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "delayed_reveal",
+    "broll_function": "establish_context",
+    "cta_exit": "recap",
+    "hook_mechanism": "diagnostic_question",
+    "pacing_profile": "measured_beat",
+    "proof_form": "calculation",
+    "risk_class": "source_dependent",
+    "sound_role": "music_pulse",
+    "text_role": "keyword_captions",
+    "transition_family": "cut_on_sound",
+    "viewer_job": "imagine_outcome",
+    "visual_grammar": "object_macro"
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,157 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 5000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-056-F01",
+      "image_path": "frames/SF-056-F01.svg",
+      "motion": "held_reveal motion; use push only at this state boundary.",
+      "on_screen_text": "CONTEXT",
+      "sequence_number": 1,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the establish boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "establish",
+      "transition": "push",
+      "visual_change": "Macro Tool Sequence: establish; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-056-F02",
+      "image_path": "frames/SF-056-F02.svg",
+      "motion": "held_reveal motion; use push only at this state boundary.",
+      "on_screen_text": "STEP 1",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the action one boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "action one",
+      "transition": "push",
+      "visual_change": "Macro Tool Sequence: action one; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-056-F03",
+      "image_path": "frames/SF-056-F03.svg",
+      "motion": "held_reveal motion; use push only at this state boundary.",
+      "on_screen_text": "STEP 2",
+      "sequence_number": 3,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the action two boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "action two",
+      "transition": "push",
+      "visual_change": "Macro Tool Sequence: action two; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-056-F04",
+      "image_path": "frames/SF-056-F04.svg",
+      "motion": "held_reveal motion; use push only at this state boundary.",
+      "on_screen_text": "DONE",
+      "sequence_number": 4,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the completed state boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "completed state",
+      "transition": "push",
+      "visual_change": "Macro Tool Sequence: completed state; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "concretize_abstraction",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-056-F05",
+      "image_path": "frames/SF-056-F05.svg",
+      "motion": "held_reveal motion; use push only at this state boundary.",
+      "on_screen_text": "RETURN",
+      "sequence_number": 5,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the A-roll return boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "A-roll return",
+      "transition": "push",
+      "visual_change": "Macro Tool Sequence: A-roll return; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-056",
+  "kind": "broll",
+  "name": "Macro Tool Sequence",
+  "purpose": "Turn a tool explanation into macro cutaways",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-012"
+    ],
+    "export_id": "SIGEXP-SF-056",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:7f609d97685c701be5fce7182844f05a32093a1c6f9f6caeb8761070087cf692",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-008"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "return_cut",
+    "broll_function": "concretize_abstraction",
+    "cta_exit": "comment_prompt",
+    "hook_mechanism": "direct_promise",
+    "pacing_profile": "held_reveal",
+    "proof_form": "constraint",
+    "risk_class": "low",
+    "sound_role": "voice_plus_accent",
+    "text_role": "labels",
+    "transition_family": "push",
+    "viewer_job": "verify_claim",
+    "visual_grammar": "split_screen"
+  },
+  "version": "1.0.0"
+}

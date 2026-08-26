@@ -1,0 +1,203 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 7000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-046-F01",
+      "image_path": "frames/SF-046-F01.svg",
+      "motion": "held_reveal motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "THE CLAIM",
+      "sequence_number": 1,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the claim boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "claim",
+      "transition": "match_on_action",
+      "visual_change": "Annotation Peel: claim; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-046-F02",
+      "image_path": "frames/SF-046-F02.svg",
+      "motion": "held_reveal motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "REVEAL",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the hide/reveal boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "hide/reveal",
+      "transition": "match_on_action",
+      "visual_change": "Annotation Peel: hide/reveal; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-046-F03",
+      "image_path": "frames/SF-046-F03.svg",
+      "motion": "held_reveal motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "PROOF",
+      "sequence_number": 3,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the proof close-up boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "proof close-up",
+      "transition": "match_on_action",
+      "visual_change": "Annotation Peel: proof close-up; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "keyword_emphasis",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-046-F04",
+      "image_path": "frames/SF-046-F04.svg",
+      "motion": "held_reveal motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "TRACE",
+      "sequence_number": 4,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the trace boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "trace",
+      "transition": "match_on_action",
+      "visual_change": "Annotation Peel: trace; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-046-F05",
+      "image_path": "frames/SF-046-F05.svg",
+      "motion": "held_reveal motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "LIMIT",
+      "sequence_number": 5,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the limitation boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "limitation",
+      "transition": "match_on_action",
+      "visual_change": "Annotation Peel: limitation; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "continuous",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 6000,
+      "frame_id": "SF-046-F06",
+      "image_path": "frames/SF-046-F06.svg",
+      "motion": "held_reveal motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "BRIDGE",
+      "sequence_number": 6,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the bridge detail boundary; licensed or original audio only.",
+      "start_ms": 5000,
+      "story_function": "bridge detail",
+      "transition": "match_on_action",
+      "visual_change": "Annotation Peel: bridge detail; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "continuous",
+      "composition": "split_screen clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 7000,
+      "frame_id": "SF-046-F07",
+      "image_path": "frames/SF-046-F07.svg",
+      "motion": "held_reveal motion; use match_on_action only at this state boundary.",
+      "on_screen_text": "VERDICT",
+      "sequence_number": 7,
+      "shot_scale": "wide",
+      "sound_cue": "voice_plus_accent aligned to the verdict boundary; licensed or original audio only.",
+      "start_ms": 6000,
+      "story_function": "verdict",
+      "transition": "match_on_action",
+      "visual_change": "Annotation Peel: verdict; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-046",
+  "kind": "hook_broll",
+  "name": "Annotation Peel",
+  "purpose": "Expose meaning one annotation at a time",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-010"
+    ],
+    "export_id": "SIGEXP-SF-046",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:26a1994a932f85fa3c43fc48d35eaaefc90928b316fd7d2a19d2b1ca793a00f3",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-003"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "full_open",
+    "broll_function": "attention_reset",
+    "cta_exit": "recap",
+    "hook_mechanism": "reveal",
+    "pacing_profile": "held_reveal",
+    "proof_form": "observed_artifact",
+    "risk_class": "low",
+    "sound_role": "voice_plus_accent",
+    "text_role": "proof_callout",
+    "transition_family": "match_on_action",
+    "viewer_job": "verify_claim",
+    "visual_grammar": "split_screen"
+  },
+  "version": "1.0.0"
+}

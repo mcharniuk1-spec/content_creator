@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<rect width="540" height="960" fill="#231218"/>
+<rect x="44" y="96" width="452" height="768" rx="28" fill="none" stroke="#f9e6c8" stroke-opacity=".16" stroke-dasharray="10 10"/>
+<text x="44" y="58" font-family="Arial,sans-serif" font-size="20" fill="#f9e6c8" opacity=".74">SF-034 · 05:00–06:00 · voice_over</text>
+<text x="270" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#f9e6c8">BRIDGE</text>
+<text x="270" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#f9e6c8" opacity=".66">bridge detail</text>
+<rect x="58" y="210" width="424" height="470" rx="28" fill="#ff8f9d" opacity=".12"/><circle cx="270" cy="420" r="96" fill="#f9e6c8" opacity=".16"/><rect x="322" y="492" width="132" height="156" rx="22" fill="#f9e6c8" opacity=".88" stroke="#ff8f9d" stroke-width="5"/><circle cx="388" cy="548" r="26" fill="#ff8f9d"/><path d="M354 618q34-48 68 0" fill="#ff8f9d" opacity=".65"/>
+<rect x="64" y="820" width="412" height="64" rx="18" fill="#f9e6c8" opacity=".10"/>
+<text x="84" y="848" font-family="Arial,sans-serif" font-size="15" fill="#f9e6c8" opacity=".72">B-ROLL: concretize_abstraction</text>
+<text x="84" y="872" font-family="Arial,sans-serif" font-size="15" fill="#f9e6c8" opacity=".72">CUT: dissolve · TEXT: editable</text>
+<text x="270" y="925" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#f9e6c8" opacity=".48">LOCAL PREVIS · EXTERNAL PROVIDER NOT RUN</text>
+</svg>

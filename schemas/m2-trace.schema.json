@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/m2-trace.schema.json",
+  "title": "M2Trace",
+  "type": "object",
+  "required": ["schema", "trace_id", "stage", "status", "input_hashes", "output_ids", "provider_mode", "external_actions", "cost_usd"],
+  "properties": {
+    "schema": {"const": "m2.trace.v1"}, "trace_id": {"type": "string", "minLength": 1}, "stage": {"type": "string", "minLength": 1},
+    "status": {"enum": ["COMPLETE", "PARTIAL", "GAP", "BLOCKED"]}, "input_hashes": {"type": "array", "items": {"type": "string"}},
+    "output_ids": {"type": "array", "items": {"type": "string"}}, "provider_mode": {"const": "disabled"}, "external_actions": {"const": false}, "cost_usd": {"const": 0}
+  },
+  "additionalProperties": false
+}

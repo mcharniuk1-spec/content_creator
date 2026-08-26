@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-002",
+  "title": "Approval at the Threshold",
+  "source_story": "../v2/st-002-approval-at-the-threshold/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult product manager in their late 30s, natural wavy brown hair, muted navy knit and stone trousers",
+  "location_lock": "small shared studio with a standing desk, paper planning wall, shelf and soft daylight",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-002 Approval at the Threshold\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult product manager in their late 30s, natural wavy brown hair, muted navy knit and stone trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: small shared studio with a standing desk, paper planning wall, shelf and soft daylight. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: safe publish gate. Trigger prop: lock. Proof prop: signed review card. Obstacle: the publish control is active before approval.\nSix panels in reading order:\n1 extreme_close still: notices the lock; show The lock changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the safe publish gate; show The hero and persistent safe publish gate share one scene; objective: publish only after review. Emotional register: orientation.\n3 medium still: sees the safe publish gate blocked; show The safe publish gate is visibly blocked by the publish control is active before approval; consequence: an unsupported claim could escape. Emotional register: concern.\n4 over_shoulder still: moves the draft behind a review gate; show The hero attempts to move the draft behind a review gate; the safe publish gate visibly responds. Emotional register: agency.\n5 macro still: checks the signed review card; show The changed safe publish gate remains visible while the signed review card is isolated. Emotional register: confidence-with-caution.\n6 medium still: returns the resolved target to the viewer; show The resolved safe publish gate stays visible while the sequence returns to A-roll: the risky control stays locked. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'The scene does not authorize real publication.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-002-F01.png",
+    "frames/ST-002-F02.png",
+    "frames/ST-002-F03.png",
+    "frames/ST-002-F04.png",
+    "frames/ST-002-F05.png",
+    "frames/ST-002-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "8ab5808971601a3531e34b9f62614b3d2377f45b1a73476de206c5109d195db8",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "7eeb082814735a60fb13113237e06d0be61d835f1222ac815e98ca706ada6ee8",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-002-F01",
+      "file": "frames/ST-002-F01.png",
+      "sha256": "630e8b05b93aa23aa99fb5a10eb583648da91ec6080dc28a3c4e26841ea4a8d8",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 61.49,
+      "luma_stddev": 44.11,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-002-F02",
+      "file": "frames/ST-002-F02.png",
+      "sha256": "60d4f0ecd82c4a622a2a481150c94274e366bafdaf70336c67c283776a2770b4",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 89.78,
+      "luma_stddev": 56.54,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-002-F03",
+      "file": "frames/ST-002-F03.png",
+      "sha256": "6e78458a5e02c00bf56f2c8eeea6fbe2e61ec03fc98f466756143aa1c187db8c",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 46.99,
+      "luma_stddev": 43.87,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-002-F04",
+      "file": "frames/ST-002-F04.png",
+      "sha256": "43a77c8f4ffcc94b53628ff487831413b26bd2375f4b0b8a971399693fe82300",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 70.69,
+      "luma_stddev": 55.32,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-002-F05",
+      "file": "frames/ST-002-F05.png",
+      "sha256": "bb1c74576e5ed1988e4b5909b204935fee78011282ba1f95cb137d9734cc70f8",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 80.38,
+      "luma_stddev": 51.38,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-002-F06",
+      "file": "frames/ST-002-F06.png",
+      "sha256": "ca9acc85d453707baa684625a9e6c93c3f7ab2ec0533b0599b561de7c0ac1352",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 79.68,
+      "luma_stddev": 59.15,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

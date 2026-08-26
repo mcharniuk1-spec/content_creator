@@ -1,0 +1,2 @@
+candidate_id,input_handle,owned_or_consented,purpose,platform,candidate_url,sherlock_status,http_status,observed_at,tool_version,manifest_ref,manifest_hash,exclusions_honored,site_allowlist_hash,identity_verification_state,verification_signals,terms_gate,reviewer,allowed_use,block_reason
+

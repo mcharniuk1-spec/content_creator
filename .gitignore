@@ -1,0 +1,62 @@
+# Local secrets and provider configuration
+.env
+.env.*
+!.env.example
+keys.md
+secrets/
+credentials/
+.local/
+
+# Local operator handoff contains the owner-designated Figma identity.
+# Keep it local; create a redacted public handoff before any future push.
+HANDOFF_PROMPT.md
+HANDOFF.md
+
+# Private or licensed source media
+private-media/
+source-media/
+downloads/
+
+# Runtime and generated artifacts
+storage/
+cache/
+tmp/
+renders/
+backups/
+*.log
+
+# Run-local evidence and user-supplied source documents are never public Git payloads.
+runs/
+research/
+/*.pdf
+
+# Generated deliverables are reviewed before promotion
+outputs/contact-sheets/*.png
+outputs/contact-sheets/*.jpg
+outputs/contact-sheets/*.jpeg
+outputs/reports/*.pdf
+outputs/figma/*.fig
+outputs/video-plans/**/*.png
+outputs/video-plans/**/*.jpg
+outputs/video-plans/**/*.jpeg
+outputs/video-plans/**/*.pdf
+studio/**/*.png
+studio/**/*.jpg
+studio/**/*.jpeg
+studio/**/*.pdf
+
+# Generated structural references
+graphify-out/
+
+# Common environments and package output
+.venv/
+venv/
+node_modules/
+.next/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# OS/editor noise
+.DS_Store

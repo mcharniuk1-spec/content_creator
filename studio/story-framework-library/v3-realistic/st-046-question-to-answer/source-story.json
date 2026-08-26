@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:5812326731cb3c510f9778ed5cb6c6bf37acf24f4843d39f8b1933aa422325aa",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#081720",
+      "#7DE2D1",
+      "#F7E8C6",
+      "#FF786E"
+    ],
+    "proof_prop": "answer card",
+    "scene": "a small studio",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "speaker return",
+    "trigger_prop": "question card",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a speaking presenter",
+      "visual_token": "hero-046"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "question card",
+      "visual_token": "question-card"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "speaker return",
+      "visual_token": "speaker-return"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the explanation branches into side topics",
+      "visual_token": "obstacle-process_handback"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "answer card",
+      "visual_token": "answer-card"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "process_handback",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-046-F01",
+      "handback_visible": false,
+      "hero_action": "notices the question card",
+      "image_path": "frames/ST-046-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a speaking presenter in a small studio. The question card changes before the objective is secure. Keep ENT-target `speaker return` persistent and visibly transform it through `moves question, mechanism, proof, then answer`; show ENT-proof `answer card` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:speaker return=absent; ENT-proof:answer card=hidden \u2192 ENT-target:speaker return=unoriented; ENT-proof:answer card=hidden.",
+      "on_screen_text": "WATCH IT COMPLETE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "close",
+      "start_ms": 0,
+      "state_after": "ENT-target:speaker return=unoriented; ENT-proof:answer card=hidden",
+      "state_before": "ENT-target:speaker return=absent; ENT-proof:answer card=hidden",
+      "story_question": "What process will finish on screen?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The question card changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-046-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-046-F02",
+      "handback_visible": false,
+      "hero_action": "locates the speaker return",
+      "image_path": "frames/ST-046-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a speaking presenter in a small studio. The hero and persistent speaker return share one scene; objective: answer one audience question. Keep ENT-target `speaker return` persistent and visibly transform it through `moves question, mechanism, proof, then answer`; show ENT-proof `answer card` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to answer one audience question.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:speaker return=unoriented; ENT-proof:answer card=hidden \u2192 ENT-target:speaker return=present-unresolved; ENT-proof:answer card=hidden.",
+      "on_screen_text": "INPUT ENTERS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:speaker return=present-unresolved; ENT-proof:answer card=hidden",
+      "state_before": "ENT-target:speaker return=unoriented; ENT-proof:answer card=hidden",
+      "story_question": "What input enters?",
+      "transition": "pan_right motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The hero and persistent speaker return share one scene; objective: answer one audience question."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "attempt",
+      "beat_roles": [
+        "attempt"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "match_move",
+      "camera_motivation": "Show an attempted causal operation on the target.",
+      "cause_frame_ids": [
+        "ST-046-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-046-F03",
+      "handback_visible": false,
+      "hero_action": "moves question, mechanism, proof, then answer",
+      "image_path": "frames/ST-046-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a speaking presenter in a small studio. The hero attempts to move question, mechanism, proof, then answer; the speaker return visibly responds. Keep ENT-target `speaker return` persistent and visibly transform it through `moves question, mechanism, proof, then answer`; show ENT-proof `answer card` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show an attempted causal operation on the target.",
+      "limitation_visible": false,
+      "narration": "The first visible move is to move question, mechanism, proof, then answer.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:speaker return=present-unresolved; ENT-proof:answer card=hidden \u2192 ENT-target:speaker return=acted-on; ENT-proof:answer card=hidden.",
+      "on_screen_text": "FIRST CHANGE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `attempt` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "start_ms": 2000,
+      "state_after": "ENT-target:speaker return=acted-on; ENT-proof:answer card=hidden",
+      "state_before": "ENT-target:speaker return=present-unresolved; ENT-proof:answer card=hidden",
+      "story_question": "What first transformation occurs?",
+      "transition": "match_move motivated by show an attempted causal operation on the target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The hero attempts to move question, mechanism, proof, then answer; the speaker return visibly responds."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-046-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-046-F04",
+      "handback_visible": false,
+      "hero_action": "moves question, mechanism, proof, then answer",
+      "image_path": "frames/ST-046-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a speaking presenter in a small studio. The hero moves question, mechanism, proof, then answer; the same speaker return changes state on screen. Keep ENT-target `speaker return` persistent and visibly transform it through `moves question, mechanism, proof, then answer`; show ENT-proof `answer card` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to move question, mechanism, proof, then answer.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:speaker return=acted-on; ENT-proof:answer card=hidden \u2192 ENT-target:speaker return=transformed; ENT-proof:answer card=hidden.",
+      "on_screen_text": "MECHANISM MOVES",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `process_handback` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "over_shoulder",
+      "start_ms": 3000,
+      "state_after": "ENT-target:speaker return=transformed; ENT-proof:answer card=hidden",
+      "state_before": "ENT-target:speaker return=acted-on; ENT-proof:answer card=hidden",
+      "story_question": "How does the mechanism complete?",
+      "transition": "pan_right motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The hero moves question, mechanism, proof, then answer; the same speaker return changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-046-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-046-F05",
+      "handback_visible": false,
+      "hero_action": "checks the answer card",
+      "image_path": "frames/ST-046-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a speaking presenter in a small studio. The changed speaker return remains visible while the answer card is isolated. Keep ENT-target `speaker return` persistent and visibly transform it through `moves question, mechanism, proof, then answer`; show ENT-proof `answer card` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the answer card, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:speaker return=transformed; ENT-proof:answer card=hidden \u2192 ENT-target:speaker return=changed-pending-review; ENT-proof:answer card=visible.",
+      "on_screen_text": "CHECK THE OUTPUT",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `process_handback` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:speaker return=changed-pending-review; ENT-proof:answer card=visible",
+      "state_before": "ENT-target:speaker return=transformed; ENT-proof:answer card=hidden",
+      "story_question": "What output can be checked?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The changed speaker return remains visible while the answer card is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "handback",
+      "beat_roles": [
+        "handback",
+        "limitation",
+        "payoff"
+      ],
+      "broll_function": "emotional_texture",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the visual argument and hand it back.",
+      "cause_frame_ids": [
+        "ST-046-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-046-F06",
+      "handback_visible": true,
+      "hero_action": "returns the resolved target to the viewer",
+      "image_path": "frames/ST-046-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `process_handback` scene grammar. Anonymous geometric a speaking presenter in a small studio. The resolved speaker return stays visible while the sequence returns to A-roll: the viewer returns to the speaker with closure. Keep ENT-target `speaker return` persistent and visibly transform it through `moves question, mechanism, proof, then answer`; show ENT-proof `answer card` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the visual argument and hand it back.",
+      "limitation_visible": true,
+      "narration": "The bounded result: the viewer returns to the speaker with closure.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:speaker return=changed-pending-review; ENT-proof:answer card=visible \u2192 ENT-target:speaker return=resolved-with-boundary; ENT-proof:answer card=visible.",
+      "on_screen_text": "BACK TO THE SPEAKER",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `process_handback` advances through `handback` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:speaker return=resolved-with-boundary; ENT-proof:answer card=visible",
+      "state_before": "ENT-target:speaker return=changed-pending-review; ENT-proof:answer card=visible",
+      "story_question": "How does the sequence return to the speaker?",
+      "transition": "pull_out motivated by close the visual argument and hand it back.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "transfer",
+      "visual_state": "The resolved speaker return stays visible while the sequence returns to A-roll: the viewer returns to the speaker with closure."
+    }
+  ],
+  "kind": "broll",
+  "narrative": {
+    "action_chain": [
+      "notice the question card",
+      "moves question, mechanism, proof, then answer",
+      "inspect the answer card"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The question card changes state before the objective is secure.",
+    "limitation": "Further detail belongs in a later segment.",
+    "objective": "answer one audience question",
+    "obstacle": "the explanation branches into side topics",
+    "payoff": "the viewer returns to the speaker with closure",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "answer card",
+    "protagonist": "a speaking presenter",
+    "setup": "a small studio",
+    "stakes": "the hook may never close"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:63fd4b6ef5894888853811cd838243789ffaaa49c0adfb22857b5c2720dafb37",
+  "story_id": "ST-046",
+  "title": "Question to Answer",
+  "variation_axes": {
+    "operation_type": "transfer",
+    "proof_mechanism": "answer card; boundary=Further detail belongs in a later segment.",
+    "scene_topology": "process_handback::a small studio",
+    "target_transformation": "speaker return: unresolved -> the viewer returns to the speaker with closure"
+  },
+  "variation_fingerprint": "sha256:ddc7e49e80976ee020ea2e6951d7c6da9ce00d99b4845d9e19d7198e4d32aaa1",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:bf5b99250e431bfe40e9952ee53f56a063b1064b8599ac617e9c69f610692e82"
+}

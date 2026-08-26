@@ -1,0 +1,44 @@
+{
+  "schema": "north-hux.review-questions.v1",
+  "run_id": "20260825-north-hux-bootstrap-v1",
+  "reviewer": "Sol",
+  "status": "queued_owner_decisions",
+  "blocking_questions": [
+    {"id": "target_definition", "level": "Projection", "question": "10–12k qualified accounts per platform or total across platforms?"},
+    {"id": "platform_sequence", "level": "Projection", "question": "Approve YouTube calibration before Instagram/TikTok official-route activation?"},
+    {"id": "geography", "level": "Audience", "question": "Which European countries are in scope beyond the named English-speaking markets?"},
+    {"id": "language_audience", "level": "Audience", "question": "Must content be English, or may audience geography override language?"},
+    {"id": "time_windows", "level": "Stats", "question": "Approve 180-day discovery and 365-day baseline windows?"},
+    {"id": "creator_form_quotas", "level": "Account", "question": "What quotas apply to company/product, solo creator, and creator group accounts?"},
+    {"id": "category_taxonomy", "level": "Competitor", "question": "Approve the six strategic categories and separate account-form field?"},
+    {"id": "deep_analysis_depth", "level": "Post", "question": "Approve D3 for 200 items initially, expandable to 500 after calibration?"},
+    {"id": "identity_resolution", "level": "Account", "question": "What evidence is sufficient to resolve the same creator across platforms?"},
+    {"id": "retention", "level": "Projection", "question": "How long may raw comments, transcripts, media, and frame artifacts remain local?"},
+    {"id": "database_architecture", "level": "Projection", "question": "Approve Postgres canonical store plus immutable raw and analytical projections?"},
+    {"id": "budget_rate_limits", "level": "Stats", "question": "What request-rate, budget, and provider-spend ceilings apply?"},
+    {"id": "review_staffing", "level": "Projection", "question": "Who double-codes the 20% sample and approves Sol’s recommendation gates?"},
+    {"id": "public_projection", "level": "Projection", "question": "Should Notion remain restricted until evidence and rights review pass?"},
+    {"id": "audience_claims", "level": "Audience", "question": "Approve the rule that inferred demographics, geography, and sentiment remain hypotheses without direct evidence?"}
+  ],
+  "scale_gates": {
+    "golden_urls_per_platform": 20,
+    "calibration_accounts_min": 100,
+    "calibration_accounts_max": 300,
+    "available_core_field_completeness_min": 0.98,
+    "residual_exact_duplicate_max": 0.01,
+    "top_100_precision_min": 0.85,
+    "taxonomy_macro_f1_min": 0.80,
+    "reviewer_agreement_min": 0.80,
+    "double_coded_fraction": 0.20,
+    "transcript_duration_coverage_min": 0.95,
+    "sampled_transcript_segment_acceptance_min": 0.90
+  },
+  "release_rubric": {
+    "dimensions": ["hook", "problem", "mechanism", "proof", "caveat", "cta", "claim_calibration", "source_ownership", "human_gate", "business_relevance"],
+    "score_min_total": 22,
+    "required_dimension_min": {"proof": 2, "claim_calibration": 2, "source_ownership": 2, "human_gate": 2}
+  },
+  "comment_codebook": [
+    "AUDIENCE_OPINION", "REVIEWER_OPINION", "CREATOR_REPLY", "PAIN", "OBJECTION", "QUESTION", "CONFUSION", "REQUEST", "IMPLEMENTATION_EVIDENCE", "BUYING_INTENT", "POSITIVE_CONFIRMATION", "NEGATIVE_CRITIQUE", "NOISE"
+  ]
+}

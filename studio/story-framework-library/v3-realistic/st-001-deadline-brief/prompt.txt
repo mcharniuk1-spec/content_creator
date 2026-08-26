@@ -1,0 +1,19 @@
+Use case: photorealistic-natural
+Asset type: six-panel vertical social-video storyboard reference for ST-001 Deadline Brief
+Primary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.
+Subject continuity: fictional non-identifiable adult operations professional in their early 30s, short dark hair, teal overshirt over a cream tee. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.
+Scene continuity: modest home-office project room with a cork decision board, wood desk, window and warm practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.
+Persistent target: decision board. Trigger prop: clock. Proof prop: decision receipt. Obstacle: three conflicting notes.
+Six panels in reading order:
+1 extreme_close still: notices the clock; show The clock changes before the objective is secure. Emotional register: surprise.
+2 wide still: locates the decision board; show The hero and persistent decision board share one scene; objective: turn a scattered brief into one decision. Emotional register: orientation.
+3 medium still: sees the decision board blocked; show The decision board is visibly blocked by three conflicting notes; consequence: the meeting starts before the choice is clear. Emotional register: concern.
+4 over_shoulder still: sorts the notes by decision owner; show The hero attempts to sort the notes by decision owner; the decision board visibly responds. Emotional register: agency.
+5 macro still: checks the decision receipt; show The changed decision board remains visible while the decision receipt is isolated. Emotional register: confidence-with-caution.
+6 medium still: returns the resolved target to the viewer; show The resolved decision board stays visible while the sequence returns to A-roll: one accountable next step. Emotional register: relief.
+Final panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'The receipt proves routing, not business success.', but render no words.
+Style/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.
+Composition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.
+Lighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.
+Constraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.
+Avoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.

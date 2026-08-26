@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-019",
+  "title": "Upload Without Redaction",
+  "source_story": "../v2/st-019-upload-without-redaction/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult project lead in their early 50s, short gray hair, cream knit and navy work jacket",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-019 Upload Without Redaction\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult project lead in their early 50s, short gray hair, cream knit and navy work jacket. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: sanitized sample. Trigger prop: shield. Proof prop: redaction receipt. Obstacle: a raw file still contains private fields.\nSix panels in reading order:\n1 close still: notices the shield; show The shield changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the sanitized sample; show The hero and persistent sanitized sample share one scene; objective: prepare a public analysis sample. Emotional register: orientation.\n3 over_shoulder still: stops the upload and masks restricted fields; show The hero attempts to stop the upload and masks restricted fields; the sanitized sample visibly responds. Emotional register: concern.\n4 close still: sees the sanitized sample blocked; show The sanitized sample is visibly blocked by a raw file still contains private fields; consequence: private data could leave its boundary. Emotional register: agency.\n5 wide still: stops the upload and masks restricted fields; show The hero stops the upload and masks restricted fields; the same sanitized sample changes state on screen. Emotional register: confidence-with-caution.\n6 medium still: confirms the changed sanitized sample; show The same sanitized sample reaches its resolved state: only the bounded sample proceeds. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Redaction must be independently checked.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-019-F01.png",
+    "frames/ST-019-F02.png",
+    "frames/ST-019-F03.png",
+    "frames/ST-019-F04.png",
+    "frames/ST-019-F05.png",
+    "frames/ST-019-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "e69bb38751eb91b252cab8b495fc9cee3cf56d566cf32b2223ea528810a828f5",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "28a8e5516fb14f6b8bcbd7ad00c845a51ca5a3de029248dc7f1d089d04d391c8",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-019-F01",
+      "file": "frames/ST-019-F01.png",
+      "sha256": "d101d161f705deb135557715f01ab9fa8203874d82c893014921bb7f90cde825",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 109.55,
+      "luma_stddev": 64.05,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-019-F02",
+      "file": "frames/ST-019-F02.png",
+      "sha256": "4f6f6a8dcb43389854c9eecbefeee17ce0d9020fc17f17f9ae42be0e475a8ca9",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 87.5,
+      "luma_stddev": 57.69,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-019-F03",
+      "file": "frames/ST-019-F03.png",
+      "sha256": "5c35b01e112eb8a292c3320571d376cb30b4e28546a6b1638a92dac4c6ab60ec",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 70.59,
+      "luma_stddev": 59.86,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-019-F04",
+      "file": "frames/ST-019-F04.png",
+      "sha256": "a32c4c637091303ba58753bc73f8ff48fe9e90634d97a1631608ad80570bdb33",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 99.55,
+      "luma_stddev": 70.65,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-019-F05",
+      "file": "frames/ST-019-F05.png",
+      "sha256": "56b904ee7513b9dbf4ded411aaa27cce5ac36f184aaac97d990c39e6502d59ad",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 81.25,
+      "luma_stddev": 57.05,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-019-F06",
+      "file": "frames/ST-019-F06.png",
+      "sha256": "32d749f72478b5a194d27464d11a3d1508bddaaa6bb2ebaf311de2b1ea2c7f6a",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 107.25,
+      "luma_stddev": 66.79,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

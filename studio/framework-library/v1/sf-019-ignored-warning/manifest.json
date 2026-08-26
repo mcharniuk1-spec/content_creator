@@ -1,0 +1,16 @@
+{
+  "external_provider_state": "NOT_RUN",
+  "files": {
+    "contact-sheet.svg": "6116082a532b85249073a2e21d9af0c83a3de01081ec2e108fe728b52f40636e",
+    "frames/SF-019-F01.svg": "37c5aa20c909200fba1b3ba6e2ea430ee603bcc14b444978a7e9814439392a17",
+    "frames/SF-019-F02.svg": "0c8c144fb32d0ac99191ab9159066566ee3d799e30a16189d68c56cc5c0db80c",
+    "frames/SF-019-F03.svg": "85efa940ec0486ae7bd9a87093ee4eb57d90b8a39c3ad49f82ee210cf1fc2546",
+    "frames/SF-019-F04.svg": "2f139051446cdad61e9e00843cc65b63ac2834bf83ed6920196d60552713cda5",
+    "framework.json": "11cae33909fc6e84cb1d58e42cff5c70d5f63ab6dcd26db4450fa9ac48a91de1",
+    "prompt.md": "9dd6cbcac15ceadb9ded5fa5b27ef06b312db58a6a069a00951aa4c10c0a9a54",
+    "report.md": "d9d9e74a7891994201719cc92bb3ca7280d3cd96fd4f657b399aa84e361f0e55",
+    "signal-export.json": "3f65d4756e5b86c0018a56d65dc63ab873a2ecb5833d59a6db8e5372a98f75b8"
+  },
+  "framework_id": "SF-019",
+  "schema": "studio-framework-package-manifest.v1"
+}

@@ -1,0 +1,516 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:3b8bfb9aad71806ea6f473961174dcba906e3ccad923afca64beb75da2478923",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#16112A",
+      "#B6A1FF",
+      "#FFE078",
+      "#FF758F"
+    ],
+    "proof_prop": "graph links",
+    "scene": "a reference wall",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "source map",
+    "trigger_prop": "list",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a researcher",
+      "visual_token": "hero-032"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "list",
+      "visual_token": "list"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "source map",
+      "visual_token": "source-map"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "a flat list hides dependencies",
+      "visual_token": "obstacle-before_after_transformation"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "graph links",
+      "visual_token": "graph-links"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "before_after_transformation",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "locked",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-032-F01",
+      "handback_visible": false,
+      "hero_action": "notices the list",
+      "image_path": "frames/ST-032-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric a researcher in a reference wall. The list changes before the objective is secure. Keep ENT-target `source map` persistent and visibly transform it through `connects each claim to dated evidence`; show ENT-proof `graph links` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:source map=absent; ENT-proof:graph links=hidden \u2192 ENT-target:source map=unoriented; ENT-proof:graph links=hidden.",
+      "on_screen_text": "READ THE CONTRAST",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "wide",
+      "start_ms": 0,
+      "state_after": "ENT-target:source map=unoriented; ENT-proof:graph links=hidden",
+      "state_before": "ENT-target:source map=absent; ENT-proof:graph links=hidden",
+      "story_question": "Can the contrast be read instantly?",
+      "transition": "locked motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The list changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "locked",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-032-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-032-F02",
+      "handback_visible": false,
+      "hero_action": "locates the source map",
+      "image_path": "frames/ST-032-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric a researcher in a reference wall. The hero and persistent source map share one scene; objective: see which claims share evidence. Keep ENT-target `source map` persistent and visibly transform it through `connects each claim to dated evidence`; show ENT-proof `graph links` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to see which claims share evidence.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:source map=unoriented; ENT-proof:graph links=hidden \u2192 ENT-target:source map=present-unresolved; ENT-proof:graph links=hidden.",
+      "on_screen_text": "BEFORE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:source map=present-unresolved; ENT-proof:graph links=hidden",
+      "state_before": "ENT-target:source map=unoriented; ENT-proof:graph links=hidden",
+      "story_question": "What is the before-state?",
+      "transition": "locked motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The hero and persistent source map share one scene; objective: see which claims share evidence."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "push_in",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-032-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-032-F03",
+      "handback_visible": false,
+      "hero_action": "sees the source map blocked",
+      "image_path": "frames/ST-032-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric a researcher in a reference wall. The source map is visibly blocked by a flat list hides dependencies; consequence: one weak source can support too much. Keep ENT-target `source map` persistent and visibly transform it through `connects each claim to dated evidence`; show ENT-proof `graph links` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But a flat list hides dependencies.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:source map=present-unresolved; ENT-proof:graph links=hidden \u2192 ENT-target:source map=blocked; ENT-proof:graph links=hidden.",
+      "on_screen_text": "WHY IT STICKS",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "close",
+      "start_ms": 2000,
+      "state_after": "ENT-target:source map=blocked; ENT-proof:graph links=hidden",
+      "state_before": "ENT-target:source map=present-unresolved; ENT-proof:graph links=hidden",
+      "story_question": "What friction keeps it stuck?",
+      "transition": "push_in motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The source map is visibly blocked by a flat list hides dependencies; consequence: one weak source can support too much."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-032-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-032-F04",
+      "handback_visible": false,
+      "hero_action": "connects each claim to dated evidence",
+      "image_path": "frames/ST-032-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric a researcher in a reference wall. The hero connects each claim to dated evidence; the same source map changes state on screen. Keep ENT-target `source map` persistent and visibly transform it through `connects each claim to dated evidence`; show ENT-proof `graph links` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to connect each claim to dated evidence.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:source map=blocked; ENT-proof:graph links=hidden \u2192 ENT-target:source map=transformed; ENT-proof:graph links=hidden.",
+      "on_screen_text": "THE CONVERSION",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `before_after_transformation` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "medium",
+      "start_ms": 3000,
+      "state_after": "ENT-target:source map=transformed; ENT-proof:graph links=hidden",
+      "state_before": "ENT-target:source map=blocked; ENT-proof:graph links=hidden",
+      "story_question": "What visible transformation occurs?",
+      "transition": "pan_right motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The hero connects each claim to dated evidence; the same source map changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-032-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-032-F05",
+      "handback_visible": false,
+      "hero_action": "checks the graph links",
+      "image_path": "frames/ST-032-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric a researcher in a reference wall. The changed source map remains visible while the graph links is isolated. Keep ENT-target `source map` persistent and visibly transform it through `connects each claim to dated evidence`; show ENT-proof `graph links` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the graph links, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:source map=transformed; ENT-proof:graph links=hidden \u2192 ENT-target:source map=changed-pending-review; ENT-proof:graph links=visible.",
+      "on_screen_text": "CHECK THE AFTER",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `before_after_transformation` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:source map=changed-pending-review; ENT-proof:graph links=visible",
+      "state_before": "ENT-target:source map=transformed; ENT-proof:graph links=hidden",
+      "story_question": "What constraint keeps the after-state honest?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The changed source map remains visible while the graph links is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "payoff",
+      "beat_roles": [
+        "payoff",
+        "limitation",
+        "handback"
+      ],
+      "broll_function": "contrast",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the opening question with the changed target.",
+      "cause_frame_ids": [
+        "ST-032-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-032-F06",
+      "handback_visible": true,
+      "hero_action": "confirms the changed source map",
+      "image_path": "frames/ST-032-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `before_after_transformation` scene grammar. Anonymous geometric a researcher in a reference wall. The same source map reaches its resolved state: overloaded sources become obvious. Keep ENT-target `source map` persistent and visibly transform it through `connects each claim to dated evidence`; show ENT-proof `graph links` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the opening question with the changed target.",
+      "limitation_visible": true,
+      "narration": "Now overloaded sources become obvious.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:source map=changed-pending-review; ENT-proof:graph links=visible \u2192 ENT-target:source map=resolved-with-boundary; ENT-proof:graph links=visible.",
+      "on_screen_text": "AFTER\u2014WITH A LIMIT",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `before_after_transformation` advances through `payoff` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "wide",
+      "start_ms": 5000,
+      "state_after": "ENT-target:source map=resolved-with-boundary; ENT-proof:graph links=visible",
+      "state_before": "ENT-target:source map=changed-pending-review; ENT-proof:graph links=visible",
+      "story_question": "What useful after-state remains?",
+      "transition": "pull_out motivated by close the opening question with the changed target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The same source map reaches its resolved state: overloaded sources become obvious."
+    }
+  ],
+  "kind": "intro_broll",
+  "narrative": {
+    "action_chain": [
+      "notice the list",
+      "connects each claim to dated evidence",
+      "inspect the graph links"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The list changes state before the objective is secure.",
+    "limitation": "A map visualizes lineage; it does not verify truth.",
+    "objective": "see which claims share evidence",
+    "obstacle": "a flat list hides dependencies",
+    "payoff": "overloaded sources become obvious",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "graph links",
+    "protagonist": "a researcher",
+    "setup": "a reference wall",
+    "stakes": "one weak source can support too much"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:cf5f463cd2009ff8741caabd17efa3bd9818ce8149cc9ff0914936bd1d1f600f",
+  "story_id": "ST-032",
+  "title": "Flat List to Source Map",
+  "variation_axes": {
+    "operation_type": "route",
+    "proof_mechanism": "graph links; boundary=A map visualizes lineage; it does not verify truth.",
+    "scene_topology": "before_after_transformation::a reference wall",
+    "target_transformation": "source map: unresolved -> overloaded sources become obvious"
+  },
+  "variation_fingerprint": "sha256:bfb7a04d870ee84923004a32c9409200943006850056f2e9e85f20f7dc5f93b3",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:ac55258647a738683cbfdd02d94cb2f3651f49e77fb37fe942442a9eb5fb6ae1"
+}

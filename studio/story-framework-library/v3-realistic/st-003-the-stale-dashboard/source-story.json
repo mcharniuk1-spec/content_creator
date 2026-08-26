@@ -1,0 +1,518 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:c60eeb3f6e142740ee04d3f81a084fb0117d8c9195ea824940b6cdb31b0ae8b6",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#0B211A",
+      "#85D69A",
+      "#F5E1A4",
+      "#FF8169"
+    ],
+    "proof_prop": "freshness timestamp",
+    "scene": "a monitor wall",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "current chart",
+    "trigger_prop": "calendar",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a revenue analyst",
+      "visual_token": "hero-003"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "calendar",
+      "visual_token": "calendar"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "current chart",
+      "visual_token": "current-chart"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the visible chart is two weeks stale",
+      "visual_token": "obstacle-in_medias_res"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "freshness timestamp",
+      "visual_token": "freshness-timestamp"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "in_medias_res",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-003-F01",
+      "handback_visible": false,
+      "hero_action": "notices the calendar",
+      "image_path": "frames/ST-003-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `in_medias_res` scene grammar. Anonymous geometric a revenue analyst in a monitor wall. The calendar changes before the objective is secure. Keep ENT-target `current chart` persistent and visibly transform it through `checks the timestamp before interpreting`; show ENT-proof `freshness timestamp` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:current chart=absent; ENT-proof:freshness timestamp=hidden \u2192 ENT-target:current chart=unoriented; ENT-proof:freshness timestamp=hidden.",
+      "on_screen_text": "ALREADY MOVING",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `in_medias_res` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "extreme_close",
+      "start_ms": 0,
+      "state_after": "ENT-target:current chart=unoriented; ENT-proof:freshness timestamp=hidden",
+      "state_before": "ENT-target:current chart=absent; ENT-proof:freshness timestamp=hidden",
+      "story_question": "The change is already happening.",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The calendar changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-003-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-003-F02",
+      "handback_visible": false,
+      "hero_action": "locates the current chart",
+      "image_path": "frames/ST-003-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `in_medias_res` scene grammar. Anonymous geometric a revenue analyst in a monitor wall. The hero and persistent current chart share one scene; objective: explain a sudden metric change. Keep ENT-target `current chart` persistent and visibly transform it through `checks the timestamp before interpreting`; show ENT-proof `freshness timestamp` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to explain a sudden metric change.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:current chart=unoriented; ENT-proof:freshness timestamp=hidden \u2192 ENT-target:current chart=present-unresolved; ENT-proof:freshness timestamp=hidden.",
+      "on_screen_text": "WHAT MUST CHANGE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `in_medias_res` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:current chart=present-unresolved; ENT-proof:freshness timestamp=hidden",
+      "state_before": "ENT-target:current chart=unoriented; ENT-proof:freshness timestamp=hidden",
+      "story_question": "Who is acting and what must be saved?",
+      "transition": "pull_out motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The hero and persistent current chart share one scene; objective: explain a sudden metric change."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "locked",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-003-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-003-F03",
+      "handback_visible": false,
+      "hero_action": "sees the current chart blocked",
+      "image_path": "frames/ST-003-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `in_medias_res` scene grammar. Anonymous geometric a revenue analyst in a monitor wall. The current chart is visibly blocked by the visible chart is two weeks stale; consequence: the team could act on the wrong period. Keep ENT-target `current chart` persistent and visibly transform it through `checks the timestamp before interpreting`; show ENT-proof `freshness timestamp` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But the visible chart is two weeks stale.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:current chart=present-unresolved; ENT-proof:freshness timestamp=hidden \u2192 ENT-target:current chart=blocked; ENT-proof:freshness timestamp=hidden.",
+      "on_screen_text": "THE COLLISION",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `in_medias_res` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "start_ms": 2000,
+      "state_after": "ENT-target:current chart=blocked; ENT-proof:freshness timestamp=hidden",
+      "state_before": "ENT-target:current chart=present-unresolved; ENT-proof:freshness timestamp=hidden",
+      "story_question": "What blocks the objective?",
+      "transition": "locked motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The current chart is visibly blocked by the visible chart is two weeks stale; consequence: the team could act on the wrong period."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "attempt",
+      "beat_roles": [
+        "attempt"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "pan_right",
+      "camera_motivation": "Show an attempted causal operation on the target.",
+      "cause_frame_ids": [
+        "ST-003-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-003-F04",
+      "handback_visible": false,
+      "hero_action": "checks the timestamp before interpreting",
+      "image_path": "frames/ST-003-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `in_medias_res` scene grammar. Anonymous geometric a revenue analyst in a monitor wall. The hero attempts to check the timestamp before interpreting; the current chart visibly responds. Keep ENT-target `current chart` persistent and visibly transform it through `checks the timestamp before interpreting`; show ENT-proof `freshness timestamp` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show an attempted causal operation on the target.",
+      "limitation_visible": false,
+      "narration": "The first visible move is to check the timestamp before interpreting.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:current chart=blocked; ENT-proof:freshness timestamp=hidden \u2192 ENT-target:current chart=acted-on; ENT-proof:freshness timestamp=hidden.",
+      "on_screen_text": "ACT NOW",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `in_medias_res` advances through `attempt` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "over_shoulder",
+      "start_ms": 3000,
+      "state_after": "ENT-target:current chart=acted-on; ENT-proof:freshness timestamp=hidden",
+      "state_before": "ENT-target:current chart=blocked; ENT-proof:freshness timestamp=hidden",
+      "story_question": "Which concrete action changes the state?",
+      "transition": "pan_right motivated by show an attempted causal operation on the target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The hero attempts to check the timestamp before interpreting; the current chart visibly responds."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-003-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "acted-on",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-003-F05",
+      "handback_visible": false,
+      "hero_action": "checks the freshness timestamp",
+      "image_path": "frames/ST-003-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `in_medias_res` scene grammar. Anonymous geometric a revenue analyst in a monitor wall. The changed current chart remains visible while the freshness timestamp is isolated. Keep ENT-target `current chart` persistent and visibly transform it through `checks the timestamp before interpreting`; show ENT-proof `freshness timestamp` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the freshness timestamp, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:current chart=acted-on; ENT-proof:freshness timestamp=hidden \u2192 ENT-target:current chart=changed-pending-review; ENT-proof:freshness timestamp=visible.",
+      "on_screen_text": "VISIBLE CHECK",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `in_medias_res` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:current chart=changed-pending-review; ENT-proof:freshness timestamp=visible",
+      "state_before": "ENT-target:current chart=acted-on; ENT-proof:freshness timestamp=hidden",
+      "story_question": "What proves the action worked?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The changed current chart remains visible while the freshness timestamp is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "handback",
+      "beat_roles": [
+        "handback",
+        "limitation",
+        "payoff"
+      ],
+      "broll_function": "emotional_texture",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the visual argument and hand it back.",
+      "cause_frame_ids": [
+        "ST-003-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-003-F06",
+      "handback_visible": true,
+      "hero_action": "returns the resolved target to the viewer",
+      "image_path": "frames/ST-003-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `in_medias_res` scene grammar. Anonymous geometric a revenue analyst in a monitor wall. The resolved current chart stays visible while the sequence returns to A-roll: the stale chart is clearly quarantined. Keep ENT-target `current chart` persistent and visibly transform it through `checks the timestamp before interpreting`; show ENT-proof `freshness timestamp` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the visual argument and hand it back.",
+      "limitation_visible": true,
+      "narration": "The bounded result: the stale chart is clearly quarantined.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:current chart=changed-pending-review; ENT-proof:freshness timestamp=visible \u2192 ENT-target:current chart=resolved-with-boundary; ENT-proof:freshness timestamp=visible.",
+      "on_screen_text": "BACK WITH THE RULE",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `in_medias_res` advances through `handback` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:current chart=resolved-with-boundary; ENT-proof:freshness timestamp=visible",
+      "state_before": "ENT-target:current chart=changed-pending-review; ENT-proof:freshness timestamp=visible",
+      "story_question": "What should the viewer do with the rule?",
+      "transition": "pull_out motivated by close the visual argument and hand it back.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "inspect",
+      "visual_state": "The resolved current chart stays visible while the sequence returns to A-roll: the stale chart is clearly quarantined."
+    }
+  ],
+  "kind": "hook_intro",
+  "narrative": {
+    "action_chain": [
+      "notice the calendar",
+      "checks the timestamp before interpreting",
+      "inspect the freshness timestamp"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The calendar changes state before the objective is secure.",
+    "limitation": "Freshness enables analysis; it does not prove causality.",
+    "objective": "explain a sudden metric change",
+    "obstacle": "the visible chart is two weeks stale",
+    "payoff": "the stale chart is clearly quarantined",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "freshness timestamp",
+    "protagonist": "a revenue analyst",
+    "setup": "a monitor wall",
+    "stakes": "the team could act on the wrong period"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:fb7bceead439d5b2feb48cf6523aebc981cb31beb4cfc7baa8627fabae3c67c0",
+  "story_id": "ST-003",
+  "title": "The Stale Dashboard",
+  "variation_axes": {
+    "operation_type": "inspect",
+    "proof_mechanism": "freshness timestamp; boundary=Freshness enables analysis; it does not prove causality.",
+    "scene_topology": "in_medias_res::a monitor wall",
+    "target_transformation": "current chart: unresolved -> the stale chart is clearly quarantined"
+  },
+  "variation_fingerprint": "sha256:cd1f68f04c204011a4d55e3a4a4eed27b0c1f1a1d210fdd26a1066abb309b550",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:343a13c49a7acaa1a0ac048beaccd368b36352fc692b0b3930c80afbe0715089"
+}

@@ -1,0 +1,19 @@
+Use case: photorealistic-natural
+Asset type: six-panel vertical social-video storyboard reference for ST-018 The Missing Owner
+Primary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.
+Subject continuity: fictional non-identifiable adult content strategist in their late 30s, straight dark bob, moss-green blouse and black trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.
+Scene continuity: believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.
+Persistent target: assigned decision. Trigger prop: name tag. Proof prop: ownership card. Obstacle: every task has a date but no owner.
+Six panels in reading order:
+1 close still: notices the name tag; show The name tag changes before the objective is secure. Emotional register: surprise.
+2 wide still: locates the assigned decision; show The hero and persistent assigned decision share one scene; objective: move one decision forward. Emotional register: orientation.
+3 over_shoulder still: adds one accountable role and review point; show The hero attempts to add one accountable role and review point; the assigned decision visibly responds. Emotional register: concern.
+4 close still: sees the assigned decision blocked; show The assigned decision is visibly blocked by every task has a date but no owner; consequence: the deadline can pass without action. Emotional register: agency.
+5 wide still: adds one accountable role and review point; show The hero adds one accountable role and review point; the same assigned decision changes state on screen. Emotional register: confidence-with-caution.
+6 medium still: confirms the changed assigned decision; show The same assigned decision reaches its resolved state: the next action has a visible owner. Emotional register: relief.
+Final panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Ownership labels do not guarantee completion.', but render no words.
+Style/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.
+Composition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.
+Lighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.
+Constraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.
+Avoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.

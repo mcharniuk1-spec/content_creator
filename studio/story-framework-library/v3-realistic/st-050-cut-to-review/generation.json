@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-050",
+  "title": "Cut to Review",
+  "source_story": "../v2/st-050-cut-to-review/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult data steward in their mid 30s, natural coiled hair, slate shirt and warm-gray trousers",
+  "location_lock": "believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-050 Cut to Review\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult data steward in their mid 30s, natural coiled hair, slate shirt and warm-gray trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: believable operations workspace with a pinboard, notebook, laptop with blank screen and practical lamp. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: review verdict. Trigger prop: review flag. Proof prop: acceptance checklist. Obstacle: the creator knows the intended meaning.\nSix panels in reading order:\n1 close still: notices the review flag; show The review flag changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the review verdict; show The hero and persistent review verdict share one scene; objective: decide whether a micro-story is ready. Emotional register: orientation.\n3 medium still: checks the sequence without reading the report first; show The hero attempts to check the sequence without reading the report first; the review verdict visibly responds. Emotional register: concern.\n4 over_shoulder still: checks the sequence without reading the report first; show The hero checks the sequence without reading the report first; the same review verdict changes state on screen. Emotional register: agency.\n5 macro still: checks the acceptance checklist; show The changed review verdict remains visible while the acceptance checklist is isolated. Emotional register: confidence-with-caution.\n6 medium still: returns the resolved target to the viewer; show The resolved review verdict stays visible while the sequence returns to A-roll: the verdict reflects visible causality. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Owner approval remains separate from review.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-050-F01.png",
+    "frames/ST-050-F02.png",
+    "frames/ST-050-F03.png",
+    "frames/ST-050-F04.png",
+    "frames/ST-050-F05.png",
+    "frames/ST-050-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "93da083719a6a811b45e34bc23a4fda967338142fdf036bca1841f156909d33b",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "97c9dc99a0792c1d1467d372c1863e23f77bd490f189df38b3363d4fceec8f16",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-050-F01",
+      "file": "frames/ST-050-F01.png",
+      "sha256": "0a68efb2695488239cc0f61ebd7f8cae5f0bd58c13794559c62fe5150ff88c93",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 102.19,
+      "luma_stddev": 65.71,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-050-F02",
+      "file": "frames/ST-050-F02.png",
+      "sha256": "754cd95249b54c5e3e369a2c15167a7e786f002884c155b1a19ca286e2d692fa",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 99.85,
+      "luma_stddev": 67.33,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-050-F03",
+      "file": "frames/ST-050-F03.png",
+      "sha256": "a8124702d59f9b696adf74f7a5a03403cdc89e2e0d17a48ffd913c0f6fa37474",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 92.47,
+      "luma_stddev": 57.69,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-050-F04",
+      "file": "frames/ST-050-F04.png",
+      "sha256": "5e02709496f292caf9693a888535bd252dca6ddabb42417e36a09763279242d6",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 88.9,
+      "luma_stddev": 66.86,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-050-F05",
+      "file": "frames/ST-050-F05.png",
+      "sha256": "456403b6f22999f34cbd68ebabf6bfbebd63226f0c9cc02194c0f2c3f5b586ae",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 125.8,
+      "luma_stddev": 60.8,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-050-F06",
+      "file": "frames/ST-050-F06.png",
+      "sha256": "f9e6d15e149c5fdad2556854ee6d32949e87c28f36bafc547a89680030fcff77",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 111.22,
+      "luma_stddev": 65.04,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

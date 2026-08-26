@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-011",
+  "title": "Why the Number Dropped",
+  "source_story": "../v2/st-011-why-the-number-dropped/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult operations professional in their early 30s, short dark hair, teal overshirt over a cream tee",
+  "location_lock": "small shared studio with a standing desk, paper planning wall, shelf and soft daylight",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-011 Why the Number Dropped\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult operations professional in their early 30s, short dark hair, teal overshirt over a cream tee. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: small shared studio with a standing desk, paper planning wall, shelf and soft daylight. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: diagnosis note. Trigger prop: chart. Proof prop: segment comparison. Obstacle: three plausible causes compete.\nSix panels in reading order:\n1 macro still: notices the chart; show The chart changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the diagnosis note; show The hero and persistent diagnosis note share one scene; objective: diagnose a visible drop. Emotional register: orientation.\n3 close still: sees the diagnosis note blocked; show The diagnosis note is visibly blocked by three plausible causes compete; consequence: the wrong intervention wastes the next cycle. Emotional register: concern.\n4 over_shoulder still: compares the affected segment against the rest; show The hero attempts to compare the affected segment against the rest; the diagnosis note visibly responds. Emotional register: agency.\n5 macro still: checks the segment comparison; show The changed diagnosis note remains visible while the segment comparison is isolated. Emotional register: confidence-with-caution.\n6 medium still: confirms the changed diagnosis note; show The same diagnosis note reaches its resolved state: one cause remains plausible. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'The comparison narrows causes; it does not prove one.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-011-F01.png",
+    "frames/ST-011-F02.png",
+    "frames/ST-011-F03.png",
+    "frames/ST-011-F04.png",
+    "frames/ST-011-F05.png",
+    "frames/ST-011-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "660683a1beb54e2fe3f86c3d0b6fb4d4182ae03e498f79b275a6bad72b5394d7",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "853169eba8f59659bed29918a36456d58b8350dbb4f3838f5a7d2d106f0c6ec4",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-011-F01",
+      "file": "frames/ST-011-F01.png",
+      "sha256": "3448811c88dc339a6694857ed62c7e5c6c370f9e4f0f540331db910d045a0c28",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 126.85,
+      "luma_stddev": 57.55,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-011-F02",
+      "file": "frames/ST-011-F02.png",
+      "sha256": "1155831498fc9e237c9477cd74f4083f634ab749db55382f2a8dc9a8a1214ecb",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 129.24,
+      "luma_stddev": 59.13,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-011-F03",
+      "file": "frames/ST-011-F03.png",
+      "sha256": "94da300800932abdda0167a1a9fcc03ebf2126fea61fbd6feada39d03d586be3",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 129.98,
+      "luma_stddev": 61.91,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-011-F04",
+      "file": "frames/ST-011-F04.png",
+      "sha256": "881ceaad1125306f2b6b1795d9b83caffd2e7b2ba18b62a09aad2b2c96ed0cfe",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 132.05,
+      "luma_stddev": 62.14,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-011-F05",
+      "file": "frames/ST-011-F05.png",
+      "sha256": "d00af453e54abd3996b477a5d32eddf04329b5e47b0d1d4eb28814d1a75e6590",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 133.91,
+      "luma_stddev": 63.05,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-011-F06",
+      "file": "frames/ST-011-F06.png",
+      "sha256": "7b1dc02b2f038e8753fc884498d3ff351acc1267890650e186a3ee83f4561019",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 131.15,
+      "luma_stddev": 59.95,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

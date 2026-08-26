@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-014",
+  "title": "Where the Caption Went",
+  "source_story": "../v2/st-014-where-the-caption-went/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult technical educator in their mid 30s, shoulder-length dark hair, rust cardigan over a plain white top",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-014 Where the Caption Went\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult technical educator in their mid 30s, shoulder-length dark hair, rust cardigan over a plain white top. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: aligned caption. Trigger prop: caption strip. Proof prop: timing marker. Obstacle: the cut lands before the key caption.\nSix panels in reading order:\n1 macro still: notices the caption strip; show The caption strip changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the aligned caption; show The hero and persistent aligned caption share one scene; objective: restore a missing explanation. Emotional register: orientation.\n3 close still: sees the aligned caption blocked; show The aligned caption is visibly blocked by the cut lands before the key caption; consequence: the action becomes ambiguous. Emotional register: concern.\n4 over_shoulder still: checks the cut against the word boundary; show The hero attempts to check the cut against the word boundary; the aligned caption visibly responds. Emotional register: agency.\n5 macro still: checks the timing marker; show The changed aligned caption remains visible while the timing marker is isolated. Emotional register: confidence-with-caution.\n6 medium still: confirms the changed aligned caption; show The same aligned caption reaches its resolved state: the caption arrives with the action. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Timing varies with narration and language.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-014-F01.png",
+    "frames/ST-014-F02.png",
+    "frames/ST-014-F03.png",
+    "frames/ST-014-F04.png",
+    "frames/ST-014-F05.png",
+    "frames/ST-014-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "39ab5ffa6d1f50967eb0a8ea19ec14aca05bae3071f5017315e61072fae8a43c",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "ab4039abcb591d375df18a85e127de254f73dcf9e7bb9745fa38b852e3bdcb71",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-014-F01",
+      "file": "frames/ST-014-F01.png",
+      "sha256": "50d0eba8a9f070d161c8fda89e75bd8772734bc851188dce1075ac710f5e9ca0",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 94.53,
+      "luma_stddev": 62.75,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-014-F02",
+      "file": "frames/ST-014-F02.png",
+      "sha256": "709007515ac25ac7e09d3df9a168682fcdb80cb21841488c2eaa6c5cf9b3b302",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 105.53,
+      "luma_stddev": 62.25,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-014-F03",
+      "file": "frames/ST-014-F03.png",
+      "sha256": "057005b3eb3ec19619a1e481e7abdd8a09b93965aa4521da60b9c6afec5f8f44",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 100.44,
+      "luma_stddev": 60.67,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-014-F04",
+      "file": "frames/ST-014-F04.png",
+      "sha256": "361ba51b06b4e0cec66d0498dea03b4a662c0268268933eef571bc2ab1f4e517",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 72.87,
+      "luma_stddev": 47.16,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-014-F05",
+      "file": "frames/ST-014-F05.png",
+      "sha256": "614c68bf66298e276187e9568ee1ab46766ef2e1b83d025c0069e73d0d8b9705",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 110.75,
+      "luma_stddev": 45.99,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-014-F06",
+      "file": "frames/ST-014-F06.png",
+      "sha256": "5cfe7305b9ba348e4bb6505dccfcee70089836021409c1142967a4ccf6a90618",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 98.79,
+      "luma_stddev": 62.14,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

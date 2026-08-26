@@ -1,0 +1,101 @@
+{
+  "$schema": "../schemas/channel-capabilities.schema.json",
+  "receipt_id": "agent-reach-20260811-bootstrap",
+  "captured_at": "2026-08-11",
+  "command": "agent-reach doctor --json",
+  "sanitized": true,
+  "rule": "Only a non-null active_backend proves a usable Agent Reach route.",
+  "channels": {
+    "youtube": {
+      "state": "READY",
+      "active_backend": "yt-dlp",
+      "allowed_now": ["public metadata", "public captions or transcripts when available"],
+      "limitations": ["not a proof of trend rank", "rights and source admission still required"]
+    },
+    "rss": {
+      "state": "READY",
+      "active_backend": "feedparser",
+      "allowed_now": ["public RSS and Atom feeds"],
+      "limitations": ["feed presence and completeness vary by publisher"]
+    },
+    "web": {
+      "state": "READY",
+      "active_backend": "Jina Reader",
+      "allowed_now": ["public webpages"],
+      "limitations": ["page reachability is not native social access", "search snippets are routing hints"]
+    },
+    "github": {
+      "state": "PARTIAL",
+      "active_backend": null,
+      "limitations": ["CLI executable was detected but explicit authentication and active backend were not proved", "use public read-only web/API routes only"]
+    },
+    "linkedin": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["local MCP configuration and authentication were not verified", "no logged-in access authorized"]
+    },
+    "x": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no Twitter/X CLI backend proved"]
+    },
+    "threads": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no dedicated Agent Reach route proved"]
+    },
+    "instagram_reels": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no backend installed", "login/cookie reuse not authorized"]
+    },
+    "tiktok": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no dedicated Agent Reach route proved"]
+    },
+    "reddit": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no backend installed", "login required by available routes and not authorized"]
+    },
+    "facebook": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no backend installed", "login/cookie reuse not authorized"]
+    },
+    "bilibili": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no usable backend or public search route proved"]
+    },
+    "xiaohongshu": {
+      "state": "BLOCKED",
+      "active_backend": null,
+      "limitations": ["no backend installed", "cookie import not authorized"]
+    },
+    "ad_libraries": {
+      "state": "MANUAL",
+      "active_backend": null,
+      "limitations": ["no native Agent Reach analytics route proved", "public browser research requires a separate bounded source plan"]
+    },
+    "publication_libraries": {
+      "state": "PARTIAL",
+      "active_backend": "feedparser + Jina Reader",
+      "limitations": ["coverage is publisher-dependent", "database subscriptions and logged-in research are excluded"]
+    },
+    "exa_search": {
+      "state": "PARTIAL",
+      "active_backend": null,
+      "limitations": ["configuration was present but connectivity was not verified"]
+    }
+  },
+  "prohibited_actions": [
+    "installing or configuring a new backend without approval",
+    "reading or importing browser cookies",
+    "logging into a social network",
+    "accessing private surfaces",
+    "posting, commenting, liking, following, messaging, or scheduling"
+  ]
+}
+

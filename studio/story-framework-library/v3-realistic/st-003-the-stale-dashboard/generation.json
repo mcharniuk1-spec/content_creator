@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-003",
+  "title": "The Stale Dashboard",
+  "source_story": "../v2/st-003-the-stale-dashboard/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult research analyst in their early 40s, close-cropped black hair, olive work shirt and charcoal trousers",
+  "location_lock": "quiet meeting room with an unbranded whiteboard, task cards, simple table and window light",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-003 The Stale Dashboard\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult research analyst in their early 40s, close-cropped black hair, olive work shirt and charcoal trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: quiet meeting room with an unbranded whiteboard, task cards, simple table and window light. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: current chart. Trigger prop: calendar. Proof prop: freshness timestamp. Obstacle: the visible chart is two weeks stale.\nSix panels in reading order:\n1 extreme_close still: notices the calendar; show The calendar changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the current chart; show The hero and persistent current chart share one scene; objective: explain a sudden metric change. Emotional register: orientation.\n3 medium still: sees the current chart blocked; show The current chart is visibly blocked by the visible chart is two weeks stale; consequence: the team could act on the wrong period. Emotional register: concern.\n4 over_shoulder still: checks the timestamp before interpreting; show The hero attempts to check the timestamp before interpreting; the current chart visibly responds. Emotional register: agency.\n5 macro still: checks the freshness timestamp; show The changed current chart remains visible while the freshness timestamp is isolated. Emotional register: confidence-with-caution.\n6 medium still: returns the resolved target to the viewer; show The resolved current chart stays visible while the sequence returns to A-roll: the stale chart is clearly quarantined. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Freshness enables analysis; it does not prove causality.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-003-F01.png",
+    "frames/ST-003-F02.png",
+    "frames/ST-003-F03.png",
+    "frames/ST-003-F04.png",
+    "frames/ST-003-F05.png",
+    "frames/ST-003-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "87baee249d1fcf88e04fe5cd44e1f36a31d2fde86cf9bbc0f194c0ce942ef920",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "684823d6c50d4da397e664287c626eef9f070e708f6aa2dec4ebde19c4c4e6c4",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-003-F01",
+      "file": "frames/ST-003-F01.png",
+      "sha256": "ee29041b3358d2ec91d319796f6ae375fb468496dfa594443b58c730a1074d07",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 124.55,
+      "luma_stddev": 52.98,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-003-F02",
+      "file": "frames/ST-003-F02.png",
+      "sha256": "434d495a18b37370c2b5f8070771926437c7fd7f608ddcb6d5ebc299b6a0c59c",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 139.16,
+      "luma_stddev": 62.44,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-003-F03",
+      "file": "frames/ST-003-F03.png",
+      "sha256": "5028c25524fd76cd87072d98d9deb6e9e8668adab7097e4cdf62d1edfae366b1",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 133.3,
+      "luma_stddev": 66.24,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-003-F04",
+      "file": "frames/ST-003-F04.png",
+      "sha256": "c17e9b45fbc125c46f4f6a214491201c1322b88ed37ae1c6fd27ea6bae1eae2e",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 125.48,
+      "luma_stddev": 73.33,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-003-F05",
+      "file": "frames/ST-003-F05.png",
+      "sha256": "03000d829fc19b848e954a50dd23a7ef2429491283fca60024e8794b370b9738",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 179.42,
+      "luma_stddev": 58.54,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-003-F06",
+      "file": "frames/ST-003-F06.png",
+      "sha256": "e0eb7fcaf0137fe40500f0cfca8b49ce6df7b999b374e4d465dd0d9c46a09d16",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 132.73,
+      "luma_stddev": 69.44,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

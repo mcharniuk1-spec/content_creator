@@ -1,0 +1,517 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:b6a54b0f850e5539ee1d9f0757abcfc150778a849cb30099a47570af3bd85320",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#081720",
+      "#7DE2D1",
+      "#F7E8C6",
+      "#FF786E"
+    ],
+    "proof_prop": "stopped chain",
+    "scene": "a tabletop studio",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "dependency map",
+    "trigger_prop": "domino",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a systems explainer",
+      "visual_token": "hero-021"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "domino",
+      "visual_token": "domino"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "dependency map",
+      "visual_token": "dependency-map"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the dependency is invisible in a list",
+      "visual_token": "obstacle-object_metaphor"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "stopped chain",
+      "visual_token": "stopped-chain"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "object_metaphor",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "push_in",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-021-F01",
+      "handback_visible": false,
+      "hero_action": "notices the domino",
+      "image_path": "frames/ST-021-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a systems explainer in a tabletop studio. The domino changes before the objective is secure. Keep ENT-target `dependency map` persistent and visibly transform it through `removes one domino, then restores a labeled gate`; show ENT-proof `stopped chain` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:dependency map=absent; ENT-proof:stopped chain=hidden → ENT-target:dependency map=unoriented; ENT-proof:stopped chain=hidden.",
+      "on_screen_text": "WATCH THE OBJECT",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 1,
+      "shot_scale": "macro",
+      "start_ms": 0,
+      "state_after": "ENT-target:dependency map=unoriented; ENT-proof:stopped chain=hidden",
+      "state_before": "ENT-target:dependency map=absent; ENT-proof:stopped chain=hidden",
+      "story_question": "What unusual object is doing?",
+      "transition": "push_in motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The domino changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-021-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-021-F02",
+      "handback_visible": false,
+      "hero_action": "locates the dependency map",
+      "image_path": "frames/ST-021-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a systems explainer in a tabletop studio. The hero and persistent dependency map share one scene; objective: show how one missing handoff propagates. Keep ENT-target `dependency map` persistent and visibly transform it through `removes one domino, then restores a labeled gate`; show ENT-proof `stopped chain` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to show how one missing handoff propagates.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:dependency map=unoriented; ENT-proof:stopped chain=hidden → ENT-target:dependency map=present-unresolved; ENT-proof:stopped chain=hidden.",
+      "on_screen_text": "MAP IT TO THE SYSTEM",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 2,
+      "shot_scale": "wide",
+      "start_ms": 1000,
+      "state_after": "ENT-target:dependency map=present-unresolved; ENT-proof:stopped chain=hidden",
+      "state_before": "ENT-target:dependency map=unoriented; ENT-proof:stopped chain=hidden",
+      "story_question": "What system does the object stand for?",
+      "transition": "pull_out motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The hero and persistent dependency map share one scene; objective: show how one missing handoff propagates."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "tilt_down",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-021-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-021-F03",
+      "handback_visible": false,
+      "hero_action": "removes one domino, then restores a labeled gate",
+      "image_path": "frames/ST-021-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a systems explainer in a tabletop studio. The hero removes one domino, then restores a labeled gate; the same dependency map changes state on screen. Keep ENT-target `dependency map` persistent and visibly transform it through `removes one domino, then restores a labeled gate`; show ENT-proof `stopped chain` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to remove one domino, then restores a labeled gate.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:dependency map=present-unresolved; ENT-proof:stopped chain=hidden → ENT-target:dependency map=transformed; ENT-proof:stopped chain=hidden.",
+      "on_screen_text": "SHOW THE MECHANISM",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 3,
+      "shot_scale": "medium",
+      "start_ms": 2000,
+      "state_after": "ENT-target:dependency map=transformed; ENT-proof:stopped chain=hidden",
+      "state_before": "ENT-target:dependency map=present-unresolved; ENT-proof:stopped chain=hidden",
+      "story_question": "How does the object expose the mechanism?",
+      "transition": "tilt_down motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The hero removes one domino, then restores a labeled gate; the same dependency map changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "locked",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-021-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-021-F04",
+      "handback_visible": false,
+      "hero_action": "sees the dependency map blocked",
+      "image_path": "frames/ST-021-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a systems explainer in a tabletop studio. The dependency map is visibly blocked by the dependency is invisible in a list; consequence: one missing step can disrupt the full chain. Keep ENT-target `dependency map` persistent and visibly transform it through `removes one domino, then restores a labeled gate`; show ENT-proof `stopped chain` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But the dependency is invisible in a list.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:dependency map=transformed; ENT-proof:stopped chain=hidden → ENT-target:dependency map=blocked; ENT-proof:stopped chain=hidden.",
+      "on_screen_text": "RESISTANCE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `object_metaphor` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 4,
+      "shot_scale": "close",
+      "start_ms": 3000,
+      "state_after": "ENT-target:dependency map=blocked; ENT-proof:stopped chain=hidden",
+      "state_before": "ENT-target:dependency map=transformed; ENT-proof:stopped chain=hidden",
+      "story_question": "Where does resistance appear?",
+      "transition": "locked motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The dependency map is visibly blocked by the dependency is invisible in a list; consequence: one missing step can disrupt the full chain."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-021-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-021-F05",
+      "handback_visible": false,
+      "hero_action": "checks the stopped chain",
+      "image_path": "frames/ST-021-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a systems explainer in a tabletop studio. The changed dependency map remains visible while the stopped chain is isolated. Keep ENT-target `dependency map` persistent and visibly transform it through `removes one domino, then restores a labeled gate`; show ENT-proof `stopped chain` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the stopped chain, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:dependency map=blocked; ENT-proof:stopped chain=hidden → ENT-target:dependency map=changed-pending-review; ENT-proof:stopped chain=visible.",
+      "on_screen_text": "TEST THE MAPPING",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `object_metaphor` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 5,
+      "shot_scale": "diagram",
+      "start_ms": 4000,
+      "state_after": "ENT-target:dependency map=changed-pending-review; ENT-proof:stopped chain=visible",
+      "state_before": "ENT-target:dependency map=blocked; ENT-proof:stopped chain=hidden",
+      "story_question": "What observable state proves the mapping?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The changed dependency map remains visible while the stopped chain is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "handback",
+      "beat_roles": [
+        "handback",
+        "limitation",
+        "payoff"
+      ],
+      "broll_function": "emotional_texture",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the visual argument and hand it back.",
+      "cause_frame_ids": [
+        "ST-021-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "active",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-021-F06",
+      "handback_visible": true,
+      "hero_action": "returns the resolved target to the viewer",
+      "image_path": "frames/ST-021-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `object_metaphor` scene grammar. Anonymous geometric a systems explainer in a tabletop studio. The resolved dependency map stays visible while the sequence returns to A-roll: the chain stops safely at the gate. Keep ENT-target `dependency map` persistent and visibly transform it through `removes one domino, then restores a labeled gate`; show ENT-proof `stopped chain` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the visual argument and hand it back.",
+      "limitation_visible": true,
+      "narration": "The bounded result: the chain stops safely at the gate.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:dependency map=changed-pending-review; ENT-proof:stopped chain=visible → ENT-target:dependency map=resolved-with-boundary; ENT-proof:stopped chain=visible.",
+      "on_screen_text": "RETURN TO REALITY",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `object_metaphor` advances through `handback` with persistent ENT-target.",
+      "screen_direction": "left_to_right",
+      "sequence_number": 6,
+      "shot_scale": "medium",
+      "start_ms": 5000,
+      "state_after": "ENT-target:dependency map=resolved-with-boundary; ENT-proof:stopped chain=visible",
+      "state_before": "ENT-target:dependency map=changed-pending-review; ENT-proof:stopped chain=visible",
+      "story_question": "What rule returns to the real workflow?",
+      "transition": "pull_out motivated by close the visual argument and hand it back.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "remove",
+      "visual_state": "The resolved dependency map stays visible while the sequence returns to A-roll: the chain stops safely at the gate."
+    }
+  ],
+  "kind": "hook_broll",
+  "narrative": {
+    "action_chain": [
+      "notice the domino",
+      "removes one domino, then restores a labeled gate",
+      "inspect the stopped chain"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The domino changes state before the objective is secure.",
+    "limitation": "The metaphor simplifies real branching systems.",
+    "objective": "show how one missing handoff propagates",
+    "obstacle": "the dependency is invisible in a list",
+    "payoff": "the chain stops safely at the gate",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "stopped chain",
+    "protagonist": "a systems explainer",
+    "setup": "a tabletop studio",
+    "stakes": "one missing step can disrupt the full chain"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:cc451d3891f4eb611e2da4d2427b78d81c823b1600b122c47a29a6a2305ad429",
+  "story_id": "ST-021",
+  "title": "Domino Dependency",
+  "variation_axes": {
+    "operation_type": "remove",
+    "proof_mechanism": "stopped chain; boundary=The metaphor simplifies real branching systems.",
+    "scene_topology": "object_metaphor::a tabletop studio",
+    "target_transformation": "dependency map: unresolved -> the chain stops safely at the gate"
+  },
+  "variation_fingerprint": "sha256:8cbd43ef6368d78926f39b73bbb1d995c2ebd0aec6c14627e26ef55a1131c558",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:e45a5354f1b9bc2331d8700f19584e8eed7c2908af2a1cf474967b2181f106f1"
+}

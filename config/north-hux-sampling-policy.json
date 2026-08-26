@@ -1,0 +1,36 @@
+{
+  "schema": "north-hux.sampling-policy.v1",
+  "effective_date": "2026-08-25",
+  "owner_approval_state": "APPROVED",
+  "target": {
+    "qualified_accounts_per_platform_minimum": 10000,
+    "qualified_accounts_per_platform_maximum": 12000,
+    "platforms": ["youtube", "tiktok", "instagram"],
+    "calibration_gate_accounts_per_available_platform": {"minimum": 100, "maximum": 300}
+  },
+  "required_strata": [
+    "account_track",
+    "creator_form",
+    "audience_size_band",
+    "content_format_state",
+    "publication_age_band",
+    "discovery_route",
+    "language_evidence",
+    "region_evidence_or_unknown"
+  ],
+  "creator_concentration": {
+    "maximum_fraction_of_analyzed_content_per_account": 0.01,
+    "rule": "No account may contribute more than 1% of content items to an aggregate analytical cohort. Account-census rows remain one row per deduplicated native account.",
+    "case_study_exception": "A separately labeled case-study stratum is excluded from aggregate estimates and does not relax the main-cohort cap."
+  },
+  "owner_decisions": {
+    "OD-02": "APPROVED_TARGET_WITH_CALIBRATION_GATE",
+    "OD-03": "APPROVED_YOUTUBE_OFFICIAL_API_FIXTURE_PENDING_OWNER_SETUP",
+    "OD-07": "APPROVED_STRATA_WITH_ONE_PERCENT_CAP"
+  },
+  "non_claims": [
+    "Approval does not prove platform access or quota.",
+    "The 10-12K target is not complete until qualified, deduplicated, evidence-linked account rows pass review.",
+    "Unavailable interactions remain null and are not inferred."
+  ]
+}

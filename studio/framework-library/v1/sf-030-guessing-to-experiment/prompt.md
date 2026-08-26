@@ -1,0 +1,3 @@
+# Prompt and assembly notes
+
+Create a vertical 9:16 9-second clean-room insert titled “Guessing to Experiment.” Use one meaningful visual state per second. Hook mechanism: `before_after`. Viewer job: `compare_options`. Visual grammar: `mock_screen_capture`. B-roll function: `concretize_abstraction`. Proof form: `worked_example`. Keep all captions, labels, UI-like elements, and proof callouts as editable deterministic overlays. Maintain an 8% horizontal and 10% vertical planning inset, then verify the actual platform UI safe zone at production. Use only original or licensed footage and audio. Do not copy creator wording, source frames, layouts, music, gestures, identity, branded UI, or distinctive sequence. External image/video/audio provider execution remains NOT RUN.

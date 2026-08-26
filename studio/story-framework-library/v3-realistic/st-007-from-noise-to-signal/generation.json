@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-007",
+  "title": "From Noise to Signal",
+  "source_story": "../v2/st-007-from-noise-to-signal/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult systems operator in their mid 40s, cropped auburn hair, charcoal sweater and neutral trousers",
+  "location_lock": "small shared studio with a standing desk, paper planning wall, shelf and soft daylight",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-007 From Noise to Signal\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult systems operator in their mid 40s, cropped auburn hair, charcoal sweater and neutral trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: small shared studio with a standing desk, paper planning wall, shelf and soft daylight. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: pattern card. Trigger prop: funnel. Proof prop: evidence labels. Obstacle: popularity signals are mixed with evidence.\nSix panels in reading order:\n1 close still: notices the funnel; show The funnel changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the pattern card; show The hero and persistent pattern card share one scene; objective: identify one reusable pattern. Emotional register: orientation.\n3 medium still: sees the pattern card blocked; show The pattern card is visibly blocked by popularity signals are mixed with evidence; consequence: a trend claim could be overstated. Emotional register: concern.\n4 over_shoulder still: separates observation from inference; show The hero separates observation from inference; the same pattern card changes state on screen. Emotional register: agency.\n5 macro still: checks the evidence labels; show The changed pattern card remains visible while the evidence labels is isolated. Emotional register: confidence-with-caution.\n6 wide still: confirms the changed pattern card; show The same pattern card reaches its resolved state: one pattern survives with caveats. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'A reference pattern is not performance proof.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-007-F01.png",
+    "frames/ST-007-F02.png",
+    "frames/ST-007-F03.png",
+    "frames/ST-007-F04.png",
+    "frames/ST-007-F05.png",
+    "frames/ST-007-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "6aa07b0d31841f78a56f6d793c5ad392e44f4587a9fd9f95725de8f6d93aec2a",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "1e11bd053b5b13df94bd7d66d133f30114e5c6ada8c172da449de09503b2b4c5",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-007-F01",
+      "file": "frames/ST-007-F01.png",
+      "sha256": "d6e1d67c23d6e1bb4e6451844aa59b82dc53ee10fc9674e8d43fec5fb1b3fa80",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 104.15,
+      "luma_stddev": 61.72,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-007-F02",
+      "file": "frames/ST-007-F02.png",
+      "sha256": "0fe16952933d7e17197b3483cd8e0f6a5646a59bce721c350022b5d91d2c9d9b",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 107.35,
+      "luma_stddev": 63.81,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-007-F03",
+      "file": "frames/ST-007-F03.png",
+      "sha256": "19fcf0807fdcca8a6ffdc5015f31871de5b21e8b645852c2b46a10ac96821d06",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 93.62,
+      "luma_stddev": 58.86,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-007-F04",
+      "file": "frames/ST-007-F04.png",
+      "sha256": "1949cf1cdaf6c91ad1ed35bbc2e165a126df916f51f4180a48b139c84bedbe5f",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 87.89,
+      "luma_stddev": 66.56,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-007-F05",
+      "file": "frames/ST-007-F05.png",
+      "sha256": "d2162dfe563e0f5c49dba27797e0f55197225c18548d36967a1da7d8a540afa4",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 107.57,
+      "luma_stddev": 56.22,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-007-F06",
+      "file": "frames/ST-007-F06.png",
+      "sha256": "c392ddbc7b804e9038ccb06ce2f5b95fcbd9b46ea5dab1fdca5be45fea010b05",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 103.85,
+      "luma_stddev": 63.53,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

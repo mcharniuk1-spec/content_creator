@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+<rect width="540" height="960" fill="#171717"/>
+<rect x="44" y="96" width="452" height="768" rx="28" fill="none" stroke="#e9e9e9" stroke-opacity=".16" stroke-dasharray="10 10"/>
+<text x="44" y="58" font-family="Arial,sans-serif" font-size="20" fill="#e9e9e9" opacity=".74">SF-036 · 02:00–03:00 · voice_over</text>
+<text x="270" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="800" fill="#e9e9e9">02</text>
+<text x="270" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#e9e9e9" opacity=".66">item two</text>
+<rect x="58" y="230" width="202" height="420" rx="22" fill="#f0b44d" opacity=".22"/><rect x="280" y="230" width="202" height="420" rx="22" fill="#e9e9e9" opacity=".14"/><path d="M270 230V650" stroke="#f0b44d" stroke-width="4"/>
+<rect x="64" y="820" width="412" height="64" rx="18" fill="#e9e9e9" opacity=".10"/>
+<text x="84" y="848" font-family="Arial,sans-serif" font-size="15" fill="#e9e9e9" opacity=".72">B-ROLL: prove_state</text>
+<text x="84" y="872" font-family="Arial,sans-serif" font-size="15" fill="#e9e9e9" opacity=".72">CUT: none · TEXT: editable</text>
+<text x="270" y="925" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#e9e9e9" opacity=".48">LOCAL PREVIS · EXTERNAL PROVIDER NOT RUN</text>
+</svg>

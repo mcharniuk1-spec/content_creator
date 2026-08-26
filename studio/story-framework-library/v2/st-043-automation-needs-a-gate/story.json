@@ -1,0 +1,516 @@
+{
+  "aspect_ratio": "9:16",
+  "causal_graph_fingerprint": "sha256:4a5a17698e2a5e313ccacd8e8c864ccd758a4a94c22c6c71e9fcdd6dad200c51",
+  "clean_room_risk_notes": [
+    "No source wording, named character, branded UI, voice, music, or distinctive source sequence may be reused.",
+    "This package uses only original anonymous geometry and generic props.",
+    "View-count snapshots and platform guidance are not performance or virality evidence."
+  ],
+  "continuity_bible": {
+    "forbidden_changes": [
+      "no real-person likeness or brand marks",
+      "do not reverse screen direction before payoff",
+      "do not change prop identity between frames"
+    ],
+    "hero_design": "anonymous circle-headed geometric operator with consistent accent color",
+    "palette": [
+      "#0B211A",
+      "#85D69A",
+      "#F5E1A4",
+      "#FF8169"
+    ],
+    "proof_prop": "human gate",
+    "scene": "an automation lane",
+    "screen_direction": "progress moves left to right; resistance blocks the center",
+    "target_prop": "controlled flow",
+    "trigger_prop": "robot arm",
+    "wardrobe": "non-identifying solid-color workwear"
+  },
+  "duration_ms": 6000,
+  "entities": [
+    {
+      "entity_id": "ENT-hero",
+      "initial_state": "observing trigger",
+      "kind": "actor",
+      "label": "a system owner",
+      "visual_token": "hero-043"
+    },
+    {
+      "entity_id": "ENT-trigger",
+      "initial_state": "stable before hook",
+      "kind": "trigger",
+      "label": "robot arm",
+      "visual_token": "robot-arm"
+    },
+    {
+      "entity_id": "ENT-target",
+      "initial_state": "absent or unresolved",
+      "kind": "target",
+      "label": "controlled flow",
+      "visual_token": "controlled-flow"
+    },
+    {
+      "entity_id": "ENT-obstacle",
+      "initial_state": "blocking target",
+      "kind": "obstacle",
+      "label": "the agent cannot recognize every edge case",
+      "visual_token": "obstacle-contradiction_resolution"
+    },
+    {
+      "entity_id": "ENT-proof",
+      "initial_state": "hidden until evidence beat",
+      "kind": "proof",
+      "label": "human gate",
+      "visual_token": "human-gate"
+    }
+  ],
+  "external_provider_state": "NOT_RUN",
+  "family": "contradiction_resolution",
+  "frames": [
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-trigger"
+      ],
+      "audio_cue": "single inciting accent",
+      "beat_role": "hook",
+      "beat_roles": [
+        "hook"
+      ],
+      "broll_function": "attention_reset",
+      "camera_motion": "locked",
+      "camera_motivation": "Open a precise question with a visible changed object.",
+      "cause_frame_ids": [],
+      "emotion": "surprise",
+      "end_ms": 1000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "observing",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "absent",
+        "ENT-trigger": "stable"
+      },
+      "frame_id": "ST-043-F01",
+      "handback_visible": false,
+      "hero_action": "notices the robot arm",
+      "image_path": "frames/ST-043-F01.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `contradiction_resolution` scene grammar. Anonymous geometric a system owner in an automation lane. The robot arm changes before the objective is secure. Keep ENT-target `controlled flow` persistent and visibly transform it through `routes normal cases forward and exceptions aside`; show ENT-proof `human gate` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Open a precise question with a visible changed object.",
+      "limitation_visible": false,
+      "narration": "The state changed before anyone was ready.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-trigger changes: ENT-target:controlled flow=absent; ENT-proof:human gate=hidden → ENT-target:controlled flow=unoriented; ENT-proof:human gate=hidden.",
+      "on_screen_text": "BOTH LOOK TRUE",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `contradiction_resolution` advances through `hook` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 1,
+      "shot_scale": "wide",
+      "start_ms": 0,
+      "state_after": "ENT-target:controlled flow=unoriented; ENT-proof:human gate=hidden",
+      "state_before": "ENT-target:controlled flow=absent; ENT-proof:human gate=hidden",
+      "story_question": "Why is the expected rule failing?",
+      "transition": "locked motivated by open a precise question with a visible changed object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The robot arm changes before the objective is secure."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "orientation",
+      "beat_roles": [
+        "orientation"
+      ],
+      "broll_function": "establish_context",
+      "camera_motion": "push_in",
+      "camera_motivation": "Reveal actor, target, and spatial relationship.",
+      "cause_frame_ids": [
+        "ST-043-F01"
+      ],
+      "emotion": "orientation",
+      "end_ms": 2000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "unoriented",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-043-F02",
+      "handback_visible": false,
+      "hero_action": "locates the controlled flow",
+      "image_path": "frames/ST-043-F02.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `contradiction_resolution` scene grammar. Anonymous geometric a system owner in an automation lane. The hero and persistent controlled flow share one scene; objective: let routine work move safely. Keep ENT-target `controlled flow` persistent and visibly transform it through `routes normal cases forward and exceptions aside`; show ENT-proof `human gate` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Reveal actor, target, and spatial relationship.",
+      "limitation_visible": false,
+      "narration": "The objective is to let routine work move safely.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:controlled flow=unoriented; ENT-proof:human gate=hidden → ENT-target:controlled flow=present-unresolved; ENT-proof:human gate=hidden.",
+      "on_screen_text": "THE EXPECTATION",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `contradiction_resolution` advances through `orientation` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 2,
+      "shot_scale": "medium",
+      "start_ms": 1000,
+      "state_after": "ENT-target:controlled flow=present-unresolved; ENT-proof:human gate=hidden",
+      "state_before": "ENT-target:controlled flow=unoriented; ENT-proof:human gate=hidden",
+      "story_question": "What expectation does the hero hold?",
+      "transition": "push_in motivated by reveal actor, target, and spatial relationship.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The hero and persistent controlled flow share one scene; objective: let routine work move safely."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-obstacle",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "obstacle",
+      "beat_roles": [
+        "obstacle"
+      ],
+      "broll_function": "concretize_abstraction",
+      "camera_motion": "pan_left",
+      "camera_motivation": "Make resistance and consequence inspectable.",
+      "cause_frame_ids": [
+        "ST-043-F02"
+      ],
+      "emotion": "concern",
+      "end_ms": 3000,
+      "entity_state_after": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "latent",
+        "ENT-proof": "hidden",
+        "ENT-target": "present-unresolved",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-043-F03",
+      "handback_visible": false,
+      "hero_action": "sees the controlled flow blocked",
+      "image_path": "frames/ST-043-F03.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `contradiction_resolution` scene grammar. Anonymous geometric a system owner in an automation lane. The controlled flow is visibly blocked by the agent cannot recognize every edge case; consequence: an exception could become an external action. Keep ENT-target `controlled flow` persistent and visibly transform it through `routes normal cases forward and exceptions aside`; show ENT-proof `human gate` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Make resistance and consequence inspectable.",
+      "limitation_visible": false,
+      "narration": "But the agent cannot recognize every edge case.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-obstacle, ENT-target changes: ENT-target:controlled flow=present-unresolved; ENT-proof:human gate=hidden → ENT-target:controlled flow=blocked; ENT-proof:human gate=hidden.",
+      "on_screen_text": "THE CONTRADICTION",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `contradiction_resolution` advances through `obstacle` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 3,
+      "shot_scale": "close",
+      "start_ms": 2000,
+      "state_after": "ENT-target:controlled flow=blocked; ENT-proof:human gate=hidden",
+      "state_before": "ENT-target:controlled flow=present-unresolved; ENT-proof:human gate=hidden",
+      "story_question": "What contradiction becomes visible?",
+      "transition": "pan_left motivated by make resistance and consequence inspectable.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-obstacle"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The controlled flow is visibly blocked by the agent cannot recognize every edge case; consequence: an exception could become an external action."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-hero",
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "mechanism",
+      "beat_roles": [
+        "mechanism"
+      ],
+      "broll_function": "demonstrate_process",
+      "camera_motion": "tilt_down",
+      "camera_motivation": "Show the mechanism transforming the persistent target.",
+      "cause_frame_ids": [
+        "ST-043-F03"
+      ],
+      "emotion": "agency",
+      "end_ms": 4000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "aware",
+        "ENT-obstacle": "active",
+        "ENT-proof": "hidden",
+        "ENT-target": "blocked",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-043-F04",
+      "handback_visible": false,
+      "hero_action": "routes normal cases forward and exceptions aside",
+      "image_path": "frames/ST-043-F04.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `contradiction_resolution` scene grammar. Anonymous geometric a system owner in an automation lane. The hero routes normal cases forward and exceptions aside; the same controlled flow changes state on screen. Keep ENT-target `controlled flow` persistent and visibly transform it through `routes normal cases forward and exceptions aside`; show ENT-proof `human gate` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Show the mechanism transforming the persistent target.",
+      "limitation_visible": false,
+      "narration": "The decisive mechanism is to route normal cases forward and exceptions aside.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-hero, ENT-target changes: ENT-target:controlled flow=blocked; ENT-proof:human gate=hidden → ENT-target:controlled flow=transformed; ENT-proof:human gate=hidden.",
+      "on_screen_text": "ADD THE DISTINCTION",
+      "payoff_visible": false,
+      "proof_anchor_visible": false,
+      "scene_change": "Family grammar `contradiction_resolution` advances through `mechanism` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 4,
+      "shot_scale": "diagram",
+      "start_ms": 3000,
+      "state_after": "ENT-target:controlled flow=transformed; ENT-proof:human gate=hidden",
+      "state_before": "ENT-target:controlled flow=blocked; ENT-proof:human gate=hidden",
+      "story_question": "What reframe makes both facts fit?",
+      "transition": "tilt_down motivated by show the mechanism transforming the persistent target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The hero routes normal cases forward and exceptions aside; the same controlled flow changes state on screen."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-proof",
+        "ENT-target"
+      ],
+      "audio_cue": "brief silence under evidence",
+      "beat_role": "proof",
+      "beat_roles": [
+        "proof"
+      ],
+      "broll_function": "prove_state",
+      "camera_motion": "rack_focus",
+      "camera_motivation": "Bind the changed target to an inspectable proof object.",
+      "cause_frame_ids": [
+        "ST-043-F04"
+      ],
+      "emotion": "confidence-with-caution",
+      "end_ms": 5000,
+      "entity_state_after": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "hidden",
+        "ENT-target": "transformed",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-043-F05",
+      "handback_visible": false,
+      "hero_action": "checks the human gate",
+      "image_path": "frames/ST-043-F05.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `contradiction_resolution` scene grammar. Anonymous geometric a system owner in an automation lane. The changed controlled flow remains visible while the human gate is isolated. Keep ENT-target `controlled flow` persistent and visibly transform it through `routes normal cases forward and exceptions aside`; show ENT-proof `human gate` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Bind the changed target to an inspectable proof object.",
+      "limitation_visible": false,
+      "narration": "Check the human gate, not the claim.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-proof, ENT-target changes: ENT-target:controlled flow=transformed; ENT-proof:human gate=hidden → ENT-target:controlled flow=changed-pending-review; ENT-proof:human gate=visible.",
+      "on_screen_text": "TEST THE REFRAME",
+      "payoff_visible": false,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `contradiction_resolution` advances through `proof` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 5,
+      "shot_scale": "macro",
+      "start_ms": 4000,
+      "state_after": "ENT-target:controlled flow=changed-pending-review; ENT-proof:human gate=visible",
+      "state_before": "ENT-target:controlled flow=transformed; ENT-proof:human gate=hidden",
+      "story_question": "What example tests the reframe?",
+      "transition": "rack_focus motivated by bind the changed target to an inspectable proof object.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The changed controlled flow remains visible while the human gate is isolated."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "All visible and affected entity IDs are depicted consistently.",
+        "The persistent target shows the declared before/action/after state.",
+        "The family-specific visual operation and camera motive add the declared information."
+      ],
+      "affected_entity_ids": [
+        "ENT-target"
+      ],
+      "audio_cue": "voice anchor",
+      "beat_role": "payoff",
+      "beat_roles": [
+        "payoff",
+        "limitation",
+        "handback"
+      ],
+      "broll_function": "contrast",
+      "camera_motion": "pull_out",
+      "camera_motivation": "Close the opening question with the changed target.",
+      "cause_frame_ids": [
+        "ST-043-F05"
+      ],
+      "emotion": "relief",
+      "end_ms": 6000,
+      "entity_state_after": {
+        "ENT-hero": "returned-to-A-roll",
+        "ENT-obstacle": "cleared",
+        "ENT-proof": "visible",
+        "ENT-target": "resolved-with-boundary",
+        "ENT-trigger": "changed"
+      },
+      "entity_state_before": {
+        "ENT-hero": "acting",
+        "ENT-obstacle": "clearing",
+        "ENT-proof": "visible",
+        "ENT-target": "changed-pending-review",
+        "ENT-trigger": "changed"
+      },
+      "frame_id": "ST-043-F06",
+      "handback_visible": true,
+      "hero_action": "confirms the changed controlled flow",
+      "image_path": "frames/ST-043-F06.svg",
+      "image_prompt": "9:16 editorial storyboard still using the `contradiction_resolution` scene grammar. Anonymous geometric a system owner in an automation lane. The same controlled flow reaches its resolved state: speed and review coexist. Keep ENT-target `controlled flow` persistent and visibly transform it through `routes normal cases forward and exceptions aside`; show ENT-proof `human gate` when declared. Strong mobile silhouette, no logos, no real person, no final small text.",
+      "information_gain": "Close the opening question with the changed target.",
+      "limitation_visible": true,
+      "narration": "Now speed and review coexist.",
+      "negative_prompt": "No recognizable person, no brand interface, no copyrighted character, no watermark, no illegible generated copy, no unsupported result claim.",
+      "object_action": "ENT-target changes: ENT-target:controlled flow=changed-pending-review; ENT-proof:human gate=visible → ENT-target:controlled flow=resolved-with-boundary; ENT-proof:human gate=visible.",
+      "on_screen_text": "THE CORRECTED RULE",
+      "payoff_visible": true,
+      "proof_anchor_visible": true,
+      "scene_change": "Family grammar `contradiction_resolution` advances through `payoff` with persistent ENT-target.",
+      "screen_direction": "centered",
+      "sequence_number": 6,
+      "shot_scale": "wide",
+      "start_ms": 5000,
+      "state_after": "ENT-target:controlled flow=resolved-with-boundary; ENT-proof:human gate=visible",
+      "state_before": "ENT-target:controlled flow=changed-pending-review; ENT-proof:human gate=visible",
+      "story_question": "What corrected rule should be remembered?",
+      "transition": "pull_out motivated by close the opening question with the changed target.",
+      "visible_entity_ids": [
+        "ENT-hero",
+        "ENT-trigger",
+        "ENT-target",
+        "ENT-proof"
+      ],
+      "visual_operation": "route",
+      "visual_state": "The same controlled flow reaches its resolved state: speed and review coexist."
+    }
+  ],
+  "kind": "hook_intro",
+  "narrative": {
+    "action_chain": [
+      "notice the robot arm",
+      "routes normal cases forward and exceptions aside",
+      "inspect the human gate"
+    ],
+    "emotion_arc": [
+      "surprise",
+      "concern",
+      "agency",
+      "cautious relief"
+    ],
+    "handback": "Return to the speaking person with one bounded rule or next step.",
+    "inciting_change": "The robot arm changes state before the objective is secure.",
+    "limitation": "The gate requires a real escalation owner.",
+    "objective": "let routine work move safely",
+    "obstacle": "the agent cannot recognize every edge case",
+    "payoff": "speed and review coexist",
+    "point_of_view": "anonymous operator-observer",
+    "proof": "human gate",
+    "protagonist": "a system owner",
+    "setup": "an automation lane",
+    "stakes": "an exception could become an external action"
+  },
+  "rights_state": "original_local_previsualization",
+  "semantic_fingerprint": "sha256:43a644381288deca30f22eb63ccd186534024bf50a5f58b506ce5b17328bd4b0",
+  "story_id": "ST-043",
+  "title": "Automation Needs a Gate",
+  "variation_axes": {
+    "operation_type": "route",
+    "proof_mechanism": "human gate; boundary=The gate requires a real escalation owner.",
+    "scene_topology": "contradiction_resolution::an automation lane",
+    "target_transformation": "controlled flow: unresolved -> speed and review coexist"
+  },
+  "variation_fingerprint": "sha256:f2174d5b356ca02d7d8dda17b1ad807f4c2f0eecf1a0a1793b45b54e402ca75d",
+  "version": "2.0.0",
+  "visual_sequence_fingerprint": "sha256:18b9b18b65425c5ee02e15ba2b697767e2774c59bdf5155f06aa79cf66fee090"
+}

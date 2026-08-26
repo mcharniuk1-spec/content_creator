@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/evidence-card.schema.json",
+  "title": "EvidenceCard",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "source_record_ids",
+    "rights_decision_ids",
+    "claim_summary",
+    "evidence_label",
+    "temporal_class",
+    "freshness_state",
+    "confidence",
+    "contradiction_state",
+    "channel_limits",
+    "allowed_downstream_uses",
+    "prohibited_uses",
+    "observations",
+    "maker",
+    "review"
+  ],
+  "properties": {
+    "evidence_id": {"type": "string", "pattern": "^EV-[A-Z0-9-]+$"},
+    "source_record_ids": {"type": "array", "items": {"type": "string", "pattern": "^(SRC|LCTX)-[A-Z0-9-]+$"}, "minItems": 1, "uniqueItems": true},
+    "rights_decision_ids": {"type": "array", "items": {"type": "string", "pattern": "^RIGHTS-[A-Z0-9-]+$"}, "minItems": 1, "uniqueItems": true},
+    "claim_summary": {"type": "string", "minLength": 1},
+    "evidence_label": {"enum": ["FACT", "INTERPRETATION", "HYPOTHESIS", "GAP"]},
+    "temporal_class": {"enum": ["stable", "time_sensitive", "observational", "unknown"]},
+    "freshness_state": {"enum": ["current", "stable_exception", "stale", "undated"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "contradiction_state": {"enum": ["none_observed", "corroborated", "unresolved", "superseded"]},
+    "channel_limits": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "allowed_downstream_uses": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "prohibited_uses": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "observations": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "maker": {"type": "string", "minLength": 1},
+    "review": {
+      "type": "object",
+      "required": ["reviewer", "verdict"],
+      "properties": {
+        "reviewer": {"type": "string", "minLength": 1},
+        "verdict": {"enum": ["PENDING", "APPROVE", "REVISE", "BLOCK"]},
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

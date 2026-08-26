@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-049",
+  "title": "Frame to Cut",
+  "source_story": "../v2/st-049-frame-to-cut/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult project lead in their early 50s, short gray hair, cream knit and navy work jacket",
+  "location_lock": "quiet meeting room with an unbranded whiteboard, task cards, simple table and window light",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-049 Frame to Cut\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult project lead in their early 50s, short gray hair, cream knit and navy work jacket. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: quiet meeting room with an unbranded whiteboard, task cards, simple table and window light. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: coherent cut. Trigger prop: film strip. Proof prop: motion match. Obstacle: transitions are chosen for novelty.\nSix panels in reading order:\n1 close still: notices the film strip; show The film strip changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the coherent cut; show The hero and persistent coherent cut share one scene; objective: assemble a readable six-second insert. Emotional register: orientation.\n3 medium still: matches movement or information across each cut; show The hero attempts to match movement or information across each cut; the coherent cut visibly responds. Emotional register: concern.\n4 over_shoulder still: matches movement or information across each cut; show The hero matches movement or information across each cut; the same coherent cut changes state on screen. Emotional register: agency.\n5 macro still: checks the motion match; show The changed coherent cut remains visible while the motion match is isolated. Emotional register: confidence-with-caution.\n6 medium still: returns the resolved target to the viewer; show The resolved coherent cut stays visible while the sequence returns to A-roll: the insert reads as one event. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Final timing must follow recorded speech.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-049-F01.png",
+    "frames/ST-049-F02.png",
+    "frames/ST-049-F03.png",
+    "frames/ST-049-F04.png",
+    "frames/ST-049-F05.png",
+    "frames/ST-049-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "1bc4af09d395b00f526ce8e130bfb6f34c2d844883fd557669e049f80746b72e",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "cec5af414a76417e3f6e197cbc9301fae084be03035de9967304e1eecf69226c",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-049-F01",
+      "file": "frames/ST-049-F01.png",
+      "sha256": "97ac8142b8c346a6b336e1b57f18c034b318a89d999fa90daef6da9367967ae5",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 120.0,
+      "luma_stddev": 70.1,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-049-F02",
+      "file": "frames/ST-049-F02.png",
+      "sha256": "b1876139daf4109f9783babb55ded28f538e339de5f7f4fbbb7f097438ffe8f6",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 124.76,
+      "luma_stddev": 63.47,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-049-F03",
+      "file": "frames/ST-049-F03.png",
+      "sha256": "de6f1c9d7fc445bdbd18eec2ebce87eadd6f573c50b56f3e1759c02db1d1ae95",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 92.92,
+      "luma_stddev": 65.44,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-049-F04",
+      "file": "frames/ST-049-F04.png",
+      "sha256": "e86a834d0732328e858c9d49425157c3f2e61accd8e32f85f1aaf3bae8c92644",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 75.85,
+      "luma_stddev": 64.47,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-049-F05",
+      "file": "frames/ST-049-F05.png",
+      "sha256": "f70a13343926062ceb29caa1564ffdf94ee4dacf37b907837c7a62f7813f512e",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 118.4,
+      "luma_stddev": 58.1,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-049-F06",
+      "file": "frames/ST-049-F06.png",
+      "sha256": "069bc1e2cf1c343a537871c4049f19b9d297932a9ccb3da5826548f8face6637",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 106.4,
+      "luma_stddev": 67.73,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

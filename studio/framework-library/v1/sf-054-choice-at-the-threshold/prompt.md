@@ -1,0 +1,3 @@
+# Prompt and assembly notes
+
+Create a vertical 9:16 9-second clean-room insert titled “Choice at the Threshold.” Use one meaningful visual state per second. Hook mechanism: `story_in_progress`. Viewer job: `assess_risk`. Visual grammar: `split_screen`. B-roll function: `prove_state`. Proof form: `worked_example`. Keep all captions, labels, UI-like elements, and proof callouts as editable deterministic overlays. Maintain an 8% horizontal and 10% vertical planning inset, then verify the actual platform UI safe zone at production. Use only original or licensed footage and audio. Do not copy creator wording, source frames, layouts, music, gestures, identity, branded UI, or distinctive sequence. External image/video/audio provider execution remains NOT RUN.

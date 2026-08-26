@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/schemas/studio-story-framework.schema.json",
+  "title": "Studio Sequential Story Framework",
+  "type": "object",
+  "required": ["story_id", "version", "title", "family", "kind", "duration_ms", "aspect_ratio", "narrative", "continuity_bible", "entities", "semantic_fingerprint", "causal_graph_fingerprint", "visual_sequence_fingerprint", "variation_axes", "variation_fingerprint", "clean_room_risk_notes", "frames", "rights_state", "external_provider_state"],
+  "properties": {
+    "story_id": {"type": "string", "pattern": "^ST-[0-9]{3}$"},
+    "version": {"const": "2.0.0"},
+    "title": {"type": "string", "minLength": 3},
+    "family": {"enum": ["in_medias_res", "result_rewind", "diagnostic_mystery", "failed_attempt_correction", "object_metaphor", "countdown_ladder", "before_after_transformation", "proof_reveal", "contradiction_resolution", "process_handback"]},
+    "kind": {"enum": ["hook", "intro", "broll", "hook_intro", "hook_broll", "intro_broll"]},
+    "duration_ms": {"type": "integer", "minimum": 6000, "maximum": 9000},
+    "aspect_ratio": {"const": "9:16"},
+    "narrative": {
+      "type": "object",
+      "required": ["protagonist", "point_of_view", "objective", "obstacle", "stakes", "setup", "inciting_change", "action_chain", "proof", "limitation", "payoff", "handback", "emotion_arc"],
+      "properties": {
+        "protagonist": {"type": "string", "minLength": 2},
+        "point_of_view": {"type": "string", "minLength": 2},
+        "objective": {"type": "string", "minLength": 3},
+        "obstacle": {"type": "string", "minLength": 3},
+        "stakes": {"type": "string", "minLength": 3},
+        "setup": {"type": "string", "minLength": 3},
+        "inciting_change": {"type": "string", "minLength": 3},
+        "action_chain": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+        "proof": {"type": "string", "minLength": 3},
+        "limitation": {"type": "string", "minLength": 3},
+        "payoff": {"type": "string", "minLength": 3},
+        "handback": {"type": "string", "minLength": 3},
+        "emotion_arc": {"type": "array", "minItems": 3, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "continuity_bible": {
+      "type": "object",
+      "required": ["hero_design", "scene", "trigger_prop", "proof_prop", "target_prop", "palette", "screen_direction", "wardrobe", "forbidden_changes"],
+      "properties": {
+        "hero_design": {"type": "string"},
+        "scene": {"type": "string"},
+        "trigger_prop": {"type": "string"},
+        "proof_prop": {"type": "string"},
+        "target_prop": {"type": "string"},
+        "palette": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+        "screen_direction": {"type": "string"},
+        "wardrobe": {"type": "string"},
+        "forbidden_changes": {"type": "array", "minItems": 2, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["entity_id", "kind", "label", "visual_token", "initial_state"],
+        "properties": {
+          "entity_id": {"type": "string"},
+          "kind": {"enum": ["actor", "trigger", "target", "obstacle", "proof"]},
+          "label": {"type": "string"},
+          "visual_token": {"type": "string"},
+          "initial_state": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "semantic_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "causal_graph_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "visual_sequence_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "variation_axes": {
+      "type": "object",
+      "required": ["operation_type", "target_transformation", "proof_mechanism", "scene_topology"],
+      "properties": {
+        "operation_type": {"type": "string"},
+        "target_transformation": {"type": "string"},
+        "proof_mechanism": {"type": "string"},
+        "scene_topology": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "variation_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "clean_room_risk_notes": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+    "frames": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": ["frame_id", "sequence_number", "start_ms", "end_ms", "beat_role", "beat_roles", "cause_frame_ids", "visible_entity_ids", "affected_entity_ids", "state_before", "state_after", "entity_state_before", "entity_state_after", "visual_operation", "proof_anchor_visible", "limitation_visible", "payoff_visible", "handback_visible", "story_question", "narration", "on_screen_text", "visual_state", "hero_action", "object_action", "scene_change", "shot_scale", "camera_motion", "camera_motivation", "screen_direction", "a_roll_state", "broll_function", "transition", "audio_cue", "emotion", "information_gain", "image_path", "image_prompt", "negative_prompt", "acceptance_checks"],
+        "properties": {
+          "frame_id": {"type": "string"},
+          "sequence_number": {"type": "integer", "minimum": 1},
+          "start_ms": {"type": "integer", "minimum": 0},
+          "end_ms": {"type": "integer", "minimum": 1},
+          "beat_role": {"enum": ["hook", "orientation", "obstacle", "attempt", "mechanism", "proof", "limitation", "payoff", "handback"]},
+          "beat_roles": {"type": "array", "minItems": 1, "items": {"enum": ["hook", "orientation", "obstacle", "attempt", "mechanism", "proof", "limitation", "payoff", "handback"]}},
+          "cause_frame_ids": {"type": "array", "items": {"type": "string"}},
+          "visible_entity_ids": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+          "affected_entity_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "state_before": {"type": "string", "minLength": 2},
+          "state_after": {"type": "string", "minLength": 2},
+          "entity_state_before": {
+            "type": "object",
+            "required": ["ENT-hero", "ENT-trigger", "ENT-target", "ENT-obstacle", "ENT-proof"],
+            "properties": {
+              "ENT-hero": {"type": "string"}, "ENT-trigger": {"type": "string"}, "ENT-target": {"type": "string"}, "ENT-obstacle": {"type": "string"}, "ENT-proof": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          "entity_state_after": {
+            "type": "object",
+            "required": ["ENT-hero", "ENT-trigger", "ENT-target", "ENT-obstacle", "ENT-proof"],
+            "properties": {
+              "ENT-hero": {"type": "string"}, "ENT-trigger": {"type": "string"}, "ENT-target": {"type": "string"}, "ENT-obstacle": {"type": "string"}, "ENT-proof": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          "visual_operation": {"enum": ["sort", "route", "inspect", "remove", "attach", "gate", "transfer"]},
+          "proof_anchor_visible": {"type": "boolean"},
+          "limitation_visible": {"type": "boolean"},
+          "payoff_visible": {"type": "boolean"},
+          "handback_visible": {"type": "boolean"},
+          "story_question": {"type": "string", "minLength": 3},
+          "narration": {"type": "string", "minLength": 1},
+          "on_screen_text": {"type": "string"},
+          "visual_state": {"type": "string", "minLength": 3},
+          "hero_action": {"type": "string", "minLength": 2},
+          "object_action": {"type": "string", "minLength": 2},
+          "scene_change": {"type": "string", "minLength": 2},
+          "shot_scale": {"enum": ["extreme_close", "close", "medium", "wide", "macro", "over_shoulder", "top_down", "screen", "diagram"]},
+          "camera_motion": {"enum": ["locked", "push_in", "pull_out", "pan_left", "pan_right", "tilt_down", "whip_pan", "match_move", "rack_focus"]},
+          "camera_motivation": {"type": "string", "minLength": 3},
+          "screen_direction": {"enum": ["left_to_right", "right_to_left", "centered", "toward_camera", "away_camera"]},
+          "a_roll_state": {"enum": ["full", "picture_in_picture", "voice_over", "absent", "return_cut"]},
+          "broll_function": {"enum": ["establish_context", "concretize_abstraction", "demonstrate_process", "prove_state", "contrast", "attention_reset", "emotional_texture", "ui_orientation"]},
+          "transition": {"type": "string"},
+          "audio_cue": {"type": "string"},
+          "emotion": {"type": "string"},
+          "information_gain": {"type": "string", "minLength": 3},
+          "image_path": {"type": "string", "pattern": "^frames/.+\\.svg$"},
+          "image_prompt": {"type": "string", "minLength": 10},
+          "negative_prompt": {"type": "string", "minLength": 10},
+          "acceptance_checks": {"type": "array", "minItems": 3, "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "rights_state": {"const": "original_local_previsualization"},
+    "external_provider_state": {"const": "NOT_RUN"}
+  },
+  "additionalProperties": false
+}

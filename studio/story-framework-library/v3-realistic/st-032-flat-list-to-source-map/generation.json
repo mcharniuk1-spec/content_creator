@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-032",
+  "title": "Flat List to Source Map",
+  "source_story": "../v2/st-032-flat-list-to-source-map/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult product manager in their late 30s, natural wavy brown hair, muted navy knit and stone trousers",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-032 Flat List to Source Map\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult product manager in their late 30s, natural wavy brown hair, muted navy knit and stone trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: source map. Trigger prop: list. Proof prop: graph links. Obstacle: a flat list hides dependencies.\nSix panels in reading order:\n1 wide still: notices the list; show The list changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the source map; show The hero and persistent source map share one scene; objective: see which claims share evidence. Emotional register: orientation.\n3 close still: sees the source map blocked; show The source map is visibly blocked by a flat list hides dependencies; consequence: one weak source can support too much. Emotional register: concern.\n4 medium still: connects each claim to dated evidence; show The hero connects each claim to dated evidence; the same source map changes state on screen. Emotional register: agency.\n5 macro still: checks the graph links; show The changed source map remains visible while the graph links is isolated. Emotional register: confidence-with-caution.\n6 wide still: confirms the changed source map; show The same source map reaches its resolved state: overloaded sources become obvious. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'A map visualizes lineage; it does not verify truth.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-032-F01.png",
+    "frames/ST-032-F02.png",
+    "frames/ST-032-F03.png",
+    "frames/ST-032-F04.png",
+    "frames/ST-032-F05.png",
+    "frames/ST-032-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "f61b4d482b97fb9ea448fd93487b94791657289e30bb0ecc9aed2bd0838f4d13",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "8cf904e027e61a0cd6d161ad43d9fcfd3ebdf86bd5d3d506091f94d4abedf243",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-032-F01",
+      "file": "frames/ST-032-F01.png",
+      "sha256": "d727b65d9061637c741793facab0095100fac5ee68f89254316156913e9e5b73",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 92.6,
+      "luma_stddev": 67.38,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-032-F02",
+      "file": "frames/ST-032-F02.png",
+      "sha256": "af70f9cb534098f3fd11d4d93bf6514bfdf933cd9d856f63c2d3fe6c19de2a26",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 100.29,
+      "luma_stddev": 73.35,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-032-F03",
+      "file": "frames/ST-032-F03.png",
+      "sha256": "9a669f46f6ef5b06ec4e67d93100efef7d2b4352c232c8c65816bd9d62a146c5",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 110.89,
+      "luma_stddev": 78.03,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-032-F04",
+      "file": "frames/ST-032-F04.png",
+      "sha256": "b9ff09a1b9e2b17fe7f417f923b59f0d192f4968b6bae32e8b74b0f20c98f432",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 86.75,
+      "luma_stddev": 76.37,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-032-F05",
+      "file": "frames/ST-032-F05.png",
+      "sha256": "bbd6d8b1a16831bcaad48e061c97a6a12e950b68cd8f1448c547a249145a505d",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 141.0,
+      "luma_stddev": 64.84,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-032-F06",
+      "file": "frames/ST-032-F06.png",
+      "sha256": "48465f260555dd039063a80034fd5a52c4dac649f1c42097c08d56b68c9f68a0",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 96.51,
+      "luma_stddev": 71.51,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

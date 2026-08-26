@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+<rect width="1080" height="1920" fill="#101210"/>
+<rect width="1080" height="30" fill="#F3EEDC"/>
+<text x="70" y="105" fill="#F3EEDC" font-family="Helvetica,Arial" font-size="34" font-weight="700">NORTH HUX / 05</text>
+<text x="70" y="172" fill="#F3EEDC" font-family="Helvetica,Arial" font-size="24" font-weight="700">END CARD · 26.0–30.0s · NONE</text>
+<foreignObject x="70" y="235" width="940" height="360"><div xmlns="http://www.w3.org/1999/xhtml" style="font:700 62px/1.05 Helvetica,Arial;color:#F3EEDC">Build vs Buy Is the Wrong First Question</div></foreignObject>
+<rect x="70" y="620" width="940" height="480" rx="32" fill="#1A1D1A" stroke="#F3EEDC" stroke-width="5"/>
+<foreignObject x="115" y="680" width="850" height="360"><div xmlns="http://www.w3.org/1999/xhtml" style="font:500 42px/1.2 Helvetica,Arial;color:#F3EEDC">North Hux end card: Save the five-question decision table.</div></foreignObject>
+<text x="70" y="1190" fill="#F3EEDC" font-family="Helvetica,Arial" font-size="25" font-weight="700">NARRATION</text>
+<foreignObject x="70" y="1230" width="940" height="250"><div xmlns="http://www.w3.org/1999/xhtml" style="font:400 37px/1.25 Helvetica,Arial;color:#F3EEDC">No narration—visual beat.</div></foreignObject>
+<text x="70" y="1535" fill="#F3EEDC" font-family="Helvetica,Arial" font-size="25" font-weight="700">ASSET / CAPTURE INSTRUCTION</text>
+<foreignObject x="70" y="1575" width="940" height="230"><div xmlns="http://www.w3.org/1999/xhtml" style="font:400 28px/1.25 Helvetica,Arial;color:#C9C6BA">Render deterministically from North Hux typography and color tokens.</div></foreignObject>
+<text x="70" y="1870" fill="#777A72" font-family="Helvetica,Arial" font-size="21">Frame plan only · provider generation NOT RUN · 9:16</text>
+</svg>

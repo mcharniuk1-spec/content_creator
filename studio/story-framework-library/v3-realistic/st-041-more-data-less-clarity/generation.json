@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-041",
+  "title": "More Data, Less Clarity",
+  "source_story": "../v2/st-041-more-data-less-clarity/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult operations professional in their early 30s, short dark hair, teal overshirt over a cream tee",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-041 More Data, Less Clarity\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult operations professional in their early 30s, short dark hair, teal overshirt over a cream tee. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: evidence subset. Trigger prop: paper stack. Proof prop: decision lens. Obstacle: additional sources arrive without synthesis.\nSix panels in reading order:\n1 wide still: notices the paper stack; show The paper stack changes before the objective is secure. Emotional register: surprise.\n2 medium still: locates the evidence subset; show The hero and persistent evidence subset share one scene; objective: make one decision. Emotional register: orientation.\n3 close still: sees the evidence subset blocked; show The evidence subset is visibly blocked by additional sources arrive without synthesis; consequence: volume can obscure the decision. Emotional register: concern.\n4 diagram still: groups sources by the question they answer; show The hero groups sources by the question they answer; the same evidence subset changes state on screen. Emotional register: agency.\n5 macro still: checks the decision lens; show The changed evidence subset remains visible while the decision lens is isolated. Emotional register: confidence-with-caution.\n6 wide still: confirms the changed evidence subset; show The same evidence subset reaches its resolved state: less material supports a clearer choice. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'Omitted sources remain in the ledger.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-041-F01.png",
+    "frames/ST-041-F02.png",
+    "frames/ST-041-F03.png",
+    "frames/ST-041-F04.png",
+    "frames/ST-041-F05.png",
+    "frames/ST-041-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "d49f3c2ea6bead947860982109eb00d44671a7eacd596cae78b2e3f644d2a254",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "42ef84e654583e4503a9f855654896bc4b2a2c4e75e696adf99597e26669c1f4",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-041-F01",
+      "file": "frames/ST-041-F01.png",
+      "sha256": "5370bf0bf970661e84c172f0fa7597cf46da098d0f486cc836bd63f01ca31085",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 87.89,
+      "luma_stddev": 58.96,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-041-F02",
+      "file": "frames/ST-041-F02.png",
+      "sha256": "d4c0c1b9b45b33a4e1487a8eb69560972fc1703e2fc51b5923055a7ccf49607a",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 86.81,
+      "luma_stddev": 59.4,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-041-F03",
+      "file": "frames/ST-041-F03.png",
+      "sha256": "4331e9c219d68b6b09a682bfb7d5ad1174af318b10eceae7581a6a7c6eb63398",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 88.24,
+      "luma_stddev": 53.47,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-041-F04",
+      "file": "frames/ST-041-F04.png",
+      "sha256": "44792126d58dfe28cfa74d785ee5033f1efe7a10bfb008777bd42a339f58c8d8",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 88.38,
+      "luma_stddev": 56.07,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-041-F05",
+      "file": "frames/ST-041-F05.png",
+      "sha256": "6c255fe97f17b8f7747ce1ffb43317e1c201ace869e32260d87fb3d2b187c868",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 78.33,
+      "luma_stddev": 52.66,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-041-F06",
+      "file": "frames/ST-041-F06.png",
+      "sha256": "38c7da3734365317dff8eeda465610efac7b3827ca7e7f4794065595c7aa56d8",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 86.75,
+      "luma_stddev": 58.03,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

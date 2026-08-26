@@ -1,0 +1,104 @@
+{
+  "schema": "content-engine.realistic-storyboard-generation.v1",
+  "story_id": "ST-023",
+  "title": "Lock and Key Permission",
+  "source_story": "../v2/st-023-lock-and-key-permission/story.json",
+  "output_state": "GENERATED_CONTACT_SHEET_AND_DERIVED_FRAMES",
+  "provider_route": "codex_builtin_imagegen",
+  "reference_images": [],
+  "reference_evidence_state": "NO_SOURCE_FRAMES_AVAILABLE",
+  "rights_state": "original_fictional_clean_room_previsualization",
+  "likeness_state": "fictional_non_identifiable_adult",
+  "cast_lock": "adult research analyst in their early 40s, close-cropped black hair, olive work shirt and charcoal trousers",
+  "location_lock": "compact workshop-office with shelves, work table, paper cards and neutral walls",
+  "prompt": "Use case: photorealistic-natural\nAsset type: six-panel vertical social-video storyboard reference for ST-023 Lock and Key Permission\nPrimary request: create ONE polished contact-sheet image containing exactly six clearly separated sequential photorealistic frames of the same fictional adult in the same environment. It should feel like candid frames captured from a real phone-shot Instagram Reel or YouTube Short while remaining an original clean-room scene.\nSubject continuity: fictional non-identifiable adult research analyst in their early 40s, close-cropped black hair, olive work shirt and charcoal trousers. Ordinary natural face, realistic skin texture, restrained expression; same person, hair and wardrobe in all six panels.\nScene continuity: compact workshop-office with shelves, work table, paper cards and neutral walls. Same environment, props, time of day and left-to-right screen direction across all panels.\nPersistent target: opened gate. Trigger prop: key. Proof prop: approval token. Obstacle: the key exists without permission to turn it.\nSix panels in reading order:\n1 macro still: notices the key; show The key changes before the objective is secure. Emotional register: surprise.\n2 wide still: locates the opened gate; show The hero and persistent opened gate share one scene; objective: explain why access and approval differ. Emotional register: orientation.\n3 medium still: pairs the key with a separate approval marker; show The hero pairs the key with a separate approval marker; the same opened gate changes state on screen. Emotional register: concern.\n4 close still: sees the opened gate blocked; show The opened gate is visibly blocked by the key exists without permission to turn it; consequence: a capability could be mistaken for authority. Emotional register: agency.\n5 diagram still: checks the approval token; show The changed opened gate remains visible while the approval token is isolated. Emotional register: confidence-with-caution.\n6 medium still: returns the resolved target to the viewer; show The resolved opened gate stays visible while the sequence returns to A-roll: the door opens only when both states align. Emotional register: relief.\nFinal panel truth boundary: visually preserve room for a later editable limitation overlay meaning 'The metaphor does not model every permission layer.', but render no words.\nStyle/medium: realistic phone-native documentary/editorial frame capture, vertical social video, modest sharpening, slight shadow noise, natural highlight rolloff, subtle handheld imperfection, no cinematic LUT and no beauty retouching.\nComposition: contact sheet with six equal portrait-oriented cells in a 2-column by 3-row grid with clean neutral gutters. No titles or captions inside cells. Keep the face, hands, persistent target, trigger, obstacle and proof visible and internally consistent.\nLighting/mood: motivated soft window light plus a believable practical source; natural mixed light; emotional progression from recognition/concern to agency and cautious relief.\nConstraints: exactly six panels; same fictional adult, wardrobe, environment and prop identities; realistic hands/anatomy; blank or abstract paper/screen surfaces for later editable overlays; no generated text; no logos; no watermark; no platform UI.\nAvoid: celebrity or creator likeness, distinctive source composition, influencer reaction face, branded office or software UI, luxury styling, neon tech lighting, cinematic anamorphic effects, plastic skin, warped hands, extra fingers, duplicated/missing props, identity drift, wardrobe changes, impossible reflections, fake metrics, testimonial imagery, unsupported success symbolism, copied creator caption or CTA.",
+  "contact_sheet": "contact-sheet-generated.png",
+  "frames": [
+    "frames/ST-023-F01.png",
+    "frames/ST-023-F02.png",
+    "frames/ST-023-F03.png",
+    "frames/ST-023-F04.png",
+    "frames/ST-023-F05.png",
+    "frames/ST-023-F06.png"
+  ],
+  "generation_date": "2026-08-26",
+  "provider_model_version": "NOT_REPORTED_BY_BUILTIN_TOOL",
+  "source_sheet_sha256": "147f196721e0ff6eede6ae28685a994479fb64d0558add5fb83f0c02b553c99e",
+  "review_sheet": "contact-sheet-final.png",
+  "review_sheet_sha256": "5d016a87c84adbb788e05fa05b5418e6c4222efe25da4183ebd311ea2472d4e1",
+  "frame_receipts": [
+    {
+      "frame_id": "ST-023-F01",
+      "file": "frames/ST-023-F01.png",
+      "sha256": "7d7e3e740addc43e55a61ac924a99664fb2d8e118ecc27023985053a9cfd98d6",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 99.5,
+      "luma_stddev": 54.16,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-023-F02",
+      "file": "frames/ST-023-F02.png",
+      "sha256": "f02554d61e474bb162f5f5419d8013c8ad43417b6033c82813d8a51f68ebbbe2",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 105.94,
+      "luma_stddev": 70.83,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-023-F03",
+      "file": "frames/ST-023-F03.png",
+      "sha256": "e7f46696dd3253d14b1becbe6d5e4ffe5f657f2658b0eaf4c3292965d9ae97b7",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 95.02,
+      "luma_stddev": 64.18,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-023-F04",
+      "file": "frames/ST-023-F04.png",
+      "sha256": "835c68612519bef25a0f614aab31df42348ae2ed12fc19475e8ab48bf8b7f479",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 93.11,
+      "luma_stddev": 65.5,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-023-F05",
+      "file": "frames/ST-023-F05.png",
+      "sha256": "62864c34cdee8433ccfbd0c46fdab09e665b177f7f0e1eef8de0c698ea73b104",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 93.41,
+      "luma_stddev": 62.94,
+      "heuristic_blank_risk": false
+    },
+    {
+      "frame_id": "ST-023-F06",
+      "file": "frames/ST-023-F06.png",
+      "sha256": "00c8eea85d02c740fda2919cae690b75147ff67b8245fbc692705651e4d87f1d",
+      "dimensions": [
+        540,
+        960
+      ],
+      "luma_mean": 100.95,
+      "luma_stddev": 68.73,
+      "heuristic_blank_risk": false
+    }
+  ],
+  "qa_scope": "mechanical_and_heuristic_only; human_visual_review_required"
+}

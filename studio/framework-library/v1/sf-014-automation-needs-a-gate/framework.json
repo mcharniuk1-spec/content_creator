@@ -1,0 +1,157 @@
+{
+  "aspect_ratio": "9:16",
+  "duration_ms": 5000,
+  "external_provider_state": "NOT_RUN",
+  "frames": [
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "keyword_emphasis",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 1000,
+      "frame_id": "SF-014-F01",
+      "image_path": "frames/SF-014-F01.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "THE OPPOSITE",
+      "sequence_number": 1,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the contradiction boundary; licensed or original audio only.",
+      "start_ms": 0,
+      "story_function": "contradiction",
+      "transition": "dissolve",
+      "visual_change": "Automation Needs a Gate: contradiction; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "absent",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 2000,
+      "frame_id": "SF-014-F02",
+      "image_path": "frames/SF-014-F02.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "YOU EXPECT",
+      "sequence_number": 2,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the expected model boundary; licensed or original audio only.",
+      "start_ms": 1000,
+      "story_function": "expected model",
+      "transition": "dissolve",
+      "visual_change": "Automation Needs a Gate: expected model; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "full",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 3000,
+      "frame_id": "SF-014-F03",
+      "image_path": "frames/SF-014-F03.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "BUT",
+      "sequence_number": 3,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the break boundary; licensed or original audio only.",
+      "start_ms": 2000,
+      "story_function": "break",
+      "transition": "dissolve",
+      "visual_change": "Automation Needs a Gate: break; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "voice_over",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "keyword_emphasis",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 4000,
+      "frame_id": "SF-014-F04",
+      "image_path": "frames/SF-014-F04.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "THE RULE",
+      "sequence_number": 4,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the bounded rule boundary; licensed or original audio only.",
+      "start_ms": 3000,
+      "story_function": "bounded rule",
+      "transition": "dissolve",
+      "visual_change": "Automation Needs a Gate: bounded rule; advance one meaningful information state."
+    },
+    {
+      "a_roll_state": "return_cut",
+      "acceptance_checks": [
+        "Primary subject and editable label remain inside the planning safe zone.",
+        "Frame differs materially from the previous state in meaning or visual orientation.",
+        "No generated pixel text is relied on for final production."
+      ],
+      "broll_function": "attention_reset",
+      "caption_relation": "on_cut",
+      "composition": "mock_screen_capture clean-room 9:16 composition with editable overlays and safe-zone guide.",
+      "end_ms": 5000,
+      "frame_id": "SF-014-F05",
+      "image_path": "frames/SF-014-F05.svg",
+      "motion": "slow_observation motion; use dissolve only at this state boundary.",
+      "on_screen_text": "REFRAME",
+      "sequence_number": 5,
+      "shot_scale": "screen",
+      "sound_cue": "accent_sfx aligned to the reframe boundary; licensed or original audio only.",
+      "start_ms": 4000,
+      "story_function": "reframe",
+      "transition": "dissolve",
+      "visual_change": "Automation Needs a Gate: reframe; advance one meaningful information state."
+    }
+  ],
+  "framework_id": "SF-014",
+  "kind": "hook_intro",
+  "name": "Automation Needs a Gate",
+  "purpose": "Separate automation from authorization",
+  "rights_state": "original_local_previsualization",
+  "signal_input": {
+    "evidence_ids": [
+      "EVID-WEB-002"
+    ],
+    "export_id": "SIGEXP-SF-014",
+    "export_schema": "signal-to-studio.v1",
+    "record_hash": "sha256:4cda39829f79d38b33c7a5536acc604594f58189d2c73da614e7c16cea15ce36",
+    "rights_decision_ids": [
+      "RIGHTS-PUBLIC-COMMENTARY-001"
+    ],
+    "source_ids": [
+      "SRC-WEB-002"
+    ],
+    "source_rights_state": "metadata_commentary_only"
+  },
+  "taxonomy": {
+    "a_roll_integration": "delayed_reveal",
+    "broll_function": "attention_reset",
+    "cta_exit": "comment_prompt",
+    "hook_mechanism": "contradiction",
+    "pacing_profile": "slow_observation",
+    "proof_form": "calculation",
+    "risk_class": "source_dependent",
+    "sound_role": "accent_sfx",
+    "text_role": "labels",
+    "transition_family": "dissolve",
+    "viewer_job": "compare_options",
+    "visual_grammar": "mock_screen_capture"
+  },
+  "version": "1.0.0"
+}

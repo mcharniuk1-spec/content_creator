@@ -1,0 +1,102 @@
+{
+  "schema": "north-hux.social-collection-adapters.v1",
+  "effective_at": "2026-08-25",
+  "target": {
+    "qualified_accounts_per_platform": {"minimum": 10000, "maximum": 12000},
+    "platforms": ["instagram", "tiktok", "youtube"],
+    "language_policy": "english_preferred_no_quota",
+    "priority_markets": ["US", "CA", "GB", "AU", "NZ", "IE"],
+    "eu27": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE"]
+  },
+  "runtime_routes": [
+    {
+      "platform": "youtube",
+      "route_id": "youtube.yt_dlp_public",
+      "state": "active_calibration_only",
+      "backend": "yt-dlp 2026.07.04",
+      "authentication": "none",
+      "credentials_in_files": false,
+      "cookies": false,
+      "media_download": false,
+      "fields": ["channel", "video_metadata", "description", "public_counters_when_exposed", "public_subtitles_when_exposed", "bounded_public_comments"],
+      "limits": {"videos_per_run": 60, "comments_per_video": 20},
+      "scale_claim": "not_authorized"
+    },
+    {
+      "platform": "youtube",
+      "route_id": "youtube.data_api_v3",
+      "state": "owner_setup_required",
+      "authentication": "Google Cloud API key for public reads; OAuth only for owner/private operations",
+      "credentials_in_files": false,
+      "fields": ["channels", "videos", "public_statistics", "comment_threads", "comment_replies"],
+      "gaps": ["public transcript text", "shares", "reposts", "sends", "raw media", "frames"],
+      "source": "https://developers.google.com/youtube/v3/docs"
+    },
+    {
+      "platform": "tiktok",
+      "route_id": "tiktok.research_api",
+      "state": "eligibility_and_approval_required",
+      "authentication": "approved research client and access token",
+      "credentials_in_files": false,
+      "fields": ["accounts", "videos", "views", "likes", "comments", "shares", "favorites", "voice_to_text", "subtitles", "comment_replies", "liked_pinned_reposted_relationships"],
+      "gaps": ["raw media", "frames", "commercial-use eligibility"],
+      "source": "https://developers.tiktok.com/docs/en/about-research-api"
+    },
+    {
+      "platform": "instagram",
+      "route_id": "instagram.graph.facebook_login",
+      "state": "professional_account_cohort_only_owner_setup_required",
+      "authentication": "Meta app, approved permissions, and user/Page token",
+      "credentials_in_files": false,
+      "fields": ["professional_accounts", "professional_media", "managed_comments", "hashtagged_media", "eligible_insights"],
+      "gaps": ["consumer_account_census", "arbitrary_public_comments", "public_shares", "public_reposts", "public_saves", "raw media rights", "frames"],
+      "source": "https://developers.facebook.com/docs/instagram-platform/overview"
+    }
+  ],
+  "rejected_routes": [
+    "private mobile APIs",
+    "browser-cookie reuse",
+    "login-wall bypass",
+    "unapproved scraping",
+    "paid proxy or data-broker fallbacks",
+    "creator deanonymization",
+    "private media",
+    "write or publishing endpoints"
+  ],
+  "record_contract": {
+    "register_before_analysis": true,
+    "stable_identity": "platform + native id + canonical URL, SHA-256 versioned key",
+    "snapshot_policy": "append_only_with_supersession",
+    "raw_pointer_required_when_available": true,
+    "raw_sha256_required_when_available": true,
+    "null_semantics": "unavailable, unreturned, unauthorized, or inapplicable remains null; zero requires an observed zero",
+    "interaction_coverage": ["reported_count", "retrieved_count", "pagination_complete", "sampling_method", "endpoint_limit", "gap_reason"],
+    "author_storage": "deterministic pseudonym in PostgreSQL; raw public author only in restricted run artifact when collected",
+    "epistemic_labels": ["FACT", "INTERPRETATION", "HYPOTHESIS", "GAP"]
+  },
+  "analysis_dimensions": [
+    "creator_archetype", "region_evidence", "language", "audience_size_band",
+    "agentic_category", "video_type", "storytelling_style", "hook_mechanism",
+    "story_beats", "format", "caption_style", "cta", "offer", "proof_form",
+    "pacing", "visual_grammar", "a_roll_b_roll", "audio_role", "audience_questions",
+    "audience_pain", "audience_objections", "audience_confusion", "audience_requests",
+    "implementation_evidence", "buying_intent", "creator_replies", "reviewer_opinion"
+  ],
+  "mechanical_failure_policy": {
+    "policy": "five_strike_record_local",
+    "maximum_strikes": 5,
+    "retryable": ["timeout", "rate_limit", "transient_network", "provider_5xx", "temporary_file_lock"],
+    "non_retryable": ["auth", "rights", "terms", "robots", "not_found", "schema_invalid", "credential_missing", "policy_block"],
+    "fifth_strike": "quarantine_and_review",
+    "no_blind_batch_retry": true
+  },
+  "storage": {
+    "system_of_record": "local PostgreSQL database north_hux",
+    "raw_and_media_zone": "run-local filesystem; media and frames only after per-source rights gate",
+    "public_projection": "Notion dashboard; aggregated and public-safe records only",
+    "knowledge_projection": "Obsidian notes, Base, and Canvas; no raw secrets or unrestricted corpus ingestion",
+    "studio_bridge": "north_hux.v_social_studio_candidate_v1 -> reviewed social contract -> append-only studio_signal_export",
+    "backup_state": "not_yet_verified"
+  }
+}
+

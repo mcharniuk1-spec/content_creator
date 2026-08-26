@@ -1,0 +1,410 @@
+{
+  "external_provider_state": "NOT_RUN",
+  "frame_count": 300,
+  "generated_at": "2026-08-25T00:00:00+03:00",
+  "records": [
+    {
+      "family": "in_medias_res",
+      "frame_count": 6,
+      "path": "st-001-deadline-brief",
+      "story_id": "ST-001",
+      "story_sha256": "0913a1f44173d03b5d1a8c59eae5d68efb958a60fa7a8b52d0ed7b0b28ad56d9",
+      "title": "Deadline Brief"
+    },
+    {
+      "family": "in_medias_res",
+      "frame_count": 6,
+      "path": "st-002-approval-at-the-threshold",
+      "story_id": "ST-002",
+      "story_sha256": "03221fe9af87c4a3ead20f27684d199cc821e6ae6f8a1a276120bc6628c3e16d",
+      "title": "Approval at the Threshold"
+    },
+    {
+      "family": "in_medias_res",
+      "frame_count": 6,
+      "path": "st-003-the-stale-dashboard",
+      "story_id": "ST-003",
+      "story_sha256": "cebe8980400d80e04bfc7239b89f253e58244727430840baf6ffbdf63a308814",
+      "title": "The Stale Dashboard"
+    },
+    {
+      "family": "in_medias_res",
+      "frame_count": 6,
+      "path": "st-004-queue-under-pressure",
+      "story_id": "ST-004",
+      "story_sha256": "488c81894887dee804b57e9174b958845208313b7959fe714674c8c0dc815820",
+      "title": "Queue Under Pressure"
+    },
+    {
+      "family": "in_medias_res",
+      "frame_count": 6,
+      "path": "st-005-source-before-claim",
+      "story_id": "ST-005",
+      "story_sha256": "967ebf8f2a1984fd046284a6c2f1491ef7875123fd6bac43f776c85f0a091e47",
+      "title": "Source Before Claim"
+    },
+    {
+      "family": "result_rewind",
+      "frame_count": 6,
+      "path": "st-006-the-rebuilt-handoff",
+      "story_id": "ST-006",
+      "story_sha256": "e7b63733f2c57f599585815d3cc62e0a806d2dda382912374dba9cb954c7061c",
+      "title": "The Rebuilt Handoff"
+    },
+    {
+      "family": "result_rewind",
+      "frame_count": 6,
+      "path": "st-007-from-noise-to-signal",
+      "story_id": "ST-007",
+      "story_sha256": "f3bb67b4e67f1de6cac89dc0e098c95c9b911bf0a41f37aee02242e44698e964",
+      "title": "From Noise to Signal"
+    },
+    {
+      "family": "result_rewind",
+      "frame_count": 6,
+      "path": "st-008-rollback-ready",
+      "story_id": "ST-008",
+      "story_sha256": "8b37653b5f2b96be6d4dec9538c072cead9001fcf6bef1298b9a401842de19a9",
+      "title": "Rollback Ready"
+    },
+    {
+      "family": "result_rewind",
+      "frame_count": 6,
+      "path": "st-009-the-clearer-screen",
+      "story_id": "ST-009",
+      "story_sha256": "de72aca1ae7d8dee83df36246631fb1c93578588e206b0e42d4104e7e24cb1bd",
+      "title": "The Clearer Screen"
+    },
+    {
+      "family": "result_rewind",
+      "frame_count": 6,
+      "path": "st-010-the-one-line-outcome",
+      "story_id": "ST-010",
+      "story_sha256": "0b61583fb38588e4d19d06b47e3528aa7b7345c0a0d779d2cbda15fa93854e80",
+      "title": "The One-Line Outcome"
+    },
+    {
+      "family": "diagnostic_mystery",
+      "frame_count": 6,
+      "path": "st-011-why-the-number-dropped",
+      "story_id": "ST-011",
+      "story_sha256": "d4a69d0c25571befbdf258d4d79425b4401cdaa947dfb5aa84bb6eef16075942",
+      "title": "Why the Number Dropped"
+    },
+    {
+      "family": "diagnostic_mystery",
+      "frame_count": 6,
+      "path": "st-012-the-silent-automation",
+      "story_id": "ST-012",
+      "story_sha256": "b7dd22d248a60acea05b025a1c2ac0a1f621c6885df1f9d14825989ded74751b",
+      "title": "The Silent Automation"
+    },
+    {
+      "family": "diagnostic_mystery",
+      "frame_count": 6,
+      "path": "st-013-duplicate-in-the-queue",
+      "story_id": "ST-013",
+      "story_sha256": "7a494a98bb8f0fc40b5454e4fb7ff2b05d4013759320b931b074803d02b298d1",
+      "title": "Duplicate in the Queue"
+    },
+    {
+      "family": "diagnostic_mystery",
+      "frame_count": 6,
+      "path": "st-014-where-the-caption-went",
+      "story_id": "ST-014",
+      "story_sha256": "e871447e3c7df4815abfafc6cf549111282df5a4682fce1a389937b2616fc216",
+      "title": "Where the Caption Went"
+    },
+    {
+      "family": "diagnostic_mystery",
+      "frame_count": 6,
+      "path": "st-015-the-broken-source-link",
+      "story_id": "ST-015",
+      "story_sha256": "449485ba50a40076890982d32496576f5df86197603086c2b91e5ee1852bda07",
+      "title": "The Broken Source Link"
+    },
+    {
+      "family": "failed_attempt_correction",
+      "frame_count": 6,
+      "path": "st-016-clicking-faster-failed",
+      "story_id": "ST-016",
+      "story_sha256": "7f36e1f318fcca0b1aacdb18715ed39b0a48f83e434041366ad21e84aa34f8e7",
+      "title": "Clicking Faster Failed"
+    },
+    {
+      "family": "failed_attempt_correction",
+      "frame_count": 6,
+      "path": "st-017-more-cuts-less-meaning",
+      "story_id": "ST-017",
+      "story_sha256": "451a7b28dc4f23c45bf25b298b5b79aae276f16c9b0057ce2012b44e45628ce4",
+      "title": "More Cuts, Less Meaning"
+    },
+    {
+      "family": "failed_attempt_correction",
+      "frame_count": 6,
+      "path": "st-018-the-missing-owner",
+      "story_id": "ST-018",
+      "story_sha256": "afd5385ba395906740b4ee07fabf85a41cda5e2e2b4f6ade890fbc83310571a3",
+      "title": "The Missing Owner"
+    },
+    {
+      "family": "failed_attempt_correction",
+      "frame_count": 6,
+      "path": "st-019-upload-without-redaction",
+      "story_id": "ST-019",
+      "story_sha256": "6b9e583a885910a1d5807d3108af476828fae5e1e235428ebafb613505febdd9",
+      "title": "Upload Without Redaction"
+    },
+    {
+      "family": "failed_attempt_correction",
+      "frame_count": 6,
+      "path": "st-020-the-unreadable-proof",
+      "story_id": "ST-020",
+      "story_sha256": "3025ba8f446d7272242a74eb1bad618d61de22a11e831642ffb4027b8b87a886",
+      "title": "The Unreadable Proof"
+    },
+    {
+      "family": "object_metaphor",
+      "frame_count": 6,
+      "path": "st-021-domino-dependency",
+      "story_id": "ST-021",
+      "story_sha256": "60215d96e2fa63eca7a45480d271674eb783288d121e102a187adb98e26d905b",
+      "title": "Domino Dependency"
+    },
+    {
+      "family": "object_metaphor",
+      "frame_count": 6,
+      "path": "st-022-leaking-attention",
+      "story_id": "ST-022",
+      "story_sha256": "f54aa8a27d561ccbed80bfcba37bd4a786f0fdae421236557492b94191e8f7e6",
+      "title": "Leaking Attention"
+    },
+    {
+      "family": "object_metaphor",
+      "frame_count": 6,
+      "path": "st-023-lock-and-key-permission",
+      "story_id": "ST-023",
+      "story_sha256": "48e51a3f9b158a9af42c4649d00119ca0cb9f09308afd93e67768c7d99308ad1",
+      "title": "Lock and Key Permission"
+    },
+    {
+      "family": "object_metaphor",
+      "frame_count": 6,
+      "path": "st-024-bridge-of-evidence",
+      "story_id": "ST-024",
+      "story_sha256": "95238232230056a5f3ad8729ba215be961bd02c8bae5db1011a1e3fbb4f765e1",
+      "title": "Bridge of Evidence"
+    },
+    {
+      "family": "object_metaphor",
+      "frame_count": 6,
+      "path": "st-025-compass-before-speed",
+      "story_id": "ST-025",
+      "story_sha256": "045ba6aa78538bf5112533fbe64730964840eb94ce04c688cef06769d6719d59",
+      "title": "Compass Before Speed"
+    },
+    {
+      "family": "countdown_ladder",
+      "frame_count": 6,
+      "path": "st-026-three-checks-before-publish",
+      "story_id": "ST-026",
+      "story_sha256": "0de36a470e88b7e69ae667164ee9be30a9ee16949c419f2729c74cd478c47d0a",
+      "title": "Three Checks Before Publish"
+    },
+    {
+      "family": "countdown_ladder",
+      "frame_count": 6,
+      "path": "st-027-three-frames-to-explain",
+      "story_id": "ST-027",
+      "story_sha256": "bcc73098ae18e3aed7bd6f2f0bc7294853ab94d1aa1ee9608d59c3a4d09661dd",
+      "title": "Three Frames to Explain"
+    },
+    {
+      "family": "countdown_ladder",
+      "frame_count": 6,
+      "path": "st-028-five-proof-states",
+      "story_id": "ST-028",
+      "story_sha256": "98f4d6f142b4e6495265a452ac34930c932187af98b30bb9201c98801aad56a9",
+      "title": "Five Proof States"
+    },
+    {
+      "family": "countdown_ladder",
+      "frame_count": 6,
+      "path": "st-029-four-cuts-with-purpose",
+      "story_id": "ST-029",
+      "story_sha256": "c601020fa1ec11b498d0b69f5ca7c3fd92a66bebd1178cb068d15b81de2af712",
+      "title": "Four Cuts With Purpose"
+    },
+    {
+      "family": "countdown_ladder",
+      "frame_count": 6,
+      "path": "st-030-three-steps-to-a-hook",
+      "story_id": "ST-030",
+      "story_sha256": "ccff2cf5739bc5d7708e4da2f4305d497f3e4afc3baf08378bc08df8fba7dd9d",
+      "title": "Three Steps to a Hook"
+    },
+    {
+      "family": "before_after_transformation",
+      "frame_count": 6,
+      "path": "st-031-inbox-to-ordered-queue",
+      "story_id": "ST-031",
+      "story_sha256": "fd391c8b298fdd40bbc8edb70136937fbb026b31b4c0330436bbcfdee035b505",
+      "title": "Inbox to Ordered Queue"
+    },
+    {
+      "family": "before_after_transformation",
+      "frame_count": 6,
+      "path": "st-032-flat-list-to-source-map",
+      "story_id": "ST-032",
+      "story_sha256": "871b9fc9c3587b175220b5f553862de79e29f2d705c7a7de760595dc296cd213",
+      "title": "Flat List to Source Map"
+    },
+    {
+      "family": "before_after_transformation",
+      "frame_count": 6,
+      "path": "st-033-manual-copy-to-checked-export",
+      "story_id": "ST-033",
+      "story_sha256": "48e6a78256ebb8c643e8b0b69fca20c588e418af3589906f45c3cd0e3b61e74a",
+      "title": "Manual Copy to Checked Export"
+    },
+    {
+      "family": "before_after_transformation",
+      "frame_count": 6,
+      "path": "st-034-guess-to-bounded-test",
+      "story_id": "ST-034",
+      "story_sha256": "2cc47784cb2b13758c266014dea83374deea4d7533d5694591d7443f4a762813",
+      "title": "Guess to Bounded Test"
+    },
+    {
+      "family": "before_after_transformation",
+      "frame_count": 6,
+      "path": "st-035-cluttered-frame-to-one-action",
+      "story_id": "ST-035",
+      "story_sha256": "052d9a14edda76581ee674bf6da41366f259b53fdbf4bf923c673fce419b5011",
+      "title": "Cluttered Frame to One Action"
+    },
+    {
+      "family": "proof_reveal",
+      "frame_count": 6,
+      "path": "st-036-receipt-behind-the-claim",
+      "story_id": "ST-036",
+      "story_sha256": "84652a50adf487a738c0f04c479c7e5835655206ac91a1b30672204a398a795c",
+      "title": "Receipt Behind the Claim"
+    },
+    {
+      "family": "proof_reveal",
+      "frame_count": 6,
+      "path": "st-037-the-timestamp-test",
+      "story_id": "ST-037",
+      "story_sha256": "3064d7cef5e8d359979e468a5808167af672211d8f5eb9d0bd00abb8c49adb73",
+      "title": "The Timestamp Test"
+    },
+    {
+      "family": "proof_reveal",
+      "frame_count": 6,
+      "path": "st-038-the-diff-tells-the-story",
+      "story_id": "ST-038",
+      "story_sha256": "022555e0e899c7204c4e3937efb12c292c28ffa57cab3661f285457ea66b48b1",
+      "title": "The Diff Tells the Story"
+    },
+    {
+      "family": "proof_reveal",
+      "frame_count": 6,
+      "path": "st-039-source-stack-reveal",
+      "story_id": "ST-039",
+      "story_sha256": "562e1003d07d8abccdc63fd5c250dddcbd684f2a06a064567d04fc14f7703127",
+      "title": "Source Stack Reveal"
+    },
+    {
+      "family": "proof_reveal",
+      "frame_count": 6,
+      "path": "st-040-boundary-card-first",
+      "story_id": "ST-040",
+      "story_sha256": "158c0c766a63ef798fd5aa5531249b915c21684c687ef21760ecfecc364c9329",
+      "title": "Boundary Card First"
+    },
+    {
+      "family": "contradiction_resolution",
+      "frame_count": 6,
+      "path": "st-041-more-data-less-clarity",
+      "story_id": "ST-041",
+      "story_sha256": "0a37dc5b4274a8d11ca3e581d45c1fca3ead98f4da23f2dcab1af3896be889f4",
+      "title": "More Data, Less Clarity"
+    },
+    {
+      "family": "contradiction_resolution",
+      "frame_count": 6,
+      "path": "st-042-faster-tool-slower-workflow",
+      "story_id": "ST-042",
+      "story_sha256": "2e239fe16a8538734ea26a037a72d2c5c47c77c3876f24d6ac918dda6fb3d6fe",
+      "title": "Faster Tool, Slower Workflow"
+    },
+    {
+      "family": "contradiction_resolution",
+      "frame_count": 6,
+      "path": "st-043-automation-needs-a-gate",
+      "story_id": "ST-043",
+      "story_sha256": "6d5e77d09b3810bc6b2070d3c5bf8cb26410c9bbbc4446cf571b8eeae90f8d26",
+      "title": "Automation Needs a Gate"
+    },
+    {
+      "family": "contradiction_resolution",
+      "frame_count": 6,
+      "path": "st-044-movement-without-progress",
+      "story_id": "ST-044",
+      "story_sha256": "9e859af3a498fde61afea91f33af95a4ef3217c441ac9cd699e231e235cd5db1",
+      "title": "Movement Without Progress"
+    },
+    {
+      "family": "contradiction_resolution",
+      "frame_count": 6,
+      "path": "st-045-beautiful-frame-weak-proof",
+      "story_id": "ST-045",
+      "story_sha256": "77bf80bb036a56ab51efcd33a80af6c5ce1400153c863c0a2786ce8ccdf25774",
+      "title": "Beautiful Frame, Weak Proof"
+    },
+    {
+      "family": "process_handback",
+      "frame_count": 6,
+      "path": "st-046-question-to-answer",
+      "story_id": "ST-046",
+      "story_sha256": "3910d632135ab9a3d60e7404e9d520ca3501d1ad78dc9eff15b4d7c85d2a4392",
+      "title": "Question to Answer"
+    },
+    {
+      "family": "process_handback",
+      "frame_count": 6,
+      "path": "st-047-source-to-script",
+      "story_id": "ST-047",
+      "story_sha256": "a3abc25fde457992668a2d2861e9564479fc911f5f12adb444fafc5bedbdc217",
+      "title": "Source to Script"
+    },
+    {
+      "family": "process_handback",
+      "frame_count": 6,
+      "path": "st-048-script-to-frame",
+      "story_id": "ST-048",
+      "story_sha256": "3d3dee6d92afeaa50dcc30c6f20257ceb0d1d87cf62bdd979cbd92559f763d93",
+      "title": "Script to Frame"
+    },
+    {
+      "family": "process_handback",
+      "frame_count": 6,
+      "path": "st-049-frame-to-cut",
+      "story_id": "ST-049",
+      "story_sha256": "6cb32b0359edf811f682a2e1ee02f205c43c0a496d99bd964640207702bc59d6",
+      "title": "Frame to Cut"
+    },
+    {
+      "family": "process_handback",
+      "frame_count": 6,
+      "path": "st-050-cut-to-review",
+      "story_id": "ST-050",
+      "story_sha256": "e0018101867e0cb0d866867810f1e18ebc73b71f2fefb6bbadf2f8f62be8e36d",
+      "title": "Cut to Review"
+    }
+  ],
+  "rights_state": "original_local_previsualization",
+  "schema": "studio-story-library.v2",
+  "story_count": 50
+}

@@ -1,0 +1,18 @@
+{
+  "external_provider_state": "NOT_RUN",
+  "files": {
+    "contact-sheet.svg": "7923018d5f0bab74095510a885943d7a215eec6b553643155e85e67f15126b3d",
+    "frames/ST-029-F01.svg": "57cc4ed415470adc621578a5c7b9ca5724190c43c9b17d442d0dac8ddcd29f6d",
+    "frames/ST-029-F02.svg": "6e0ca77ac4ac24c098a739870aa1fb63664965667882b5a3846b4f85912ba8f2",
+    "frames/ST-029-F03.svg": "242c6b26e4f10ce8500de2b449537a5d4ef1fd384a7be02362f7260bbdef2c13",
+    "frames/ST-029-F04.svg": "42290f6ac847f356374f7f5031c81bd65a2ca35261964f71d8fdc21ba924ccfa",
+    "frames/ST-029-F05.svg": "26130f88e08613e74de885333f31c88bcf756664e4046f224665d190dbe4213e",
+    "frames/ST-029-F06.svg": "58d5376051964a9618fdbd1db90d68fd91a9c94b34c8542a15ebc1d126604233",
+    "prompt.md": "b07eb10574c519249097fa26f71136730b28f302ac27c7925ff851926fb94f27",
+    "report.md": "6ff1b51cec76f035a3c4ee32f7bd17ab70984acd14a7c903e194922df4e70e15",
+    "screenplay.md": "accf5caf1d9afe19cda4f4b8094fbad4854f683c877c4296ad66af7f82044d32",
+    "story.json": "c601020fa1ec11b498d0b69f5ca7c3fd92a66bebd1178cb068d15b81de2af712"
+  },
+  "schema": "studio-story-package-manifest.v2",
+  "story_id": "ST-029"
+}

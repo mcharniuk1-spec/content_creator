@@ -12,7 +12,7 @@
     "broad_screen_videos": 10000,
     "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
   },
-  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "evidence_bundle_sha256": "ea222e0a0d34c62680bb87cebc45c15183cb67d8464c32f50c487ce155701949",
   "full_script": "Do not automate a job title. A job is a bundle of decisions, exceptions, handoffs, and trust. Start with one recurring workflow and draw the trigger, inputs, decision, action, and failure path. Then choose: augment the human, automate one step, or leave it alone. The smallest safe pilot has one owner, one metric, and one review queue. That is how AI improves work without pretending people are process diagrams.",
   "hook": "Do not automate a job title.",
   "owner_state": "owner_review_pending",

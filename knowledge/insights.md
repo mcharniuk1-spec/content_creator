@@ -20,3 +20,11 @@ These are reusable interpretations, not claims of retention, virality, conversio
 - This is a strategy interpretation from a search-ranked calibration, not a representative prevalence, causal performance, demographic, reach, retention, virality, or ROI claim. Native Shorts status was not proved, comments were bounded, and labels remain human-reviewable.
 
 Promotion evidence: `runs/20260825-youtube-calibration-300-v1/derived/analysis-summary.json`, the independent 250-video relevance review, the 35-page PDF report, and the final verification receipt.
+
+## Reviewed North Hux YouTube 10K insight — 2026-08-26
+
+- The strongest defensible North Hux position is the missing operating layer between AI demonstrations and dependable business workflows: diagnose work, select an operating mode, define authority, integrate evidence, evaluate, recover, and prove business value. Split this across two complementary product-manager voices: practical integration and adoption; governed agent operations and recovery.
+- The recommended short-form proof grammar is creator interpretation plus deterministic UI/evidence, with proof visible by roughly six to eight seconds. Optional AI-generated B-roll is context only and must never carry results, UI, people/likeness, or factual proof.
+- These are evidence-bound strategy interpretations from a search-ranked broad screen and calibrated review—not claims of market prevalence, demographic composition, retention, virality, conversion, or ROI. Native Shorts placement remained unproved through the admitted route.
+
+Promotion evidence: terminal run receipt `runs/20260826-youtube-video-census-10k-v1/terminal-receipt.json`, 42-page report, 10-script campaign manifest, and independent Spark integrity review.

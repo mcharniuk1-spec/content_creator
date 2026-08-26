@@ -11,6 +11,7 @@ from scripts.youtube_evidence_10k import (
     artifact_claim,
     active_artifact_claims,
     assert_run_mutable,
+    canonical_attempt_valid,
     confined_reuse_paths,
     ensure_disk_reserve,
     next_wave_size,
@@ -174,6 +175,25 @@ def test_frame_validation_requires_media_identity_contiguous_indexes_and_hashes(
     assert frame_artifact_valid(run, manifest, payload) is True
     payload["frames"][0]["frame_index"] = 1
     assert frame_artifact_valid(run, manifest, payload) is False
+
+
+def test_missing_only_helper_accepts_valid_canonical_gap_attempt(tmp_path: Path):
+    run = tmp_path / "run"
+    manifest = run / "normalized" / "transcripts" / "v1.json"
+    payload = {
+        "native_video_id": "v1",
+        "availability": "unavailable",
+        "gap_reason": "no_public_english_subtitle",
+        "segments": [],
+        "speech_segments": [],
+    }
+    write_json(manifest, payload)
+
+    assert canonical_attempt_valid(run, "transcripts", "v1") is True
+    assert canonical_attempt_valid(run, "transcripts", "missing") is False
+
+    write_json(manifest, [])
+    assert canonical_attempt_valid(run, "transcripts", "v1") is False
 
 
 def test_artifact_claim_blocks_a_second_live_writer(tmp_path: Path):

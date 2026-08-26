@@ -31,7 +31,7 @@ Minimum durable notes for this execution:
 - one ten-script campaign slate;
 - one Studio method and gate note;
 - one database/backup decision;
-- one issue note for incomplete transcript/frame evidence if still open;
+- one evidence-limit note recording `2,323` transcript gaps and `9,880` public-storyboard gaps without treating them as collection failure;
 - one terminal handoff.
 
 ## Required note metadata
@@ -88,3 +88,7 @@ Do not promote raw transcripts, comments, screenshots, public metrics, prompts, 
 ## Exact-write gate
 
 The external global Obsidian vault already has a North Hux skeleton, Base, and Canvas. Its architecture is sound but some counts and state labels are stale. Updating those external notes requires the exact target-note correction packet; broad vault permission is intentionally insufficient. The project-local setup and packet may be reviewed before that write.
+
+The terminal correction packet must project only reviewed aggregates: 10K broad-screen videos, 1,010 creators, 2,949 analysis-eligible videos, 7,677 observed transcript attempts, 120 observed storyboard sets/1,042 frames, terminal backup/manifest hashes, the two creator tracks, ten current scripts, and owner gates. Raw transcript text, frames, comments, media, database dumps, and credentials stay out of the vault.
+
+Portable, validated starting assets ship in `knowledge/obsidian/`: `North Hux Status.base`, `North Hux System.canvas`, and `North Hux Artifact Template.md`. They can be copied into an approved vault after adjusting only vault-relative file paths; the project files themselves contain no raw evidence or credentials.

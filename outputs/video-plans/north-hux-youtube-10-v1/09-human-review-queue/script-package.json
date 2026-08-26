@@ -12,7 +12,7 @@
     "broad_screen_videos": 10000,
     "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
   },
-  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "evidence_bundle_sha256": "ea222e0a0d34c62680bb87cebc45c15183cb67d8464c32f50c487ce155701949",
   "full_script": "Human review is not a safety strategy until you define the queue. Route work by ambiguity, reversibility, value, and risk. Low ambiguity and easy rollback can flow automatically. High value or irreversible action needs named approval and evidence. Measure queue age, override rate, and repeated exception types. The goal is not more review. It is review where human judgment changes the outcome.",
   "hook": "Human review is not a safety strategy until you define the queue.",
   "owner_state": "owner_review_pending",

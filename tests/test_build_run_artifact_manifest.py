@@ -5,7 +5,13 @@ from pathlib import Path
 
 import pytest
 
-from scripts.build_run_artifact_manifest import build_manifest, sha256, stable_sha256, write_jsonl
+from scripts.build_run_artifact_manifest import (
+    build_manifest,
+    sha256,
+    stable_sha256,
+    validate_evidence_pointers,
+    write_jsonl,
+)
 
 
 def test_build_manifest_hashes_bounded_roots_deterministically(tmp_path: Path) -> None:
@@ -54,3 +60,14 @@ def test_build_manifest_rejects_overlapping_roots_and_hashes_stable_file(tmp_pat
     assert size == artifact.stat().st_size
     with pytest.raises(ValueError, match="overlap"):
         build_manifest(run, ("raw", "raw/nested"))
+
+
+def test_pointer_validation_recovers_dead_writer_claim(tmp_path: Path) -> None:
+    run = tmp_path / "run-1"
+    claim = run / "locks" / "transcripts" / "v1.lock"
+    claim.parent.mkdir(parents=True)
+    claim.write_text('{"pid":99999999,"created_at":"2020-01-01T00:00:00Z"}\n', encoding="utf-8")
+
+    validate_evidence_pointers(run)
+
+    assert not claim.exists()

@@ -12,7 +12,7 @@
     "broad_screen_videos": 10000,
     "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
   },
-  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "evidence_bundle_sha256": "ea222e0a0d34c62680bb87cebc45c15183cb67d8464c32f50c487ce155701949",
   "full_script": "Build or buy? Wrong first question. First ask which control surface your workflow needs. Can you inspect evidence, change permissions, replace a model, recover state, and export your history? A bought tool can be right when the workflow is standard and reversible. Build when differentiation, integration depth, or control is the product. Choose by constraints and exit cost, not demo excitement.",
   "hook": "Build or buy? Wrong first question.",
   "owner_state": "owner_review_pending",

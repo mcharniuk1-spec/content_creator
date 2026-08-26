@@ -274,6 +274,25 @@ def frame_artifact_valid(run_dir: Path, path: Path, payload: dict[str, Any]) -> 
     return bool(frames)
 
 
+def canonical_attempt_valid(run_dir: Path, stage: str, video_id: str) -> bool:
+    """Return whether a cohort identity already has a valid canonical attempt."""
+    if stage == "transcripts":
+        path = run_dir / "normalized" / "transcripts" / f"{video_id}.json"
+        validator = transcript_artifact_valid
+    else:
+        path = run_dir / "normalized" / "frame-manifests" / f"{video_id}.json"
+        validator = frame_artifact_valid
+    if not path.is_file():
+        return False
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    if not isinstance(payload, dict):
+        return False
+    return validator(run_dir, path, payload)
+
+
 def hardlink_or_copy(source: Path, target: Path) -> None:
     if not source.is_file():
         raise ValueError(f"reuse source is missing: {source}")
@@ -823,6 +842,7 @@ def run_stage_locked(
     offset: int,
     limit: int | None,
     reset_terminal_strikes: bool,
+    missing_only: bool,
 ) -> dict[str, Any]:
     cohort = load_jsonl(run_dir / "derived" / "video-cohort.jsonl")
     if len(cohort) != 10000:
@@ -840,6 +860,11 @@ def run_stage_locked(
         assert_run_mutable(run_dir)
         reused = reuse_transcripts(run_dir, source_run, cohort_ids) if stage == "transcripts" else reuse_frames(run_dir, source_run, cohort_ids)
     pending = cohort[offset: offset + limit if limit is not None else None]
+    if missing_only:
+        pending = [
+            row for row in pending
+            if not canonical_attempt_valid(run_dir, stage, row["native_video_id"])
+        ]
     function: Callable[..., dict[str, Any]] = collect_claimed_transcript if stage == "transcripts" else collect_claimed_storyboard
     processed = 0
     strike_receipt = strike_receipt_path(run_dir, stage)
@@ -918,13 +943,14 @@ def run_stage(
     offset: int,
     limit: int | None,
     reset_terminal_strikes: bool = False,
+    missing_only: bool = False,
 ) -> dict[str, Any]:
     with stage_lock(run_dir, "run-data", exclusive=False):
         assert_run_mutable(run_dir)
         with stage_lock(run_dir, f"{stage}-strike-ledger", exclusive=True):
             return run_stage_locked(
                 run_dir, source_run, stage, workers, timeout, minimum_free_bytes, max_frames,
-                offset, limit, reset_terminal_strikes,
+                offset, limit, reset_terminal_strikes, missing_only,
             )
 
 
@@ -940,6 +966,11 @@ def main() -> int:
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--reset-terminal-strikes", action="store_true")
+    parser.add_argument(
+        "--missing-only",
+        action="store_true",
+        help="process only identities without a valid canonical attempt inside the requested slice",
+    )
     args = parser.parse_args()
     try:
         if args.workers < 1 or args.workers > 8 or args.max_frames < 1 or args.max_frames > 12:
@@ -949,7 +980,7 @@ def main() -> int:
         summary = run_stage(
             args.run_dir.resolve(), args.source_run_dir.resolve(), args.stage, args.workers,
             args.timeout_seconds, round(args.min_free_gib * 1024 ** 3), args.max_frames, args.offset, args.limit,
-            args.reset_terminal_strikes,
+            args.reset_terminal_strikes, args.missing_only,
         )
         total = summary.get("artifacts_total", summary.get("manifests_total", 0))
         status = "active_partial" if total != 10000 else ("pass_with_limitations" if summary.get("gaps") else "pass")

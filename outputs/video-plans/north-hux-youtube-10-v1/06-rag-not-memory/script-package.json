@@ -12,7 +12,7 @@
     "broad_screen_videos": 10000,
     "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
   },
-  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "evidence_bundle_sha256": "ea222e0a0d34c62680bb87cebc45c15183cb67d8464c32f50c487ce155701949",
   "full_script": "RAG is not memory. And chat history is not an operating record. Retrieval finds source material. Working state tracks the current job. Durable memory preserves reviewed decisions. Audit evidence proves what happened. Mix these layers and stale context becomes invisible authority. Separate source, state, decision, and receipt—with retention rules for each. Your agent becomes easier to debug because every fact has a home.",
   "hook": "RAG is not memory.",
   "owner_state": "owner_review_pending",

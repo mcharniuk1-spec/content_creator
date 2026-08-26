@@ -12,7 +12,7 @@
     "broad_screen_videos": 10000,
     "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
   },
-  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "evidence_bundle_sha256": "ea222e0a0d34c62680bb87cebc45c15183cb67d8464c32f50c487ce155701949",
   "full_script": "The same workflow can contain three different levels of agency. An assistant drafts. A copilot recommends. A delegated agent executes inside a boundary. Use the same customer request and change only decision authority. Drafting is easy to reverse. Recommendations need evidence. Execution needs permissions, limits, and rollback. Do not buy the most autonomous option by default. Choose the lowest agency level that produces the business result.",
   "hook": "The same workflow can contain three different agents.",
   "owner_state": "owner_review_pending",

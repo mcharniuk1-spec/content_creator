@@ -12,7 +12,7 @@
     "broad_screen_videos": 10000,
     "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
   },
-  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "evidence_bundle_sha256": "ea222e0a0d34c62680bb87cebc45c15183cb67d8464c32f50c487ce155701949",
   "full_script": "The dangerous permission is not read. It is irreversible write. Reading data creates exposure. Writing creates consequences. Start with read, then propose, then reversible write, and only later bounded execution. For every step, log the source, decision, tool call, and outcome. If rollback is impossible, require human approval before the action. Authority should expand after evidence, never before it.",
   "hook": "The dangerous permission is not read. It is irreversible write.",
   "owner_state": "owner_review_pending",

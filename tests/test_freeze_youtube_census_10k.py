@@ -37,3 +37,9 @@ def test_terminal_backup_requires_exact_live_table_comparison_contract():
     assert "content_analysis_artifact" in MODULE.BACKUP_COUNT_TABLES
     assert "transcript_segment" in MODULE.BACKUP_COUNT_TABLES
     assert len(MODULE.BACKUP_COUNT_TABLES) >= 10
+
+
+def test_terminal_campaign_gate_counts_only_current_strategy_release():
+    source = (ROOT / "scripts" / "freeze_youtube_census_10k.py").read_text(encoding="utf-8")
+    assert "WITH current_release AS" in source
+    assert "newer.supersedes_strategy_release_id=release.strategy_release_id" in source

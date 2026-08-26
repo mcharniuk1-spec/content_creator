@@ -36,6 +36,19 @@ def file_sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def quarantine_fingerprint(path: Path) -> str:
+    """Fingerprint a non-canonical copy without forcing cloud hydration.
+
+    Canonical transcript manifests are still byte-hashed and pointer-validated by
+    ``transcript_artifact_valid``. Numbered conflict copies are excluded from the
+    evidence claim and retained only for forensic review, so filename and stable
+    filesystem metadata are sufficient to name their quarantine target.
+    """
+    stat = path.stat()
+    material = f"{path.name}\0{stat.st_size}\0{stat.st_mtime_ns}".encode()
+    return hashlib.sha256(material).hexdigest()
+
+
 def conflict_video_id(path: Path) -> str | None:
     matched = CONFLICT.match(path.name)
     return matched.group("video_id") if matched else None
@@ -43,7 +56,7 @@ def conflict_video_id(path: Path) -> str | None:
 
 def quarantine(path: Path, quarantine_dir: Path) -> str:
     quarantine_dir.mkdir(parents=True, exist_ok=True)
-    digest = file_sha(path)[:12]
+    digest = quarantine_fingerprint(path)[:12]
     target = quarantine_dir / f"{path.stem}-{digest}{path.suffix}"
     counter = 1
     while target.exists():
@@ -99,6 +112,7 @@ def recover(run_dir: Path) -> dict[str, Any]:
         "missing_manifest_count": len(cohort_ids - canonical_ids),
         "restored_canonical_count": len(restored),
         "quarantined_copy_count": len(moved),
+        "quarantine_fingerprint_basis": "filename_size_mtime_ns; canonical files remain byte-hash validated",
         "restored_video_ids_sha256": hashlib.sha256("\n".join(sorted(restored)).encode()).hexdigest(),
         "quarantined_names_sha256": hashlib.sha256("\n".join(sorted(moved)).encode()).hexdigest(),
     }

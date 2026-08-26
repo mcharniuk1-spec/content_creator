@@ -1,0 +1,27 @@
+{
+  "nodes": [
+    {"id":"nh-group-market","type":"group","x":-80,"y":-80,"width":1480,"height":360,"label":"Market evidence and reviewed strategy","color":"4"},
+    {"id":"nh-group-studio","type":"group","x":-80,"y":340,"width":1480,"height":380,"label":"Script and Studio operating layer","color":"2"},
+    {"id":"nh-group-control","type":"group","x":-80,"y":780,"width":1480,"height":400,"label":"Source of truth, projections, and owner gates","color":"6"},
+    {"id":"nh-evidence","type":"text","x":0,"y":0,"width":420,"height":250,"text":"# Terminal YouTube evidence\n\n10,000 broad-screen videos / 1,010 creators\n2,949 analysis-eligible\n7,677 observed transcripts / 2,323 gaps\n120 storyboard sets / 1,042 frames / 9,880 gaps\n\nBroad screen ≠ qualified competitor census.","color":"4"},
+    {"id":"nh-insight","type":"file","x":510,"y":0,"width":400,"height":250,"file":"knowledge/insights.md","color":"5"},
+    {"id":"nh-blueprint","type":"file","x":1000,"y":0,"width":340,"height":250,"file":"docs/full-system-blueprint.md","color":"5"},
+    {"id":"nh-two-tracks","type":"text","x":0,"y":420,"width":420,"height":220,"text":"# Two creator tracks\n\nA — PM integration, workflow diagnosis, adoption, value\n\nB — authority, evidence, evaluation, recovery, governance","color":"2"},
+    {"id":"nh-studio","type":"file","x":510,"y":420,"width":400,"height":220,"file":"docs/handoff/current-public-handoff.md","color":"2"},
+    {"id":"nh-production","type":"text","x":1000,"y":420,"width":340,"height":220,"text":"# Current release\n\n10 scripts → 100 shots → 10 edit plans\n\nCreator A-roll + deterministic proof\nOptional AI context never carries evidence.","color":"3"},
+    {"id":"nh-db","type":"text","x":0,"y":860,"width":420,"height":240,"text":"# Evidence authority\n\nLocal PostgreSQL + run artifacts\n47,266 hashed files\n12/12 restored table counts\nTerminal receipt v1\n\nRaw corpus stays outside Obsidian.","color":"4"},
+    {"id":"nh-obsidian","type":"file","x":510,"y":860,"width":400,"height":240,"file":"knowledge/obsidian-wikillm-setup.md","color":"6"},
+    {"id":"nh-gates","type":"text","x":1000,"y":860,"width":340,"height":240,"text":"# Owner gates\n\nApprove scripts and first 3 episodes\nApprove proof UI and optional AI context\nRecord A-roll\nSeparately approve providers, editing, and publication\nApprove exact external-vault correction files","color":"1"}
+  ],
+  "edges": [
+    {"id":"nh-edge-1","fromNode":"nh-evidence","fromSide":"right","toNode":"nh-insight","toSide":"left","toEnd":"arrow","label":"supports synthesis"},
+    {"id":"nh-edge-2","fromNode":"nh-insight","fromSide":"right","toNode":"nh-blueprint","toSide":"left","toEnd":"arrow","label":"defines system"},
+    {"id":"nh-edge-3","fromNode":"nh-insight","fromSide":"bottom","toNode":"nh-two-tracks","toSide":"top","toEnd":"arrow","label":"positions creators"},
+    {"id":"nh-edge-4","fromNode":"nh-two-tracks","fromSide":"right","toNode":"nh-studio","toSide":"left","toEnd":"arrow","label":"drives scripts"},
+    {"id":"nh-edge-5","fromNode":"nh-studio","fromSide":"right","toNode":"nh-production","toSide":"left","toEnd":"arrow","label":"specifies shots"},
+    {"id":"nh-edge-6","fromNode":"nh-evidence","fromSide":"bottom","toNode":"nh-db","toSide":"top","toEnd":"arrow","label":"retained in"},
+    {"id":"nh-edge-7","fromNode":"nh-db","fromSide":"right","toNode":"nh-obsidian","toSide":"left","toEnd":"arrow","label":"projects reviewed facts"},
+    {"id":"nh-edge-8","fromNode":"nh-production","fromSide":"bottom","toNode":"nh-gates","toSide":"top","toEnd":"arrow","label":"requires approvals"},
+    {"id":"nh-edge-9","fromNode":"nh-obsidian","fromSide":"right","toNode":"nh-gates","toSide":"left","toEnd":"arrow","label":"surfaces decisions"}
+  ]
+}

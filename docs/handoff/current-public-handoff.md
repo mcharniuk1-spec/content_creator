@@ -1,17 +1,18 @@
 # North Hux Content Engine — public-safe handoff
 
-Status: `IMPLEMENTED / EVIDENCE_COLLECTION_ACTIVE / PASS_WITH_LIMITATIONS`
+Status: `IMPLEMENTED / TERMINALLY_FROZEN / PASS_WITH_LIMITATIONS`
 
 ## Delivered
 
 - Frozen YouTube broad screen: 10,000 public videos across 1,010 creators, with 4–10 videos per creator and a maximum creator contribution of 0.1%.
 - Deterministic strategic subset: 2,949 relevance-positive videos. It is the denominator for topic, format, hook, storytelling, CTA, and descriptive public-metric distributions.
 - Prior calibration: 300 accounts / 900 videos; independent review accepted 211/250 sampled candidates.
-- Evidence layer: content-addressed transcript and frame attempts, de-rolled timestamped speech, typed gaps, local-only storyboard frames, public metric snapshots, and bounded calibration comments.
+- Evidence layer: 10,000 canonical transcript attempts (`7,677` observed / `2,323` typed gaps; `829,490` de-rolled speech segments) and 10,000 canonical frame attempts (`120` observed sets / `1,042` frames / `9,880` typed gaps), plus public metric snapshots and 898 bounded calibration comments.
 - Database: PostgreSQL migrations through `009`, shared artifact lineage, canonical transcript identity, run/source observations, corrected current-state Studio gates, terminal freeze receipts, transcript segments, frame pointers, analysis artifacts, strategy, scripts, shots, and EDL segments.
 - Strategy: two product-manager creator tracks, eight search territories, seven recurring franchises, and a ten-episode sequence.
 - Studio package: ten original 30-second scripts, 100 timecoded shots, 100 separate 9:16 SVG frame files, ten contact indexes, and ten validated EDL plans.
-- Report: 42-page English market-to-Studio PDF, rendered and visually inspected; terminal regeneration waits for the evidence freeze.
+- Terminal integrity: 47,266 run files hashed; 42 MiB PostgreSQL custom dump restored with exact equality across 12 critical tables; append-only terminal receipt is frozen at version 1.
+- Report: terminal 42-page English market-to-Studio PDF, rendered and visually inspected.
 - Notion: owner-facing dashboard, Kanban, execution detail, and human-review views with public-safe aggregates and explicit gates.
 
 ## Truth boundaries
@@ -41,4 +42,4 @@ Status: `IMPLEMENTED / EVIDENCE_COLLECTION_ACTIVE / PASS_WITH_LIMITATIONS`
 - `knowledge/obsidian-wikillm-setup.md`
 - `outputs/video-plans/north-hux-youtube-10-v1/campaign-manifest.json`
 
-Run tests before operating live adapters. Provider-backed generation, final editing, publishing, deployment, and social engagement are not part of the provider-disabled research package.
+Run tests before operating future adapters. The frozen run rejects further analyzer/loader mutation. Provider-backed generation, final editing, publishing, deployment, and social engagement are not part of the provider-disabled research package.

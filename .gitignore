@@ -35,6 +35,7 @@ outputs/contact-sheets/*.png
 outputs/contact-sheets/*.jpg
 outputs/contact-sheets/*.jpeg
 outputs/reports/*.pdf
+!outputs/reports/north-hux-youtube-10k-market-and-studio-report.pdf
 outputs/figma/*.fig
 outputs/video-plans/**/*.png
 outputs/video-plans/**/*.jpg

@@ -69,3 +69,21 @@ def test_loader_terminal_gate_requires_exact_identity_sets():
 def test_exact_analysis_loader_has_conflict_readback_guard():
     source = (ROOT / "scripts" / "load_youtube_census_10k.py").read_text(encoding="utf-8")
     assert "analysis natural-key row conflicts with the exact analysis URI or hash" in source
+
+
+def test_loader_batches_transactions_but_holds_one_session_lock():
+    class Connection:
+        commits = 0
+
+        def commit(self):
+            self.commits += 1
+
+    connection = Connection()
+    MODULE.commit_if_due(connection, 15, 16)
+    assert connection.commits == 0
+    MODULE.commit_if_due(connection, 16, 16)
+    assert connection.commits == 1
+
+    source = (ROOT / "scripts" / "load_youtube_census_10k.py").read_text(encoding="utf-8")
+    assert "pg_advisory_lock(hashtextextended" in source
+    assert "pg_advisory_xact_lock(hashtextextended(%s,0))\", (f\"terminal-freeze:" not in source

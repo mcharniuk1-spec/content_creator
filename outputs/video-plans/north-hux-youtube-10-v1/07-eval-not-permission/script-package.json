@@ -12,7 +12,7 @@
     "broad_screen_videos": 10000,
     "rule": "Strategic distributions use analysis_eligible_videos; collection completeness uses broad_screen_videos."
   },
-  "evidence_bundle_sha256": "7cef9e5a73d5a0be5f87b0ffeaefc61f52b07e625ffe388779056af686d38a53",
+  "evidence_bundle_sha256": "ea222e0a0d34c62680bb87cebc45c15183cb67d8464c32f50c487ce155701949",
   "full_script": "A passing eval is not permission to deploy. An eval measures behavior on a defined set. Production adds new users, tools, data, and failure costs. Separate quality evidence from release authority. Require outcome tests, trajectory checks, permission review, monitoring, and a rollback owner. Then release to the smallest reversible scope. Evaluation informs the gate. It does not replace the gate.",
   "hook": "A passing eval is not permission to deploy.",
   "owner_state": "owner_review_pending",

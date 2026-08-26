@@ -1,0 +1,58 @@
+filters:
+  and:
+    - file.hasTag("north-hux")
+views:
+  - type: table
+    name: Current runs and evidence
+    filters:
+      or:
+        - 'note.object_type == "run"'
+        - 'note.object_type == "evidence-limit"'
+        - 'note.object_type == "backup-receipt"'
+    order:
+      - file.name
+      - note.status
+      - note.evidence_state
+      - note.run_id
+      - note.freshness_date
+      - note.next_gate
+      - file.mtime
+  - type: table
+    name: Owner decisions
+    filters:
+      and:
+        - 'note.owner_action != null'
+    order:
+      - file.name
+      - note.owner_action
+      - note.status
+      - note.dependency
+      - note.next_gate
+  - type: table
+    name: Strategy and Studio
+    filters:
+      or:
+        - 'note.object_type == "strategy"'
+        - 'note.object_type == "script-release"'
+        - 'note.object_type == "studio-gate"'
+    order:
+      - file.name
+      - note.creator_track
+      - note.status
+      - note.review_state
+      - note.rights_state
+      - note.next_gate
+  - type: table
+    name: Reviews and limitations
+    filters:
+      or:
+        - 'note.object_type == "review"'
+        - 'note.object_type == "evidence-limit"'
+        - 'note.status == "blocked"'
+    order:
+      - file.name
+      - note.status
+      - note.evidence_state
+      - note.review_state
+      - note.dependency
+      - note.freshness_date

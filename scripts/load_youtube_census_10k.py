@@ -23,6 +23,8 @@ from psycopg.types.json import Jsonb
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DSN = "host=127.0.0.1 port=55432 dbname=north_hux"
+ROW_BATCH_SIZE = 250
+LOCK_BATCH_SIZE = 16
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -46,6 +48,13 @@ def sha(path: Path) -> str:
 
 def row_sha(row: dict[str, Any]) -> str:
     return hashlib.sha256(json.dumps(row, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def commit_if_due(connection: psycopg.Connection, index: int, batch_size: int) -> None:
+    if batch_size < 1:
+        raise ValueError("batch_size must be positive")
+    if index % batch_size == 0:
+        connection.commit()
 
 
 def transcript_semantic_sha(payload: dict[str, Any]) -> str:
@@ -468,9 +477,11 @@ def execute(args: argparse.Namespace, run_dir: Path) -> int:
         raise ValueError("analysis identity set does not exactly match the frozen cohort")
     validate_evidence_identity(cohort_ids, transcripts, frames, allow_partial=args.allow_partial)
     counts: Counter[str] = Counter()
-    with psycopg.connect(args.dsn) as connection, connection.transaction():
+    with psycopg.connect(args.dsn) as connection:
         connection.execute("SET search_path=north_hux,public")
-        connection.execute("SELECT pg_advisory_xact_lock(hashtextextended(%s,0))", (f"terminal-freeze:{run_dir.name}",))
+        # The session lock protects the full idempotent load across bounded
+        # commits and conflicts with the freezer's transaction lock.
+        connection.execute("SELECT pg_advisory_lock(hashtextextended(%s,0))", (f"terminal-freeze:{run_dir.name}",))
         assert_run_mutable(run_dir)
         connection.execute(
             """INSERT INTO research_run
@@ -524,7 +535,7 @@ def execute(args: argparse.Namespace, run_dir: Path) -> int:
         metadata_artifacts: dict[str, str] = {}
         transcript_artifacts: dict[str, str] = {}
         frame_artifacts: dict[str, str] = {}
-        for row in cohort:
+        for row_index, row in enumerate(cohort, 1):
             channel_id = row["native_channel_id"]
             if channel_id not in account_ids:
                 channel_url = f"https://www.youtube.com/channel/{channel_id}"
@@ -590,7 +601,9 @@ def execute(args: argparse.Namespace, run_dir: Path) -> int:
                 source_hashes=[row.get("raw_sha256", "")], tool_key="youtube_video_census_10k", tool_version="v1",
             )
             counts["content"] += 1
-        for video_id, (path, payload) in transcripts.items():
+            commit_if_due(connection, row_index, ROW_BATCH_SIZE)
+        connection.commit()
+        for transcript_index, (video_id, (path, payload)) in enumerate(transcripts.items(), 1):
             content_id = content_ids[video_id]
             path_hash = sha(path)
             semantic_hash = transcript_semantic_sha(payload)
@@ -636,7 +649,9 @@ def execute(args: argparse.Namespace, run_dir: Path) -> int:
                 counts["transcripts"] += 1
             else:
                 counts["transcript_gaps"] += 1
-        for video_id, (path, payload) in frames.items():
+            commit_if_due(connection, transcript_index, LOCK_BATCH_SIZE)
+        connection.commit()
+        for frame_index, (video_id, (path, payload)) in enumerate(frames.items(), 1):
             content_id = content_ids[video_id]
             path_hash = sha(path)
             state = "observed" if payload.get("status") == "observed" else "gap"
@@ -689,8 +704,10 @@ def execute(args: argparse.Namespace, run_dir: Path) -> int:
                 counts["frame_sets"] += 1
             else:
                 counts["frame_gaps"] += 1
+            commit_if_due(connection, frame_index, LOCK_BATCH_SIZE)
+        connection.commit()
         analysis_file_hash = sha(analysis_path)
-        for video_id, analysis in analyses.items():
+        for analysis_index, (video_id, analysis) in enumerate(analyses.items(), 1):
             content_id = content_ids[video_id]
             analysis_hash = row_sha(analysis)
             parent_artifacts = [metadata_artifacts[video_id]]
@@ -717,8 +734,11 @@ def execute(args: argparse.Namespace, run_dir: Path) -> int:
             for parent_artifact in parent_artifacts:
                 insert_edge(connection, parent_artifact, analysis_artifact, "analyzes", f"input:{input_hash}")
             counts["analyses"] += 1
+            commit_if_due(connection, analysis_index, ROW_BATCH_SIZE)
+        connection.commit()
         if args.campaign_dir:
             counts.update(load_campaign(connection, run_id, args.campaign_dir.resolve(), evidence_summary_artifact))
+        connection.commit()
     print(json.dumps(dict(counts), indent=2, sort_keys=True))
     return 0
 

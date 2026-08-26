@@ -17,7 +17,13 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.youtube_evidence_10k import assert_run_mutable, frame_artifact_valid, stage_lock, transcript_artifact_valid  # noqa: E402
+from scripts.youtube_evidence_10k import (  # noqa: E402
+    active_artifact_claims,
+    assert_run_mutable,
+    frame_artifact_valid,
+    stage_lock,
+    transcript_artifact_valid,
+)
 
 
 DEFAULT_ROOTS = ("raw", "normalized", "derived")
@@ -69,7 +75,7 @@ def atomic_write_text(path: Path, value: str) -> None:
 
 
 def validate_evidence_pointers(run_dir: Path) -> None:
-    active_claims = list((run_dir / "locks").rglob("*.lock")) if (run_dir / "locks").exists() else []
+    active_claims, _removed_stale_claims = active_artifact_claims(run_dir)
     if active_claims:
         raise ValueError(f"evidence writers are active: {len(active_claims)} claim files")
     for path in sorted((run_dir / "normalized" / "transcripts").glob("*.json")):

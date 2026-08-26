@@ -292,14 +292,21 @@ def database_counts(connection: psycopg.Connection, run_id: int, run_dir: Path) 
             raise ValueError(f"database {stage} attempt identities do not exactly match the analysis set")
         attempts[stage] = int(latest_count)
     campaign = connection.execute(
-        """SELECT count(DISTINCT package.script_package_id),
+        """WITH current_release AS (
+               SELECT release.strategy_release_id
+               FROM strategy_release release
+               WHERE release.run_id=%s AND NOT EXISTS (
+                   SELECT 1 FROM strategy_release newer
+                   WHERE newer.supersedes_strategy_release_id=release.strategy_release_id
+               )
+           )
+           SELECT count(DISTINCT package.script_package_id),
                   count(DISTINCT shot.shot_plan_id),
                   count(DISTINCT edit.studio_edit_plan_id)
-           FROM strategy_release release
+           FROM current_release release
            JOIN script_package package ON package.strategy_release_id=release.strategy_release_id
            LEFT JOIN shot_plan shot ON shot.script_package_id=package.script_package_id
-           LEFT JOIN studio_edit_plan edit ON edit.script_package_id=package.script_package_id
-           WHERE release.run_id=%s""",
+           LEFT JOIN studio_edit_plan edit ON edit.script_package_id=package.script_package_id""",
         (run_id,),
     ).fetchone()
     counts = {

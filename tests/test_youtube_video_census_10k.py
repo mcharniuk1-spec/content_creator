@@ -2,7 +2,12 @@ import copy
 
 import pytest
 
-from scripts.youtube_video_census_10k import build_cohort
+from scripts.youtube_video_census_10k import (
+    approved_creator_cap,
+    build_cohort,
+    creator_cap_config_sha256,
+    validate_pinned_creator_cap,
+)
 
 
 def row(channel: int, video: int, short: bool = True, relevant: bool = True):
@@ -49,5 +54,34 @@ def test_reports_insufficient_capacity():
 
 def test_enforces_one_percent_creator_cap():
     source = [row(channel, video) for channel in range(4) for video in range(10)]
-    with pytest.raises(ValueError, match="exceeds 1%"):
+    with pytest.raises(ValueError, match="exceeds the approved"):
         build_cohort(source, [], target=30, maximum_per_creator=10)
+
+
+def test_approved_creator_cap_is_loaded_from_config(tmp_path):
+    config = tmp_path / "youtube.json"
+    config.write_text('{"maximum_creator_contribution_fraction": 0.0075}', encoding="utf-8")
+    assert approved_creator_cap(config) == 0.0075
+    assert len(creator_cap_config_sha256(config)) == 64
+
+
+def test_run_creator_cap_pin_detects_config_drift(tmp_path):
+    config = tmp_path / "youtube.json"
+    config.write_text('{"maximum_creator_contribution_fraction": 0.01}', encoding="utf-8")
+    run = tmp_path / "run"
+    (run / "derived").mkdir(parents=True)
+    (run / "derived" / "cohort-summary.json").write_text(
+        '{"approved_maximum_creator_fraction":0.01,"creator_cap_config_sha256":"'
+        + creator_cap_config_sha256(config) + '"}',
+        encoding="utf-8",
+    )
+    assert validate_pinned_creator_cap(run, config) == 0.01
+    config.write_text('{"maximum_creator_contribution_fraction": 0.02}', encoding="utf-8")
+    with pytest.raises(ValueError, match="drifted"):
+        validate_pinned_creator_cap(run, config)
+
+
+def test_custom_creator_cap_requires_matching_policy_hash():
+    source = [row(channel, video) for channel in range(10) for video in range(3)]
+    with pytest.raises(ValueError, match="policy hash"):
+        build_cohort(source, [], target=30, maximum_per_creator=3, maximum_contribution_fraction=0.1)

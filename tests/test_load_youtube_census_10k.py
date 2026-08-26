@@ -18,6 +18,21 @@ def test_row_hash_is_order_independent():
     assert MODULE.row_sha({"a": 1, "b": 2}) == MODULE.row_sha({"b": 2, "a": 1})
 
 
+def test_transcript_semantic_hash_excludes_volatile_run_fields():
+    base = {
+        "native_video_id": "v1",
+        "source_kind": "native_caption",
+        "language": "en",
+        "normalization_method": "v1",
+        "source_sha256": "a" * 64,
+        "speech_segments": [{"start_ms": 0, "end_ms": 1000, "text": "hello"}],
+        "captured_at": "2026-01-01T00:00:00Z",
+        "artifact_run_key": "run-a",
+    }
+    changed = {**base, "captured_at": "2027-01-01T00:00:00Z", "artifact_run_key": "run-b", "reused_from_run_key": "run-a"}
+    assert MODULE.transcript_semantic_sha(base) == MODULE.transcript_semantic_sha(changed)
+
+
 def test_collector_transcript_kinds_map_to_schema_vocabulary():
     assert MODULE.canonical_transcript_kind("native_subtitle") == "native_subtitle"
     assert MODULE.canonical_transcript_kind("native_caption_source_unresolved") == "native_caption"
@@ -49,3 +64,8 @@ def test_loader_terminal_gate_requires_exact_identity_sets():
         assert "identity sets incomplete" in str(error)
     else:
         raise AssertionError("incomplete evidence identity set passed")
+
+
+def test_exact_analysis_loader_has_conflict_readback_guard():
+    source = (ROOT / "scripts" / "load_youtube_census_10k.py").read_text(encoding="utf-8")
+    assert "analysis natural-key row conflicts with the exact analysis URI or hash" in source

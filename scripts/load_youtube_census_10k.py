@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from collections import Counter, defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
@@ -22,6 +23,11 @@ from psycopg.types.json import Jsonb
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DSN = "host=127.0.0.1 port=55432 dbname=north_hux"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.youtube_evidence_10k import assert_run_mutable, frame_artifact_valid, stage_lock, transcript_artifact_valid  # noqa: E402
+from scripts.youtube_video_census_10k import creator_cap_config_sha256, validate_pinned_creator_cap  # noqa: E402
 
 
 def jsonl(path: Path) -> list[dict[str, Any]]:
@@ -40,6 +46,18 @@ def sha(path: Path) -> str:
 
 def row_sha(row: dict[str, Any]) -> str:
     return hashlib.sha256(json.dumps(row, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def transcript_semantic_sha(payload: dict[str, Any]) -> str:
+    semantic = {
+        "native_video_id": payload.get("native_video_id"),
+        "source_kind": payload.get("source_kind"),
+        "language": payload.get("language"),
+        "normalization_method": payload.get("normalization_method"),
+        "source_sha256": payload.get("source_sha256"),
+        "speech_segments": payload.get("speech_segments") or payload.get("segments") or [],
+    }
+    return row_sha(semantic)
 
 
 def artifact_id(kind: str, digest: str) -> str:
@@ -241,6 +259,46 @@ def insert_artifact_attempt(
     return attempt_number
 
 
+def insert_analysis_exact(
+    connection: psycopg.Connection,
+    *,
+    run_id: int,
+    content_id: int,
+    input_bundle_sha256: str,
+    analysis_uri: str,
+    analysis_sha256: str,
+) -> int:
+    previous = connection.execute(
+        """SELECT content_analysis_artifact_id FROM content_analysis_artifact
+           WHERE run_id=%s AND content_id=%s AND analyzer_key='youtube-census-lexical'
+             AND analyzer_version='v2'
+           ORDER BY content_analysis_artifact_id DESC LIMIT 1""",
+        (run_id, content_id),
+    ).fetchone()
+    inserted = connection.execute(
+        """INSERT INTO content_analysis_artifact
+           (run_id,content_id,analyzer_key,analyzer_version,input_bundle_sha256,analysis_uri,
+            analysis_sha256,epistemic_state,review_state,supersedes_analysis_id)
+           VALUES (%s,%s,'youtube-census-lexical','v2',%s,%s,%s,'classified','passed_with_limitations',%s)
+           ON CONFLICT DO NOTHING RETURNING content_analysis_artifact_id""",
+        (run_id, content_id, input_bundle_sha256, analysis_uri, analysis_sha256, previous[0] if previous else None),
+    ).fetchone()
+    if inserted:
+        return int(inserted[0])
+    existing = connection.execute(
+        """SELECT content_analysis_artifact_id,analysis_uri,analysis_sha256
+           FROM content_analysis_artifact
+           WHERE run_id=%s AND content_id=%s AND analyzer_key='youtube-census-lexical'
+             AND analyzer_version='v2' AND input_bundle_sha256=%s""",
+        (run_id, content_id, input_bundle_sha256),
+    ).fetchone()
+    if not existing:
+        raise ValueError("analysis natural-key conflict belongs to a different run or identity")
+    if existing[1] != analysis_uri or existing[2] != analysis_sha256:
+        raise ValueError("analysis natural-key row conflicts with the exact analysis URI or hash")
+    return int(existing[0])
+
+
 def load_campaign(connection: psycopg.Connection, run_id: int, campaign_dir: Path, evidence_artifact: str) -> Counter:
     counts: Counter[str] = Counter()
     manifest_path = campaign_dir / "campaign-manifest.json"
@@ -378,19 +436,17 @@ def load_campaign(connection: psycopg.Connection, run_id: int, campaign_dir: Pat
     return counts
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--run-dir", type=Path, required=True)
-    parser.add_argument("--campaign-dir", type=Path)
-    parser.add_argument("--dsn", default=DEFAULT_DSN)
-    parser.add_argument("--allow-partial", action="store_true")
-    args = parser.parse_args()
-    run_dir = args.run_dir.resolve()
+def execute(args: argparse.Namespace, run_dir: Path) -> int:
     cohort_path = run_dir / "derived" / "video-cohort.jsonl"
     analysis_path = run_dir / "derived" / "video-analysis-10k.jsonl"
     summary_path = run_dir / "derived" / "analysis-summary-10k.json"
     cohort = jsonl(cohort_path)
-    analyses = {row["native_video_id"]: row for row in jsonl(analysis_path)}
+    analysis_rows = jsonl(analysis_path)
+    if len(analysis_rows) != 10000:
+        raise ValueError(f"loader requires exactly 10,000 analysis rows, got {len(analysis_rows)}")
+    analyses = {row["native_video_id"]: row for row in analysis_rows}
+    if len(analyses) != len(analysis_rows):
+        raise ValueError("analysis JSONL contains duplicate native_video_id rows")
     transcripts = get_json_files(run_dir / "normalized" / "transcripts")
     frames = get_json_files(run_dir / "normalized" / "frame-manifests")
     if len(cohort) != 10000 or len(analyses) != 10000:
@@ -399,14 +455,23 @@ def main() -> int:
     if len(cohort_ids) != len(cohort):
         raise ValueError("cohort contains duplicate native_video_id values")
     creator_counts = Counter(row["native_channel_id"] for row in cohort)
-    if max(creator_counts.values()) / len(cohort) > 0.01:
-        raise ValueError("cohort violates the 1% maximum creator contribution")
+    approved_cap = validate_pinned_creator_cap(run_dir)
+    if max(creator_counts.values()) / len(cohort) > approved_cap:
+        raise ValueError("cohort violates the approved maximum creator contribution")
+    for _, (path, payload) in transcripts.items():
+        if not transcript_artifact_valid(run_dir, path, payload):
+            raise ValueError(f"invalid transcript pointer/hash chain: {path}")
+    for _, (path, payload) in frames.items():
+        if not frame_artifact_valid(run_dir, path, payload):
+            raise ValueError(f"invalid frame pointer/hash chain: {path}")
     if set(analyses) != cohort_ids:
         raise ValueError("analysis identity set does not exactly match the frozen cohort")
     validate_evidence_identity(cohort_ids, transcripts, frames, allow_partial=args.allow_partial)
     counts: Counter[str] = Counter()
     with psycopg.connect(args.dsn) as connection, connection.transaction():
         connection.execute("SET search_path=north_hux,public")
+        connection.execute("SELECT pg_advisory_xact_lock(hashtextextended(%s,0))", (f"terminal-freeze:{run_dir.name}",))
+        assert_run_mutable(run_dir)
         connection.execute(
             """INSERT INTO research_run
                (run_key,status,scope_json,admission_receipt_uri,taxonomy_version,owner_gate,started_at)
@@ -414,7 +479,9 @@ def main() -> int:
                        'owner_approved_public_youtube_10k',now())
                ON CONFLICT (run_key) DO NOTHING""",
             (run_dir.name, Jsonb({"platform": "youtube", "broad_screen_videos": 10000,
-                                  "creator_cap": 0.01, "strategic_denominator": 2949}),
+                                  "creator_cap": approved_cap,
+                                  "creator_cap_config_sha256": creator_cap_config_sha256(),
+                                  "strategic_denominator": 2949}),
              f"runs/{run_dir.name}/admission-receipt.json"),
         )
         run_id = connection.execute("SELECT run_id FROM research_run WHERE run_key=%s", (run_dir.name,)).fetchone()[0]
@@ -526,6 +593,7 @@ def main() -> int:
         for video_id, (path, payload) in transcripts.items():
             content_id = content_ids[video_id]
             path_hash = sha(path)
+            semantic_hash = transcript_semantic_sha(payload)
             state = "observed" if payload.get("availability") == "observed" else "gap"
             insert_artifact_attempt(
                 connection,
@@ -555,7 +623,7 @@ def main() -> int:
                     content_id=content_id,
                     payload=payload,
                     transcript_uri=relative(path),
-                    transcript_sha256=path_hash,
+                    transcript_sha256=semantic_hash,
                 )
                 for idx, segment in enumerate(payload.get("speech_segments") or payload.get("segments") or []):
                     connection.execute(
@@ -631,13 +699,13 @@ def main() -> int:
             if video_id in frame_artifacts:
                 parent_artifacts.append(frame_artifacts[video_id])
             input_hash = hashlib.sha256(("|".join(sorted(parent_artifacts)) + "|" + analysis_file_hash).encode()).hexdigest()
-            connection.execute(
-                """INSERT INTO content_analysis_artifact
-                   (run_id,content_id,analyzer_key,analyzer_version,input_bundle_sha256,analysis_uri,
-                    analysis_sha256,epistemic_state,review_state)
-                   VALUES (%s,%s,'youtube-census-lexical','v2',%s,%s,%s,'classified','passed_with_limitations')
-                   ON CONFLICT DO NOTHING""",
-                (run_id, content_id, input_hash, f"{relative(analysis_path)}#video={video_id}", analysis_hash),
+            insert_analysis_exact(
+                connection,
+                run_id=run_id,
+                content_id=content_id,
+                input_bundle_sha256=input_hash,
+                analysis_uri=f"{relative(analysis_path)}#video={video_id}",
+                analysis_sha256=analysis_hash,
             )
             analysis_artifact = insert_artifact(
                 connection, run_id=run_id, content_id=content_id, kind="video_analysis",
@@ -647,12 +715,25 @@ def main() -> int:
                 source_hashes=[analysis_file_hash], tool_key="analyze_youtube_census_10k", tool_version="v2",
             )
             for parent_artifact in parent_artifacts:
-                insert_edge(connection, parent_artifact, analysis_artifact, "analyzes")
+                insert_edge(connection, parent_artifact, analysis_artifact, "analyzes", f"input:{input_hash}")
             counts["analyses"] += 1
         if args.campaign_dir:
             counts.update(load_campaign(connection, run_id, args.campaign_dir.resolve(), evidence_summary_artifact))
     print(json.dumps(dict(counts), indent=2, sort_keys=True))
     return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-dir", type=Path, required=True)
+    parser.add_argument("--campaign-dir", type=Path)
+    parser.add_argument("--dsn", default=DEFAULT_DSN)
+    parser.add_argument("--allow-partial", action="store_true")
+    args = parser.parse_args()
+    run_dir = args.run_dir.resolve()
+    with stage_lock(run_dir, "run-data", exclusive=True):
+        assert_run_mutable(run_dir)
+        return execute(args, run_dir)
 
 
 if __name__ == "__main__":

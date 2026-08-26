@@ -4,10 +4,61 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
+import hashlib
 import json
+import os
+from contextlib import contextmanager
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Iterable
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_CONFIG = ROOT / "config" / "youtube-census-v1.json"
+
+
+@contextmanager
+def run_data_lock(run_dir: Path):
+    lock_path = run_dir / "locks" / ".run-data.stage.lck"
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    descriptor = os.open(lock_path, os.O_CREAT | os.O_RDWR, 0o600)
+    try:
+        fcntl.flock(descriptor, fcntl.LOCK_EX)
+        yield
+    finally:
+        fcntl.flock(descriptor, fcntl.LOCK_UN)
+        os.close(descriptor)
+
+
+def assert_run_mutable(run_dir: Path) -> None:
+    marker = run_dir / "receipts" / "terminal-freeze.json"
+    if marker.is_file():
+        raise ValueError(f"run is terminally frozen: {marker}")
+
+
+def approved_creator_cap(config_path: Path = DEFAULT_CONFIG) -> float:
+    payload = json.loads(config_path.read_text(encoding="utf-8"))
+    value = float(payload["maximum_creator_contribution_fraction"])
+    if not 0 < value <= 1:
+        raise ValueError("approved creator contribution cap must be in (0, 1]")
+    return value
+
+
+def creator_cap_config_sha256(config_path: Path = DEFAULT_CONFIG) -> str:
+    return hashlib.sha256(config_path.read_bytes()).hexdigest()
+
+
+def validate_pinned_creator_cap(run_dir: Path, config_path: Path = DEFAULT_CONFIG) -> float:
+    summary_path = run_dir / "derived" / "cohort-summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    current_hash = creator_cap_config_sha256(config_path)
+    if summary.get("creator_cap_config_sha256") != current_hash:
+        raise ValueError("run creator-cap configuration hash is missing or has drifted")
+    cap = approved_creator_cap(config_path)
+    if float(summary.get("approved_maximum_creator_fraction")) != cap:
+        raise ValueError("run creator-cap value does not match the pinned configuration")
+    return cap
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -64,6 +115,8 @@ def build_cohort(
     target: int,
     minimum_per_creator: int = 3,
     maximum_per_creator: int = 10,
+    maximum_contribution_fraction: float | None = None,
+    maximum_contribution_policy_sha256: str | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     if target <= 0 or minimum_per_creator <= 0 or maximum_per_creator < minimum_per_creator:
         raise ValueError("invalid target or creator bounds")
@@ -138,8 +191,16 @@ def build_cohort(
         raise ValueError(f"cohort construction ended at {len(selected)} instead of {target}")
     if max(counts.values(), default=0) > maximum_per_creator:
         raise ValueError("creator maximum violated")
-    if maximum_per_creator / target > 0.01:
-        raise ValueError("configured creator maximum exceeds 1% of final denominator")
+    if maximum_contribution_fraction is None:
+        approved_cap = approved_creator_cap()
+        cap_policy_sha256 = creator_cap_config_sha256()
+    else:
+        if not maximum_contribution_policy_sha256 or len(maximum_contribution_policy_sha256) != 64:
+            raise ValueError("a custom creator cap requires its explicit 64-character policy hash")
+        approved_cap = maximum_contribution_fraction
+        cap_policy_sha256 = maximum_contribution_policy_sha256
+    if maximum_per_creator / target > approved_cap:
+        raise ValueError("configured creator maximum exceeds the approved final-denominator contribution cap")
 
     ranked = sorted(selected.values(), key=row_rank, reverse=True)
     output = []
@@ -171,6 +232,8 @@ def build_cohort(
         "minimum_selected_per_creator": min(counts.values()),
         "maximum_selected_per_creator": max(counts.values()),
         "maximum_creator_fraction": round(max(counts.values()) / target, 6),
+        "approved_maximum_creator_fraction": approved_cap,
+        "creator_cap_config_sha256": cap_policy_sha256,
         "baseline_videos_reused": selection_counts["baseline_reuse"],
         "broad_screen_videos": selection_counts["broad_screen"],
         "format_claims": dict(sorted(format_counts.items())),
@@ -193,17 +256,21 @@ def main() -> int:
     try:
         source = args.source_run_dir.resolve()
         run_dir = args.run_dir.resolve()
-        rows, summary = build_cohort(
-            load_jsonl(source / "derived" / "video-snapshots.jsonl"),
-            load_jsonl(source / "derived" / "analyzed-content-cohort.jsonl"),
-            args.target,
-            args.minimum_per_creator,
-            args.maximum_per_creator,
-        )
-        write_jsonl(run_dir / "derived" / "video-cohort.jsonl", rows)
-        summary_path = run_dir / "derived" / "cohort-summary.json"
-        summary_path.parent.mkdir(parents=True, exist_ok=True)
-        summary_path.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        with run_data_lock(run_dir):
+            assert_run_mutable(run_dir)
+            rows, summary = build_cohort(
+                load_jsonl(source / "derived" / "video-snapshots.jsonl"),
+                load_jsonl(source / "derived" / "analyzed-content-cohort.jsonl"),
+                args.target,
+                args.minimum_per_creator,
+                args.maximum_per_creator,
+            )
+            write_jsonl(run_dir / "derived" / "video-cohort.jsonl", rows)
+            summary_path = run_dir / "derived" / "cohort-summary.json"
+            summary_path.parent.mkdir(parents=True, exist_ok=True)
+            temporary = summary_path.with_suffix(summary_path.suffix + ".tmp")
+            temporary.write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+            temporary.replace(summary_path)
         print(json.dumps(summary, sort_keys=True))
         return 0
     except (OSError, ValueError, json.JSONDecodeError) as exc:

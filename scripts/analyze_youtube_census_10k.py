@@ -25,6 +25,8 @@ from analyze_youtube_calibration import (
     story,
     topic,
 )
+from youtube_evidence_10k import assert_run_mutable, frame_artifact_valid, stage_lock, transcript_artifact_valid
+from youtube_video_census_10k import validate_pinned_creator_cap
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -78,6 +80,8 @@ def load_transcripts(run_dir: Path) -> dict[str, dict[str, Any]]:
             raise ValueError(f"transcript filename/payload identity mismatch: {path}")
         if video_id in rows:
             raise ValueError(f"duplicate transcript identity: {video_id}")
+        if not transcript_artifact_valid(run_dir, path, row):
+            raise ValueError(f"invalid transcript pointer/hash chain: {path}")
         rows[video_id] = row
     return rows
 
@@ -94,6 +98,8 @@ def load_frame_manifests(run_dir: Path) -> dict[str, dict[str, Any]]:
             raise ValueError(f"frame filename/payload identity mismatch: {path}")
         if video_id in rows:
             raise ValueError(f"duplicate frame identity: {video_id}")
+        if not frame_artifact_valid(run_dir, path, row):
+            raise ValueError(f"invalid frame pointer/hash chain: {path}")
         rows[video_id] = row
     return rows
 
@@ -299,13 +305,7 @@ def build_summary(
     }
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--run-dir", required=True, type=Path)
-    parser.add_argument("--source-run-dir", type=Path)
-    parser.add_argument("--allow-partial", action="store_true")
-    args = parser.parse_args()
-    run_dir = args.run_dir.resolve()
+def execute(args: argparse.Namespace, run_dir: Path) -> int:
     cohort = load_jsonl(run_dir / "derived" / "video-cohort.jsonl")
     if len(cohort) != 10000:
         raise ValueError(f"expected exactly 10,000 cohort rows, got {len(cohort)}")
@@ -313,8 +313,8 @@ def main() -> int:
     if len(cohort_ids) != len(cohort):
         raise ValueError("cohort contains duplicate native_video_id values")
     creator_counts = Counter(row["native_channel_id"] for row in cohort)
-    if max(creator_counts.values()) / len(cohort) > 0.01:
-        raise ValueError("cohort violates the 1% maximum creator contribution")
+    if max(creator_counts.values()) / len(cohort) > validate_pinned_creator_cap(run_dir):
+        raise ValueError("cohort violates the approved maximum creator contribution")
     creator_views: dict[str, list[int]] = defaultdict(list)
     for row in cohort:
         if row.get("view_count") is not None:
@@ -365,6 +365,18 @@ def main() -> int:
     )
     print(json.dumps(summary["claims_boundary"], sort_keys=True))
     return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-dir", required=True, type=Path)
+    parser.add_argument("--source-run-dir", type=Path)
+    parser.add_argument("--allow-partial", action="store_true")
+    args = parser.parse_args()
+    run_dir = args.run_dir.resolve()
+    with stage_lock(run_dir, "run-data", exclusive=True):
+        assert_run_mutable(run_dir)
+        return execute(args, run_dir)
 
 
 if __name__ == "__main__":

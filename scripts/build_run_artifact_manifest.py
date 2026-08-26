@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.youtube_evidence_10k import frame_artifact_valid, transcript_artifact_valid  # noqa: E402
+from scripts.youtube_evidence_10k import assert_run_mutable, frame_artifact_valid, stage_lock, transcript_artifact_valid  # noqa: E402
 
 
 DEFAULT_ROOTS = ("raw", "normalized", "derived")
@@ -150,16 +150,21 @@ def main() -> int:
     summary_path = (args.summary or run_dir / "receipts" / "terminal-artifact-manifest-summary.json").resolve()
     if not run_dir.is_dir():
         raise SystemExit(f"run directory does not exist: {run_dir}")
+    assert_run_mutable(run_dir)
     for output_path in (manifest_path, summary_path):
         if not output_path.is_relative_to(run_dir / "receipts"):
             raise SystemExit(f"manifest outputs must stay under the run receipts directory: {output_path}")
 
-    validate_evidence_pointers(run_dir)
-    rows, summary = build_manifest(run_dir, roots)
-    write_jsonl(manifest_path, rows)
-    summary["manifest_uri"] = manifest_path.relative_to(run_dir).as_posix()
-    summary["manifest_sha256"] = sha256(manifest_path)
-    write_json(summary_path, summary)
+    with stage_lock(run_dir, "run-data", exclusive=True):
+        assert_run_mutable(run_dir)
+        with stage_lock(run_dir, "transcripts", exclusive=True):
+            with stage_lock(run_dir, "frames", exclusive=True):
+                validate_evidence_pointers(run_dir)
+                rows, summary = build_manifest(run_dir, roots)
+                write_jsonl(manifest_path, rows)
+                summary["manifest_uri"] = manifest_path.relative_to(run_dir).as_posix()
+                summary["manifest_sha256"] = sha256(manifest_path)
+                write_json(summary_path, summary)
     print(json.dumps(summary, sort_keys=True))
     return 0
 

@@ -17,6 +17,12 @@ CREATE UNIQUE INDEX IF NOT EXISTS uq_metric_snapshot_account_observation
     ON metric_snapshot (account_id, metric_definition_id, observed_at)
     WHERE account_id IS NOT NULL;
 
+DROP INDEX IF EXISTS uq_content_analysis_run_natural;
+CREATE UNIQUE INDEX uq_content_analysis_run_natural
+    ON content_analysis_artifact (
+        run_id, content_id, analyzer_key, analyzer_version, input_bundle_sha256
+    );
+
 CREATE TABLE IF NOT EXISTS transcript_identity (
     content_id bigint NOT NULL REFERENCES content_item(content_id),
     transcript_sha256 text NOT NULL CHECK (transcript_sha256 ~ '^[0-9a-f]{64}$'),
@@ -94,12 +100,14 @@ WITH latest_axes AS (
             WHERE review.decision = 'pass'
               AND (review.valid_until IS NULL OR review.valid_until > now())
               AND rights.decision = 'pass'
+              AND rights.allowed_use IN ('metadata_only','commentary','transcript','public_projection')
               AND (rights.expires_at IS NULL OR rights.expires_at > now())
         ) AS passing_axis_count,
         count(*) FILTER (
             WHERE review.decision IN ('block','uncertain')
                OR (review.valid_until IS NOT NULL AND review.valid_until <= now())
                OR rights.decision <> 'pass'
+               OR rights.allowed_use NOT IN ('metadata_only','commentary','transcript','public_projection')
                OR (rights.expires_at IS NOT NULL AND rights.expires_at <= now())
         ) AS nonpassing_axis_count
     FROM v_latest_studio_axis_review review

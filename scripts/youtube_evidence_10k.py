@@ -593,7 +593,13 @@ def run_stage(
             print(json.dumps({"stage": stage, "processed": processed, "requested": len(pending)}), flush=True)
 
     if stage == "transcripts":
-        artifacts = [json.loads(path.read_text(encoding="utf-8")) for path in sorted((run_dir / "normalized" / "transcripts").glob("*.json"))]
+        transcript_paths = sorted((run_dir / "normalized" / "transcripts").glob("*.json"))
+        artifacts = []
+        for path in transcript_paths:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            if not transcript_artifact_valid(run_dir, path, payload):
+                raise ValueError(f"invalid transcript pointer/hash chain: {path}")
+            artifacts.append(payload)
         write_jsonl(run_dir / "derived" / "transcripts.jsonl", sorted(artifacts, key=lambda item: item["native_video_id"]))
         gaps = [row for row in artifacts if row.get("availability") != "observed"]
         write_jsonl(run_dir / "derived" / "transcript-gaps.jsonl", gaps)
@@ -603,7 +609,12 @@ def run_stage(
             "raw_segments": sum(int(row.get("segment_count") or 0) for row in artifacts),
             "speech_segments": sum(int(row.get("speech_segment_count") or 0) for row in artifacts),
         }
-    manifests = [json.loads(path.read_text(encoding="utf-8")) for path in sorted((run_dir / "normalized" / "frame-manifests").glob("*.json"))]
+    manifests = []
+    for path in sorted((run_dir / "normalized" / "frame-manifests").glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if not frame_artifact_valid(run_dir, path, payload):
+            raise ValueError(f"invalid frame pointer/hash chain: {path}")
+        manifests.append(payload)
     media_rows = [row["media"] for row in manifests if row.get("status") == "observed"]
     frame_rows = [frame for row in manifests if row.get("status") == "observed" for frame in row.get("frames", [])]
     gaps = [row for row in manifests if row.get("status") != "observed"]

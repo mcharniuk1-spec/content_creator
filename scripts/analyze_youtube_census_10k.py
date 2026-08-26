@@ -312,6 +312,9 @@ def main() -> int:
     cohort_ids = {row["native_video_id"] for row in cohort}
     if len(cohort_ids) != len(cohort):
         raise ValueError("cohort contains duplicate native_video_id values")
+    creator_counts = Counter(row["native_channel_id"] for row in cohort)
+    if max(creator_counts.values()) / len(cohort) > 0.01:
+        raise ValueError("cohort violates the 1% maximum creator contribution")
     creator_views: dict[str, list[int]] = defaultdict(list)
     for row in cohort:
         if row.get("view_count") is not None:

@@ -220,6 +220,8 @@ def insert_artifact_attempt(
     artifact_sha256: str,
     captured_at: datetime,
 ) -> int:
+    lock_key = f"artifact-attempt:{run_id}:{content_id}:{stage}"
+    connection.execute("SELECT pg_advisory_xact_lock(hashtextextended(%s,0))", (lock_key,))
     latest = connection.execute(
         """SELECT attempt_number,state,artifact_sha256 FROM artifact_attempt
            WHERE run_id=%s AND content_id=%s AND stage=%s
@@ -396,6 +398,9 @@ def main() -> int:
     cohort_ids = {row["native_video_id"] for row in cohort}
     if len(cohort_ids) != len(cohort):
         raise ValueError("cohort contains duplicate native_video_id values")
+    creator_counts = Counter(row["native_channel_id"] for row in cohort)
+    if max(creator_counts.values()) / len(cohort) > 0.01:
+        raise ValueError("cohort violates the 1% maximum creator contribution")
     if set(analyses) != cohort_ids:
         raise ValueError("analysis identity set does not exactly match the frozen cohort")
     validate_evidence_identity(cohort_ids, transcripts, frames, allow_partial=args.allow_partial)

@@ -1,0 +1,380 @@
+<title>Аудит радара</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F3F5F3; --surface:#FFFFFF; --sunk:#E8ECE9; --rail:#DCE2DE;
+  --ink:#15191A; --ink2:#3A4244; --muted:#6B7679;
+  --rule:#D7DEDA; --rule-soft:#E4EAE6;
+  --acc:#1F4F4A; --acc-soft:#E0EBE8;
+  --crit:#9B2C1F; --crit-soft:#F7E7E4;
+  --warn:#8A6212; --warn-soft:#F7EFDD;
+  --ok:#2E6B4F; --ok-soft:#E2EFE8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1211; --surface:#161B1A; --sunk:#1D2422; --rail:#2A3331;
+    --ink:#E6EBE8; --ink2:#BCC6C3; --muted:#87938F;
+    --rule:#28322F; --rule-soft:#1F2725;
+    --acc:#6FB5AA; --acc-soft:#16241F;
+    --crit:#E08A78; --crit-soft:#2A1714;
+    --warn:#D8AB5C; --warn-soft:#261D0F;
+    --ok:#71B891; --ok-soft:#132219;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1211; --surface:#161B1A; --sunk:#1D2422; --rail:#2A3331;
+  --ink:#E6EBE8; --ink2:#BCC6C3; --muted:#87938F;
+  --rule:#28322F; --rule-soft:#1F2725;
+  --acc:#6FB5AA; --acc-soft:#16241F;
+  --crit:#E08A78; --crit-soft:#2A1714;
+  --warn:#D8AB5C; --warn-soft:#261D0F;
+  --ok:#71B891; --ok-soft:#132219;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Source Sans 3",system-ui,sans-serif;font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px 88px}
+header{padding:52px 0 26px;border-bottom:2px solid var(--acc)}
+.kick{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--acc);font-weight:500;
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kick i{font-style:normal;color:var(--rail)}
+h1{font-family:"Bitter",Georgia,serif;font-weight:700;font-size:clamp(34px,5.5vw,52px);
+  line-height:1.05;letter-spacing:-.02em;margin:16px 0 0;text-wrap:balance}
+.lede{font-size:clamp(17px,2vw,19px);line-height:1.5;color:var(--ink2);max-width:62ch;margin:16px 0 0}
+.verdict{font-family:"Bitter",Georgia,serif;font-weight:600;font-size:clamp(18px,2.4vw,22px);
+  line-height:1.4;margin:24px 0 0;padding:16px 20px;background:var(--acc-soft);color:var(--acc);
+  border-radius:4px;max-width:62ch}
+
+.tally{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0 0}
+.tally div{background:var(--surface);border:1px solid var(--rule);border-radius:4px;
+  padding:14px 16px;display:flex;flex-direction:column;gap:3px}
+.tally b{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:500;
+  font-variant-numeric:tabular-nums;line-height:1}
+.tally span{font-size:12.5px;color:var(--muted);line-height:1.35}
+.t-crit b{color:var(--crit)} .t-warn b{color:var(--warn)} .t-ok b{color:var(--ok)}
+
+section{margin-top:48px}
+.sh{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;
+  border-bottom:1px solid var(--rule);margin-bottom:22px;flex-wrap:wrap}
+h2{font-family:"Bitter",Georgia,serif;font-weight:600;font-size:clamp(21px,2.8vw,27px);
+  line-height:1.15;letter-spacing:-.015em;margin:0}
+.sh em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+p{margin:0 0 14px;max-width:66ch}
+strong{font-weight:600}
+
+.find{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--rail);
+  border-radius:3px;padding:16px 18px;margin:0 0 12px}
+.find.c{border-left-color:var(--crit)} .find.w{border-left-color:var(--warn)}
+.find.n{border-left-color:var(--acc)}
+.fh{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+.fn{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);font-weight:500}
+.ft{font-family:"Bitter",Georgia,serif;font-weight:600;font-size:17px;line-height:1.25;
+  letter-spacing:-.01em}
+.file{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--acc);
+  background:var(--acc-soft);padding:2px 7px;border-radius:3px;white-space:nowrap}
+.find p{font-size:15px;margin:0 0 8px;max-width:none;color:var(--ink2)}
+.find p:last-child{margin-bottom:0}
+.fix{font-size:14.5px;color:var(--ink2);border-top:1px dashed var(--rule);
+  padding-top:8px;margin-top:10px}
+.fix b{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;display:block;margin-bottom:4px}
+code{font-family:"IBM Plex Mono",monospace;font-size:.86em;background:var(--sunk);
+  padding:1px 5px;border-radius:3px;color:var(--ink2)}
+
+.scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;
+  background:var(--surface);margin:0 0 16px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:480px}
+th{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;
+  padding:11px 14px 8px;border-bottom:1px solid var(--rule);white-space:nowrap}
+td{padding:9px 14px;border-bottom:1px solid var(--rule-soft);color:var(--ink2);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{color:var(--ink);font-weight:500}
+td.n,th.n{text-align:right;font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:10px;margin:0 0 16px}
+.steps li{list-style:none;counter-increment:s;position:relative;padding-left:44px;
+  min-height:30px;display:flex;flex-direction:column;justify-content:center}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;
+  width:30px;height:30px;border-radius:50%;background:var(--acc);color:var(--surface);
+  font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;
+  display:flex;align-items:center;justify-content:center}
+.steps b{font-weight:600}
+.steps span{font-size:14.5px;color:var(--muted)}
+ul.plain{margin:0 0 14px;padding-left:20px;max-width:66ch}
+ul.plain li{margin-bottom:6px} ul.plain li::marker{color:var(--muted)}
+footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--muted);max-width:66ch}
+@media (max-width:700px){.tally{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){body{font-size:15.5px}.wrap{padding:0 17px 60px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="kick"><span>3 сентября 2026</span><i>/</i><span>четыре независимых проверки</span><i>/</i><span>41 находка</span></div>
+  <h1>Аудит радара</h1>
+  <p class="lede">Инструмент проверяли с четырёх сторон одновременно: безопасность, корректность кода, соответствие спецификации и продуктовая сторона. Каждая проверка шла вслепую к остальным — совпадения ниже не сговор, а подтверждение.</p>
+  <p class="verdict">Инструмент считает честно, а вот следующий прогон отдал бы правдоподобный мусор и не пожаловался бы.</p>
+  <div class="tally">
+    <div class="t-crit"><b>7</b><span>останавливают работу</span></div>
+    <div class="t-warn"><b>18</b><span>искажают результат</span></div>
+    <div><b>16</b><span>мелочи и долги</span></div>
+    <div class="t-ok"><b>121</b><span>проверок в коде, все проходят</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="sh"><h2>Прогон отдал бы мусор молча</h2><em>семь блокеров</em></div>
+  <p>Ни одна из этих семи не привела бы к ошибке. Прогон бы закончился, страницы собрались, цифры выглядели бы нормально — и были бы неверными.</p>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">01</span><span class="ft">Второй снимок был бы копией первого</span><span class="file">collect_snapshot.py:44</span></div>
+    <p>Сбор зовёт клиент HikerAPI, который по умолчанию читает из кэша, а ключ кэша — только адрес запроса, даты в нём нет. Ленты <strong>100 из 109 аккаунтов</strong> уже лежат в кэше с 1 сентября.</p>
+    <p>Следующий прогон вернул бы им августовские метрики, записал бы новый снимок с теми же просмотрами, списал бы ноль единиц и напечатал «снимок собран». История, ради которой всё переносилось в базу, не начала бы копиться — и увидели бы мы это недели через три, когда «динамика» осталась бы плоской.</p>
+    <p class="fix"><b>Правка</b>Класть кэш в подпапку по дате снимка. Это чинит заодно и находку 07.</p>
+  </div>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">02</span><span class="ft">Разбор и карточки идут по разным линейкам</span><span class="file">deep.py:29 · cards.py:108</span></div>
+    <p>Окно свежести у них теперь одно — 14 дней, это чинили вчера. А ранжировка разная: разбор берёт верх по общей оценке, карточки — верх по доле пересылок и сохранений. Пересечение на текущих данных: <strong>ноль из девяти</strong> отобранных карточек имеет контактный лист и расшифровку.</p>
+    <p>То есть ровно тот отказ, который вчера был найден и объявлен починенным. Починена была половина.</p>
+    <p class="fix"><b>Правка</b>Разбор берёт своё множество из пула карточек, а не из отдельного топа по оценке.</p>
+  </div>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">03</span><span class="ft">Отобранные карточки никуда не сохраняются</span><span class="file">run.py:75</span></div>
+    <p>Шаг «кандидаты в карточки» печатает результат в терминал и выбрасывает его. В таблицу, из которой собирается страница «Что снимаем», пишет только файл с пятью карточками, вбитыми руками.</p>
+    <p>Страница берёт последнюю неделю из таблицы. После любого будущего прогона это по-прежнему 3 сентября: свежая на вид страница показывала бы прошлые карточки.</p>
+    <p class="fix"><b>Правка</b>Отбор пишет фактуру в базу, углы дописываются отдельной командой, страницы собираются после этого шага.</p>
+  </div>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">04</span><span class="ft">Расшифровки выпали из конвейера</span><span class="file">deep.py:115 · run.py</span></div>
+    <p>Разбор режет кадры и сразу удаляет видео, а распознавание речи не вызывает вообще. Старый скрипт расшифровки читает те самые удалённые файлы и пишет в JSON мимо базы; прогон его не зовёт.</p>
+    <p>89 расшифровок в базе — исторические. У роликов нового снимка расшифровки не будет никогда, а на ней стоит весь блок «хук / тело / концовка» в карточке.</p>
+    <p class="fix"><b>Правка</b>Держать видео до конца обработки ролика: кадры, затем распознавание, запись в базу, удаление.</p>
+  </div>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">05</span><span class="ft">Главная ось формулы выбрасывается у 41% роликов</span><span class="file">score.py:46</span></div>
+    <p>Предохранитель «разброс меньше 5% от медианы — компоненту выбрасываем» применён к логарифму просмотров. В логарифмической шкале 5% от медианы — это требование разброса почти вдвое. У ровного автора его нет.</p>
+    <p>Итог: компонента просмотров выброшена у <strong>958 оценок из 2 351</strong>, и у <strong>23 роликов из топ-40</strong>. У них вес перераспределён на пересылки и сохранения — а это доли <em>на тысячу просмотров</em>, то есть величины, обратно связанные с охватом. Больше половины витрины отранжировано по другой шкале, чем остальные.</p>
+    <p class="fix"><b>Правка</b>Для логарифмической компоненты порог должен быть абсолютным, а относительный оставить величинам в исходных единицах. И писать в базу, на скольких осях посчитана оценка.</p>
+  </div>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">06</span><span class="ft">Повторный сбор удваивает расход</span><span class="file">collect_snapshot.py:65</span></div>
+    <p>Счётчик единиц накопительный за процесс, а в расход пишется его абсолютное значение, и строка добавляется безусловно. Три прогона в один день дают три строки — на 1, 2 и 3 единицы: <strong>$0,12 вместо $0,06</strong>.</p>
+    <p>Тест этого не ловит: читает первую строку из двух.</p>
+    <p class="fix"><b>Правка</b>Писать разницу, а не абсолют, и одну строку на статью в день.</p>
+  </div>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">07</span><span class="ft">Прерванный сбор притворяется полноценным снимком</span><span class="file">collect_snapshot.py:37</span></div>
+    <p>Строка снимка создаётся <em>до</em> сбора. Если прогон упадёт на сороковом аккаунте или кончатся единицы, снимок останется в базе и станет «последним» для оценки, разбора, тем, выбраковки и всех трёх страниц. Флага «частичный» нет.</p>
+    <p>Отдельно: расход пишется только в самом конце, поэтому при падении реально списанные единицы теряются для учёта — ровно то, против чего в спецификации стоит предохранитель.</p>
+    <p class="fix"><b>Правка</b>Снимок помечается завершённым только при успехе; расход пишется в <code>finally</code>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><h2>Безопасность</h2><em>одна дыра, остальное — гигиена</em></div>
+
+  <div class="find c">
+    <div class="fh"><span class="fn">08</span><span class="ft">Код ролика попадает в страницу без экранирования</span><span class="file">pages.py:125, 190, 226</span></div>
+    <p>Единственное поле, которое кладётся в HTML сырым — и сразу внутрь адреса ссылки. Кавычка в нём закрывает атрибут, дальше вписывается что угодно. Код приходит из ответа API и нигде не проверяется.</p>
+    <p>Все 2 352 кода в базе сейчас чистые — это проверено. То есть защиты нет, есть везение. Страница приватная, но открывается в вашем браузере: скрипт на ней видит кадры, расшифровки и весь топ-40.</p>
+    <p>Обиднее всего, что в старом августовском сборщике страниц экранирование кода было — при переписывании на базу оно потерялось.</p>
+    <p class="fix"><b>Правка</b>Проверка формата кода при записи в базу плюс экранирование при выводе. Две строки.</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">09</span><span class="ft">Код ролика используется как имя файла</span><span class="file">deep.py · pages.py:164</span></div>
+    <p>Из кода собираются пути к видео, кадрам и контактному листу. Символы перехода по каталогам в нём пишут файлы мимо <code>data/frames</code>. А страница берёт путь к листу <em>из базы</em> и вшивает файл внутрь публикуемой страницы — цепочка от кривого кода до произвольного файла в отчёте замкнута.</p>
+    <p class="fix"><b>Правка</b>Одна функция проверки кода на входе в систему плюс проверка, что путь ведёт внутрь каталога кадров.</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">10</span><span class="ft">Ключ виден в списке процессов</span><span class="file">клиент hikerapi</span></div>
+    <p>Ключ передаётся аргументом командной строки, поэтому виден любому процессу на машине, пока идёт запрос. При сборе 250 аккаунтов это 250 запросов подряд. В файлы, базу, кэш и страницы он не утекает, лежит с правами только для владельца — это сделано правильно.</p>
+    <p class="fix"><b>Правка</b>Передавать заголовок через временный файл с правами 0600 или через переменную окружения.</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">11</span><span class="ft">Страница карточек — это републикация чужого материала</span><span class="file">shoot.html, 3 МБ</span></div>
+    <p>Внутри — контактные листы из чужих видео и дословные расшифровки речи. «Приватная» ссылка остаётся пересылаемой. Вопрос не к коду, а к решению.</p>
+    <p class="fix"><b>Решить</b>Держать эту страницу локальным файлом, либо публиковать версию без листов и расшифровок — цифры и ссылка на оригинал.</p>
+  </div>
+
+  <div class="find n">
+    <div class="fh"><span class="fn">12</span><span class="ft">Гигиена, которую стоит закрыть до репозитория</span></div>
+    <ul class="plain">
+      <li>Нет <code>.gitignore</code> — при заведении репозитория туда уедут 146 МБ кэша с подписанными ссылками Instagram, база и биографии кандидатов.</li>
+      <li>В базе лежат биографии и имена <strong>тысячи отвергнутых кандидатов</strong>; для работы нужны только имя пользователя и причина отказа.</li>
+      <li>Ни у кадров, ни у расшифровок нет срока хранения. 109 МБ сейчас, около 13 ГБ за год.</li>
+      <li>Ссылки на Instagram уходят без <code>rel="noopener"</code>; имя пользователя не кодируется в адресе запроса.</li>
+    </ul>
+  </div>
+
+  <div class="find n">
+    <div class="fh"><span class="fn">13</span><span class="ft">Что проверено и оказалось в порядке</span></div>
+    <p>Инъекций в запросы к базе нет ни одной — все запросы параметризованы. Исполнение оболочки не используется нигде: ни <code>shell=True</code>, ни <code>eval</code>, ни <code>os.system</code>. Ключ не сохраняется ни в кэш, ни в базу, ни в страницы — это проверено сканированием 851 файла. Остальной текст из Instagram экранируется корректно, включая 207 подписей со спецсимволами. Видео удаляется сразу после нарезки, как и записано в спецификации.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><h2>Что искажает результат</h2><em>восемнадцать находок, выбраны главные</em></div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">14</span><span class="ft">Свежий ролик почти не может пройти наш же порог</span></div>
+    <p>Норма автора считается по всем его роликам, включая годовалые, а свежий сравнивается с ней, пока ещё набирает просмотры.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Возраст ролика</th><th class="n">Медиана к норме автора</th><th class="n">Доля выше порога 1,5×</th></tr></thead>
+      <tbody>
+        <tr><td>0–3 дня</td><td class="n">0,70×</td><td class="n">16%</td></tr>
+        <tr><td>4–7 дней</td><td class="n">0,87×</td><td class="n">27%</td></tr>
+        <tr><td>8–14 дней</td><td class="n">1,00×</td><td class="n">27%</td></tr>
+        <tr><td>31–90 дней</td><td class="n">1,05×</td><td class="n">34%</td></tr>
+        <tr><td>90+ дней</td><td class="n">1,54×</td><td class="n">51%</td></tr>
+      </tbody>
+    </table></div>
+    <p>Карточки уезжают к дальнему краю окна: медианный возраст сегодняшних девяти — 11 дней, плюс 3–7 дней до съёмки. Тема выходит в возрасте под двадцать дней при пороге свежести четырнадцать. Правило «берём темы с недельным сроком жизни» формулой не обеспечивается.</p>
+    <p class="fix"><b>Правка</b>Сравнивать ролик с нормой автора на сопоставимом возрасте, а не с общей.</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">15</span><span class="ft">Правило пригодности записано в документе и не записано в код</span><span class="file">deep.py:108</span></div>
+    <p>Колонка «пригоден ли ролик после раскадровки» есть, заполнения нет: все 100 разборов пустые, а отбор считает пустое пригодным.</p>
+    <p>Результат виден невооружённым глазом: <code>petergriffin.ai</code> — аккаунт, который в наших же правилах разобран как эталон непригодного, — занимает <strong>первые три места топ-40</strong> и попал в карточки. Второй пример из того же правила, <code>10xoperator</code>, стоит на девятом и десятом.</p>
+    <p class="fix"><b>Правка</b>Команда «пометить непригодным» вместо ручного SQL плюс строка в прогоне «проверь пригодность: N новых разборов».</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">16</span><span class="ft">Подписчики конкурентов не обновляются никогда</span><span class="file">collect_snapshot.py:56</span></div>
+    <p>Число заморожено на дате первого запроса и копируется в каждый снимок. На вопрос «кто из конкурентов растёт» инструмент не ответит и через год — при том что профили бесплатны.</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">17</span><span class="ft">Радар не считает изменение</span><span class="file">pages.py:131</span></div>
+    <p>Блок «что сдвинулось» — заглушка, которая показывается при одном снимке и <em>исчезает</em> при втором. Сравнения с предыдущим снимком нет нигде: ни по темам, ни по авторам. Инструмент называется радаром, а дельту не считает.</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">18</span><span class="ft">Пул карточек схлопнется за два месяца</span></div>
+    <p>Тема, закрытая нами, исключается на шесть недель. При пяти публикациях в неделю это тридцать закрытых тем при словаре в 27. Симуляция на текущем пуле из 531 ролика:</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Закрыто тем</th><th class="n">Остаётся роликов в пуле</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td class="n">343</td></tr>
+        <tr><td>10</td><td class="n">219</td></tr>
+        <tr><td>15</td><td class="n">122</td></tr>
+        <tr><td>20</td><td class="n">39</td></tr>
+      </tbody>
+    </table></div>
+    <p>Больше половины роликов имеют ровно одну тему — их выбивает первое же закрытие. К концу второго месяца инструмент начнёт предлагать две-три карточки вместо девяти, а запасного хода в коде нет.</p>
+    <p class="fix"><b>Правка</b>Понижать приоритет вместо жёсткого исключения плюс запасной ход на список собственных тезисов.</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">19</span><span class="ft">Радар слеп к новой теме</span><span class="file">topics.py</span></div>
+    <p>Разметка — словарь из 27 выражений, собранный один раз по августовским подписям. Тема, которой в словаре нет, попадает в «темы в подписи нет» и растворяется — сейчас там 166 роликов. Новый инструмент, новая модель, новый формат останутся невидимыми, пока человек не допишет словарь.</p>
+    <p>В спецификации записано обратное: «темы выводятся из чтения подписей, а не из заранее придуманного словаря».</p>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">20</span><span class="ft">Мины, которые сработают со вторым снимком</span></div>
+    <ul class="plain">
+      <li><strong>Страница карточек начнёт врать.</strong> Соединение с метриками идёт без учёта снимка: пять карточек дадут десять строк, и цифра возьмётся из произвольной недели.</li>
+      <li><strong>Выбраковка сработает за три дня вместо месяца.</strong> Промах считается на снимок, а снимков два в неделю.</li>
+      <li><strong>Аккаунт, не отдавший ленту, не наказывается никогда</strong> — список таких собирается и не используется. Удалённый аккаунт останется в наборе навсегда и будет стоить по единице за каждый сбор.</li>
+      <li><strong>Разбор может взять протухшую ссылку</strong> из кэша чужой недели — файлы перебираются в произвольном порядке.</li>
+      <li><strong>Вторые веса физически не сохранить</strong> — ключ таблицы оценок их не различает, попытка падает с ошибкой.</li>
+    </ul>
+  </div>
+
+  <div class="find w">
+    <div class="fh"><span class="fn">21</span><span class="ft">Мелкие искажения счёта</span></div>
+    <ul class="plain">
+      <li>Ролик участвует в собственной базе сравнения и частично прячет свой же выброс.</li>
+      <li>В медианах по темам пропуски считаются нулями — ровно то, против чего построена формула. 216 роликов без сохранений занижают медиану.</li>
+      <li>У роликов короче одиннадцати секунд блок «тело» пуст всегда: границы хука и концовки пересекаются.</li>
+      <li>Потолок оценки срабатывает часто: 266 компонент упёрлись в предел, и 24 из 40 позиций топа содержат такую. Верхушка отсортирована не по величине выброса, а по числу упёршихся компонент.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><h2>Сколько это стоит человеку</h2><em>продуктовая часть</em></div>
+  <p>Полный недельный цикл глазами непрограммиста — <strong>3–5 часов</strong>, из которых полтора-два уходят на набор текста внутри исходных файлов:</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Шаг</th><th>Как это выглядит сейчас</th><th class="n">Время</th></tr></thead>
+    <tbody>
+      <tr><td>Прогон</td><td>одна команда</td><td class="n">5 мин</td></tr>
+      <tr><td>Отобранное</td><td>девять строк в терминале, скопировать неоткуда</td><td class="n">5 мин</td></tr>
+      <tr><td>Пригодность верхушки</td><td>команды нет — ручной SQL</td><td class="n">30–60 мин</td></tr>
+      <tr><td>Кадры и расшифровки</td><td>открывать файлы в Finder</td><td class="n">40–60 мин</td></tr>
+      <tr><td>Углы и хуки</td><td><strong>правка питоновского файла</strong> со словарями и кавычками</td><td class="n">1–2 ч</td></tr>
+      <tr><td>Пересборка страниц</td><td>две команды, которых нет в прогоне</td><td class="n">5 мин</td></tr>
+      <tr><td>Свои цифры после съёмки</td><td>десять команд с флагами</td><td class="n">20 мин</td></tr>
+      <tr><td>Раз в две недели: разметка кандидатов</td><td>правка словарей в файле, затем ручной SQL</td><td class="n">1–2 ч</td></tr>
+    </tbody>
+  </table></div>
+  <p>Два ключевых шага недели физически выполняются редактированием кода, а один — вводом SQL. Инструмент требует программиста ровно там, где обещал его заменить.</p>
+  <p>При этом обратное тоже верно: три колонки съёмки и каркас описания в карточке — <strong>константы формата</strong>, а не разбор конкретного ролика. Все карточки одного формата получают один и тот же текст, и человек всё равно переписывает его руками.</p>
+</section>
+
+<section>
+  <div class="sh"><h2>Мусор, который опаснее багов</h2><em>девять старых скриптов</em></div>
+  <p>Рядом с рабочим кодом лежат августовские скрипты, которые пишут в JSON мимо базы. Запуск любого по привычке или по автодополнению портит данные, и три из них — всерьёз:</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Файл</th><th>Что сделает при запуске</th></tr></thead>
+    <tbody>
+      <tr><td>migrate.py</td><td>вернёт выбывшие аккаунты в набор, сотрёт ручную разметку тем, перезапишет оценки августовскими значениями</td></tr>
+      <tr><td>collect.py</td><td>сразу уйдёт в поиск по 30 запросам мимо кэша — около $0,60 без сметы, вопреки правилу называть цену заранее</td></tr>
+      <tr><td>fetch_reels.py</td><td>перезапишет файл, из которого сверяются числа</td></tr>
+      <tr><td>deepdive.py, batch100.py</td><td>скачают видео и не удалят его</td></tr>
+      <tr><td>build_*.py, tags.py, funnels.py</td><td>безвредны, но создают шум и старые отчёты на 3 МБ</td></tr>
+    </tbody>
+  </table></div>
+  <p class="fix"><b>Правка</b>Перенести старые скрипты и августовские JSON в <code>archive/2026-08/</code> одним движением: тогда запустить старое по ошибке физически невозможно, а история сохранится.</p>
+</section>
+
+<section>
+  <div class="sh"><h2>Чего не хватает тестам</h2><em>121 проверка проходит, и это не помогло</em></div>
+  <p>Ни один из семи блокеров тесты не поймали. Причина не в числе проверок, а в том, что именно проверяется.</p>
+  <ul class="plain">
+    <li><strong>Формула не покрыта вообще.</strong> Ни выбрасывания компонент, ни пересчёта весов, ни порога отбора, ни потолка. Находка 05 — прямое следствие.</li>
+    <li><strong>Оркестровка не покрыта.</strong> Порядок шагов, прерывание посередине, то, что карточки не сохраняются, — ничего.</li>
+    <li><strong>Пустая база роняет три шага из семи</strong> с невнятной ошибкой. Не проверялось.</li>
+    <li><strong>Сбор тестируется на заглушке</strong>, поэтому кэш в тесте не существует.</li>
+    <li><strong>Тест карточек защищает отменённое решение</strong> — проверяет, что угол и хук пустые, хотя третьего сентября решено, что их предлагает агент.</li>
+    <li><strong>Тест разбора проверяет «пересечение больше нуля»</strong> вместо «у каждой карточки есть лист» — и потому проходит при нулевом результате.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sh"><h2>Порядок починки</h2><em>перед следующим прогоном</em></div>
+  <ol class="steps">
+    <li><b>Экранирование кода ролика и проверка его формата</b><span>Находки 08 и 09. Две строки, закрывают единственную настоящую дыру.</span></li>
+    <li><b>Кэш по дате снимка</b><span>Находка 01, попутно 20. Без этого весь прогон бессмыслен.</span></li>
+    <li><b>Разбор берёт множество из пула карточек, расшифровка возвращается в конвейер</b><span>Находки 02 и 04. После этого у карточек появляются кадры и блоки речи.</span></li>
+    <li><b>Отбор пишет карточки в базу, страницы собираются после углов</b><span>Находка 03. Убирает правку питона руками — самый дорогой шаг недели.</span></li>
+    <li><b>Порог для логарифмической компоненты</b><span>Находка 05. Верхушка перестаёт быть двумя разными шкалами в одном списке.</span></li>
+    <li><b>Предохранители прогона</b><span>Находки 06 и 07: расход разницей, снимок помечается завершённым только при успехе, проверка баланса до старта.</span></li>
+    <li><b>Пригодность как команда</b><span>Находка 15. Самая дешёвая правка с самым заметным эффектом на доверие к отчёту.</span></li>
+    <li><b>Старые скрипты в архив</b><span>Одно движение, снимает целый класс будущих аварий.</span></li>
+  </ol>
+  <p>Дальше — то, что делает инструмент лучше, а не спасает от поломки: дельта неделя к неделе, обновление подписчиков, норма автора по сопоставимому возрасту, открытый словарь тем, замер «план против результата».</p>
+</section>
+
+<footer>
+  Четыре проверки шли независимо и вслепую друг к другу. Совпадения находок 01–04 в трёх отчётах из четырёх — независимое подтверждение, а не общий источник. Все числа получены на живой базе: 109 активных аккаунтов, 1 снимок, 2 352 ролика, 623 единицы расхода. База при аудите не изменялась — контрольная сумма до и после совпадает.
+</footer>
+</div>

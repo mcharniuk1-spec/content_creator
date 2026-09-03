@@ -20,7 +20,8 @@ PRICE = 0.02
 
 def balance():
     """Остаток оплаченных единиц. Ноль запросов не стоит, но знать его надо до старта."""
-    sys.path.insert(0, str(pathlib.Path.home() / '.claude' / 'skills' / 'hikerapi' / 'scripts'))
+    sys.path.insert(0, str(pathlib.Path(__file__).parent / 'lib'))
+    sys.path.append(str(pathlib.Path.home() / '.claude' / 'skills' / 'hikerapi' / 'scripts'))
     os.environ.setdefault('HIKER_CACHE', str(pathlib.Path(__file__).parent / 'cache'))
     try:
         import hiker
@@ -44,7 +45,8 @@ def plan(con, check_balance=True):
 
 
 def run(con, today=None):
-    sys.path.insert(0, str(pathlib.Path.home() / '.claude' / 'skills' / 'hikerapi' / 'scripts'))
+    sys.path.insert(0, str(pathlib.Path(__file__).parent / 'lib'))
+    sys.path.append(str(pathlib.Path.home() / '.claude' / 'skills' / 'hikerapi' / 'scripts'))
     os.environ.setdefault('HIKER_CACHE', str(pathlib.Path(__file__).parent / 'cache'))
     import hiker
     today = (today or datetime.date.today()).isoformat()

@@ -125,7 +125,8 @@ def topup(con, run=False, cached=False):
     if not run:
         print(f'\nэто смета. Прогон: python3 roster.py topup --yes')
         return
-    sys.path.insert(0, str(pathlib.Path.home() / '.claude' / 'skills' / 'hikerapi' / 'scripts'))
+    sys.path.insert(0, str(pathlib.Path(__file__).parent / 'lib'))
+    sys.path.append(str(pathlib.Path.home() / '.claude' / 'skills' / 'hikerapi' / 'scripts'))
     os.environ.setdefault('HIKER_CACHE', str(pathlib.Path(__file__).parent / 'cache'))
     import hiker
     from queries import ALL, RU

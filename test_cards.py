@@ -18,8 +18,8 @@ eq('один автор — одна карточка', len({c['author'] for c i
 eq('угол машиной не написан', {c['angle'] for c in picked}, {''})
 eq('хук машиной не написан', {c['hook'] for c in picked}, {''})
 eq('три колонки съёмки у каждой',
-   all(set(c['shot']) == {'в кадре', 'на экране', 'в плашке'} for c in picked), True)
-eq('каркас описания у каждой', all(c['caption'].get('затачиваем под запрос') for c in picked), True)
+   all(set(c['shot']) == {'in frame', 'on screen', 'in the banner'} for c in picked), True)
+eq('каркас описания у каждой', all(c['caption'].get('sharpen for the query') for c in picked), True)
 
 pool = cards._pool(con, TODAY)
 eq('все в окне свежести', max(r['age'] for r in pool) <= cards.FRESH_DAYS, True)

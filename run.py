@@ -19,7 +19,8 @@
     9. дельта к прошлому снимку      бесплатно
    10. карточки в Notion             бесплатно
    11. таблицы решений в Notion      бесплатно
-   12. три страницы                  бесплатно
+   12. полные базы в Notion          бесплатно
+   13. три страницы                  бесплатно
 
 После прогона остаётся человеческое, и прогон о нём напоминает: отметить непригодные
 ролики по кадрам и вписать углы. Страницы после этого пересобираются одной командой.
@@ -27,7 +28,7 @@
 import datetime, sys, time
 from db import connect
 
-import cards, collect_snapshot, deep, delta, notion, pages, roster, score, stats, tag_topics
+import cards, collect_snapshot, deep, delta, notion, notion_db, pages, roster, score, stats, tag_topics
 
 
 def line(n, title):
@@ -118,7 +119,14 @@ def main(run=False):
     except SystemExit as e:
         print(f'не прошло: {e}')
 
-    line(12, 'три страницы')
+    line(12, 'полные базы в Notion: ролики и аккаунты')
+    try:
+        notion_db.push_reels(con)
+        notion_db.push_accounts(con)
+    except SystemExit as e:
+        print(f'не прошло: {e}')
+
+    line(13, 'три страницы')
     for k, (fn, name) in pages.BUILD.items():
         (pages.OUT / name).write_text(fn(con), encoding='utf-8')
         print(f'  {name:<12} {(pages.OUT / name).stat().st_size / 1024:>7.0f} КБ')

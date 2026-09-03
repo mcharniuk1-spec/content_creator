@@ -2,6 +2,14 @@
 # Недельный прогон по расписанию: понедельник и четверг.
 # Ставится через install-cron.sh; руками звать не нужно — для ручного запуска есть run.py.
 set -uo pipefail
+
+# cron запускает скрипт почти без окружения: без этого не находится ни claude, ни git,
+# а кириллица в выводе превращается в мусор
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export HOME="/root"
+export LANG="C.UTF-8"
+export LC_ALL="C.UTF-8"
+
 cd /opt/radar || exit 1
 
 LOG="data/runs/$(date +%Y-%m-%d_%H%M).log"

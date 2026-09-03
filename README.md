@@ -6,6 +6,9 @@ window apart frame by frame, transcribes the speech, tags topics, and proposes s
 
 **One line: the machine counts and narrows, people read and decide.**
 
+New here? Read [START-HERE.md](START-HERE.md) first — the map of the project, what came
+from the m2_engine formula and what changed in it.
+
 ## Run it
 
 ```bash

@@ -32,23 +32,23 @@ NOT_TOPICS = {'Темы в подписи нет', 'Только призыв, �
 # Как формат отбирает и как в нём снимают. Основание — RULES.md §2 и SPEC §7.
 FORMATS = {
     'M2 Radar': dict(
-        slots=2, rank='resh_1k', signal='пересылка',
-        looks='новая модель, инструмент, тренд, вирусное демо',
-        frame='один статичный план, ведущий в кадре целиком',
-        screen='полноэкранная вставка: до и после одним числом',
-        banner='постоянная плашка с числом, висит весь ролик'),
+        slots=2, rank='resh_1k', signal='share',
+        looks='new model, tool, trend, viral demo',
+        frame='one static shot, presenter fully in frame',
+        screen='full-frame insert: before and after, one number',
+        banner='a number in the banner, held for the whole reel'),
     'M2 Builds': dict(
-        slots=2, rank='save_1k', signal='сохранение и подписка',
-        looks='сборка, тест, сравнение инструментов',
-        frame='свой стол и стенд, съёмка одним планом',
-        screen='терминал или интерфейс, где видно поломку',
-        banner='что собирали и на каком шаге сломалось'),
+        slots=2, rank='save_1k', signal='save and follow',
+        looks='builds, tests, tool comparisons',
+        frame='own desk and rig, shot in one take',
+        screen='terminal or interface where the break is visible',
+        banner='what we built and the step where it broke'),
     'M2 Teardown': dict(
-        slots=1, rank='save_1k', signal='сохранение и поиск',
-        looks='тема, повторившаяся у нескольких авторов',
-        frame='процесс в кадре: телефон, ноутбук, бумага',
-        screen='шаги процесса списком, по одному',
-        banner='цифра стоимости: сколько это стоит в неделю'),
+        slots=1, rank='save_1k', signal='save and search',
+        looks='a topic repeated across several authors',
+        frame='the process in frame: phone, laptop, paper',
+        screen='the steps listed one at a time',
+        banner='the cost figure: what this runs you per week'),
 }
 
 
@@ -59,6 +59,10 @@ def _pool(con, today):
     closed = closed_topics(con, today=today)   # закрытые темы не выбрасываем, а опускаем вниз
     used = {r[0] for r in con.execute(
         'SELECT ref_code FROM our_posts WHERE ref_code IS NOT NULL')}
+    # решения из Notion: отклонённое не предлагаем заново, снятое и опубликованное тоже
+    decided = {r[0] for r in con.execute(
+        """SELECT code FROM cards WHERE status IN ('Not taking','Shot','Published','вычеркнута')""")}
+    used |= decided
     rows = con.execute("""
         SELECT r.code, r.username, r.play, r.resh, r.save, r.comm, r.dur, r.ts, r.cap,
                s.z, s.resh_1k, s.save_1k, s.author_median_play, s.baseline_n,
@@ -131,28 +135,28 @@ def _card(r, fmt, cfg, i):
     """Фактура карточки. angle и hook человек пишет сам — это не выборка."""
     facts = []
     if r['mult']:
-        facts.append(f"{r['mult']}× нормы своего автора ({r['play']:,} против {r['author_median_play']:,})"
-                     .replace(',', ' '))
+        facts.append(f"{r['mult']}× this author's own norm "
+                     f"({r['play']:,} against {r['author_median_play']:,})".replace(',', ' '))
     if r['resh_1k']:
-        facts.append(f"{r['resh_1k']:.0f} пересылок на тысячу")
+        facts.append(f"{r['resh_1k']:.0f} shares per thousand")
     if r['save_1k']:
-        facts.append(f"{r['save_1k']:.0f} сохранений на тысячу")
+        facts.append(f"{r['save_1k']:.0f} saves per thousand")
     if r['cuts_ps'] is not None:
-        facts.append('снят одним планом' if r['cuts_ps'] < 0.02 else
-                     f"склеек {r['cuts_ps']:.2f} в секунду")
-    facts.append(f"{r['dur']:.0f} секунд")
+        facts.append('shot in one take' if r['cuts_ps'] < 0.02 else
+                     f"{r['cuts_ps']:.2f} cuts per second")
+    facts.append(f"{r['dur']:.0f} seconds")
     if r.get('closed_share'):
-        facts.append(f"тему мы уже закрывали за последние {6} недель"
-                     if r['closed_share'] == 1 else 'часть тем уже закрывали')
+        facts.append('we already covered this topic in the last six weeks'
+                     if r['closed_share'] == 1 else 'part of its topics we already covered')
     return dict(
         n=i, code=r['code'], fmt=fmt, ref=f"https://instagram.com/reel/{r['code']}",
         author=r['username'], age=r['age'], topics=r['topics'],
         why=' · '.join(facts), signal=cfg['signal'], sheet=r['sheet'],
         words=r['words'], cap=(r['cap'] or '')[:400],
-        shot={'в кадре': cfg['frame'], 'на экране': cfg['screen'], 'в плашке': cfg['banner']},
-        caption={'затачиваем под запрос': r['topics'][0] if r['topics'] else '—',
-                 'обязаны быть слова': 'process, cost, what changed',
-                 'первая строка': 'формулируется как поисковый запрос'},
+        shot={'in frame': cfg['frame'], 'on screen': cfg['screen'], 'in the banner': cfg['banner']},
+        caption={'sharpen for the query': r['topics'][0] if r['topics'] else '—',
+                 'must contain': 'process, cost, what changed',
+                 'first line': 'written as a search query'},
         angle='', hook='', goal='', lead='', pri=None)
 
 
@@ -169,7 +173,7 @@ def save(con, picked, week=None):
               shot_frame=excluded.shot_frame, shot_screen=excluded.shot_screen,
               shot_banner=excluded.shot_banner, caption=excluded.caption""",
             (week, c['code'], c['fmt'], c['n'], c['why'],
-             c['shot']['в кадре'], c['shot']['на экране'], c['shot']['в плашке'],
+             c['shot']['in frame'], c['shot']['on screen'], c['shot']['in the banner'],
              ' · '.join(f'{k}: {v}' for k, v in c['caption'].items())))
     con.commit()
     return week

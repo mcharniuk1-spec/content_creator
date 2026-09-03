@@ -15,8 +15,10 @@
     5. подписчики набора             бесплатно
     6. живость и выбраковка          бесплатно
     7. карточки в базу               бесплатно
-    8. дельта к прошлому снимку      бесплатно
-    9. три страницы                  бесплатно
+    8. решения из Notion             бесплатно, до отбора: отклонённое не предлагаем заново
+    9. дельта к прошлому снимку      бесплатно
+   10. карточки в Notion             бесплатно
+   11. три страницы                  бесплатно
 
 После прогона остаётся человеческое, и прогон о нём напоминает: отметить непригодные
 ролики по кадрам и вписать углы. Страницы после этого пересобираются одной командой.
@@ -24,7 +26,7 @@
 import datetime, sys, time
 from db import connect
 
-import cards, collect_snapshot, deep, delta, pages, roster, score, tag_topics
+import cards, collect_snapshot, deep, delta, notion, pages, roster, score, tag_topics
 
 
 def line(n, title):
@@ -85,17 +87,30 @@ def main(run=False):
     if miss:
         print(f'не отдали ленту и получили промах: {len(miss)}')
 
-    line(7, 'карточки')
+    line(7, 'решения прошлой недели из Notion')
+    try:
+        notion.pull(con)
+    except SystemExit as e:
+        print(f'Notion недоступен, идём дальше: {e}')
+
+    line(8, 'карточки')
     picked, pool_n, rep_n = cards.select(con)
     week = cards.save(con, picked)
     print(f'кандидатов {pool_n}, повторяющихся тем {rep_n}, записано карточек {len(picked)}')
     for c in picked:
         print(f'  {c["n"]:>2}. {c["fmt"]:<12} {c["author"]:<22} {c["age"]:>2} дн.  {c["why"][:56]}')
 
-    line(8, 'что сдвинулось с прошлого снимка')
+    line(9, 'что сдвинулось с прошлого снимка')
     delta.report(con)
 
-    line(9, 'три страницы')
+    line(10, 'карточки в Notion')
+    try:
+        n = notion.push(con, week)
+        print(f'выгружено: {n}')
+    except SystemExit as e:
+        print(f'выгрузка не прошла: {e}')
+
+    line(11, 'три страницы')
     for k, (fn, name) in pages.BUILD.items():
         (pages.OUT / name).write_text(fn(con), encoding='utf-8')
         print(f'  {name:<12} {(pages.OUT / name).stat().st_size / 1024:>7.0f} КБ')

@@ -1,0 +1,17 @@
+# Оплаченные ответы API и подписанные ссылки Instagram — наружу не уходят
+cache/
+cache-free/
+cache-free-full/
+hiker-cache/
+
+# База и рабочие данные: там биографии кандидатов и кадры чужих роликов
+data/
+archive/
+
+# Сборка отчётов
+*.html
+!*.tpl.html
+
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,8 @@
+{
+  "status": "PROMOTED_WITH_LIMITATIONS",
+  "note": "knowledge/m2-validation-lessons.md",
+  "note_sha256": "8f5f903cebcb2284a3caa85bb32db869f549fe65250d1d599776a2eb06440af6",
+  "review_sha256": "a2a93cc49e4f56379828e11415c0d20813180b7a06cbed2476d34c47393873e9",
+  "review": "docs/m2-knowledge-review-receipt.json",
+  "interpretation": "This receipt promotes the exact reviewed candidate bytes. Candidate YAML is preserved as the source snapshot; this receipt is the promotion authority. No competitor evidence or production acceptance is promoted."
+}

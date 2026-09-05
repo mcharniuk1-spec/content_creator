@@ -4,6 +4,7 @@ This layer stores compact Content Engine context. Read the review state on each 
 
 - [[m2-positioning]] — current M2 audience, perspective and claim boundaries.
 - [[m2-operating-memory]] — current Signal/Studio reliability constraints.
+- [[m2-validation-lessons]] — reviewed join, SQLite, statistical and resource lessons; exact-byte promotion in `m2-validation-promotion.json`.
 
 - `memory.md` — durable facts, constraints, and corrected assumptions.
 - `insights.md` — independently reviewed cross-run meaning.

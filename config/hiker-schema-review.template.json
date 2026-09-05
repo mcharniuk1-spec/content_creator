@@ -1,0 +1,10 @@
+{
+  "endpoint": "https://api.hikerapi.com/gql/user/clips",
+  "evidence_source": "NOT_YET_OBSERVED",
+  "review_state": "REVIEW_PENDING",
+  "maker": "REPLACE_WITH_MAKER",
+  "reviewer": "REPLACE_WITH_DISTINCT_REVIEWER",
+  "expires_at": "2000-01-01T00:00:00Z",
+  "response_path": "REPLACE_WITH_PACKAGE_RELATIVE_ACTUAL_RESPONSE_PATH",
+  "response_sha256": "REPLACE_WITH_ACTUAL_RESPONSE_FILE_SHA256"
+}

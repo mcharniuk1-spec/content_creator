@@ -21,3 +21,19 @@ archive/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Shared-engine private runtime boundary
+.local/
+private-runs/
+node_modules/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.mp4
+*.mov
+*.webm
+*.wav
+*.m4a
+*.mp3
+*.partial

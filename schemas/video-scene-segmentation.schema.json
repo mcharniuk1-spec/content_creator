@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/video-scene-segmentation.schema.json",
+  "title": "VideoSceneSegmentation",
+  "description": "Transcript-aligned scene-unit analysis and production handoff. One scene-unit yields one ordered frame collage.",
+  "type": "object",
+  "required": ["schema", "analysis_id", "source_video_id", "duration_ms", "transcript_ref", "scene_units", "rights_state", "review"],
+  "properties": {
+    "schema": {"const": "content-engine.video-scene-segmentation.v1"},
+    "analysis_id": {"type": "string", "pattern": "^VSA-[A-Z0-9-]+$"},
+    "source_video_id": {"type": "string"},
+    "source_media_pointer": {"type": ["string", "null"]},
+    "duration_ms": {"type": "integer", "minimum": 1},
+    "frame_rate": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "transcript_ref": {"type": "string"},
+    "transcript_method": {"enum": ["native", "auto_caption", "asr", "manual", "unavailable"]},
+    "scene_units": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/sceneUnit"}},
+    "rights_state": {"type": "string"},
+    "review": {"$ref": "#/$defs/review"}
+  },
+  "$defs": {
+    "frameRef": {
+      "type": "object",
+      "required": ["frame_id", "timestamp_ms", "source_frame_number", "source_pointer", "sha256", "role"],
+      "properties": {
+        "frame_id": {"type": "string"},
+        "timestamp_ms": {"type": "integer", "minimum": 0},
+        "source_frame_number": {"type": ["integer", "null"], "minimum": 0},
+        "source_pointer": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^(sha256:)?[0-9a-f]{64}$"},
+        "role": {"enum": ["start", "intermediate", "end"]}
+      },
+      "additionalProperties": false
+    },
+    "collage": {
+      "type": "object",
+      "required": ["path", "sha256", "layout", "sample_count", "public_display_allowed"],
+      "properties": {
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^(sha256:)?[0-9a-f]{64}$"},
+        "layout": {"enum": ["2-up", "4-up", "6-up"]},
+        "sample_count": {"enum": [2, 4, 6]},
+        "public_display_allowed": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "sceneUnit": {
+      "type": "object",
+      "required": ["scene_id", "scene_number", "start_ms", "end_ms", "start_frame", "end_frame", "scene_boundary_reason", "scene_type", "sample_policy", "sampled_frames", "collage", "transcript_segment_ids", "spoken_summary", "voice_route", "production_route", "subtitle_plan", "audio_plan", "continuity_anchor", "cut_reason", "edit_layers"],
+      "properties": {
+        "scene_id": {"type": "string", "pattern": "^SC-[A-Z0-9-]+$"},
+        "scene_number": {"type": "integer", "minimum": 1},
+        "start_ms": {"type": "integer", "minimum": 0},
+        "end_ms": {"type": "integer", "minimum": 1},
+        "start_frame": {"$ref": "#/$defs/frameRef"},
+        "end_frame": {"$ref": "#/$defs/frameRef"},
+        "scene_boundary_reason": {"type": "array", "items": {"enum": ["hook", "shot_change", "angle_change", "shot_scale_change", "a_roll", "b_roll", "new_generated_video", "creator_shot", "split_screen", "screen_capture", "motion_graphic", "overlay_effect_change", "caption_focus", "effect_focus", "action_state_change", "proof_reveal", "voice_route_change", "audio_boundary", "transition", "payoff", "cta", "other"]}, "minItems": 1},
+        "scene_type": {"enum": ["hook", "a_roll_direct", "a_roll_picture_in_picture", "b_roll_object", "b_roll_process", "screen_capture", "generated_scene", "creator_shot", "split_screen", "motion_graphic", "proof_reveal", "transition_bridge", "cta_or_handback", "silence_or_beat"]},
+        "sample_policy": {"enum": ["two_start_end", "four_progression", "six_long_hold_or_effect"]},
+        "sampled_frames": {"type": "array", "minItems": 2, "maxItems": 6, "items": {"$ref": "#/$defs/frameRef"}},
+        "collage": {"$ref": "#/$defs/collage"},
+        "transcript_segment_ids": {"type": "array", "items": {"type": "string"}},
+        "spoken_summary": {"type": "string"},
+        "permitted_excerpt": {"type": ["string", "null"], "maxLength": 200},
+        "voice_route": {"enum": ["direct_creator_recording", "voice_over_creator_recording", "direct_creator", "owner_recorded_voice_over", "approved_neutral_tts", "source_audio_observation", "diegetic_scene_audio", "silent", "no_speech", "unavailable"]},
+        "speaker_id": {"type": ["string", "null"]},
+        "speaker_consent_state": {"enum": ["not_applicable", "owner_confirmed", "explicit_consent_recorded", "blocked", "unknown"]},
+        "dialogue_start_ms": {"type": ["integer", "null"], "minimum": 0},
+        "dialogue_end_ms": {"type": ["integer", "null"], "minimum": 1},
+        "audio_stem_ids": {"type": "array", "items": {"type": "string"}},
+        "production_route": {"enum": ["creator_recorded", "fictional_generated_scene", "generated_still_with_motion", "generated_video_scene", "creator_replica", "screen_recorded", "split_screen_composite", "motion_graphic", "licensed_footage", "existing_footage_cut", "audio_only_over_broll", "hybrid"]},
+        "asset_refs": {"type": "array", "items": {"type": "string"}},
+        "generation_prompt": {"type": ["string", "null"]},
+        "motion_prompt": {"type": ["string", "null"]},
+        "edit_handoff": {"type": "string"},
+        "edit_layers": {"$ref": "#/$defs/editLayers"},
+        "subtitle_plan": {"$ref": "#/$defs/subtitlePlan"},
+        "audio_plan": {"$ref": "#/$defs/audioPlan"},
+        "continuity_anchor": {"type": "string"},
+        "cut_reason": {"type": "string"},
+        "evidence_label": {"enum": ["FACT", "INTERPRETATION", "HYPOTHESIS", "GAP"]},
+        "replica_gate": {"$ref": "#/$defs/replicaGate"}
+      },
+      "allOf": [
+        {"if": {"properties": {"sample_policy": {"const": "two_start_end"}}, "required": ["sample_policy"]}, "then": {"properties": {"sampled_frames": {"minItems": 2, "maxItems": 2}}}},
+        {"if": {"properties": {"sample_policy": {"const": "four_progression"}}, "required": ["sample_policy"]}, "then": {"properties": {"sampled_frames": {"minItems": 4, "maxItems": 4}}}},
+        {"if": {"properties": {"sample_policy": {"const": "six_long_hold_or_effect"}}, "required": ["sample_policy"]}, "then": {"properties": {"sampled_frames": {"minItems": 6, "maxItems": 6}}}}
+      ],
+      "additionalProperties": false
+    },
+    "subtitlePlan": {
+      "type": "object",
+      "required": ["mode", "onset", "density", "safe_zone", "accessibility"],
+      "properties": {
+        "mode": {"enum": ["editable_overlay", "burned_in_owner_asset", "none", "unavailable"]},
+        "onset": {"enum": ["before_cut", "on_cut", "after_cut", "continuous", "keyword_emphasis", "none"]},
+        "density": {"enum": ["none", "low", "medium", "high"]},
+        "safe_zone": {"type": "string"},
+        "emphasis_summary": {"type": ["string", "null"]},
+        "accessibility": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "audioPlan": {
+      "type": "object",
+      "required": ["stems", "mix_notes", "rights_state"],
+      "properties": {
+        "stems": {"type": "array", "items": {"enum": ["speech", "music", "ambience", "sfx", "silence"]}},
+        "mix_notes": {"type": "string"},
+        "rights_state": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "editLayers": {
+      "type": "object",
+      "required": ["compositing_order", "split_screen_geometry", "transition_in", "transition_out", "effect_notes", "ai_edit_operations"],
+      "properties": {
+        "compositing_order": {"type": "array", "items": {"type": "string"}},
+        "split_screen_geometry": {"type": ["string", "null"]},
+        "transition_in": {"type": "string"},
+        "transition_out": {"type": "string"},
+        "effect_notes": {"type": "string"},
+        "ai_edit_operations": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "replicaGate": {
+      "type": "object",
+      "required": ["status", "identity_ref", "consent_ref", "disclosure", "provider", "retention_deletion_plan", "owner_approval_ref"],
+      "properties": {
+        "status": {"enum": ["not_applicable", "blocked", "pending_owner_approval", "approved"]},
+        "identity_ref": {"type": ["string", "null"]},
+        "consent_ref": {"type": ["string", "null"]},
+        "disclosure": {"type": ["string", "null"]},
+        "provider": {"type": ["string", "null"]},
+        "retention_deletion_plan": {"type": ["string", "null"]},
+        "owner_approval_ref": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "required": ["maker", "reviewer", "verdict"],
+      "properties": {
+        "maker": {"type": "string"},
+        "reviewer": {"type": ["string", "null"]},
+        "verdict": {"enum": ["PENDING", "APPROVE", "REVISE", "BLOCK"]},
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

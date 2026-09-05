@@ -1,0 +1,14 @@
+{
+  "platform": "instagram_reels",
+  "minimum_baseline_n": 5,
+  "absolute_exposure_floor": 1000,
+  "relative_exposure_floor": 0.3,
+  "hit_multiplier": 2.0,
+  "minimum_components": 4,
+  "z_scale": 0.67448975,
+  "z_clip": 5.0,
+  "rate_floor_absolute": 0.1,
+  "rate_floor_fraction": 0.05,
+  "log_views_mad_floor": 0.1,
+  "collection_enabled": false
+}

@@ -1,71 +1,58 @@
-# M2 Lab Radar
+# M2 Lab Radar: Signal and Studio
 
-Weekly niche radar for the M2 Lab Instagram account. Collects public reel metrics across a
-set of accounts, scores each reel against its own author's norm, takes the top of the freshness
-window apart frame by frame, transcribes the speech, tags topics, and proposes shooting cards.
+This fork contains a shared, traceable content workflow: Signal audits Instagram evidence and produces reviewed insights; Studio develops original scripts, shot plans and Remotion compositions. The local runner processes existing exports or a completed database snapshot. Collection, video generation and external writeback have separate explicit entry gates.
 
-**One line: the machine counts and narrows, people read and decide.**
+Start with [START-HERE.md](START-HERE.md), then the [architecture](docs/m2-system-architecture.md) and [operator guide](docs/m2-operator-guide.md). The existing [POSITIONING.md](POSITIONING.md) is preserved. The current derived [writer context](knowledge/m2-positioning.md) states its review status and the intended nontechnical small-business audience.
 
-New here? Read [START-HERE.md](START-HERE.md) first — the map of the project, what came
-from the m2_engine formula and what changed in it.
+## First commands
 
-## Run it
-
-```bash
-python3 run.py          # estimate: what happens and what it costs
-python3 run.py --yes    # the run itself
+```sh
+python3 run.py
+python3 scripts/test_local.py
+python3 run.py --yes --source-dir path/to/export --run-id run-001 --run-dir .local/run-001
+python3 -m m2_orchestrator --run-dir .local/run-001 verify
+python3 -m m2_orchestrator --run-dir .local/run-001 tasks
 ```
 
-The order is baked into `run.py` on purpose: collect → score → analyse the top → tag topics →
-refresh followers → liveness and dropout → cards → delta → three pages. The analysis has to
-follow the collection inside the same run, because Instagram CDN links live hours, not days.
+`run.py` without `--yes` prints a plan and makes zero external calls. Local replay requires Python 3.10+ and its standard library. Twelve deterministic stages freeze the inputs/config, ingest observations, calculate audits/diagnostics and inventory transcript/media/comment evidence. Missing material becomes a typed gap. Semantic analysis, independent review, ScriptCards and production remain explicit downstream work.
 
-After the run two things are left to a person:
+## Existing Radar database and incremental history
 
-```bash
-python3 deep.py check                     # mark reels unusable by looking at their frames
-python3 cards.py angle 3 "text"           # write the angle into card #3
-python3 pages.py                          # rebuild the pages once the angles are in
+```sh
+python3 run.py --yes --legacy-db data/radar.db --snapshot-date YYYY-MM-DD --run-id snapshot-001 --run-dir .local/snapshot-001 --database .local/signal.sqlite --mode incremental
 ```
 
-## What is where
+The bridge opens the legacy database read-only and accepts a completed snapshot. The shared SQLite ledger retains immutable history and separate release membership. New source/config/implementation versions use a new run. Existing raw counters, nulls and capture dates survive. A descriptive ranking is a review queue; it is not proof of a final Best Reel, a causal mechanism or future performance.
 
-| File | What it does |
-| --- | --- |
-| `POSITIONING.md` | our angle, formats and rules — the agent reads this to write cards |
-| `SPEC.md` | how the tool works and why each decision was made |
-| `RULES.md` | topic selection rules |
-| `PLAN.md` | what is done, what is not |
-| `audit.html` | four-way audit of the tool, 3 September 2026 |
-| `db.py` | schema, 14 tables |
-| `run.py` | the whole weekly run |
-| `collect_snapshot.py` | pulls reels into a dated snapshot |
-| `score.py` · `baseline.py` | scoring against the author's own norm, by age band |
-| `deep.py` | frames, contact sheet, cuts, local transcription |
-| `blocks.py` | splits a transcript into hook / body / ending |
-| `tag_topics.py` · `topics.py` | topic tagging by sample |
-| `cards.py` | picks the cards and holds the angles |
-| `roster.py` | the account set: liveness, dropout, top-up, followers |
-| `delta.py` | what moved since the last snapshot |
-| `pages.py` | three weekly pages |
-| `posts.py` · `review.py` | what we published and how it did |
-| `journal.py` | log of everything the tool got wrong |
-| `prune.py` | drops frames older than eight weeks |
-| `check.py` | health check on the database |
-| `archive/2026-08/` | the first pass, before the database. **Do not run anything in there** |
+## Server timer
 
-## Checks
+Review `config/server-replay.example.json` and save the actual configuration privately. The explicit `latest_completed` selector reads the newest completed legacy snapshot; `{snapshot_date}` in the configured run ID and directory creates a separate frozen run for each capture. Repeated timer calls for the same snapshot resume without recollection.
 
-```bash
-python3 check.py && for t in baseline roster topup posts journal cards deep collect topics score pipeline; do python3 test_$t.py; done
+```sh
+M2_RUN_CONFIG=.local/server-config.json bash cron.sh
 ```
 
-162 checks. They are the reason the tool can be trusted with money.
+The timer invokes the same engine. It does not pull Git, install dependencies, change cron, call HikerAPI, run an LLM or publish. `install-cron.sh` prints deployment guidance only. Michael retains control of server activation and the separate collection schedule.
 
-## Money
+## Future HikerAPI pilot
 
-HikerAPI on the Start tariff, $0.02 per unit. A run over 106 accounts costs about $2.
-Everything else — frames, transcription, tagging, pages — is local and free. The balance is
-checked before every run and the spend is written to the database.
+```sh
+python3 hiker_server.py --config .local/hiker-pilot.json
+python3 hiker_server.py --config .local/hiker-pilot.json --private-dir .local/hiker --approval .local/pilot-approval.json --execute
+```
 
-The key lives outside the repository and is never printed anywhere.
+The first command validates a plan without reading a key or making a request. The second is a separately approved server action. Use one request while the flat response schema remains unverified. The exact config requires public account scope, date/window, page/request limits, timeout, a dated price receipt and cost ceilings. Approval binds the config hash, owner event, scope and expiry. The key is injected only through `HIKER_KEY` or `HIKERAPI_KEY`. No Desktop MCP file, `.env` parsing, browser cookie or secret argument is used by this entry.
+
+A larger run also requires `--schema-receipt` with an independently reviewed, hash-bound actual response from the approved pilot. See [the activation procedure and templates](docs/hiker-server-activation.md) and [Signal's adapter contract](m2_signal/README.md). Fixture tests here do not establish live schema, billing, connectivity or media availability. The legacy `collect_snapshot.py` and `lib/hiker.py` are retained for history and compatibility review; they are not invoked by current runners.
+
+## Studio and media
+
+The shared [Studio package](m2_studio/README.md) validates approved media, local transcription, cut candidates, semantic-scene timing, deterministic 2/4/6 sampling and EDL assets. [Remotion sources](studio/remotion/README.md) provide deterministic composition and rendering. The [dated provider assessment](docs/m2-provider-assessment.md) records documented capabilities and execution gaps. Renderer dependencies and browser setup are a separate operator step; no dependency is installed by the Python or timer entries. Optional generated inserts require exact provider/model/reference/rights/budget approval, and fixtures are distinct from actual provider execution.
+
+Script/strategy workers use `agents/m2-roles.json`, `skills/m2-stage-worker/SKILL.md`, and `skills/m2-script-writer/SKILL.md`. Makers cannot review themselves. Owner-recorded footage, model authentication/payment and final publication are explicit later gates.
+
+## Safety and provenance
+
+Keep exports, SQLite files, source media, raw transcripts, signed CDN URLs, API responses, approval files and secrets in private ignored directories. No raw corpus or account-specific ranking is distributed with these shared packages. Notion is a reconciled review projection with owner-edit preservation and exact readback, not analytical authority. Knowledge files contain reviewed methods and constrained context; raw founder/creator expression stays run-local.
+
+The source tree is pinned during execution. `docs/shared-engine-sync.json` records the exact copied shared files. Historical documentation under `docs/legacy/` describes the earlier implementation and must not be read as current authorization, billing or production evidence.

@@ -1,0 +1,160 @@
+{
+  "audience": {
+    "excluded": [
+      "advanced technical builders",
+      "local-model enthusiasts as the primary audience",
+      "job seekers seeking programming careers"
+    ],
+    "experience": "beginner to intermediate; approximately 0–6 of 10 in source",
+    "job": "Person responsible for deciding where AI fits in a small business",
+    "roles": [
+      "owner",
+      "operations lead",
+      "team lead",
+      "functional manager"
+    ]
+  },
+  "brainstorm_contributions": [
+    {
+      "evidence": "FOUNDER-MEETING lines 1741–1749",
+      "finding": "Classify problem-led and tool-led hooks separately",
+      "state": "EXPLICIT_REQUEST"
+    },
+    {
+      "evidence": "FOUNDER-MEETING lines 19–114 and 370–420",
+      "finding": "Use small process changes to teach a broader decision principle",
+      "state": "EXPLORATORY_BUT_COMPATIBLE"
+    },
+    {
+      "evidence": "FOUNDER-MEETING lines 76–86",
+      "finding": "Split-screen can pair founder explanation with a process or audit illustration",
+      "state": "FORMAT_PREFERENCE_NOT_PERFORMANCE_EVIDENCE"
+    },
+    {
+      "evidence": "FOUNDER-MEETING lines 1084–1125",
+      "finding": "Increase frame inspection on relevant screened candidates instead of unbounded decoding",
+      "state": "IMPLEMENTATION_REQUIREMENT_WITH_BUDGET"
+    },
+    {
+      "evidence": "FOUNDER-MEETING lines 1150–1270",
+      "finding": "Consider benefit to leader, company and customer separately",
+      "state": "USEFUL_EDITORIAL_LENS_NOT_REVENUE_CLAIM"
+    }
+  ],
+  "brand_id": "M2-LAB",
+  "business_objective": {
+    "explicit": "Build trusted practical AI-adoption media and learn toward education, diagnostics and scoped workflow implementation",
+    "metric_status": "HYPOTHESIS_OWNER_CONFIRMATION_REQUIRED",
+    "proposed_first_owned_test": "Can a target viewer identify one repeated task and a human review step?",
+    "proposed_metric": "Qualified process descriptions in voluntary owner-reviewed responses / all substantive responses at a fixed 7-day horizon",
+    "revenue_target": null
+  },
+  "claim_exclusions": [
+    "guaranteed revenue, conversion, retention or cost savings",
+    "autonomous company replacement",
+    "legal, medical, tax, HR, credit or security expertise",
+    "tool-list/news content without a practical task",
+    "AI model certainty percentages as calibrated reliability"
+  ],
+  "cta_policy": {
+    "blocked_until_verified": [
+      "link in bio claim",
+      "free resource auto-DM promise",
+      "bookable workshop or service availability",
+      "comment-trigger automation"
+    ],
+    "current": "self-contained worksheet or next-step action; no dependency on unverified links",
+    "future_hypothesis": "free process audit -> scoped diagnostic/education offer"
+  },
+  "editorial_requirements": [
+    "named repeated process",
+    "concrete friction",
+    "bounded AI role",
+    "named human decision",
+    "one useful next action"
+  ],
+  "geography": {
+    "commercial_focus": "English-working SMEs in Europe",
+    "constraint": "English transcript is not geography proof",
+    "hypotheses": [
+      "Netherlands",
+      "Ireland"
+    ],
+    "public": "English-working audience; no country label in first 60 days",
+    "source": "BRAND-PB section 7"
+  },
+  "language": {
+    "basis": "BRAND-PB section 7",
+    "public_content": "en",
+    "website_offers": "en",
+    "workshops": "en"
+  },
+  "method": [
+    "repeated task",
+    "process map",
+    "AI boundary",
+    "human review",
+    "first test"
+  ],
+  "owner_positioning_source": "OWNER_SUPPLIED_EXPLICIT_PLAYBOOK",
+  "pillars": {
+    "M2 Builds": "Actual scoped internal build/test -> result, failure and human review",
+    "M2 Radar": "Tool/model/signal -> one work decision, test and limitation",
+    "M2 Teardowns": "Repeated process -> input, friction, AI boundary, owner and risk"
+  },
+  "position": "Practical AI adoption for nontechnical small-business leaders through one useful, human-controlled workflow.",
+  "production_approval": "NOT_GRANTED_BY_THIS_CAPSULE",
+  "proof_rules": [
+    "internal work is an experiment, not a client result",
+    "show exact test inputs, output and limitations",
+    "never infer time/revenue/conversion improvement from plausibility",
+    "AI output is a draft unless a named acceptance check passes",
+    "only call something tested after the exact test receipt exists"
+  ],
+  "remaining_owner_choices": [
+    "approve first owned success metric and 7-day horizon",
+    "verify an actual CTA destination before adding links",
+    "choose presenter and recording constraints",
+    "approve final card claims, actual demo captures and publication",
+    "confirm any model-payment and likeness scope separately"
+  ],
+  "resolved_conflicts": [
+    {
+      "issue": "Meeting explores sales/marketing/revenue positioning; formal playbook rejects specialist-agency positioning",
+      "resolution": "Use functional examples only as low-risk task illustrations; keep AI adoption as positioning",
+      "state": "INTERPRETATION_FROM_EXPLICIT_PLAYBOOK"
+    },
+    {
+      "issue": "Meeting explores numerical small-win promises",
+      "resolution": "No time/money claim without measured baseline and result",
+      "state": "EXPLICIT_PLAYBOOK_CONSTRAINT"
+    },
+    {
+      "issue": "Playbook includes long-term YouTube monetization possibility",
+      "resolution": "Current run remains Instagram-only; YouTube stays archive-only",
+      "state": "CURRENT_OWNER_AND_PROJECT_BOUNDARY"
+    }
+  ],
+  "review_state": "REVIEW_PENDING",
+  "run_id": "20260905-two-engine-execution-v1",
+  "schema": "m2.brand-evidence-capsule.v1",
+  "source_precedence": [
+    "Current owner request",
+    "Owner-supplied positioning playbook decisions",
+    "Founder brainstorm as noisy exploratory context",
+    "Reviewed current project constraints",
+    "Competitor evidence for functions only"
+  ],
+  "sources": [
+    {
+      "scope": "sections 1–9 and Final Principle; summarized only",
+      "sha256": "sha256:87474f8828e80531304bff8b776e9728567dd9ddb138186fea491396f8d8f32c",
+      "source_id": "BRAND-PB"
+    },
+    {
+      "scope": "1750-line supplied ASR; no reliable speaker attribution or timestamps; summarized only",
+      "sha256": "sha256:b150ad2ea8ff1ab16095c41248cac181247a8efada92f92154742517fb67d130",
+      "source_id": "FOUNDER-MEETING"
+    }
+  ]
+}

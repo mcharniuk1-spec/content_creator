@@ -1,0 +1,47 @@
+{
+  "schema": "m2.storyboard-slate.v1",
+  "remotion_version": "4.0.520",
+  "cards": [
+    {
+      "card_id": "M2-S05-01",
+      "frame_count": 8,
+      "receipt_sha256": "cfb323a46eede249f6ab0af8e5ea7d9e8cace6bc9b54214f725813642e20470b"
+    },
+    {
+      "card_id": "M2-S05-02",
+      "frame_count": 8,
+      "receipt_sha256": "06ad19f52acd1b2f09eaf3fc013090e03d7f15c0fd58ef0d02509265edaf37ec"
+    },
+    {
+      "card_id": "M2-S05-03",
+      "frame_count": 8,
+      "receipt_sha256": "1c002dd82b1dfe99362d847bea226f9a5576a3dfb024c3e8e00d2fef64170ea0"
+    },
+    {
+      "card_id": "M2-S05-04",
+      "frame_count": 8,
+      "receipt_sha256": "05070c3a6b1618540f51bbaae45e42b28b260824e77649af56829f0d255c48d7"
+    },
+    {
+      "card_id": "M2-S05-05",
+      "frame_count": 8,
+      "receipt_sha256": "d373b9d7a47cddeca95fc3aa124a03ee0fd0f0eb51824ba65681a604fc9bc43c"
+    },
+    {
+      "card_id": "M2-S05-06",
+      "frame_count": 8,
+      "receipt_sha256": "11e830403cc3399df95ae30571ecc3b0a69008886c2beade5ec45b6c858c515e"
+    },
+    {
+      "card_id": "M2-S05-07",
+      "frame_count": 8,
+      "receipt_sha256": "3ae6760f6941f10714e763d245567e659a29f2943b30d611a28e3caf3f5ebc62"
+    },
+    {
+      "card_id": "M2-S05-08",
+      "frame_count": 8,
+      "receipt_sha256": "d999760224757d7316497846729072b63e40798ec3763278a34743c189092846"
+    }
+  ],
+  "provider_execution": false
+}

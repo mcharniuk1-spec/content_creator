@@ -1,0 +1,382 @@
+{
+  "schema": "m2.independent-fork-review.v1",
+  "reviewer": "independent_review",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "scope": "Exact portable shared-engine copy and19fork-specific wrapper/config/docs files;11entrytests independently run.",
+  "shared_files_verified": 56,
+  "runtime_files_verified": 43,
+  "runtime_manifest_sha256": "e2832cb8886d7d2fd22549d72d9195379b267c680baf2a1fc09bc1e731c4d0bc",
+  "entry_tests_passed": 11,
+  "entry_tests_failed": 0,
+  "hiker_live_calls": 0,
+  "paid_provider_calls": 0,
+  "server_deployment_verified": false,
+  "git_publication_verified": false,
+  "limitations": [
+    "Actual Hiker response schema, price/billing reconciliation and server connectivity untested",
+    "Source-media acquisition and expiring-URL recovery not executed",
+    "Owner footage and provider authentication/payment required for production continuation",
+    "Renderer dependency/browser setup on a clean partner machine and server timer activation are separate operator steps",
+    "Eight legacy tests require a private database and were skipped, not treated as passing"
+  ],
+  "shared_sync_manifest_sha256": "5c3f863a2df792fab6045b9b599795c333e751a7e6a71748bb40ec4018bbb60d",
+  "manifest": [
+    {
+      "bytes": 19019,
+      "path": "agents/m2-roles.json",
+      "sha256": "af608002d51cc6826b53892139a1b71c41b49e9debd84adbd7775a6a4ec60c0f"
+    },
+    {
+      "bytes": 348,
+      "path": "config/m2-metrics.v1.json",
+      "sha256": "f74c218d941417a0ef9ad5e08e3933cf3f18c3200ee195de40f429c0120ff205"
+    },
+    {
+      "bytes": 9250,
+      "path": "config/m2-stage-policy.v1.json",
+      "sha256": "8076089bd450e98d27dc5bd4ad7a04856f2ed33e82f43eebe144d3d0ead4613b"
+    },
+    {
+      "bytes": 11665,
+      "path": "docs/m2-operator-guide.md",
+      "sha256": "47cd7d881d833a7c18eabf7db816ff688614f7b7f87b2351df77f756fd9b38bf"
+    },
+    {
+      "bytes": 4532,
+      "path": "docs/m2-provider-assessment.md",
+      "sha256": "a4ddaa2b9e8499e244e29bc37f96778e415853056b800ae2dea7f1df59ccfbad"
+    },
+    {
+      "bytes": 14080,
+      "path": "docs/m2-system-architecture.md",
+      "sha256": "27ed3acf88bf244345402ee14a6b58a79778ca193f732f9d4b34a051d63947d2"
+    },
+    {
+      "bytes": 4401,
+      "path": "docs/media-production-boundary.md",
+      "sha256": "ade7e31b536aa0ffca04aa47d2ddafa7d1b0f811be9630e6b940bbafb1429003"
+    },
+    {
+      "bytes": 6966,
+      "path": "docs/research-and-analysis-contract.md",
+      "sha256": "ce21c3751bd5c3dc0b62b67f141395f61af0757704429c44fc8da8890b6647d3"
+    },
+    {
+      "bytes": 2115,
+      "path": "knowledge/m2-operating-memory.md",
+      "sha256": "e0a803dda14e47fee88adad72690a409c5a01a4e3cbce7c23c4a22add0ac2839"
+    },
+    {
+      "bytes": 2836,
+      "path": "knowledge/m2-positioning.md",
+      "sha256": "b8276ae295d2b68534160e64cbe2313796ffbc6ee8c1ae29bf79e78b966cee75"
+    },
+    {
+      "bytes": 97,
+      "path": "m2_orchestrator/__init__.py",
+      "sha256": "bbdbfe76802abc772ab621ecf68366dedf00c073abd449ae817f7a5a760ddcee"
+    },
+    {
+      "bytes": 4306,
+      "path": "m2_orchestrator/__main__.py",
+      "sha256": "550be08c828f2e91a3f3cc5f6f89316278c3415b3a47222a254d4367a6e0f02e"
+    },
+    {
+      "bytes": 8240,
+      "path": "m2_orchestrator/execution.py",
+      "sha256": "128d8918bddb098fd5a03a449117ea8f344ce3fea2ee096eaa2f430639d8fccd"
+    },
+    {
+      "bytes": 7801,
+      "path": "m2_orchestrator/notion_payload.py",
+      "sha256": "1c40b87d76492a8320d1db2280a2d220d672d738cab3e59f7d4415ef52c5b25c"
+    },
+    {
+      "bytes": 4795,
+      "path": "m2_orchestrator/policy.py",
+      "sha256": "444fd370c17c3b898bc83d56ed58b12a4e9c959226f62b888ec0e9b52e4b18ff"
+    },
+    {
+      "bytes": 5937,
+      "path": "m2_orchestrator/projection.py",
+      "sha256": "93ec9ab2a76f49380b573210fe9d92a9408712d993fb30d0c81249b7c6982881"
+    },
+    {
+      "bytes": 20005,
+      "path": "m2_orchestrator/state.py",
+      "sha256": "231f0eebcd15c286f8ac9ca9c917e133705ca308bf89a2ad98701787e0691ae8"
+    },
+    {
+      "bytes": 10954,
+      "path": "m2_signal/README.md",
+      "sha256": "d9b5f4aecf126cc6d0f45bfd01dae1b17a12bf775d1944c361392d7f1ad5004e"
+    },
+    {
+      "bytes": 292,
+      "path": "m2_signal/__init__.py",
+      "sha256": "481dc280c363215f967cc325f09ca7042975be03d0ad58c9e7be06cd25d850e5"
+    },
+    {
+      "bytes": 2706,
+      "path": "m2_signal/__main__.py",
+      "sha256": "db9f906a8bfaf4211ef6f13ca886a53048ad1531c61b794a24f324ad64bf1349"
+    },
+    {
+      "bytes": 37701,
+      "path": "m2_signal/engine.py",
+      "sha256": "37c5147a0761416ae16a57f1cd96c15524842fb37fe4a9610320534a494a8da3"
+    },
+    {
+      "bytes": 21166,
+      "path": "m2_signal/hiker_adapter.py",
+      "sha256": "2bea7026b3a811d3c65f784119cea2ca62b8b103900f8ca522c0dca9fb42a34b"
+    },
+    {
+      "bytes": 8077,
+      "path": "m2_signal/legacy.py",
+      "sha256": "4f998bc9503d12a8d3583ba29307889f4b180e2c2ae3c2add9e9d855a0b68374"
+    },
+    {
+      "bytes": 5389,
+      "path": "m2_signal/metrics.py",
+      "sha256": "91c50e1defaee4dd46da8d14c6d82e2f3b2bc28bb39f4b0c2b38d8c67908f80e"
+    },
+    {
+      "bytes": 3196,
+      "path": "m2_signal/schema.sql",
+      "sha256": "6cea9798353e0b5244f99d3c10b6841725fd37d023a305f5c655ea90fc33c372"
+    },
+    {
+      "bytes": 2205,
+      "path": "m2_signal/taxonomy.py",
+      "sha256": "de9e3613d985a28a34a8139a9d536d20dea82aca0108d93fca9525c1dd04a00c"
+    },
+    {
+      "bytes": 11156,
+      "path": "m2_studio/README.md",
+      "sha256": "835848680138aa91be6f8f65e12a4b68b290fe74a4d9c34b33deb93d1e026ec4"
+    },
+    {
+      "bytes": 102,
+      "path": "m2_studio/__init__.py",
+      "sha256": "7b8d847569468a2bf1a25b523306dafa610f2fb125d508ee6ef984196bb818c1"
+    },
+    {
+      "bytes": 30,
+      "path": "m2_studio/__main__.py",
+      "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+    },
+    {
+      "bytes": 6770,
+      "path": "m2_studio/cli.py",
+      "sha256": "0bd62c72b48d120f70bd930f14131554add36beb3e2512d40394d8941b560532"
+    },
+    {
+      "bytes": 2937,
+      "path": "m2_studio/fixtures.py",
+      "sha256": "126cf0e74ed5ec84e1dcbe4cde320d84e42084bdf3f3dd3bf02305823846d7d9"
+    },
+    {
+      "bytes": 22041,
+      "path": "m2_studio/media.py",
+      "sha256": "e34601fc7f7e1a0a435b957247329ac007cef0f6c4700a9ab8124cc721155eb6"
+    },
+    {
+      "bytes": 3156,
+      "path": "m2_studio/provider-catalog.json",
+      "sha256": "7a553a504dd6a135c8a99008e44e10b8299835596f3dd1df2d231e25c9b39a9e"
+    },
+    {
+      "bytes": 15527,
+      "path": "m2_studio/providers.py",
+      "sha256": "0ae027397ff6885c556798307c285de393ea4fdabdfa2db51d6eda6aaa9ea94d"
+    },
+    {
+      "bytes": 11945,
+      "path": "m2_studio/timeline.py",
+      "sha256": "231699bf3f8c02281836adfbe999933461258d4ea5619119ce107ee372a97e35"
+    },
+    {
+      "bytes": 9095,
+      "path": "schemas/video-scene-segmentation.schema.json",
+      "sha256": "2f80cfd981c84be3383609f5ff73b0323b28a5f91b4f722cb5d0885f1f5ec2ba"
+    },
+    {
+      "bytes": 1460,
+      "path": "scripts/run_m2.py",
+      "sha256": "841d4128d5e0be7c8f56e750b13dcb8b1578f3a035f0ce7d5d78e2d9272792ea"
+    },
+    {
+      "bytes": 5469,
+      "path": "skills/m2-script-writer/SKILL.md",
+      "sha256": "0161cb6d4f0fd77c6cb4eb3a1ec504b9083baa44e7aaa2549ae5da6a2302cf20"
+    },
+    {
+      "bytes": 2637,
+      "path": "skills/m2-stage-worker/SKILL.md",
+      "sha256": "55db115d1b75181716e0d8db9e84c3ffe20a38fb88030d4b7fe39a79ad44b326"
+    },
+    {
+      "bytes": 7970,
+      "path": "studio/SCENE-FIRST-STORY-FRAMEWORK-TAXONOMY-V3.md",
+      "sha256": "22260f8e8e948458723472acdc7e42bf34739079a3fed1f00e1cb96d791bb32a"
+    },
+    {
+      "bytes": 3303,
+      "path": "studio/remotion/README.md",
+      "sha256": "fe3a72b083899897829ad0dbbde288d1b8804b51aec1f688f0b55f912a0bc480"
+    },
+    {
+      "bytes": 6102,
+      "path": "studio/remotion/contract.mjs",
+      "sha256": "ec3fd3466bbeda0411a8fbe6c6b0191f7a4108b1c522d7c6e796f1f39c2e638e"
+    },
+    {
+      "bytes": 103787,
+      "path": "studio/remotion/package-lock.json",
+      "sha256": "deb9601f2a66bac92c72ef5ac55c817e0b9086540f7d2e9e5b5a912df84bebf3"
+    },
+    {
+      "bytes": 522,
+      "path": "studio/remotion/package.json",
+      "sha256": "656308f23e4e37a1cde6733274532961e936641b48f6e59ec98b6e13a9be9477"
+    },
+    {
+      "bytes": 3086,
+      "path": "studio/remotion/render.mjs",
+      "sha256": "dfc36449a6f07fb0a6baeee3c2e4605eb3e62e9f7e338e072693951b497ed97f"
+    },
+    {
+      "bytes": 4247,
+      "path": "studio/remotion/src/Composition.tsx",
+      "sha256": "93d27575848a412aa115808012a677f8e675f3b7e7158f868baa19327fd2820f"
+    },
+    {
+      "bytes": 881,
+      "path": "studio/remotion/src/index.tsx",
+      "sha256": "0f8ce1a87472763efd36e0f1db9b89403cadf6ee9179fd8cef8bcda9f4dd2e1c"
+    },
+    {
+      "bytes": 1419,
+      "path": "studio/remotion/src/types.ts",
+      "sha256": "a482f29304b59af65598d94461c0e48d7d844c2fe0d363bbbda9212c2e0854eb"
+    },
+    {
+      "bytes": 3499,
+      "path": "studio/remotion/storyboards.mjs",
+      "sha256": "77979d87fbc06ec6b4684fbcfc6781cb1573c885e33c82358992d368757ace36"
+    },
+    {
+      "bytes": 4230,
+      "path": "studio/remotion/test-contract.mjs",
+      "sha256": "fdd9be127af4d6244f0b87cf7983b39ba6db7011424a2178d2031bf16e1a2202"
+    },
+    {
+      "bytes": 330,
+      "path": "studio/remotion/tsconfig.json",
+      "sha256": "3430ef34ef5995a485385a67858246003581e27e0b93d26df0be68e8847dc5cd"
+    },
+    {
+      "bytes": 10738,
+      "path": "tests/test_m2_orchestrator.py",
+      "sha256": "d8c7defd613ca638f88f68755e7289d315336301aca3a97e9324b437287bb769"
+    },
+    {
+      "bytes": 2421,
+      "path": "tests/test_m2_projection.py",
+      "sha256": "02020e9187a49d1340e43b8e4aa7513dca614c30f737780b081d22c1880685ff"
+    },
+    {
+      "bytes": 14157,
+      "path": "tests/test_m2_signal.py",
+      "sha256": "0679b74c6c8084f6af0c125f2387b3bf174c94870a8f16ebaf3f8b9170c47baa"
+    },
+    {
+      "bytes": 12496,
+      "path": "tests/test_m2_signal_hiker.py",
+      "sha256": "b9f9d85d3ad6fb61f63cdcda2cb69074f4d180a7d8d363ba6924459b92e7bb41"
+    },
+    {
+      "bytes": 23712,
+      "path": "tests/test_m2_studio.py",
+      "sha256": "7e35a1d041d56b12510100876b020053decfc4aa2caa68e01318fa9b5e10557b"
+    },
+    {
+      "path": "run.py",
+      "sha256": "2a3acd852032167de86b0a8b6d20de4dc8d1048f4edb22a79a4cc55d74ace0a4"
+    },
+    {
+      "path": "server_entry.py",
+      "sha256": "f9b5e82bb6eb97917df99f8048b24ef31db467344b21471b4f8dcb8e4ad5d34a"
+    },
+    {
+      "path": "hiker_server.py",
+      "sha256": "b79559473c1982398166c48f555f1a8c6105556358dd175d8c02aa856a5b50d3"
+    },
+    {
+      "path": "cron.sh",
+      "sha256": "c4d1b754d810b177fe9c99797630c186fa18acb78c0531910281d3f48132c49f"
+    },
+    {
+      "path": "install-cron.sh",
+      "sha256": "bb2fe03b63eefaeca81418086a37691048aa99e79453b866c391678f35556898"
+    },
+    {
+      "path": "scripts/test_local.py",
+      "sha256": "0efa1a6fe1d2d8eea285b42da4815cc0f2c575e3ceb0f131fbf46c46a818e258"
+    },
+    {
+      "path": "test_pipeline.py",
+      "sha256": "1b58e1fdbc5b308803a700fb64123bf828cab1e4733483eb395e9461e5141f93"
+    },
+    {
+      "path": "README.md",
+      "sha256": "34d48cb61f0700e4d92f28e52ab09ad448bd0729324f29116c8815af17118f79"
+    },
+    {
+      "path": "START-HERE.md",
+      "sha256": "9b24ca4049542ad2bf01bfe2e5050ce70c2d81af2456411bc903b1dcd0e96e6f"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "06020b0ca348749cd70ceaf557af25e37859298621177034fab7acff923567a7"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "a710e4cbfebc23574f05ba9145980e9b228d909a2d76d45196371773ad9776b5"
+    },
+    {
+      "path": "config/server-replay.example.json",
+      "sha256": "2856ce967fb4595207c7d0d74ca23fcbb0b0a09c07ae1c659a35c82c5818d922"
+    },
+    {
+      "path": "config/hiker-pilot.template.json",
+      "sha256": "b721dfcbc35a4650bdac899d5fd2ee45a9a3783806797baece559df53d566d56"
+    },
+    {
+      "path": "config/hiker-approval.template.json",
+      "sha256": "53e8f849737fdfe553768a7da53ae7eb44adf7e148685488112b6231ff6dbd55"
+    },
+    {
+      "path": "config/hiker-schema-review.template.json",
+      "sha256": "b4117f0bfbdc0d51db74b1ca5a6377fd2fdd558400dd3dd89a6752b06b788c3f"
+    },
+    {
+      "path": "docs/hiker-server-activation.md",
+      "sha256": "842dff660bd73b780d79f777cf5d11b5d8a0099007a06aced960028908e0cbfb"
+    },
+    {
+      "path": "knowledge/index.md",
+      "sha256": "041fce65e80be95646f0898607113c7205858ea93a2d321ba14094c7d0baee71"
+    },
+    {
+      "path": "knowledge/memory.md",
+      "sha256": "ea260b2c7a34033ddadf05dc7809c9745bcf6d2c696c6f81d17cec766ad2f431"
+    },
+    {
+      "path": "knowledge/insights.md",
+      "sha256": "208d6b1faf40a846f23e001f0dac7aaf43e315d2b9654eebff7e4d07e8520ed8"
+    }
+  ],
+  "manifest_base": "runs/20260905-two-engine-execution-v1/radar-checkout"
+}

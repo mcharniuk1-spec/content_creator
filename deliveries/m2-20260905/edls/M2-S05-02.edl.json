@@ -1,0 +1,224 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "A neat meeting summary can still invent the next step."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "Here is a made-up meeting note: check the room. Nobody has agreed who will do it."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "This deliberately faulty draft assigns a person and a deadline. Neither appears in the note."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "Ask for three fields: action, owner, and due date. Missing information should stay visibly unknown."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "Then compare each row with the original note. AI prepares the draft; the meeting owner checks it."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "If ownership is missing, ask the team. Do not let a tidy table make the decision."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "Only the confirmed version becomes the action list. Keep the source note beside it."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Try this on a fictional note first: can you spot what was never agreed?"
+    }
+  ],
+  "card_id": "M2-S05-02",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-02-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-02-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "LOOKS COMPLETE ≠ AGREED"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-02-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Show the synthetic source note with only Check room availability."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "FICTIONAL MEETING NOTE"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-02-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-02-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Source left, deliberately faulty draft right; highlight unsupported owner and date."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "NOT IN THE SOURCE"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-02-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Three table headers and visible Unknown cells; no polished invented values."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "ACTION / OWNER / DUE DATE"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-02-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-02-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Presenter below; row-to-source connectors above."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "DRAFT → SOURCE CHECK"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-02-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-02-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "ASK THE TEAM"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-02-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Version tag changes from Draft to Confirmed only after a person marks review."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "CONFIRM BEFORE SHARING"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-02-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Hold source and blank review fields together as a small exercise."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "WHAT WAS NEVER AGREED?"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-02-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "3e770443c119cf474b7fcaf0fc0167c35ee572372840299a85562710d29af4f2",
+  "title": "The meeting summary needs an unknown field",
+  "width": 1080
+}

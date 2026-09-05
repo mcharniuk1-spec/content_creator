@@ -1,3 +1,13 @@
+# M2 Signal and Studio — current handoff
+
+Current executable route: `docs/m2-system-architecture.md`, `docs/m2-operator-guide.md`, `m2_signal/README.md`, `m2_studio/README.md` and `studio/remotion/README.md`.
+
+The September 5 implementation replays existing Instagram exports through immutable SQLite evidence and stage checkpoints. It provides gated partner collection, separate semantic workers, independent review, Notion projection, eight original ScriptCards and Remotion storyboards. Replay does not call HikerAPI. Provider execution is disabled until exact paid-job authorization, authentication and budget are present. Final Best-Reel decisions remain blocked by missing source-media and other evidence. Owner footage and final production QA remain pending.
+
+Portable current slate: `deliveries/m2-20260905/`. Read its receipt and current review status before using any artifact. Legacy YouTube results below are frozen history and must not support current M2 content decisions.
+
+---
+
 # North Hux Content Engine — public-safe handoff
 
 Status: `IMPLEMENTED / TERMINALLY_FROZEN / PASS_WITH_LIMITATIONS`

@@ -1,3 +1,5 @@
+> Current M2 implementation: [two-engine architecture](m2-system-architecture.md) and [operator guide](m2-operator-guide.md). The following phase-one architecture is historical; Instagram Reels is active and YouTube is archive-only.
+
 # Architecture
 
 Status: provider-disabled design contract  

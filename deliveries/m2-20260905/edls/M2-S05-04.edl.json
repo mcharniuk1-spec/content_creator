@@ -1,0 +1,219 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "A tool demo is a reason to test, not switch."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "Suppose your repeated task is turning weekly notes into an update. Keep one fictional input ready."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "Run that same input through a candidate tool using the same instructions and required output."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "Check three things: did it preserve the facts, show missing information, and leave an editable draft?"
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "Record the result beside the tool version and the date. Include the part that failed."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "A polished answer is not the whole test. Someone still has to review and maintain the workflow."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "If it misses a requirement, adjust the task or reject this candidate. You do not need to switch."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Keep one example and one checklist. Use them for your next tool evaluation."
+    }
+  ],
+  "card_id": "M2-S05-04",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-04-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-04-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "NEW TOOL → SMALL TEST"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-04-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "One synthetic weekly-note file appears with a stable Sample A identifier."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "SAME INPUT: SAMPLE A"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-04-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-04-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Two empty tool-neutral test panels receive the same input and instruction labels."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "SAME TASK · SAME INSTRUCTIONS"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-04-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Three checklist rows appear with unchecked boxes."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "FACTS / UNKNOWNS / EDITABLE"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-04-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "A blank test log shows tool, version, date, result and failure columns."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "RECORD THE FAILURE TOO"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-04-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-04-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "WHO CHECKS? WHO MAINTAINS?"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-04-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Two branches: revise test or decline tool; no unsupported winner."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "PASS THE TASK OR STOP"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-04-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Hold an empty reusable checklist and Sample A card."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "KEEP YOUR TEST CASE"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-04-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "f4b2af0417dd7732de0c62bc851948aab6616d55c62523012c837f9033e6ed14",
+  "title": "Test the same task before changing tools",
+  "width": 1080
+}

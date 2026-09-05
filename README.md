@@ -1,68 +1,47 @@
-# ArchFlow Content Engine
+# M2Lab Content Engine
 
-ArchFlow Content Engine is a local-first research, content-strategy, and frame-by-frame previsualization project. Its active North Hux lane focuses on AI-agent integration in business for two product-manager creator accounts: practical PM/integration and governed agent operations.
+Two connected engines turn Instagram research into original, reviewable videos. **Signal** audits observations and produces scoped descriptive evidence. **Studio** develops scripts and shooting plans, waits for owner footage, then composes approved assets with Remotion.
 
-The project is intentionally separated from the ArchFlow website and product runtime. Its first delivery phase stops before provider-backed video generation. It produces a traceable research corpus, link ledgers, segmented analyses, 10–15 original video plans longer than 15 seconds, storyboard frames, one contact-sheet image per video, captions, and one prompt/report PDF per video. Figma and final media production remain approval-gated.
+Start with [the current architecture](docs/m2-system-architecture.md), [the operator guide](docs/m2-operator-guide.md), and [the public handoff](docs/handoff/current-public-handoff.md). The explicit state DAG lives in `m2_orchestrator/policy.py`; the stage-worker skill and role registry define bounded agent execution.
 
-## Current truth — 26 August 2026
+## Run existing data without HikerAPI
 
-- The deterministic YouTube broad screen is frozen at 10,000 public videos from 1,010 creators. It is not 10,000 qualified competitors; current strategic distributions use 2,949 deterministic analysis-eligible videos.
-- A 300-account / 900-video calibration was independently reviewed at `PASS_WITH_LIMITATIONS`; 211/250 reviewed candidates were accepted.
-- Public transcript and compact storyboard collection is running with independent denominators, typed gaps, content hashes, and a 15 GiB free-disk reserve.
-- Local PostgreSQL migrations through `009` provide evidence attempts, canonical transcript identity, run/source observations, full transcript segments, frame pointers, analysis lineage, terminal freeze receipts, strategy releases, ten scripts, 100 shot plans, and validated EDL seams.
-- Ten original 30-second YouTube-first scripts and 100 separate 9:16 SVG frame plans are available under `outputs/video-plans/north-hux-youtube-10-v1/`.
-- The detailed English market-to-Studio report is generated under `outputs/reports/` and must be regenerated after the terminal evidence freeze.
-- Agent Reach currently proves read-only backends only for YouTube (`yt-dlp`), RSS (`feedparser`), and generic web pages (`Jina Reader`). Other named social channels are not yet proved reachable.
-- The owner-designated public repository is `mcharniuk1-spec/content_creator`; only a reviewed public-safe package may be pushed.
-- OpenMontage, Sherlock, and Open-Generative-AI were assessed as candidate tools or references. None has been cloned, installed, invoked, or embedded here.
-- No API key, paid provider, social login, Figma mutation, private media, voice clone, video generation, publication, or deployment has been used.
-
-## Start here
-
-Open a new agent task with this folder as its working directory, then read [the public handoff](docs/handoff/current-public-handoff.md), `AGENTS.md`, and the full system blueprint. Owner credentials and private identity handoffs are intentionally not distributed in Git. The next agent must recover the applicable admission/capability state before any live collection or external mutation.
-
-Core references:
-
-- [Full system blueprint](docs/full-system-blueprint.md)
-- [Database backup and restore](docs/database-backup-restore.md)
-- [Public repository setup](docs/repository-setup.md)
-- [Obsidian and WikiLLM setup](knowledge/obsidian-wikillm-setup.md)
-- [Architecture](docs/architecture.md)
-- [Hybrid existing-video editing pipeline](docs/hybrid-editing-pipeline.md)
-- [Role hierarchy](docs/role-hierarchy.md)
-- [Research and analysis contract](docs/research-and-analysis-contract.md)
-- [Tool fit and boundaries](docs/tool-fit-and-boundaries.md)
-- [Previsualization and Figma](docs/previsualization-and-figma.md)
-- [Media production boundary](docs/media-production-boundary.md)
-- [ArchFlow context capsule](knowledge/context-capsule.md)
-- [Initial topic backlog](knowledge/initial-topic-backlog.md)
-- [Channel capability receipt](config/channel-capabilities.json)
-- [Source manifest](config/source-manifest.json)
-
-## Folder map
-
-```text
-content-engine/
-  AGENTS.md
-  HANDOFF_PROMPT.md
-  config/                 verified capabilities and source registry
-  docs/                   architecture, roles, operations, and tool policy
-  knowledge/              reviewed local memory and topic hypotheses
-  research/               run-local social, video, static, ad, and publication evidence
-  schemas/                validation-ready durable object contracts
-  templates/              ledgers, analysis forms, contact-sheet and report specs
-  outputs/                generated contact sheets, reports, and Figma handoff packages
-  runs/                   admissions, task contracts, execution receipts, and reviews
+```bash
+python3 scripts/run_m2.py --source-dir path/to/export --run-dir .local/run-001 --run-id run-001
+python3 -m m2_orchestrator --run-dir .local/run-001 status
+python3 -m m2_orchestrator --run-dir .local/run-001 tasks
+python3 -m m2_orchestrator --run-dir .local/run-001 verify
 ```
 
-## Phase gates
+Same inputs resume completed stages after hash verification. New snapshots/configs use a new run ID; pass `--database .local/signal.sqlite --mode incremental` to share immutable historical observations. The engine never turns a missing metric into zero. It stops semantic work at explicit role/review boundaries.
 
-| Phase | Deliverable | Current state |
-|---|---|---|
-| 0 | Local routing, schemas, capability and source manifests, handoff | Complete with limitations |
-| 1 | Bounded public YouTube research and evidence ledgers | 10K cohort frozen; transcript/frame evidence in progress |
-| 2 | YouTube topic/format/hook/story/CTA analysis | Implemented; final rerun waits for evidence freeze |
-| 3 | Ten original scripts, shot plans, frames, EDLs, and report | Implemented; owner review pending |
-| 4 | Figma page/frame delivery | Blocked until identity verification and mutation approval |
-| 5 | Provider-backed image/video/audio generation and editing | Blocked until provider, key, budget, rights, and data approvals |
-| 6 | Publishing and analytics readback | Separately blocked |
+## Runtime boundaries
+
+- Python standard library supplies the controller, Signal database and descriptive metrics.
+- FFmpeg/ffprobe and local ASR provide the optional media evidence path.
+- `studio/remotion/` contains pinned composition/renderer dependencies and local fixture tests.
+- HikerAPI is a separately approved server collector. Replay never checks its balance or reads its key.
+- Provider generation requires an exact shot, model, references, rights and budget approval.
+- Notion is a versioned review projection. WikiLLM/Obsidian receive curated reviewed knowledge.
+- Model execution on a subscription is an interactive operator capability, not an unattended free API.
+
+## Current evidence boundary
+
+The September 4 accepted foundation has 2,363 observations resolving to 2,352 Reels and 100 accounts. It is not a fully evidenced market/production release. Current execution status and precise checks belong in the dated delivery handoff. Source media, geography, rights, comments, transcript fidelity and strategic review retain separate denominators.
+
+Instagram Reels is the only active research platform. YouTube runs, old North Hux outputs and legacy methods are archived evidence, never current M2Lab rankings or script support. Existing sources and accepted runs are preserved.
+
+## Main folders
+
+| Path | Purpose |
+|---|---|
+| `m2_orchestrator/` | State transitions, role tasks, offline handlers and projection outbox |
+| `m2_signal/` | Immutable evidence database, audits, metrics and server collection adapter |
+| `m2_studio/` | Local media/scene pipeline, EDL and provider job contracts |
+| `studio/remotion/` | Deterministic vertical composition and render validation |
+| `agents/`, `skills/`, `config/` | Roles, executable defaults, stage policy and hooks |
+| `knowledge/` | Reviewed portable project brain |
+| `docs/`, `tests/` | Architecture, operating instructions and checks |
+| `runs/`, `.local/` | Private/ignored source evidence, artifacts and execution receipts |
+
+Only an explicit reviewed public-safe package belongs in Git. Source exports, founder transcripts, credentials, media and mutable databases do not.

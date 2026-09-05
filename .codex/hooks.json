@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/notion-mcp-routing-hook.py --event UserPromptSubmit"
+          },
+          {
+            "type": "command",
+            "command": "python3 scripts/m2-stage-routing-hook.py"
+          }
+        ]
+      }
+    ]
+  }
+}

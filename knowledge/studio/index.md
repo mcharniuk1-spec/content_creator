@@ -10,7 +10,7 @@ ai-first: true
 
 # Studio Screenwriting Knowledge Index
 
-## For future Claude
+## For future Studio agents
 This is the retrieval hub for the reviewed [[ArchFlow Content Engine]] Studio screenwriting system as of 2026-08-25. Start here when selecting a hook, writing a short story, mapping research evidence into B-roll, or classifying future creator/video observations. The local v2 library is structurally validated, but no pattern is proven to cause virality, retention, conversion, or ROI.
 
 ## Canonical routes
@@ -19,10 +19,17 @@ This is the retrieval hub for the reviewed [[ArchFlow Content Engine]] Studio sc
 - [[Studio Classification Taxonomy]] — controlled dimensions for topics, creator archetypes, audience jobs, emotions, hooks, proof, visuals, sound, and evidence.
 - [[Studio Agent Retrieval and Learning Contract]] — how future research agents classify observations and how Studio consumes them without copying sources.
 - `studio/SCREENWRITING-GUIDE.md` — detailed evidence-bounded writing guide.
-- `studio/REAL-SHORTFORM-REFERENCE-ANALYSIS.md` — nine caption/metadata-only reference architectures and visual-evidence gaps.
 - `studio/STORY-FRAMEWORK-TAXONOMY-V2.md` — ten families and validation invariants.
+- `studio/SCENE-FIRST-STORY-FRAMEWORK-TAXONOMY-V3.md` — transcript-aligned scene-unit boundaries, 2/4/6 screenshot sampling, one-collage-per-scene, production routes, voice/subtitle/edit handoff, and migration from v2.
+- `schemas/video-scene-segmentation.schema.json` — machine contract for video → scene → screenshot collage → generation/edit pipeline.
 - `studio/story-framework-library/v2/CATALOG.md` — 50 six-second packages and 300 one-second SVG frames.
 - `runs/20260825-studio-screenplay-v2/agent-handout.md` — reviewed completion state.
+- `runs/20260904-current-issues-resolution-v2/schemas/signal-to-studio-v2.schema.json` — accepted-with-limits immutable Reels Signal-to-Studio seam; it carries reviewed functional evidence and prohibitions, never competitor expression or mutable Notion/database rows.
+- `runs/20260904-current-issues-resolution-v2/lanes/transcript-visual-script/script-card-v2.example.json` — provider-disabled synthetic contract proof only; it is not a real evidence-backed production Card.
+
+## Archive-only reference
+
+- `studio/REAL-SHORTFORM-REFERENCE-ANALYSIS.md` — historical nine-reference YouTube caption/metadata analysis. Retrieve only for archive navigation or independently reviewed source-agnostic reliability lessons; never use it for current M2Lab market ranking, prevalence, creator recommendation, or ScriptCard support.
 
 ## Knowledge layers
 
@@ -49,6 +56,8 @@ This is the retrieval hub for the reviewed [[ArchFlow Content Engine]] Studio sc
 8. The hook opens a precise answerable gap; payoff closes or honestly bounds that same gap before CTA.
 9. Analysis describes source function, not source expression. Change semantic premise, causal topology and visual mechanism for clean-room output.
 10. Structural validation is not performance evidence.
+11. A Studio Card may consume only an accepted immutable Signal release plus an owner-approved Brand Evidence Pack; current Reels diagnostic rows and the Notion projection are not sufficient inputs.
+12. Keep competitor transcript, footage, likeness, distinctive shot order, music, and layout out of the creative seam; transfer functional principle, evidence boundary, risk, and owned-test design only.
 
 ## Ten story families
 
@@ -64,4 +73,4 @@ Use the family as reveal order, not as the entire idea. Topic, creator archetype
 - INTERPRETATION: explicit causal state and information-gain fields make storyboards safer for agent reuse than folders of visual inspiration.
 - HYPOTHESIS: mapping approved real footage or higher-fidelity imagery to these contracts may improve consistency and review speed.
 - GAP: no admitted source-frame corpus, owned retention test, production motion/audio, Figma mutation, publication or universal performance rule exists.
-
+- FACT: the 2026-09-04 Reels-first foundation and its synthetic seam passed independent review with limitations; `EVIDENCE_RELEASE_ACCEPTED=false` and no current Reel ScriptCard is approved for production.

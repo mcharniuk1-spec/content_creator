@@ -1,0 +1,83 @@
+{
+  "schema": "m2.independent-test-receipt.v1",
+  "reviewer": "independent_review",
+  "verdict": "PASS",
+  "commands": [
+    {
+      "command": "python3 -m unittest discover -s tests -p 'test_m2*.py' -v",
+      "passed": 100,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "node --test studio/remotion/test-contract.mjs",
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "verified_boundaries": [
+    "Exact paid request digest and stored-request/activation integrity",
+    "No uncertain provider repost; cost reservations remain held",
+    "Hiker live mode, approval freshness and cached provenance",
+    "Controller lease, runtime/config/input integrity and transitive reviewer separation",
+    "Production pending audio/graphics denial; exact speech/caption alignment-plan binding",
+    "Cross-media and changed transcript rejected before scene output; exact transcript digest in scene evidence",
+    "Python/JS alignment digest agreement with Unicode and float gain",
+    "Notion null, zero, boolean, number and empty-rich-text normalization"
+  ],
+  "hiker_live_calls": 0,
+  "paid_provider_calls": 0,
+  "competitor_media_decodes": 0,
+  "media_scope": "Synthetic local fixtures only",
+  "manifest": [
+    {
+      "path": "tests/test_m2_engine.py",
+      "sha256": "6fc4780dc6cd06ecb80703f8cb1bdbd897983588a81e8259ef56392442e11793"
+    },
+    {
+      "path": "tests/test_m2_orchestrator.py",
+      "sha256": "d8c7defd613ca638f88f68755e7289d315336301aca3a97e9324b437287bb769"
+    },
+    {
+      "path": "tests/test_m2_projection.py",
+      "sha256": "02020e9187a49d1340e43b8e4aa7513dca614c30f737780b081d22c1880685ff"
+    },
+    {
+      "path": "tests/test_m2_signal.py",
+      "sha256": "0679b74c6c8084f6af0c125f2387b3bf174c94870a8f16ebaf3f8b9170c47baa"
+    },
+    {
+      "path": "tests/test_m2_signal_hiker.py",
+      "sha256": "b9f9d85d3ad6fb61f63cdcda2cb69074f4d180a7d8d363ba6924459b92e7bb41"
+    },
+    {
+      "path": "tests/test_m2_studio.py",
+      "sha256": "7e35a1d041d56b12510100876b020053decfc4aa2caa68e01318fa9b5e10557b"
+    },
+    {
+      "path": "m2_studio/media.py",
+      "sha256": "e34601fc7f7e1a0a435b957247329ac007cef0f6c4700a9ab8124cc721155eb6"
+    },
+    {
+      "path": "m2_studio/timeline.py",
+      "sha256": "231699bf3f8c02281836adfbe999933461258d4ea5619119ce107ee372a97e35"
+    },
+    {
+      "path": "m2_studio/cli.py",
+      "sha256": "0bd62c72b48d120f70bd930f14131554add36beb3e2512d40394d8941b560532"
+    },
+    {
+      "path": "m2_studio/providers.py",
+      "sha256": "0ae027397ff6885c556798307c285de393ea4fdabdfa2db51d6eda6aaa9ea94d"
+    },
+    {
+      "path": "studio/remotion/contract.mjs",
+      "sha256": "ec3fd3466bbeda0411a8fbe6c6b0191f7a4108b1c522d7c6e796f1f39c2e638e"
+    },
+    {
+      "path": "studio/remotion/test-contract.mjs",
+      "sha256": "fdd9be127af4d6244f0b87cf7983b39ba6db7011424a2178d2031bf16e1a2202"
+    }
+  ]
+}

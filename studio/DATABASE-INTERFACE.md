@@ -41,3 +41,20 @@ The contract schema is `schemas/signal-to-studio.schema.json`. Stable cross-syst
 `north_hux.v_social_studio_candidate_v1` is the social-analysis staging boundary. Migration `005_social_studio_review_gate.sql` hardens eligibility: the account must be qualified; rights must pass and be unexpired; every one of the 12 axes needs an explicit content-bound evidence and rights review with maker/reviewer separation; a reviewed `signal-to-studio.v1.1` social contract must be active; and a separate public-safe content release review must pass. Current calibration social records remain gated, and no active social contract row exists. The database does not infer or fill missing creative axes.
 
 Do not put Studio timing/composition fields into Signal source entities. Migration parity on another machine, least-privilege database roles, automated backups/restore drills, and a production service boundary remain gaps. This local mirror does not authorize provider generation, media reuse, publishing, deployment, or external writeback.
+
+## Scene-first v3 mapping
+
+For transcript-aligned video analysis use `schemas/video-scene-segmentation.schema.json`. Keep the database hierarchy explicit:
+
+```text
+video/content
+  └─ transcript + transcript_segment
+       └─ scene_unit (start/end ms + start/end frame bounds + boundary reason)
+            ├─ sampled source screenshots (2/4/6, each pointer + hash + role)
+            ├─ one scene collage (pointer + hash + rights state)
+            ├─ shot/asset layers and production route
+            ├─ voice/audio/subtitle plans
+            └─ edit/compositing/transition handoff
+```
+
+`frame_artifact` stores source screenshot pointers and hashes; `visual_event` stores cut/angle/overlay/effect observations; `transcript_segment` stores the language interval; the scene-unit record joins them without copying raw media into the database. Generated storyboard frames stay in Studio's separate asset lineage. A `creator_replica` route is represented only as an explicitly gated request with identity, consent, disclosure, provider, retention/deletion, and owner approval fields; it is blocked by default.

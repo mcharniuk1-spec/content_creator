@@ -1,0 +1,224 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "Your first AI project might fit on one sticky note."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "Pick something your team repeats. For this example, turning weekly notes into a draft update."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "Write down what goes in, what should come out, and who checks it."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "Give AI the drafting step. Keep the decision about what to send with a person."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "Now try one made-up example. Include a missing detail and see how the draft handles it."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "If it guesses, change the instruction: mark the gap instead of filling it."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "That gives you a small test you can inspect before connecting real work."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Take one repeated task. Name its input, its output, and the person responsible."
+    }
+  ],
+  "card_id": "M2-S05-01",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-01-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-01-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "ONE REPEATED TASK"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-01-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-01-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Upper panel: three invented weekly notes. Lower panel: presenter points to one repeated task."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Weekly notes → draft update"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-01-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Three editable boxes appear one at a time: input, output, reviewer."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "INPUT / OUTPUT / REVIEWER"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-01-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-01-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Diagram highlights Draft as AI-assisted and Send as human-owned."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "AI drafts · a person decides"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-01-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Synthetic note with an empty deadline field; highlight the empty cell."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "TEST A MISSING DETAIL"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-01-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "A designed draft changes from an invented date to Needs confirmation; label as example."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "EXAMPLE: NEEDS CONFIRMATION"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-01-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-01-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "TEST BEFORE CONNECTING"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-01-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Hold a readable three-field worksheet for the closing action."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Task: __  Output: __  Reviewer: __"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-01-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "a600259e0360a287515f89fec700b03493d9ba85a25d2be68373501c1d58f37f",
+  "title": "Choose the first task before the tool",
+  "width": 1080
+}

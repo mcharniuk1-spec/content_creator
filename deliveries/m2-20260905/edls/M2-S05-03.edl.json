@@ -1,0 +1,219 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "Before you ask AI to research, finish this sentence."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "I need this research so I can decide whether to test a meeting-note assistant."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "Now define the task: turn approved notes into an editable draft, with missing details visible."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "Ask for a short comparison against those requirements, with a source for each factual claim."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "This example table uses invented options. One sends automatically; another keeps the draft for review."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "The second fits this test better. That is a checklist result, not proof the product works."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "A person still checks the current terms and tries a harmless sample before connecting team information."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Write the decision first. Then collect only the information needed to make it."
+    }
+  ],
+  "card_id": "M2-S05-03",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-03-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-03-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "I NEED TO DECIDE…"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-03-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Complete the sentence with the meeting-note trial decision."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "TEST A MEETING-NOTE ASSISTANT?"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-03-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-03-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Presenter with the task's three requirements in the upper panel."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "EDITABLE · GAPS VISIBLE · REVIEW"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-03-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "A comparison table gains a source-reference column with placeholders marked required."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "EVERY CLAIM NEEDS A SOURCE"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-03-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Show research_shortlist fixture; large persistent Fictional options label."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "FICTIONAL OPTIONS A / B / C"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-03-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Highlight option B and the exact three satisfied criteria."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "CHECKLIST PASS ≠ PRODUCT PROOF"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-03-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-03-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "CHECK · TRY · REVIEW"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-03-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Hold decision-to-evidence worksheet; no website or unsupported link CTA."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Decision → required evidence"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-03-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "349131b969a614f303d7fad8e1d094cabd85c09cf60f887180c36148b9ef5a25",
+  "title": "Make research answer a work decision",
+  "width": 1080
+}

@@ -1,0 +1,509 @@
+{
+  "ai_boundary": "Preparation/draft only; no external action or commitment",
+  "assets": [
+    {
+      "asset_id": "M2-S05-02-AROLL",
+      "kind": "video",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner-performed original English presenter recording",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-02-VOICE",
+      "kind": "audio",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner's natural recorded voice for the authored script",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-02-DEMO",
+      "kind": "graphic",
+      "path": null,
+      "production_route": "remotion_deterministic",
+      "purpose": "Use source, deliberately faulty draft and deterministic issue output from the fixture. Do not call this a meeting transcription or actual model failure.",
+      "rights_state": "ORIGINAL_SYNTHETIC_FIXTURE",
+      "sha256": null,
+      "source_path": "demo-fixtures/meeting_check.json",
+      "source_sha256": "sha256:b2e2af4250e2d886287381d8f7c900108eaca5acd386cf18cea1b4b691250708",
+      "state": "FIXTURE_READY_CAPTURE_PENDING"
+    }
+  ],
+  "audience_job": "Review a draft list of meeting actions",
+  "audio": {
+    "mix": "Check intelligibility on phone speaker; measure final levels after recording",
+    "music": "none required; add only separately cleared optional music",
+    "source": "owner natural speech",
+    "state": "PENDING_SHOOT",
+    "voice_clone": false
+  },
+  "captions": {
+    "language": "en",
+    "max_lines": 2,
+    "safe_area": {
+      "bottom_px": 350,
+      "left_px": 96,
+      "right_px": 156,
+      "top_px": 150
+    },
+    "source": "Authored segment text; replace timing with reviewed alignment after owner recording",
+    "style": "Plain high-contrast sentence case; preserve unknown/missing wording; platform-overlay clearances must be visually checked",
+    "timing_state": "PLANNED_NOT_AUDIO_ALIGNED"
+  },
+  "card_id": "M2-S05-02",
+  "claims": [
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "METHOD",
+      "classification": "RECOMMENDATION",
+      "evidence_refs": [
+        "BRAND-PB:sections-3-6-8"
+      ],
+      "statement": "Illustrative source-checking method. No claim that the check detects every error."
+    },
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "EXAMPLE",
+      "classification": "SYNTHETIC_ILLUSTRATION",
+      "evidence_refs": [
+        "OWN-DEMO:meeting_check"
+      ],
+      "statement": "Use source, deliberately faulty draft and deterministic issue output from the fixture. Do not call this a meeting transcription or actual model failure."
+    }
+  ],
+  "concept_origin": "ORIGINAL_METHOD_ADAPTATION",
+  "duration_seconds": 50,
+  "empirical_limitations": [
+    "Sparse, selected legacy transcript sample; not all 2352 Reels text-analyzed",
+    "No reviewed source frames, scenes or comments in strategy lane",
+    "No proven hook-performance or business-outcome effect",
+    "Timings are original plans; a real voice take may require adjustment",
+    "Candidate concept does not bypass accepted Signal-release gate"
+  ],
+  "fps": 30,
+  "friction": "A fluent summary can hide missing ownership or dates",
+  "hook_alternatives": [
+    {
+      "hook_id": "H1",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "A neat meeting summary can still invent the next step."
+    },
+    {
+      "hook_id": "H2",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "Who agreed to that deadline? Check before sharing the AI summary."
+    },
+    {
+      "hook_id": "H3",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "The most useful field in your meeting summary might be blank."
+    }
+  ],
+  "human_decision": "The meeting owner confirms every action, owner and date",
+  "language": "en",
+  "optional_generated_inserts": [],
+  "originality": {
+    "common_function_overlap": "Permitted generic instructional functions do not prove copying or originality; independent expression review required",
+    "risk": "Similar high-level instructional beats are common; compare wording, example and shot sequence independently before approval",
+    "state": "MAKER_ORIGINAL_CANDIDATE"
+  },
+  "owned_test_plan": {
+    "horizon_days": 7,
+    "hypothesis": "The viewer can identify one repeated process and a human review step",
+    "interpretation": "Descriptive pilot; do not attribute causality from uncontrolled posts or compare uneven horizons",
+    "primary_outcome": "Owner-coded qualified process descriptions among substantive voluntary responses",
+    "secondary_metrics": [
+      "reach",
+      "plays",
+      "saves per 1000 views if observed",
+      "shares per 1000 views if observed"
+    ],
+    "status": "PROPOSED_OWNER_REVIEW"
+  },
+  "pillar": "M2 Teardowns",
+  "platform": "instagram_reels",
+  "production": {
+    "next_state": "SCRIPT_REVIEW_PENDING",
+    "notion_state": "PROJECTION_PENDING_INTEGRATOR",
+    "owner_media_state": "AWAITING_OWNER_SHOOT",
+    "provider_state": "DISABLED",
+    "publish_state": "NOT_RUN",
+    "recording_request": {
+      "audio": "quiet room; natural voice; avoid music baked into recording",
+      "b_roll": "optional owned hands/checklist footage only",
+      "delivery": "raw original clips; keep originals; note preferred take and any claim changes",
+      "orientation": "portrait 9:16",
+      "presenter": "owner choice",
+      "take": "one clean full script take plus three alternative opening takes"
+    },
+    "state": "PLANNED"
+  },
+  "repeated_process": "Review a draft list of meeting actions",
+  "resolution": {
+    "height": 1920,
+    "width": 1080
+  },
+  "review": {
+    "maker": "strategy_lane",
+    "owner_state": "CARD_APPROVAL_PENDING",
+    "release_state": "CANDIDATE",
+    "required_checks": [
+      "audience/task fit",
+      "source and claim limits",
+      "originality",
+      "timed read-through",
+      "actual demo matches receipt",
+      "rights",
+      "visual legibility"
+    ],
+    "review_state": "REVIEW_PENDING",
+    "reviewer": null
+  },
+  "rights": {
+    "all_demo_data": "SYNTHETIC_OR_ORIGINAL_FIXTURE",
+    "competitor_expression_used": false,
+    "competitor_media_used": false,
+    "likeness_generation": "NOT_AUTHORIZED_OR_REQUIRED",
+    "no_copy_boundary": "Do not reproduce source dialogue, branded layout, fictional character, distinctive shot order, music, unverified case study or private information",
+    "owner_shoot": "PENDING_UPLOAD_AND_RIGHTS_CONFIRMATION",
+    "real_customer_data_used": false
+  },
+  "run_id": "20260905-two-engine-execution-v1",
+  "schema": "m2.script-card-candidate.v1",
+  "segments": [
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 4000,
+      "segment_id": "M2-S05-02-L01",
+      "shot_id": "M2-S05-02-SH01",
+      "spoken_text": "A neat meeting summary can still invent the next step.",
+      "start_ms": 0
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 11000,
+      "segment_id": "M2-S05-02-L02",
+      "shot_id": "M2-S05-02-SH02",
+      "spoken_text": "Here is a made-up meeting note: check the room. Nobody has agreed who will do it.",
+      "start_ms": 4000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 18000,
+      "segment_id": "M2-S05-02-L03",
+      "shot_id": "M2-S05-02-SH03",
+      "spoken_text": "This deliberately faulty draft assigns a person and a deadline. Neither appears in the note.",
+      "start_ms": 11000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 25000,
+      "segment_id": "M2-S05-02-L04",
+      "shot_id": "M2-S05-02-SH04",
+      "spoken_text": "Ask for three fields: action, owner, and due date. Missing information should stay visibly unknown.",
+      "start_ms": 18000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 32000,
+      "segment_id": "M2-S05-02-L05",
+      "shot_id": "M2-S05-02-SH05",
+      "spoken_text": "Then compare each row with the original note. AI prepares the draft; the meeting owner checks it.",
+      "start_ms": 25000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 38000,
+      "segment_id": "M2-S05-02-L06",
+      "shot_id": "M2-S05-02-SH06",
+      "spoken_text": "If ownership is missing, ask the team. Do not let a tidy table make the decision.",
+      "start_ms": 32000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 44000,
+      "segment_id": "M2-S05-02-L07",
+      "shot_id": "M2-S05-02-SH07",
+      "spoken_text": "Only the confirmed version becomes the action list. Keep the source note beside it.",
+      "start_ms": 38000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 50000,
+      "segment_id": "M2-S05-02-L08",
+      "shot_id": "M2-S05-02-SH08",
+      "spoken_text": "Try this on a fictional note first: can you spot what was never agreed?",
+      "start_ms": 44000
+    }
+  ],
+  "selected_hook_id": "H1",
+  "selection_basis": "Clear audience task and production simplicity; no empirical winner claim",
+  "shots": [
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE",
+        "M2-S05-02-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 120,
+      "end_ms": 4000,
+      "information_job": "Create a concrete review question",
+      "mode": "a_roll",
+      "on_screen_text": "LOOKS COMPLETE ≠ AGREED",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-02-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-02-SC01",
+      "shot_id": "M2-S05-02-SH01",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 0,
+      "start_ms": 0,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: create a concrete review question",
+      "visual": "Presenter looks toward a clean action table that contains one highlighted uncertainty."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE",
+        "M2-S05-02-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 330,
+      "end_ms": 11000,
+      "information_job": "Establish exact input",
+      "mode": "demo",
+      "on_screen_text": "FICTIONAL MEETING NOTE",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-02-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-02-SC02",
+      "shot_id": "M2-S05-02-SH02",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 120,
+      "start_ms": 4000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: establish exact input",
+      "visual": "Show the synthetic source note with only Check room availability."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE",
+        "M2-S05-02-AROLL",
+        "M2-S05-02-DEMO"
+      ],
+      "composition": "upper 58% evidence / lower 42% presenter",
+      "end_frame": 540,
+      "end_ms": 18000,
+      "information_job": "Make the mismatch inspectable",
+      "mode": "split_screen",
+      "on_screen_text": "NOT IN THE SOURCE",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-02-DEMO",
+          "height_fraction": 0.58,
+          "panel": "top"
+        },
+        {
+          "asset_id": "M2-S05-02-AROLL",
+          "height_fraction": 0.42,
+          "panel": "bottom"
+        }
+      ],
+      "scene_id": "M2-S05-02-SC03",
+      "shot_id": "M2-S05-02-SH03",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 330,
+      "start_ms": 11000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: make the mismatch inspectable",
+      "visual": "Source left, deliberately faulty draft right; highlight unsupported owner and date."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 750,
+      "end_ms": 25000,
+      "information_job": "Show the desired output schema",
+      "mode": "motion_graphic",
+      "on_screen_text": "ACTION / OWNER / DUE DATE",
+      "panel_map": [],
+      "scene_id": "M2-S05-02-SC04",
+      "shot_id": "M2-S05-02-SH04",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 540,
+      "start_ms": 18000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: show the desired output schema",
+      "visual": "Three table headers and visible Unknown cells; no polished invented values."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE",
+        "M2-S05-02-AROLL",
+        "M2-S05-02-DEMO"
+      ],
+      "composition": "upper 58% evidence / lower 42% presenter",
+      "end_frame": 960,
+      "end_ms": 32000,
+      "information_job": "Describe the human review",
+      "mode": "split_screen",
+      "on_screen_text": "DRAFT → SOURCE CHECK",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-02-DEMO",
+          "height_fraction": 0.58,
+          "panel": "top"
+        },
+        {
+          "asset_id": "M2-S05-02-AROLL",
+          "height_fraction": 0.42,
+          "panel": "bottom"
+        }
+      ],
+      "scene_id": "M2-S05-02-SC05",
+      "shot_id": "M2-S05-02-SH05",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 750,
+      "start_ms": 25000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: describe the human review",
+      "visual": "Presenter below; row-to-source connectors above."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE",
+        "M2-S05-02-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 1140,
+      "end_ms": 38000,
+      "information_job": "Resolve missing facts through the responsible person",
+      "mode": "a_roll",
+      "on_screen_text": "ASK THE TEAM",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-02-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-02-SC06",
+      "shot_id": "M2-S05-02-SH06",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 960,
+      "start_ms": 32000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: resolve missing facts through the responsible person",
+      "visual": "Presenter places a question marker beside the owner cell."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1320,
+      "end_ms": 44000,
+      "information_job": "Show the release gate",
+      "mode": "motion_graphic",
+      "on_screen_text": "CONFIRM BEFORE SHARING",
+      "panel_map": [],
+      "scene_id": "M2-S05-02-SC07",
+      "shot_id": "M2-S05-02-SH07",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1140,
+      "start_ms": 38000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: show the release gate",
+      "visual": "Version tag changes from Draft to Confirmed only after a person marks review."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-02-VOICE",
+        "M2-S05-02-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1500,
+      "end_ms": 50000,
+      "information_job": "Invite a bounded independent test",
+      "mode": "demo",
+      "on_screen_text": "WHAT WAS NEVER AGREED?",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-02-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-02-SC08",
+      "shot_id": "M2-S05-02-SH08",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1320,
+      "start_ms": 44000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: invite a bounded independent test",
+      "visual": "Hold source and blank review fields together as a small exercise."
+    }
+  ],
+  "source_map": [
+    {
+      "source_ref": "TR-027",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-050",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "sha256": "sha256:87474f8828e80531304bff8b776e9728567dd9ddb138186fea491396f8d8f32c",
+      "source_ref": "BRAND-PB",
+      "transfer": "owner-supplied brand and claims constraints"
+    },
+    {
+      "sha256": "sha256:b2e2af4250e2d886287381d8f7c900108eaca5acd386cf18cea1b4b691250708",
+      "source_ref": "OWN-DEMO:meeting_check",
+      "transfer": "Use source, deliberately faulty draft and deterministic issue output from the fixture. Do not call this a meeting transcription or actual model failure."
+    }
+  ],
+  "spoken_script": "A neat meeting summary can still invent the next step. Here is a made-up meeting note: check the room. Nobody has agreed who will do it. This deliberately faulty draft assigns a person and a deadline. Neither appears in the note. Ask for three fields: action, owner, and due date. Missing information should stay visibly unknown. Then compare each row with the original note. AI prepares the draft; the meeting owner checks it. If ownership is missing, ask the team. Do not let a tidy table make the decision. Only the confirmed version becomes the action list. Keep the source note beside it. Try this on a fictional note first: can you spot what was never agreed?",
+  "spoken_word_count": 117,
+  "synthesis_note": "Use explanation-before-output and review checkpoints; the fictional meeting and missing-owner test are original M2 examples.",
+  "title": "The meeting summary needs an unknown field"
+}

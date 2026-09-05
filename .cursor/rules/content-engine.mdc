@@ -1,0 +1,9 @@
+---
+description: ArchFlow Content Engine routing and safety contract
+alwaysApply: true
+---
+
+Read the parent ArchFlow `AGENTS.md`, then this folder's `AGENTS.md`, `README.md`, and latest run handout. Phase 1 is public research and local previsualization only. No installs, credentials, logged-in social access, Figma mutation, media provider calls, private media, publishing, deployment, or Git push without exact approval.
+# Content Engine routing contract
+
+When a task mentions Notion, use the already-connected Notion MCP tools and inspect their schemas before acting. Do not use a Notion webview, browser automation, interactive sign-in, cookies, or credential prompts when MCP is available. If the connected MCP is unavailable or insufficient, record a `GAP` and stop rather than falling back to browser authentication. External Notion mutation remains owner-gated and requires target proof plus readback.

@@ -1,0 +1,219 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "Free software still needs someone to own the workflow."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "Suppose a tool prepares your weekly update. The software price is only one box on the checklist."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "Check whether it needs hosting, paid model calls, setup work, or access to team information."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "Then name the person who checks the output and the person who handles a failed run."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "For this first test, keep the result as a draft. A failure should not publish an update."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "We are not comparing prices here. These are questions to answer before choosing the setup."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "A simple tool with clear ownership may suit your task. You still need to test that fit."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Before installing anything, fill in three fields: running needs, reviewer, and failure owner."
+    }
+  ],
+  "card_id": "M2-S05-06",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-06-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-06-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "FREE SOFTWARE · REAL RESPONSIBILITIES"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-06-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-06-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Weekly update process beside a checklist with software price as one row."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "ONE PRICE FIELD"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-06-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Four unpriced items: hosting, model use, setup, data access."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "CHECK THE RUNNING NEEDS"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-06-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Reviewer and failure-owner fields appear, still blank."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "NAME TWO RESPONSIBILITIES"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-06-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Designed state display changes Running → Failed; output remains Draft."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "FAILED RUN · DRAFT KEPT"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-06-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-06-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "QUESTIONS, NOT A PRICE COMPARISON"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-06-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Small task card joins a single accountable owner; no expanding agent swarm."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "TASK FIT + OWNERSHIP"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-06-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Hold the three-field worksheet on screen."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "RUNNING NEEDS / REVIEWER / FAILURE OWNER"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-06-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "110dd5b13935c8437422dcb1795a91f99a725b88bb95aa36fdd01e8b239d9c10",
+  "title": "Free software still needs an owner",
+  "width": 1080
+}

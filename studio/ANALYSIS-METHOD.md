@@ -12,6 +12,14 @@ Register canonical URL, platform, observed time, route, rights state, retention 
 
 Create intervals for every cut, composition change, overlay change, camera move that changes attention, sound-led beat, or semantic reveal. Store millisecond start/end boundaries. Do not force a fixed frame rate into the analytical model: one record equals one meaningful visual state. The Studio library uses one-second frames only as a compact review scaffold.
 
+### Scene-first extraction (v3)
+
+For production-facing analysis, persist a `scene-unit` record using `schemas/video-scene-segmentation.schema.json`. A scene-unit is bounded by a meaningful shot/angle/B-roll/hook/generated-scene/split-screen/screen/effect/voice or state change. Record transcript segment IDs, start/end timestamps, source frame numbers when known, and a boundary reason. A subtitle cue alone is not a scene boundary.
+
+For each scene-unit, capture start and end screenshots. Add two intermediate screenshots when the scene has a meaningful progression, effect, camera move, or proof step; add four intermediates for a long hold, multi-step interaction, sustained effect, or continuity risk (six samples total). The result is one ordered collage per scene-unit, while raw screenshots remain separate hashed evidence artifacts. Keep source-evidence collages separate from generated storyboard collages.
+
+The hierarchy is `video → scene-unit → shot/segment → screenshots or generated assets → edit timeline`. Bind the semantic transcript span to the scene, then specify production route (`creator_recorded`, `fictional_generated_scene`, `screen_recorded`, `split_screen_composite`, `motion_graphic`, `licensed_footage`, `hybrid`, or gated `creator_replica`), voice route, subtitle mode, audio stems, compositing order, transitions, safe zones, and AI-edit operations. Voice identity and consent are never inferred from transcript text.
+
 ## 3. Separate layers
 
 For every interval identify:

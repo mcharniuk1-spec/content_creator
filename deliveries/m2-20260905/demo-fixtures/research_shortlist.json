@@ -1,0 +1,24 @@
+{
+  "input": [
+    {
+      "editable_draft": true,
+      "external_send_default": true,
+      "option": "A",
+      "uncertainty_visible": false
+    },
+    {
+      "editable_draft": true,
+      "external_send_default": false,
+      "option": "B",
+      "uncertainty_visible": true
+    },
+    {
+      "editable_draft": false,
+      "external_send_default": false,
+      "option": "C",
+      "uncertainty_visible": true
+    }
+  ],
+  "label": "Invented evaluation options; no product recommendation",
+  "selection": "B passes this illustrative checklist; human still decides suitability"
+}

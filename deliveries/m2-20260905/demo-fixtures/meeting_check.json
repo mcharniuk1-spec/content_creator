@@ -1,0 +1,40 @@
+{
+  "draft": [
+    {
+      "due": "Friday",
+      "owner": "Team lead",
+      "task": "Prepare draft agenda"
+    },
+    {
+      "due": "Thursday",
+      "owner": "Coordinator",
+      "task": "Check room availability"
+    }
+  ],
+  "issues": [
+    {
+      "code": "UNSUPPORTED_IN_SOURCE",
+      "field": "owner",
+      "row": 2
+    },
+    {
+      "code": "UNSUPPORTED_IN_SOURCE",
+      "field": "due",
+      "row": 2
+    }
+  ],
+  "label": "Deliberately faulty synthetic meeting draft; no AI model generated it",
+  "output_state": "NEEDS_HUMAN_REVIEW",
+  "source": [
+    {
+      "due": "Friday",
+      "owner": "Team lead",
+      "task": "Prepare draft agenda"
+    },
+    {
+      "due": null,
+      "owner": null,
+      "task": "Check room availability"
+    }
+  ]
+}

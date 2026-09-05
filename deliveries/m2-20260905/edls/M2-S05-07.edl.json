@@ -1,0 +1,214 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "This empty cell should not become a zero."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "While checking our research workflow, we made a tiny test with three invented rows."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "The first has zero saves. The second has no save observation. The third has twelve."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "Those first two rows mean different things: observed zero, and information we do not have."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "Our local check preserves that difference when it calculates the rate. The missing result stays empty."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "This tests one rule. It does not prove the whole report, or explain why a video performed."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "A person still reviews which rows can be compared and what evidence is missing."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Open one report you use. Can you tell a measured zero from an unknown?"
+    }
+  ],
+  "card_id": "M2-S05-07",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-07-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-07-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "EMPTY IS NOT ZERO"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-07-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Show the three-row fixture with persistent Synthetic test data label."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "THREE INVENTED ROWS"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-07-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Rows A/B/C highlight 0, missing and 12 in order; all have 1000 example views."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "0 / MISSING / 12"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-07-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Observed and Missing badges sit below separate cells."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "OBSERVED ZERO / NOT OBSERVED"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-07-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Show exact fixture output and the receipt's zero_preserved and missing_preserved checks."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "LOCAL RULE CHECK: PASS"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-07-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-07-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "ONE RULE ≠ WHOLE REPORT"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-07-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "A review pointer marks one row as insufficient data for the selected comparison."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "REVIEW COMPARABILITY"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-07-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Hold a blank report cell legend the viewer can copy."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "DO YOUR BLANKS HAVE A MEANING?"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-07-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "dbe4090b4f90b950f63fca316f26a945b2e4531d0ab5dd47edabe6741e90d7ce",
+  "title": "A missing metric is not a zero",
+  "width": 1080
+}

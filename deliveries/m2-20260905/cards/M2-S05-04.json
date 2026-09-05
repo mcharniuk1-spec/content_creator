@@ -1,0 +1,499 @@
+{
+  "ai_boundary": "Preparation/draft only; no external action or commitment",
+  "assets": [
+    {
+      "asset_id": "M2-S05-04-AROLL",
+      "kind": "video",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner-performed original English presenter recording",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-04-VOICE",
+      "kind": "audio",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner's natural recorded voice for the authored script",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-04-DEMO",
+      "kind": "graphic",
+      "path": null,
+      "production_route": "remotion_deterministic",
+      "purpose": "Present empty evaluation forms as a testing plan. Do not fill performance rows without actual tool-specific runs and receipts.",
+      "rights_state": "ORIGINAL_SYNTHETIC_FIXTURE",
+      "sha256": null,
+      "source_path": "demo-fixtures/meeting_check.json",
+      "source_sha256": "sha256:b2e2af4250e2d886287381d8f7c900108eaca5acd386cf18cea1b4b691250708",
+      "state": "FIXTURE_READY_CAPTURE_PENDING"
+    }
+  ],
+  "audience_job": "Evaluate a new AI assistant for weekly updates",
+  "audio": {
+    "mix": "Check intelligibility on phone speaker; measure final levels after recording",
+    "music": "none required; add only separately cleared optional music",
+    "source": "owner natural speech",
+    "state": "PENDING_SHOOT",
+    "voice_clone": false
+  },
+  "captions": {
+    "language": "en",
+    "max_lines": 2,
+    "safe_area": {
+      "bottom_px": 350,
+      "left_px": 96,
+      "right_px": 156,
+      "top_px": 150
+    },
+    "source": "Authored segment text; replace timing with reviewed alignment after owner recording",
+    "style": "Plain high-contrast sentence case; preserve unknown/missing wording; platform-overlay clearances must be visually checked",
+    "timing_state": "PLANNED_NOT_AUDIO_ALIGNED"
+  },
+  "card_id": "M2-S05-04",
+  "claims": [
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "METHOD",
+      "classification": "RECOMMENDATION",
+      "evidence_refs": [
+        "BRAND-PB:sections-3-6-8"
+      ],
+      "statement": "A proposed comparison protocol; no model reliability or superiority claim."
+    },
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "EXAMPLE",
+      "classification": "SYNTHETIC_ILLUSTRATION",
+      "evidence_refs": [
+        "OWN-DEMO:meeting_check"
+      ],
+      "statement": "Present empty evaluation forms as a testing plan. Do not fill performance rows without actual tool-specific runs and receipts."
+    }
+  ],
+  "concept_origin": "ORIGINAL_METHOD_ADAPTATION",
+  "duration_seconds": 50,
+  "empirical_limitations": [
+    "Sparse, selected legacy transcript sample; not all 2352 Reels text-analyzed",
+    "No reviewed source frames, scenes or comments in strategy lane",
+    "No proven hook-performance or business-outcome effect",
+    "Timings are original plans; a real voice take may require adjustment",
+    "Candidate concept does not bypass accepted Signal-release gate"
+  ],
+  "fps": 30,
+  "friction": "Comparisons change both the tool and task, hiding whether the result is useful",
+  "hook_alternatives": [
+    {
+      "hook_id": "H1",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "A tool demo is a reason to test, not switch."
+    },
+    {
+      "hook_id": "H2",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "Keep the task the same when you compare AI tools."
+    },
+    {
+      "hook_id": "H3",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "That new assistant looks impressive. Can it handle your ordinary update?"
+    }
+  ],
+  "human_decision": "The process owner decides whether a candidate tool meets a fixed checklist",
+  "language": "en",
+  "optional_generated_inserts": [],
+  "originality": {
+    "common_function_overlap": "Permitted generic instructional functions do not prove copying or originality; independent expression review required",
+    "risk": "Similar high-level instructional beats are common; compare wording, example and shot sequence independently before approval",
+    "state": "MAKER_ORIGINAL_CANDIDATE"
+  },
+  "owned_test_plan": {
+    "horizon_days": 7,
+    "hypothesis": "The viewer can identify one repeated process and a human review step",
+    "interpretation": "Descriptive pilot; do not attribute causality from uncontrolled posts or compare uneven horizons",
+    "primary_outcome": "Owner-coded qualified process descriptions among substantive voluntary responses",
+    "secondary_metrics": [
+      "reach",
+      "plays",
+      "saves per 1000 views if observed",
+      "shares per 1000 views if observed"
+    ],
+    "status": "PROPOSED_OWNER_REVIEW"
+  },
+  "pillar": "M2 Radar",
+  "platform": "instagram_reels",
+  "production": {
+    "next_state": "SCRIPT_REVIEW_PENDING",
+    "notion_state": "PROJECTION_PENDING_INTEGRATOR",
+    "owner_media_state": "AWAITING_OWNER_SHOOT",
+    "provider_state": "DISABLED",
+    "publish_state": "NOT_RUN",
+    "recording_request": {
+      "audio": "quiet room; natural voice; avoid music baked into recording",
+      "b_roll": "optional owned hands/checklist footage only",
+      "delivery": "raw original clips; keep originals; note preferred take and any claim changes",
+      "orientation": "portrait 9:16",
+      "presenter": "owner choice",
+      "take": "one clean full script take plus three alternative opening takes"
+    },
+    "state": "PLANNED"
+  },
+  "repeated_process": "Evaluate a new AI assistant for weekly updates",
+  "resolution": {
+    "height": 1920,
+    "width": 1080
+  },
+  "review": {
+    "maker": "strategy_lane",
+    "owner_state": "CARD_APPROVAL_PENDING",
+    "release_state": "CANDIDATE",
+    "required_checks": [
+      "audience/task fit",
+      "source and claim limits",
+      "originality",
+      "timed read-through",
+      "actual demo matches receipt",
+      "rights",
+      "visual legibility"
+    ],
+    "review_state": "REVIEW_PENDING",
+    "reviewer": null
+  },
+  "rights": {
+    "all_demo_data": "SYNTHETIC_OR_ORIGINAL_FIXTURE",
+    "competitor_expression_used": false,
+    "competitor_media_used": false,
+    "likeness_generation": "NOT_AUTHORIZED_OR_REQUIRED",
+    "no_copy_boundary": "Do not reproduce source dialogue, branded layout, fictional character, distinctive shot order, music, unverified case study or private information",
+    "owner_shoot": "PENDING_UPLOAD_AND_RIGHTS_CONFIRMATION",
+    "real_customer_data_used": false
+  },
+  "run_id": "20260905-two-engine-execution-v1",
+  "schema": "m2.script-card-candidate.v1",
+  "segments": [
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 4000,
+      "segment_id": "M2-S05-04-L01",
+      "shot_id": "M2-S05-04-SH01",
+      "spoken_text": "A tool demo is a reason to test, not switch.",
+      "start_ms": 0
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 11000,
+      "segment_id": "M2-S05-04-L02",
+      "shot_id": "M2-S05-04-SH02",
+      "spoken_text": "Suppose your repeated task is turning weekly notes into an update. Keep one fictional input ready.",
+      "start_ms": 4000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 18000,
+      "segment_id": "M2-S05-04-L03",
+      "shot_id": "M2-S05-04-SH03",
+      "spoken_text": "Run that same input through a candidate tool using the same instructions and required output.",
+      "start_ms": 11000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 25000,
+      "segment_id": "M2-S05-04-L04",
+      "shot_id": "M2-S05-04-SH04",
+      "spoken_text": "Check three things: did it preserve the facts, show missing information, and leave an editable draft?",
+      "start_ms": 18000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 32000,
+      "segment_id": "M2-S05-04-L05",
+      "shot_id": "M2-S05-04-SH05",
+      "spoken_text": "Record the result beside the tool version and the date. Include the part that failed.",
+      "start_ms": 25000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 38000,
+      "segment_id": "M2-S05-04-L06",
+      "shot_id": "M2-S05-04-SH06",
+      "spoken_text": "A polished answer is not the whole test. Someone still has to review and maintain the workflow.",
+      "start_ms": 32000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 44000,
+      "segment_id": "M2-S05-04-L07",
+      "shot_id": "M2-S05-04-SH07",
+      "spoken_text": "If it misses a requirement, adjust the task or reject this candidate. You do not need to switch.",
+      "start_ms": 38000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 50000,
+      "segment_id": "M2-S05-04-L08",
+      "shot_id": "M2-S05-04-SH08",
+      "spoken_text": "Keep one example and one checklist. Use them for your next tool evaluation.",
+      "start_ms": 44000
+    }
+  ],
+  "selected_hook_id": "H1",
+  "selection_basis": "Clear audience task and production simplicity; no empirical winner claim",
+  "shots": [
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE",
+        "M2-S05-04-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 120,
+      "end_ms": 4000,
+      "information_job": "Turn novelty into a practical decision",
+      "mode": "a_roll",
+      "on_screen_text": "NEW TOOL → SMALL TEST",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-04-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-04-SC01",
+      "shot_id": "M2-S05-04-SH01",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 0,
+      "start_ms": 0,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: turn novelty into a practical decision",
+      "visual": "Presenter places a Test card beside a generic New tool card."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE",
+        "M2-S05-04-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 330,
+      "end_ms": 11000,
+      "information_job": "Freeze the example input",
+      "mode": "demo",
+      "on_screen_text": "SAME INPUT: SAMPLE A",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-04-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-04-SC02",
+      "shot_id": "M2-S05-04-SH02",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 120,
+      "start_ms": 4000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: freeze the example input",
+      "visual": "One synthetic weekly-note file appears with a stable Sample A identifier."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE",
+        "M2-S05-04-AROLL",
+        "M2-S05-04-DEMO"
+      ],
+      "composition": "upper 58% evidence / lower 42% presenter",
+      "end_frame": 540,
+      "end_ms": 18000,
+      "information_job": "Explain a controlled comparison plan",
+      "mode": "split_screen",
+      "on_screen_text": "SAME TASK · SAME INSTRUCTIONS",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-04-DEMO",
+          "height_fraction": 0.58,
+          "panel": "top"
+        },
+        {
+          "asset_id": "M2-S05-04-AROLL",
+          "height_fraction": 0.42,
+          "panel": "bottom"
+        }
+      ],
+      "scene_id": "M2-S05-04-SC03",
+      "shot_id": "M2-S05-04-SH03",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 330,
+      "start_ms": 11000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: explain a controlled comparison plan",
+      "visual": "Two empty tool-neutral test panels receive the same input and instruction labels."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 750,
+      "end_ms": 25000,
+      "information_job": "Define acceptance criteria",
+      "mode": "motion_graphic",
+      "on_screen_text": "FACTS / UNKNOWNS / EDITABLE",
+      "panel_map": [],
+      "scene_id": "M2-S05-04-SC04",
+      "shot_id": "M2-S05-04-SH04",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 540,
+      "start_ms": 18000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: define acceptance criteria",
+      "visual": "Three checklist rows appear with unchecked boxes."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 960,
+      "end_ms": 32000,
+      "information_job": "Make the evidence reproducible",
+      "mode": "motion_graphic",
+      "on_screen_text": "RECORD THE FAILURE TOO",
+      "panel_map": [],
+      "scene_id": "M2-S05-04-SC05",
+      "shot_id": "M2-S05-04-SH05",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 750,
+      "start_ms": 25000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: make the evidence reproducible",
+      "visual": "A blank test log shows tool, version, date, result and failure columns."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE",
+        "M2-S05-04-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 1140,
+      "end_ms": 38000,
+      "information_job": "Show hidden work ownership",
+      "mode": "a_roll",
+      "on_screen_text": "WHO CHECKS? WHO MAINTAINS?",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-04-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-04-SC06",
+      "shot_id": "M2-S05-04-SH06",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 960,
+      "start_ms": 32000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: show hidden work ownership",
+      "visual": "Presenter points to Reviewer and Maintainer fields below the output."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1320,
+      "end_ms": 44000,
+      "information_job": "Explain the decision boundary",
+      "mode": "motion_graphic",
+      "on_screen_text": "PASS THE TASK OR STOP",
+      "panel_map": [],
+      "scene_id": "M2-S05-04-SC07",
+      "shot_id": "M2-S05-04-SH07",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1140,
+      "start_ms": 38000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: explain the decision boundary",
+      "visual": "Two branches: revise test or decline tool; no unsupported winner."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-04-VOICE",
+        "M2-S05-04-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1500,
+      "end_ms": 50000,
+      "information_job": "Enable the viewer's next action",
+      "mode": "demo",
+      "on_screen_text": "KEEP YOUR TEST CASE",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-04-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-04-SC08",
+      "shot_id": "M2-S05-04-SH08",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1320,
+      "start_ms": 44000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: enable the viewer's next action",
+      "visual": "Hold an empty reusable checklist and Sample A card."
+    }
+  ],
+  "source_map": [
+    {
+      "source_ref": "TR-036",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-042",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-050",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "sha256": "sha256:87474f8828e80531304bff8b776e9728567dd9ddb138186fea491396f8d8f32c",
+      "source_ref": "BRAND-PB",
+      "transfer": "owner-supplied brand and claims constraints"
+    },
+    {
+      "sha256": "sha256:b2e2af4250e2d886287381d8f7c900108eaca5acd386cf18cea1b4b691250708",
+      "source_ref": "OWN-DEMO:meeting_check",
+      "transfer": "Present empty evaluation forms as a testing plan. Do not fill performance rows without actual tool-specific runs and receipts."
+    }
+  ],
+  "spoken_script": "A tool demo is a reason to test, not switch. Suppose your repeated task is turning weekly notes into an update. Keep one fictional input ready. Run that same input through a candidate tool using the same instructions and required output. Check three things: did it preserve the facts, show missing information, and leave an editable draft? Record the result beside the tool version and the date. Include the part that failed. A polished answer is not the whole test. Someone still has to review and maintain the workflow. If it misses a requirement, adjust the task or reject this candidate. You do not need to switch. Keep one example and one checklist. Use them for your next tool evaluation.",
+  "spoken_word_count": 120,
+  "synthesis_note": "Combine repeated-input testing with tool-fit and review functions; no source feature or superiority claim is inherited.",
+  "title": "Test the same task before changing tools"
+}

@@ -1,0 +1,6 @@
+{
+  "approved_fact": "The team can review a request. Delivery dates require a person to confirm.",
+  "decision": "NEEDS_HUMAN_CORRECTION",
+  "draft": "Your delivery is guaranteed tomorrow.",
+  "label": "Synthetic policy and draft; no customer data"
+}

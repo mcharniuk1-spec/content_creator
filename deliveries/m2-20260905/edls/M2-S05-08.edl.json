@@ -1,0 +1,219 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "We gave this workflow a draft it should reject."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "It is a small local test, using a fictional meeting note and a deliberately faulty action list."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "The draft adds an owner and a deadline that the source never supplied."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "Our check flags both fields and changes the result to needs human review. It does not send anything."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "The useful part is the reason: these details are unsupported. The process owner can now resolve them."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "After a correction, check again. Do not hide the failure by calling the original output finished."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "This catches the two problems in our fixture. It is not a test of every possible AI error."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Pick one missing-input case in your workflow. Decide who sees it and what happens next."
+    }
+  ],
+  "card_id": "M2-S05-08",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-08-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-08-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "A DRAFT IT SHOULD REJECT"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-08-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Show source and draft from the fixture with Synthetic example label."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "LOCAL TEST · FICTIONAL NOTE"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-08-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-08-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Highlight missing source fields and unsupported draft owner/date."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "TWO UNSUPPORTED FIELDS"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-08-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Show actual issues list and output_state from the deterministic fixture."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "NEEDS HUMAN REVIEW"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-08-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Each issue points to Process owner; keep readable reason text."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "WHY IT STOPPED → WHO RESPONDS"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-08-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Designed correction loop returns to Check; Draft status remains visible."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "CORRECT → CHECK AGAIN"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-08-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-08-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "BOUNDED TEST, NOT UNIVERSAL ACCURACY"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-08-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Hold a worksheet: missing input, owner, next action."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "MISSING INPUT / OWNER / NEXT ACTION"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-08-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "2ed67d94902f35508633ccecdc375da51b7438226a7eae7373fca1681257cac5",
+  "title": "Give the workflow a useful failure state",
+  "width": 1080
+}

@@ -1,0 +1,512 @@
+{
+  "ai_boundary": "Preparation/draft only; no external action or commitment",
+  "assets": [
+    {
+      "asset_id": "M2-S05-07-AROLL",
+      "kind": "video",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner-performed original English presenter recording",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-07-VOICE",
+      "kind": "audio",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner's natural recorded voice for the authored script",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-07-DEMO",
+      "kind": "graphic",
+      "path": null,
+      "production_route": "remotion_deterministic",
+      "purpose": "Record or render the exact hashed fixture and demo receipt. Keep the synthetic label visible. Do not show private competitor rows, handles or dashboards.",
+      "rights_state": "ORIGINAL_SYNTHETIC_FIXTURE",
+      "sha256": null,
+      "source_path": "demo-fixtures/missing_metric.json",
+      "source_sha256": "sha256:1deaf10f7afbf40ccd9473f65201e8b2ca92a680ba0b013775a3fc9f7f1e2715",
+      "state": "FIXTURE_READY_CAPTURE_PENDING"
+    }
+  ],
+  "audience_job": "Check a simple report before using it to choose what to investigate",
+  "audio": {
+    "mix": "Check intelligibility on phone speaker; measure final levels after recording",
+    "music": "none required; add only separately cleared optional music",
+    "source": "owner natural speech",
+    "state": "PENDING_SHOOT",
+    "voice_clone": false
+  },
+  "captions": {
+    "language": "en",
+    "max_lines": 2,
+    "safe_area": {
+      "bottom_px": 350,
+      "left_px": 96,
+      "right_px": 156,
+      "top_px": 150
+    },
+    "source": "Authored segment text; replace timing with reviewed alignment after owner recording",
+    "style": "Plain high-contrast sentence case; preserve unknown/missing wording; platform-overlay clearances must be visually checked",
+    "timing_state": "PLANNED_NOT_AUDIO_ALIGNED"
+  },
+  "card_id": "M2-S05-07",
+  "claims": [
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "METHOD",
+      "classification": "RECOMMENDATION",
+      "evidence_refs": [
+        "BRAND-PB:sections-3-6-8"
+      ],
+      "statement": "Verified local deterministic behavior on three synthetic rows only; no reliability extrapolation."
+    },
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "EXAMPLE",
+      "classification": "SYNTHETIC_ILLUSTRATION",
+      "evidence_refs": [
+        "OWN-DEMO:missing_metric"
+      ],
+      "statement": "Record or render the exact hashed fixture and demo receipt. Keep the synthetic label visible. Do not show private competitor rows, handles or dashboards."
+    },
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "TEST",
+      "classification": "FACT_LOCAL_DETERMINISTIC_TEST",
+      "evidence_refs": [
+        "demo-receipt.json",
+        "OWN-DEMO:missing_metric"
+      ],
+      "statement": "Verified local deterministic behavior on three synthetic rows only; no reliability extrapolation."
+    }
+  ],
+  "concept_origin": "OWN_INTERNAL_TEST",
+  "duration_seconds": 50,
+  "empirical_limitations": [
+    "Sparse, selected legacy transcript sample; not all 2352 Reels text-analyzed",
+    "No reviewed source frames, scenes or comments in strategy lane",
+    "No proven hook-performance or business-outcome effect",
+    "Timings are original plans; a real voice take may require adjustment",
+    "Candidate concept does not bypass accepted Signal-release gate"
+  ],
+  "fps": 30,
+  "friction": "An absent observation can be silently converted into a measured zero",
+  "hook_alternatives": [
+    {
+      "hook_id": "H1",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "This empty cell should not become a zero."
+    },
+    {
+      "hook_id": "H2",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "Before you trust an AI report, check its blanks."
+    },
+    {
+      "hook_id": "H3",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "One missing number can change what you think a report is saying."
+    }
+  ],
+  "human_decision": "The analyst preserves missingness and decides what can fairly be compared",
+  "language": "en",
+  "optional_generated_inserts": [],
+  "originality": {
+    "common_function_overlap": "Permitted generic instructional functions do not prove copying or originality; independent expression review required",
+    "risk": "Similar high-level instructional beats are common; compare wording, example and shot sequence independently before approval",
+    "state": "MAKER_ORIGINAL_CANDIDATE"
+  },
+  "owned_test_plan": {
+    "horizon_days": 7,
+    "hypothesis": "The viewer can identify one repeated process and a human review step",
+    "interpretation": "Descriptive pilot; do not attribute causality from uncontrolled posts or compare uneven horizons",
+    "primary_outcome": "Owner-coded qualified process descriptions among substantive voluntary responses",
+    "secondary_metrics": [
+      "reach",
+      "plays",
+      "saves per 1000 views if observed",
+      "shares per 1000 views if observed"
+    ],
+    "status": "PROPOSED_OWNER_REVIEW"
+  },
+  "pillar": "M2 Builds",
+  "platform": "instagram_reels",
+  "production": {
+    "next_state": "SCRIPT_REVIEW_PENDING",
+    "notion_state": "PROJECTION_PENDING_INTEGRATOR",
+    "owner_media_state": "AWAITING_OWNER_SHOOT",
+    "provider_state": "DISABLED",
+    "publish_state": "NOT_RUN",
+    "recording_request": {
+      "audio": "quiet room; natural voice; avoid music baked into recording",
+      "b_roll": "optional owned hands/checklist footage only",
+      "delivery": "raw original clips; keep originals; note preferred take and any claim changes",
+      "orientation": "portrait 9:16",
+      "presenter": "owner choice",
+      "take": "one clean full script take plus three alternative opening takes"
+    },
+    "state": "PLANNED"
+  },
+  "repeated_process": "Check a simple report before using it to choose what to investigate",
+  "resolution": {
+    "height": 1920,
+    "width": 1080
+  },
+  "review": {
+    "maker": "strategy_lane",
+    "owner_state": "CARD_APPROVAL_PENDING",
+    "release_state": "CANDIDATE",
+    "required_checks": [
+      "audience/task fit",
+      "source and claim limits",
+      "originality",
+      "timed read-through",
+      "actual demo matches receipt",
+      "rights",
+      "visual legibility"
+    ],
+    "review_state": "REVIEW_PENDING",
+    "reviewer": null
+  },
+  "rights": {
+    "all_demo_data": "SYNTHETIC_OR_ORIGINAL_FIXTURE",
+    "competitor_expression_used": false,
+    "competitor_media_used": false,
+    "likeness_generation": "NOT_AUTHORIZED_OR_REQUIRED",
+    "no_copy_boundary": "Do not reproduce source dialogue, branded layout, fictional character, distinctive shot order, music, unverified case study or private information",
+    "owner_shoot": "PENDING_UPLOAD_AND_RIGHTS_CONFIRMATION",
+    "real_customer_data_used": false
+  },
+  "run_id": "20260905-two-engine-execution-v1",
+  "schema": "m2.script-card-candidate.v1",
+  "segments": [
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 4000,
+      "segment_id": "M2-S05-07-L01",
+      "shot_id": "M2-S05-07-SH01",
+      "spoken_text": "This empty cell should not become a zero.",
+      "start_ms": 0
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE",
+        "TEST"
+      ],
+      "end_ms": 11000,
+      "segment_id": "M2-S05-07-L02",
+      "shot_id": "M2-S05-07-SH02",
+      "spoken_text": "While checking our research workflow, we made a tiny test with three invented rows.",
+      "start_ms": 4000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE",
+        "TEST"
+      ],
+      "end_ms": 18000,
+      "segment_id": "M2-S05-07-L03",
+      "shot_id": "M2-S05-07-SH03",
+      "spoken_text": "The first has zero saves. The second has no save observation. The third has twelve.",
+      "start_ms": 11000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "TEST"
+      ],
+      "end_ms": 25000,
+      "segment_id": "M2-S05-07-L04",
+      "shot_id": "M2-S05-07-SH04",
+      "spoken_text": "Those first two rows mean different things: observed zero, and information we do not have.",
+      "start_ms": 18000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE",
+        "TEST"
+      ],
+      "end_ms": 32000,
+      "segment_id": "M2-S05-07-L05",
+      "shot_id": "M2-S05-07-SH05",
+      "spoken_text": "Our local check preserves that difference when it calculates the rate. The missing result stays empty.",
+      "start_ms": 25000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "TEST"
+      ],
+      "end_ms": 38000,
+      "segment_id": "M2-S05-07-L06",
+      "shot_id": "M2-S05-07-SH06",
+      "spoken_text": "This tests one rule. It does not prove the whole report, or explain why a video performed.",
+      "start_ms": 32000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 44000,
+      "segment_id": "M2-S05-07-L07",
+      "shot_id": "M2-S05-07-SH07",
+      "spoken_text": "A person still reviews which rows can be compared and what evidence is missing.",
+      "start_ms": 38000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 50000,
+      "segment_id": "M2-S05-07-L08",
+      "shot_id": "M2-S05-07-SH08",
+      "spoken_text": "Open one report you use. Can you tell a measured zero from an unknown?",
+      "start_ms": 44000
+    }
+  ],
+  "selected_hook_id": "H1",
+  "selection_basis": "Clear audience task and production simplicity; no empirical winner claim",
+  "shots": [
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE",
+        "M2-S05-07-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 120,
+      "end_ms": 4000,
+      "information_job": "Introduce the precise bug class",
+      "mode": "a_roll",
+      "on_screen_text": "EMPTY IS NOT ZERO",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-07-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-07-SC01",
+      "shot_id": "M2-S05-07-SH01",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 0,
+      "start_ms": 0,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: introduce the precise bug class",
+      "visual": "Presenter points to an empty cell enlarged beside a measured zero."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE",
+        "M2-S05-07-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 330,
+      "end_ms": 11000,
+      "information_job": "Establish the actual test scope",
+      "mode": "demo",
+      "on_screen_text": "THREE INVENTED ROWS",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-07-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-07-SC02",
+      "shot_id": "M2-S05-07-SH02",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 120,
+      "start_ms": 4000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: establish the actual test scope",
+      "visual": "Show the three-row fixture with persistent Synthetic test data label."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE",
+        "M2-S05-07-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 540,
+      "end_ms": 18000,
+      "information_job": "Make the input states explicit",
+      "mode": "demo",
+      "on_screen_text": "0 / MISSING / 12",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-07-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-07-SC03",
+      "shot_id": "M2-S05-07-SH03",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 330,
+      "start_ms": 11000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: make the input states explicit",
+      "visual": "Rows A/B/C highlight 0, missing and 12 in order; all have 1000 example views."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 750,
+      "end_ms": 25000,
+      "information_job": "Explain what the distinction means",
+      "mode": "motion_graphic",
+      "on_screen_text": "OBSERVED ZERO / NOT OBSERVED",
+      "panel_map": [],
+      "scene_id": "M2-S05-07-SC04",
+      "shot_id": "M2-S05-07-SH04",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 540,
+      "start_ms": 18000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: explain what the distinction means",
+      "visual": "Observed and Missing badges sit below separate cells."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE",
+        "M2-S05-07-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 960,
+      "end_ms": 32000,
+      "information_job": "Display the actual deterministic result",
+      "mode": "demo",
+      "on_screen_text": "LOCAL RULE CHECK: PASS",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-07-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-07-SC05",
+      "shot_id": "M2-S05-07-SH05",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 750,
+      "start_ms": 25000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: display the actual deterministic result",
+      "visual": "Show exact fixture output and the receipt's zero_preserved and missing_preserved checks."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE",
+        "M2-S05-07-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 1140,
+      "end_ms": 38000,
+      "information_job": "State the practical limitation",
+      "mode": "a_roll",
+      "on_screen_text": "ONE RULE ≠ WHOLE REPORT",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-07-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-07-SC06",
+      "shot_id": "M2-S05-07-SH06",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 960,
+      "start_ms": 32000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: state the practical limitation",
+      "visual": "Presenter beside a One rule tested label; avoid celebrating overall production success."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1320,
+      "end_ms": 44000,
+      "information_job": "Connect the check to human judgment",
+      "mode": "motion_graphic",
+      "on_screen_text": "REVIEW COMPARABILITY",
+      "panel_map": [],
+      "scene_id": "M2-S05-07-SC07",
+      "shot_id": "M2-S05-07-SH07",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1140,
+      "start_ms": 38000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: connect the check to human judgment",
+      "visual": "A review pointer marks one row as insufficient data for the selected comparison."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-07-VOICE",
+        "M2-S05-07-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1500,
+      "end_ms": 50000,
+      "information_job": "Prompt inspection of an owned report",
+      "mode": "demo",
+      "on_screen_text": "DO YOUR BLANKS HAVE A MEANING?",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-07-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-07-SC08",
+      "shot_id": "M2-S05-07-SH08",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1320,
+      "start_ms": 44000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: prompt inspection of an owned report",
+      "visual": "Hold a blank report cell legend the viewer can copy."
+    }
+  ],
+  "source_map": [
+    {
+      "source_ref": "OWN-DEMO:missing_metric",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "SIGNAL-FOUNDATION:missingness",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "sha256": "sha256:87474f8828e80531304bff8b776e9728567dd9ddb138186fea491396f8d8f32c",
+      "source_ref": "BRAND-PB",
+      "transfer": "owner-supplied brand and claims constraints"
+    },
+    {
+      "sha256": "sha256:1deaf10f7afbf40ccd9473f65201e8b2ca92a680ba0b013775a3fc9f7f1e2715",
+      "source_ref": "OWN-DEMO:missing_metric",
+      "transfer": "Record or render the exact hashed fixture and demo receipt. Keep the synthetic label visible. Do not show private competitor rows, handles or dashboards."
+    }
+  ],
+  "spoken_script": "This empty cell should not become a zero. While checking our research workflow, we made a tiny test with three invented rows. The first has zero saves. The second has no save observation. The third has twelve. Those first two rows mean different things: observed zero, and information we do not have. Our local check preserves that difference when it calculates the rate. The missing result stays empty. This tests one rule. It does not prove the whole report, or explain why a video performed. A person still reviews which rows can be compared and what evidence is missing. Open one report you use. Can you tell a measured zero from an unknown?",
+  "spoken_word_count": 113,
+  "synthesis_note": "Original demonstration prompted by the current project's observed missingness problem; no competitor template or outcome claim.",
+  "title": "A missing metric is not a zero"
+}

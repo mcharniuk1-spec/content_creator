@@ -1,0 +1,499 @@
+{
+  "ai_boundary": "Preparation/draft only; no external action or commitment",
+  "assets": [
+    {
+      "asset_id": "M2-S05-03-AROLL",
+      "kind": "video",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner-performed original English presenter recording",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-03-VOICE",
+      "kind": "audio",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner's natural recorded voice for the authored script",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-03-DEMO",
+      "kind": "graphic",
+      "path": null,
+      "production_route": "remotion_deterministic",
+      "purpose": "All options must be visibly fictional. If replaced by real tools, gather dated primary-source evidence and retest claims before approval.",
+      "rights_state": "ORIGINAL_SYNTHETIC_FIXTURE",
+      "sha256": null,
+      "source_path": "demo-fixtures/research_shortlist.json",
+      "source_sha256": "sha256:40f72dd3578366bab781f67d1b705c96f1463392e74d82dbc205331b9ee47dbb",
+      "state": "FIXTURE_READY_CAPTURE_PENDING"
+    }
+  ],
+  "audience_job": "Decide whether to test a meeting-note assistant",
+  "audio": {
+    "mix": "Check intelligibility on phone speaker; measure final levels after recording",
+    "music": "none required; add only separately cleared optional music",
+    "source": "owner natural speech",
+    "state": "PENDING_SHOOT",
+    "voice_clone": false
+  },
+  "captions": {
+    "language": "en",
+    "max_lines": 2,
+    "safe_area": {
+      "bottom_px": 350,
+      "left_px": 96,
+      "right_px": 156,
+      "top_px": 150
+    },
+    "source": "Authored segment text; replace timing with reviewed alignment after owner recording",
+    "style": "Plain high-contrast sentence case; preserve unknown/missing wording; platform-overlay clearances must be visually checked",
+    "timing_state": "PLANNED_NOT_AUDIO_ALIGNED"
+  },
+  "card_id": "M2-S05-03",
+  "claims": [
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "METHOD",
+      "classification": "RECOMMENDATION",
+      "evidence_refs": [
+        "BRAND-PB:sections-3-6-8"
+      ],
+      "statement": "No actual tool recommendation, live research or product comparison is claimed."
+    },
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "EXAMPLE",
+      "classification": "SYNTHETIC_ILLUSTRATION",
+      "evidence_refs": [
+        "OWN-DEMO:research_shortlist"
+      ],
+      "statement": "All options must be visibly fictional. If replaced by real tools, gather dated primary-source evidence and retest claims before approval."
+    }
+  ],
+  "concept_origin": "ORIGINAL_METHOD_ADAPTATION",
+  "duration_seconds": 50,
+  "empirical_limitations": [
+    "Sparse, selected legacy transcript sample; not all 2352 Reels text-analyzed",
+    "No reviewed source frames, scenes or comments in strategy lane",
+    "No proven hook-performance or business-outcome effect",
+    "Timings are original plans; a real voice take may require adjustment",
+    "Candidate concept does not bypass accepted Signal-release gate"
+  ],
+  "fps": 30,
+  "friction": "An undirected tool search produces a long list without a selection criterion",
+  "hook_alternatives": [
+    {
+      "hook_id": "H1",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "Before you ask AI to research, finish this sentence."
+    },
+    {
+      "hook_id": "H2",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "A list of AI tools is not yet a work decision."
+    },
+    {
+      "hook_id": "H3",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "What would make one meeting assistant worth testing in your team?"
+    }
+  ],
+  "human_decision": "The team lead selects a trial using explicit requirements",
+  "language": "en",
+  "optional_generated_inserts": [],
+  "originality": {
+    "common_function_overlap": "Permitted generic instructional functions do not prove copying or originality; independent expression review required",
+    "risk": "Similar high-level instructional beats are common; compare wording, example and shot sequence independently before approval",
+    "state": "MAKER_ORIGINAL_CANDIDATE"
+  },
+  "owned_test_plan": {
+    "horizon_days": 7,
+    "hypothesis": "The viewer can identify one repeated process and a human review step",
+    "interpretation": "Descriptive pilot; do not attribute causality from uncontrolled posts or compare uneven horizons",
+    "primary_outcome": "Owner-coded qualified process descriptions among substantive voluntary responses",
+    "secondary_metrics": [
+      "reach",
+      "plays",
+      "saves per 1000 views if observed",
+      "shares per 1000 views if observed"
+    ],
+    "status": "PROPOSED_OWNER_REVIEW"
+  },
+  "pillar": "M2 Radar",
+  "platform": "instagram_reels",
+  "production": {
+    "next_state": "SCRIPT_REVIEW_PENDING",
+    "notion_state": "PROJECTION_PENDING_INTEGRATOR",
+    "owner_media_state": "AWAITING_OWNER_SHOOT",
+    "provider_state": "DISABLED",
+    "publish_state": "NOT_RUN",
+    "recording_request": {
+      "audio": "quiet room; natural voice; avoid music baked into recording",
+      "b_roll": "optional owned hands/checklist footage only",
+      "delivery": "raw original clips; keep originals; note preferred take and any claim changes",
+      "orientation": "portrait 9:16",
+      "presenter": "owner choice",
+      "take": "one clean full script take plus three alternative opening takes"
+    },
+    "state": "PLANNED"
+  },
+  "repeated_process": "Decide whether to test a meeting-note assistant",
+  "resolution": {
+    "height": 1920,
+    "width": 1080
+  },
+  "review": {
+    "maker": "strategy_lane",
+    "owner_state": "CARD_APPROVAL_PENDING",
+    "release_state": "CANDIDATE",
+    "required_checks": [
+      "audience/task fit",
+      "source and claim limits",
+      "originality",
+      "timed read-through",
+      "actual demo matches receipt",
+      "rights",
+      "visual legibility"
+    ],
+    "review_state": "REVIEW_PENDING",
+    "reviewer": null
+  },
+  "rights": {
+    "all_demo_data": "SYNTHETIC_OR_ORIGINAL_FIXTURE",
+    "competitor_expression_used": false,
+    "competitor_media_used": false,
+    "likeness_generation": "NOT_AUTHORIZED_OR_REQUIRED",
+    "no_copy_boundary": "Do not reproduce source dialogue, branded layout, fictional character, distinctive shot order, music, unverified case study or private information",
+    "owner_shoot": "PENDING_UPLOAD_AND_RIGHTS_CONFIRMATION",
+    "real_customer_data_used": false
+  },
+  "run_id": "20260905-two-engine-execution-v1",
+  "schema": "m2.script-card-candidate.v1",
+  "segments": [
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 4000,
+      "segment_id": "M2-S05-03-L01",
+      "shot_id": "M2-S05-03-SH01",
+      "spoken_text": "Before you ask AI to research, finish this sentence.",
+      "start_ms": 0
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 11000,
+      "segment_id": "M2-S05-03-L02",
+      "shot_id": "M2-S05-03-SH02",
+      "spoken_text": "I need this research so I can decide whether to test a meeting-note assistant.",
+      "start_ms": 4000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 18000,
+      "segment_id": "M2-S05-03-L03",
+      "shot_id": "M2-S05-03-SH03",
+      "spoken_text": "Now define the task: turn approved notes into an editable draft, with missing details visible.",
+      "start_ms": 11000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 25000,
+      "segment_id": "M2-S05-03-L04",
+      "shot_id": "M2-S05-03-SH04",
+      "spoken_text": "Ask for a short comparison against those requirements, with a source for each factual claim.",
+      "start_ms": 18000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 32000,
+      "segment_id": "M2-S05-03-L05",
+      "shot_id": "M2-S05-03-SH05",
+      "spoken_text": "This example table uses invented options. One sends automatically; another keeps the draft for review.",
+      "start_ms": 25000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 38000,
+      "segment_id": "M2-S05-03-L06",
+      "shot_id": "M2-S05-03-SH06",
+      "spoken_text": "The second fits this test better. That is a checklist result, not proof the product works.",
+      "start_ms": 32000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 44000,
+      "segment_id": "M2-S05-03-L07",
+      "shot_id": "M2-S05-03-SH07",
+      "spoken_text": "A person still checks the current terms and tries a harmless sample before connecting team information.",
+      "start_ms": 38000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 50000,
+      "segment_id": "M2-S05-03-L08",
+      "shot_id": "M2-S05-03-SH08",
+      "spoken_text": "Write the decision first. Then collect only the information needed to make it.",
+      "start_ms": 44000
+    }
+  ],
+  "selected_hook_id": "H1",
+  "selection_basis": "Clear audience task and production simplicity; no empirical winner claim",
+  "shots": [
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE",
+        "M2-S05-03-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 120,
+      "end_ms": 4000,
+      "information_job": "Orient research around a choice",
+      "mode": "a_roll",
+      "on_screen_text": "I NEED TO DECIDE…",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-03-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-03-SC01",
+      "shot_id": "M2-S05-03-SH01",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 0,
+      "start_ms": 0,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: orient research around a choice",
+      "visual": "Presenter pauses at the end of an unfinished sentence on a plain card."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 330,
+      "end_ms": 11000,
+      "information_job": "Specify the decision",
+      "mode": "motion_graphic",
+      "on_screen_text": "TEST A MEETING-NOTE ASSISTANT?",
+      "panel_map": [],
+      "scene_id": "M2-S05-03-SC02",
+      "shot_id": "M2-S05-03-SH02",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 120,
+      "start_ms": 4000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: specify the decision",
+      "visual": "Complete the sentence with the meeting-note trial decision."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE",
+        "M2-S05-03-AROLL",
+        "M2-S05-03-DEMO"
+      ],
+      "composition": "upper 58% evidence / lower 42% presenter",
+      "end_frame": 540,
+      "end_ms": 18000,
+      "information_job": "Define useful evidence",
+      "mode": "split_screen",
+      "on_screen_text": "EDITABLE · GAPS VISIBLE · REVIEW",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-03-DEMO",
+          "height_fraction": 0.58,
+          "panel": "top"
+        },
+        {
+          "asset_id": "M2-S05-03-AROLL",
+          "height_fraction": 0.42,
+          "panel": "bottom"
+        }
+      ],
+      "scene_id": "M2-S05-03-SC03",
+      "shot_id": "M2-S05-03-SH03",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 330,
+      "start_ms": 11000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: define useful evidence",
+      "visual": "Presenter with the task's three requirements in the upper panel."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 750,
+      "end_ms": 25000,
+      "information_job": "State source requirements without inventing sources",
+      "mode": "motion_graphic",
+      "on_screen_text": "EVERY CLAIM NEEDS A SOURCE",
+      "panel_map": [],
+      "scene_id": "M2-S05-03-SC04",
+      "shot_id": "M2-S05-03-SH04",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 540,
+      "start_ms": 18000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: state source requirements without inventing sources",
+      "visual": "A comparison table gains a source-reference column with placeholders marked required."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE",
+        "M2-S05-03-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 960,
+      "end_ms": 32000,
+      "information_job": "Compare controlled illustrative inputs",
+      "mode": "demo",
+      "on_screen_text": "FICTIONAL OPTIONS A / B / C",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-03-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-03-SC05",
+      "shot_id": "M2-S05-03-SH05",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 750,
+      "start_ms": 25000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: compare controlled illustrative inputs",
+      "visual": "Show research_shortlist fixture; large persistent Fictional options label."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE",
+        "M2-S05-03-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1140,
+      "end_ms": 38000,
+      "information_job": "Explain the limited decision",
+      "mode": "demo",
+      "on_screen_text": "CHECKLIST PASS ≠ PRODUCT PROOF",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-03-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-03-SC06",
+      "shot_id": "M2-S05-03-SH06",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 960,
+      "start_ms": 32000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: explain the limited decision",
+      "visual": "Highlight option B and the exact three satisfied criteria."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE",
+        "M2-S05-03-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 1320,
+      "end_ms": 44000,
+      "information_job": "Preserve human responsibility",
+      "mode": "a_roll",
+      "on_screen_text": "CHECK · TRY · REVIEW",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-03-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-03-SC07",
+      "shot_id": "M2-S05-03-SH07",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1140,
+      "start_ms": 38000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: preserve human responsibility",
+      "visual": "Presenter places a small Test safely card beside the shortlist."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-03-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1500,
+      "end_ms": 50000,
+      "information_job": "Give a useful next action",
+      "mode": "motion_graphic",
+      "on_screen_text": "Decision → required evidence",
+      "panel_map": [],
+      "scene_id": "M2-S05-03-SC08",
+      "shot_id": "M2-S05-03-SH08",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1320,
+      "start_ms": 44000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: give a useful next action",
+      "visual": "Hold decision-to-evidence worksheet; no website or unsupported link CTA."
+    }
+  ],
+  "source_map": [
+    {
+      "source_ref": "TR-059",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-080",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-082",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "sha256": "sha256:87474f8828e80531304bff8b776e9728567dd9ddb138186fea491396f8d8f32c",
+      "source_ref": "BRAND-PB",
+      "transfer": "owner-supplied brand and claims constraints"
+    },
+    {
+      "sha256": "sha256:40f72dd3578366bab781f67d1b705c96f1463392e74d82dbc205331b9ee47dbb",
+      "source_ref": "OWN-DEMO:research_shortlist",
+      "transfer": "All options must be visibly fictional. If replaced by real tools, gather dated primary-source evidence and retest claims before approval."
+    }
+  ],
+  "spoken_script": "Before you ask AI to research, finish this sentence. I need this research so I can decide whether to test a meeting-note assistant. Now define the task: turn approved notes into an editable draft, with missing details visible. Ask for a short comparison against those requirements, with a source for each factual claim. This example table uses invented options. One sends automatically; another keeps the draft for review. The second fits this test better. That is a checklist result, not proof the product works. A person still checks the current terms and tries a harmless sample before connecting team information. Write the decision first. Then collect only the information needed to make it.",
+  "spoken_word_count": 113,
+  "synthesis_note": "Transfer the function of connecting research to a next action; avoid the sources' outreach examples and wording.",
+  "title": "Make research answer a work decision"
+}

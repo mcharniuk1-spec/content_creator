@@ -33,3 +33,7 @@ The production path is deliberately separate: approved source observation → Si
 `story-framework-library/v3-realistic/` adds 50 fictional clean-room visual references: one six-shot generated source sheet, six 540×960 review frames, prompts, metadata, hashes, and a compact review sheet per story. These approximate natural phone-shot social-video language; they are not reconstructions of observed creators or proof of performance. The admitted database contains zero source frames, so direct visual benchmarking remains a documented gap.
 
 Run `python3 studio/finalize_realistic_frame_library.py` and `python3 studio/validate_realistic_frame_library.py`. Use `REALISTIC-SOCIAL-VIDEO-STYLE-BIBLE.md` for casting, framing, lighting, motion, emotion, overlay, and safety rules.
+
+## Scene-first analysis contract v3
+
+Use `SCENE-FIRST-STORY-FRAMEWORK-TAXONOMY-V3.md`, `schemas/video-scene-segmentation.schema.json`, and `templates/video-scene-segmentation.example.json` when converting a source video into transcript-aligned scene-units. Each unit has start/end frame bounds, a 2/4/6 screenshot policy, one collage, production/voice/subtitle/edit routes, and rights/provider state. This is the input shape for future Studio script and video generation; the legacy one-second v2 frames remain a separate storyboard scaffold.

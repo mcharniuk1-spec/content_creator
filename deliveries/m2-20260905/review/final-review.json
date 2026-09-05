@@ -1,0 +1,96 @@
+{
+  "schema": "m2.independent-final-review.v1",
+  "reviewer": "independent_review",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "repair_rounds": 2,
+  "foundation_accepted_with_limitations": true,
+  "descriptive_snapshot_accepted_with_limitations": true,
+  "editorial_hypotheses_accepted": true,
+  "evidence_release_accepted": false,
+  "production_accepted": false,
+  "full_user_objective_complete": false,
+  "scope": "Current two-engine local preparation implementation, complete supplied-export descriptive replay and eight original editorial/PREVIS hypotheses. External completion and live model/server/production proof remain separate.",
+  "findings": [
+    {
+      "id": "R1",
+      "priority": 1,
+      "owner": "studio",
+      "original_issue": "Paid activation originally admitted a changed prompt/reference/request under a reused approval ID.",
+      "repair": "Exact stored full-request digest allowlist, immutable approval snapshot, job/request consistency before submit and poll.",
+      "state": "RESOLVED_REVIEWED"
+    },
+    {
+      "id": "R2",
+      "priority": 1,
+      "owner": "studio",
+      "original_issue": "Production originally admitted missing narration/unbuilt graphics and a changed timing plan under prior audio approval.",
+      "repair": "Pending/unplaced audio and graphic-plan rejection; explicit speech policy and audio placement; card/audio/timebase/stem/caption-bound reviewed alignment digest with Python/JS parity.",
+      "state": "RESOLVED_REVIEWED"
+    },
+    {
+      "id": "R3",
+      "priority": 1,
+      "owner": "signal",
+      "original_issue": "Hiker approval freshness and cached page provenance were not revalidated during dispatch/resume.",
+      "repair": "Before each dispatch recheck approval/schema/expiry; freeze mode/config/endpoint; verify raw-page, checkpoint, exact-parameter and dispatch provenance; blocked CLI remains nonzero.",
+      "state": "RESOLVED_REVIEWED"
+    },
+    {
+      "id": "R4",
+      "priority": 1,
+      "owner": "integrator",
+      "original_issue": "Controller upgrades and transitive artifact/maker changes could reuse old cached approvals or lose review limitations.",
+      "repair": "Freeze implementation/config/policy; verify all ancestor artifacts at begin/cache/finish; transitive maker separation; finish-time approval recheck; exact reviewed limitations propagated.",
+      "state": "RESOLVED_REVIEWED"
+    },
+    {
+      "id": "R5",
+      "priority": 2,
+      "owner": "integrator",
+      "original_issue": "Several specialist roles had generic context rather than the relevant bounded evidence contract.",
+      "repair": "Per-role specialized knowledge, source contracts, skills, budgets and explicit task export; semantic workers remain explicit.",
+      "state": "RESOLVED_REVIEWED"
+    },
+    {
+      "id": "R6",
+      "priority": 1,
+      "owner": "studio",
+      "original_issue": "Scene alignment could attribute another media file's transcript to the current video when timings fit.",
+      "repair": "Exact source-media hash required before alignment/extraction, transcript digest carried into candidates/evidence, changed transcript denied before output.",
+      "state": "RESOLVED_REVIEWED"
+    }
+  ],
+  "facts": [
+    "100 Python and nine JavaScript tests pass independently with no skips.",
+    "Independent all-account/all-row numerical oracle passed 10000 checks; reviewed Signal311a output is value-equivalent across 2352Reels,100Accounts and16464 modality attempts.",
+    "All eight scripts and claims,18full referenced legacy ASR transcripts, the founder playbook and specified meeting spans were independently read; all eight64-shot contact sheets visually inspected.",
+    "Synthetic source decoding and Remotion renders were actually exercised. PREVIS is original planned imagery and owner placeholders.",
+    "Notion exact candidate scope approved; first ten Reel rows independently read back against340properties. No full external projection acceptance is implied."
+  ],
+  "interpretation": "The repaired implementation is a credible local preparation baseline with explicit independent semantic tasks and conservative gates. Sparse selected text supports original editorial experiments; it cannot certify competitive performance causes or production readiness.",
+  "hypothesis": "Process-led, inspectable fictional examples with an explicit human decision are suitable first owned experiments, pending owner choice and measurement.",
+  "limitations": [
+    "Only89word-bearing unverified legacy transcripts among2352Reels; two empty outputs do not prove silence. No full original-language audio or rhetorical-boundary verification.",
+    "No competitor source-video/frame/confirmed-shot/semantic-scene/comment coverage accepted. Cuts, planned storyboards and extracted source frames remain separate.",
+    "Snapshot baselines include the focal Reel; matched-horizon, prior-only and self-excluded longitudinal decisions remain future work. No final Best-Reel, causality, prediction, geography or market-prevalence acceptance.",
+    "Corpus fit/opening labels remain maker-coded diagnostics; the independent editorial review covers all eight cards and18referenced texts, not a full second coding of all91records.",
+    "Current cards contain nominal timing and planned diagrams; owner footage, recorded speech, built assets and final alignment/rights/visual/audio review remain pending.",
+    "Provider payload and denial fixtures are not a paid live smoke test. SDK/auth/payment, real output ingestion and quality/cost/latency validation remain future exact-approved work.",
+    "Server collection schema, billing, deployment and worker authentication remain unverified; actor labels and hashes are coordination/integrity controls.",
+    "The controller executes12deterministic stages and exports semantic tasks. Final lane-product import must disclose retrospective fan-in, not claim automatic runtime subagent dispatch.",
+    "Git delivery, full Notion readback and external knowledge promotion require their own exact final receipts; this verdict does not approve unknown future mutations."
+  ],
+  "evidence": [
+    "final-reviewed-manifest.json",
+    "final-test-receipt.json",
+    "independent-signal-checks.json",
+    "independent-release-equivalence.json",
+    "independent-render-probes.json",
+    "editorial-review-r1.json",
+    "notion-candidate-review.json",
+    "notion-normalization-amendment.json",
+    "notion-pilot-readback-review.json",
+    "knowledge-candidate-review.json"
+  ],
+  "manifest_file_sha256": "c9f5ff1fdb64a5a68d3fdf2720ea8edab517d8973252884c6b2c839ed4b1a795"
+}

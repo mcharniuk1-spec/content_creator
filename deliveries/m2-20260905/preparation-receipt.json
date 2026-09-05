@@ -1,0 +1,22 @@
+{
+  "schema": "m2.public-preparation-release.v1",
+  "state": "PASS_WITH_LIMITATIONS",
+  "run_id": "20260905-two-engine-execution-v1",
+  "signal_release": "signal-311a11aa741347044f97979c",
+  "python_tests": 100,
+  "javascript_tests": 9,
+  "typescript": "PASS",
+  "cards": 8,
+  "planned_frames": 64,
+  "contact_sheets": 8,
+  "preview_seconds": 50,
+  "source_media_decoded": 0,
+  "hikerapi_calls": 0,
+  "paid_generation_calls": 0,
+  "final_best_accepted": false,
+  "production_accepted": false,
+  "source_evidence_release_accepted": false,
+  "notion_state": "SEPARATE_EXTERNAL_READBACK_REQUIRED",
+  "git_state": "VERIFY_REMOTE_COMMIT",
+  "runtime_manifest_digest": "e2832cb8886d7d2fd22549d72d9195379b267c680baf2a1fc09bc1e731c4d0bc"
+}

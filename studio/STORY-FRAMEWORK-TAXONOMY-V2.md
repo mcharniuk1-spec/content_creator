@@ -44,3 +44,7 @@ Each family has five different protagonist/objective/obstacle/prop/proof systems
 - Rights stay `original_local_previsualization`; providers and external writes stay `NOT_RUN`.
 
 The validator proves structural consistency, not audience comprehension, originality against the entire internet, retention, virality, conversion, or production readiness. Those need independent review and owned tests.
+
+## Scene-analysis extension
+
+For source-video analysis and production handoff, use the scene-first v3 extension in `SCENE-FIRST-STORY-FRAMEWORK-TAXONOMY-V3.md` and `schemas/video-scene-segmentation.schema.json`. V2's six one-second frames remain a synthetic story scaffold; v3 scene-units carry transcript links, visual boundary reasons, start/end source frames, 2/4/6 screenshots, one collage, and voice/generation/edit/subtitle routes.

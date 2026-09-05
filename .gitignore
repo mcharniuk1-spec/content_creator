@@ -59,5 +59,23 @@ build/
 __pycache__/
 *.pyc
 
+# Owner-supplied private research and strategic source documents
+/M2Lab-radar-*/
+/meeting recording/
+/recording/
+/Setup of workflow/
+/Current issues Notion.docx
+/M2 Lab - Positioning and Monetization Playbook v1.md
+/M2 Lab Focus Decision Questionnaire for Max.docx
+/~$*
+/*.private.json
+output/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-wal
+*.db-shm
+
 # OS/editor noise
 .DS_Store

@@ -1,0 +1,219 @@
+{
+  "assets": [],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "Your AI can draft the reply without making the promise."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "text": "Imagine a customer asking when something will arrive. Use a fictional request for the first test."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "text": "Give the assistant only approved facts and a clear instruction to flag anything it cannot confirm."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "text": "In this example, the draft promises tomorrow. Our approved information does not support that date."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "text": "The next step is a person checking the request, not the message going straight to the customer."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "text": "That person corrects the draft, confirms any promise, and decides whether to send it."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "text": "Keep the boundary visible: prepare, review, then send. A missing fact returns to the process owner."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "text": "Map one routine reply today. Mark the exact point where a human must decide."
+    }
+  ],
+  "card_id": "M2-S05-05",
+  "duration_frames": 1500,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "M2-S05-05-VOICE"
+  ],
+  "provider_execution": false,
+  "render_mode": "PREVIS",
+  "review_state": "REVIEW_PENDING",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-05-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "DRAFTING ≠ MAKING A PROMISE"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-05-SH01",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Generic fictional request card; no customer name, address or product."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "FICTIONAL REQUEST"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-05-SH02",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 330,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom",
+          "text": "Awaiting asset: M2-S05-05-AROLL"
+        },
+        {
+          "kind": "graphic",
+          "panel": "top",
+          "text": "Approved facts card beside an instruction to flag unknown dates."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "USE APPROVED FACTS"
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "M2-S05-05-SH03",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 540,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Deliberately faulty reply highlights an unsupported delivery promise."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "DATE NOT CONFIRMED"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "M2-S05-05-SH04",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 750,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "A stop point appears before an outlined Send action."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "HUMAN REVIEW"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-05-SH05",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full",
+          "text": "Awaiting asset: M2-S05-05-AROLL"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "CHECK FACTS · CONFIRM · DECIDE"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "M2-S05-05-SH06",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1140,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "Prepare → Review → Send; missing fact arrow returns to owner."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "MISSING FACT → PROCESS OWNER"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-05-SH07",
+      "split_ratio": 0.58
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 1320,
+      "layers": [
+        {
+          "kind": "graphic",
+          "panel": "full",
+          "text": "A blank reply process map remains on screen."
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "WHERE DOES A PERSON DECIDE?"
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "M2-S05-05-SH08",
+      "split_ratio": 0.58
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "source_card_hash": "ef2f5c99ee8952af2c0279237a15e7845e01576da58b65a028a2d858b4ef66a9",
+  "title": "Let AI prepare the reply, then stop",
+  "width": 1080
+}

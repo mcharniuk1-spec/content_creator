@@ -1,0 +1,503 @@
+{
+  "ai_boundary": "Preparation/draft only; no external action or commitment",
+  "assets": [
+    {
+      "asset_id": "M2-S05-05-AROLL",
+      "kind": "video",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner-performed original English presenter recording",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-05-VOICE",
+      "kind": "audio",
+      "path": null,
+      "production_route": "owner_recording",
+      "purpose": "Owner's natural recorded voice for the authored script",
+      "rights_state": "PENDING_OWNER_ASSET_CONFIRMATION",
+      "sha256": null,
+      "state": "PENDING_SHOOT"
+    },
+    {
+      "asset_id": "M2-S05-05-DEMO",
+      "kind": "graphic",
+      "path": null,
+      "production_route": "remotion_deterministic",
+      "purpose": "The draft is deliberately authored, not an observed model output. No message is sent; no real customer input is used.",
+      "rights_state": "ORIGINAL_SYNTHETIC_FIXTURE",
+      "sha256": null,
+      "source_path": "demo-fixtures/reply_review.json",
+      "source_sha256": "sha256:b57198e1b8ea03c384d8a97226ebfe51b2c6064fee91a4a4571cd4ebf590528f",
+      "state": "FIXTURE_READY_CAPTURE_PENDING"
+    }
+  ],
+  "audience_job": "Prepare a draft response to a routine customer request",
+  "audio": {
+    "mix": "Check intelligibility on phone speaker; measure final levels after recording",
+    "music": "none required; add only separately cleared optional music",
+    "source": "owner natural speech",
+    "state": "PENDING_SHOOT",
+    "voice_clone": false
+  },
+  "captions": {
+    "language": "en",
+    "max_lines": 2,
+    "safe_area": {
+      "bottom_px": 350,
+      "left_px": 96,
+      "right_px": 156,
+      "top_px": 150
+    },
+    "source": "Authored segment text; replace timing with reviewed alignment after owner recording",
+    "style": "Plain high-contrast sentence case; preserve unknown/missing wording; platform-overlay clearances must be visually checked",
+    "timing_state": "PLANNED_NOT_AUDIO_ALIGNED"
+  },
+  "card_id": "M2-S05-05",
+  "claims": [
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "METHOD",
+      "classification": "RECOMMENDATION",
+      "evidence_refs": [
+        "BRAND-PB:sections-3-6-8"
+      ],
+      "statement": "Task-level process illustration; no customer-service or sales performance claim."
+    },
+    {
+      "approval_state": "REVIEW_PENDING",
+      "claim_id": "EXAMPLE",
+      "classification": "SYNTHETIC_ILLUSTRATION",
+      "evidence_refs": [
+        "OWN-DEMO:reply_review"
+      ],
+      "statement": "The draft is deliberately authored, not an observed model output. No message is sent; no real customer input is used."
+    }
+  ],
+  "concept_origin": "ORIGINAL_BRAND_METHOD",
+  "duration_seconds": 50,
+  "empirical_limitations": [
+    "Sparse, selected legacy transcript sample; not all 2352 Reels text-analyzed",
+    "No reviewed source frames, scenes or comments in strategy lane",
+    "No proven hook-performance or business-outcome effect",
+    "Timings are original plans; a real voice take may require adjustment",
+    "Candidate concept does not bypass accepted Signal-release gate"
+  ],
+  "fps": 30,
+  "friction": "A draft can make a promise that the business has not approved",
+  "hook_alternatives": [
+    {
+      "hook_id": "H1",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "Your AI can draft the reply without making the promise."
+    },
+    {
+      "hook_id": "H2",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "Put the human check before the customer sees the answer."
+    },
+    {
+      "hook_id": "H3",
+      "orientation": "problem-led",
+      "state": "CANDIDATE",
+      "text": "A routine question should not become an automatic commitment."
+    }
+  ],
+  "human_decision": "A team member checks facts and confirms whether anything can be promised or sent",
+  "language": "en",
+  "optional_generated_inserts": [],
+  "originality": {
+    "common_function_overlap": "Permitted generic instructional functions do not prove copying or originality; independent expression review required",
+    "risk": "Similar high-level instructional beats are common; compare wording, example and shot sequence independently before approval",
+    "state": "MAKER_ORIGINAL_CANDIDATE"
+  },
+  "owned_test_plan": {
+    "horizon_days": 7,
+    "hypothesis": "The viewer can identify one repeated process and a human review step",
+    "interpretation": "Descriptive pilot; do not attribute causality from uncontrolled posts or compare uneven horizons",
+    "primary_outcome": "Owner-coded qualified process descriptions among substantive voluntary responses",
+    "secondary_metrics": [
+      "reach",
+      "plays",
+      "saves per 1000 views if observed",
+      "shares per 1000 views if observed"
+    ],
+    "status": "PROPOSED_OWNER_REVIEW"
+  },
+  "pillar": "M2 Teardowns",
+  "platform": "instagram_reels",
+  "production": {
+    "next_state": "SCRIPT_REVIEW_PENDING",
+    "notion_state": "PROJECTION_PENDING_INTEGRATOR",
+    "owner_media_state": "AWAITING_OWNER_SHOOT",
+    "provider_state": "DISABLED",
+    "publish_state": "NOT_RUN",
+    "recording_request": {
+      "audio": "quiet room; natural voice; avoid music baked into recording",
+      "b_roll": "optional owned hands/checklist footage only",
+      "delivery": "raw original clips; keep originals; note preferred take and any claim changes",
+      "orientation": "portrait 9:16",
+      "presenter": "owner choice",
+      "take": "one clean full script take plus three alternative opening takes"
+    },
+    "state": "PLANNED"
+  },
+  "repeated_process": "Prepare a draft response to a routine customer request",
+  "resolution": {
+    "height": 1920,
+    "width": 1080
+  },
+  "review": {
+    "maker": "strategy_lane",
+    "owner_state": "CARD_APPROVAL_PENDING",
+    "release_state": "CANDIDATE",
+    "required_checks": [
+      "audience/task fit",
+      "source and claim limits",
+      "originality",
+      "timed read-through",
+      "actual demo matches receipt",
+      "rights",
+      "visual legibility"
+    ],
+    "review_state": "REVIEW_PENDING",
+    "reviewer": null
+  },
+  "rights": {
+    "all_demo_data": "SYNTHETIC_OR_ORIGINAL_FIXTURE",
+    "competitor_expression_used": false,
+    "competitor_media_used": false,
+    "likeness_generation": "NOT_AUTHORIZED_OR_REQUIRED",
+    "no_copy_boundary": "Do not reproduce source dialogue, branded layout, fictional character, distinctive shot order, music, unverified case study or private information",
+    "owner_shoot": "PENDING_UPLOAD_AND_RIGHTS_CONFIRMATION",
+    "real_customer_data_used": false
+  },
+  "run_id": "20260905-two-engine-execution-v1",
+  "schema": "m2.script-card-candidate.v1",
+  "segments": [
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 4000,
+      "segment_id": "M2-S05-05-L01",
+      "shot_id": "M2-S05-05-SH01",
+      "spoken_text": "Your AI can draft the reply without making the promise.",
+      "start_ms": 0
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 11000,
+      "segment_id": "M2-S05-05-L02",
+      "shot_id": "M2-S05-05-SH02",
+      "spoken_text": "Imagine a customer asking when something will arrive. Use a fictional request for the first test.",
+      "start_ms": 4000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 18000,
+      "segment_id": "M2-S05-05-L03",
+      "shot_id": "M2-S05-05-SH03",
+      "spoken_text": "Give the assistant only approved facts and a clear instruction to flag anything it cannot confirm.",
+      "start_ms": 11000
+    },
+    {
+      "claim_ids": [
+        "METHOD",
+        "EXAMPLE"
+      ],
+      "end_ms": 25000,
+      "segment_id": "M2-S05-05-L04",
+      "shot_id": "M2-S05-05-SH04",
+      "spoken_text": "In this example, the draft promises tomorrow. Our approved information does not support that date.",
+      "start_ms": 18000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 32000,
+      "segment_id": "M2-S05-05-L05",
+      "shot_id": "M2-S05-05-SH05",
+      "spoken_text": "The next step is a person checking the request, not the message going straight to the customer.",
+      "start_ms": 25000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 38000,
+      "segment_id": "M2-S05-05-L06",
+      "shot_id": "M2-S05-05-SH06",
+      "spoken_text": "That person corrects the draft, confirms any promise, and decides whether to send it.",
+      "start_ms": 32000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 44000,
+      "segment_id": "M2-S05-05-L07",
+      "shot_id": "M2-S05-05-SH07",
+      "spoken_text": "Keep the boundary visible: prepare, review, then send. A missing fact returns to the process owner.",
+      "start_ms": 38000
+    },
+    {
+      "claim_ids": [
+        "METHOD"
+      ],
+      "end_ms": 50000,
+      "segment_id": "M2-S05-05-L08",
+      "shot_id": "M2-S05-05-SH08",
+      "spoken_text": "Map one routine reply today. Mark the exact point where a human must decide.",
+      "start_ms": 44000
+    }
+  ],
+  "selected_hook_id": "H1",
+  "selection_basis": "Clear audience task and production simplicity; no empirical winner claim",
+  "shots": [
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE",
+        "M2-S05-05-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 120,
+      "end_ms": 4000,
+      "information_job": "Introduce a clear responsibility boundary",
+      "mode": "a_roll",
+      "on_screen_text": "DRAFTING ≠ MAKING A PROMISE",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-05-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-05-SC01",
+      "shot_id": "M2-S05-05-SH01",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 0,
+      "start_ms": 0,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: introduce a clear responsibility boundary",
+      "visual": "Presenter holds Draft and Send cards with space between them."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE",
+        "M2-S05-05-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 330,
+      "end_ms": 11000,
+      "information_job": "Establish safe sample inputs",
+      "mode": "demo",
+      "on_screen_text": "FICTIONAL REQUEST",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-05-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-05-SC02",
+      "shot_id": "M2-S05-05-SH02",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 120,
+      "start_ms": 4000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: establish safe sample inputs",
+      "visual": "Generic fictional request card; no customer name, address or product."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE",
+        "M2-S05-05-AROLL",
+        "M2-S05-05-DEMO"
+      ],
+      "composition": "upper 58% evidence / lower 42% presenter",
+      "end_frame": 540,
+      "end_ms": 18000,
+      "information_job": "Define the AI assistance",
+      "mode": "split_screen",
+      "on_screen_text": "USE APPROVED FACTS",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-05-DEMO",
+          "height_fraction": 0.58,
+          "panel": "top"
+        },
+        {
+          "asset_id": "M2-S05-05-AROLL",
+          "height_fraction": 0.42,
+          "panel": "bottom"
+        }
+      ],
+      "scene_id": "M2-S05-05-SC03",
+      "shot_id": "M2-S05-05-SH03",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 330,
+      "start_ms": 11000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: define the ai assistance",
+      "visual": "Approved facts card beside an instruction to flag unknown dates."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE",
+        "M2-S05-05-DEMO"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 750,
+      "end_ms": 25000,
+      "information_job": "Show a concrete risk",
+      "mode": "demo",
+      "on_screen_text": "DATE NOT CONFIRMED",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-05-DEMO",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-05-SC04",
+      "shot_id": "M2-S05-05-SH04",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 540,
+      "start_ms": 18000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: show a concrete risk",
+      "visual": "Deliberately faulty reply highlights an unsupported delivery promise."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 960,
+      "end_ms": 32000,
+      "information_job": "Make the checkpoint visible",
+      "mode": "motion_graphic",
+      "on_screen_text": "HUMAN REVIEW",
+      "panel_map": [],
+      "scene_id": "M2-S05-05-SC05",
+      "shot_id": "M2-S05-05-SH05",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 750,
+      "start_ms": 25000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: make the checkpoint visible",
+      "visual": "A stop point appears before an outlined Send action."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE",
+        "M2-S05-05-AROLL"
+      ],
+      "composition": "portrait presenter, eye line above center",
+      "end_frame": 1140,
+      "end_ms": 38000,
+      "information_job": "Describe human ownership",
+      "mode": "a_roll",
+      "on_screen_text": "CHECK FACTS · CONFIRM · DECIDE",
+      "panel_map": [
+        {
+          "asset_id": "M2-S05-05-AROLL",
+          "height_fraction": 1,
+          "panel": "full"
+        }
+      ],
+      "scene_id": "M2-S05-05-SC06",
+      "shot_id": "M2-S05-05-SH06",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 960,
+      "start_ms": 32000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: describe human ownership",
+      "visual": "Presenter edits the promise into a request for confirmation."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1320,
+      "end_ms": 44000,
+      "information_job": "Show the correction branch",
+      "mode": "motion_graphic",
+      "on_screen_text": "MISSING FACT → PROCESS OWNER",
+      "panel_map": [],
+      "scene_id": "M2-S05-05-SC07",
+      "shot_id": "M2-S05-05-SH07",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1140,
+      "start_ms": 38000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: show the correction branch",
+      "visual": "Prepare → Review → Send; missing fact arrow returns to owner."
+    },
+    {
+      "asset_ids": [
+        "M2-S05-05-VOICE"
+      ],
+      "composition": "portrait full-frame readable original diagram or labeled fixture",
+      "end_frame": 1500,
+      "end_ms": 50000,
+      "information_job": "Invite a bounded mapping action",
+      "mode": "motion_graphic",
+      "on_screen_text": "WHERE DOES A PERSON DECIDE?",
+      "panel_map": [],
+      "scene_id": "M2-S05-05-SC08",
+      "shot_id": "M2-S05-05-SH08",
+      "source_frame_relation": "ORIGINAL_PLANNED_FRAME; no competitor-frame reuse",
+      "start_frame": 1320,
+      "start_ms": 44000,
+      "transition": "hard cut or 6-frame opacity fade when legibility improves; no gratuitous motion",
+      "viewer_state_change": "From question at this beat to: invite a bounded mapping action",
+      "visual": "A blank reply process map remains on screen."
+    }
+  ],
+  "source_map": [
+    {
+      "source_ref": "TR-018",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-021",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-022",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "source_ref": "TR-069",
+      "transfer": "function or constraint only; no competitor wording, footage, layout, voice or shot sequence"
+    },
+    {
+      "sha256": "sha256:87474f8828e80531304bff8b776e9728567dd9ddb138186fea491396f8d8f32c",
+      "source_ref": "BRAND-PB",
+      "transfer": "owner-supplied brand and claims constraints"
+    },
+    {
+      "sha256": "sha256:b57198e1b8ea03c384d8a97226ebfe51b2c6064fee91a4a4571cd4ebf590528f",
+      "source_ref": "OWN-DEMO:reply_review",
+      "transfer": "The draft is deliberately authored, not an observed model output. No message is sent; no real customer input is used."
+    }
+  ],
+  "spoken_script": "Your AI can draft the reply without making the promise. Imagine a customer asking when something will arrive. Use a fictional request for the first test. Give the assistant only approved facts and a clear instruction to flag anything it cannot confirm. In this example, the draft promises tomorrow. Our approved information does not support that date. The next step is a person checking the request, not the message going straight to the customer. That person corrects the draft, confirms any promise, and decides whether to send it. Keep the boundary visible: prepare, review, then send. A missing fact returns to the process owner. Map one routine reply today. Mark the exact point where a human must decide.",
+  "spoken_word_count": 118,
+  "synthesis_note": "Transfer visible handoffs and ownership distinctions while removing replacement claims, sales promises and autonomous sending.",
+  "title": "Let AI prepare the reply, then stop"
+}

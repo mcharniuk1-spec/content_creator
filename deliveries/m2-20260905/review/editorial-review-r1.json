@@ -1,0 +1,211 @@
+{
+  "schema": "m2.independent-editorial-review.v1",
+  "reviewer": "independent_review",
+  "maker": "strategy_lane",
+  "verdict": "APPROVED_WITH_LIMITATIONS",
+  "scope": "Eight original editorial hypotheses, combined shooting plans and PREVIS contact sheets;curated owner positioning and method knowledge",
+  "editorial_acceptance": true,
+  "final_best_reels_accepted": false,
+  "source_audiovisual_evidence_accepted": false,
+  "production_accepted": false,
+  "external_write_accepted": false,
+  "card_ids": [
+    "M2-S05-01",
+    "M2-S05-02",
+    "M2-S05-03",
+    "M2-S05-04",
+    "M2-S05-05",
+    "M2-S05-06",
+    "M2-S05-07",
+    "M2-S05-08"
+  ],
+  "source_review": {
+    "all_card_scripts_and_claims": 8,
+    "full_referenced_legacy_transcripts": 18,
+    "founder_playbook": "full",
+    "meeting_spans": [
+      "76-86",
+      "1740-1750"
+    ],
+    "contact_sheets_visually_inspected": 8,
+    "planned_shots": 64,
+    "independent_second_coding_of_entire_91_records": false
+  },
+  "findings": {
+    "brand_fit": "PASS",
+    "functional_transfer_and_originality": "PASS_WITH_UNVERIFIED_SOURCE_LIMITS",
+    "claims_and_synthetic_labels": "PASS",
+    "corpus_synthesis_card": "M2-S05-01",
+    "self_contained_cta": "PASS",
+    "recording_and_asset_readiness_labels": "PASS"
+  },
+  "knowledge": {
+    "approved_as_owner_fact_or_method": [
+      "KC-STRATEGY-01",
+      "KC-STRATEGY-02",
+      "KC-STRATEGY-05"
+    ],
+    "approved_as_hypothesis_only": [
+      "KC-STRATEGY-04"
+    ],
+    "keep_run_local_provisional": [
+      "KC-STRATEGY-03"
+    ]
+  },
+  "limitations": [
+    "Legacy ASR provenance and wording are not audio-verified;only89word-bearing transcripts among2352Reels.",
+    "No competitor source video/frame/shot/semantic-scene/comment evidence accepted.",
+    "Opening/ending windows are ASR segment candidates;not validated rhetorical boundaries.",
+    "All aggregate topic/hook labels remain maker-coded diagnostic candidates,no causal/market-prevalence claim.",
+    "Contact sheets contain planned original panels and owner-footage placeholders,not finished graphics or recorded demos.",
+    "Script timing is nominal;owner takes,narration and actual demo/graphic assets require alignment and final review.",
+    "Optional providers remain live-untested and require exact paid-shot activation.",
+    "Owner selection,final edit and publication remain separate."
+  ],
+  "manifest": [
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-01.json",
+      "sha256": "20b7a66a7b6ca789c7b6cd719ff73e4288d87dee500da717aa4532dc62349f4e"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-01.md",
+      "sha256": "9bd7a35f2898d6a102df279ae44e749879f9ab3ff8c8768187a59c9dff25ed2d"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-02.json",
+      "sha256": "67a19b6617f0c4e39eabba51a5d4a768001e9dfb662a3f87230565f1c82907b3"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-02.md",
+      "sha256": "acfc53705d16cf9ca0195bb04ffedcaa7ae9c24200f7fcb3a4e47f4ec8996962"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-03.json",
+      "sha256": "695d976670fa451f72b8795b887a733ee6d43a344fbad48a36d02fb1f6b90739"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-03.md",
+      "sha256": "e471997be76dc1a6d2ad199eea1412b8a81621a468cb65bdea82a835eb7a0d5a"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-04.json",
+      "sha256": "813331808abb16d5835ee19b1926e42b2ac18fff6b3798171d22494b4abe1b22"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-04.md",
+      "sha256": "4abf4de5e0ec40d2924e11683bc329d895085a595434afc0c95cbb623d6da400"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-05.json",
+      "sha256": "a7ce88c847612a1070599fb507ea48a6f7dc0d1353eafc014091776c7e15dc4e"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-05.md",
+      "sha256": "5a4d00ccbec8242b5ae48aa58927cf3a1962f1d986b76d3a376adb3925e4b401"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-06.json",
+      "sha256": "659e82a1630e2e922b6cb9117f5d5d92ab28a707219dce5cd963bc715919aa0d"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-06.md",
+      "sha256": "79c3eca0b7830d81fe396297b6be157402377ed70e4ff074a58f5d0864e0c2d3"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-07.json",
+      "sha256": "6998ca0fdf076561f2c62471ad57c1e7bdf7589970f7b31e4baee12620835499"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-07.md",
+      "sha256": "9dee3e08fcfb2467c78381dd50ea856f9eedd648fc49b5c0fa6510629cffbe1d"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-08.json",
+      "sha256": "c5c5a484ef589d5c44b7f7a2d9a6fa9d3f2dd9df6b070d17ee509d9c295e29ab"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/cards/M2-S05-08.md",
+      "sha256": "232c3714b356d0187d541dff168fadab0d1a6c0c46c0f2cc745b8de3a2cbe27a"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/brand-evidence-capsule.json",
+      "sha256": "e7333e736db68b10420590eb5d87b21bcd8c013288fc878677bbc0152a9ec63b"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/brand-evidence-capsule.md",
+      "sha256": "d803d0805452b53cb8d76026e2275103de53560ee34854ea5378faeee1210b9e"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/script-slate.json",
+      "sha256": "531403d509c89c486df667453c78bac86c12824c1ae01a8271dd2a677a7c9477"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/demo-receipt.json",
+      "sha256": "41ae20df2f124f5cf2a2d11e1a5e21c57468ef6acb24e555e5aa2f48daef7a6a"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/knowledge-candidates.json",
+      "sha256": "a4eea189936806c8827d6e928516d3dc80c0e94a8d52902c8769dfa0b44f972a"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/demo-fixtures/meeting_check.json",
+      "sha256": "b2e2af4250e2d886287381d8f7c900108eaca5acd386cf18cea1b4b691250708"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/demo-fixtures/missing_metric.json",
+      "sha256": "1deaf10f7afbf40ccd9473f65201e8b2ca92a680ba0b013775a3fc9f7f1e2715"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/demo-fixtures/reply_review.json",
+      "sha256": "b57198e1b8ea03c384d8a97226ebfe51b2c6064fee91a4a4571cd4ebf590528f"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/strategy/demo-fixtures/research_shortlist.json",
+      "sha256": "40f72dd3578366bab781f67d1b705c96f1463392e74d82dbc205331b9ee47dbb"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-01/contact-sheet.jpg",
+      "sha256": "29dd054bfe9c3c16391661733f54863d322bf3f21bf07474cebfe211a230378b"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-02/contact-sheet.jpg",
+      "sha256": "e02a4748262059cd10f6dbc2efd3a33eb64ae9b8d0d06b8aae5d7401bcdcb81f"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-03/contact-sheet.jpg",
+      "sha256": "b15e34965f5c827fdcda0d70b1a3c5c8b0eb3814c6de1790983c242f022ea6f0"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-04/contact-sheet.jpg",
+      "sha256": "2892d2466d4332e81ed1fe7c5bc7ef5dd4960a2469610b9b7556cb9feb22fe5a"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-05/contact-sheet.jpg",
+      "sha256": "a3b9e25fafaebaf55afb4540a065cdb6041dcc9ec1de1ae41fea2aad17d48e0b"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-06/contact-sheet.jpg",
+      "sha256": "a8bff62e46c3dd62f9494b91e411f5fccf677cbc0476af90ebf1047df36e1b8b"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-07/contact-sheet.jpg",
+      "sha256": "191c9829da73d1a03baf89069556f4cf40d52b9db58247d1d235c42328356271"
+    },
+    {
+      "path": "runs/20260905-two-engine-execution-v1/lanes/studio/storyboards-final/M2-S05-08/contact-sheet.jpg",
+      "sha256": "502af2fd35150327013be0796ea170226845791f5361cb964f633287424cd391"
+    },
+    {
+      "path": "knowledge/m2-positioning.md",
+      "sha256": "b8276ae295d2b68534160e64cbe2313796ffbc6ee8c1ae29bf79e78b966cee75"
+    },
+    {
+      "path": "knowledge/m2-operating-memory.md",
+      "sha256": "e0a803dda14e47fee88adad72690a409c5a01a4e3cbce7c23c4a22add0ac2839"
+    },
+    {
+      "path": "skills/m2-script-writer/SKILL.md",
+      "sha256": "0161cb6d4f0fd77c6cb4eb3a1ec504b9083baa44e7aaa2549ae5da6a2302cf20"
+    }
+  ]
+}

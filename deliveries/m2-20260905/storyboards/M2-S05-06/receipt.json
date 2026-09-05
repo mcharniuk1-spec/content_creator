@@ -1,0 +1,77 @@
+{
+  "schema": "m2.remotion-storyboard.v1",
+  "card_id": "M2-S05-06",
+  "edl_sha256": "43f5b31ae2ec305c51b7a625d4d65e552d2069244647c05872cc2a1e2d94b7c9",
+  "fps": 30,
+  "duration_frames": 1500,
+  "frames": [
+    {
+      "scene_id": "M2-S05-06-SH01",
+      "frame": 60,
+      "start_frame": 0,
+      "end_frame": 120,
+      "path": "shot-01.png",
+      "sha256": "0d06741bfbb191290544f57bed7f93b9d7f7553e904d7512d8bc2ee6060450e1"
+    },
+    {
+      "scene_id": "M2-S05-06-SH02",
+      "frame": 225,
+      "start_frame": 120,
+      "end_frame": 330,
+      "path": "shot-02.png",
+      "sha256": "cfbe504490be6f585f6e14cd08170a6e456431813aa10eb33bb08207e5b15c17"
+    },
+    {
+      "scene_id": "M2-S05-06-SH03",
+      "frame": 435,
+      "start_frame": 330,
+      "end_frame": 540,
+      "path": "shot-03.png",
+      "sha256": "1f4bc52a6fa8d49807545e0e3d4975fc2cf68bff6e2e81ad4c95417e5ae8818c"
+    },
+    {
+      "scene_id": "M2-S05-06-SH04",
+      "frame": 645,
+      "start_frame": 540,
+      "end_frame": 750,
+      "path": "shot-04.png",
+      "sha256": "b96468eb9068f623a51154635e110f1b685eb5abd0213e8c1b9fecfd7ac39b50"
+    },
+    {
+      "scene_id": "M2-S05-06-SH05",
+      "frame": 855,
+      "start_frame": 750,
+      "end_frame": 960,
+      "path": "shot-05.png",
+      "sha256": "7401476643cc327535da4eae392032aca5a53fca4fa5c05691e68648e505d86c"
+    },
+    {
+      "scene_id": "M2-S05-06-SH06",
+      "frame": 1050,
+      "start_frame": 960,
+      "end_frame": 1140,
+      "path": "shot-06.png",
+      "sha256": "49b407b49c4624bfc029ceae91cc73af4adadb7f78527abf439f78589bd973f9"
+    },
+    {
+      "scene_id": "M2-S05-06-SH07",
+      "frame": 1230,
+      "start_frame": 1140,
+      "end_frame": 1320,
+      "path": "shot-07.png",
+      "sha256": "ae8fff398058fa1572eaaad3fe9bd54ccba529024b7a7d59a1620e7a36fe21ed"
+    },
+    {
+      "scene_id": "M2-S05-06-SH08",
+      "frame": 1410,
+      "start_frame": 1320,
+      "end_frame": 1500,
+      "path": "shot-08.png",
+      "sha256": "57071b82517674a7eb7733dedd73117d7340b0924b8654d44401a7c316eb76f1"
+    }
+  ],
+  "source_evidence": false,
+  "provider_execution": false,
+  "review_state": "REVIEW_PENDING",
+  "render_mode": "PREVIS"
+}

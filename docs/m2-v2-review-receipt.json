@@ -1,0 +1,94 @@
+{
+  "schema": "m2.luna-final-acceptance.v1",
+  "run_id": "20260905-mvp-completion-v2",
+  "reviewer": "luna-high",
+  "scope": {
+    "implementation": [
+      "m2_signal/transcript_benchmark.py",
+      "m2_orchestrator/diagnostics.py"
+    ],
+    "tests": [
+      "tests/test_transcript_benchmark.py",
+      "tests/test_transcript_benchmark_io.py",
+      "tests/test_m2_diagnostics.py",
+      "tests/test_m2_diagnostics_edges.py"
+    ],
+    "docs": [
+      "docs/m2-stage-diagnostics.md",
+      "docs/m2-transcript-benchmark.md"
+    ],
+    "dictionary": [
+      "runs/20260905-mvp-completion-v2/lanes/luna-analytics/notion-column-dictionary.json",
+      "runs/20260905-mvp-completion-v2/lanes/luna-analytics/notion-column-dictionary.csv"
+    ]
+  },
+  "verdict": {
+    "scoped_code_and_artifacts": "ACCEPT_WITH_LIMITATIONS",
+    "full_mvp_objective": "BLOCKED",
+    "critical_defects": [],
+    "full_objective_blockers": [
+      "source media and independently reviewed frame/scene evidence are unavailable",
+      "free-video prompt-quality path is failed or interrupted and not accepted"
+    ]
+  },
+  "implementation_sha256": {
+    "m2_signal/transcript_benchmark.py": "sha256:5d502dd4618a3c12fdd490d310adeebd6077398fee8b36d56e5fc7a03098f916",
+    "m2_orchestrator/diagnostics.py": "sha256:676c79ef44f8c8aa58688738a39d50448dc402e28343c4d79140bf6538c17e66"
+  },
+  "test_and_doc_sha256": {
+    "tests/test_transcript_benchmark.py": "sha256:2058e8be3ce846fb0658db7aa7142e947f901a898a96b30e78381cde6cab343c",
+    "tests/test_transcript_benchmark_io.py": "sha256:e797c89f9591372df066fc575f526bc06d12c581e86039fc8e1215f92d4d8709",
+    "tests/test_m2_diagnostics.py": "sha256:12a084394cfe721bc8c51871f9013e61d5d897f2e55c5a07ebefa09965bbfa45",
+    "tests/test_m2_diagnostics_edges.py": "sha256:105a4b1555eaac1e66c471bc6fe1019712b696837a52569ac2190fc77c767741",
+    "docs/m2-stage-diagnostics.md": "sha256:6aa916cbc8de30e0980e003f37299fdc21f3ce73a95dc1ed8ebd9d1a214cf20c",
+    "docs/m2-transcript-benchmark.md": "sha256:c8cf858f00b83569ff0ea57f331b3478faa804bbf95beb04074222c91272f241"
+  },
+  "dictionary_sha256": {
+    "runs/20260905-mvp-completion-v2/lanes/luna-analytics/notion-column-dictionary.json": "sha256:8ca1c0a67c7f159d2ef47c2e4e5818cbba9b2ac1709768c2d0b8ad437bed8af9",
+    "runs/20260905-mvp-completion-v2/lanes/luna-analytics/notion-column-dictionary.csv": "sha256:8375b61f9d265c6a0546ac9c0f3c2d7eab7c9e3e702656b26de4400b0f04a947"
+  },
+  "output_evidence": {
+    "benchmark_json_sha256": "sha256:b841d33c266948d20351c2ac05ff540859df254c9feed0fe30a2541976070c6f",
+    "joined_transcript_metrics_sha256": "sha256:b3655cab175a42599409d68e689fe996821300f1a79ceed38120885e5149ee48",
+    "benchmark_rows": 91,
+    "word_bearing_rows": 89,
+    "primary_complete_rows": 73,
+    "canonical_reels": 2352,
+    "transcript_accounts": 58,
+    "numeric_associations": 15,
+    "categorical_effect_rows": 21,
+    "all_live_p_values_null": true,
+    "all_live_q_values_null": true,
+    "dictionary_columns": 65,
+    "dictionary_scope_counts": {
+      "reel": 34,
+      "account": 20,
+      "card": 11
+    },
+    "dictionary_json_csv_key_bijection": true,
+    "components_definition_matches_signal_engine": true,
+    "maker_projection_receipt_dictionary_hashes": "STALE_REPAIR_REQUIRED",
+    "diagnostics_stage_rows": 39,
+    "diagnostics_event_rows": 51,
+    "diagnostics_artifact_bindings": 171,
+    "diagnostics_metric_rows": 28224
+  },
+  "checks": {
+    "py_compile": "PASS",
+    "combined_pytest_command": "python3 -m pytest -q tests/test_transcript_benchmark.py tests/test_transcript_benchmark_io.py tests/test_m2_diagnostics.py tests/test_m2_diagnostics_edges.py",
+    "combined_pytest_result": "28 passed in 0.21s",
+    "pytest_benchmark_18_cases": "PASS (18 cases; one parametrized test contributes two cases)",
+    "pytest_diagnostics_10_cases": "PASS (10 cases)",
+    "network_used": false,
+    "ml_or_media_run": false,
+    "external_writes": false,
+    "notion_writes": false
+  },
+  "limitations": [
+    "Selected text subset and maker-coded semantic labels do not support causal, prevalence, final-best, production, or performance claims.",
+    "No source media, reviewed frames, semantic scenes, or comments are available for this benchmark.",
+    "A single dated snapshot and unverified exposure horizon limit engagement interpretation.",
+    "Maker projection receipt dictionary hashes require refresh after the corrected Components definition."
+  ],
+  "review_note": "runs/20260905-mvp-completion-v2/lanes/luna-final-acceptance/review.md"
+}

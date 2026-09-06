@@ -1,31 +1,55 @@
 {
   "schema": "m2.shared-engine-sync.v2",
-  "date": "2026-09-06T19:32:56.867546+00:00",
-  "scope": "reviewed media recovery foundation; full corpus incomplete; excludes pending chunk recovery implementation",
+  "date": "2026-09-06",
+  "scope": "reviewed media recovery foundation plus eligibility inventory, scene candidate extraction, and optional offline transcript recovery; bounded R7 pilot completed with output review pending",
   "files": [
     {
       "path": "agents/m2-roles.json",
       "sha256": "487ea2870a3d25f3612138ade8d2b23c750b4aa1cc0ef934fc337d7cf2b6a352"
     },
     {
-      "path": "config/m2-stage-policy.v1.json",
-      "sha256": "09eab68145631ea65665f8fe336effc387948415911a9575951024d93391ddd4"
-    },
-    {
       "path": "config/m2-loore-optional.v1.json",
       "sha256": "ad595c432a792f395dc8dd75c1c8fd9cd2ce01b130e01f939e2e2f03a97fc135"
     },
     {
-      "path": "docs/m2-operator-guide.md",
-      "sha256": "eb09e8b7f76fa00b7dceee02e56f482be94eaa3db491949f2a32de23567dbc06"
+      "path": "config/m2-stage-policy.v1.json",
+      "sha256": "09eab68145631ea65665f8fe336effc387948415911a9575951024d93391ddd4"
+    },
+    {
+      "path": "config/server-media.example.json",
+      "sha256": "65a4e6da9d59a02e6647b4ddcf18b7bbafaa3b6ec66ef8bf06fbb067c1550e39"
+    },
+    {
+      "path": "config/server-replay.example.json",
+      "sha256": "fef410f65b426d862f44bf6a0ed11f9f901a9218249adea4711ac99629df2ff6"
     },
     {
       "path": "docs/m2-corpus-worker-contract.md",
       "sha256": "e927060b071a961728d33227313c9dfd8efed0477a60423a3e31bc1fa19ddcb1"
     },
     {
-      "path": "requirements-m2-media.txt",
-      "sha256": "4d854a6a38746596c22dded338689e74f3d1c5bb9369ca31cb3589656bf05dd6"
+      "path": "docs/m2-operator-guide.md",
+      "sha256": "dbd339c70243d539a524032bec389ee495b91fc618e83c95894c42f9155ee9c9"
+    },
+    {
+      "path": "docs/reviews/media-recovery-20260906-v2.json",
+      "sha256": "f013c926cfb54e86183364071c4f66ea5d83d00069bd2108ed98e8159c9cde07"
+    },
+    {
+      "path": "integrations/radar/README.md",
+      "sha256": "2675c56a987f578f0655ea2a9ed67148a0c42397b65ef33643973f5fc5689b37"
+    },
+    {
+      "path": "integrations/radar/config/server-media.example.json",
+      "sha256": "65a4e6da9d59a02e6647b4ddcf18b7bbafaa3b6ec66ef8bf06fbb067c1550e39"
+    },
+    {
+      "path": "integrations/radar/config/server-replay.example.json",
+      "sha256": "fef410f65b426d862f44bf6a0ed11f9f901a9218249adea4711ac99629df2ff6"
+    },
+    {
+      "path": "integrations/radar/server_entry.py",
+      "sha256": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e"
     },
     {
       "path": "knowledge/index.md",
@@ -41,20 +65,12 @@
       "sha256": "883131b3528758033560f11076e781f5aee4682118d022346167e6d27abbd764"
     },
     {
-      "path": "m2_orchestrator/execution.py",
-      "sha256": "70c5568df18fa751485411140e7141339b4afd2a4bb862c85fe51f74c76844bb"
-    },
-    {
-      "path": "m2_orchestrator/policy.py",
-      "sha256": "c64b4b39d2e4b41993b2a910121e5dd3b2581fb5389e880d1e6112c48cbd09fe"
-    },
-    {
-      "path": "m2_orchestrator/state.py",
-      "sha256": "e07b180c4770f541f3a7a2f54967065d11d6dc8bded0863bc71c0cfdc31bd938"
-    },
-    {
       "path": "m2_orchestrator/corpus_media.py",
       "sha256": "a058d06757a62408fa000679319b107efdc7b484453f040f5726267b6e95c1e1"
+    },
+    {
+      "path": "m2_orchestrator/execution.py",
+      "sha256": "70c5568df18fa751485411140e7141339b4afd2a4bb862c85fe51f74c76844bb"
     },
     {
       "path": "m2_orchestrator/media_acquisition.py",
@@ -77,6 +93,10 @@
       "sha256": "20f3b7f46454bea1957f730844d77fda4d4627549582f8c2d3377677396b79c7"
     },
     {
+      "path": "m2_orchestrator/policy.py",
+      "sha256": "c64b4b39d2e4b41993b2a910121e5dd3b2581fb5389e880d1e6112c48cbd09fe"
+    },
+    {
       "path": "m2_orchestrator/process_budget.py",
       "sha256": "e5ee0b5b728726f23e9ddec1994acc6070a2db0c83566b07d7253be8ef7c0d6e"
     },
@@ -89,16 +109,56 @@
       "sha256": "4f9337dd79a5c02bee4823a21d501d7dcb43a1bf4043f988880cbc8bdd123599"
     },
     {
-      "path": "m2_orchestrator/server_media.py",
-      "sha256": "1a56149a7927416e649e4c78fa35640b9876d57ae128a4db64ccd645e51bdcf2"
+      "path": "m2_orchestrator/scene_media.py",
+      "sha256": "f0899499d4e8710c4e7f180b04e127527c7bb73690620fd20f6573f77437cf42"
     },
     {
       "path": "m2_orchestrator/semantic_queue.py",
       "sha256": "d917ed8fa34d5b8ab79d316cb55854203acdf7bc88684876b1abe6650c879a59"
     },
     {
+      "path": "m2_orchestrator/server_media.py",
+      "sha256": "1a56149a7927416e649e4c78fa35640b9876d57ae128a4db64ccd645e51bdcf2"
+    },
+    {
+      "path": "m2_orchestrator/state.py",
+      "sha256": "e07b180c4770f541f3a7a2f54967065d11d6dc8bded0863bc71c0cfdc31bd938"
+    },
+    {
+      "path": "m2_orchestrator/transcription_chunk_worker.py",
+      "sha256": "7ca8e606ec170f600312a28cda63bc98aa61e6b597414624f5d4710798521a31"
+    },
+    {
+      "path": "m2_orchestrator/transcription_recovery.py",
+      "sha256": "aa97d29431c2e75df7aaec9e1996771b2299a5e30d9ad825dfc58d067f76b9a2"
+    },
+    {
+      "path": "m2_signal/analysis_eligibility.py",
+      "sha256": "58adaf6157157e398ec0adf0e97c0fad425e23af3ef684d9ab920285c47eedd5"
+    },
+    {
       "path": "m2_signal/corpus_features.py",
       "sha256": "2af9ad974d6d0169428b149813c68041c02d305c3e73496fdfef0cd915e3b9e5"
+    },
+    {
+      "path": "requirements-m2-media.txt",
+      "sha256": "4d854a6a38746596c22dded338689e74f3d1c5bb9369ca31cb3589656bf05dd6"
+    },
+    {
+      "path": "schemas/m2-corpus-field-dictionary.v1.json",
+      "sha256": "fa28b634e74e3f6d8bec3154f3d36c9fc65bb73320b9e3116ade2a3ad27a6aa9"
+    },
+    {
+      "path": "scripts/build_m2_media_manifest.py",
+      "sha256": "55cf98040e832ebe4b2108fcda9a2e6cfab89c59e6f3276294a31d73d249f13b"
+    },
+    {
+      "path": "scripts/m2_vision_ocr.swift",
+      "sha256": "ec56aa568639e8983a4eede7f245dbc4e8bb7af5ee61c1f1a099f205dbeca2d4"
+    },
+    {
+      "path": "scripts/report_m2_corpus_progress.py",
+      "sha256": "add73bf20a2ea85636994e01e745a79903248f6f78931e4bbaf1ed60ec7bdbd5"
     },
     {
       "path": "scripts/run_m2.py",
@@ -109,16 +169,16 @@
       "sha256": "c746443daaf3265e438756a2c8d243440120f3e0ecd9f53ba679d9797454742c"
     },
     {
-      "path": "scripts/build_m2_media_manifest.py",
-      "sha256": "55cf98040e832ebe4b2108fcda9a2e6cfab89c59e6f3276294a31d73d249f13b"
+      "path": "scripts/run_m2_transcription_recovery.py",
+      "sha256": "ecdfc594fcaff4aa39acfa9852d9fad0c8fae3d7022ff3da32b147c89b928a27"
     },
     {
-      "path": "scripts/report_m2_corpus_progress.py",
-      "sha256": "add73bf20a2ea85636994e01e745a79903248f6f78931e4bbaf1ed60ec7bdbd5"
+      "path": "server_entry.py",
+      "sha256": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e"
     },
     {
-      "path": "scripts/m2_vision_ocr.swift",
-      "sha256": "ec56aa568639e8983a4eede7f245dbc4e8bb7af5ee61c1f1a099f205dbeca2d4"
+      "path": "tests/test_analysis_eligibility.py",
+      "sha256": "6f03cecda29afde39100e873e57004db246caf741d12832286d924d3d8c7d156"
     },
     {
       "path": "tests/test_corpus_features.py",
@@ -161,6 +221,14 @@
       "sha256": "139da2a43b3c0a4fd83e11f52b6b5a7972a2ab163e6c159b0d98b11cc48249b4"
     },
     {
+      "path": "tests/test_radar_server_media_entry.py",
+      "sha256": "f2fccf8b31ed68ff1d121267755ca42bca9fa648a4b8b877e021a77a81ee8fe6"
+    },
+    {
+      "path": "tests/test_scene_media.py",
+      "sha256": "1fc52396789b9b84b07ed0e91599338c5a5e89fdf842b6150b78efe126d4cb45"
+    },
+    {
       "path": "tests/test_semantic_queue.py",
       "sha256": "b24281e79c8332c437d9b13593d0a0713c616eb0f127b5b20cafd0a2a71efdeb"
     },
@@ -169,40 +237,12 @@
       "sha256": "4b127edfcb5f556688c27a69fbb5efb5966053cd038666440e9ac746a4a898cf"
     },
     {
-      "path": "tests/test_radar_server_media_entry.py",
-      "sha256": "f2fccf8b31ed68ff1d121267755ca42bca9fa648a4b8b877e021a77a81ee8fe6"
+      "path": "tests/test_transcription_chunk_worker.py",
+      "sha256": "ad7b212565df3722834b21ac3cb970181391c5f0b0aa9291231978b826408eec"
     },
     {
-      "path": "integrations/radar/server_entry.py",
-      "sha256": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e"
-    },
-    {
-      "path": "integrations/radar/README.md",
-      "sha256": "2675c56a987f578f0655ea2a9ed67148a0c42397b65ef33643973f5fc5689b37"
-    },
-    {
-      "path": "integrations/radar/config/server-replay.example.json",
-      "sha256": "fef410f65b426d862f44bf6a0ed11f9f901a9218249adea4711ac99629df2ff6"
-    },
-    {
-      "path": "integrations/radar/config/server-media.example.json",
-      "sha256": "65a4e6da9d59a02e6647b4ddcf18b7bbafaa3b6ec66ef8bf06fbb067c1550e39"
-    },
-    {
-      "path": "server_entry.py",
-      "sha256": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e"
-    },
-    {
-      "path": "config/server-replay.example.json",
-      "sha256": "fef410f65b426d862f44bf6a0ed11f9f901a9218249adea4711ac99629df2ff6"
-    },
-    {
-      "path": "config/server-media.example.json",
-      "sha256": "65a4e6da9d59a02e6647b4ddcf18b7bbafaa3b6ec66ef8bf06fbb067c1550e39"
-    },
-    {
-      "path": "schemas/m2-corpus-field-dictionary.v1.json",
-      "sha256": "fa28b634e74e3f6d8bec3154f3d36c9fc65bb73320b9e3116ade2a3ad27a6aa9"
+      "path": "tests/test_transcription_recovery.py",
+      "sha256": "1f3f17be6b0498946b28b632b911d07bfd158465d95dab2454ddfa823a7e0a26"
     }
   ],
   "source_media_included": false,

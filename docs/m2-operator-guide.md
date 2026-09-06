@@ -208,3 +208,57 @@ counts. The optional local Apple Vision OCR helper is macOS-specific; the
 portable core path is FFmpeg plus CPU ASR. OCR text remains separate from
 speech transcripts. The corpus runner does not invoke Notion, an LLM API,
 generation, server deployment or publication automatically.
+
+## Radar v2 media overlay (review pending)
+
+The staged v2 overlay adds a read-only eligibility inventory, bounded scene candidate extraction, and an optional offline transcript recovery route. It is an integration candidate; it does not activate the timer, change the frozen corpus ledger, or claim full-corpus completion. Keep the existing shared-engine checkout and copy these relative paths into the matching package locations only after independent review.
+
+### Eligibility inventory
+
+Run against one frozen feature checkpoint and its exact contract and field dictionary. The command preserves every input row and writes a new private output directory.
+
+```bash
+python3 -m m2_signal.analysis_eligibility \
+  --features <PRIVATE_INPUT_ROOT>/feature-checkpoint0001.jsonl \
+  --contract <PRIVATE_INPUT_ROOT>/analysis-contract.json \
+  --field-dictionary <PRIVATE_INPUT_ROOT>/field-dictionary.json \
+  --output <PRIVATE_RUN_ROOT>/analysis-eligibility-r3 \
+  --expected-features-sha256 <FEATURE_SHA256> \
+  --expected-contract-sha256 <CONTRACT_SHA256> \
+  --expected-field-dictionary-sha256 <DICTIONARY_SHA256> \
+  --expected-rows 2352
+```
+
+This route does no fitting, network access, media decode, or semantic promotion. Missing values remain missing; likes and comments have their own outcome gates. The status is `ELIGIBILITY_COMPLETE_FIT_PENDING_REVIEWED_EVIDENCE`; later fitting requires the accepted analysis contract and a separate evidence review.
+
+### Scene candidate extraction
+
+Call `m2_orchestrator.scene_media.extract_scene_media` from the reviewed scene stage with a bound observed media record, transcript, and reviewed scene annotations. The output directory must be fresh and private. The extractor is capped at 48 decoded frames, 16 MiB per collage, and 64 MiB total scene output; it performs one indexed decode for the requested union, preserves decoded PTS and hashes, and retains partial failures. The 64-frame coarse semantic review in the accompanying receipt is evidence for candidate extraction only.
+
+```bash
+python3 -m pytest -q tests/test_scene_media.py
+```
+
+Do not expose collages, source media, transcripts, or signed URLs. A technical frame receipt is not a confirmed shot or accepted semantic scene.
+
+### Optional transcript recovery
+
+Recovery is an explicit offline operator action for one retained source record. Preflight is the default and does not launch a worker. Use a fresh private output directory, a frozen local model bundle, and an absolute interpreter path. The parent invokes at most one chunk worker at a time; each core window is at most 30 seconds with at most 1 second context on each side, two CPU threads, one worker, 900-second child timeout, 1.5 GiB sampled parent RSS watchdog, and 512 MiB sampled FFmpeg RSS watchdog. Audio output is bounded and hash-bound.
+
+```bash
+python3 scripts/run_m2_transcription_recovery.py \
+  --record-json <PRIVATE_INPUT_ROOT>/media-record.json \
+  --source-root <PRIVATE_MEDIA_ROOT> \
+  --model-dir <FROZEN_MODEL_DIR> \
+  --output-dir <PRIVATE_RUN_ROOT>/transcription-recovery-r7 \
+  --python-executable <ABSOLUTE_MEDIA_PYTHON> \
+  --run
+```
+
+Use `--run` only after separate operator approval and a paused reviewed checkpoint; omit `--run` for preflight-only validation. Recovery remains optional and review pending. The bounded R7 pilot completed with one retried chunk; its aggregate remains `SUSPICIOUS_TIMINGS` with `analysis_ready=false` and `approved=false`. Multi-window overlap is retained as non-additive evidence and cannot become `analysis_ready` without independent timing, boundary, and acoustic review. Empty output, unknown audio, partial chunks, and decode or ASR failures remain explicit states. No HikerAPI client, URL fallback, model download, package install, or deletion is performed.
+
+```bash
+python3 -m pytest -q tests/test_transcription_recovery.py tests/test_transcription_chunk_worker.py
+```
+
+The v2 delivery review receipt records the exact pending status and excludes all run-specific media, transcript text, identities, secrets, and absolute private paths.

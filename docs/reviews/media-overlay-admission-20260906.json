@@ -1,0 +1,31 @@
+{
+  "schema": "m2.radar-overlay-independent-admission.v1",
+  "reviewer": "root-integrator",
+  "preparer": "luna_acquisition_manifest",
+  "verdict": "ACCEPT_WITH_LIMITATIONS_FOR_BOUNDED_OPERATOR_INTEGRATION",
+  "candidate_digest": "400fc083e6e8419f1a0b8da6df750697f9ccb413cae737637615324377ba5ca2",
+  "overlay_manifest_sha256": "293d1da4bf0f30ab05f8fb8558074a167cb429e84a8eb216f07c8b8349915f51",
+  "checked_overlay_files": 11,
+  "checked_shared_files": 60,
+  "component_reviews": [
+    "Independent Luna R7 recovery code review;64 source workspace focused tests",
+    "Independent root scene extraction review and actual64frames; coarse semantic scope only",
+    "Independent root eligibilityR3 review;9tests;2352rows preserved"
+  ],
+  "package_checks": {
+    "focused_tests": 61,
+    "test_package_collection": 297,
+    "diff_check": "PASS",
+    "orphan_module_test": "REMOVED",
+    "no_private_absolute_paths_in_overlay": "CHECKED",
+    "source_media_or_transcripts_included": false
+  },
+  "limits": [
+    "Full corpus execution remains incomplete",
+    "R7 five-window recovery completed with one retry; output, timing and acoustic acceptance remain separate",
+    "Partial and overlapping word metrics must not be treated as complete unique word counts",
+    "No automatic server activation, local HikerAPI call, provider generation, publishing or deployment",
+    "Legacy repository-root test_collect.py has an existing import-time SystemExit; test-package collection and focused tests passed"
+  ],
+  "status_precedence": "This independent admission applies to the exact candidate digest; staged review-pending preparation records are retained as history."
+}

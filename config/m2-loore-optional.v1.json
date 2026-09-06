@@ -1,0 +1,171 @@
+{
+  "schema": "m2.loore-optional-route.v1",
+  "enabled": false,
+  "base_url": "https://mcp.loore.ai",
+  "auth_environment_name": "LOORE_API_KEY",
+  "contract_version": "1.1.0",
+  "contract_sha256": "2d54f3e3e291fe9a5e2899618c82caf5bbb8672dc100419697240e8d3544e06e",
+  "contract_source": "https://mcp.loore.ai/v1/openapi.json",
+  "operations": {
+    "analyze_reel": {
+      "method": "POST",
+      "path": "/v1/analyze-reel",
+      "request_schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The Instagram reel URL or its shortcode (e.g. https://instagram.com/reel/ABC\u2026)"
+          },
+          "depth": {
+            "type": "string",
+            "description": "Analysis tier: \"deep\" (default \u2014 adds the sampled video FRAMES) or \"quick\" (caption + metrics + baseline + transcript, without frames), 4 vs 6 credits"
+          },
+          "account_hint": {
+            "type": "string",
+            "description": "Optional author handle to baseline against when known (fallback only \u2014 the resolved author wins)"
+          },
+          "include_image_data": {
+            "type": "boolean",
+            "description": "When true (the DEFAULT), the frames come back as actual MCP image blocks \u2014 the real JPEG bytes in the answer \u2014 not only as links. Required for any client that cannot fetch an external URL: it sees the frames without making a single extra request. At most 12 images per answer, and a byte budget on top of that \u2014 whatever is not inlined is NAMED in the answer, and every frame keeps its URL in the JSON either way. Set false to receive links only."
+          },
+          "max_image_frames": {
+            "type": "number",
+            "description": "How many frames come back as PICTURES, 0-12 (default 8). The default is below the ceiling on purpose: pictures are sent at a quality where small on-frame text stays readable, and that costs weight, so the answer carries fewer of them rather than more unreadable ones. Raise it if your client accepts large results, lower it if it does not; 0 is the same as include_image_data:false. EVERY frame's URL stays in the JSON at every setting, so nothing is ever lost by asking for fewer pictures. If a result is too large for your client even without pictures, the answer comes back as a SUCCESS whose JSON is {status:\"result_too_large\", ...} plus a marked, unparseable excerpt \u2014 check that status before reading your own fields, and follow its advice to ask for less."
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "reel_storyboard": {
+      "method": "POST",
+      "path": "/v1/reel-storyboard",
+      "request_schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The Instagram reel URL or its shortcode (e.g. https://instagram.com/reel/ABC\u2026)"
+          },
+          "strategy": {
+            "type": "string",
+            "description": "Frame placement: \"hybrid\" (default), \"uniform\" or \"scene\""
+          },
+          "frames": {
+            "type": "number",
+            "description": "How many frames to cut, 3-24 (default 12)"
+          },
+          "include_image_data": {
+            "type": "boolean",
+            "description": "When true (the DEFAULT), the frames come back as actual MCP image blocks \u2014 the real JPEG bytes in the answer \u2014 not only as links. Required for any client that cannot fetch an external URL: it sees the frames without making a single extra request. At most 12 images per answer, and a byte budget on top of that \u2014 whatever is not inlined is NAMED in the answer, and every frame keeps its URL in the JSON either way. Set false to receive links only."
+          },
+          "max_image_frames": {
+            "type": "number",
+            "description": "How many frames come back as PICTURES, 0-12 (default 8). The default is below the ceiling on purpose: pictures are sent at a quality where small on-frame text stays readable, and that costs weight, so the answer carries fewer of them rather than more unreadable ones. Raise it if your client accepts large results, lower it if it does not; 0 is the same as include_image_data:false. EVERY frame's URL stays in the JSON at every setting, so nothing is ever lost by asking for fewer pictures. If a result is too large for your client even without pictures, the answer comes back as a SUCCESS whose JSON is {status:\"result_too_large\", ...} plus a marked, unparseable excerpt \u2014 check that status before reading your own fields, and follow its advice to ask for less."
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "ig_download": {
+      "method": "POST",
+      "path": "/v1/ig-download",
+      "request_schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048,
+            "description": "A public post, reel or story link. Give either this or story_id, never both."
+          },
+          "story_id": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^\\d{5,}(?:_\\d{2,})?$",
+            "description": "A story id, from ig_user_stories."
+          },
+          "index": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "description": "1-based carousel slide to fetch (default 1); ignored for a single-item post."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "get_credit_balance": {
+      "method": "POST",
+      "path": "/v1/billing-balance",
+      "request_schema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      }
+    },
+    "estimate_credit_cost": {
+      "method": "POST",
+      "path": "/v1/billing-estimate",
+      "request_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "analyze_reel_quick",
+              "analyze_reel_deep",
+              "reel_storyboard",
+              "reel_reference_compare",
+              "ig_analytics_express",
+              "ig_analytics_full",
+              "download_instagram_media",
+              "download_instagram_story",
+              "report_render",
+              "ig_audit_render",
+              "tracking_add",
+              "tracking_refresh",
+              "ig_followers_sample",
+              "ig_post_engagement",
+              "ig_highlights",
+              "ig_request"
+            ],
+            "description": "Which priced action to estimate: analyze_reel_quick | analyze_reel_deep | reel_storyboard | reel_reference_compare | ig_analytics_express | ig_analytics_full | download_instagram_media | download_instagram_story | report_render | ig_audit_render | tracking_add | tracking_refresh | ig_followers_sample | ig_post_engagement | ig_highlights | ig_request"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000,
+            "description": "How many units to run, 1-100000 (optional, default 1). A unit is one reel, one file, one account or one request depending on the action."
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "automatic_tracking": false,
+  "paid_execution": false,
+  "primary_media_route": "retained_local_media_cpu_asr_decoded_frames",
+  "state": "OPTIONAL_AUTH_UNAVAILABLE",
+  "preflight": [
+    "validate authenticated identity",
+    "read credit balance",
+    "estimate exact operation cost",
+    "restrict execution to available authorized credits",
+    "persist idempotency key and request hash before side effect",
+    "validate result source identity and artifact lineage",
+    "record actual debit and failures separately"
+  ],
+  "vendor_analysis_is_reviewed_evidence": false
+}

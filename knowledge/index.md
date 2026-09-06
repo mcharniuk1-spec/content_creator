@@ -12,3 +12,5 @@ The original `POSITIONING.md` at the repository root is retained as source conte
 Each substantial run records inputs, output hashes, tests, maker/reviewer, unresolved gaps and the next safe action. Promote reusable conclusions only after independent review, duplicate/conflict search, scope/freshness checks and an explicit source-addressed record. Notion is a review projection. An external Obsidian/WikiLLM sync needs exact target authority and readback; this checkout does not silently write to either system.
 
 - `m2-validation-lessons.md` — reviewed reliability lessons; exact-byte promotion in `m2-validation-promotion.json`.
+
+- [[m2-media-recovery-lessons]] — reviewed method-only media recovery lessons; exact-byte promotion in `m2-media-recovery-promotion.json`.

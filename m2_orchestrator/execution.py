@@ -27,7 +27,7 @@ def default_actors():
             "knowledge_curator": ["knowledge_curator"], "knowledge_reviewer": ["knowledge_reviewer"]}
 
 
-def prepare(source_dir, run_dir, run_id, mode="replay", settings=None, database=None):
+def prepare(source_dir, run_dir, run_id, mode="replay", settings=None, database=None, media_config=None):
     source = Path(source_dir).resolve()
     root = Path(run_dir).resolve()
     files = sorted(p for p in source.iterdir() if p.is_file() and p.suffix in {".csv", ".json"})
@@ -43,6 +43,8 @@ def prepare(source_dir, run_dir, run_id, mode="replay", settings=None, database=
               "ledger_mode": "shared" if database else "run_local",
               "ledger_binding": digest(str(Path(database).resolve())) if database else None,
               "implementation_manifest": implementation_manifest()}
+    if media_config is not None:
+        config["media_acquisition"] = dict(media_config)
     controller = Controller(root)
     controller.init(run_id, config)
     (root / "inputs").mkdir(exist_ok=True)
@@ -57,6 +59,16 @@ def prepare(source_dir, run_dir, run_id, mode="replay", settings=None, database=
             if file_digest(temp) != item["sha256"]:
                 raise StateError("SOURCE_CHANGED_DURING_COPY")
             temp.replace(dest)
+    if media_config is not None:
+        media_source = Path(media_config["manifest_path"])
+        if file_digest(media_source) != media_config["manifest_sha256"]:
+            raise StateError("MEDIA_MANIFEST_CHANGED")
+        destination = root / "inputs" / "media-manifest.private.json"
+        if destination.is_symlink():
+            raise StateError("FROZEN_MEDIA_DESTINATION_SYMLINK")
+        if destination.exists() and file_digest(destination) != media_config["manifest_sha256"]:
+            raise StateError("FROZEN_MEDIA_MANIFEST_CHANGED")
+        shutil.copyfile(media_source, destination)
     config_file = root / "config.json"
     body = json.dumps(config, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
     if config_file.exists() and config_file.read_text() != body:
@@ -65,12 +77,15 @@ def prepare(source_dir, run_dir, run_id, mode="replay", settings=None, database=
     return controller, config
 
 
-def execute_replay(source_dir, run_dir, run_id, mode="replay", until=None, settings=None, database=None):
+def execute_replay(source_dir, run_dir, run_id, mode="replay", until=None, settings=None, database=None, media_config=None):
     from m2_signal import analyze, ingest_export
 
-    if until is not None and until not in DETERMINISTIC_STAGES:
+    stages = list(DETERMINISTIC_STAGES)
+    if media_config is not None:
+        stages[stages.index("audit_all_rows")+1:stages.index("audit_all_rows")+1] = ["media_manifest", "media_acquire"]
+    if until is not None and until not in stages:
         raise StateError("UNTIL_STAGE_NOT_EXECUTABLE")
-    c, config = prepare(source_dir, run_dir, run_id, mode, settings, database)
+    c, config = prepare(source_dir, run_dir, run_id, mode, settings, database, media_config)
     root = c.root
     out = root / "signal"
     (root / "products").mkdir(exist_ok=True)
@@ -78,7 +93,7 @@ def execute_replay(source_dir, run_dir, run_id, mode="replay", until=None, setti
     out.mkdir(exist_ok=True)
     ledger = Path(database).resolve() if database else out / "signal.sqlite"
     release_file = root / "products" / "collect_or_replay.json"
-    for stage_id in DETERMINISTIC_STAGES:
+    for stage_id in stages:
         stage = next(s for s in STAGES if s.id == stage_id)
         begun = c.begin(stage_id, stage.role)
         if begun["cached"]:
@@ -95,6 +110,35 @@ def execute_replay(source_dir, run_dir, run_id, mode="replay", until=None, setti
                 product = {"schema": "m2.local-admission.v1", "admission": "accepted_offline_execution",
                            "platforms": ["instagram_reels"], "external_authority": False,
                            "config_hash": digest(config), "implementation": "stdlib_sqlite_controller"}
+            elif stage_id == "media_manifest":
+                manifest = json.loads((root / "inputs/media-manifest.private.json").read_text())
+                reels = [json.loads(line) for line in (out / "reels.jsonl").read_text().splitlines()]
+                expected = {(r["reel_id"], r["code"]) for r in reels}
+                actual = [(r["reel_id"], r["code"]) for r in manifest["entries"]]
+                if len(actual) != len(expected) or set(actual) != expected:
+                    raise StateError("MEDIA_MANIFEST_CORPUS_MISMATCH")
+                product = {"schema": "m2.media-manifest-stage.v1", "population": len(actual),
+                           "manifest_sha256": file_digest(root / "inputs/media-manifest.private.json"),
+                           "candidate_caps_applied": False, "acquisition_performed": False}
+                extra = ["inputs/media-manifest.private.json"]
+            elif stage_id == "media_acquire":
+                from .media_acquisition import acquire
+                manifest = json.loads((root / "inputs/media-manifest.private.json").read_text())
+                def progress(value):
+                    c.heartbeat(stage_id, begun["token"], lease_seconds=900, progress=value)
+                for batch in range(3):
+                    product = acquire(manifest, root / "acquisition", network=media_config.get("network", False),
+                                      media_roots=media_config.get("media_roots", []),
+                                      max_bytes=media_config.get("max_bytes", 128*1024*1024),
+                                      timeout=media_config.get("timeout", 90), progress=progress, resolver_executable=media_config.get("resolver_executable"), resolver_sha256=media_config.get("resolver_sha256"))
+                    if not product["states"].get("RETRYABLE", 0):
+                        break
+                extra = ["acquisition/summary.json", "acquisition/acquisition.sqlite"]
+                extra += [str(p.relative_to(root)) for p in sorted((root / "acquisition").glob("*-attempt-*.media.json"))]
+                extra += [str(p.relative_to(root)) for p in sorted((root / "acquisition/media").glob("*.mp4"))]
+                if not product["complete_media_coverage"]:
+                    limits = ["Each identity has a recorded acquisition disposition; unavailable or quarantined media is not coverage."]
+                limits += ["Acquisition does not prove reviewed speech, transcripts or semantic scenes."]
             elif stage_id == "freeze_config":
                 product = {"config_hash": digest(config), "source_manifest": config["source_manifest"]}
                 extra = ["config.json"]

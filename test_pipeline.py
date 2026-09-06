@@ -89,7 +89,8 @@ class EntrypointTests(unittest.TestCase):
 
     def test_server_same_engine_and_concurrent_lock_rejection(self):
         config=self.root/'server.json';runroot=self.root/'server-run'
-        config.write_text(json.dumps({'source_dir':str(self.source),'run_dir':str(runroot),'run_id':'synthetic-server'}))
+        config.write_text(json.dumps({'source_dir':str(self.source),'run_dir':str(runroot),'run_id':'synthetic-server',
+                                      'private_run_root':str(self.root),'private_source_roots':[str(self.root)]}))
         result=json.loads(self.command('server_entry.py','--config',config).stdout)
         self.assertEqual(result['hikerapi_calls'],0);self.assertEqual(result['external_writes'],0)
         import fcntl
@@ -103,7 +104,9 @@ class EntrypointTests(unittest.TestCase):
         legacy=self.root/'legacy.sqlite'
         with closing(sqlite3.connect(legacy)) as db:
             db.executescript("CREATE TABLE snapshots(taken TEXT,done INTEGER);INSERT INTO snapshots VALUES('2026-09-01',1),('2026-09-03',1),('2026-09-04',0);")
-        config=resolve_config({'legacy_db':str(legacy),'snapshot_date':'latest_completed','run_id':'s-{snapshot_date}','run_dir':'out/{snapshot_date}'})
+        config=resolve_config({'legacy_db':str(legacy),'snapshot_date':'latest_completed','run_id':'s-{snapshot_date}',
+                               'run_dir':str(self.root/'out/{snapshot_date}'),
+                               'private_run_root':str(self.root),'private_source_roots':[str(self.root)]})
         self.assertEqual(config['snapshot_date'],'2026-09-03');self.assertEqual(config['run_id'],'s-2026-09-03')
 
     def test_hiker_server_defaults_plan_and_refuses_unauthorized_execution(self):

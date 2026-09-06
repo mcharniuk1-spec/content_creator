@@ -99,6 +99,14 @@ def validate_config(config):
             raise StateError("SOURCE_MANIFEST_INVALID")
     if len({s["source_id"] for s in config["source_manifest"]}) != len(config["source_manifest"]):
         raise StateError("SOURCE_ID_DUPLICATE")
+    acquisition = config.get("media_acquisition")
+    if acquisition is not None:
+        if not isinstance(acquisition, dict) or acquisition.get("enabled") is not True or type(acquisition.get("network")) is not bool:
+            raise StateError("MEDIA_CONFIG_INVALID")
+        if not isinstance(acquisition.get("manifest_path"), str) or not re.fullmatch(r"[a-f0-9]{64}", acquisition.get("manifest_sha256", "")):
+            raise StateError("MEDIA_MANIFEST_BINDING_REQUIRED")
+        if not isinstance(acquisition.get("media_roots", []), list) or not all(isinstance(p,str) for p in acquisition.get("media_roots", [])):
+            raise StateError("MEDIA_ROOTS_INVALID")
     canonical(config)
 
 
@@ -252,6 +260,17 @@ class Controller:
             c.execute("UPDATE stages SET state='RUNNING',actor=?,attempt=attempt+1,token=?,lease_until=?,error=NULL WHERE id=?", (actor, token, time.time()+lease_seconds, stage_id))
             self._event(c, "STAGE_STARTED", {"stage": stage_id, "actor": actor, "token": token, "config_hash": run["hash"], "parents": parents, "subject_hash": subject_hash})
             return {"state": "RUNNING", "token": token, "cached": False, "parents": parents}
+
+    def heartbeat(self, stage_id, token, *, lease_seconds=900, progress=None):
+        if not 1 <= lease_seconds <= 10800:
+            raise StateError("LEASE_INVALID")
+        with self.transaction() as c:
+            self._run(c)
+            row = c.execute("SELECT * FROM stages WHERE id=?", (stage_id,)).fetchone()
+            if not row or row["state"] != "RUNNING" or row["token"] != token or row["lease_until"] <= time.time():
+                raise StateError("STALE_WORKER_TOKEN_OR_LEASE")
+            c.execute("UPDATE stages SET lease_until=? WHERE id=?", (time.time()+lease_seconds, stage_id))
+            self._event(c, "STAGE_PROGRESS", {"stage": stage_id, "progress": progress or {}})
 
     def finish(self, stage_id, token, artifact_paths, result, limitations=None):
         if result not in SUCCESS or not artifact_paths:

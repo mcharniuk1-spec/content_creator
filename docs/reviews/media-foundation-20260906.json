@@ -1,0 +1,67 @@
+{
+  "schema": "m2.git-package-independent-review.v1",
+  "review_id": "git-package-review-r1-luna",
+  "reviewer": {
+    "actor": "luna-review",
+    "model": "gpt-5.6-luna",
+    "reasoning": "high"
+  },
+  "reviewed_at": "2026-09-06",
+  "verdict": "ACCEPT_WITH_LIMITATIONS_PARTNER_SMOKE_AND_RUNTIME_GATES_PENDING",
+  "package_root": "reviewed-delivery-copy",
+  "scope": [
+    "server_entry.py",
+    "integrations/radar/server_entry.py",
+    "integrations/radar/README.md",
+    "config/server-replay.example.json",
+    "config/server-media.example.json",
+    "README.md",
+    "docs/m2-operator-guide.md",
+    "docs/m2-v2-delivery.md",
+    "docs/shared-engine-sync.json",
+    ".gitignore",
+    "tests/test_radar_server_media_entry.py",
+    "tests/test_semantic_queue.py",
+    "tests/test_server_media.py",
+    "test_pipeline.py"
+  ],
+  "checks": {
+    "sync_manifest_schema": "m2.shared-engine-sync.v2",
+    "sync_manifest_files": 50,
+    "sync_manifest_hashes": "50/50 PASS",
+    "source_media_included": false,
+    "raw_transcripts_included": false,
+    "server_activated": false,
+    "portable_entry_bytes_match": true,
+    "focused_server_and_queue_tests": "36 passed",
+    "media_hook_fixture_tests": "19 passed",
+    "pipeline_entry_tests": "11 passed",
+    "python_compile": "PASS",
+    "tracked_raw_private_files": "NONE_FOUND",
+    "network": 0,
+    "model_load": 0,
+    "media_decode": 0,
+    "external_write": 0,
+    "commit": 0,
+    "push": 0
+  },
+  "source_sha256": {
+    "server_entry.py": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e",
+    "integrations/radar/server_entry.py": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e",
+    "integrations/radar/README.md": "2675c56a987f578f0655ea2a9ed67148a0c42397b65ef33643973f5fc5689b37",
+    "config/server-replay.example.json": "fef410f65b426d862f44bf6a0ed11f9f901a9218249adea4711ac99629df2ff6",
+    "config/server-media.example.json": "65a4e6da9d59a02e6647b4ddcf18b7bbafaa3b6ec66ef8bf06fbb067c1550e39",
+    "tests/test_radar_server_media_entry.py": "f2fccf8b31ed68ff1d121267755ca42bca9fa648a4b8b877e021a77a81ee8fe6",
+    "tests/test_semantic_queue.py": "b24281e79c8332c437d9b13593d0a0713c616eb0f127b5b20cafd0a2a71efdeb",
+    "docs/shared-engine-sync.json": "bc87645c26c0a019f3bebdd7b0d4c569a5043d421f699d1921ad248b23fc5ace"
+  },
+  "limitations": [
+    "Partner-host smoke test and Linux runtime readiness remain pending.",
+    "No actual media/model/network execution was performed.",
+    "Executable path symlink/hardlink attack behavior was not independently exercised.",
+    "Root README and test_pipeline changes are outside the 50-file shared sync manifest.",
+    "Root-level arbitrary JSONL files are not globally ignored; private path discipline remains required.",
+    "The package carries no final corpus completeness claim."
+  ],
+  "next_action": "Proceed only to independent integration review and a controlled partner-host smoke test with media disabled by default and a new private run/config binding."
+}

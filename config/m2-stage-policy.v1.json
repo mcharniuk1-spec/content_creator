@@ -66,6 +66,28 @@
       "reviewer": false
     },
     {
+      "id": "media_manifest",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "audit_all_rows"
+      ],
+      "output": "media_manifest",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "media_acquire",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "media_manifest"
+      ],
+      "output": "media_acquisition",
+      "gate": null,
+      "reviewer": false
+    },
+    {
       "id": "qualify_scope",
       "engine": "signal",
       "role": "strategy_analyst",

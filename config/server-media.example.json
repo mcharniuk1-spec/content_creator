@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "network": false,
+  "hikerapi_enabled": false,
+  "private_source_root": "/srv/m2-private",
+  "cache_roots": ["/srv/m2-private/hiker-cache"],
+  "media_roots": ["/srv/m2-private/retained-media"],
+  "model_dir": "/srv/m2-models/whisper-small",
+  "python_executable": "/srv/m2-runtime/bin/python",
+  "resolver_executable": "/srv/m2-runtime/bin/yt-dlp",
+  "resolver_sha256": "REPLACE_WITH_VERIFIED_EXECUTABLE_SHA256",
+  "rights_receipt": "REPLACE_WITH_RECORDED_EXISTING_CORPUS_RESEARCH_SCOPE",
+  "cache_bytes": 8589934592,
+  "reserve_bytes": 5368709120,
+  "batch_size": 8
+}

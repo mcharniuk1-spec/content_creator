@@ -34,6 +34,8 @@ M2_RUN_CONFIG=.local/server-config.json bash cron.sh
 
 The timer invokes the same engine. It does not pull Git, install dependencies, change cron, call HikerAPI, run an LLM or publish. `install-cron.sh` prints deployment guidance only. Michael retains control of server activation and the separate collection schedule.
 
+The updated timer requires explicit `private_run_root` and `private_source_roots` in its private configuration. An optional `media_job_config` enables retained-media acquisition, local CPU transcription and regular/change frames after a verified complete replay. It remains off by default. Read [the partner media integration guide](integrations/radar/README.md) before migrating the timer configuration. A partner-host media smoke test is still required.
+
 ## Future HikerAPI pilot
 
 ```sh
@@ -52,6 +54,8 @@ The shared [Studio package](m2_studio/README.md) validates approved media, local
 Script/strategy workers use `agents/m2-roles.json`, `skills/m2-stage-worker/SKILL.md`, and `skills/m2-script-writer/SKILL.md`. Makers cannot review themselves. Owner-recorded footage, model authentication/payment and final publication are explicit later gates.
 
 ## Safety and provenance
+
+The 6 September media recovery foundation adds an uncapped identity manifest, resumable per-Reel/modality SQLite traces, bounded local workers, a reviewed semantic task/review queue, and coverage-aware feature exports. The real full-corpus run is still in progress; shipping this code is not a completion or generation-quality claim. Loore AI remains optional. Tests for the optional stack require the declared test environment; the standard-library replay remains available independently.
 
 Keep exports, SQLite files, source media, raw transcripts, signed CDN URLs, API responses, approval files and secrets in private ignored directories. No raw corpus or account-specific ranking is distributed with these shared packages. Notion is a reconciled review projection with owner-edit preservation and exact readback, not analytical authority. Knowledge files contain reviewed methods and constrained context; raw founder/creator expression stays run-local.
 

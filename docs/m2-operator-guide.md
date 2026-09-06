@@ -104,3 +104,107 @@ An executable or dependency change requires a new run directory and ID. The prep
 `python3 -m m2_orchestrator --run-dir RUN tasks` emits each unfinished state with its exact specialist role contract, bounded context, skill, output budget and authority. Dispatch it through the current interactive agent host or an explicitly authenticated server worker. It does not start an unattended paid model. Return the named artifact to the frozen run, then use the begin/finish receipt commands; reviewers must bind the parent hashes and propagate every limitation.
 
 The Notion planner `m2_orchestrator.notion_payload.build(signal_directory, strategy_directory)` emits a private versioned snapshot package. It requires the strategy source map and transcript artifact hashes, excludes raw transcript text, preserves null counters and labels legacy versus lexical counts. Use `Outbox` to stage each exact action before its MCP call. Numeric readback tolerates integer/float JSON normalization while keeping null, zero and boolean values distinct.
+
+## Full-corpus local media recovery
+
+The active completeness route processes every existing Reel identity. Michael's
+candidate selection (100 videos, per-account cap, card pool) is a presentation
+choice, not an acquisition or transcription limit. Build the private media
+manifest with `scripts/build_m2_media_manifest.py` from the canonical Reels
+JSONL. It reads cached clip responses directly and never constructs a HikerAPI
+client. Cache misses remain explicit; the optional anonymous public resolver
+requires a pinned installed executable and its tested restricted network broker.
+
+Retain each recovered video. The local sequence is validated media/audio →
+multilingual CPU transcription → regular decoded frames and visual-change
+samples → independent transcript and scene review. Text, word timing, cuts,
+shots and semantic scenes have separate statuses. A zero-duration ASR word
+remains in raw and unaligned evidence; no duration is invented. Absent audio,
+exact digital silence, empty ASR, interrupted inference and unavailable media
+must remain distinct. Frame processing continues when ASR fails.
+
+Use one media/model worker and two CPU threads. Validate model file hashes
+before offline inference. Record time, sampled peak memory, retries, source
+hashes and each modality's errors in the per-Reel ledger. Sampled memory
+watchdogs are not hard operating-system caps. Preserve the configured free
+disk reserve; stop safely on a storage limit instead of deleting evidence.
+Run a real representative pilot and review its output before corpus expansion.
+
+Loore is optional and does not gate the local workflow. The correct service is
+`loore.ai`; the older `loore.io` assumption was incorrect. The disabled route in
+`config/m2-loore-optional.v1.json` records the verified public API contract.
+Published API availability does not establish authenticated execution. Bind
+any later Loore call to exact source identity, operation, available authorized
+credits and an idempotency key; retain vendor findings separately from reviewed
+local evidence. Do not activate tracking or paid requests implicitly.
+
+### Portable corpus invocation
+
+Read `docs/m2-corpus-worker-contract.md` for worker roles, independent review,
+failure handling and the distinction between preview frames and semantic scenes.
+The optional Python dependencies are pinned in `requirements-m2-media.txt`.
+The actual run used macOS with Python 3.12.9 and installed FFmpeg/ffprobe; a
+partner Linux host still needs its own bounded smoke test. Use a dedicated
+environment with those dependencies, FFmpeg/ffprobe on PATH, and a local
+Faster-Whisper small model bundle. Do not use the legacy `deep.py` cleanup or
+candidate-selection loop for full-corpus completeness.
+
+Download model weights outside Git from `Systran/faster-whisper-small`, revision
+`536b0662742c02347bc0e980a01041f333bce120`. The tested `model.bin` SHA-256 is
+`3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671`.
+The private model directory must contain `model-hash-manifest.json` with a
+`files` array of relative `path` and `sha256` entries covering every regular
+file except the manifest itself. Freeze the tokenizer/config as well as the
+weights; the worker rejects missing, altered or unlisted files. Model download
+and dependency installation are setup actions, not hidden side effects of a run.
+
+Build a fresh private manifest from the normalized full Reel export. Supply
+Michael's actual cache directory with `--cache-root` when available; it is
+read directly and never falls through to HikerAPI. Supply existing media roots
+explicitly. Do not add `--pilot-code` to the full-corpus manifest.
+
+```bash
+python scripts/build_m2_media_manifest.py \
+  --reels .local/signal/reels.jsonl \
+  --cache-root .local/partner-clips-cache \
+  --media-root .local/retained-media \
+  --public-fallback --output .local/media-manifest.json
+
+python scripts/run_m2_corpus_media.py \
+  --manifest .local/media-manifest.json \
+  --run-root .local/corpus-run-001 \
+  --model-dir /absolute/path/to/frozen-whisper-small \
+  --python-executable /absolute/path/to/media-venv/bin/python \
+  --media-root .local/retained-media \
+  --rights-receipt your-recorded-existing-corpus-research-authority \
+  --resolver-executable /absolute/path/to/media-venv/bin/yt-dlp \
+  --resolver-sha256 SHA256_OF_YOUR_INSTALLED_ENTRYPOINT \
+  --max-items 8 --network
+```
+
+The paths and authority/hash arguments above are explicit placeholders. The
+resolver uses a restricted public-host broker and no browser cookies. Its
+entrypoint digest is one provenance check; retain the installed package
+version and dependency lock too. The network switch authorizes this configured
+public acquisition path and is required by the corpus dispatcher, including
+when the current batch happens to resolve from local media.
+
+Review the real first tranche, then resume the identical command without
+`--max-items 8` to process remaining identities in serial batches. A later
+`--max-items N` limits work in that invocation, not the full population.
+The default source cache cap is 8 GiB and the disk reserve is 5 GiB. Choose
+larger storage limits only after checking available space; bind any changed
+limit to a new run. Do not edit executing modules, replace artifacts, run
+multiple media workers or delete retained sources to bypass a storage stop.
+
+```bash
+python scripts/report_m2_corpus_progress.py \
+  --run-root .local/corpus-run-001 \
+  --output .local/progress/checkpoint-001
+```
+
+Each new checkpoint includes all identities in CSV and separate modality
+counts. The optional local Apple Vision OCR helper is macOS-specific; the
+portable core path is FFmpeg plus CPU ASR. OCR text remains separate from
+speech transcripts. The corpus runner does not invoke Notion, an LLM API,
+generation, server deployment or publication automatically.

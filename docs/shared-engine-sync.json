@@ -1,0 +1,211 @@
+{
+  "schema": "m2.shared-engine-sync.v2",
+  "date": "2026-09-06T19:32:56.867546+00:00",
+  "scope": "reviewed media recovery foundation; full corpus incomplete; excludes pending chunk recovery implementation",
+  "files": [
+    {
+      "path": "agents/m2-roles.json",
+      "sha256": "487ea2870a3d25f3612138ade8d2b23c750b4aa1cc0ef934fc337d7cf2b6a352"
+    },
+    {
+      "path": "config/m2-stage-policy.v1.json",
+      "sha256": "09eab68145631ea65665f8fe336effc387948415911a9575951024d93391ddd4"
+    },
+    {
+      "path": "config/m2-loore-optional.v1.json",
+      "sha256": "ad595c432a792f395dc8dd75c1c8fd9cd2ce01b130e01f939e2e2f03a97fc135"
+    },
+    {
+      "path": "docs/m2-operator-guide.md",
+      "sha256": "eb09e8b7f76fa00b7dceee02e56f482be94eaa3db491949f2a32de23567dbc06"
+    },
+    {
+      "path": "docs/m2-corpus-worker-contract.md",
+      "sha256": "e927060b071a961728d33227313c9dfd8efed0477a60423a3e31bc1fa19ddcb1"
+    },
+    {
+      "path": "requirements-m2-media.txt",
+      "sha256": "4d854a6a38746596c22dded338689e74f3d1c5bb9369ca31cb3589656bf05dd6"
+    },
+    {
+      "path": "knowledge/index.md",
+      "sha256": "f53dc002e2834de7070d0e95d3f21cfa4f7d1d4534d27af677131a5e06438a41",
+      "transform": "Preserve portable Radar index and append recovery method route only"
+    },
+    {
+      "path": "knowledge/m2-media-recovery-lessons.md",
+      "sha256": "c61a95aa60cf00df8a7b96032f999f7292669e566c976c3239d539b85ee45f66"
+    },
+    {
+      "path": "knowledge/m2-media-recovery-promotion.json",
+      "sha256": "883131b3528758033560f11076e781f5aee4682118d022346167e6d27abbd764"
+    },
+    {
+      "path": "m2_orchestrator/execution.py",
+      "sha256": "70c5568df18fa751485411140e7141339b4afd2a4bb862c85fe51f74c76844bb"
+    },
+    {
+      "path": "m2_orchestrator/policy.py",
+      "sha256": "c64b4b39d2e4b41993b2a910121e5dd3b2581fb5389e880d1e6112c48cbd09fe"
+    },
+    {
+      "path": "m2_orchestrator/state.py",
+      "sha256": "e07b180c4770f541f3a7a2f54967065d11d6dc8bded0863bc71c0cfdc31bd938"
+    },
+    {
+      "path": "m2_orchestrator/corpus_media.py",
+      "sha256": "a058d06757a62408fa000679319b107efdc7b484453f040f5726267b6e95c1e1"
+    },
+    {
+      "path": "m2_orchestrator/media_acquisition.py",
+      "sha256": "99700deb86d3826d070fff4897aeef5c67b75641812b8b1ac8b31bad05105b17"
+    },
+    {
+      "path": "m2_orchestrator/media_manifest.py",
+      "sha256": "1a851991b4b527e5f2926fe723502f1380f71b8fe1d82890fb123441cc0811dd"
+    },
+    {
+      "path": "m2_orchestrator/media_ocr.py",
+      "sha256": "85812ced461b410a78f3c7cccf235ae00892d54f033b9149331cbc0085ec574a"
+    },
+    {
+      "path": "m2_orchestrator/media_transcription.py",
+      "sha256": "15d2ef90f78cc85547f47dd3f94d53b9da2ba9e46bbd84ea199961a3a296bc23"
+    },
+    {
+      "path": "m2_orchestrator/media_visual.py",
+      "sha256": "20f3b7f46454bea1957f730844d77fda4d4627549582f8c2d3377677396b79c7"
+    },
+    {
+      "path": "m2_orchestrator/process_budget.py",
+      "sha256": "e5ee0b5b728726f23e9ddec1994acc6070a2db0c83566b07d7253be8ef7c0d6e"
+    },
+    {
+      "path": "m2_orchestrator/public_media.py",
+      "sha256": "eb3b43286867ee099f6bad69aef1bf2533a259c82673bc75d63323843140f066"
+    },
+    {
+      "path": "m2_orchestrator/resolver_proxy.py",
+      "sha256": "4f9337dd79a5c02bee4823a21d501d7dcb43a1bf4043f988880cbc8bdd123599"
+    },
+    {
+      "path": "m2_orchestrator/server_media.py",
+      "sha256": "1a56149a7927416e649e4c78fa35640b9876d57ae128a4db64ccd645e51bdcf2"
+    },
+    {
+      "path": "m2_orchestrator/semantic_queue.py",
+      "sha256": "d917ed8fa34d5b8ab79d316cb55854203acdf7bc88684876b1abe6650c879a59"
+    },
+    {
+      "path": "m2_signal/corpus_features.py",
+      "sha256": "2af9ad974d6d0169428b149813c68041c02d305c3e73496fdfef0cd915e3b9e5"
+    },
+    {
+      "path": "scripts/run_m2.py",
+      "sha256": "6b15c08d90d51956b25a589ca6f0aabe1699a4b733bb549a94f126059718e491"
+    },
+    {
+      "path": "scripts/run_m2_corpus_media.py",
+      "sha256": "c746443daaf3265e438756a2c8d243440120f3e0ecd9f53ba679d9797454742c"
+    },
+    {
+      "path": "scripts/build_m2_media_manifest.py",
+      "sha256": "55cf98040e832ebe4b2108fcda9a2e6cfab89c59e6f3276294a31d73d249f13b"
+    },
+    {
+      "path": "scripts/report_m2_corpus_progress.py",
+      "sha256": "add73bf20a2ea85636994e01e745a79903248f6f78931e4bbaf1ed60ec7bdbd5"
+    },
+    {
+      "path": "scripts/m2_vision_ocr.swift",
+      "sha256": "ec56aa568639e8983a4eede7f245dbc4e8bb7af5ee61c1f1a099f205dbeca2d4"
+    },
+    {
+      "path": "tests/test_corpus_features.py",
+      "sha256": "7fd1f201efd33f7991f4c02d88d44552de1e15f4c14318321447213d884de9a5"
+    },
+    {
+      "path": "tests/test_corpus_media.py",
+      "sha256": "e14b7731f1098226a165cea117a47bdeed8774f8fc620d1fe509ca956b8f7d6d"
+    },
+    {
+      "path": "tests/test_corpus_media_edges.py",
+      "sha256": "f122b6778ed5f776903d758ff1f0dcbe84854843f5270018b530325bce7c233b"
+    },
+    {
+      "path": "tests/test_media_acquisition.py",
+      "sha256": "01741c584c824912fb8fabe56c6abe3c2ce26896c7591ae886be812630e2cf7b"
+    },
+    {
+      "path": "tests/test_media_acquisition_edges.py",
+      "sha256": "e30656d09b5fc06b80c46cc70d37b66c0a30f76aaddaf69bb10dea53249c8203"
+    },
+    {
+      "path": "tests/test_media_controller_integration.py",
+      "sha256": "db48cb4aa902010976e1087a786aa9c061b6adc68c3b5299e6ed9a5ae5090d08"
+    },
+    {
+      "path": "tests/test_media_manifest.py",
+      "sha256": "8ea9a8c0f19ddef26cd98ce4b5b52ad5d744ddc8fc301451ae08fdf0440a534d"
+    },
+    {
+      "path": "tests/test_media_transcription.py",
+      "sha256": "8a9a14c6814a3f959d6c3dcd2781be8631c2709cee9e14ec5142338f15529b26"
+    },
+    {
+      "path": "tests/test_media_transcription_edges.py",
+      "sha256": "f280282de93b7a66617326fec5d087a98948531475f80748f63dba52c24d5c57"
+    },
+    {
+      "path": "tests/test_media_visual.py",
+      "sha256": "139da2a43b3c0a4fd83e11f52b6b5a7972a2ab163e6c159b0d98b11cc48249b4"
+    },
+    {
+      "path": "tests/test_semantic_queue.py",
+      "sha256": "b24281e79c8332c437d9b13593d0a0713c616eb0f127b5b20cafd0a2a71efdeb"
+    },
+    {
+      "path": "tests/test_server_media.py",
+      "sha256": "4b127edfcb5f556688c27a69fbb5efb5966053cd038666440e9ac746a4a898cf"
+    },
+    {
+      "path": "tests/test_radar_server_media_entry.py",
+      "sha256": "f2fccf8b31ed68ff1d121267755ca42bca9fa648a4b8b877e021a77a81ee8fe6"
+    },
+    {
+      "path": "integrations/radar/server_entry.py",
+      "sha256": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e"
+    },
+    {
+      "path": "integrations/radar/README.md",
+      "sha256": "2675c56a987f578f0655ea2a9ed67148a0c42397b65ef33643973f5fc5689b37"
+    },
+    {
+      "path": "integrations/radar/config/server-replay.example.json",
+      "sha256": "fef410f65b426d862f44bf6a0ed11f9f901a9218249adea4711ac99629df2ff6"
+    },
+    {
+      "path": "integrations/radar/config/server-media.example.json",
+      "sha256": "65a4e6da9d59a02e6647b4ddcf18b7bbafaa3b6ec66ef8bf06fbb067c1550e39"
+    },
+    {
+      "path": "server_entry.py",
+      "sha256": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e"
+    },
+    {
+      "path": "config/server-replay.example.json",
+      "sha256": "fef410f65b426d862f44bf6a0ed11f9f901a9218249adea4711ac99629df2ff6"
+    },
+    {
+      "path": "config/server-media.example.json",
+      "sha256": "65a4e6da9d59a02e6647b4ddcf18b7bbafaa3b6ec66ef8bf06fbb067c1550e39"
+    },
+    {
+      "path": "schemas/m2-corpus-field-dictionary.v1.json",
+      "sha256": "fa28b634e74e3f6d8bec3154f3d36c9fc65bb73320b9e3116ade2a3ad27a6aa9"
+    }
+  ],
+  "source_media_included": false,
+  "raw_transcripts_included": false,
+  "server_activated": false
+}

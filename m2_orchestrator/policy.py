@@ -21,6 +21,8 @@ STAGES = (
     Stage("collect_or_replay", "signal", "data_engineer", ("inventory",), "observations"),
     Stage("normalize", "signal", "data_engineer", ("collect_or_replay",), "entities"),
     Stage("audit_all_rows", "signal", "data_engineer", ("normalize",), "audit"),
+    Stage("media_manifest", "signal", "data_engineer", ("audit_all_rows",), "media_manifest"),
+    Stage("media_acquire", "signal", "data_engineer", ("media_manifest",), "media_acquisition"),
     Stage("qualify_scope", "signal", "strategy_analyst", ("audit_all_rows",), "scope"),
     Stage("snapshot_metrics", "signal", "quantitative_analyst", ("audit_all_rows",), "metrics"),
     Stage("compute_baselines", "signal", "quantitative_analyst", ("snapshot_metrics",), "baselines"),
@@ -66,6 +68,8 @@ def policy():
 
 def dependencies(stage_id, config):
     deps = list(BY_ID[stage_id].requires)
+    if stage_id in {"transcript_attempt", "visual_attempt"} and config.get("media_acquisition", {}).get("enabled"):
+        deps.append("media_acquire")
     if stage_id == "render_remotion" and config.get("production", {}).get("requires_generation", False):
         deps.append("review_assets")
     return deps

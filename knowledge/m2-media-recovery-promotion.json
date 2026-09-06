@@ -1,0 +1,9 @@
+{
+  "schema": "m2.method-promotion.v1",
+  "verdict": "ACCEPT_WITH_LIMITATIONS_FOR_METHOD_ONLY_PROMOTION",
+  "reviewed_candidate_sha256": "9cf8a361754a26104c43387da8a81cae1bb463eb82dbafcecdb90242b571ce41",
+  "review_receipt_sha256": "9a47a89797af2f23157bf4f77d6a00281f78b845b2f7e5149b9ed69a21904ac5",
+  "promoted_sha256": "c61a95aa60cf00df8a7b96032f999f7292669e566c976c3239d539b85ee45f66",
+  "transform": "frontmatter review_state only; body unchanged",
+  "external_writeback": "pending separate private receipt"
+}

@@ -209,6 +209,49 @@ portable core path is FFmpeg plus CPU ASR. OCR text remains separate from
 speech transcripts. The corpus runner does not invoke Notion, an LLM API,
 generation, server deployment or publication automatically.
 
+## Bounded structural feature export
+
+Structural features are an offline export over a frozen canonical manifest and
+hash-bound, independently reviewed transcript-structure batches. The command
+preserves the full canonical population, emits typed missing/quarantined
+dispositions, keeps the primary partition exclusive, and marks secondary
+rhetorical counts as non-additive. It does not perform ASR, media decoding,
+fact verification, causal fitting, or scene promotion.
+
+```bash
+python3 -m m2_signal.structural_features \
+  --canonical-manifest <PRIVATE_INPUT_ROOT>/canonical-manifest.json \
+  --batch <PRIVATE_INPUT_ROOT>/review-batch-001.json \
+  --batch <PRIVATE_INPUT_ROOT>/review-batch-002.json \
+  --corpus-root <PRIVATE_SOURCE_ROOT> \
+  --output <PRIVATE_RUN_ROOT>/structural-features-r1 \
+  --expected-population 2352
+```
+
+Each `--batch` file is one JSON object with this exact binding shape; paths
+must remain under the operator's approved private roots:
+
+```json
+{
+  "annotations_path": "<PRIVATE_INPUT_ROOT>/structural-annotations.jsonl",
+  "annotations_sha256": "<64 lowercase hex characters>",
+  "review_path": "<PRIVATE_INPUT_ROOT>/independent-review.json",
+  "review_sha256": "<64 lowercase hex characters>"
+}
+```
+
+The review must name distinct maker and reviewer actors, carry an accepted
+bounded-structure verdict, list the covered identity indexes, and bind the
+exact annotation SHA-256 in its `inputs` object. The exporter validates each
+record against the canonical identity, transcript/media hashes and review
+scope before writing JSONL, SQLite, field-dictionary and artifact manifests.
+
+If acquisition retained a video-only source, its original audio and speech
+remain `UNKNOWN`; an absent advertised audio stream is not evidence of
+non-speech. Structural exports therefore keep speaking duration and speech
+eligibility unverified unless separately supported by approved audio evidence
+and review.
+
 ## Radar v2 media overlay (review pending)
 
 The staged v2 overlay adds a read-only eligibility inventory, bounded scene candidate extraction, and an optional offline transcript recovery route. It is an integration candidate; it does not activate the timer, change the frozen corpus ledger, or claim full-corpus completion. Keep the existing shared-engine checkout and copy these relative paths into the matching package locations only after independent review.

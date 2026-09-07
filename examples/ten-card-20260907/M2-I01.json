@@ -11,9 +11,9 @@
     "If AI feels too broad, put one weekly task on the table.",
     "Here is the plain-English version of what M2 Lab does."
   ],
-  "full_spoken_english": "Still rebuilding the same Friday update? That is a useful place to start with AI. We're M2 Lab. We help people responsible for AI in small businesses turn everyday work into something they can test. Imagine three project notes becoming one customer update. Start with the notes, the reader, and the decision they need to make. Then map the steps: collect facts, draft the update, check it, send it. Give each step an owner. AI could help with the draft. The person checking it needs the original notes, including anything that is missing. Try one fictional example first. Does an unknown delivery date stay unknown? Can you trace every sentence back to a note? That's our starting point: one repeated task and a test you can inspect. Which weekly task would you put on this page?",
+  "full_spoken_english": "Still rebuilding the same Friday update? That is a useful place to start with AI. We're M2 Lab. We help small-business teams work out where AI fits, and what still needs a person. Imagine three project notes becoming one customer update. Start with the notes, the reader, and the decision they need to make. Then map the steps: collect facts, draft the update, check it, send it. Give each step an owner. AI could help with the draft. The person checking it needs the original notes, including anything that is missing. Try one fictional example first. Does an unknown delivery date stay unknown? Can you trace every sentence back to a note? Start with one repeated task. Write down its source notes, its reviewer, and the mistake that would matter. Which weekly task would you test?",
   "word_count": 136,
-  "cta": "That's our starting point: one repeated task and a test you can inspect. Which weekly task would you put on this page?",
+  "cta": "Start with one repeated task. Write down its source notes, its reviewer, and the mistake that would matter. Which weekly task would you test?",
   "fixture": {
     "input": "Project A: artwork approved. Project B: delivery date unconfirmed. Reader: customer.",
     "designed_output": "Artwork approved. We are confirming the delivery date.",
@@ -124,7 +124,7 @@
     {
       "start_ms": 7000,
       "end_ms": 16000,
-      "spoken_text": "We're M2 Lab. We help people responsible for AI in small businesses turn everyday work into something they can test."
+      "spoken_text": "We're M2 Lab. We help small-business teams work out where AI fits, and what still needs a person."
     },
     {
       "start_ms": 16000,
@@ -149,7 +149,7 @@
     {
       "start_ms": 50000,
       "end_ms": 60000,
-      "spoken_text": "That's our starting point: one repeated task and a test you can inspect. Which weekly task would you put on this page?"
+      "spoken_text": "Start with one repeated task. Write down its source notes, its reviewer, and the mistake that would matter. Which weekly task would you test?"
     }
   ],
   "assets": [
@@ -211,7 +211,7 @@
     }
   ],
   "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
-  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_candidate_sha256": "51dc9bf5daca7bf6caa307ae58677563471dd14a4d643531395df4e4a6bb7853",
   "source_reference_count": 3,
   "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
   "storyboard": {

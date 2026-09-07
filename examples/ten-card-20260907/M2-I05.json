@@ -211,7 +211,7 @@
     }
   ],
   "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
-  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_candidate_sha256": "51dc9bf5daca7bf6caa307ae58677563471dd14a4d643531395df4e4a6bb7853",
   "source_reference_count": 2,
   "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
   "storyboard": {

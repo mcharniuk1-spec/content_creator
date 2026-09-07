@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-I02",
+  "title": "Meet M2 Lab: who agreed to Friday?",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "introduction",
+  "synthesis": true,
+  "hooks": [
+    "This reply looks ready. But who agreed to Friday?",
+    "Before AI drafts anything, decide where it must stop.",
+    "The human check should be part of the process, not an afterthought."
+  ],
+  "full_spoken_english": "This reply looks ready. But who agreed to Friday? Imagine a customer asks when an order will arrive. The note says the team is checking. The draft says Friday. At M2 Lab, we look for moments like this before connecting AI to everyday work. Draw a line between preparing a reply and making a promise. AI can work from approved facts; missing facts need a person. In this example, replace the invented date with a question for the order owner. Keep the customer's original message beside it. The useful output is an editable draft with the gap visible. Sending stays a separate decision. Take one message your team repeats. Underline every promise in the reply. Can you point to the fact and the person behind each one?",
+  "word_count": 127,
+  "cta": "Take one message your team repeats. Underline every promise in the reply. Can you point to the fact and the person behind each one?",
+  "fixture": {
+    "input": "Customer: When will my order arrive? Internal note: team checking; date unknown.",
+    "designed_output": "Draft held for order owner: Please confirm the delivery date before replying.",
+    "check": "Reject any invented Friday promise.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-I02-S01",
+      "start_ms": 0,
+      "end_ms": 4000,
+      "mode": "a_roll",
+      "visual": "Close medium A-roll: presenter holds a fictional reply with FRIDAY circled, then looks to a blank source date.",
+      "on_screen_text": "WHO AGREED TO FRIDAY?",
+      "information_job": "Open with the central boundary problem.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I02-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I02-S02",
+      "start_ms": 4000,
+      "end_ms": 13000,
+      "mode": "demo",
+      "visual": "Locked close-up of two fictional cards: customer asks arrival date; internal note says checking; draft promises Friday in red.",
+      "on_screen_text": "SOURCE: DATE UNKNOWN / DRAFT: FRIDAY?",
+      "information_job": "Define a low-risk assistance step.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I02-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I02-S03",
+      "start_ms": 13000,
+      "end_ms": 20000,
+      "mode": "a_roll",
+      "visual": "A-roll presenter at desk pointing to the unsupported Friday promise in the same fictional reply.",
+      "on_screen_text": "M2 LAB / CHECK THE PROMISE",
+      "information_job": "Name concrete human-owned decisions.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I02-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I02-S04",
+      "start_ms": 20000,
+      "end_ms": 30000,
+      "mode": "demo",
+      "visual": "Top-down boundary line between collecting approved facts and making a delivery promise, with a blank date card at the line.",
+      "on_screen_text": "PREPARE / PROMISE",
+      "information_job": "Explain the M2 boundary method.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I02-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I02-S05",
+      "start_ms": 30000,
+      "end_ms": 40000,
+      "mode": "demo",
+      "visual": "Over-shoulder B-roll of a draft note addressed to the order-owner role: please confirm date; original customer message remains beside it.",
+      "on_screen_text": "QUESTION FOR ORDER OWNER",
+      "information_job": "Show accountable review and external-action gate.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I02-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I02-S06",
+      "start_ms": 40000,
+      "end_ms": 48000,
+      "mode": "demo",
+      "visual": "B-roll: designed reply marked DRAFT and NEEDS CONFIRMATION.",
+      "on_screen_text": "Persistent label: SYNTHETIC DESIGNED DEMO — NOT TESTED.",
+      "information_job": "Bound the illustration and test state.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I02-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I02-S07",
+      "start_ms": 48000,
+      "end_ms": 60000,
+      "mode": "motion_graphic",
+      "visual": "Held end frame of fictional reply with every promise underlined; empty fields for source fact and responsible role.",
+      "on_screen_text": "PROMISE / FACT / PERSON",
+      "information_job": "Give a practical diagnostic action.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I02-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 4000,
+      "spoken_text": "This reply looks ready. But who agreed to Friday?"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 13000,
+      "spoken_text": "Imagine a customer asks when an order will arrive. The note says the team is checking. The draft says Friday."
+    },
+    {
+      "start_ms": 13000,
+      "end_ms": 20000,
+      "spoken_text": "At M2 Lab, we look for moments like this before connecting AI to everyday work."
+    },
+    {
+      "start_ms": 20000,
+      "end_ms": 30000,
+      "spoken_text": "Draw a line between preparing a reply and making a promise. AI can work from approved facts; missing facts need a person."
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 40000,
+      "spoken_text": "In this example, replace the invented date with a question for the order owner. Keep the customer's original message beside it."
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 48000,
+      "spoken_text": "The useful output is an editable draft with the gap visible. Sending stays a separate decision."
+    },
+    {
+      "start_ms": 48000,
+      "end_ms": 60000,
+      "spoken_text": "Take one message your team repeats. Underline every promise in the reply. Can you point to the fact and the person behind each one?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-I02-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Close medium A-roll: presenter holds a fictional reply with FRIDAY circled, then looks to a blank source date.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I02-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Locked close-up of two fictional cards: customer asks arrival date; internal note says checking; draft promises Friday in red.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I02-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll presenter at desk pointing to the unsupported Friday promise in the same fictional reply.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I02-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Top-down boundary line between collecting approved facts and making a delivery promise, with a blank date card at the line.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I02-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Over-shoulder B-roll of a draft note addressed to the order-owner role: please confirm date; original customer message remains beside it.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I02-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: designed reply marked DRAFT and NEEDS CONFIRMATION.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I02-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Held end frame of fictional reply with every promise underlined; empty fields for source fact and responsible role.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I02-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 3,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-I02.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

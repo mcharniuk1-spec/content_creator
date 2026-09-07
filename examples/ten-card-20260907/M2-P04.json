@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-P04",
+  "title": "Ask for the awkward case before buying automation",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "regular",
+  "synthesis": false,
+  "hooks": [
+    "Someone offers to automate your whole workflow. Ask to see the awkward case first.",
+    "Buying an AI workflow? Bring one difficult example to the demo.",
+    "What happens when the enquiry is missing a deadline? Ask before you buy."
+  ],
+  "full_spoken_english": "Someone offers to automate your whole workflow. Ask to see the awkward case first. Choose one repeated task, such as turning enquiry notes into a draft response. Bring a fictional example with a missing detail. Ask what goes in, what comes out, and who checks it. Then ask what happens when that detail is missing. Does the system stop, ask a question, or quietly guess? Watch the answer in the test instead of filling it in yourself. Before agreeing to a wider build, get the open questions in writing: access, running costs, maintenance, and responsibility when something breaks. A successful small example answers a small question. Keep the unanswered ones on the page. For your next AI proposal, add one line: show us how this handles our difficult example. What would you put in that example?",
+  "word_count": 136,
+  "cta": "For your next AI proposal, add one line: show us how this handles our difficult example. What would you put in that example?",
+  "fixture": {
+    "input": "Fictional proposal promises enquiry drafting. Test enquiry has no agreed deadline.",
+    "designed_output": "Draft asks for the deadline; open questions list access, costs, maintenance and responsibility.",
+    "check": "No guessed deadline; contract outcome and actual provider capability remain untested.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-P04-S01",
+      "start_ms": 0,
+      "end_ms": 6000,
+      "mode": "a_roll",
+      "visual": "A-roll close medium at a meeting table; presenter places a plain proposal beside one crumpled enquiry note.",
+      "on_screen_text": "PROPOSAL / AWKWARD CASE",
+      "information_job": "Introduce buyer verification.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P04-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P04-S02",
+      "start_ms": 6000,
+      "end_ms": 15000,
+      "mode": "demo",
+      "visual": "Top-down B-roll of fictional enquiry with blank deadline; hand circles the empty field.",
+      "on_screen_text": "FICTIONAL ENQUIRY: deadline unknown",
+      "information_job": "Make the test input inspectable.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P04-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P04-S03",
+      "start_ms": 15000,
+      "end_ms": 24000,
+      "mode": "demo",
+      "visual": "Split-screen: presenter left, three large cards right: input, draft, checker.",
+      "on_screen_text": "INPUT → DRAFT → CHECKER",
+      "information_job": "State acceptance responsibilities.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P04-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P04-S04",
+      "start_ms": 24000,
+      "end_ms": 34000,
+      "mode": "demo",
+      "visual": "Locked close-up comparison of two designed drafts: invented Friday crossed out; needs confirmation highlighted.",
+      "on_screen_text": "DESIGNED EXAMPLE: ASK, DON’T GUESS",
+      "information_job": "Show the specific pass/fail condition.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P04-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P04-S05",
+      "start_ms": 34000,
+      "end_ms": 43000,
+      "mode": "demo",
+      "visual": "B-roll over shoulder adding access, running costs, maintenance and responsible person to a proposal checklist.",
+      "on_screen_text": "OPEN QUESTIONS",
+      "information_job": "Make ongoing responsibilities visible.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P04-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P04-S06",
+      "start_ms": 43000,
+      "end_ms": 50000,
+      "mode": "a_roll",
+      "visual": "A-roll beside one checked test card and three still-open question cards, all readable.",
+      "on_screen_text": "ONE TEST / OPEN QUESTIONS",
+      "information_job": "Bound what the demonstration proves.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P04-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P04-S07",
+      "start_ms": 50000,
+      "end_ms": 60000,
+      "mode": "demo",
+      "visual": "Top-down held end frame: blank difficult-example field on a simple buyer checklist.",
+      "on_screen_text": "OUR DIFFICULT EXAMPLE: ____",
+      "information_job": "Give the buyer a concrete next action.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P04-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 6000,
+      "spoken_text": "Someone offers to automate your whole workflow. Ask to see the awkward case first."
+    },
+    {
+      "start_ms": 6000,
+      "end_ms": 15000,
+      "spoken_text": "Choose one repeated task, such as turning enquiry notes into a draft response. Bring a fictional example with a missing detail."
+    },
+    {
+      "start_ms": 15000,
+      "end_ms": 24000,
+      "spoken_text": "Ask what goes in, what comes out, and who checks it. Then ask what happens when that detail is missing."
+    },
+    {
+      "start_ms": 24000,
+      "end_ms": 34000,
+      "spoken_text": "Does the system stop, ask a question, or quietly guess? Watch the answer in the test instead of filling it in yourself."
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 43000,
+      "spoken_text": "Before agreeing to a wider build, get the open questions in writing: access, running costs, maintenance, and responsibility when something breaks."
+    },
+    {
+      "start_ms": 43000,
+      "end_ms": 50000,
+      "spoken_text": "A successful small example answers a small question. Keep the unanswered ones on the page."
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 60000,
+      "spoken_text": "For your next AI proposal, add one line: show us how this handles our difficult example. What would you put in that example?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-P04-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll close medium at a meeting table; presenter places a plain proposal beside one crumpled enquiry note.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P04-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Top-down B-roll of fictional enquiry with blank deadline; hand circles the empty field.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P04-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Split-screen: presenter left, three large cards right: input, draft, checker.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P04-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Locked close-up comparison of two designed drafts: invented Friday crossed out; needs confirmation highlighted.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P04-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll over shoulder adding access, running costs, maintenance and responsible person to a proposal checklist.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P04-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll beside one checked test card and three still-open question cards, all readable.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P04-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Top-down held end frame: blank difficult-example field on a simple buyer checklist.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P04-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 1,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-P04.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

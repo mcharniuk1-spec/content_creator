@@ -59,4 +59,8 @@ The 6 September media recovery foundation adds an uncapped identity manifest, re
 
 Keep exports, SQLite files, source media, raw transcripts, signed CDN URLs, API responses, approval files and secrets in private ignored directories. No raw corpus or account-specific ranking is distributed with these shared packages. Notion is a reconciled review projection with owner-edit preservation and exact readback, not analytical authority. Knowledge files contain reviewed methods and constrained context; raw founder/creator expression stays run-local.
 
-The source tree is pinned during execution. `docs/shared-engine-sync.json` records the exact copied shared files. Historical documentation under `docs/legacy/` describes the earlier implementation and must not be read as current authorization, billing or production evidence.
+The source tree is pinned during execution. `docs/shared-engine-sync.json` records the exact shipped shared files. Historical documentation under `docs/legacy/` describes the earlier implementation and must not be read as current authorization, billing or production evidence.
+
+## Reviewed ten-card release
+
+See [the ten-card handoff](docs/m2-ten-card-release.md) for five introductions, five regular scripts, original storyboards, validation and the owner-footage handoff. The [example slate](examples/ten-card-20260907/manifest.json) compiles through the existing Studio timeline route. Private source transcripts and Notion targets stay outside Git.

@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-P05",
+  "title": "Add a failure column to your AI shortlist",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "regular",
+  "synthesis": true,
+  "hooks": [
+    "Your AI tool comparison needs a failure column.",
+    "The right tool can still be the wrong workflow when it fails badly.",
+    "A feature list tells you very little about Tuesday morning when the draft is wrong."
+  ],
+  "full_spoken_english": "Your AI tool comparison needs a failure column. Imagine two tools preparing the same weekly stock note. One draft looks sharper. Both leave out an item. Before choosing, write down how your team would spot that missing item. Can you compare the draft with the original list? Now test an invented number, a late draft, and a mistaken send instruction. Decide what should happen in each case. Keep the comparison simple: the same fictional input, the same checks, and a person responsible for reviewing the result. Include the work needed to correct an error. A polished first answer is only one part of the job. Add three columns to your shortlist: failure, how we'll notice, and who fixes it. Which failure would matter most for your team's task?",
+  "word_count": 128,
+  "cta": "Add three columns to your shortlist: failure, how we'll notice, and who fixes it. Which failure would matter most for your team's task?",
+  "fixture": {
+    "input": "Fictional stock list: notebooks12; pens20; folders7. Draft omits folders.",
+    "designed_output": "Reviewer flags omitted folders and compares quantities to source before use.",
+    "check": "Missing and invented values detected by manual comparison; no automatic sending.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-P05-S01",
+      "start_ms": 0,
+      "end_ms": 4000,
+      "mode": "a_roll",
+      "visual": "A-roll: presenter turns a generic tier list over to reveal a failure list.",
+      "on_screen_text": "Text: RANK THE FAILURE FIRST.",
+      "information_job": "Reframe tool comparison around operational risk.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P05-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P05-S02",
+      "start_ms": 4000,
+      "end_ms": 12000,
+      "mode": "demo",
+      "visual": "B-roll: fictional inventory rows feed a weekly note draft.",
+      "on_screen_text": "Label: FICTIONAL STOCK DATA.",
+      "information_job": "Ground the comparison in a task.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P05-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P05-S03",
+      "start_ms": 12000,
+      "end_ms": 22000,
+      "mode": "motion_graphic",
+      "visual": "Locked comparison of stock list notebooks12, pens20, folders7 and draft missing folders; omitted row highlighted.",
+      "on_screen_text": "SOURCE LIST / DRAFT",
+      "information_job": "Make failure modes concrete.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P05-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P05-S04",
+      "start_ms": 22000,
+      "end_ms": 31000,
+      "mode": "motion_graphic",
+      "visual": "Three additional fictional test cards: invented quantity, late draft, mistaken send instruction, with blank expected-response fields.",
+      "on_screen_text": "WHAT SHOULD HAPPEN?",
+      "information_job": "Define maintainable recovery.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P05-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P05-S05",
+      "start_ms": 31000,
+      "end_ms": 40000,
+      "mode": "demo",
+      "visual": "B-roll: options A and B receive identical sample and criteria.",
+      "on_screen_text": "Designed comparison; text: SAME INPUT / SAME CHECK.",
+      "information_job": "Create a controlled evaluation.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P05-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P05-S06",
+      "start_ms": 40000,
+      "end_ms": 49000,
+      "mode": "motion_graphic",
+      "visual": "Two neutral option cards each have a correction-work row being filled by a reviewer.",
+      "on_screen_text": "INCLUDE THE COST OF CORRECTION",
+      "information_job": "Expose maintenance as a fit criterion.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P05-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P05-S07",
+      "start_ms": 49000,
+      "end_ms": 60000,
+      "mode": "motion_graphic",
+      "visual": "Held clean three-column worksheet with one empty row.",
+      "on_screen_text": "FAILURE / HOW WE NOTICE / WHO FIXES IT",
+      "information_job": "State the limit and practical CTA.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P05-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 4000,
+      "spoken_text": "Your AI tool comparison needs a failure column."
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 12000,
+      "spoken_text": "Imagine two tools preparing the same weekly stock note. One draft looks sharper. Both leave out an item."
+    },
+    {
+      "start_ms": 12000,
+      "end_ms": 22000,
+      "spoken_text": "Before choosing, write down how your team would spot that missing item. Can you compare the draft with the original list?"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 31000,
+      "spoken_text": "Now test an invented number, a late draft, and a mistaken send instruction. Decide what should happen in each case."
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 40000,
+      "spoken_text": "Keep the comparison simple: the same fictional input, the same checks, and a person responsible for reviewing the result."
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 49000,
+      "spoken_text": "Include the work needed to correct an error. A polished first answer is only one part of the job."
+    },
+    {
+      "start_ms": 49000,
+      "end_ms": 60000,
+      "spoken_text": "Add three columns to your shortlist: failure, how we'll notice, and who fixes it. Which failure would matter most for your team's task?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-P05-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: presenter turns a generic tier list over to reveal a failure list.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P05-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: fictional inventory rows feed a weekly note draft.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P05-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Locked comparison of stock list notebooks12, pens20, folders7 and draft missing folders; omitted row highlighted.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P05-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Three additional fictional test cards: invented quantity, late draft, mistaken send instruction, with blank expected-response fields.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P05-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: options A and B receive identical sample and criteria.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P05-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Two neutral option cards each have a correction-work row being filled by a reviewer.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P05-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Held clean three-column worksheet with one empty row.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P05-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 3,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-P05.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

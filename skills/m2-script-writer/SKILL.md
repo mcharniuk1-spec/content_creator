@@ -29,6 +29,8 @@ Use the method: repeated task → process map → AI boundary → human review �
 
 ## Required output
 
+Read `knowledge/studio/creator-techniques-20260907.md` after the primary source analysis. Apply `skills/humanize-writing/SKILL.md` to the spoken draft before independent review. Bind both files in the run implementation manifest. The secondary handbook supplies editorial prompts, never performance evidence. See `docs/m2-ten-card-release.md` for the reviewed ten-card example and its production handoff.
+
 Deliver a structured card and a readable combined script/frame table. Include audience job, friction, claim map, source functions, originality risks, three openings, selected opening rationale, timed speech, shots and semantic-scene information jobs, assets and rights, demo requirements, provider-optional inserts, deterministic fallbacks, caption/audio plan, test hypothesis and unexecuted states.
 
 ## Editorial rules
@@ -44,3 +46,5 @@ Deliver a structured card and a readable combined script/frame table. Include au
 ## Knowledge promotion
 
 Submit atomic reusable candidates with source hashes, scope, expiry, conflict notes and a separate reviewer. Raw competitor transcripts, creator identities, volatile metrics, private founder wording and unreviewed conclusions stay out of portable knowledge. Reviewed methods and the owner-supplied brand constraints may be promoted by the designated curator; this writer does not promote its own output.
+
+Read `knowledge/studio/primary-editorial-findings-20260907.md` before the secondary creator-techniques note. Treat its interpretations as editorial decisions and its hypotheses as untested.

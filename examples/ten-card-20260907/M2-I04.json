@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-I04",
+  "title": "Meet M2 Lab: test the awkward enquiry",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "introduction",
+  "synthesis": false,
+  "hooks": [
+    "A perfect example tells you very little about a messy workday.",
+    "A polished demo can hide the one case your team actually worries about.",
+    "Your first test should include something awkward on purpose."
+  ],
+  "full_spoken_english": "A perfect example tells you very little about a messy workday. Say you want AI to help turn enquiry notes into follow-up drafts. Make three fictional notes before you try it. One has every detail. One has no deadline. The third has two different deadlines. At M2 Lab, our Builds start with a small test like this. Decide what a useful result would look like before running it. Facts should stay unchanged. Missing details should stay visible. Conflicting dates should become a question for the person handling the enquiry. Compare the draft with the original note. A tidy paragraph still fails your test if it quietly chooses a date. Try the awkward cases before connecting the workflow. What is the missing detail that catches your team most often?",
+  "word_count": 128,
+  "cta": "Try the awkward cases before connecting the workflow. What is the missing detail that catches your team most often?",
+  "fixture": {
+    "input": "A: needs reply Tuesday. B: deadline missing. C: header says Tuesday; body says Thursday.",
+    "designed_output": "A: Tuesday. B: deadline unknown. C: conflicting deadlines; ask enquiry owner.",
+    "check": "Never silently resolve missing or contradictory dates.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-I04-S01",
+      "start_ms": 0,
+      "end_ms": 5000,
+      "mode": "a_roll",
+      "visual": "A-roll: presenter removes a card labelled PERFECT INPUT.",
+      "on_screen_text": "Replacement card: TRY THE AWKWARD CASE.",
+      "information_job": "Challenge an uninformative test design.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I04-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I04-S02",
+      "start_ms": 5000,
+      "end_ms": 14000,
+      "mode": "demo",
+      "visual": "B-roll: fictional enquiry note points to an editable draft outline.",
+      "on_screen_text": "Text: FICTIONAL ENQUIRY → DRAFT.",
+      "information_job": "Name the exact repeated task.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I04-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I04-S03",
+      "start_ms": 14000,
+      "end_ms": 21000,
+      "mode": "demo",
+      "visual": "B-roll: three colour-coded input cards fan out.",
+      "on_screen_text": "Cards: COMPLETE / MISSING / CONFLICTING.",
+      "information_job": "Create meaningful test variation.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I04-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I04-S04",
+      "start_ms": 21000,
+      "end_ms": 32000,
+      "mode": "a_roll",
+      "visual": "A-roll plus two criteria checked on a clipboard.",
+      "on_screen_text": "Text: PRESERVE FACTS / SHOW UNKNOWNS.",
+      "information_job": "Set acceptance criteria before output.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I04-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I04-S05",
+      "start_ms": 32000,
+      "end_ms": 42000,
+      "mode": "demo",
+      "visual": "B-roll: conflict arrow stops at reviewer; source and designed draft align.",
+      "on_screen_text": "Label: DESIGNED DEMO — NOT RUN; text: HUMAN REVIEW.",
+      "information_job": "Define escalation and inspection.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I04-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I04-S06",
+      "start_ms": 42000,
+      "end_ms": 51000,
+      "mode": "motion_graphic",
+      "visual": "Locked source-versus-draft comparison: source has conflicting Tuesday and Thursday; invented single date is crossed out.",
+      "on_screen_text": "A TIDY DRAFT CAN STILL MISS THE CONFLICT",
+      "information_job": "Resolve the opening warning.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I04-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I04-S07",
+      "start_ms": 51000,
+      "end_ms": 60000,
+      "mode": "motion_graphic",
+      "visual": "Hold a blank three-case test sheet.",
+      "on_screen_text": "Screenshot card: COMPLETE / MISSING / CONFLICTING.",
+      "information_job": "Give a bounded preparation step.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I04-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 5000,
+      "spoken_text": "A perfect example tells you very little about a messy workday."
+    },
+    {
+      "start_ms": 5000,
+      "end_ms": 14000,
+      "spoken_text": "Say you want AI to help turn enquiry notes into follow-up drafts. Make three fictional notes before you try it."
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 21000,
+      "spoken_text": "One has every detail. One has no deadline. The third has two different deadlines."
+    },
+    {
+      "start_ms": 21000,
+      "end_ms": 32000,
+      "spoken_text": "At M2 Lab, our Builds start with a small test like this. Decide what a useful result would look like before running it."
+    },
+    {
+      "start_ms": 32000,
+      "end_ms": 42000,
+      "spoken_text": "Facts should stay unchanged. Missing details should stay visible. Conflicting dates should become a question for the person handling the enquiry."
+    },
+    {
+      "start_ms": 42000,
+      "end_ms": 51000,
+      "spoken_text": "Compare the draft with the original note. A tidy paragraph still fails your test if it quietly chooses a date."
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 60000,
+      "spoken_text": "Try the awkward cases before connecting the workflow. What is the missing detail that catches your team most often?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-I04-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: presenter removes a card labelled PERFECT INPUT.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I04-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: fictional enquiry note points to an editable draft outline.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I04-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: three colour-coded input cards fan out.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I04-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll plus two criteria checked on a clipboard.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I04-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: conflict arrow stops at reviewer; source and designed draft align.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I04-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Locked source-versus-draft comparison: source has conflicting Tuesday and Thursday; invented single date is crossed out.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I04-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Hold a blank three-case test sheet.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I04-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 1,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-I04.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

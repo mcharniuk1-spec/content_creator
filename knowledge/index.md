@@ -14,3 +14,7 @@ Each substantial run records inputs, output hashes, tests, maker/reviewer, unres
 - `m2-validation-lessons.md` — reviewed reliability lessons; exact-byte promotion in `m2-validation-promotion.json`.
 
 - [[m2-media-recovery-lessons]] — reviewed method-only media recovery lessons; exact-byte promotion in `m2-media-recovery-promotion.json`.
+
+- [[studio/creator-techniques-20260907]] — reviewed secondary writing prompts; primary transcript and sampled-frame evidence takes priority. The spoken-editing skill is `skills/humanize-writing/SKILL.md`.
+
+- [Primary editorial findings](studio/primary-editorial-findings-20260907.md): reviewed scope, reference selection and original scene-writing procedure; read before the secondary handbook.

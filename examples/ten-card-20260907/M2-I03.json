@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-I03",
+  "title": "Meet M2 Lab: one job before one more subscription",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "introduction",
+  "synthesis": true,
+  "hooks": [
+    "Before your team buys another AI subscription, write down one job it needs to do.",
+    "A tool stack is not the same thing as a useful workflow.",
+    "Before adding another AI app, answer one boring question."
+  ],
+  "full_spoken_english": "Before your team buys another AI subscription, write down one job it needs to do. Suppose customer questions arrive in three places. The job is getting each person a checked answer using the current policy. At M2 Lab, our Radar videos look at tools through tasks like this. Make a short checklist: use the supplied policy, show missing information, leave the answer editable, and wait before sending. Now try two options with the same fictional question. Put their drafts side by side with that checklist. Which answer can your colleague check and correct? What setup would the team have to maintain? Those questions belong in the comparison too. Keep the checklist when the tool names change. What is one requirement your next subscription would have to pass?",
+  "word_count": 127,
+  "cta": "Keep the checklist when the tool names change. What is one requirement your next subscription would have to pass?",
+  "fixture": {
+    "input": "Fictional policy: exchanges within 14 days with receipt. Question: can I exchange? Purchase date missing.",
+    "designed_output": "Editable draft asks for purchase date and receipt; no send action.",
+    "check": "Use supplied policy, flag missing date, retain editable draft, no automatic sending.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-I03-S01",
+      "start_ms": 0,
+      "end_ms": 7000,
+      "mode": "a_roll",
+      "visual": "A-roll: three generic subscription tiles beside an empty process board.",
+      "on_screen_text": "Original prop board; text: ONE JOB / ONE CHECKLIST.",
+      "information_job": "Name tool collecting as the concrete problem.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I03-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I03-S02",
+      "start_ms": 7000,
+      "end_ms": 16000,
+      "mode": "motion_graphic",
+      "visual": "Three generic question channels converge on a current-policy document and one checked-answer card.",
+      "on_screen_text": "QUESTION → POLICY → CHECKED ANSWER",
+      "information_job": "Replace generic ranking with task requirements.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I03-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I03-S03",
+      "start_ms": 16000,
+      "end_ms": 22000,
+      "mode": "a_roll",
+      "visual": "A-roll presenter uses an original task checklist as a lens over two neutral tool cards.",
+      "on_screen_text": "M2 RADAR / TASK FIT",
+      "information_job": "Introduce a specific repeated process.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I03-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I03-S04",
+      "start_ms": 22000,
+      "end_ms": 31000,
+      "mode": "demo",
+      "visual": "B-roll: four checklist rows appear with empty boxes.",
+      "on_screen_text": "Text: CURRENT / VISIBLE GAPS / EDITABLE / NO AUTO-SEND.",
+      "information_job": "Define inspectable acceptance criteria.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I03-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I03-S05",
+      "start_ms": 31000,
+      "end_ms": 40000,
+      "mode": "demo",
+      "visual": "Locked split-screen of two fictional drafts labelled A and B with the same question and identical checklist.",
+      "on_screen_text": "SAME QUESTION / SAME CHECKLIST",
+      "information_job": "Explain the Radar pillar.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I03-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I03-S06",
+      "start_ms": 40000,
+      "end_ms": 51000,
+      "mode": "demo",
+      "visual": "Over-shoulder colleague marks a correction on one draft; a small setup checklist remains visible beside it.",
+      "on_screen_text": "CHECK / CORRECT / MAINTAIN",
+      "information_job": "Limit how external content informs choice.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I03-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I03-S07",
+      "start_ms": 51000,
+      "end_ms": 60000,
+      "mode": "motion_graphic",
+      "visual": "Hold the empty four-row card for a saveable final frame.",
+      "on_screen_text": "Screenshot card: MY TASK CHECKLIST.",
+      "information_job": "Give the viewer a selection action.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I03-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 7000,
+      "spoken_text": "Before your team buys another AI subscription, write down one job it needs to do."
+    },
+    {
+      "start_ms": 7000,
+      "end_ms": 16000,
+      "spoken_text": "Suppose customer questions arrive in three places. The job is getting each person a checked answer using the current policy."
+    },
+    {
+      "start_ms": 16000,
+      "end_ms": 22000,
+      "spoken_text": "At M2 Lab, our Radar videos look at tools through tasks like this."
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 31000,
+      "spoken_text": "Make a short checklist: use the supplied policy, show missing information, leave the answer editable, and wait before sending."
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 40000,
+      "spoken_text": "Now try two options with the same fictional question. Put their drafts side by side with that checklist."
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 51000,
+      "spoken_text": "Which answer can your colleague check and correct? What setup would the team have to maintain? Those questions belong in the comparison too."
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 60000,
+      "spoken_text": "Keep the checklist when the tool names change. What is one requirement your next subscription would have to pass?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-I03-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: three generic subscription tiles beside an empty process board.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I03-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Three generic question channels converge on a current-policy document and one checked-answer card.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I03-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll presenter uses an original task checklist as a lens over two neutral tool cards.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I03-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: four checklist rows appear with empty boxes.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I03-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Locked split-screen of two fictional drafts labelled A and B with the same question and identical checklist.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I03-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Over-shoulder colleague marks a correction on one draft; a small setup checklist remains visible beside it.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I03-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Hold the empty four-row card for a saveable final frame.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I03-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 3,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-I03.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

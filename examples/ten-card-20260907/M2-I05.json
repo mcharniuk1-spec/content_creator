@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-I05",
+  "title": "Meet M2 Lab: design the customer handoff",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "introduction",
+  "synthesis": false,
+  "hooks": [
+    "You sent the reminder. Can the customer actually tell what to do next?",
+    "Your AI map needs one person at the far right.",
+    "If the recipient cannot use the output, the automation has missed the job."
+  ],
+  "full_spoken_english": "You sent the reminder. Can the customer actually tell what to do next? Imagine an appointment message with a date but no clear way to ask for a change. The sending task is done; the customer is stuck. M2 Lab looks at AI adoption from both sides of that handoff: the team doing the work and the person receiving it. Map the confirmed facts, the draft reminder, the customer's response, and the staff member who handles changes. AI could help prepare the wording. Your team still needs to agree what happens when someone replies with an unusual request. Read the message as the customer. Is the next step clear? Then read it as the staff member. Is the response actionable? At the end of your next process map, draw the person receiving the result. What do they need from it?",
+  "word_count": 140,
+  "cta": "At the end of your next process map, draw the person receiving the result. What do they need from it?",
+  "fixture": {
+    "input": "Fictional appointment confirmed Tuesday 10:00; changes handled by reception.",
+    "designed_output": "Appointment Tuesday at 10:00. Contact reception if you need a change.",
+    "check": "Next action and responsible role clear; do not invent an actual contact destination.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-I05-S01",
+      "start_ms": 0,
+      "end_ms": 6000,
+      "mode": "a_roll",
+      "visual": "A-roll presenter holds a fictional reminder with date but no next-step line; finger rests on the empty space.",
+      "on_screen_text": "WHAT SHOULD THE CUSTOMER DO NEXT?",
+      "information_job": "Open with the missing-recipient problem.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I05-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I05-S02",
+      "start_ms": 6000,
+      "end_ms": 17000,
+      "mode": "demo",
+      "visual": "Phone-shaped fictional reminder shows Tuesday10:00 and an empty change-request area; puzzled hand gesture beside it.",
+      "on_screen_text": "DATE KNOWN / NEXT STEP MISSING",
+      "information_job": "Name the surface-level task.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I05-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I05-S03",
+      "start_ms": 17000,
+      "end_ms": 26000,
+      "mode": "demo",
+      "visual": "Split-screen: customer next-step card and staff exception queue.",
+      "on_screen_text": "Original diagram; text: CUSTOMER CLARITY / TEAM ACTION.",
+      "information_job": "Connect work to recipient benefit.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I05-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I05-S04",
+      "start_ms": 26000,
+      "end_ms": 33000,
+      "mode": "demo",
+      "visual": "B-roll: four-node process assembled with arrows.",
+      "on_screen_text": "Text: INPUT → DRAFT → RESPONSE → EXCEPTION.",
+      "information_job": "Show the full process.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I05-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I05-S05",
+      "start_ms": 33000,
+      "end_ms": 42000,
+      "mode": "a_roll",
+      "visual": "A-roll: preparation lane stops before three human-decision cards.",
+      "on_screen_text": "Text: AI PREPARES / PERSON DECIDES.",
+      "information_job": "Set the assistance boundary.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I05-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I05-S06",
+      "start_ms": 42000,
+      "end_ms": 51000,
+      "mode": "demo",
+      "visual": "B-roll: same confirmed fact appears on customer and staff cards.",
+      "on_screen_text": "Designed example only; text: SAME CONFIRMED FACT.",
+      "information_job": "Create an inspectable outcome question.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I05-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I05-S07",
+      "start_ms": 51000,
+      "end_ms": 60000,
+      "mode": "a_roll",
+      "visual": "A-roll closes, then holds on blank recipient node.",
+      "on_screen_text": "Screenshot prompt: RECIPIENT: ____ NEEDS: ____.",
+      "information_job": "Explain M2 and prompt immediate mapping.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I05-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 6000,
+      "spoken_text": "You sent the reminder. Can the customer actually tell what to do next?"
+    },
+    {
+      "start_ms": 6000,
+      "end_ms": 17000,
+      "spoken_text": "Imagine an appointment message with a date but no clear way to ask for a change. The sending task is done; the customer is stuck."
+    },
+    {
+      "start_ms": 17000,
+      "end_ms": 26000,
+      "spoken_text": "M2 Lab looks at AI adoption from both sides of that handoff: the team doing the work and the person receiving it."
+    },
+    {
+      "start_ms": 26000,
+      "end_ms": 33000,
+      "spoken_text": "Map the confirmed facts, the draft reminder, the customer's response, and the staff member who handles changes."
+    },
+    {
+      "start_ms": 33000,
+      "end_ms": 42000,
+      "spoken_text": "AI could help prepare the wording. Your team still needs to agree what happens when someone replies with an unusual request."
+    },
+    {
+      "start_ms": 42000,
+      "end_ms": 51000,
+      "spoken_text": "Read the message as the customer. Is the next step clear? Then read it as the staff member. Is the response actionable?"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 60000,
+      "spoken_text": "At the end of your next process map, draw the person receiving the result. What do they need from it?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-I05-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll presenter holds a fictional reminder with date but no next-step line; finger rests on the empty space.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I05-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Phone-shaped fictional reminder shows Tuesday10:00 and an empty change-request area; puzzled hand gesture beside it.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I05-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Split-screen: customer next-step card and staff exception queue.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I05-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: four-node process assembled with arrows.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I05-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: preparation lane stops before three human-decision cards.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I05-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: same confirmed fact appears on customer and staff cards.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I05-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll closes, then holds on blank recipient node.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I05-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 2,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-I05.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

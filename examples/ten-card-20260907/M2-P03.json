@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-P03",
+  "title": "Give the morning brief a decision owner",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "regular",
+  "synthesis": true,
+  "hooks": [
+    "Your morning summary has twelve updates. Which one needs you?",
+    "Do not ask AI for more summaries. Ask what needs your judgment.",
+    "One extra column can turn a morning digest into a working queue."
+  ],
+  "full_spoken_english": "Your morning summary has twelve updates. Which one needs you? For a first test, put fictional project notes into three columns: what changed, what needs a decision, and what can wait. AI could group repeated notes and prepare a short draft. Ask it to keep a source beside each item. Now add a decision owner. A line saying 'delivery date unclear' needs a person who can confirm the date, not another summary. If two notes disagree, keep both visible. Write the question that would resolve the difference. Before acting, the owner checks the source, makes the call, and records it. That turns the brief into something the team can use. Open one summary you already receive. Add 'decision needed' and 'owner.' How many lines actually ask somebody to do something?",
+  "word_count": 130,
+  "cta": "Open one summary you already receive. Add 'decision needed' and 'owner.' How many lines actually ask somebody to do something?",
+  "fixture": {
+    "input": "Project note A: shipment Tuesday. Note B: Thursday. Both unconfirmed.",
+    "designed_output": "Decision needed: confirm shipment date. Owner: operations role. Sources: A and B.",
+    "check": "Both source notes remain visible; no invented urgent status or confirmed date.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-P03-S01",
+      "start_ms": 0,
+      "end_ms": 5000,
+      "mode": "a_roll",
+      "visual": "A-roll: a stack of summary cards spills beside an empty decision tray.",
+      "on_screen_text": "Text: WHERE DOES THE DECISION GO?",
+      "information_job": "Name the summary-without-action problem.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P03-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P03-S02",
+      "start_ms": 5000,
+      "end_ms": 15000,
+      "mode": "demo",
+      "visual": "B-roll: three-column designed brief fills with fictional rows.",
+      "on_screen_text": "Persistent label: FICTIONAL INPUTS.",
+      "information_job": "Define the useful output shape.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P03-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P03-S03",
+      "start_ms": 15000,
+      "end_ms": 24000,
+      "mode": "demo",
+      "visual": "Top-down duplicate fictional notes group into one brief item with both source chips retained.",
+      "on_screen_text": "SUMMARY + SOURCES",
+      "information_job": "Set the AI boundary.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P03-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P03-S04",
+      "start_ms": 24000,
+      "end_ms": 34000,
+      "mode": "demo",
+      "visual": "Close-up of Delivery date unclear row with operations-role owner and explicit Confirm date question.",
+      "on_screen_text": "DECISION NEEDED / OWNER",
+      "information_job": "Make human review accountable.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P03-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P03-S05",
+      "start_ms": 34000,
+      "end_ms": 41000,
+      "mode": "demo",
+      "visual": "B-roll: Option A and B remain visible; missing-data cell highlighted.",
+      "on_screen_text": "Text: DISAGREEMENT → MISSING FACT.",
+      "information_job": "Handle conflicting advice safely.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P03-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P03-S06",
+      "start_ms": 41000,
+      "end_ms": 52000,
+      "mode": "demo",
+      "visual": "Over-shoulder hand checks both source notes, fills a confirmed-decision field, and initials the decision log.",
+      "on_screen_text": "CHECK → DECIDE → RECORD",
+      "information_job": "State test and data limits.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P03-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P03-S07",
+      "start_ms": 52000,
+      "end_ms": 60000,
+      "mode": "motion_graphic",
+      "visual": "Held three-column add-on worksheet over a fictional morning summary, with blank decision-needed and owner fields plus retained source chip.",
+      "on_screen_text": "DECISION NEEDED / OWNER / SOURCE",
+      "information_job": "Give a small next action.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P03-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 5000,
+      "spoken_text": "Your morning summary has twelve updates. Which one needs you?"
+    },
+    {
+      "start_ms": 5000,
+      "end_ms": 15000,
+      "spoken_text": "For a first test, put fictional project notes into three columns: what changed, what needs a decision, and what can wait."
+    },
+    {
+      "start_ms": 15000,
+      "end_ms": 24000,
+      "spoken_text": "AI could group repeated notes and prepare a short draft. Ask it to keep a source beside each item."
+    },
+    {
+      "start_ms": 24000,
+      "end_ms": 34000,
+      "spoken_text": "Now add a decision owner. A line saying 'delivery date unclear' needs a person who can confirm the date, not another summary."
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 41000,
+      "spoken_text": "If two notes disagree, keep both visible. Write the question that would resolve the difference."
+    },
+    {
+      "start_ms": 41000,
+      "end_ms": 52000,
+      "spoken_text": "Before acting, the owner checks the source, makes the call, and records it. That turns the brief into something the team can use."
+    },
+    {
+      "start_ms": 52000,
+      "end_ms": 60000,
+      "spoken_text": "Open one summary you already receive. Add 'decision needed' and 'owner.' How many lines actually ask somebody to do something?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-P03-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: a stack of summary cards spills beside an empty decision tray.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P03-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: three-column designed brief fills with fictional rows.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P03-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Top-down duplicate fictional notes group into one brief item with both source chips retained.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P03-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Close-up of Delivery date unclear row with operations-role owner and explicit Confirm date question.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P03-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: Option A and B remain visible; missing-data cell highlighted.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P03-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Over-shoulder hand checks both source notes, fills a confirmed-decision field, and initials the decision log.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P03-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Held three-column add-on worksheet over a fictional morning summary, with blank decision-needed and owner fields plus retained source chip.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P03-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 3,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-P03.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

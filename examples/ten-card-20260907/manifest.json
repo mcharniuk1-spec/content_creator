@@ -1,0 +1,98 @@
+{
+  "schema": "m2.original-editorial-slate.v1",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "cards": [
+    {
+      "card_id": "M2-I01",
+      "card_sha256": "71c815cdc63b8e444fd912c95f450f121055de02778cecfc9c5ea6196f7b017c",
+      "storyboard_sha256": "109c81f0c9a08206834c14747158f6ff6526a74929cbdc5cd5d46b10f8292c15",
+      "scenes": 7,
+      "word_count": 136,
+      "publication_group": "introduction",
+      "synthesis": true
+    },
+    {
+      "card_id": "M2-I02",
+      "card_sha256": "6700fa844f318fa2042213a29144d9607edf9a3a772c8f08cc1abf95c4b0196b",
+      "storyboard_sha256": "f0c6464d782d3bfc384d71ed3ee4004ba8fad655d85f19d55374c46117579837",
+      "scenes": 7,
+      "word_count": 127,
+      "publication_group": "introduction",
+      "synthesis": true
+    },
+    {
+      "card_id": "M2-I03",
+      "card_sha256": "e4b32646f1dd759bd8034937f9e651902504c5bb7a13a325e4d77aec8bf49d42",
+      "storyboard_sha256": "77111c79894d4226b66ef30d17b7943baad42a3e88f2d18e7555958070ac6ef9",
+      "scenes": 7,
+      "word_count": 127,
+      "publication_group": "introduction",
+      "synthesis": true
+    },
+    {
+      "card_id": "M2-I04",
+      "card_sha256": "7a07a638d492373ad6a528e2585c5c16efefc151294835adcf60ae8fc3a172e4",
+      "storyboard_sha256": "145f5ba3909b273cb8d75006590b83eff7d043cb0e66c3b9d45ef5a271838b5f",
+      "scenes": 7,
+      "word_count": 128,
+      "publication_group": "introduction",
+      "synthesis": false
+    },
+    {
+      "card_id": "M2-I05",
+      "card_sha256": "3f075eacc68f2eb1e69fba0231b5bbd23178f915246a4833a8206d107381b1ee",
+      "storyboard_sha256": "da15647a078187450a29a0277cc165d697e0abb072bf27108485070f7b5cddda",
+      "scenes": 7,
+      "word_count": 140,
+      "publication_group": "introduction",
+      "synthesis": false
+    },
+    {
+      "card_id": "M2-P01",
+      "card_sha256": "bb6c738d1298a6207c61f079118024798f0674edb19d1d991e74b6a79734f9fe",
+      "storyboard_sha256": "a286b721c364f96fc6df39e9f1b160daccbd76207004f0094566b05078d54e70",
+      "scenes": 7,
+      "word_count": 131,
+      "publication_group": "regular",
+      "synthesis": true
+    },
+    {
+      "card_id": "M2-P02",
+      "card_sha256": "c9941ef8c87dda3a9c3757cde16f0748c27bdac48356be459562ec84962b96c3",
+      "storyboard_sha256": "87a9896d9428b3611b756f34816f41cfd4dd24a858dc6dab0334a6cc6ea7b0f4",
+      "scenes": 7,
+      "word_count": 134,
+      "publication_group": "regular",
+      "synthesis": true
+    },
+    {
+      "card_id": "M2-P03",
+      "card_sha256": "6155054b9b57fa21b8d5f8212d1323ba143e106ec455c70f1634127ac3d65cc9",
+      "storyboard_sha256": "2351f627a5ae2db5b4c8197d880b80440022efa60864d23f011a4d6e7fee9aab",
+      "scenes": 7,
+      "word_count": 130,
+      "publication_group": "regular",
+      "synthesis": true
+    },
+    {
+      "card_id": "M2-P04",
+      "card_sha256": "4f401ce7741dda93c22d10437542b710dd7ca41a2a6f8ee2292cccb206c994cf",
+      "storyboard_sha256": "052d81c2d578e1cd6030b24156da4674f3aafb9ca816907da09f091ce70c7f24",
+      "scenes": 7,
+      "word_count": 136,
+      "publication_group": "regular",
+      "synthesis": false
+    },
+    {
+      "card_id": "M2-P05",
+      "card_sha256": "85af317329f0d9da81976444361b1b73ccfb2f71ee459702c9b1b7c5d5f497af",
+      "storyboard_sha256": "9176a07cc7b814cfc684921e7dcb125a774be83164537d36ad2cdc7fc766b56c",
+      "scenes": 7,
+      "word_count": 128,
+      "publication_group": "regular",
+      "synthesis": true
+    }
+  ],
+  "production_state": "OWNER_FOOTAGE_AND_SPEECH_ALIGNMENT_PENDING",
+  "source_transcripts_in_public_git": false
+}

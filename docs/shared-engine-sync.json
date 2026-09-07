@@ -1,11 +1,11 @@
 {
   "schema": "m2.shared-engine-sync.v2",
-  "date": "2026-09-06",
-  "scope": "reviewed media recovery foundation plus eligibility inventory, scene candidate extraction, and optional offline transcript recovery; bounded R7 pilot completed with output review pending",
+  "date": "2026-09-07",
+  "scope": "Portable shared-engine file inventory refreshed against the ten-card release checkout; historical hashes remain in Git history. Original source media and transcripts excluded.",
   "files": [
     {
       "path": "agents/m2-roles.json",
-      "sha256": "487ea2870a3d25f3612138ade8d2b23c750b4aa1cc0ef934fc337d7cf2b6a352"
+      "sha256": "2e68d0206698d54291b5fd83a028a63ce8a1a73ddeb03cccb6c57b8aba343252"
     },
     {
       "path": "config/m2-loore-optional.v1.json",
@@ -25,15 +25,23 @@
     },
     {
       "path": "docs/m2-corpus-worker-contract.md",
-      "sha256": "e927060b071a961728d33227313c9dfd8efed0477a60423a3e31bc1fa19ddcb1"
+      "sha256": "f1beb2b19e3ca0850e02d4510ec30802ffee6c8a58613b137680bf20b4b6305a"
     },
     {
       "path": "docs/m2-operator-guide.md",
-      "sha256": "dbd339c70243d539a524032bec389ee495b91fc618e83c95894c42f9155ee9c9"
+      "sha256": "fd21a050e44b47dfa99f7d077d0538273e8091453c21bfe62fd8434c1b09d6d8"
+    },
+    {
+      "path": "docs/m2-ten-card-release.md",
+      "sha256": "31479096862bc5376128524a29e367b6eb787ff922c8f2dc80800b70fcac319b"
     },
     {
       "path": "docs/reviews/media-recovery-20260906-v2.json",
       "sha256": "f013c926cfb54e86183364071c4f66ea5d83d00069bd2108ed98e8159c9cde07"
+    },
+    {
+      "path": "examples/ten-card-20260907/manifest.json",
+      "sha256": "9ac4b7509149f622f70dc625b61cbc5c593ccca7ec961dd65822382b9e12753b"
     },
     {
       "path": "integrations/radar/README.md",
@@ -53,16 +61,23 @@
     },
     {
       "path": "knowledge/index.md",
-      "sha256": "f53dc002e2834de7070d0e95d3f21cfa4f7d1d4534d27af677131a5e06438a41",
-      "transform": "Preserve portable Radar index and append recovery method route only"
+      "sha256": "e0d8ef6549960ba72c98ec7a55d8fba179bcec74c50f2a54e12d64657ff8f1ed"
     },
     {
       "path": "knowledge/m2-media-recovery-lessons.md",
-      "sha256": "c61a95aa60cf00df8a7b96032f999f7292669e566c976c3239d539b85ee45f66"
+      "sha256": "bb54b4094d854208e97ce076347ec6b1eff7b065196bd967e031a4a35da897ee"
     },
     {
       "path": "knowledge/m2-media-recovery-promotion.json",
-      "sha256": "883131b3528758033560f11076e781f5aee4682118d022346167e6d27abbd764"
+      "sha256": "bedcd00063b8bdde7029835365adaa857f9225534fd32a950fc063e9db2db76d"
+    },
+    {
+      "path": "knowledge/studio/creator-techniques-20260907.md",
+      "sha256": "30f90ed7c92dcc3d28198463cac3e226bd19e35a7d3235fde93d51aec9e4f3d1"
+    },
+    {
+      "path": "knowledge/studio/primary-editorial-findings-20260907.md",
+      "sha256": "61bd9c5c6b40b551e1f335b1afa07ba4a6b8cb2e8b761fd775f03ee71260f06b"
     },
     {
       "path": "m2_orchestrator/corpus_media.py",
@@ -122,15 +137,15 @@
     },
     {
       "path": "m2_orchestrator/state.py",
-      "sha256": "e07b180c4770f541f3a7a2f54967065d11d6dc8bded0863bc71c0cfdc31bd938"
+      "sha256": "51059babbe06a062744455ab2b6d67b7a2e578f516b16977b4bb32c94ce90061"
     },
     {
       "path": "m2_orchestrator/transcription_chunk_worker.py",
-      "sha256": "7ca8e606ec170f600312a28cda63bc98aa61e6b597414624f5d4710798521a31"
+      "sha256": "741c0ff048c20164e11bf4a2c2430310436fdcb757f3e4ddc17c979f8c426a7e"
     },
     {
       "path": "m2_orchestrator/transcription_recovery.py",
-      "sha256": "aa97d29431c2e75df7aaec9e1996771b2299a5e30d9ad825dfc58d067f76b9a2"
+      "sha256": "f80860fd52833efb84269f3b46b3ead6d07ea0fc40c44e7b6f81e9c1dda24ddb"
     },
     {
       "path": "m2_signal/analysis_eligibility.py",
@@ -170,11 +185,19 @@
     },
     {
       "path": "scripts/run_m2_transcription_recovery.py",
-      "sha256": "ecdfc594fcaff4aa39acfa9852d9fad0c8fae3d7022ff3da32b147c89b928a27"
+      "sha256": "26b42536bac9cff5e8117302d5a0957833ed81c47a2030526a2588681f21d7eb"
     },
     {
       "path": "server_entry.py",
       "sha256": "2113b292f9f5628ef25f89af404e0586e27e84b873e30f375348232c6d7c204e"
+    },
+    {
+      "path": "skills/humanize-writing/SKILL.md",
+      "sha256": "3d4554d497bb9eb918aae3a6c816a74ac6ed5e5300e02ebcccd3c15f915cf3c1"
+    },
+    {
+      "path": "skills/m2-script-writer/SKILL.md",
+      "sha256": "172909d7f40fd801ba9f14a7be592dda5b94ba620c72425faa85d001467c67f9"
     },
     {
       "path": "tests/test_analysis_eligibility.py",
@@ -191,6 +214,10 @@
     {
       "path": "tests/test_corpus_media_edges.py",
       "sha256": "f122b6778ed5f776903d758ff1f0dcbe84854843f5270018b530325bce7c233b"
+    },
+    {
+      "path": "tests/test_editorial_release.py",
+      "sha256": "a26fac240ec01a40850a5f893802e47f8213876173ed34a76faded60ff04f71b"
     },
     {
       "path": "tests/test_media_acquisition.py",

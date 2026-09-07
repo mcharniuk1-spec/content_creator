@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-I01",
+  "title": "Meet M2 Lab: start with the Friday update",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "introduction",
+  "synthesis": true,
+  "hooks": [
+    "Still rebuilding the same Friday update? That is a useful place to start with AI.",
+    "If AI feels too broad, put one weekly task on the table.",
+    "Here is the plain-English version of what M2 Lab does."
+  ],
+  "full_spoken_english": "Still rebuilding the same Friday update? That is a useful place to start with AI. We're M2 Lab. We help people responsible for AI in small businesses turn everyday work into something they can test. Imagine three project notes becoming one customer update. Start with the notes, the reader, and the decision they need to make. Then map the steps: collect facts, draft the update, check it, send it. Give each step an owner. AI could help with the draft. The person checking it needs the original notes, including anything that is missing. Try one fictional example first. Does an unknown delivery date stay unknown? Can you trace every sentence back to a note? That's our starting point: one repeated task and a test you can inspect. Which weekly task would you put on this page?",
+  "word_count": 136,
+  "cta": "That's our starting point: one repeated task and a test you can inspect. Which weekly task would you put on this page?",
+  "fixture": {
+    "input": "Project A: artwork approved. Project B: delivery date unconfirmed. Reader: customer.",
+    "designed_output": "Artwork approved. We are confirming the delivery date.",
+    "check": "No invented date; each sentence maps to a supplied fact.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-I01-S01",
+      "start_ms": 0,
+      "end_ms": 7000,
+      "mode": "a_roll",
+      "visual": "A-roll: presenter clears generic app tiles away and leaves one paper card.",
+      "on_screen_text": "Prop card: WEEKLY CUSTOMER UPDATE; text: START WITH THE WORK.",
+      "information_job": "State M2 Lab's task-first position.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I01-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I01-S02",
+      "start_ms": 7000,
+      "end_ms": 16000,
+      "mode": "a_roll",
+      "visual": "A-roll with an original five-node line drawing appearing beside the presenter.",
+      "on_screen_text": "Graphic: messy routine → testable process.",
+      "information_job": "Name the audience and practical outcome.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I01-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I01-S03",
+      "start_ms": 16000,
+      "end_ms": 25000,
+      "mode": "demo",
+      "visual": "B-roll: hands place fictional notes into a simple process strip.",
+      "on_screen_text": "Synthetic notes labelled FICTIONAL; text: INPUT → STEPS.",
+      "information_job": "Ground the method in one repeated task.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I01-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I01-S04",
+      "start_ms": 25000,
+      "end_ms": 33000,
+      "mode": "demo",
+      "visual": "Split-screen: neutral AI-draft lane and named-role review lane.",
+      "on_screen_text": "Original boundary diagram; text: PREPARE / JUDGE / CHECK.",
+      "information_job": "Make the AI and human boundary explicit.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I01-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I01-S05",
+      "start_ms": 33000,
+      "end_ms": 41000,
+      "mode": "demo",
+      "visual": "Split-screen of original notes and an editable draft, with a reviewer hand keeping the notes alongside it.",
+      "on_screen_text": "NOTES BESIDE DRAFT",
+      "information_job": "Show a meaningful first-test failure.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I01-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I01-S06",
+      "start_ms": 41000,
+      "end_ms": 50000,
+      "mode": "demo",
+      "visual": "Close-up of fictional Project B note with unknown date and draft with the same unknown; a thin connector links matching facts.",
+      "on_screen_text": "CAN YOU TRACE EACH FACT?",
+      "information_job": "Deliver the promised explanation of M2 Lab.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I01-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-I01-S07",
+      "start_ms": 50000,
+      "end_ms": 60000,
+      "mode": "demo",
+      "visual": "B-roll: blank five-line worksheet held steady for a screenshot.",
+      "on_screen_text": "Text: YOUR ROUTINE: ____; save-frame worksheet.",
+      "information_job": "Give a self-contained next action.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-I01-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 7000,
+      "spoken_text": "Still rebuilding the same Friday update? That is a useful place to start with AI."
+    },
+    {
+      "start_ms": 7000,
+      "end_ms": 16000,
+      "spoken_text": "We're M2 Lab. We help people responsible for AI in small businesses turn everyday work into something they can test."
+    },
+    {
+      "start_ms": 16000,
+      "end_ms": 25000,
+      "spoken_text": "Imagine three project notes becoming one customer update. Start with the notes, the reader, and the decision they need to make."
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 33000,
+      "spoken_text": "Then map the steps: collect facts, draft the update, check it, send it. Give each step an owner."
+    },
+    {
+      "start_ms": 33000,
+      "end_ms": 41000,
+      "spoken_text": "AI could help with the draft. The person checking it needs the original notes, including anything that is missing."
+    },
+    {
+      "start_ms": 41000,
+      "end_ms": 50000,
+      "spoken_text": "Try one fictional example first. Does an unknown delivery date stay unknown? Can you trace every sentence back to a note?"
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 60000,
+      "spoken_text": "That's our starting point: one repeated task and a test you can inspect. Which weekly task would you put on this page?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-I01-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: presenter clears generic app tiles away and leaves one paper card.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I01-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll with an original five-node line drawing appearing beside the presenter.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I01-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: hands place fictional notes into a simple process strip.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I01-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Split-screen: neutral AI-draft lane and named-role review lane.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I01-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Split-screen of original notes and an editable draft, with a reviewer hand keeping the notes alongside it.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I01-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Close-up of fictional Project B note with unknown date and draft with the same unknown; a thin connector links matching facts.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I01-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: blank five-line worksheet held steady for a screenshot.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-I01-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "bea71b4ebbd7a06a0c0d8129c524e052c1f750da6f7d883957912c661535fcc3",
+  "source_reference_count": 3,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-I01.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

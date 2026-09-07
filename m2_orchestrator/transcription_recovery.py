@@ -27,6 +27,9 @@ NUM_WORKERS = 1
 COMPUTE_TYPE = "int8"
 DEVICE = "cpu"
 RSS_WATCHDOG_BYTES = int(1.5 * 1024 * 1024 * 1024)
+DEFAULT_BEAM_SIZE = 5
+MIN_BEAM_SIZE = 1
+MAX_BEAM_SIZE = 5
 HEX64 = set("0123456789abcdef")
 CHUNK_ID_RE = re.compile(r"^C[0-9]{4}$")
 ALLOWED_ALIAS_PATHS = {"/tmp", "/private/tmp", "/var", "/private/var"}
@@ -47,14 +50,22 @@ def object_hash(value: Any) -> str:
     return hashlib.sha256(_canonical(value)).hexdigest()
 
 
-def build_recovery_config(*, source_media_hash: str, duration_ms: int, model_bundle_sha256: str, core_ms: int = CORE_MAX_MS, padding_ms: int = PADDING_MAX_MS) -> dict[str, Any]:
+def _beam_size(value: Any, code: str = "BEAM_SIZE_INVALID") -> int:
+    if type(value) is not int or not MIN_BEAM_SIZE <= value <= MAX_BEAM_SIZE:
+        raise TranscriptionRecoveryError(code)
+    return value
+
+
+def build_recovery_config(*, source_media_hash: str, duration_ms: int, model_bundle_sha256: str, core_ms: int = CORE_MAX_MS, padding_ms: int = PADDING_MAX_MS, beam_size: int = DEFAULT_BEAM_SIZE) -> dict[str, Any]:
     """Return the immutable config hashed into every production chunk request."""
 
+    beam_size = _beam_size(beam_size)
     return {
         "schema": "m2.transcription-recovery-config.v1",
         "source_media_hash": _hash64(source_media_hash, "SOURCE_MEDIA_HASH_INVALID"),
         "duration_ms": duration_ms,
         "model_bundle_sha256": _hash64(model_bundle_sha256, "MODEL_HASH_INVALID"),
+        "beam_size": beam_size,
         "core_window_max_ms": core_ms,
         "context_padding_max_ms": padding_ms,
         "device": DEVICE,
@@ -134,12 +145,19 @@ def build_chunk_request(
     source_pointer: str | None = None,
     config: Mapping[str, Any] | None = None,
     original_audio_unknown: bool = False,
+    beam_size: int | None = None,
 ) -> dict[str, Any]:
     """Bind one planned window to source, model, and config hashes."""
 
     source_media_hash = _hash64(source_media_hash, "SOURCE_MEDIA_HASH_INVALID")
     model_bundle_sha256 = _hash64(model_bundle_sha256, "MODEL_HASH_INVALID")
     config_sha256 = _hash64(config_sha256, "CONFIG_HASH_INVALID")
+    if beam_size is not None:
+        beam_size = _beam_size(beam_size)
+    elif isinstance(config, Mapping):
+        beam_size = _beam_size(config.get("beam_size"))
+    else:
+        beam_size = DEFAULT_BEAM_SIZE
     chunk_id = plan.get("chunk_id")
     if not isinstance(chunk_id, str) or not chunk_id:
         raise TranscriptionRecoveryError("CHUNK_ID_INVALID")
@@ -170,7 +188,10 @@ def build_chunk_request(
     if config is not None:
         if not isinstance(config, Mapping) or object_hash(config) != config_sha256:
             raise TranscriptionRecoveryError("CONFIG_HASH_MISMATCH")
+        if _beam_size(config.get("beam_size")) != beam_size:
+            raise TranscriptionRecoveryError("BEAM_SIZE_MISMATCH")
         request["config"] = dict(config)
+    request["beam_size"] = beam_size
     request["request_sha256"] = object_hash(request)
     return request
 
@@ -255,13 +276,19 @@ def _same_word(left: Mapping[str, Any], right: Mapping[str, Any]) -> bool:
     return " ".join(str(left.get("text", "")).split()).casefold() == " ".join(str(right.get("text", "")).split()).casefold()
 
 
-def _validate_binding(value: Mapping[str, Any], source_hash: str, model_hash: str, config_hash: str) -> None:
+def _validate_binding(value: Mapping[str, Any], source_hash: str, model_hash: str, config_hash: str, *, beam_size: int = DEFAULT_BEAM_SIZE) -> None:
+    beam_size = _beam_size(beam_size)
     if value.get("source_media_hash") != source_hash:
         raise TranscriptionRecoveryError("SOURCE_MEDIA_HASH_MISMATCH")
     if value.get("model_bundle_sha256") != model_hash:
         raise TranscriptionRecoveryError("MODEL_HASH_MISMATCH")
     if value.get("config_sha256") != config_hash:
         raise TranscriptionRecoveryError("CONFIG_HASH_MISMATCH")
+    if "beam_size" in value:
+        if _beam_size(value.get("beam_size")) != beam_size:
+            raise TranscriptionRecoveryError("BEAM_SIZE_MISMATCH")
+    elif beam_size != DEFAULT_BEAM_SIZE:
+        raise TranscriptionRecoveryError("BEAM_SIZE_MISSING")
 
 
 def _validate_cached_plan_binding(
@@ -271,6 +298,7 @@ def _validate_cached_plan_binding(
     source_hash: str,
     model_hash: str,
     config_hash: str,
+    beam_size: int = DEFAULT_BEAM_SIZE,
 ) -> None:
     """Require cached timing identity to match the current immutable plan."""
 
@@ -281,12 +309,13 @@ def _validate_cached_plan_binding(
     if request is not None:
         if not isinstance(request, Mapping):
             raise TranscriptionRecoveryError("CHUNK_REQUEST_INVALID")
-        _validate_binding(request, source_hash, model_hash, config_hash)
+        _validate_binding(request, source_hash, model_hash, config_hash, beam_size=beam_size)
         for key in ("chunk_id", "global_offset_ms", "core_interval_ms", "window_interval_ms"):
             if request.get(key) != plan.get(key):
                 raise TranscriptionRecoveryError("CHUNK_PLAN_BINDING_MISMATCH")
         if "request_sha256" in request and request.get("request_sha256") != object_hash({key: value for key, value in request.items() if key != "request_sha256"}):
             raise TranscriptionRecoveryError("CHUNK_REQUEST_HASH_MISMATCH")
+    _validate_binding(result, source_hash, model_hash, config_hash, beam_size=beam_size)
 
 
 def _validate_audio_source_proof(source_hash: str, proof: Mapping[str, Any] | None) -> None:
@@ -332,6 +361,7 @@ def merge_chunk_results(
     review_receipt: Mapping[str, Any] | None = None,
     original_audio_unknown: bool = False,
     audio_source_proof: Mapping[str, Any] | None = None,
+    beam_size: int = DEFAULT_BEAM_SIZE,
 ) -> dict[str, Any]:
     """Merge completed chunks by global midpoint ownership.
 
@@ -343,6 +373,7 @@ def merge_chunk_results(
     source_media_hash = _hash64(source_media_hash, "SOURCE_MEDIA_HASH_INVALID")
     model_bundle_sha256 = _hash64(model_bundle_sha256, "MODEL_HASH_INVALID")
     config_sha256 = _hash64(config_sha256, "CONFIG_HASH_INVALID")
+    beam_size = _beam_size(beam_size)
     if original_audio_unknown:
         _validate_audio_source_proof(source_media_hash, audio_source_proof)
     if type(padding_ms) is not int or not 0 <= padding_ms <= PADDING_MAX_MS:
@@ -361,7 +392,7 @@ def merge_chunk_results(
         chunk_id = result.get("chunk_id")
         if not isinstance(chunk_id, str) or chunk_id in result_by_id or chunk_id not in plan_by_id:
             raise TranscriptionRecoveryError("CHUNK_RESULT_ID_INVALID")
-        _validate_binding(result, source_media_hash, model_bundle_sha256, config_sha256)
+        _validate_binding(result, source_media_hash, model_bundle_sha256, config_sha256, beam_size=beam_size)
         result_by_id[chunk_id] = result
 
     all_words: list[dict[str, Any]] = []
@@ -396,7 +427,7 @@ def merge_chunk_results(
         if request is not None:
             if not isinstance(request, Mapping):
                 raise TranscriptionRecoveryError("CHUNK_REQUEST_INVALID")
-            _validate_binding(request, source_media_hash, model_bundle_sha256, config_sha256)
+            _validate_binding(request, source_media_hash, model_bundle_sha256, config_sha256, beam_size=beam_size)
         if state not in {"OBSERVED", "SUSPICIOUS_TIMINGS"}:
             incomplete.append(chunk_id)
             chunk_receipts.append({"chunk_id": chunk_id, "observation_state": "PARTIAL", "failure_code": result.get("failure_code", "CHUNK_FAILED"), "core_interval_ms": [core_start, core_end], "result": dict(result)})
@@ -490,6 +521,7 @@ def merge_chunk_results(
         "source_media_hash": source_media_hash,
         "model_bundle_sha256": model_bundle_sha256,
         "config_sha256": config_sha256,
+        "beam_size": beam_size,
         "audio_hashes": audio_hashes,
         "chunks": chunk_receipts,
         "chunk_metrics": chunk_metrics,
@@ -525,6 +557,7 @@ def merge_chunk_results(
             },
             "chunk_metric_sums_additivity": "NON_ADDITIVE_FOR_PADDING_OVERLAP",
             "owned_aligned_word_count": len(owned_words),
+            "beam_size": beam_size,
         },
     }
 
@@ -537,12 +570,14 @@ def completed_chunk_ids(
     model_bundle_sha256: str,
     config_sha256: str,
     artifact_roots: Mapping[str, str | Path] | None = None,
+    beam_size: int = DEFAULT_BEAM_SIZE,
 ) -> set[str]:
     """Return only hash-bound completed chunks safe to resume."""
 
     source_media_hash = _hash64(source_media_hash, "SOURCE_MEDIA_HASH_INVALID")
     model_bundle_sha256 = _hash64(model_bundle_sha256, "MODEL_HASH_INVALID")
     config_sha256 = _hash64(config_sha256, "CONFIG_HASH_INVALID")
+    beam_size = _beam_size(beam_size)
     plan_list = list(plans)
     plan_by_id: dict[str, Mapping[str, Any]] = {}
     for plan in plan_list:
@@ -564,13 +599,14 @@ def completed_chunk_ids(
     completed: set[str] = set()
     for result in result_list:
         chunk_id = result["chunk_id"]
-        _validate_binding(result, source_media_hash, model_bundle_sha256, config_sha256)
+        _validate_binding(result, source_media_hash, model_bundle_sha256, config_sha256, beam_size=beam_size)
         _validate_cached_plan_binding(
             result,
             plan_by_id[chunk_id],
             source_hash=source_media_hash,
             model_hash=model_bundle_sha256,
             config_hash=config_sha256,
+            beam_size=beam_size,
         )
         if result.get("observation_state") in {"OBSERVED", "SUSPICIOUS_TIMINGS"}:
             if result.get("source_audio_sha256", result.get("audio_sha256")) is None:
@@ -639,7 +675,7 @@ def validate_completed_chunk_artifacts(
         raise TranscriptionRecoveryError("CHUNK_REQUEST_ARTIFACT_INVALID") from None
     if not isinstance(persisted, Mapping) or persisted.get("request_sha256") != result.get("request_sha256") or object_hash({key: value for key, value in persisted.items() if key != "request_sha256"}) != persisted.get("request_sha256"):
         raise TranscriptionRecoveryError("CHUNK_REQUEST_HASH_MISMATCH")
-    for key in ("chunk_id", "source_media_hash", "model_bundle_sha256", "config_sha256", "global_offset_ms", "core_interval_ms", "window_interval_ms"):
+    for key in ("chunk_id", "source_media_hash", "model_bundle_sha256", "config_sha256", "beam_size", "global_offset_ms", "core_interval_ms", "window_interval_ms"):
         if persisted.get(key) != result.get(key):
             raise TranscriptionRecoveryError("CHUNK_REQUEST_BINDING_MISMATCH")
 
@@ -660,6 +696,7 @@ def recover_chunks(
     audio_source_proof: Mapping[str, Any] | None = None,
     review_receipt: Mapping[str, Any] | None = None,
     completed_artifact_roots: Mapping[str, str | Path] | None = None,
+    beam_size: int | None = None,
 ) -> dict[str, Any]:
     """Run a serial injected chunk route and merge its immutable receipts.
 
@@ -669,6 +706,14 @@ def recover_chunks(
     """
 
     plan_list = list(plans)
+    if beam_size is None:
+        beam_size = _beam_size(config.get("beam_size")) if isinstance(config, Mapping) else DEFAULT_BEAM_SIZE
+    else:
+        beam_size = _beam_size(beam_size)
+        if isinstance(config, Mapping) and _beam_size(config.get("beam_size")) != beam_size:
+            raise TranscriptionRecoveryError("BEAM_SIZE_MISMATCH")
+    if isinstance(config, Mapping) and object_hash(config) != config_sha256:
+        raise TranscriptionRecoveryError("CONFIG_HASH_MISMATCH")
     if original_audio_unknown:
         _validate_audio_source_proof(_hash64(source_media_hash, "SOURCE_MEDIA_HASH_INVALID"), audio_source_proof)
     if chunk_runner is None and production is not None:
@@ -683,11 +728,12 @@ def recover_chunks(
         model_bundle_sha256=model_bundle_sha256,
         config_sha256=config_sha256,
         artifact_roots=completed_artifact_roots,
+        beam_size=beam_size,
     )
     by_id = {item["chunk_id"]: item for item in existing}
     results: list[Mapping[str, Any]] = []
     for plan in plan_list:
-        request = build_chunk_request(plan, source_media_hash=source_media_hash, model_bundle_sha256=model_bundle_sha256, config_sha256=config_sha256, source_pointer=source_pointer, config=config, original_audio_unknown=original_audio_unknown)
+        request = build_chunk_request(plan, source_media_hash=source_media_hash, model_bundle_sha256=model_bundle_sha256, config_sha256=config_sha256, source_pointer=source_pointer, config=config, original_audio_unknown=original_audio_unknown, beam_size=beam_size)
         chunk_id = request["chunk_id"]
         prior = by_id.get(chunk_id)
         if prior is not None and prior.get("observation_state") in {"OBSERVED", "SUSPICIOUS_TIMINGS"}:
@@ -717,6 +763,7 @@ def recover_chunks(
         source_media_hash=source_media_hash,
         model_bundle_sha256=model_bundle_sha256,
         config_sha256=config_sha256,
+        beam_size=beam_size,
         rights=rights,
         review_receipt=review_receipt,
         original_audio_unknown=original_audio_unknown,
@@ -727,6 +774,9 @@ def recover_chunks(
 __all__ = [
     "CORE_MAX_MS",
     "PADDING_MAX_MS",
+    "DEFAULT_BEAM_SIZE",
+    "MIN_BEAM_SIZE",
+    "MAX_BEAM_SIZE",
     "RSS_WATCHDOG_BYTES",
     "TranscriptionRecoveryError",
     "build_recovery_config",

@@ -117,7 +117,7 @@ def _prepare(args: argparse.Namespace) -> dict:
     if record.get("has_audio") is False:
         raise ValueError("NO_AUDIO_STREAM")
     model = validate_model_bundle(args.model_dir)
-    config = build_recovery_config(source_media_hash=record["sha256"], duration_ms=duration_ms, model_bundle_sha256=model["bundle_sha256"])
+    config = build_recovery_config(source_media_hash=record["sha256"], duration_ms=duration_ms, model_bundle_sha256=model["bundle_sha256"], beam_size=getattr(args, "beam_size", 5))
     config_hash = object_hash(config)
     plans = plan_windows(duration_ms)
     input_paths = {"source_root_lexical": str(lexical_root), "source_root_resolved": str(root),
@@ -136,12 +136,25 @@ def _validate_output_path(output: Path) -> None:
 
 
 def _run_manifest(prepared: dict) -> dict:
+    # A durable run manifest must carry the exact config that produced its
+    # config hash.  Compatibility belongs in callers' fixtures, never in the
+    # production manifest path.
+    config = prepared.get("config")
+    if config is None:
+        raise ValueError("CONFIG_REQUIRED")
+    if not isinstance(config, dict) or object_hash(config) != prepared.get("config_hash"):
+        raise ValueError("CONFIG_HASH_MISMATCH")
+    if type(config.get("beam_size")) is not int or not 1 <= config["beam_size"] <= 5:
+        raise ValueError("BEAM_SIZE_INVALID")
+    beam_size = config["beam_size"]
     return {
         "schema": "m2.transcription-recovery-run-manifest.v1",
         "source_media_hash": prepared["record"]["sha256"],
         "source_pointer": prepared["record"]["source_pointer"],
         "model_bundle_sha256": prepared["model"]["bundle_sha256"],
         "config_sha256": prepared["config_hash"],
+        "beam_size": beam_size,
+        "config": config,
         "plans": prepared["plans"],
         "plans_sha256": object_hash(prepared["plans"]),
         "source_frame_probe_reused": True,
@@ -192,6 +205,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--model-dir", required=True, help="Frozen local Faster-Whisper model directory")
     parser.add_argument("--output-dir", required=True, help="Fresh private recovery output directory")
     parser.add_argument("--python-executable", default=sys.executable)
+    parser.add_argument("--beam-size", type=int, choices=range(1, 6), default=5, help="Bounded Faster-Whisper beam size (1-5); a change creates a new config hash")
     parser.add_argument("--run", action="store_true", help="Execute one serial chunk at a time after preflight")
     parser.add_argument("--preflight", action="store_true", help="Validate only; this is the default")
     args = parser.parse_args(argv)
@@ -207,6 +221,8 @@ def main(argv: list[str] | None = None) -> int:
             "model_bundle_sha256": prepared["model"]["bundle_sha256"],
             "model_manifest_sha256": prepared["model"]["manifest_sha256"],
             "config_sha256": prepared["config_hash"],
+            "beam_size": prepared["config"]["beam_size"],
+            "config": prepared["config"],
             "chunk_count": len(prepared["plans"]),
             "plans": prepared["plans"],
             "source_frame_probe_reused": True,
@@ -228,6 +244,7 @@ def main(argv: list[str] | None = None) -> int:
             rights=prepared["record"]["rights"],
             config=prepared["config"],
             production={"output_root": output, "source_root": prepared["root"], "model_dir": args.model_dir, "python_executable": args.python_executable},
+            beam_size=prepared["config"]["beam_size"],
         )
         aggregate_path = output / "transcription-recovery.json"
         _write_aggregate(aggregate_path, {**preflight, "run_manifest": run_manifest, "state": merged["observation_state"], "result": merged})

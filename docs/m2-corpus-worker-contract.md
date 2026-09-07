@@ -23,6 +23,16 @@ Use a new run when executable code, model, manifest or policy changes. Resume un
 
 The corpus dispatcher writes `corpus-media.sqlite`, per-stage attempts/events, source artifacts and dated summaries. `scripts/report_m2_corpus_progress.py` reads a consistent transaction and exports every identity with separate states and missing metrics. The full population remains the denominator even while speech-bearing eligibility is unknown. The acquisition ledger retains more granular route errors.
 
+## Semantic review admission
+
+A structurally valid annotation is not automatically a semantically reviewed annotation. The reviewer must read every source segment in the bounded packet, compare every role span to its text, and record the reviewed identity scope. A representative sample cannot accept the rest of the packet. Generic first-segment hook, middle mechanism, and last-segment CTA labels require correction when the actual rhetoric differs.
+
+Preserve opening sentence continuations, offers spanning multiple segments, list/body material, procedural mechanisms, source-attributed result claims, implications, and genuine audience actions. A proof label identifies the creator’s presented evidence; it does not verify the claim. Never transfer a human-review or decision claim from a neighboring Reel. Positioning links must cite evidence from the same Reel; unsupported links remain unknown.
+
+An ASR segment can mix rhetorical roles. Retain its exclusive primary assignment with an uncertainty note and add descriptive overlapping roles when useful. Whole-segment membership does not establish exact words per clause or exact CTA word counts. Secondary counts are non-additive. Acoustic accuracy, timestamp validity, rhetorical interpretation, visual scene interpretation, and business relevance remain separate review fields.
+
+Before comparative modeling, freeze a semantic release whose input hashes and explicit full-packet review scope match the exported annotations. Its receipt must identify the review ID and verdict, exact annotation SHA-256, every source/transcript parent hash, governing config and policy hashes, complete reviewed identity-index scope, distinct maker/reviewer IDs, and any superseded review or annotation. Missing or mismatched bindings hold the release; a prose acceptance alone does not admit it. An accepted parser, count validator, or execution receipt cannot substitute for this release. Superseded annotations remain available with their rejection and repair lineage.
+
 ## Optional infrastructure
 
 Loore AI is optional, disabled by default, and requires its own authenticated capability/credit evidence. It never gates local acquisition. Remotion is the compositor. Hosted generation is a separate job with one submission, persisted job ID, bounded polling and independent output review. A queued request or valid container is not a successful quality test. Free software is not a promise of free or reliable hosted compute. No heavy local video model is enabled by this route.

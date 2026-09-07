@@ -33,6 +33,9 @@ from m2_studio.media import digital_silence
 
 SCHEMA = "m2.transcription-recovery-chunk-result.v1"
 CHUNK_TIMEOUT_SECONDS = 900
+DEFAULT_BEAM_SIZE = 5
+MIN_BEAM_SIZE = 1
+MAX_BEAM_SIZE = 5
 FFMPEG_RSS_WATCHDOG_BYTES = 512 * 1024 * 1024
 HEX64 = set("0123456789abcdef")
 CHUNK_ID_RE = re.compile(r"^C[0-9]{4}$")
@@ -41,6 +44,12 @@ ALLOWED_ALIAS_PATHS = {"/tmp", "/private/tmp", "/var", "/private/var"}
 
 def _hash64(value: Any, code: str) -> str:
     if not isinstance(value, str) or len(value) != 64 or any(char not in HEX64 for char in value):
+        raise TranscriptionError(code)
+    return value
+
+
+def _beam_size(value: Any, code: str = "BEAM_SIZE_INVALID") -> int:
+    if type(value) is not int or not MIN_BEAM_SIZE <= value <= MAX_BEAM_SIZE:
         raise TranscriptionError(code)
     return value
 
@@ -183,6 +192,7 @@ def _failure(request: Mapping[str, Any], code: str, *, source_audio_sha256: str 
         "source_audio_sha256": source_audio_sha256,
         "model_bundle_sha256": request.get("model_bundle_sha256"),
         "config_sha256": request.get("config_sha256"),
+        "beam_size": request.get("beam_size"),
         "global_offset_ms": request.get("global_offset_ms"),
         "core_interval_ms": request.get("core_interval_ms"),
         "window_interval_ms": request.get("window_interval_ms"),
@@ -226,6 +236,10 @@ def _validate_request(request: Mapping[str, Any]) -> tuple[Path, Path, Path, dic
     config = request.get("config")
     if not isinstance(config, Mapping) or object_hash(config) != config_hash:
         raise TranscriptionError("CONFIG_HASH_MISMATCH")
+    beam_size = _beam_size(request.get("beam_size"), "BEAM_SIZE_MISSING")
+    config_beam_size = _beam_size(config.get("beam_size"), "BEAM_SIZE_MISSING")
+    if config_beam_size != beam_size:
+        raise TranscriptionError("BEAM_SIZE_MISMATCH")
     if config.get("source_media_hash") != source_hash or config.get("model_bundle_sha256") != model_hash or config.get("device") != "cpu" or config.get("compute_type") != "int8" or config.get("cpu_threads") != 2 or config.get("num_workers") != 1 or config.get("rss_watchdog_bytes") != int(1.5 * 1024 * 1024 * 1024):
         raise TranscriptionError("CONFIG_VALUES_INVALID")
     try:
@@ -271,6 +285,8 @@ def _validate_result(result: Mapping[str, Any], request: Mapping[str, Any]) -> N
     for key in ("source_media_hash", "model_bundle_sha256", "config_sha256", "global_offset_ms", "core_interval_ms", "window_interval_ms"):
         if result.get(key) != request.get(key):
             raise TranscriptionError("CHUNK_RESULT_BINDING_MISMATCH")
+    if _beam_size(result.get("beam_size"), "BEAM_SIZE_MISSING") != _beam_size(request.get("beam_size"), "BEAM_SIZE_MISSING"):
+        raise TranscriptionError("BEAM_SIZE_MISMATCH")
     state = result.get("observation_state")
     if state in {"OBSERVED", "SUSPICIOUS_TIMINGS"}:
         _hash64(result.get("source_audio_sha256"), "CHUNK_AUDIO_HASH_MISSING")
@@ -323,7 +339,7 @@ def _validate_cached_result(result: Mapping[str, Any], request: Mapping[str, Any
         raise TranscriptionError("CHUNK_REQUEST_HASH_MISMATCH")
     if object_hash({key: value for key, value in persisted_request.items() if key != "request_sha256"}) != persisted_request.get("request_sha256"):
         raise TranscriptionError("CHUNK_REQUEST_HASH_MISMATCH")
-    for key in ("chunk_id", "source_media_hash", "model_bundle_sha256", "config_sha256", "global_offset_ms", "core_interval_ms", "window_interval_ms"):
+    for key in ("chunk_id", "source_media_hash", "model_bundle_sha256", "config_sha256", "beam_size", "global_offset_ms", "core_interval_ms", "window_interval_ms"):
         if persisted_request.get(key) != request.get(key):
             raise TranscriptionError("CHUNK_REQUEST_BINDING_MISMATCH")
 
@@ -361,21 +377,21 @@ def _run(request: Mapping[str, Any]) -> dict[str, Any]:
     try:
         from faster_whisper import WhisperModel
         model = WhisperModel(str(model_dir), device="cpu", compute_type="int8", cpu_threads=2, num_workers=1, local_files_only=True)
-        segments, info = model.transcribe(str(audio), language=None, word_timestamps=True, beam_size=5)
+        segments, info = model.transcribe(str(audio), language=None, word_timestamps=True, beam_size=config["beam_size"])
         raw_segments = []
         for segment in segments:
             words = []
             for word in segment.words or []:
                 words.append({"start": float(word.start), "end": float(word.end), "word": str(word.word), "probability": word.probability})
             raw_segments.append({"start": float(segment.start), "end": float(segment.end), "text": str(segment.text), "words": words})
-        raw = {"language": getattr(info, "language", None), "language_probability": getattr(info, "language_probability", None), "segments": raw_segments, "parameters": {"language": "auto", "beam_size": 5, "word_timestamps": True, "device": "cpu", "compute_type": "int8", "cpu_threads": 2, "num_workers": 1}}
+        raw = {"language": getattr(info, "language", None), "language_probability": getattr(info, "language_probability", None), "segments": raw_segments, "parameters": {"language": "auto", "beam_size": config["beam_size"], "word_timestamps": True, "device": "cpu", "compute_type": "int8", "cpu_threads": 2, "num_workers": 1}}
     except (ImportError, AttributeError, TypeError, ValueError, OSError, RuntimeError):
         return _failure(request, "ASR_EXECUTION_FAILED", source_audio_sha256=audio_hash, asr_execution=True, resource_receipt={"phase": "asr", "audio_decode_elapsed_seconds": ffmpeg.get("elapsed_seconds"), "audio_decode_sampled_peak_rss_bytes": ffmpeg.get("sampled_peak_rss_bytes"), "audio_decode_rss_watchdog_limit_bytes": ffmpeg.get("rss_watchdog_limit_bytes"), "measurement_state": "OBSERVED"})
     _json_write(raw_path, raw)
     chunk_record = {"duration_ms": window[1] - window[0], "sha256": source_hash, "timebase_provenance": {"audio_offset_ms": 0}}
     normalized = _normalize_raw(raw, chunk_record)
     result = dict(normalized)
-    result.update({"schema": SCHEMA, "chunk_id": request["chunk_id"], "source_media_hash": source_hash, "source_audio_sha256": audio_hash, "model_bundle_sha256": request["model_bundle_sha256"], "config_sha256": request["config_sha256"], "global_offset_ms": request["global_offset_ms"], "core_interval_ms": request["core_interval_ms"], "window_interval_ms": request["window_interval_ms"], "raw": raw, "raw_transcript_sha256": digest(raw_path), "artifacts": {"audio": audio.name, "raw": raw_path.name}, "resource_receipt": {"phase": "asr", "ffmpeg_threads": 2, "rss_watchdog_bytes": int(1.5 * 1024 * 1024 * 1024), "audio_decode_elapsed_seconds": ffmpeg.get("elapsed_seconds"), "audio_decode_sampled_peak_rss_bytes": ffmpeg.get("sampled_peak_rss_bytes"), "audio_decode_rss_watchdog_limit_bytes": ffmpeg.get("rss_watchdog_limit_bytes"), "measurement_state": "OBSERVED"}})
+    result.update({"schema": SCHEMA, "chunk_id": request["chunk_id"], "source_media_hash": source_hash, "source_audio_sha256": audio_hash, "model_bundle_sha256": request["model_bundle_sha256"], "config_sha256": request["config_sha256"], "beam_size": config["beam_size"], "global_offset_ms": request["global_offset_ms"], "core_interval_ms": request["core_interval_ms"], "window_interval_ms": request["window_interval_ms"], "raw": raw, "raw_transcript_sha256": digest(raw_path), "artifacts": {"audio": audio.name, "raw": raw_path.name}, "resource_receipt": {"phase": "asr", "ffmpeg_threads": 2, "rss_watchdog_bytes": int(1.5 * 1024 * 1024 * 1024), "audio_decode_elapsed_seconds": ffmpeg.get("elapsed_seconds"), "audio_decode_sampled_peak_rss_bytes": ffmpeg.get("sampled_peak_rss_bytes"), "audio_decode_rss_watchdog_limit_bytes": ffmpeg.get("rss_watchdog_limit_bytes"), "measurement_state": "OBSERVED"}})
     _validate_result(result, request)
     _json_write(result_path, result)
     return result

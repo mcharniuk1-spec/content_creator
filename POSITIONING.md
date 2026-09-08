@@ -21,17 +21,17 @@ Its territory is narrower and more credible:
 
 Supporting line:
 
-> **Understand what matters. Start with one repeated task. Keep a human in control.**
+> **Understand what matters. Start with one repeated workflow. Keep a human in control.**
 
 This is the promise to the audience. It is not a claim that M2 Lab will automate an entire company or guarantee a business result.
 
 ## 3. Internal Operating Statement
 
-> **We help the person responsible for AI adoption in a small business choose one repeated task, map it clearly, and build the first human-controlled workflow.**
+> **We help the person responsible for AI adoption in a small business choose one repeated workflow, break it into fragments, and build the first human-controlled version of it.**
 
 The M2 method:
 
-`repeated task → process map → AI boundary → human review → first test`
+`repeated workflow → fragmentation → AI boundary → human review → first test`
 
 Every content piece, offer, and future product must reinforce this method.
 
@@ -56,7 +56,7 @@ They know AI exists and may have tried ChatGPT or Claude. They do not know which
 |---|---|---|
 | Buyer | Owner or CEO | Clarity, lower chaos, and a team that can use AI responsibly. |
 | Champion | Operations or team lead | A clear first process and a realistic implementation path. |
-| User | The person doing the repeated task | A workflow that makes work easier without removing their judgment. |
+| User | The person doing the repeated workflow | A workflow that makes work easier without removing their judgment. |
 
 ### Audience level
 
@@ -130,9 +130,9 @@ M2 Lab has three content pillars. Education is not a fourth pillar; it must be e
 
 | Pillar | Purpose | Core audience question | Required proof |
 |---|---|---|---|
-| **M2 Radar** | Translate a tool, model, or market signal into a work decision. | “Should I test this in my team?” | A concrete task, decision, and limitation. |
+| **M2 Radar** | Translate a tool, model, or market signal into a work decision. | “Is this solution relevant to me?” | A concrete task, decision, and limitation. |
 | **M2 Builds** | Show a workflow M2 actually built and tested. | “What does a first working version look like?” | Process, result, failure, and human review. |
-| **M2 Teardowns** | Break down a repeated process before automation. | “Is this process suitable for AI?” | Inputs, friction, AI boundary, owner, and risk. |
+| **M2 Teardowns** | Break down a repeated process before automation. | “Is this process suitable for AI, and how would it work?” | Inputs, friction, AI boundary, owner, and risk. |
 
 ### Mandatory editorial filter
 
@@ -180,7 +180,7 @@ M2 Lab can combine several revenue models over time. They should all reinforce t
 
 **Value:** the client gains clarity on what AI is useful for in their context, which repeated process to examine first, and what should remain human-owned.
 
-**What M2 can sell honestly:** practical AI education, process mapping, task selection, workflow review, and an implementation brief for one scoped opportunity.
+**What M2 can sell honestly:** practical AI education, workflow fragmentation, task selection, workflow review, and an implementation brief for one scoped opportunity.
 
 **Boundary:** do not sell an “AI transformation strategy,” business-growth consulting, or advice in a functional domain where M2 has no evidence or expertise.
 

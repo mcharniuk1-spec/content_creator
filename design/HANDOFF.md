@@ -94,3 +94,12 @@ node pdf/build.mjs
 - PyMuPDF rasterizes all pages; `sips` only page 1; `pdftoppm` is absent.
 - Saira SemiCondensed is Latin only, like Plex Condensed was; the system has no Cyrillic by decision.
 - Structural stickers drawn in Ink vanish on Ink; use the `-ink` variants.
+
+## 8 September, evening: the system is in the repository
+
+Canonical copy: `github.com/MickaelAmpl/m2lab-radar`, branch `main`, folder `design/`
+(2372 files). Entry points for agents are linked from the repository's `README.md` and
+`START-HERE.md`. Max's branch `Latest` was not touched. The Desktop folder `~/Desktop/m2lab-brand/`
+is a duplicate working copy; edit in the repository. The playbook on the Desktop is version 2,
+aligned with the brand book, and copied to `source/positioning-playbook.md`. The Notion and
+product reconciliation is in `orchestration/reconciliation-2026-09-08.md`.

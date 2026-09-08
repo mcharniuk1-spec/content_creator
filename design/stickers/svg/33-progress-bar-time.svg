@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Watch-time bar with the elapsed mark. Ink plate, Signal fill, no rounded ends. -->
+<!-- Slots: slot-time (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="128" viewBox="0 0 760 128" fill="none">
+  <rect x="0" y="0" width="760" height="128" fill="#0C1D1D"/>
+  <text id="slot-time" x="32" y="56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="40" font-weight="600" fill="#E4E9EA" letter-spacing="3.2" xml:space="preserve">&lt;01:15</text>
+  <rect x="32" y="80" width="696" height="20" fill="#5C6565"/>
+  <rect x="32" y="80" width="431.52" height="20" fill="#7DD774"/>
+</svg>

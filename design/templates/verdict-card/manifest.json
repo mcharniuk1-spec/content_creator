@@ -1,0 +1,57 @@
+{
+  "canvas": "reel",
+  "width": 1080,
+  "height": 1920,
+  "placement": "reel",
+  "note": "Transparent overlay. The verdict slot box is the whole card plate; the why box is the reason text inside it. Card bottom stops at y 1000 so the card never enters the right-rail band.",
+  "control_slots": {
+    "surface": "light (Paper plate, default) | dark (Ink plate). Control slot, no box."
+  },
+  "slots": {
+    "verdict": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 435,
+        "w": 888,
+        "h": 565
+      }
+    },
+    "why": {
+      "importance": "primary",
+      "box": {
+        "x": 144,
+        "y": 766,
+        "w": 792,
+        "h": 187
+      }
+    }
+  },
+  "static_elements": {
+    "header": {
+      "box": {
+        "x": 144,
+        "y": 483,
+        "w": 792,
+        "h": 36
+      }
+    },
+    "shape": {
+      "box": {
+        "x": 144,
+        "y": 551,
+        "w": 432,
+        "h": 131
+      }
+    },
+    "why_label": {
+      "box": {
+        "x": 144,
+        "y": 714,
+        "w": 792,
+        "h": 36
+      }
+    }
+  },
+  "transparent": true
+}

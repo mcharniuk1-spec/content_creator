@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: A percentage that cannot be published without the baseline it was measured against. -->
+<!-- Slots: slot-value, slot-baseline (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="511" height="216" viewBox="0 0 511 216" fill="none">
+  <text id="slot-value" x="0" y="140" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="140" font-weight="900" fill="#0C1D1D" letter-spacing="-1.4" xml:space="preserve">42%</text>
+  <rect x="0" y="164" width="510.73" height="2" fill="#BEC6C7"/>
+  <text id="slot-baseline" x="0" y="202" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#5C6565" letter-spacing="4.48" xml:space="preserve">BASELINE: 240 MIN / WEEK</text>
+</svg>

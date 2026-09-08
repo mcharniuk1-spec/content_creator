@@ -1,0 +1,5 @@
+<svg viewBox="0 0 1080 1440" width="1080" height="1440" xmlns="http://www.w3.org/2000/svg">
+<!-- QA overlay mask, not a brand asset. placement: feed-tall 1080x1440 (3:4), exact grid match -->
+<rect x="0" y="0" width="1080" height="1440" fill="none" stroke="#000" stroke-width="1"/>
+<rect x="0" y="0" width="1080" height="48" fill="rgba(216,64,43,0.35)"/><rect x="0" y="1392" width="1080" height="48" fill="rgba(216,64,43,0.35)"/><rect x="0" y="0" width="48" height="1440" fill="rgba(216,64,43,0.35)"/><rect x="1032" y="0" width="48" height="1440" fill="rgba(216,64,43,0.35)"/><rect x="48" y="48" width="984" height="1344" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="10,8"/><rect x="0" y="0" width="1080" height="1440" fill="none" stroke="#111" stroke-width="4" stroke-dasharray="16,10"/><text x="60" y="90" font-family="monospace" font-size="28" fill="#111" text-anchor="start">A</text><text x="4" y="30" font-family="monospace" font-size="28" fill="#fff" text-anchor="start">C 48</text><text x="20" y="1425" font-family="monospace" font-size="28" fill="#111" text-anchor="start">GRID 3:4 exact match, no crop</text>
+</svg>

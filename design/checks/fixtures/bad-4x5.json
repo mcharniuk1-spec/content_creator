@@ -1,0 +1,6 @@
+{
+  "slots": {
+    "hook": "Seven words that are too many here",
+    "body": "This body line is deliberately written to run past the thirty eight character limit."
+  }
+}

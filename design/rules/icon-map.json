@@ -1,0 +1,41 @@
+{
+  "set": "lucide",
+  "version": "1.41.0",
+  "meanings": {
+    "process-step": "workflow",
+    "input": "arrow-right-to-line",
+    "output": "arrow-right-from-line",
+    "human-review": "user-check",
+    "time": "clock",
+    "cost": "circle-dollar-sign",
+    "tool": "wrench",
+    "broken": "unplug",
+    "test": "flask-conical",
+    "keep": "check",
+    "kill": "x",
+    "document": "file-text"
+  },
+  "verdictShapes": {
+    "keep": {
+      "shape": "square",
+      "fill": "ink",
+      "stroke": "none",
+      "strokeWidth": 0,
+      "dash": null
+    },
+    "kill": {
+      "shape": "square",
+      "fill": "none",
+      "stroke": "oxide",
+      "strokeWidth": 4,
+      "dash": null
+    },
+    "test": {
+      "shape": "square",
+      "fill": "none",
+      "stroke": "ink",
+      "strokeWidth": 2,
+      "dash": "12 8"
+    }
+  }
+}

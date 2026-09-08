@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Label with a leader line running right to a square point. Points at something on its right. -->
+<!-- Slots: slot-label (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="566" height="56" viewBox="0 0 566 56" fill="none">
+  <text id="slot-label" x="0" y="39.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#0C1D1D" letter-spacing="5.12" xml:space="preserve">MODEL DRAFTS HERE</text>
+  <line x1="431.45" y1="28" x2="551.45" y2="28" stroke="#1E4A80" stroke-width="2"/>
+  <rect x="551.45" y="21" width="14" height="14" fill="#1E4A80"/>
+</svg>

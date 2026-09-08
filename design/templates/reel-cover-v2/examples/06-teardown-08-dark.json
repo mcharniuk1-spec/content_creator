@@ -1,0 +1,15 @@
+{
+  "slots": {
+    "surface": "dark",
+    "plate": "oxide",
+    "tag": "TEARDOWN / 08",
+    "episode": "EP 08 / SEP 2026",
+    "title_before": "This handoff\n",
+    "title_key": "broke on the retry",
+    "title_after": "",
+    "visual_html": "<svg style=\"left:0px;top:0px\" width=\"840\" height=\"396\" viewBox=\"0 0 840 396\" fill=\"none\">\n  <rect x=\"2\" y=\"2\" width=\"836\" height=\"392\" fill=\"none\" stroke=\"#E4E9EA\" stroke-width=\"4\"/>\n  <rect x=\"4\" y=\"4\" width=\"832\" height=\"72\" fill=\"#E4E9EA\"/>\n  <text x=\"32\" y=\"52\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"32\" font-weight=\"500\" fill=\"#0C1D1D\" letter-spacing=\"5.12\" xml:space=\"preserve\">RUN 02 / HANDOFF.MJS</text>\n  <text x=\"32\" y=\"140\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"34\" font-weight=\"400\" fill=\"#E4E9EA\" letter-spacing=\"0.68\" xml:space=\"preserve\">$ node handoff.mjs run-02</text>\n  <text x=\"32\" y=\"196\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"34\" font-weight=\"400\" fill=\"#BEC6C7\" letter-spacing=\"0.68\" xml:space=\"preserve\">  step 02 wrote 0 rows</text>\n  <rect x=\"12\" y=\"222\" width=\"8\" height=\"46\" fill=\"#BB4347\"/>\n  <text x=\"32\" y=\"252\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"34\" font-weight=\"400\" fill=\"#E4E9EA\" letter-spacing=\"0.68\" xml:space=\"preserve\">  input field was empty</text>\n  <text x=\"32\" y=\"308\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"34\" font-weight=\"400\" fill=\"#BEC6C7\" letter-spacing=\"0.68\" xml:space=\"preserve\">  see teardown 08</text>\n  <rect x=\"32\" y=\"336\" width=\"20\" height=\"40\" fill=\"#BB4347\"/>\n</svg>\n<svg style=\"left:0px;top:420px\" width=\"760\" height=\"72\" viewBox=\"0 0 760 72\" fill=\"none\">\n  <rect x=\"0\" y=\"24\" width=\"24\" height=\"24\" fill=\"#BB4347\"/>\n  <line x1=\"24\" y1=\"36\" x2=\"170\" y2=\"36\" stroke=\"#BB4347\" stroke-width=\"6\"/>\n  <text x=\"196\" y=\"52\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"40\" font-weight=\"600\" fill=\"#E4E9EA\" letter-spacing=\"6.4\" xml:space=\"preserve\">STEP 02 BROKE HERE</text>\n  <rect x=\"196\" y=\"62\" width=\"544\" height=\"6\" fill=\"#BB4347\"/>\n</svg>",
+    "caption_word": "retry.",
+    "mark": "on",
+    "face_frame": "on"
+  }
+}

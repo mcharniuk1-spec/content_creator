@@ -1,0 +1,28 @@
+{
+  "canvas": "reel",
+  "width": 1080,
+  "height": 1920,
+  "placement": "reel",
+  "note": "Transparent overlay. The claim slot box is the Ink plate itself; the tag box is the mono label inside it. Both are secondary elements and sit in Zone B, clear of the 130 px right rail.",
+  "slots": {
+    "claim": {
+      "importance": "secondary",
+      "box": {
+        "x": 96,
+        "y": 1264,
+        "w": 840,
+        "h": 111
+      }
+    },
+    "tag": {
+      "importance": "secondary",
+      "box": {
+        "x": 120,
+        "y": 1288,
+        "w": 204,
+        "h": 63
+      }
+    }
+  },
+  "transparent": true
+}

@@ -1,0 +1,259 @@
+{
+  "generated": "2026-09-08",
+  "unit": "px",
+  "sources": {
+    "research_md": "/Users/mihailampleev/Desktop/m2lab-brand/research/instagram-safe-zones.md",
+    "research_json": "/Users/mihailampleev/Desktop/m2lab-brand/research/instagram-safe-zones.json",
+    "anatomy_md_section2": "/Users/mihailampleev/Desktop/m2lab-brand/research/design-system-anatomy.md",
+    "meta_ads_reels": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+    "meta_ads_story": "https://www.facebook.com/business/ads-guide/update/video/instagram-story",
+    "meta_ads_feed_image": "https://www.facebook.com/business/ads-guide/update/image/instagram-feed",
+    "meta_ads_carousel": "https://www.facebook.com/business/ads-guide/update/carousel/instagram-feed",
+    "secondary_organic_safe_zone": "https://www.firstpier.com/resources/instagram-ad-safe-zones, https://kreatli.com/guides/instagram-reels-safe-zone, https://houseofmarketers.com/guide-to-safe-zones-tiktok-facebook-instagram-stories-reels/",
+    "grid_change": "https://www.socialmediatoday.com/news/instagram-rolls-out-vertically-aligned-profile-grid/737777/",
+    "grid_3_4_upload": "https://alternativeto.net/news/2025/5/instagram-adds-3-4-aspect-ratio-photo-uploads-with-no-cropping",
+    "avatar_secondary": "https://socialsizes.io/instagram-profile-picture-size/, https://www.socialpilot.co/instagram-marketing/instagram-image-size-guide",
+    "highlight_secondary": "https://moda.app/resources/sizes/instagram-highlight-cover"
+  },
+  "placements": [
+    {
+      "id": "reel",
+      "canvas": { "w": 1080, "h": 1920 },
+      "aspect_ratio": "9:16",
+      "zones": {
+        "A": {
+          "confidence": "meta-official",
+          "rects": [ { "x": 65, "y": 269, "w": 950, "h": 979 } ],
+          "note": "Meta ad safe zone (top 14%, bottom 35%, sides 6% of Meta's 1440x2560 ad canvas) applied to 1080x1920: top=0.14*1920=269 (rounded from 268.8), bottom=0.35*1920=672, sides=0.06*1080=65 (rounded from 64.8). Box: x=65,y=269,w=1080-2*65=950,h=1920-269-672=979.",
+          "source": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels"
+        },
+        "B": {
+          "confidence": "secondary",
+          "rects": [ { "x": 65, "y": 1248, "w": 885, "h": 222 } ],
+          "note": "Band between Zone A bottom edge (y=1248=269+979) and organic bottom limit y=1920-450=1470, height=1470-1248=222, excluding right rail (x>=1080-130=950 cut off), so w=950-65=885. Organic bottom UI limit ~450px is secondary consensus (design-system-anatomy.md sec.2, ~430-450px range).",
+          "source": "design-system-anatomy.md section 2 (secondary, practice)"
+        },
+        "C": {
+          "confidence": "mixed (meta-official edges, secondary right rail)",
+          "note": "Complement of A union B, plus explicit right-rail rect. Top band y0..269 (meta-official). Bottom band y1470..1920 (secondary organic limit) plus the ad-only strip y1248 already excluded is B not C. Right rail x950..1080 for y1000..1920 (secondary, no confirmed pixel box per research sec.10, drawn as a conservative flag). Side margins x0..65 and x1015..1080 for the full A band (meta-official).",
+          "rects": [
+            { "x": 0, "y": 0, "w": 1080, "h": 269, "label": "top exclusion (meta-official)" },
+            { "x": 0, "y": 1470, "w": 1080, "h": 450, "label": "bottom organic exclusion (secondary)" },
+            { "x": 0, "y": 269, "w": 65, "h": 1201, "label": "left side margin (meta-official, extended to bottom exclusion start)" },
+            { "x": 1015, "y": 269, "w": 65, "h": 1201, "label": "right side margin (meta-official, extended)" },
+            { "x": 950, "y": 1000, "w": 130, "h": 470, "label": "right action-button rail, no confirmed box, drawn as caution zone (secondary)" }
+          ]
+        }
+      },
+      "crop": {
+        "grid_crop_band": {
+          "confidence": "derived",
+          "y_from": 240,
+          "y_to": 1660,
+          "note": "3:4 grid tile at fixed width 1080 has height 1080/0.75=1440. Centering 1440 inside 1920: (1920-1440)/2=240 lost top and bottom. Band y=240 to y=1660."
+        }
+      },
+      "right_rail": { "x": 950, "y": 1000, "w": 130, "h": 470, "confidence": "secondary", "note": "No Meta pixel box published (research sec.10); position estimated from bottom-35%/right-6% ad exclusion plus secondary reports it is visually wider than the 65px minimum." },
+      "allowed": {
+        "A": ["hook", "mark", "verdict-card", "format-label"],
+        "B": ["burned-in-subtitles", "persistent-claim-bar"],
+        "C": []
+      },
+      "notes": [
+        "Meta unified Reels/Stories ad safe zones to 14/35/6 around March 2026 per secondary sources; corroborated by live 2026 Meta ad-spec pages."
+      ]
+    },
+    {
+      "id": "story",
+      "canvas": { "w": 1080, "h": 1920 },
+      "aspect_ratio": "9:16",
+      "zones": {
+        "A": {
+          "confidence": "meta-official",
+          "rects": [ { "x": 65, "y": 269, "w": 950, "h": 979 } ],
+          "note": "Same Meta ad safe zone as Reels: top 269, bottom 672, sides 65 (arithmetic in reel.A above applies identically).",
+          "source": "https://www.facebook.com/business/ads-guide/update/video/instagram-story"
+        },
+        "B": {
+          "confidence": "n/a",
+          "rects": [],
+          "note": "No Zone B for Stories. Sticker/reply-bar UI placement is unpredictable per user (poll, question, quiz, countdown, link stickers) and Meta publishes no coordinates (research sec.10). Treat everything outside A as C."
+        },
+        "C": {
+          "confidence": "meta-official edges, rest secondary",
+          "rects": [
+            { "x": 0, "y": 0, "w": 1080, "h": 269, "label": "top exclusion" },
+            { "x": 0, "y": 1248, "w": 1080, "h": 672, "label": "bottom exclusion, includes reply bar and sticker-unsafe zone" },
+            { "x": 0, "y": 269, "w": 65, "h": 979, "label": "left side margin" },
+            { "x": 1015, "y": 269, "w": 65, "h": 979, "label": "right side margin" }
+          ]
+        }
+      },
+      "crop": { "grid_crop_band": { "confidence": "n/a", "note": "Stories are not shown in the profile grid; no crop applies." } },
+      "allowed": {
+        "A": ["hook", "mark", "verdict-card", "format-label"],
+        "B": [],
+        "C": []
+      },
+      "notes": [
+        "Legacy figure of 20% bottom margin (340px on 1080x1920) is SUPERSEDED. Meta's live 2026 ad-spec pages show 35% (672px) for Stories, same as Reels. Older templates in the wild may still use the 20% figure; do not use it for new work.",
+        "Interactive stickers: keep in the 'middle-lower' band inside Zone A, never at the very bottom edge (qualitative guidance only, no pixel box)."
+      ]
+    },
+    {
+      "id": "feed-portrait",
+      "canvas": { "w": 1080, "h": 1350 },
+      "aspect_ratio": "4:5",
+      "zones": {
+        "A": {
+          "confidence": "practice",
+          "rects": [ { "x": 48, "y": 48, "w": 984, "h": 1254 } ],
+          "note": "No UI overlay on feed posts. Zone A = full canvas minus a 48px margin recommendation on all sides (practice, not a Meta spec). x=48,y=48,w=1080-96=984,h=1350-96=1254."
+        },
+        "B": { "confidence": "n/a", "rects": [], "note": "No organic-only band; feed posts carry no persistent chrome over the image itself." },
+        "C": {
+          "confidence": "practice",
+          "rects": [
+            { "x": 0, "y": 0, "w": 1080, "h": 48, "label": "top margin" },
+            { "x": 0, "y": 1302, "w": 1080, "h": 48, "label": "bottom margin" },
+            { "x": 0, "y": 0, "w": 48, "h": 1350, "label": "left margin" },
+            { "x": 1032, "y": 0, "w": 48, "h": 1350, "label": "right margin" }
+          ]
+        }
+      },
+      "crop": {
+        "grid_crop_band": {
+          "confidence": "derived",
+          "x_from": 33.5,
+          "x_to": 1046.5,
+          "note": "Crop width = source height * 0.75 = 1350*0.75 = 1012.5. Centered: (1080-1012.5)/2=33.75, rounded 33.5-34. Recommend keeping meaning inside x 48..1032 anyway (matches the 48px margin already applied for Zone A), since 48 > 33.5 and covers the grid crop too."
+        }
+      },
+      "allowed": { "A": ["hook", "mark", "verdict-card", "format-label", "burned-in-subtitles", "persistent-claim-bar"], "B": [], "C": [] },
+      "notes": ["Feed image ad spec (Meta-official) publishes resolution/ratio only, no visual safe-zone margin: source https://www.facebook.com/business/ads-guide/update/image/instagram-feed"]
+    },
+    {
+      "id": "feed-square",
+      "canvas": { "w": 1080, "h": 1080 },
+      "aspect_ratio": "1:1",
+      "zones": {
+        "A": {
+          "confidence": "derived",
+          "rects": [ { "x": 135, "y": 0, "w": 810, "h": 1080 } ],
+          "note": "Grid crop takes 135px off each side (source height 1080 is limiting; crop width=1080*0.75=810; (1080-810)/2=135). Anything that must survive the profile grid must sit in x 135..945."
+        },
+        "B": {
+          "confidence": "derived",
+          "rects": [
+            { "x": 0, "y": 0, "w": 135, "h": 1080, "label": "feed-only, left" },
+            { "x": 945, "y": 0, "w": 135, "h": 1080, "label": "feed-only, right" }
+          ],
+          "note": "Visible in the single-post feed view but lost in the profile grid tile."
+        },
+        "C": { "confidence": "n/a", "rects": [], "note": "No Zone C: the full square is either grid-safe (A) or feed-only (B)." }
+      },
+      "crop": {
+        "grid_crop_band": {
+          "confidence": "derived",
+          "x_from": 135,
+          "x_to": 945,
+          "note": "3:4 tile ratio 0.75; crop width=1080*0.75=810; loses 135px each side; band x=135 to x=945."
+        }
+      },
+      "allowed": { "A": ["hook", "mark", "verdict-card", "format-label", "burned-in-subtitles", "persistent-claim-bar"], "B": ["decorative background only, no meaning"], "C": [] },
+      "notes": ["1:1 organic feed size is secondary consensus (socialpilot.co), not a Meta doc."]
+    },
+    {
+      "id": "feed-tall",
+      "canvas": { "w": 1080, "h": 1440 },
+      "aspect_ratio": "3:4",
+      "zones": {
+        "A": {
+          "confidence": "practice",
+          "rects": [ { "x": 48, "y": 48, "w": 984, "h": 1344 } ],
+          "note": "3:4 exactly matches the grid tile ratio, so no crop occurs. Zone A = full canvas minus 48px margin recommendation (practice). w=1080-96=984, h=1440-96=1344."
+        },
+        "B": { "confidence": "n/a", "rects": [], "note": "No organic-only band." },
+        "C": {
+          "confidence": "practice",
+          "rects": [
+            { "x": 0, "y": 0, "w": 1080, "h": 48, "label": "top margin" },
+            { "x": 0, "y": 1392, "w": 1080, "h": 48, "label": "bottom margin" },
+            { "x": 0, "y": 0, "w": 48, "h": 1440, "label": "left margin" },
+            { "x": 1032, "y": 0, "w": 48, "h": 1440, "label": "right margin" }
+          ]
+        }
+      },
+      "crop": {
+        "grid_crop_band": { "confidence": "derived", "x_from": 0, "x_to": 1080, "note": "3:4 source already matches the 3:4 grid tile ratio exactly. No crop. This is the stated reason Meta added the native 3:4 upload option in 2025." }
+      },
+      "allowed": { "A": ["hook", "mark", "verdict-card", "format-label", "burned-in-subtitles", "persistent-claim-bar"], "B": [], "C": [] },
+      "notes": ["3:4 upload option reported added ~2025-05-30 (alternativeto.net, secondary)."]
+    },
+    {
+      "id": "carousel",
+      "canvas": { "w": 1080, "h": 1350 },
+      "aspect_ratio": "4:5",
+      "zones": "same as feed-portrait",
+      "notes": [
+        "Use feed-portrait's zones.A/B/C and crop verbatim; carousel canvas size equals feed-portrait.",
+        "First-slide-sets-ratio rule (secondary: sproutsocial.com, kapwing.com, contentdrips.com): the first slide's aspect ratio is applied to the whole carousel; later slides with a different ratio are silently auto-cropped to match, no upload error.",
+        "2 to 10 slides (Meta-official, carousel ad spec). All slides must be identical pixel dimensions to avoid the silent auto-crop.",
+        "Meta-official ad spec: image-only carousels support 4:5, carousels containing video support 1:1 only, min resolution 1080x1080, tolerance 1%. Source: https://www.facebook.com/business/ads-guide/update/carousel/instagram-feed"
+      ]
+    },
+    {
+      "id": "avatar",
+      "canvas": { "w": 1080, "h": 1080 },
+      "aspect_ratio": "1:1",
+      "crop_shape": "circle",
+      "zones": {
+        "A": {
+          "confidence": "derived",
+          "circles": [ { "cx": 540, "cy": 540, "r": 486 } ],
+          "note": "Inscribed circle of the 1080x1080 square has diameter 1080 (r=540), centered at (540,540). Applying a 10% inset (derived, Meta publishes no inset): diameter 1080*0.9=972, r=486, center unchanged.",
+          "source": "derived, Meta publishes no inset (research sec.5/10)"
+        },
+        "B": { "confidence": "n/a", "circles": [], "note": "No organic-only band for a circular crop." },
+        "C": {
+          "confidence": "derived",
+          "note": "Everything outside the r=486 inset circle up to the full crop circle r=540, plus the four square corners outside the crop entirely.",
+          "circles_complement_of": { "cx": 540, "cy": 540, "r_outer": 540, "r_inner": 486 }
+        }
+      },
+      "recommendation": "Mark should occupy 55-60% of the circle diameter (i.e. mark diameter 594-648px within the 1080px canvas), for legibility at small displayed sizes.",
+      "notes": [
+        "Upload recommended 1000x1000 or larger, 1:1, stored/served at 320x320 (secondary: socialsizes.io, socialpilot.co).",
+        "Displayed circle size disputed: 150px vs 110px on profile, 32-40px in feed (research sec.10, sec.5). No safe-circle-inset percentage published by Meta; the 10% inset here is this design system's own derived convention, not a fact."
+      ]
+    },
+    {
+      "id": "highlight-cover",
+      "canvas": { "w": 1080, "h": 1920 },
+      "aspect_ratio": "9:16",
+      "crop_shape": "circle",
+      "zones": {
+        "A": {
+          "confidence": "derived",
+          "circles": [ { "cx": 540, "cy": 960, "r": 486 } ],
+          "note": "Crop circle: largest circle fitting the 1080-wide canvas has diameter 1080, centered vertically (1920-1080)/2=420 to 420+1080=1500, so center y=960. 10% inset (derived, same convention as avatar): diameter 1080*0.9=972, r=486.",
+          "source": "derived geometry; upload canvas 1080x1920 is secondary consensus (moda.app)"
+        },
+        "B": { "confidence": "n/a", "circles": [], "note": "No organic-only band for a circular crop." },
+        "C": {
+          "confidence": "derived",
+          "note": "Outside the r=486 inset circle up to the full crop circle r=540 (y 420..1500), plus everything above y=420 and below y=1500 which is discarded entirely by the circular crop.",
+          "circles_complement_of": { "cx": 540, "cy": 960, "r_outer": 540, "r_inner": 486 },
+          "rects": [
+            { "x": 0, "y": 0, "w": 1080, "h": 420, "label": "discarded above crop circle" },
+            { "x": 0, "y": 1500, "w": 1080, "h": 420, "label": "discarded below crop circle" }
+          ]
+        }
+      },
+      "recommendation": "Design for legibility at 110px displayed diameter (smallest disputed figure; safest assumption). Mark should occupy 55-60% of the circle diameter, same convention as avatar.",
+      "notes": [
+        "Displayed diameter disputed across secondary sources: 110px, 161px, or '~700px safe crop area' (research sec.6/10). No Meta figure exists; design for the smallest (110px) to guarantee legibility at every reported size."
+      ]
+    }
+  ]
+}

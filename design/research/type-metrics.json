@@ -1,0 +1,332 @@
+{
+  "font_meta": {
+    "hook_condensed_bold": {
+      "file": "IBMPlexSansCondensed-Bold.ttf",
+      "unitsPerEm": 1000,
+      "ascent": 1025,
+      "descent": -275,
+      "lineGap": 0,
+      "capHeight_units": 698,
+      "xHeight_units": 525
+    },
+    "body_regular": {
+      "file": "IBMPlexSans-Regular.ttf",
+      "unitsPerEm": 1000,
+      "ascent": 1025,
+      "descent": -275,
+      "lineGap": 0,
+      "capHeight_units": 698,
+      "xHeight_units": 516
+    },
+    "body_semibold": {
+      "file": "IBMPlexSans-SemiBold.ttf",
+      "unitsPerEm": 1000,
+      "ascent": 1025,
+      "descent": -275,
+      "lineGap": 0,
+      "capHeight_units": 698,
+      "xHeight_units": 522
+    },
+    "label_mono_medium": {
+      "file": "IBMPlexMono-Medium.ttf",
+      "unitsPerEm": 1000,
+      "ascent": 1025,
+      "descent": -275,
+      "lineGap": 0,
+      "capHeight_units": 698,
+      "xHeight_units": 516
+    }
+  },
+  "task1_hook_line_wrap": {
+    "tracking_em": -0.01,
+    "text_column_px": 888,
+    "sizes": {
+      "90": {
+        "avg_char_width_px": 38.062,
+        "chars_per_line_888": 23,
+        "lines_6word_sample": 2,
+        "lines_8word_sample": 2,
+        "corpus_avg_lines": 2.367,
+        "corpus_max_lines": 3
+      },
+      "96": {
+        "avg_char_width_px": 40.6,
+        "chars_per_line_888": 21,
+        "lines_6word_sample": 2,
+        "lines_8word_sample": 2,
+        "corpus_avg_lines": 2.533,
+        "corpus_max_lines": 3
+      },
+      "104": {
+        "avg_char_width_px": 43.983,
+        "chars_per_line_888": 20,
+        "lines_6word_sample": 2,
+        "lines_8word_sample": 3,
+        "corpus_avg_lines": 2.7,
+        "corpus_max_lines": 4
+      }
+    }
+  },
+  "task1b_body_chars_per_line": {
+    "sizes": {
+      "52": {
+        "avg_char_width_px": 23.348,
+        "chars_per_line_888": 38
+      },
+      "46": {
+        "avg_char_width_px": 20.654,
+        "chars_per_line_888": 42
+      },
+      "42": {
+        "avg_char_width_px": 18.858,
+        "chars_per_line_888": 47
+      }
+    }
+  },
+  "task2_vertical_footprint": {
+    "leading": {
+      "hook": 1.03,
+      "body": 1.35,
+      "label": 1.0
+    },
+    "gap_px": 48,
+    "bands": {
+      "reel_1920": 1420,
+      "ratio_4x5_1350": 850
+    },
+    "hook_block_heights": {
+      "90": {
+        "2": 185.4,
+        "3": 278.1,
+        "4": 370.8
+      },
+      "96": {
+        "2": 197.8,
+        "3": 296.6,
+        "4": 395.5
+      },
+      "104": {
+        "2": 214.2,
+        "3": 321.4,
+        "4": 428.5
+      }
+    },
+    "body_block_heights": {
+      "52": 210.6,
+      "46": 186.3,
+      "42": 170.1
+    },
+    "label_line_heights": {
+      "32": 32.0,
+      "25": 25.0
+    },
+    "max_fit_combo": {
+      "reel_1920": {
+        "max_hook_lines": 4,
+        "max_body_lines": 7,
+        "used_px": 878.2,
+        "band_px": 1420,
+        "slack_px": 541.8
+      },
+      "ratio_4x5_1350": {
+        "max_hook_lines": 4,
+        "max_body_lines": 6,
+        "used_px": 816.1,
+        "band_px": 850,
+        "slack_px": 33.9
+      }
+    }
+  },
+  "task3_min_legible": {
+    "reel_scale": 0.3611,
+    "grid_scale": 0.1157,
+    "sizes": {
+      "hook_90": {
+        "size_px": 90,
+        "css_px_reel": 32.5,
+        "pt_reel": 24.38,
+        "physical_px_at_3x": 97.5,
+        "illegible_below_12css": false,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 7.27,
+        "survives_grid_9css_cap": false
+      },
+      "hook_96": {
+        "size_px": 96,
+        "css_px_reel": 34.67,
+        "pt_reel": 26.0,
+        "physical_px_at_3x": 104.0,
+        "illegible_below_12css": false,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 7.76,
+        "survives_grid_9css_cap": false
+      },
+      "hook_104": {
+        "size_px": 104,
+        "css_px_reel": 37.56,
+        "pt_reel": 28.17,
+        "physical_px_at_3x": 112.67,
+        "illegible_below_12css": false,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 8.4,
+        "survives_grid_9css_cap": false
+      },
+      "body_52": {
+        "size_px": 52,
+        "css_px_reel": 18.78,
+        "pt_reel": 14.08,
+        "physical_px_at_3x": 56.33,
+        "illegible_below_12css": false,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 4.2,
+        "survives_grid_9css_cap": false
+      },
+      "body_46": {
+        "size_px": 46,
+        "css_px_reel": 16.61,
+        "pt_reel": 12.46,
+        "physical_px_at_3x": 49.83,
+        "illegible_below_12css": false,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 3.72,
+        "survives_grid_9css_cap": false
+      },
+      "body_42": {
+        "size_px": 42,
+        "css_px_reel": 15.17,
+        "pt_reel": 11.38,
+        "physical_px_at_3x": 45.5,
+        "illegible_below_12css": false,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 3.39,
+        "survives_grid_9css_cap": false
+      },
+      "label_32": {
+        "size_px": 32,
+        "css_px_reel": 11.56,
+        "pt_reel": 8.67,
+        "physical_px_at_3x": 34.67,
+        "illegible_below_12css": true,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 2.59,
+        "survives_grid_9css_cap": false
+      },
+      "label_25": {
+        "size_px": 25,
+        "css_px_reel": 9.03,
+        "pt_reel": 6.77,
+        "physical_px_at_3x": 27.08,
+        "illegible_below_12css": true,
+        "cap_height_units": 698,
+        "cap_height_css_grid": 2.02,
+        "survives_grid_9css_cap": false
+      }
+    }
+  },
+  "task4_cyrillic": {
+    "hook_condensed_bold": {
+      "file": "IBMPlexSansCondensed-Bold.ttf",
+      "covers_full_range": false,
+      "missing_count": 64,
+      "range_size": 64
+    },
+    "body_regular": {
+      "file": "IBMPlexSans-Regular.ttf",
+      "covers_full_range": true,
+      "missing_count": 0,
+      "range_size": 64
+    },
+    "body_semibold": {
+      "file": "IBMPlexSans-SemiBold.ttf",
+      "covers_full_range": true,
+      "missing_count": 0,
+      "range_size": 64
+    },
+    "label_mono_medium": {
+      "file": "IBMPlexMono-Medium.ttf",
+      "covers_full_range": true,
+      "missing_count": 0,
+      "range_size": 64
+    }
+  },
+  "task5_mono_labels": {
+    "tracking_em": 0.16,
+    "sizes": {
+      "32": {
+        "M2 RADAR": 194.56,
+        "M2 BUILDS": 218.88,
+        "M2 TEARDOWN": 267.52,
+        "KEEP": 97.28,
+        "KILL": 97.28,
+        "TEST": 97.28,
+        "WAS": 72.96,
+        "NOW": 72.96,
+        "SAVED": 121.6
+      },
+      "25": {
+        "M2 RADAR": 152.0,
+        "M2 BUILDS": 171.0,
+        "M2 TEARDOWN": 209.0,
+        "KEEP": 76.0,
+        "KILL": 76.0,
+        "TEST": 76.0,
+        "WAS": 57.0,
+        "NOW": 57.0,
+        "SAVED": 95.0
+      }
+    },
+    "chip_recommendation": {
+      "32": {
+        "max_label_width_px": 97.28,
+        "recommended_chip_pad_x": 24,
+        "recommended_chip_width_px": 145.3
+      },
+      "25": {
+        "max_label_width_px": 76.0,
+        "recommended_chip_pad_x": 24,
+        "recommended_chip_width_px": 124.0
+      }
+    }
+  },
+  "task6_recommendations": {
+    "ratio_4x5": {
+      "band_px": 850,
+      "hook96_3L_px": 296.6,
+      "hook84_3L_px": 259.6,
+      "hook84_4L_px": 346.1,
+      "fits_96_3L_plus_1L_body": true,
+      "fits_96_3L_plus_2L_body": true,
+      "fits_84_4L_plus_1L_body": true
+    },
+    "lint_max_chars_per_line": {
+      "hook": 20,
+      "body": 38
+    },
+    "caption": {
+      "font": "IBMPlexSans-SemiBold",
+      "min_size_px_raw": 38.77,
+      "candidates_css_px": {
+        "34": {
+          "css_px": 12.28,
+          "ok_ge_14": false
+        },
+        "36": {
+          "css_px": 13.0,
+          "ok_ge_14": false
+        },
+        "38": {
+          "css_px": 13.72,
+          "ok_ge_14": false
+        },
+        "40": {
+          "css_px": 14.44,
+          "ok_ge_14": true
+        },
+        "42": {
+          "css_px": 15.17,
+          "ok_ge_14": true
+        }
+      }
+    }
+  }
+}

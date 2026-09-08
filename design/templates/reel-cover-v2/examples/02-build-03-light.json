@@ -1,0 +1,15 @@
+{
+  "slots": {
+    "surface": "light",
+    "plate": "",
+    "tag": "BUILD / 03",
+    "episode": "EP 03 / SEP 2026",
+    "title_before": "One workflow, four\n",
+    "title_key": "hours back a week",
+    "title_after": "",
+    "visual_html": "<svg style=\"left:0px;top:0px\" width=\"840\" height=\"380\" viewBox=\"0 0 840 380\" fill=\"none\">\n  <rect x=\"0\" y=\"0\" width=\"840\" height=\"380\" fill=\"#0C1D1D\"/>\n  <rect x=\"40\" y=\"40\" width=\"240\" height=\"8\" fill=\"#E4E9EA\"/>\n  <text x=\"40\" y=\"106\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"32\" font-weight=\"500\" fill=\"#BEC6C7\" letter-spacing=\"5.12\" xml:space=\"preserve\">WAS</text>\n  <text x=\"40\" y=\"272\" font-family=\"Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif\" font-size=\"144\" font-weight=\"900\" fill=\"#E4E9EA\" letter-spacing=\"-1.44\" xml:space=\"preserve\">9.5</text>\n  <rect x=\"300\" y=\"40\" width=\"240\" height=\"8\" fill=\"#E4E9EA\"/>\n  <text x=\"300\" y=\"106\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"32\" font-weight=\"500\" fill=\"#BEC6C7\" letter-spacing=\"5.12\" xml:space=\"preserve\">NOW</text>\n  <text x=\"300\" y=\"272\" font-family=\"Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif\" font-size=\"144\" font-weight=\"900\" fill=\"#E4E9EA\" letter-spacing=\"-1.44\" xml:space=\"preserve\">5.5</text>\n  <rect x=\"560\" y=\"40\" width=\"240\" height=\"8\" fill=\"#E4E9EA\"/>\n  <text x=\"560\" y=\"106\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"32\" font-weight=\"500\" fill=\"#BEC6C7\" letter-spacing=\"5.12\" xml:space=\"preserve\">SAVED</text>\n  <text x=\"560\" y=\"272\" font-family=\"Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif\" font-size=\"144\" font-weight=\"900\" fill=\"#E4E9EA\" letter-spacing=\"-1.44\" xml:space=\"preserve\">4.0</text>\n  <rect x=\"560\" y=\"296\" width=\"200\" height=\"16\" fill=\"#7DD774\"/>\n  <text x=\"40\" y=\"352\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"28\" font-weight=\"500\" fill=\"#BEC6C7\" letter-spacing=\"4.48\" xml:space=\"preserve\">HOURS PER WEEK, ONE WORKFLOW</text>\n</svg>\n<svg style=\"left:0px;top:412px\" width=\"840\" height=\"72\" viewBox=\"0 0 840 72\" fill=\"none\">\n  <rect x=\"0\" y=\"0\" width=\"840\" height=\"4\" fill=\"#BEC6C7\"/>\n  <text x=\"0\" y=\"58\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"32\" font-weight=\"500\" fill=\"#5C6565\" letter-spacing=\"5.12\" xml:space=\"preserve\">SOURCE: OUR OWN PROCESS, 4 WEEKS</text>\n</svg>",
+    "caption_word": "back.",
+    "mark": "on",
+    "face_frame": "on"
+  }
+}

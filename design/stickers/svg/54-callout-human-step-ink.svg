@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Dashed plate naming the step that stays human, pointed at by a leader line. Ink surface. -->
+<!-- Slots: slot-label (edit the text inside each element) Ink surface. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="636" height="88" viewBox="0 0 636 88" fill="none">
+  <rect x="0" y="37" width="14" height="14" fill="#E4E9EA"/>
+  <line x1="14" y1="44" x2="90" y2="44" stroke="#E4E9EA" stroke-width="2"/>
+  <rect x="91" y="1" width="543.77" height="86" fill="none" stroke="#E4E9EA" stroke-width="2" stroke-dasharray="12 8"/>
+  <g transform="translate(114 24) scale(1.67)" fill="none" stroke="#E4E9EA" stroke-width="0.9" stroke-linecap="square" stroke-linejoin="miter"><path d="m16 11 2 2 4-4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></g>
+  <text id="slot-label" x="174" y="55.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#E4E9EA" letter-spacing="5.12" xml:space="preserve">THIS STEP IS HUMAN</text>
+</svg>

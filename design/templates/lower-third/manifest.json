@@ -1,0 +1,31 @@
+{
+  "canvas": "reel",
+  "width": 1080,
+  "height": 1920,
+  "placement": "reel",
+  "note": "Transparent overlay. The name slot box is the Ink plate itself; the role box is the mono line inside it. The plate bottom sits exactly on the Zone A floor, y 1248.",
+  "control_slots": {
+    "accent": "on | off. On draws a 2 px Signal rule on the plate left edge, for dark video only."
+  },
+  "slots": {
+    "name": {
+      "importance": "secondary",
+      "box": {
+        "x": 96,
+        "y": 1098,
+        "w": 660,
+        "h": 150
+      }
+    },
+    "role": {
+      "importance": "secondary",
+      "box": {
+        "x": 120,
+        "y": 1192,
+        "w": 612,
+        "h": 32
+      }
+    }
+  },
+  "transparent": true
+}

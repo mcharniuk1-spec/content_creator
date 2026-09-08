@@ -1,0 +1,222 @@
+{
+  "accessed": "2026-09-08",
+  "method_note": "Meta publishes exact safe-zone percentages/pixels only for paid Reels/Stories/Feed/Carousel ad creative (facebook.com/business/ads-guide). Organic-post, avatar, highlight-cover and Reels-cover-crop numbers are not published by Meta with pixel specs; those entries are 'secondary' or 'derived' and say so.",
+  "placements": {
+    "reels_ads_safe_zone": {
+      "canvas": { "w": 1440, "h": 2560 },
+      "aspect_ratio": "9:16",
+      "safe_area": { "top": 358, "bottom": 896, "left": 86, "right": 86 },
+      "safe_area_note": "top 14% of 2560=358, bottom 35% of 2560=896, sides 6% of 1440=86 each (Meta's own stated percentages, pixel values computed from Meta's stated canvas)",
+      "source": {
+        "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+        "url_secondary_confirming": "https://www.facebook.com/business/ads-guide/update/image/instagram-reels",
+        "confidence": "meta-official",
+        "accessed": "2026-09-08"
+      }
+    },
+    "reels_organic_safe_zone_derived": {
+      "canvas": { "w": 1080, "h": 1920 },
+      "aspect_ratio": "9:16",
+      "safe_area": { "top": 269, "bottom": 672, "left": 65, "right": 65 },
+      "confidence": "derived",
+      "note": "Same Meta percentages (14% top, 35% bottom, 6% sides) applied to the common 1080x1920 organic canvas instead of Meta's 1440x2560 ad canvas: top=0.14*1920=268.8->269; bottom=0.35*1920=672; sides=0.06*1080=64.8->65. Safe content box = 1080-2*65=950 wide, 1920-269-672=979 tall.",
+      "source": {
+        "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+        "confidence": "derived",
+        "accessed": "2026-09-08"
+      }
+    },
+    "reels_right_action_column": {
+      "canvas": { "w": 1080, "h": 1920 },
+      "region": null,
+      "confidence": "secondary",
+      "note": "No Meta pixel box published and no consistent pixel box across secondary sources. It falls inside the bottom-35%/right-6% ad safe-zone exclusion already listed above, but multiple design blogs say it visually occupies more width than the 65px minimum margin in practice. Not confirmed as an exact box - see 'unconfirmed' section.",
+      "source": {
+        "url": "https://kreatli.com/guides/instagram-reels-safe-zone",
+        "confidence": "secondary",
+        "accessed": "2026-09-08"
+      }
+    },
+    "reels_cover_grid_crop_band": {
+      "source_canvas": { "w": 1080, "h": 1920 },
+      "crop_band": { "y_from": 240, "y_to": 1660 },
+      "confidence": "derived",
+      "note": "Grid tile ratio is 3:4 (width/height=0.75). At fixed tile width 1080, tile height = 1080/0.75 = 1440. Cropping the 1920-tall 9:16 cover to 1440 tall, centered: (1920-1440)/2=240 lost from top and bottom each, so visible band is y=240 to y=240+1440=1660.",
+      "source": {
+        "url": "https://www.socialmediatoday.com/news/instagram-rolls-out-vertically-aligned-profile-grid/737777/",
+        "confidence": "derived",
+        "accessed": "2026-09-08"
+      }
+    },
+    "reels_tab_display": {
+      "canvas": { "w": 1080, "h": 1920 },
+      "crop_band": { "y_from": 0, "y_to": 1920 },
+      "confidence": "secondary",
+      "note": "Reels tab shows the full 9:16 cover/video uncropped. Widely and consistently reported, not disputed, but not a Meta doc.",
+      "source": {
+        "url": "https://later.com/blog/instagram-reels-cover-photo/",
+        "confidence": "secondary",
+        "accessed": "2026-09-08"
+      }
+    },
+    "stories_ads_safe_zone": {
+      "canvas": { "w": 1440, "h": 2560 },
+      "aspect_ratio": "9:16",
+      "safe_area": { "top": 358, "bottom": 896, "left": 86, "right": 86 },
+      "confidence": "meta-official",
+      "note": "Meta's current (2026) ads-guide pages state the same 14% top / 35% bottom / 6% sides figure for Stories as for Reels ads.",
+      "source": {
+        "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-story",
+        "url_secondary_confirming": "https://www.facebook.com/business/ads-guide/update/image/instagram-story",
+        "confidence": "meta-official",
+        "accessed": "2026-09-08"
+      }
+    },
+    "stories_organic_safe_zone_derived": {
+      "canvas": { "w": 1080, "h": 1920 },
+      "safe_area": { "top": 269, "bottom": 672, "left": 65, "right": 65 },
+      "confidence": "derived",
+      "note": "Same arithmetic as reels_organic_safe_zone_derived, applied to Stories.",
+      "source": { "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-story", "confidence": "derived", "accessed": "2026-09-08" }
+    },
+    "stories_legacy_safe_zone_disputed": {
+      "canvas": { "w": 1080, "h": 1920 },
+      "safe_area": { "top": 269, "bottom": 340, "left": 65, "right": 65 },
+      "confidence": "secondary",
+      "note": "Older / some current secondary sources cite Stories bottom margin as 20% (340px of 1920) rather than 35% (672px). Meta's live 2026 ads-guide pages we fetched show 35%, suggesting this 14/20/6 figure is legacy and superseded, but it is still widely used in templates. Flagged as a disagreement, not resolved.",
+      "source": { "url": "https://www.ignitesocialmedia.com/content-creation/what-are-the-safe-zones-for-tiktoks-and-instagram-reels/", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "stories_interactive_stickers": {
+      "canvas": { "w": 1080, "h": 1920 },
+      "region": null,
+      "confidence": "secondary",
+      "note": "No Meta-published coordinates. Qualitative guidance only: place polls/quizzes/countdowns/link stickers in the 'middle-lower' band, not at the very bottom edge (the reply-bar overlay makes bottom-edge stickers unclickable).",
+      "source": { "url": "https://houseofmarketers.com/guide-to-safe-zones-tiktok-facebook-instagram-stories-reels/", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "feed_image_ad_4_5": {
+      "canvas": { "w": 1440, "h": 1800 },
+      "aspect_ratio": "4:5",
+      "min": { "w": 400, "h": 500 },
+      "max_ratio": "1.91:1",
+      "tolerance": "1%",
+      "safe_area": null,
+      "confidence": "meta-official",
+      "note": "Meta's feed image ad spec page publishes resolution/ratio/tolerance but no visual safe-zone margin - only text character limits (125 primary text, 40 headline).",
+      "source": { "url": "https://www.facebook.com/business/ads-guide/update/image/instagram-feed", "confidence": "meta-official", "accessed": "2026-09-08" }
+    },
+    "feed_organic_square_1_1": {
+      "canvas": { "w": 1080, "h": 1080 },
+      "aspect_ratio": "1:1",
+      "confidence": "secondary",
+      "source": { "url": "https://www.socialpilot.co/instagram-marketing/instagram-image-size-guide", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "feed_organic_portrait_4_5": {
+      "canvas": { "w": 1080, "h": 1350 },
+      "aspect_ratio": "4:5",
+      "confidence": "secondary",
+      "note": "Most commonly recommended organic feed size across secondary sources.",
+      "source": { "url": "https://socialbee.com/blog/instagram-aspect-ratio-and-image-size/", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "feed_organic_landscape_191_1": {
+      "canvas": { "w": 1080, "h": 566 },
+      "aspect_ratio": "1.91:1",
+      "confidence": "secondary",
+      "note": "One source gives 1080x608 instead of 1080x566 for the same nominal 1.91:1 ratio - minor rounding disagreement between secondary sources, not resolved.",
+      "source": { "url": "https://buffer.com/resources/instagram-image-size/", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "feed_organic_3_4_no_crop": {
+      "canvas": { "w": 1080, "h": 1440 },
+      "aspect_ratio": "3:4",
+      "confidence": "secondary",
+      "note": "Feature reported as added ~2025-05-30 letting users upload natively at 3:4 with no forced cropping. This exactly matches the 3:4 grid tile ratio, so a 3:4 upload shows with zero crop in the profile grid.",
+      "source": { "url": "https://alternativeto.net/news/2025/5/instagram-adds-3-4-aspect-ratio-photo-uploads-with-no-cropping", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "profile_grid_tile_ratio": {
+      "aspect_ratio": "3:4",
+      "canvas_examples": [ { "w": 1080, "h": 1440 }, { "w": 1013, "h": 1350 } ],
+      "confidence": "secondary",
+      "note": "Both canvas examples are the same 3:4 ratio at different base resolutions cited by different sources - not a real disagreement, just different scale references. Change announced by Instagram Head Adam Mosseri, reported 2025-01-19; replaced the prior 1:1 grid tile.",
+      "source": { "url": "https://www.socialmediatoday.com/news/instagram-rolls-out-vertically-aligned-profile-grid/737777/", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "grid_crop_from_1_1": {
+      "source_canvas": { "w": 1080, "h": 1080 },
+      "crop_band": { "x_from": 135, "x_to": 945 },
+      "confidence": "derived",
+      "note": "3:4 tile ratio = width/height 0.75. Source height 1080 is the limiting dimension, so crop width = 1080*0.75 = 810. Centered: (1080-810)/2 = 135 lost each side, visible x-band = 135 to 135+810=945. Full 1080 height kept.",
+      "source": { "url": "https://www.socialmediatoday.com/news/instagram-rolls-out-vertically-aligned-profile-grid/737777/", "confidence": "derived", "accessed": "2026-09-08" }
+    },
+    "grid_crop_from_4_5": {
+      "source_canvas": { "w": 1080, "h": 1350 },
+      "crop_band": { "x_from": 33, "x_to": 1046 },
+      "confidence": "derived",
+      "note": "Crop width = source height * 0.75 = 1350*0.75 = 1012.5 -> ~1013. Centered: (1080-1013)/2 = 33.5 -> ~33/34 lost each side, visible x-band ~33 to 33+1013=1046. Full 1350 height kept. Matches the '1013x1350' figure some secondary sources cite directly.",
+      "source": { "url": "https://www.feelcreated.com/blog/instagrams-profile-grid-update-the-ultimate-instagram-2025-sizing-guide/", "confidence": "derived", "accessed": "2026-09-08" }
+    },
+    "grid_crop_from_3_4": {
+      "source_canvas": { "w": 1080, "h": 1440 },
+      "crop_band": { "x_from": 0, "x_to": 1080 },
+      "confidence": "derived",
+      "note": "3:4 source already matches the 3:4 tile ratio exactly - no crop needed. This is the stated reason Meta added the native 3:4 upload option in 2025.",
+      "source": { "url": "https://alternativeto.net/news/2025/5/instagram-adds-3-4-aspect-ratio-photo-uploads-with-no-cropping", "confidence": "derived", "accessed": "2026-09-08" }
+    },
+    "carousel_ads": {
+      "min_cards": 2,
+      "max_cards": 10,
+      "min_resolution": { "w": 1080, "h": 1080 },
+      "image_only_ratio": "4:5",
+      "video_containing_ratio": "1:1",
+      "tolerance": "1%",
+      "video_duration_seconds": { "min": 1, "max": 120 },
+      "confidence": "meta-official",
+      "source": { "url": "https://www.facebook.com/business/ads-guide/update/carousel/instagram-feed", "confidence": "meta-official", "accessed": "2026-09-08" }
+    },
+    "carousel_organic_mixed_ratio_rule": {
+      "rule": "first slide's aspect ratio is applied to the whole carousel; later slides with a different ratio are auto-cropped to match, without an upload error",
+      "confidence": "secondary",
+      "source": { "url": "https://sproutsocial.com/insights/instagram-carousel/", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "profile_avatar": {
+      "upload_recommended": { "w": 1000, "h": 1000 },
+      "upload_ratio": "1:1",
+      "stored_resolution": { "w": 320, "h": 320 },
+      "displayed_sizes_disputed": [
+        { "context": "profile page", "px": 150, "source": "socialpilot.co" },
+        { "context": "profile page (mobile)", "px": 110, "source": "socialsizes.io" },
+        { "context": "feed", "px": "32-40 (client-dependent)", "source": "socialpilot.co" }
+      ],
+      "safe_circle_inset": null,
+      "confidence": "secondary",
+      "note": "No Meta doc found. Displayed sizes disagree across secondary sources and likely vary by client/DPI; no confirmed single number. No published safe-circle-inset percentage for the pre-crop square - guidance is qualitative only (keep subject centered).",
+      "source": { "url": "https://www.socialpilot.co/instagram-marketing/instagram-image-size-guide", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "highlight_cover": {
+      "upload_canvas": { "w": 1080, "h": 1920 },
+      "upload_ratio": "9:16",
+      "inscribed_circle_safe_square": { "x_from": 0, "x_to": 1080, "y_from": 420, "y_to": 1500 },
+      "inscribed_circle_diameter": 1080,
+      "displayed_diameter_disputed": [
+        { "px": 110, "source": "instasize.com/style3d.ai aggregation" },
+        { "px": 161, "source": "trustypost.ai" },
+        { "px": "~700 (described as 'safe crop area', not display size)", "source": "moda.app" }
+      ],
+      "confidence": "derived_for_geometry_secondary_for_upload_size",
+      "note": "Upload canvas (1080x1920, 9:16) is a secondary-source consensus, not a Meta doc. The inscribed-circle safe square (largest circle fitting a 1080-wide x1920-tall rectangle has diameter = width = 1080, centered vertically: (1920-1080)/2=420 to 420+1080=1500) is derivable geometry, not a Meta figure. Displayed on-profile circle diameter is disputed across secondary sources with no resolution.",
+      "source": { "url": "https://moda.app/resources/sizes/instagram-highlight-cover", "confidence": "secondary", "accessed": "2026-09-08" }
+    },
+    "text_overlay_20_percent_rule": {
+      "status": "retired by Meta (no longer a delivery gate)",
+      "confidence": "secondary",
+      "note": "The historical rule capped on-image ad text at 20% coverage, enforced via a 25-cell grid tool. Meta officially dropped the hard gate; current Meta docs (fetched ads-guide pages) only specify ad-copy character limits (125 primary text / 40 headline), not an image text-density rule. Secondary commentary still recommends keeping overlay text minimal for delivery/cost reasons.",
+      "source": { "url": "https://blog.hubspot.com/marketing/facebook-text-overlay", "confidence": "secondary", "accessed": "2026-09-08" }
+    }
+  },
+  "unconfirmed_from_meta": [
+    "Exact pixel box for the Reels right-side action-button column (like/comment/share/save/more, audio disc)",
+    "Exact coordinates for Stories interactive sticker placement beyond qualitative 'middle-lower, not bottom edge'",
+    "Whether Stories' current bottom safe margin is 35% (per live 2026 Meta ad-spec pages) or the older 20% figure many templates still use",
+    "Exact displayed avatar circle size in feed vs profile, and any published safe-circle-inset percentage for avatar uploads",
+    "Exact displayed highlight-cover circle diameter (110px vs 161px vs ~700px cited by different secondary sources)",
+    "Current crop ratio applied to a Reel when it plays inline in a follower's main feed (distinct from the Reels tab or profile grid) - sources disagree and describe repeated changes through 2025-2026",
+    "Any Meta-published numeric guidance on caption/subtitle placement or 'amount of text' specific to Reels/Stories beyond the retired 20% ad-image rule"
+  ]
+}

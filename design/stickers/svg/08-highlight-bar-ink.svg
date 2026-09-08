@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Highlight bar in Ink, the neutral emphasis for one phrase inside a Paper headline. -->
+<!-- Slots: slot-phrase (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="618" height="124" viewBox="0 0 618 124" fill="none">
+  <rect x="0" y="0" width="617.02" height="124" fill="#0C1D1D"/>
+  <text id="slot-phrase" x="24" y="92.71" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="88" font-weight="900" fill="#E4E9EA" letter-spacing="-0.88" xml:space="preserve">WHAT WE KEPT</text>
+</svg>

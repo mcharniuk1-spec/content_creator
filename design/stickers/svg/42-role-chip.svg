@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Role chip for the process owner, the champion or the user of a workflow. -->
+<!-- Slots: slot-role (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="243" height="56" viewBox="0 0 243 56" fill="none">
+  <rect x="1" y="1" width="240.56" height="54" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <text id="slot-role" x="24" y="39.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#0C1D1D" letter-spacing="5.12" xml:space="preserve">CHAMPION</text>
+</svg>

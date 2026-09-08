@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Swipe indicator built from repeated unit squares. The system has no arrow glyph. -->
+<!-- Slots: slot-label (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="62" viewBox="0 0 146 62" fill="none">
+  <text id="slot-label" x="0" y="24" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#5C6565" letter-spacing="4.48" xml:space="preserve">SWIPE</text>
+  <rect x="0" y="44" width="18" height="18" fill="#0C1D1D"/>
+  <rect x="32" y="44" width="18" height="18" fill="#BEC6C7"/>
+  <rect x="64" y="44" width="18" height="18" fill="#BEC6C7"/>
+  <rect x="96" y="44" width="18" height="18" fill="#BEC6C7"/>
+  <rect x="128" y="44" width="18" height="18" fill="#BEC6C7"/>
+</svg>

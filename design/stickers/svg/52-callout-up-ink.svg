@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Label under a vertical leader line ending in a square point above it. Ink surface. -->
+<!-- Slots: slot-label (edit the text inside each element) Ink surface. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="154" viewBox="0 0 120 154" fill="none">
+  <rect x="0" y="0" width="14" height="14" fill="#E4E9EA"/>
+  <line x1="7" y1="14" x2="7" y2="110" stroke="#E4E9EA" stroke-width="2"/>
+  <text id="slot-label" x="0" y="140" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#E4E9EA" letter-spacing="5.12" xml:space="preserve">LENS</text>
+</svg>

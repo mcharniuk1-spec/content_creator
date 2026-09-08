@@ -1,0 +1,12 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "3",
+    "pages": "9",
+    "mark": "1",
+    "is_list": "1",
+    "title": "Where the time goes",
+    "items_html": "<li class=\"done\"><span>Download the PDFs from mail</span></li><li class=\"done\"><span>Rename each file by vendor</span></li><li class=\"done\"><span>Type the totals into the sheet</span></li><li class=\"blocked\"><span>Chase the missing scans</span></li><li class=\"pending\"><span>Send the sheet for approval</span></li>",
+    "human_step": "THIS STEP IS HUMAN"
+  }
+}

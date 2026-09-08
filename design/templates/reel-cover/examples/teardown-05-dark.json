@@ -1,0 +1,13 @@
+{
+  "slots": {
+    "surface": "dark",
+    "tag": "TEARDOWN / 05",
+    "hook": "This broke on the\ninput we never\ntested.",
+    "proof_frame": "on",
+    "proof_src": "../../../rules/icon-sheet.png",
+    "proof": "BOOKING INBOX / STEP 2",
+    "episode": "EP 05 / SEP 2026",
+    "verdict": "KILL",
+    "mark": "on"
+  }
+}

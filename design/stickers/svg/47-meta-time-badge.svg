@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Runtime badge. Sits with the progress bar or alone on a cover. -->
+<!-- Slots: slot-time (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="245" height="72" viewBox="0 0 245 72" fill="none">
+  <rect x="0" y="0" width="244.89" height="72" fill="#0C1D1D"/>
+  <g transform="translate(24 20) scale(1.33)" fill="none" stroke="#E4E9EA" stroke-width="1.69" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></g>
+  <text id="slot-time" x="74" y="48.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="600" fill="#E4E9EA" letter-spacing="2.88" xml:space="preserve">&lt;01:15</text>
+</svg>

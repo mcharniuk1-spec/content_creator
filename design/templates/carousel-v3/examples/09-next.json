@@ -1,0 +1,16 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "9",
+    "pages": "9",
+    "mark": "1",
+    "is_next": "1",
+    "action": "Time your invoice week before you pick a tool.",
+    "shot_next": "[SCREENSHOT:\nTHE WORKFLOW\nFILE]",
+    "phone_cap": "WORKFLOW",
+    "source_1": "SOURCE: OUR OWN",
+    "source_2": "PROCESS, 4 WEEKS",
+    "file_label": "IN THE FILE",
+    "file_html": "<li>THE PROMPT</li><li>THE CHECK STEP</li><li>WHAT BROKE</li>"
+  }
+}

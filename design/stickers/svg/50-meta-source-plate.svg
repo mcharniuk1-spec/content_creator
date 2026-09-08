@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Source line under any borrowed number or claim. Nothing publishes without one. -->
+<!-- Slots: slot-source (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="681" height="60" viewBox="0 0 681 60" fill="none">
+  <rect x="0" y="0" width="680.97" height="2" fill="#BEC6C7"/>
+  <text id="slot-source" x="0" y="46" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#5C6565" letter-spacing="4.48" xml:space="preserve">SOURCE: OUR OWN PROCESS, 8 WEEKS</text>
+</svg>

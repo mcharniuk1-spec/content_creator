@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Lower third naming the person on camera and what they own. -->
+<!-- Slots: slot-name, slot-role (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="489" height="140" viewBox="0 0 489 140" fill="none">
+  <rect x="0" y="0" width="488.11" height="140" fill="#0C1D1D"/>
+  <rect x="0" y="0" width="12" height="140" fill="#7DD774"/>
+  <text id="slot-name" x="44" y="72" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="600" fill="#E4E9EA" xml:space="preserve">Michael Ampleev</text>
+  <text id="slot-role" x="44" y="112" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#BEC6C7" letter-spacing="4.48" xml:space="preserve">BUILDS THE CASE</text>
+</svg>

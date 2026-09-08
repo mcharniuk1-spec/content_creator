@@ -1,0 +1,21 @@
+{
+  "canvas": "avatar",
+  "width": 1080,
+  "height": 1080,
+  "placement": "avatar",
+  "note": "Circle crop, r 486 at (540, 540). The 620 px mark is 57 percent of the 1080 crop diameter, inside the 55 to 60 percent recommendation.",
+  "control_slots": {
+    "surface": "light (Paper, colour mark, default) | dark (Ink, mono Paper mark)."
+  },
+  "slots": {
+    "mark": {
+      "importance": "primary",
+      "box": {
+        "x": 230,
+        "y": 230,
+        "w": 620,
+        "h": 620
+      }
+    }
+  }
+}

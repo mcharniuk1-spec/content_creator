@@ -1,0 +1,425 @@
+{
+  "canvas": "carousel",
+  "width": 1080,
+  "height": 1350,
+  "placement": "carousel",
+  "note": "1080x1350. Padding 96 all round. The band between the tag and the page squares is x 96..984, y 196..1094 (888 x 898); every layout fills at least 70 per cent of it. Objects sit on the column guides (96, 324, 552, 780), text steps in by the 24 px indent (x 120). Everything stays inside x 48..1032 so the 3:4 profile-grid crop loses nothing. The cover is the one exception to the bottom chrome: its foot is a full-width face band, 1080 x 300 at y 1050..1350, so the caption word and the counter sit above it and the mark moves to the top right, on the tag line at x 888, y 96.",
+  "slots": {
+    "tag": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 96,
+        "w": 600,
+        "h": 36
+      }
+    },
+    "page": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 1226,
+        "w": 184,
+        "h": 16
+      }
+    },
+    "counter": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 1004,
+        "w": 200,
+        "h": 32
+      }
+    },
+    "mark": {
+      "importance": "primary",
+      "box": {
+        "x": 888,
+        "y": 96,
+        "w": 96,
+        "h": 96
+      },
+      "note": "Box given for the cover, where the mark sits top right on the tag line because the foot is the photo. On the other eight types the mark keeps its place bottom right, x 888, y 1158, 96 x 96 - also fully inside Zone A."
+    },
+    "caption": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 906,
+        "w": 220,
+        "h": 74
+      }
+    },
+    "face": {
+      "importance": "secondary",
+      "box": {
+        "x": 48,
+        "y": 1050,
+        "w": 984,
+        "h": 252
+      },
+      "note": "The face band is laid out full bleed, 1080 x 300 at y 1050..1350: it stands in for the photo, which carries no information at its edges. Only the Zone A part of it is declared here."
+    },
+    "hook": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "screen_title": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "files_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "statement": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "quote_1": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "quote_2": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "quote_by": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "title": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "items_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "human_step": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "unit": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "was_value": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "now_value": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "saved_value": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "shot_before": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "shot_after": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "before_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "after_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "broken": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "broke_label": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "current": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "ai_layer": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "verdict_text": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "shot_run": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "shot_proof": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "call_1": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "call_2": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "proof_line": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "vheader": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "why": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "conditions_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "stamp_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "action": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "shot_next": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "phone_cap": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "source_1": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "source_2": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "steps_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "file_label": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "file_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    }
+  }
+}

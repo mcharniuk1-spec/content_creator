@@ -1,0 +1,14 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "8",
+    "pages": "9",
+    "mark": "1",
+    "is_verdict": "1",
+    "vheader": "M2 verdict",
+    "verdict": "TEST",
+    "why": "Scanned invoices still fail, so a person checks every batch.",
+    "conditions_html": "<li><span class=\"n\">01</span><span>A person signs off</span></li><li><span class=\"n\">02</span><span>Scans go the old route</span></li><li><span class=\"n\">03</span><span>We keep the timings</span></li>",
+    "stamp_html": "<span>TESTED</span><span>ON OUR</span><span>OWN</span><span>PROCESS</span>"
+  }
+}

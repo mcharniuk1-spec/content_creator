@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Placeholder frame for a person on camera. Filled by a real still, never by stock. -->
+<!-- Slots: slot-caption (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="560" viewBox="0 0 420 560" fill="none">
+  <rect x="2" y="2" width="416" height="494" fill="#BEC6C7"/>
+  <rect x="1" y="1" width="418" height="494" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <rect x="0" y="496" width="420" height="64" fill="#0C1D1D"/>
+  <text id="slot-caption" x="24" y="538" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#E4E9EA" letter-spacing="5.12" xml:space="preserve">[FACE]</text>
+</svg>

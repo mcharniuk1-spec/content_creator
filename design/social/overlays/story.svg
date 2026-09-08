@@ -1,0 +1,5 @@
+<svg viewBox="0 0 1080 1920" width="1080" height="1920" xmlns="http://www.w3.org/2000/svg">
+<!-- QA overlay mask, not a brand asset. placement: story 1080x1920, legacy 20% bottom margin superseded -->
+<rect x="0" y="0" width="1080" height="1920" fill="none" stroke="#000" stroke-width="1"/>
+<rect x="0" y="0" width="1080" height="269" fill="rgba(216,64,43,0.35)"/><rect x="0" y="1248" width="1080" height="672" fill="rgba(216,64,43,0.35)"/><rect x="65" y="269" width="950" height="979" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="10,8"/><text x="75" y="300" font-family="monospace" font-size="28" fill="#111" text-anchor="start">A</text><text x="20" y="40" font-family="monospace" font-size="28" fill="#fff" text-anchor="start">C 0-269</text><text x="20" y="1290" font-family="monospace" font-size="28" fill="#fff" text-anchor="start">C 1248-1920 (no B, sticker UI unpredictable)</text>
+</svg>

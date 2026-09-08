@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: The only frame for a time or volume number: WAS, NOW, SAVED on three plates. Ink surface. -->
+<!-- Slots: slot-was, slot-now, slot-saved (edit the text inside each element) Ink surface. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="208" viewBox="0 0 736 208" fill="none">
+  <rect x="0" y="0" width="240" height="4" fill="#E4E9EA"/>
+  <text x="0" y="54" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#BEC6C7" letter-spacing="4.48" xml:space="preserve">WAS</text>
+  <text id="slot-was" x="0" y="168" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="88" font-weight="900" fill="#E4E9EA" letter-spacing="-0.88" xml:space="preserve">240</text>
+  <rect x="248" y="0" width="240" height="4" fill="#E4E9EA"/>
+  <text x="248" y="54" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#BEC6C7" letter-spacing="4.48" xml:space="preserve">NOW</text>
+  <text id="slot-now" x="248" y="168" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="88" font-weight="900" fill="#E4E9EA" letter-spacing="-0.88" xml:space="preserve">95</text>
+  <rect x="496" y="0" width="240" height="4" fill="#E4E9EA"/>
+  <text x="496" y="54" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#BEC6C7" letter-spacing="4.48" xml:space="preserve">SAVED</text>
+  <text id="slot-saved" x="496" y="168" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="88" font-weight="900" fill="#E4E9EA" letter-spacing="-0.88" xml:space="preserve">145</text>
+  <rect x="496" y="184" width="127.7" height="12" fill="#7DD774"/>
+</svg>

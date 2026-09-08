@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Tells the reader the piece works with the sound off. Sits low on a cover. -->
+<!-- Slots: slot-label (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="444" height="72" viewBox="0 0 444 72" fill="none">
+  <rect x="0" y="0" width="444" height="72" fill="#0C1D1D"/>
+  <g transform="translate(24 18) scale(1.5)" fill="none" stroke="#E4E9EA" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"><path d="M11 4.702a.7.7 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.7.7 0 0 0 11 19.298z"/><path d="m16.5 14.5 5-5"/><path d="m16.5 9.5 5 5"/></g>
+  <text id="slot-label" x="78" y="46.47" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="30" font-weight="500" fill="#E4E9EA" letter-spacing="4.8" xml:space="preserve">WORKS SOUND OFF</text>
+</svg>

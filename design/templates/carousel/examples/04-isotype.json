@@ -1,0 +1,15 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "4",
+    "pages": "8",
+    "mark": "1",
+    "is_isotype": "1",
+    "title": "Hours the process takes",
+    "unit": "HOURS PER WEEK",
+    "glyph": "clock",
+    "was_count": "10",
+    "now_count": "4",
+    "saved_text": "SAVED 6 HOURS"
+  }
+}

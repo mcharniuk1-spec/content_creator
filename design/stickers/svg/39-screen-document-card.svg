@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Document stand-in: a title and hairline rows. Stands for a fragmentation or a brief. -->
+<!-- Slots: slot-title (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="620" viewBox="0 0 500 620" fill="none">
+  <rect x="2" y="2" width="496" height="616" fill="#E4E9EA"/>
+  <rect x="1" y="1" width="498" height="618" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <text id="slot-title" x="28" y="68" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="600" fill="#0C1D1D" letter-spacing="5.12" xml:space="preserve">FRAGMENTS</text>
+  <rect x="28" y="88" width="444" height="4" fill="#0C1D1D"/>
+  <rect x="28" y="140" width="444" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="176" width="381.84" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="212" width="417.36" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="248" width="266.4" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="284" width="444" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="320" width="346.32" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="356" width="399.6" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="392" width="230.88" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="428" width="426.24" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="464" width="372.96" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="500" width="310.8" height="2" fill="#BEC6C7"/>
+  <rect x="28" y="536" width="195.36" height="2" fill="#BEC6C7"/>
+</svg>

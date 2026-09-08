@@ -1,0 +1,91 @@
+{
+  "canvas": "reel",
+  "width": 1080,
+  "height": 1920,
+  "placement": "reel",
+  "note": "Kallaway structure in the M2 system: tag line, two-line title with the key phrase on a plate, one big central visual built from stickers, one lowercase caption word, the face at the bottom. Boxes are the laid-out pixel boxes on the 1080x1920 canvas. The title block always reserves 2 lines, so the visual band holds its line whatever the title says.",
+  "control_slots": {
+    "surface": "light (Paper, default) | dark (Ink). Drives the body class, has no box of its own.",
+    "plate": "empty (Ink plate on Paper, Signal plate on Ink) | oxide (only when the key phrase names something broken)."
+  },
+  "slots": {
+    "tag": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 272,
+        "w": 864,
+        "h": 36
+      }
+    },
+    "episode": {
+      "importance": "primary",
+      "box": {
+        "x": 576,
+        "y": 274,
+        "w": 432,
+        "h": 32
+      }
+    },
+    "title_before": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 304,
+        "w": 864,
+        "h": 270
+      }
+    },
+    "title_key": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 304,
+        "w": 864,
+        "h": 270
+      }
+    },
+    "visual_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 609,
+        "w": 840,
+        "h": 493
+      }
+    },
+    "caption_word": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 1125,
+        "w": 660,
+        "h": 77
+      }
+    },
+    "mark": {
+      "importance": "primary",
+      "box": {
+        "x": 780,
+        "y": 1104,
+        "w": 144,
+        "h": 144
+      }
+    },
+    "face_frame": {
+      "importance": "secondary",
+      "box": {
+        "x": 248,
+        "y": 1248,
+        "w": 584,
+        "h": 222
+      },
+      "note": "Only the Zone B part of the placeholder is declared. The frame is drawn on to the bottom edge of the canvas because it stands in for the photo, which carries no information."
+    }
+  },
+  "static_elements": {
+    "title_after": {
+      "note": "Shares the title block box; it is the tail of the same two-line title."
+    }
+  }
+}

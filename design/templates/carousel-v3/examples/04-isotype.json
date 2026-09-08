@@ -1,0 +1,17 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "4",
+    "pages": "9",
+    "mark": "1",
+    "is_isotype": "1",
+    "title": "Hours the run takes",
+    "unit": "HOURS PER WEEK",
+    "glyph": "clock",
+    "was_count": "10",
+    "now_count": "4",
+    "was_value": "10",
+    "now_value": "4",
+    "saved_value": "6"
+  }
+}

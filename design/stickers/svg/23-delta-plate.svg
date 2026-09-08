@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Ink plate carrying one change figure and what it is a change in. -->
+<!-- Slots: slot-label, slot-value, slot-unit (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" fill="none">
+  <rect x="0" y="0" width="439.38" height="200" fill="#0C1D1D"/>
+  <rect x="0" y="0" width="12" height="200" fill="#7DD774"/>
+  <text id="slot-label" x="44" y="56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#BEC6C7" letter-spacing="4.48" xml:space="preserve">SAVED PER WEEK</text>
+  <text id="slot-value" x="44" y="168" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="110" font-weight="900" fill="#E4E9EA" letter-spacing="-1.1" xml:space="preserve">-6.5</text>
+  <text id="slot-unit" x="254.52" y="168" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="40" font-weight="500" fill="#BEC6C7" letter-spacing="6.4" xml:space="preserve">HOURS</text>
+</svg>

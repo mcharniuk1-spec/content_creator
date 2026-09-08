@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: One Signal series on Ink with both axes labelled. A chart without axis labels does not ship. -->
+<!-- Slots: slot-title, slot-y-axis, slot-x-axis (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" fill="none">
+  <rect x="0" y="0" width="760" height="440" fill="#0C1D1D"/>
+  <text id="slot-title" x="32" y="60" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="30" font-weight="500" fill="#E4E9EA" letter-spacing="4.8" xml:space="preserve">MIN PER RUN, ON OUR OWN PROCESS</text>
+  <text id="slot-y-axis" x="32" y="100" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="24" font-weight="400" fill="#BEC6C7" letter-spacing="3.84" xml:space="preserve">Y: MINUTES</text>
+  <line x1="32" y1="128" x2="728" y2="128" stroke="#5C6565" stroke-width="2"/>
+  <line x1="32" y1="238" x2="728" y2="238" stroke="#5C6565" stroke-width="2"/>
+  <line x1="32" y1="348" x2="728" y2="348" stroke="#5C6565" stroke-width="2"/>
+  <polyline points="32,150 131.43,158.8 230.86,183 330.29,209.4 429.71,249 529.14,268.8 628.57,299.6 728,309.5" fill="none" stroke="#7DD774" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
+  <text id="slot-x-axis" x="32" y="400" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="24" font-weight="400" fill="#BEC6C7" letter-spacing="3.84" xml:space="preserve">X: WEEK 01 TO 08</text>
+</svg>

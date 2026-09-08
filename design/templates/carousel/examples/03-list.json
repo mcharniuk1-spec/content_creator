@@ -1,0 +1,11 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "3",
+    "pages": "8",
+    "mark": "1",
+    "is_list": "1",
+    "title": "Where the time goes",
+    "items_html": "<li class=\"done\">Download the PDFs from mail</li><li class=\"done\">Rename each file by vendor</li><li class=\"done\">Type the totals into the sheet</li><li class=\"blocked\">Chase the two missing invoices</li><li class=\"pending\">Send the sheet for approval</li>"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "5",
+    "pages": "8",
+    "mark": "1",
+    "is_before_after": "1",
+    "before_html": "<li>Open the mailbox</li><li>Save each PDF</li><li>Rename by vendor</li><li>Type the totals</li>",
+    "after_html": "<li>Model reads mail</li><li>Files land named</li><li>Totals filled in</li>",
+    "broken": "Scanned pages fail"
+  }
+}

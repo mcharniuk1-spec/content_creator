@@ -1,0 +1,365 @@
+/* M2 Lab print stylesheet, version 2, 8 September 2026.
+   Values mirror tokens/tokens.json. If tokens/out/tokens.css is generated later,
+   replace the :root block below with: @import url("../tokens/out/tokens.css");
+   Paths in this file resolve from pdf/, because the built document lives in
+   pdf/out/ and loads this file as ../print.css.
+   Absent here by decision, and checked by the linter: corner rounding, drop
+   shadows, gradients, centred text. */
+
+/* ---------- fonts ---------- */
+
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400;
+  src: url("../assets/fonts/woff2/IBMPlexSans-Regular.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 500;
+  src: url("../assets/fonts/woff2/IBMPlexSans-Medium.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600;
+  src: url("../assets/fonts/woff2/IBMPlexSans-SemiBold.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 700;
+  src: url("../assets/fonts/woff2/IBMPlexSans-Bold.woff2") format("woff2"); font-display: block; }
+
+@font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 400;
+  src: url("../assets/fonts/woff2/IBMPlexSansCondensed-Regular.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 500;
+  src: url("../assets/fonts/woff2/IBMPlexSansCondensed-Medium.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 600;
+  src: url("../assets/fonts/woff2/IBMPlexSansCondensed-SemiBold.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans Condensed"; font-style: normal; font-weight: 700;
+  src: url("../assets/fonts/woff2/IBMPlexSansCondensed-Bold.woff2") format("woff2"); font-display: block; }
+
+@font-face { font-family: "Saira SemiCondensed"; font-style: normal; font-weight: 700;
+  src: url("../assets/fonts/woff2/SairaSemiCondensed-Bold.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "Saira SemiCondensed"; font-style: normal; font-weight: 800;
+  src: url("../assets/fonts/woff2/SairaSemiCondensed-ExtraBold.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "Saira SemiCondensed"; font-style: normal; font-weight: 900;
+  src: url("../assets/fonts/woff2/SairaSemiCondensed-Black.woff2") format("woff2"); font-display: block; }
+
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400;
+  src: url("../assets/fonts/woff2/IBMPlexMono-Regular.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500;
+  src: url("../assets/fonts/woff2/IBMPlexMono-Medium.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600;
+  src: url("../assets/fonts/woff2/IBMPlexMono-SemiBold.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 700;
+  src: url("../assets/fonts/woff2/IBMPlexMono-Bold.woff2") format("woff2"); font-display: block; }
+
+/* ---------- tokens ---------- */
+
+:root {
+  --paper: #E4E9EA;
+  --ink: #0C1D1D;
+  --signal: #7DD774;
+  --oxide: #BB4347;
+  --blueprint: #1E4A80;
+  --graphite: #5C6565;
+  --rule: #BEC6C7;
+
+  --font-display: "Saira SemiCondensed", "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --font-text: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+  --w-extrabold: 800;
+  --w-display: 900;
+
+  --size-display-1: 28pt;
+  --size-display-2: 24pt;
+  --size-display-3: 18pt;
+  --size-body: 10.5pt;
+  --size-body-small: 9pt;
+  --size-label: 8pt;
+
+  --lead-display: 1.03;
+  --lead-body: 1.35;
+  --lead-label: 1;
+  --track-display: -0.01em;
+  --track-label: 0.16em;
+
+  --page-w: 297mm;
+  --page-h: 210mm;
+  --margin: 16mm;
+  --indent: 24px;
+  --gutter: 6mm;
+
+  --hairline: 2px;
+  --emphasis: 4px;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+}
+
+/* ---------- page setup ---------- */
+
+@page { size: 297mm 210mm; margin: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-weight: var(--w-regular);
+  font-size: var(--size-body);
+  line-height: var(--lead-body);
+  text-align: left;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  box-sizing: border-box;
+}
+
+.page {
+  position: relative;
+  width: var(--page-w);
+  height: var(--page-h);
+  padding: var(--margin);
+  padding-bottom: 26mm;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.page:last-of-type { page-break-after: auto; break-after: auto; }
+
+/* Text sits 24 px right of its guide, never flush. The hairlines run to the guide. */
+.page > * { margin-left: var(--indent); }
+.page > .full-measure, .page > .page-footer, .page > .rule-line { margin-left: 0; }
+
+.break-before { page-break-before: always; break-before: page; }
+.avoid-break { page-break-inside: avoid; break-inside: avoid; }
+
+/* ---------- running footer ---------- */
+
+.page-footer {
+  position: absolute;
+  left: var(--margin);
+  right: var(--margin);
+  bottom: 10mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: var(--hairline) solid var(--rule);
+  padding-top: 3mm;
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  font-size: var(--size-label);
+  line-height: var(--lead-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+.page-footer .folio { font-variant-numeric: tabular-nums; }
+.page--dark .page-footer { border-top-color: var(--graphite); color: var(--rule); }
+
+/* ---------- type ---------- */
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--w-display);
+  line-height: var(--lead-display);
+  letter-spacing: var(--track-display);
+  margin: 0 0 var(--space-3) 0;
+  color: var(--ink);
+}
+h1, .display-1 { font-size: var(--size-display-1); }
+h2, .display-2 { font-size: var(--size-display-2); }
+h3, .display-3 { font-size: var(--size-display-3); }
+.display-1, .display-2, .display-3 {
+  font-family: var(--font-display);
+  font-weight: var(--w-display);
+  line-height: var(--lead-display);
+  letter-spacing: var(--track-display);
+}
+
+p, li { font-size: var(--size-body); line-height: var(--lead-body); margin: 0 0 var(--space-2) 0; max-width: 150mm; }
+.lead { font-size: 12pt; max-width: 170mm; }
+.small { font-size: var(--size-body-small); }
+.secondary { color: var(--graphite); }
+strong { font-weight: var(--w-semibold); }
+ul, ol { margin: 0 0 var(--space-2) 0; padding-left: var(--space-3); }
+a { color: var(--ink); text-decoration: underline; }
+
+.label {
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  font-size: var(--size-label);
+  line-height: var(--lead-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--graphite);
+  display: block;
+}
+.mono { font-family: var(--font-mono); font-weight: var(--w-medium); font-variant-numeric: tabular-nums; }
+
+.rule-line { border: 0; border-top: var(--hairline) solid var(--rule); margin: var(--space-3) 0; }
+.rule-line--emphasis { border-top-width: var(--emphasis); border-top-color: var(--ink); }
+
+/* ---------- grid ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  row-gap: var(--space-4);
+  align-items: start;
+}
+.col-1 { grid-column: span 1; } .col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; } .col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; } .col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; } .col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; } .col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; } .col-12 { grid-column: span 12; }
+.grid > * { margin-left: 0; }
+
+/* ---------- figure and caption ---------- */
+
+.figure { margin: 0 0 var(--space-4) 0; break-inside: avoid; }
+.figure > img, .figure > svg { display: block; max-width: 100%; }
+.caption {
+  display: block;
+  margin-top: var(--space-2);
+  padding-top: 2mm;
+  border-top: var(--hairline) solid var(--rule);
+  font-family: var(--font-mono);
+  font-weight: var(--w-regular);
+  font-size: var(--size-label);
+  line-height: 1.4;
+  color: var(--graphite);
+  max-width: 120mm;
+}
+
+/* ---------- table ---------- */
+
+table { border-collapse: collapse; width: 100%; max-width: 200mm; margin: 0 0 var(--space-4) 0; }
+th, td { text-align: left; padding: 2.5mm 6mm 2.5mm 0; vertical-align: top; border: 0; }
+thead th {
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  font-size: var(--size-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--graphite);
+  border-bottom: var(--hairline) solid var(--ink);
+}
+tbody td { font-size: var(--size-body); border-bottom: var(--hairline) solid var(--rule); }
+tbody tr:last-child td { border-bottom: 0; }
+td.num, th.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- swatch ----------
+   Engineering drawing: the label never sits on the object. The colour block is
+   the object, the leader line runs out of it and ends in a square point, the
+   role and hex sit outside to the right. */
+
+.swatch-row { display: flex; flex-wrap: wrap; gap: var(--space-8) var(--space-12); margin-bottom: var(--space-4); }
+.swatch { display: flex; align-items: flex-start; break-inside: avoid; }
+.swatch__chip { width: 26mm; height: 26mm; background: var(--ink); border: 0; flex: none; }
+.swatch__chip--outline { background: transparent; border: var(--hairline) solid var(--rule); }
+.swatch__leader { position: relative; width: 14mm; height: 26mm; flex: none; }
+.swatch__leader::before {
+  content: ""; position: absolute; left: 0; top: 6mm; width: 14mm;
+  height: 0; border-top: var(--hairline) solid var(--graphite);
+}
+.swatch__leader::after {
+  content: ""; position: absolute; left: 0; top: calc(6mm - 2px);
+  width: 6px; height: 6px; background: var(--graphite);
+}
+.swatch__meta { padding-top: 4mm; }
+.swatch__role { font-family: var(--font-text); font-weight: var(--w-semibold); font-size: var(--size-body); display: block; }
+.swatch__hex { font-family: var(--font-mono); font-weight: var(--w-medium); font-size: var(--size-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--graphite); display: block; margin-top: 1mm; }
+.swatch__note { font-size: var(--size-body-small); color: var(--graphite); display: block; margin-top: 2mm; max-width: 60mm; }
+
+/* ---------- do / do not ----------
+   State reads from shape, not colour: filled square for do, 4 px outlined
+   square for do not. Colour is redundant, never load-bearing. */
+
+.pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gutter); margin-bottom: var(--space-4); }
+.pair__item { break-inside: avoid; }
+.pair__head { display: flex; align-items: flex-start; gap: var(--space-2); margin-bottom: var(--space-2); }
+.marker { width: 14px; height: 14px; flex: none; margin-top: 2px; }
+.marker--do { background: var(--ink); }
+.marker--dont { background: transparent; border: var(--emphasis) solid var(--oxide); }
+.pair__label {
+  font-family: var(--font-mono); font-weight: var(--w-medium); font-size: var(--size-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--ink);
+}
+.pair__body { font-size: var(--size-body); max-width: 110mm; }
+.pair__specimen { border-top: var(--hairline) solid var(--rule); padding-top: var(--space-2); margin-top: var(--space-2); }
+
+/* ---------- cover ---------- */
+
+.cover { display: block; }
+.cover__title { font-family: var(--font-display); font-weight: var(--w-bold); font-size: 56pt;
+  line-height: var(--lead-display); letter-spacing: var(--track-display); margin: 34mm 0 0 0; }
+.cover__subtitle { font-family: var(--font-display); font-weight: var(--w-medium); font-size: var(--size-display-2);
+  line-height: var(--lead-display); margin: var(--space-3) 0 0 0; }
+.cover__meta { position: absolute; left: calc(var(--margin) + var(--indent)); bottom: var(--margin);
+  display: flex; align-items: flex-end; gap: var(--space-6); }
+.cover__mark { width: 120px; height: 120px; display: block; }
+.cover__version { font-family: var(--font-mono); font-weight: var(--w-medium); font-size: var(--size-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--graphite); padding-bottom: var(--space-2); }
+.cover__hairline { position: absolute; left: var(--margin); right: var(--margin); top: 100mm;
+  border-top: var(--hairline) solid var(--rule); }
+
+/* ---------- divider ---------- */
+
+.page--dark { background: var(--ink); color: var(--paper); }
+.page--dark h1, .page--dark h2, .page--dark h3, .page--dark .display-1, .page--dark .display-2 { color: var(--paper); }
+.page--dark .label, .page--dark .secondary, .page--dark .caption { color: var(--rule); }
+.page--dark .rule-line { border-top-color: var(--graphite); }
+.divider__part { font-family: var(--font-mono); font-weight: var(--w-medium); font-size: var(--size-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--signal); margin: 60mm 0 var(--space-3) 0; }
+.divider__title { font-family: var(--font-display); font-weight: var(--w-bold); font-size: 44pt;
+  line-height: var(--lead-display); letter-spacing: var(--track-display); margin: 0 0 var(--space-3) 0; }
+.divider__note { color: var(--rule); max-width: 150mm; }
+.divider__mark { position: absolute; left: calc(var(--margin) + var(--indent)); bottom: 30mm;
+  width: 80px; height: 80px; display: block; }
+
+/* ---------- table of contents ---------- */
+
+.toc { list-style: none; margin: 0; padding: 0; max-width: 200mm; }
+.toc__group { font-family: var(--font-mono); font-weight: var(--w-medium); font-size: var(--size-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--graphite);
+  margin: var(--space-4) 0 var(--space-2) 0; }
+.toc__group:first-child { margin-top: 0; }
+.toc__item { display: flex; align-items: baseline; gap: var(--space-2); padding: 1.5mm 0; }
+.toc__title { font-size: var(--size-body); flex: none; }
+.toc__lead { flex: 1 1 auto; height: 0; border-top: var(--hairline) solid var(--rule); transform: translateY(-2px); }
+.toc__folio { font-family: var(--font-mono); font-weight: var(--w-medium); font-size: var(--size-label);
+  font-variant-numeric: tabular-nums; color: var(--graphite); flex: none; }
+
+/* ---------- colophon ---------- */
+
+.colophon dl { margin: 0; max-width: 190mm; }
+.colophon dt { font-family: var(--font-mono); font-weight: var(--w-medium); font-size: var(--size-label);
+  letter-spacing: var(--track-label); text-transform: uppercase; color: var(--graphite);
+  border-top: var(--hairline) solid var(--rule); padding-top: 2mm; margin-top: var(--space-3); }
+.colophon dd { margin: var(--space-1) 0 0 0; font-size: var(--size-body); max-width: 150mm; }
+.colophon code { font-family: var(--font-mono); font-size: var(--size-body-small); }
+
+/* absolutely positioned page furniture is placed by left/bottom, never by the
+   indent margin applied to flow children of .page */
+.page > .cover__meta, .page > .cover__hairline, .page > .divider__mark { margin-left: 0; }
+
+/* ---------- screen preview ---------- */
+
+@media screen {
+  body { background: var(--rule); padding: 24px 0; }
+  .page { margin: 0 auto 24px auto; }
+  .page > * { margin-left: var(--indent); }
+  .page > .full-measure, .page > .page-footer, .page > .rule-line { margin-left: 0; }
+}

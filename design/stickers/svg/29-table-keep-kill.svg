@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Two-column mini table splitting what we kept from what we killed. -->
+<!-- Slots: slot-head-left, slot-head-right, slot-keep-1, slot-keep-2, slot-keep-3, slot-kill-1, slot-kill-2, slot-kill-3 (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="256" viewBox="0 0 768 256" fill="none">
+  <text id="slot-head-left" x="0" y="40" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="600" fill="#0C1D1D" letter-spacing="5.76" xml:space="preserve">KEEP</text>
+  <text id="slot-head-right" x="396" y="40" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="600" fill="#0C1D1D" letter-spacing="5.76" xml:space="preserve">KILL</text>
+  <rect x="0" y="60" width="372" height="4" fill="#0C1D1D"/>
+  <rect x="396" y="60" width="372" height="4" fill="#0C1D1D"/>
+  <text id="slot-keep-1" x="0" y="105.07" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="400" fill="#0C1D1D" xml:space="preserve">Draft from transcript</text>
+  <text id="slot-kill-1" x="396" y="105.07" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="400" fill="#0C1D1D" xml:space="preserve">Auto publishing</text>
+  <rect x="0" y="126" width="372" height="2" fill="#BEC6C7"/>
+  <rect x="396" y="126" width="372" height="2" fill="#BEC6C7"/>
+  <text id="slot-keep-2" x="0" y="169.07" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="400" fill="#0C1D1D" xml:space="preserve">Tag by topic</text>
+  <text id="slot-kill-2" x="396" y="169.07" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="400" fill="#0C1D1D" xml:space="preserve">Tone rewrite</text>
+  <rect x="0" y="190" width="372" height="2" fill="#BEC6C7"/>
+  <rect x="396" y="190" width="372" height="2" fill="#BEC6C7"/>
+  <text id="slot-keep-3" x="0" y="233.07" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="400" fill="#0C1D1D" xml:space="preserve">Weekly digest</text>
+  <text id="slot-kill-3" x="396" y="233.07" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="400" fill="#0C1D1D" xml:space="preserve">Client replies</text>
+  <rect x="0" y="254" width="372" height="2" fill="#BEC6C7"/>
+  <rect x="396" y="254" width="372" height="2" fill="#BEC6C7"/>
+</svg>

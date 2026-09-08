@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Two bars comparing the same measure before and after. Bars share one scale. -->
+<!-- Slots: slot-label-a, slot-value-a, slot-label-b, slot-value-b (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="304" viewBox="0 0 800 304" fill="none">
+  <rect x="1" y="1" width="798" height="302" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <text id="slot-label-a" x="32" y="60" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#5C6565" letter-spacing="4.48" xml:space="preserve">WAS</text>
+  <rect x="32" y="76" width="480" height="44" fill="#5C6565"/>
+  <text id="slot-value-a" x="528" y="109.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#0C1D1D" letter-spacing="2.56" xml:space="preserve">240 MIN</text>
+  <text id="slot-label-b" x="32" y="176" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#5C6565" letter-spacing="4.48" xml:space="preserve">NOW</text>
+  <rect x="32" y="192" width="190" height="44" fill="#1E4A80"/>
+  <text id="slot-value-b" x="238" y="225.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#0C1D1D" letter-spacing="2.56" xml:space="preserve">95 MIN</text>
+</svg>

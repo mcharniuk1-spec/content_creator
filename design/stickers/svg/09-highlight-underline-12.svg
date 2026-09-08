@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Key phrase with a 12 px rule under it, for emphasis that leaves the type readable. -->
+<!-- Slots: slot-phrase (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1003" height="128" viewBox="0 0 1003 128" fill="none">
+  <text id="slot-phrase" x="0" y="88" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="88" font-weight="900" fill="#0C1D1D" letter-spacing="-0.88" xml:space="preserve">ONE REPEATED WORKFLOW</text>
+  <rect x="0" y="106" width="1002.76" height="12" fill="#0C1D1D"/>
+</svg>

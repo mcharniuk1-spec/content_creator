@@ -1,0 +1,919 @@
+{
+  "generated": "2026-09-08",
+  "method": {
+    "oklab": "Ottosson 2020 linear-sRGB<->OKLab matrices; OKLCH is the polar form",
+    "wcag": "WCAG 2.x relative luminance, (L1+0.05)/(L2+0.05)",
+    "cvd": "Machado, Oliveira & Fernandes 2009, severity 1.0, applied in linear sRGB",
+    "difference": "Euclidean distance in OKLab (dE_OK)",
+    "dlThreshold": 0.15,
+    "script": "research/palette-compute.mjs"
+  },
+  "references": {
+    "acidGreen": "#BFFB4C",
+    "vermilion": "#E34234",
+    "terracotta": "#D97757",
+    "cream": "#F4F1EA",
+    "tintedBlack": "#0B0B0B"
+  },
+  "recommendation": "A",
+  "variants": [
+    {
+      "id": "current",
+      "name": "Current (approved 4 Sep 2026)",
+      "thesis": "Ink-first, one acid-green accent, one vermilion stamp — all three markers of Anthropic cluster 1.",
+      "recommended": false,
+      "colors": [
+        {
+          "name": "Ink",
+          "hex": "#101A17",
+          "oklch": {
+            "L": 0.207,
+            "C": 0.016,
+            "h": 174.2
+          },
+          "kind": "ink",
+          "role": "Text, dark surface, mark"
+        },
+        {
+          "name": "Paper",
+          "hex": "#E9EAE5",
+          "oklch": {
+            "L": 0.935,
+            "C": 0.007,
+            "h": 115.7
+          },
+          "kind": "paper",
+          "role": "Light surface, documents, carousels"
+        },
+        {
+          "name": "Stamp",
+          "hex": "#D8402B",
+          "oklch": {
+            "L": 0.591,
+            "C": 0.192,
+            "h": 31.1
+          },
+          "kind": "stamp",
+          "role": "Verdict, risk, KILL. Nothing else"
+        },
+        {
+          "name": "Lime",
+          "hex": "#BFFB4C",
+          "oklch": {
+            "L": 0.916,
+            "C": 0.206,
+            "h": 126.7
+          },
+          "kind": "accent",
+          "role": "Mark, rare data indicator; glows on dark only"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#69706B",
+          "oklch": {
+            "L": 0.538,
+            "C": 0.011,
+            "h": 154.9
+          },
+          "kind": "muted",
+          "role": "Secondary text, lines, labels"
+        },
+        {
+          "name": "Rule",
+          "hex": "#C3C7C1",
+          "oklch": {
+            "L": 0.825,
+            "C": 0.009,
+            "h": 134.9
+          },
+          "kind": "rule",
+          "role": "Hairline on Paper"
+        }
+      ],
+      "contrast": [
+        {
+          "pair": "Ink on Paper (body text)",
+          "fg": "#101A17",
+          "bg": "#E9EAE5",
+          "ratio": 14.69,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Paper on Ink (body text)",
+          "fg": "#E9EAE5",
+          "bg": "#101A17",
+          "ratio": 14.69,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Lime on Ink (graphic/large)",
+          "fg": "#BFFB4C",
+          "bg": "#101A17",
+          "ratio": 14.48,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Lime on Paper (graphic/large)",
+          "fg": "#BFFB4C",
+          "bg": "#E9EAE5",
+          "ratio": 1.01,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        },
+        {
+          "pair": "Stamp on Ink (graphic/large)",
+          "fg": "#D8402B",
+          "bg": "#101A17",
+          "ratio": 3.97,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Stamp on Paper (graphic/large)",
+          "fg": "#D8402B",
+          "bg": "#E9EAE5",
+          "ratio": 3.7,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Graphite on Paper (secondary text)",
+          "fg": "#69706B",
+          "bg": "#E9EAE5",
+          "ratio": 4.2,
+          "need": 4.5,
+          "pass": false,
+          "byDesign": false
+        },
+        {
+          "pair": "Rule on Paper (hairline)",
+          "fg": "#C3C7C1",
+          "bg": "#E9EAE5",
+          "ratio": 1.42,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        }
+      ],
+      "colorBlindness": {
+        "deuteranopia": {
+          "against": "Lime",
+          "stampSim": "#938324",
+          "accentSim": "#FFE75B",
+          "dL": 0.315,
+          "dEok": 0.319,
+          "separable": true
+        },
+        "protanopia": {
+          "against": "Lime",
+          "stampSim": "#6D6227",
+          "accentSim": "#FFEA2E",
+          "dL": 0.432,
+          "dEok": 0.445,
+          "separable": true
+        },
+        "normal": {
+          "dL": 0.325,
+          "dEok": 0.439
+        }
+      },
+      "clusterDistance": {
+        "accentVsAcidGreen": {
+          "name": "Lime",
+          "dh": 0,
+          "dC": 0,
+          "dL": 0
+        },
+        "greenVsAcidGreen": null,
+        "stampVsVermilion": {
+          "dh": 2,
+          "dC": -0.008,
+          "dL": -0.022
+        },
+        "stampVsTerracotta": {
+          "dh": 7.7,
+          "dC": 0.061,
+          "dL": -0.081
+        },
+        "paperVsCream_dEok": 0.024,
+        "inkVsTintedBlack_dEok": 0.059
+      },
+      "feel": [
+        "Reads as the default \"dark lab terminal\" — the exact silhouette models fall into.",
+        "Lime and Stamp are both maximum-chroma, so the system has two shouts and no speaking voice.",
+        "Lime L is within 0.01 of Paper L: the mark all but disappears on the light surface.",
+        "No structural mid-tone, so diagrams are built from Graphite alone and read flat.",
+        "Recognisable and confident on dark; indistinguishable from a hundred AI-brand decks."
+      ]
+    },
+    {
+      "id": "A",
+      "name": "A — Oxide (Paper-first)",
+      "thesis": "Smallest true move: flip the primary surface to Paper, de-neon the green, pull Stamp from vermilion to oxide, add a structural blueprint blue.",
+      "recommended": true,
+      "colors": [
+        {
+          "name": "Paper",
+          "hex": "#E4E9EA",
+          "oklch": {
+            "L": 0.93,
+            "C": 0.006,
+            "h": 211
+          },
+          "kind": "paper",
+          "role": "PRIMARY surface — carousels, covers, documents"
+        },
+        {
+          "name": "Ink",
+          "hex": "#0C1D1D",
+          "oklch": {
+            "L": 0.216,
+            "C": 0.023,
+            "h": 195.6
+          },
+          "kind": "ink",
+          "role": "Text on Paper; dark surface for accent frames only"
+        },
+        {
+          "name": "Signal",
+          "hex": "#7DD774",
+          "oklch": {
+            "L": 0.8,
+            "C": 0.16,
+            "h": 142
+          },
+          "kind": "accent",
+          "role": "Mark, positive verdict, data highlight"
+        },
+        {
+          "name": "Oxide",
+          "hex": "#BB4347",
+          "oklch": {
+            "L": 0.551,
+            "C": 0.155,
+            "h": 21.9
+          },
+          "kind": "stamp",
+          "role": "Verdict, risk, KILL. Nothing else"
+        },
+        {
+          "name": "Blueprint",
+          "hex": "#33587D",
+          "oklch": {
+            "L": 0.45,
+            "C": 0.074,
+            "h": 249.8
+          },
+          "kind": "structure",
+          "role": "Diagrams, arrows, second-level fills, chart series 2"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#5C6565",
+          "oklch": {
+            "L": 0.499,
+            "C": 0.011,
+            "h": 196.8
+          },
+          "kind": "muted",
+          "role": "Secondary text, labels"
+        },
+        {
+          "name": "Rule",
+          "hex": "#BEC6C7",
+          "oklch": {
+            "L": 0.821,
+            "C": 0.009,
+            "h": 205.9
+          },
+          "kind": "rule",
+          "role": "Hairline on Paper"
+        }
+      ],
+      "contrast": [
+        {
+          "pair": "Ink on Paper (body text)",
+          "fg": "#0C1D1D",
+          "bg": "#E4E9EA",
+          "ratio": 14.18,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Paper on Ink (body text)",
+          "fg": "#E4E9EA",
+          "bg": "#0C1D1D",
+          "ratio": 14.18,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Signal on Ink (graphic/large)",
+          "fg": "#7DD774",
+          "bg": "#0C1D1D",
+          "ratio": 9.8,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Signal on Paper (graphic/large)",
+          "fg": "#7DD774",
+          "bg": "#E4E9EA",
+          "ratio": 1.45,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        },
+        {
+          "pair": "Oxide on Ink (graphic/large)",
+          "fg": "#BB4347",
+          "bg": "#0C1D1D",
+          "ratio": 3.31,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Oxide on Paper (graphic/large)",
+          "fg": "#BB4347",
+          "bg": "#E4E9EA",
+          "ratio": 4.28,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Blueprint on Paper (graphic/large)",
+          "fg": "#33587D",
+          "bg": "#E4E9EA",
+          "ratio": 6.05,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Graphite on Paper (secondary text)",
+          "fg": "#5C6565",
+          "bg": "#E4E9EA",
+          "ratio": 4.89,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Rule on Paper (hairline)",
+          "fg": "#BEC6C7",
+          "bg": "#E4E9EA",
+          "ratio": 1.42,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        }
+      ],
+      "colorBlindness": {
+        "deuteranopia": {
+          "against": "Signal",
+          "stampSim": "#807644",
+          "accentSim": "#CEBF7A",
+          "dL": 0.239,
+          "dEok": 0.239,
+          "separable": true
+        },
+        "protanopia": {
+          "against": "Signal",
+          "stampSim": "#625C46",
+          "accentSim": "#DBC86C",
+          "dL": 0.355,
+          "dEok": 0.364,
+          "separable": true
+        },
+        "normal": {
+          "dL": 0.249,
+          "dEok": 0.369
+        }
+      },
+      "clusterDistance": {
+        "accentVsAcidGreen": {
+          "name": "Signal",
+          "dh": 15.3,
+          "dC": -0.046,
+          "dL": -0.116
+        },
+        "greenVsAcidGreen": null,
+        "stampVsVermilion": {
+          "dh": 7.2,
+          "dC": -0.045,
+          "dL": -0.062
+        },
+        "stampVsTerracotta": {
+          "dh": 16.9,
+          "dC": 0.024,
+          "dL": -0.121
+        },
+        "paperVsCream_dEok": 0.031,
+        "inkVsTintedBlack_dEok": 0.07
+      },
+      "feel": [
+        "Feels like a printed lab report rather than a terminal — the dark frame becomes a guest, not the host.",
+        "Signal drops 0.116 in L and 0.046 in C, so the accent stops reading as neon — but it is still a fill on Paper, not a text colour.",
+        "Oxide is a stamped ink, not a warning light; risk now looks archival instead of alarming.",
+        "Blueprint gives diagrams a second structural voice, so the system reads \"two accents + structure\".",
+        "BREAKS: every Ink-background template must be re-cut for Paper; the mark loses its glow on dark, and Signal at 0.80 L no longer halates against Ink the way Lime did."
+      ]
+    },
+    {
+      "id": "B",
+      "name": "B — Amber (Ink-first)",
+      "thesis": "Keeps the dark surface but changes what shouts: amber becomes the primary signal, green is demoted to a quiet data tint, Stamp moves to crimson away from both vermilion and terracotta.",
+      "recommended": false,
+      "colors": [
+        {
+          "name": "Ink",
+          "hex": "#0F141D",
+          "oklch": {
+            "L": 0.191,
+            "C": 0.02,
+            "h": 262
+          },
+          "kind": "ink",
+          "role": "PRIMARY surface — blue-black, not green-black"
+        },
+        {
+          "name": "Paper",
+          "hex": "#E2E7EA",
+          "oklch": {
+            "L": 0.925,
+            "C": 0.007,
+            "h": 233.6
+          },
+          "kind": "paper",
+          "role": "Text on Ink; light surface for documents"
+        },
+        {
+          "name": "Amber",
+          "hex": "#F2BB31",
+          "oklch": {
+            "L": 0.82,
+            "C": 0.155,
+            "h": 85
+          },
+          "kind": "accent",
+          "role": "Primary signal — mark, headline accent, KEEP"
+        },
+        {
+          "name": "Mint",
+          "hex": "#83E7A8",
+          "oklch": {
+            "L": 0.85,
+            "C": 0.13,
+            "h": 154.9
+          },
+          "kind": "accent2",
+          "role": "Data indicator only — charts, deltas, the mark's wedge"
+        },
+        {
+          "name": "Crimson",
+          "hex": "#C72C4C",
+          "oklch": {
+            "L": 0.549,
+            "C": 0.19,
+            "h": 15.1
+          },
+          "kind": "stamp",
+          "role": "Verdict, risk, KILL. Nothing else"
+        },
+        {
+          "name": "Slate",
+          "hex": "#525E72",
+          "oklch": {
+            "L": 0.479,
+            "C": 0.036,
+            "h": 260.6
+          },
+          "kind": "structure",
+          "role": "Diagrams, dividers, secondary fills"
+        },
+        {
+          "name": "Rule",
+          "hex": "#B9BEC4",
+          "oklch": {
+            "L": 0.799,
+            "C": 0.01,
+            "h": 252.8
+          },
+          "kind": "rule",
+          "role": "Hairline on Paper; also line on Ink at low opacity"
+        }
+      ],
+      "contrast": [
+        {
+          "pair": "Ink on Paper (body text)",
+          "fg": "#0F141D",
+          "bg": "#E2E7EA",
+          "ratio": 14.81,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Paper on Ink (body text)",
+          "fg": "#E2E7EA",
+          "bg": "#0F141D",
+          "ratio": 14.81,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Amber on Ink (graphic/large)",
+          "fg": "#F2BB31",
+          "bg": "#0F141D",
+          "ratio": 10.48,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Amber on Paper (graphic/large)",
+          "fg": "#F2BB31",
+          "bg": "#E2E7EA",
+          "ratio": 1.41,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        },
+        {
+          "pair": "Mint on Ink (graphic/large)",
+          "fg": "#83E7A8",
+          "bg": "#0F141D",
+          "ratio": 12.27,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Mint on Paper (graphic/large)",
+          "fg": "#83E7A8",
+          "bg": "#E2E7EA",
+          "ratio": 1.21,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        },
+        {
+          "pair": "Crimson on Ink (graphic/large)",
+          "fg": "#C72C4C",
+          "bg": "#0F141D",
+          "ratio": 3.42,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Crimson on Paper (graphic/large)",
+          "fg": "#C72C4C",
+          "bg": "#E2E7EA",
+          "ratio": 4.33,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Slate on Paper (graphic/large)",
+          "fg": "#525E72",
+          "bg": "#E2E7EA",
+          "ratio": 5.26,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Slate on Paper (secondary text)",
+          "fg": "#525E72",
+          "bg": "#E2E7EA",
+          "ratio": 5.26,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Rule on Paper (hairline)",
+          "fg": "#B9BEC4",
+          "bg": "#E2E7EA",
+          "ratio": 1.5,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        }
+      ],
+      "colorBlindness": {
+        "deuteranopia": {
+          "against": "Mint",
+          "stampSim": "#807648",
+          "accentSim": "#D7CEAC",
+          "dL": 0.286,
+          "dEok": 0.287,
+          "separable": true
+        },
+        "protanopia": {
+          "against": "Mint",
+          "stampSim": "#58564C",
+          "accentSim": "#E7D9A4",
+          "dL": 0.432,
+          "dEok": 0.435,
+          "separable": true
+        },
+        "normal": {
+          "dL": 0.301,
+          "dEok": 0.426
+        }
+      },
+      "clusterDistance": {
+        "accentVsAcidGreen": {
+          "name": "Amber",
+          "dh": 41.7,
+          "dC": -0.051,
+          "dL": -0.096
+        },
+        "greenVsAcidGreen": {
+          "name": "Mint",
+          "dh": 28.2,
+          "dC": -0.076,
+          "dL": -0.066
+        },
+        "stampVsVermilion": {
+          "dh": 14,
+          "dC": -0.01,
+          "dL": -0.064
+        },
+        "stampVsTerracotta": {
+          "dh": 23.7,
+          "dC": 0.059,
+          "dL": -0.123
+        },
+        "paperVsCream_dEok": 0.037,
+        "inkVsTintedBlack_dEok": 0.046
+      },
+      "feel": [
+        "Keeps the current silhouette so nothing has to be re-cut, but the accent hue is ~45 degrees away from acid.",
+        "Amber on blue-black reads as instrumentation and sodium light rather than as a chemical.",
+        "Mint keeps the mark legible as \"the M2 green\" while removing its neon claim.",
+        "Crimson separates cleanly from both vermilion and terracotta, so cluster 2 is off the table too.",
+        "BREAKS: three chromatic colours is one more than the system wants; discipline is required or covers turn into traffic lights. The dark surface still matches cluster 1 geometry — only the hue argues against it."
+      ]
+    },
+    {
+      "id": "C",
+      "name": "C — Instrument (dual-surface, cyan)",
+      "thesis": "Boldest of the three: the bright accent leaves green entirely for cyan, green survives as a deep viridian data colour, and a muted sage carries structure.",
+      "recommended": false,
+      "colors": [
+        {
+          "name": "Paper",
+          "hex": "#E5EBEB",
+          "oklch": {
+            "L": 0.936,
+            "C": 0.006,
+            "h": 197
+          },
+          "kind": "paper",
+          "role": "Primary surface for documents and carousels"
+        },
+        {
+          "name": "Ink",
+          "hex": "#061B22",
+          "oklch": {
+            "L": 0.209,
+            "C": 0.03,
+            "h": 222.6
+          },
+          "kind": "ink",
+          "role": "Text on Paper; surface for Reel covers"
+        },
+        {
+          "name": "Cyan",
+          "hex": "#4DD4DB",
+          "oklch": {
+            "L": 0.8,
+            "C": 0.115,
+            "h": 200
+          },
+          "kind": "accent",
+          "role": "Primary signal — mark, KEEP, highlight"
+        },
+        {
+          "name": "Viridian",
+          "hex": "#3F9B65",
+          "oklch": {
+            "L": 0.62,
+            "C": 0.12,
+            "h": 154.8
+          },
+          "kind": "accent2",
+          "role": "Data / positive green, legible on Paper"
+        },
+        {
+          "name": "Signal Red",
+          "hex": "#CC415E",
+          "oklch": {
+            "L": 0.581,
+            "C": 0.175,
+            "h": 12.2
+          },
+          "kind": "stamp",
+          "role": "Verdict, risk, KILL. Nothing else"
+        },
+        {
+          "name": "Sage",
+          "hex": "#616A59",
+          "oklch": {
+            "L": 0.511,
+            "C": 0.028,
+            "h": 130.2
+          },
+          "kind": "structure",
+          "role": "Diagrams, grid, secondary fills"
+        },
+        {
+          "name": "Rule",
+          "hex": "#C0C5C5",
+          "oklch": {
+            "L": 0.82,
+            "C": 0.006,
+            "h": 197
+          },
+          "kind": "rule",
+          "role": "Hairline on Paper"
+        }
+      ],
+      "contrast": [
+        {
+          "pair": "Ink on Paper (body text)",
+          "fg": "#061B22",
+          "bg": "#E5EBEB",
+          "ratio": 14.66,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Paper on Ink (body text)",
+          "fg": "#E5EBEB",
+          "bg": "#061B22",
+          "ratio": 14.66,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Cyan on Ink (graphic/large)",
+          "fg": "#4DD4DB",
+          "bg": "#061B22",
+          "ratio": 9.9,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Cyan on Paper (graphic/large)",
+          "fg": "#4DD4DB",
+          "bg": "#E5EBEB",
+          "ratio": 1.48,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        },
+        {
+          "pair": "Viridian on Ink (graphic/large)",
+          "fg": "#3F9B65",
+          "bg": "#061B22",
+          "ratio": 5.13,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Viridian on Paper (graphic/large)",
+          "fg": "#3F9B65",
+          "bg": "#E5EBEB",
+          "ratio": 2.86,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        },
+        {
+          "pair": "Signal Red on Ink (graphic/large)",
+          "fg": "#CC415E",
+          "bg": "#061B22",
+          "ratio": 3.78,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Signal Red on Paper (graphic/large)",
+          "fg": "#CC415E",
+          "bg": "#E5EBEB",
+          "ratio": 3.88,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Sage on Paper (graphic/large)",
+          "fg": "#616A59",
+          "bg": "#E5EBEB",
+          "ratio": 4.69,
+          "need": 3,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Sage on Paper (secondary text)",
+          "fg": "#616A59",
+          "bg": "#E5EBEB",
+          "ratio": 4.69,
+          "need": 4.5,
+          "pass": true,
+          "byDesign": false
+        },
+        {
+          "pair": "Rule on Paper (hairline)",
+          "fg": "#C0C5C5",
+          "bg": "#E5EBEB",
+          "ratio": 1.45,
+          "need": 3,
+          "pass": false,
+          "byDesign": true
+        }
+      ],
+      "colorBlindness": {
+        "deuteranopia": {
+          "against": "Viridian",
+          "stampSim": "#877E5B",
+          "accentSim": "#8E8768",
+          "dL": 0.029,
+          "dEok": 0.03,
+          "separable": false
+        },
+        "protanopia": {
+          "against": "Viridian",
+          "stampSim": "#63625E",
+          "accentSim": "#9B8F62",
+          "dL": 0.154,
+          "dEok": 0.164,
+          "separable": true
+        },
+        "normal": {
+          "dL": 0.039,
+          "dEok": 0.283
+        }
+      },
+      "clusterDistance": {
+        "accentVsAcidGreen": {
+          "name": "Cyan",
+          "dh": 73.3,
+          "dC": -0.091,
+          "dL": -0.116
+        },
+        "greenVsAcidGreen": {
+          "name": "Viridian",
+          "dh": 28.1,
+          "dC": -0.086,
+          "dL": -0.296
+        },
+        "stampVsVermilion": {
+          "dh": 16.9,
+          "dC": -0.025,
+          "dL": -0.032
+        },
+        "stampVsTerracotta": {
+          "dh": 26.6,
+          "dC": 0.044,
+          "dL": -0.091
+        },
+        "paperVsCream_dEok": 0.027,
+        "inkVsTintedBlack_dEok": 0.066
+      },
+      "feel": [
+        "Reads as an oscilloscope and a measuring instrument; the laboratory metaphor gets literal.",
+        "Cyan is the furthest any of the three variants gets from the acid-green cluster in hue.",
+        "Viridian is the first green in the system that is actually readable as text on Paper.",
+        "Sage keeps structure warm-neutral so the page does not turn into a single blue wash.",
+        "BREAKS: the mark stops being \"the lime one\". Recognisability against the approved 4 Sep palette is the weakest here, and Max would need the logo re-exported with a hue nobody has seen yet."
+      ]
+    }
+  ]
+}

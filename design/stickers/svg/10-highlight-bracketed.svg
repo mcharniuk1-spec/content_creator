@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Phrase held inside two 4 px brackets, marks a term being defined. -->
+<!-- Slots: slot-phrase (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="544" height="116" viewBox="0 0 544 116" fill="none">
+  <line x1="2" y1="8" x2="2" y2="108" stroke="#0C1D1D" stroke-width="4"/>
+  <line x1="0" y1="10" x2="22" y2="10" stroke="#0C1D1D" stroke-width="4"/>
+  <line x1="0" y1="106" x2="22" y2="106" stroke="#0C1D1D" stroke-width="4"/>
+  <text id="slot-phrase" x="42" y="85.92" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="80" font-weight="900" fill="#0C1D1D" letter-spacing="-0.8" xml:space="preserve">AI BOUNDARY</text>
+  <line x1="541.44" y1="8" x2="541.44" y2="108" stroke="#0C1D1D" stroke-width="4"/>
+  <line x1="521.44" y1="10" x2="543.44" y2="10" stroke="#0C1D1D" stroke-width="4"/>
+  <line x1="521.44" y1="106" x2="543.44" y2="106" stroke="#0C1D1D" stroke-width="4"/>
+</svg>

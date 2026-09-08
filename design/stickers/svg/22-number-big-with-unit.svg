@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: One large number with its unit and its WAS / NOW / SAVED label above it. -->
+<!-- Slots: slot-label, slot-value, slot-unit (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="232" viewBox="0 0 495 232" fill="none">
+  <text id="slot-label" x="0" y="40" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#5C6565" letter-spacing="5.12" xml:space="preserve">SAVED</text>
+  <text id="slot-value" x="0" y="200" font-family="Saira SemiCondensed, IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="168" font-weight="900" fill="#0C1D1D" letter-spacing="-1.68" xml:space="preserve">6.5</text>
+  <text id="slot-unit" x="255.38" y="200" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="44" font-weight="500" fill="#5C6565" letter-spacing="3.52" xml:space="preserve">H / WEEK</text>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Terminal card for a real command and its output. Block cursor, no blink. -->
+<!-- Slots: slot-line-1, slot-line-2, slot-line-3, slot-line-4 (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="380" viewBox="0 0 760 380" fill="none">
+  <rect x="0" y="0" width="760" height="380" fill="#0C1D1D"/>
+  <text id="slot-line-1" x="28" y="76" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="26" font-weight="400" fill="#E4E9EA" letter-spacing="0.52" xml:space="preserve">$ node run.mjs transcript.txt</text>
+  <text id="slot-line-2" x="28" y="128" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="26" font-weight="400" fill="#BEC6C7" letter-spacing="0.52" xml:space="preserve">  read 14 files</text>
+  <text id="slot-line-3" x="28" y="180" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="26" font-weight="400" fill="#BEC6C7" letter-spacing="0.52" xml:space="preserve">  2 rows need human review</text>
+  <text id="slot-line-4" x="28" y="232" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="26" font-weight="400" fill="#BEC6C7" letter-spacing="0.52" xml:space="preserve">  done in 95s</text>
+  <rect x="28" y="280" width="16" height="30" fill="#7DD774"/>
+</svg>

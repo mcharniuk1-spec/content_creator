@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: A cursor on the point under discussion, with its value beside it. Never a bare number. -->
+<!-- Slots: slot-y-axis, slot-value, slot-x-axis (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="348" viewBox="0 0 760 348" fill="none">
+  <rect x="0" y="0" width="760" height="348" fill="#0C1D1D"/>
+  <text id="slot-y-axis" x="32" y="50" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="24" font-weight="400" fill="#BEC6C7" letter-spacing="3.84" xml:space="preserve">Y: MINUTES PER RUN</text>
+  <line x1="32" y1="264" x2="728" y2="264" stroke="#5C6565" stroke-width="2"/>
+  <polyline points="32,102.86 131.43,135.09 230.86,116.29 330.29,170 429.71,210.29 529.14,186.11 628.57,231.77 728,242.51" fill="none" stroke="#7DD774" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
+  <line x1="429.71" y1="42" x2="429.71" y2="276" stroke="#BEC6C7" stroke-width="2"/>
+  <rect x="422.71" y="203.29" width="14" height="14" fill="#7DD774"/>
+  <text id="slot-value" x="449.71" y="38" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="34" font-weight="600" fill="#E4E9EA" letter-spacing="2.72" xml:space="preserve">120 MIN</text>
+  <text id="slot-x-axis" x="32" y="316" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="24" font-weight="400" fill="#BEC6C7" letter-spacing="3.84" xml:space="preserve">X: WEEK 01 TO 08</text>
+</svg>

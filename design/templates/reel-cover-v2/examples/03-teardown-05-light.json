@@ -1,0 +1,15 @@
+{
+  "slots": {
+    "surface": "light",
+    "plate": "",
+    "tag": "TEARDOWN / 05",
+    "episode": "EP 05 / SEP 2026",
+    "title_before": "One step in four\n",
+    "title_key": "stays human",
+    "title_after": "",
+    "visual_html": "<svg style=\"left:0px;top:0px\" width=\"840\" height=\"372\" viewBox=\"0 0 840 372\" fill=\"none\">\n  <rect x=\"2\" y=\"2\" width=\"836\" height=\"368\" fill=\"none\" stroke=\"#0C1D1D\" stroke-width=\"4\"/>\n  <rect x=\"40\" y=\"48\" width=\"72\" height=\"72\" fill=\"#0C1D1D\"/>\n  <g transform=\"translate(47 60) scale(2.1)\" fill=\"none\" stroke=\"#E4E9EA\" stroke-width=\"1.9\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"><path d=\"M20 6 9 17l-5-5\"/></g>\n  <text x=\"148\" y=\"96\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"44\" font-weight=\"500\" fill=\"#0C1D1D\" letter-spacing=\"7.04\" xml:space=\"preserve\">PULL THE RUNS</text>\n  <rect x=\"42\" y=\"154\" width=\"68\" height=\"68\" fill=\"none\" stroke=\"#0C1D1D\" stroke-width=\"4\"/>\n  <text x=\"148\" y=\"200\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"44\" font-weight=\"500\" fill=\"#0C1D1D\" letter-spacing=\"7.04\" xml:space=\"preserve\">DRAFT THE SUMMARY</text>\n  <rect x=\"42\" y=\"258\" width=\"68\" height=\"68\" fill=\"none\" stroke=\"#0C1D1D\" stroke-width=\"4\" stroke-dasharray=\"20 14\"/>\n  <text x=\"148\" y=\"304\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"44\" font-weight=\"500\" fill=\"#0C1D1D\" letter-spacing=\"7.04\" xml:space=\"preserve\">APPROVE, THEN SHIP</text>\n</svg>\n<svg style=\"left:0px;top:396px\" width=\"840\" height=\"96\" viewBox=\"0 0 840 96\" fill=\"none\">\n  <rect x=\"0\" y=\"0\" width=\"840\" height=\"96\" fill=\"#0C1D1D\"/>\n  <g transform=\"translate(28 19) scale(2.4)\" fill=\"none\" stroke=\"#E4E9EA\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"><path d=\"m16 11 2 2 4-4\"/><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/></g>\n  <text x=\"128\" y=\"64\" font-family=\"IBM Plex Mono, ui-monospace, Menlo, monospace\" font-size=\"44\" font-weight=\"500\" fill=\"#E4E9EA\" letter-spacing=\"7.04\" xml:space=\"preserve\">STEP 03 IS HUMAN</text>\n</svg>",
+    "caption_word": "human.",
+    "mark": "on",
+    "face_frame": "on"
+  }
+}

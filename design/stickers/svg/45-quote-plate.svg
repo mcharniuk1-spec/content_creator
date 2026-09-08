@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: A quote we can attribute, held by a 4 px rule. Two lines maximum. -->
+<!-- Slots: slot-line-1, slot-line-2, slot-attribution (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="552" height="244" viewBox="0 0 552 244" fill="none">
+  <rect x="0" y="0" width="4" height="172" fill="#0C1D1D"/>
+  <text id="slot-line-1" x="32" y="56" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="48" font-weight="400" fill="#0C1D1D" xml:space="preserve">We stopped at the draft.</text>
+  <text id="slot-line-2" x="32" y="124" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="48" font-weight="400" fill="#0C1D1D" xml:space="preserve">A person still sends it.</text>
+  <text id="slot-attribution" x="32" y="208" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#5C6565" letter-spacing="4.48" xml:space="preserve">PROCESS OWNER, PILOT 02</text>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "",
+    "pages": "",
+    "mark": "1",
+    "counter": "1 / 9",
+    "is_cover": "1",
+    "hook": "The invoice run\neats four hours",
+    "plate_line": "2",
+    "screen_title": "monday mail",
+    "files_html": "<li>VENDOR-A.PDF</li><li>VENDOR-B.PDF</li><li>SCAN-C.JPG<span class=\"mkr\"><span class=\"mkr-pt\"></span><span class=\"mkr-ld\"></span><span class=\"mkr-lb\">BROKE HERE</span></span></li><li>VENDOR-D.PDF</li>",
+    "caption": "monday",
+    "face": "[FACE: chest up, centred]"
+  }
+}

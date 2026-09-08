@@ -1,0 +1,5 @@
+<svg viewBox="0 0 1080 1080" width="1080" height="1080" xmlns="http://www.w3.org/2000/svg">
+<!-- QA overlay mask, not a brand asset. placement: feed-square 1080x1080 (1:1) -->
+<rect x="0" y="0" width="1080" height="1080" fill="none" stroke="#000" stroke-width="1"/>
+<rect x="0" y="0" width="135" height="1080" fill="rgba(105,112,107,0.35)"/><rect x="945" y="0" width="135" height="1080" fill="rgba(105,112,107,0.35)"/><rect x="135" y="0" width="810" height="1080" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="10,8"/><line x1="135" y1="0" x2="135" y2="1080" stroke="#111" stroke-width="4" stroke-dasharray="16,10"/><line x1="945" y1="0" x2="945" y2="1080" stroke="#111" stroke-width="4" stroke-dasharray="16,10"/><text x="160" y="60" font-family="monospace" font-size="28" fill="#111" text-anchor="start">A (grid-safe)</text><text x="15" y="60" font-family="monospace" font-size="28" fill="#111" text-anchor="start">B</text><text x="960" y="60" font-family="monospace" font-size="28" fill="#111" text-anchor="start">B</text><text x="20" y="1050" font-family="monospace" font-size="28" fill="#111" text-anchor="start">GRID 3:4 x=135..945</text>
+</svg>

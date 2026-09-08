@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Script structure as four labelled bars. Bar length is the share of the runtime. -->
+<!-- Slots: slot-hook, slot-body, slot-rehook, slot-cta (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="460" viewBox="0 0 620 460" fill="none">
+  <rect x="1" y="1" width="618" height="458" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <text id="slot-hook" x="28" y="60" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#0C1D1D" letter-spacing="4.48" xml:space="preserve">HOOK</text>
+  <rect x="28" y="78" width="101.52" height="24" fill="#0C1D1D"/>
+  <text id="slot-body" x="28" y="156" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#0C1D1D" letter-spacing="4.48" xml:space="preserve">BODY</text>
+  <rect x="28" y="174" width="564" height="24" fill="#1E4A80"/>
+  <text id="slot-rehook" x="28" y="252" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#0C1D1D" letter-spacing="4.48" xml:space="preserve">REHOOK</text>
+  <rect x="28" y="270" width="191.76" height="24" fill="#5C6565"/>
+  <text id="slot-cta" x="28" y="348" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#0C1D1D" letter-spacing="4.48" xml:space="preserve">CTA</text>
+  <rect x="28" y="366" width="124.08" height="24" fill="#BEC6C7"/>
+</svg>

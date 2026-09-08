@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Label with a leader line running left to a square point. Points at something on its left. -->
+<!-- Slots: slot-label (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="517" height="56" viewBox="0 0 517 56" fill="none">
+  <rect x="0" y="21" width="14" height="14" fill="#1E4A80"/>
+  <line x1="14" y1="28" x2="134" y2="28" stroke="#1E4A80" stroke-width="2"/>
+  <text id="slot-label" x="152" y="39.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#0C1D1D" letter-spacing="5.12" xml:space="preserve">HUMAN OWNS THIS</text>
+</svg>

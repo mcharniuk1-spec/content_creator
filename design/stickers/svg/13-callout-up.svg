@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Label under a vertical leader line ending in a square point above it. -->
+<!-- Slots: slot-label (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="154" viewBox="0 0 120 154" fill="none">
+  <rect x="0" y="0" width="14" height="14" fill="#1E4A80"/>
+  <line x1="7" y1="14" x2="7" y2="110" stroke="#1E4A80" stroke-width="2"/>
+  <text id="slot-label" x="0" y="140" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#0C1D1D" letter-spacing="5.12" xml:space="preserve">LENS</text>
+</svg>

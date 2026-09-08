@@ -1,0 +1,252 @@
+{
+  "canvas": "carousel",
+  "width": 1080,
+  "height": 1350,
+  "placement": "carousel",
+  "note": "1080x1350. Padding 96 all round. The band between the tag and the page dots is x 96..984, y 196..1094 (888 x 898); every layout fills it. Text sits on the 24 px indent (x 120), objects on the column guides (x 96, 324, 552, 780). Everything stays inside x 48..1032 so the 3:4 profile-grid crop loses nothing.",
+  "slots": {
+    "tag": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 96,
+        "w": 600,
+        "h": 36
+      }
+    },
+    "page": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 1226,
+        "w": 184,
+        "h": 16
+      }
+    },
+    "mark": {
+      "importance": "primary",
+      "box": {
+        "x": 888,
+        "y": 1158,
+        "w": 96,
+        "h": 96
+      }
+    },
+    "hook": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 196,
+        "w": 864,
+        "h": 898
+      }
+    },
+    "kicker": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 196,
+        "w": 864,
+        "h": 898
+      }
+    },
+    "swipe": {
+      "importance": "primary",
+      "box": {
+        "x": 328,
+        "y": 1216,
+        "w": 300,
+        "h": 38
+      }
+    },
+    "statement": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 196,
+        "w": 864,
+        "h": 898
+      }
+    },
+    "source": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 196,
+        "w": 864,
+        "h": 898
+      }
+    },
+    "title": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "unit": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "saved_text": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "action": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 196,
+        "w": 864,
+        "h": 898
+      }
+    },
+    "channel": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 196,
+        "w": 864,
+        "h": 898
+      }
+    },
+    "why": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "items_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "before_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "after_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "broken": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "current": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "ai_layer": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "verdict_text": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "verdict": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "was_count": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "now_count": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "glyph": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    },
+    "episode": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 196,
+        "w": 864,
+        "h": 898
+      }
+    },
+    "conditions_html": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 196,
+        "w": 888,
+        "h": 898
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+pdf/out/pages/
+pdf/out/proofs/
+pdf/out/proof-*
+assets/fonts/candidates/
+**/out/*.boxes.json
+.DS_Store

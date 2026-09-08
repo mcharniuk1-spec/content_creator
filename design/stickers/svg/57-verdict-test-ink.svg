@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: TEST verdict chip, 160x56, 2 px Paper dashed outline with a Paper label. Ink surface. -->
+<!-- Slots: slot-verdict (edit the text inside each element) Ink surface. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="56" viewBox="0 0 160 56" fill="none">
+  <rect x="1" y="1" width="158" height="54" fill="none" stroke="#E4E9EA" stroke-width="2" stroke-dasharray="12 8"/>
+  <text id="slot-verdict" x="24" y="40.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="500" fill="#E4E9EA" letter-spacing="5.76" xml:space="preserve">TEST</text>
+</svg>

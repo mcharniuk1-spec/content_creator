@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Quantity by repeating one unit at one size. Outline units are the ones no longer there. -->
+<!-- Slots: slot-caption (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="724" height="124" viewBox="0 0 724 124" fill="none">
+  <rect x="0" y="0" width="48" height="48" fill="#0C1D1D"/>
+  <rect x="64" y="0" width="48" height="48" fill="#0C1D1D"/>
+  <rect x="128" y="0" width="48" height="48" fill="#0C1D1D"/>
+  <rect x="192" y="0" width="48" height="48" fill="#0C1D1D"/>
+  <rect x="256" y="0" width="48" height="48" fill="#0C1D1D"/>
+  <rect x="320" y="0" width="48" height="48" fill="#0C1D1D"/>
+  <rect x="385" y="1" width="46" height="46" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <rect x="449" y="1" width="46" height="46" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <rect x="513" y="1" width="46" height="46" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <rect x="577" y="1" width="46" height="46" fill="none" stroke="#0C1D1D" stroke-width="2"/>
+  <text id="slot-caption" x="0" y="100" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#5C6565" letter-spacing="4.48" xml:space="preserve">ONE UNIT = ONE HOUR. FOUR REMOVED.</text>
+</svg>

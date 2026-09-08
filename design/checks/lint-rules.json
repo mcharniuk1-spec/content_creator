@@ -1,0 +1,23 @@
+[
+  {"id": "cream-terracotta", "level": "error", "description": "Warm cream background with terracotta/clay accent near #F4F1EA / #D97757", "check": {"type": "hex-distance", "value": ["#F4F1EA", "#D97757"], "threshold": 40}},
+  {"id": "near-black-acid-accent", "level": "error", "description": "Hex within RGB distance 40 of the acid-green (#BFFB4C) or vermilion (#E34234) AI-default accent, and not a palette colour", "check": {"type": "hex-distance", "value": ["#BFFB4C", "#E34234"], "threshold": 40}},
+  {"id": "fake-black", "level": "error", "description": "Tinted near-black used as true black", "check": {"type": "hex-distance", "value": ["#0B0B0B", "#111111"], "threshold": 40}},
+  {"id": "purple-gradient-hero", "level": "error", "description": "Purple/indigo gradient used as hero background", "check": {"type": "regex", "value": "(linear|radial)-gradient\\([^)]*#?(6[0-9a-f]{2}|7[0-9a-f]{2}|8[0-9a-f]{2})[0-9a-f]{3}", "flags": "i"}},
+  {"id": "any-gradient", "level": "error", "description": "Any linear/radial gradient used as decoration", "check": {"type": "regex", "value": "[\\w-]*gradient\\s*\\(", "flags": "i"}},
+  {"id": "uniform-radius", "level": "error", "description": "border-radius other than 0", "check": {"type": "css-property", "value": "border-radius != 0"}},
+  {"id": "soft-card-shadow", "level": "error", "description": "box-shadow other than none", "check": {"type": "css-property", "value": "box-shadow != none"}},
+  {"id": "default-sans-fonts", "level": "error", "description": "Default generative-model fonts instead of IBM Plex", "check": {"type": "font-family", "value": ["Inter", "Roboto", "Open Sans", "Lato", "Geist", "Space Grotesk", "Instrument Serif"]}},
+  {"id": "emoji-as-icon", "level": "error", "description": "Emoji code point used where an icon or copy character is required", "check": {"type": "unicode-range", "value": "U+1F300-1FAFF,U+2600-27BF"}},
+  {"id": "emdash-label", "level": "error", "description": "Label built as WORD — fragment with spaced em dash", "check": {"type": "regex", "value": "\\s—\\s"}},
+  {"id": "arrow-cta", "level": "error", "description": "Arrow glyph appended to link or button text", "check": {"type": "regex", "value": "→\\s*(<|$)"}},
+  {"id": "color-outside-tokens", "level": "error", "description": "Hex colour literal not present in tokens.json color.base", "check": {"type": "hex-not-in-palette", "source": "tokens/tokens.json#color.base"}},
+  {"id": "font-outside-plex", "level": "error", "description": "Font family other than IBM Plex Sans / Plex Sans Condensed / Plex Mono and the tokens.json fallbacks", "check": {"type": "font-family-not-allowed", "source": "tokens/tokens.json#font.family"}},
+  {"id": "centered-text", "level": "error", "description": "text-align: center or SVG text-anchor=\"middle\"", "check": {"type": "regex", "value": "text-align\\s*:\\s*center|text-anchor\\s*=\\s*[\"']middle[\"']", "flags": "i"}},
+  {"id": "filled-duotone-icon", "level": "warn", "description": "SVG <path> fill other than none/currentColor inside templates/ or assets/ (\"filled icon?\")", "check": {"type": "svg-fill", "scope": ["templates/", "assets/"]}},
+  {"id": "drop-shadow-filter", "level": "error", "description": "filter: drop-shadow used on any element", "check": {"type": "regex", "value": "filter\\s*:\\s*[^;]*drop-shadow", "flags": "i"}},
+  {"id": "banned-vocabulary", "level": "error", "description": "Copy matches a phrase from the do-not-publish list", "check": {"type": "phrase-list", "source": "brand/05-vocabulary.md#words-and-constructions-we-do-not-publish", "case": "insensitive"}},
+  {"id": "long-dash-copy", "level": "error", "description": "Long dash character (— or –) in copy; use a comma or a full stop", "check": {"type": "regex", "value": "[—–]"}},
+  {"id": "hook-words-limit", "level": "error", "description": "Hook exceeds 8 words (6 for filenames containing 4x5 or carousel)", "check": {"type": "word-count", "source": "tokens/tokens.json#measure.hook-words-reel,measure.hook-words-4x5"}},
+  {"id": "hook-line-chars", "level": "error", "description": "A hook line (split on \\n) exceeds tokens.json measure.hook-chars (20)", "check": {"type": "line-length", "source": "tokens/tokens.json#measure.hook-chars"}},
+  {"id": "body-line-chars", "level": "error", "description": "A body line (split on \\n) exceeds tokens.json measure.body-chars (38)", "check": {"type": "line-length", "source": "tokens/tokens.json#measure.body-chars"}}
+]

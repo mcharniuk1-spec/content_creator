@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Position counter for a carousel or a step list, with a unit tick per step. -->
+<!-- Slots: slot-current, slot-total (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="92" viewBox="0 0 210 92" fill="none">
+  <text id="slot-current" x="0" y="44" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="44" font-weight="600" fill="#0C1D1D" letter-spacing="3.52" xml:space="preserve">01</text>
+  <text x="59.84" y="44" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="44" font-weight="400" fill="#BEC6C7" letter-spacing="3.52" xml:space="preserve"> / </text>
+  <text id="slot-total" x="149.61" y="44" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="44" font-weight="400" fill="#5C6565" letter-spacing="3.52" xml:space="preserve">07</text>
+  <rect x="0" y="68" width="12" height="12" fill="#0C1D1D"/>
+  <rect x="20" y="68" width="12" height="12" fill="#BEC6C7"/>
+  <rect x="40" y="68" width="12" height="12" fill="#BEC6C7"/>
+  <rect x="60" y="68" width="12" height="12" fill="#BEC6C7"/>
+  <rect x="80" y="68" width="12" height="12" fill="#BEC6C7"/>
+  <rect x="100" y="68" width="12" height="12" fill="#BEC6C7"/>
+  <rect x="120" y="68" width="12" height="12" fill="#BEC6C7"/>
+</svg>

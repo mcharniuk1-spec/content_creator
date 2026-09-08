@@ -1,0 +1,15 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "6",
+    "pages": "9",
+    "mark": "1",
+    "is_scheme": "1",
+    "current": "Four steps by hand, every Monday",
+    "ai_layer": "Model reads mail, names files, fills the totals",
+    "shot_run": "[SCREENSHOT:\nTHE RUN]",
+    "verdict_text": "A person signs off every batch",
+    "verdict": "TEST",
+    "steps_html": "<li>MAIL</li><li>RENAME</li><li>TOTALS</li><li>CHASE</li>"
+  }
+}

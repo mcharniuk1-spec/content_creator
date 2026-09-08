@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Code-style format tag on an Ink plate, the default tag on Paper. -->
+<!-- Slots: slot-tag (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="365" height="88" viewBox="0 0 365 88" fill="none">
+  <rect x="0" y="0" width="364.09" height="88" fill="#0C1D1D"/>
+  <text id="slot-tag" x="32" y="59.36" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="44" font-weight="600" fill="#E4E9EA" letter-spacing="0.88" xml:space="preserve">&lt;Workflow/&gt;</text>
+</svg>

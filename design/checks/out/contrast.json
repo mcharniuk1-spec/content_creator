@@ -1,0 +1,122 @@
+[
+  {
+    "fg": "text.on-light",
+    "fgHex": "#0C1D1D",
+    "bg": "surface.primary",
+    "bgHex": "#E4E9EA",
+    "ratio": 14.18,
+    "threshold": 4.5,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "text.on-dark",
+    "fgHex": "#E4E9EA",
+    "bg": "surface.dark",
+    "bgHex": "#0C1D1D",
+    "ratio": 14.18,
+    "threshold": 4.5,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "text.secondary",
+    "fgHex": "#5C6565",
+    "bg": "surface.primary",
+    "bgHex": "#E4E9EA",
+    "ratio": 4.89,
+    "threshold": 4.5,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "text.secondary-on-dark",
+    "fgHex": "#BEC6C7",
+    "bg": "surface.dark",
+    "bgHex": "#0C1D1D",
+    "ratio": 10,
+    "threshold": 4.5,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "accent.data",
+    "fgHex": "#7DD774",
+    "bg": "surface.dark",
+    "bgHex": "#0C1D1D",
+    "ratio": 9.8,
+    "threshold": 3,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "accent.alert",
+    "fgHex": "#BB4347",
+    "bg": "surface.primary",
+    "bgHex": "#E4E9EA",
+    "ratio": 4.28,
+    "threshold": 3,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "accent.alert",
+    "fgHex": "#BB4347",
+    "bg": "surface.dark",
+    "bgHex": "#0C1D1D",
+    "ratio": 3.31,
+    "threshold": 3,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "accent.structure",
+    "fgHex": "#1E4A80",
+    "bg": "surface.primary",
+    "bgHex": "#E4E9EA",
+    "ratio": 7.31,
+    "threshold": 3,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "line.on-dark",
+    "fgHex": "#BEC6C7",
+    "bg": "surface.dark",
+    "bgHex": "#0C1D1D",
+    "ratio": 10,
+    "threshold": 3,
+    "result": "PASS",
+    "note": null
+  },
+  {
+    "fg": "line.on-dark-muted",
+    "fgHex": "#5C6565",
+    "bg": "surface.dark",
+    "bgHex": "#0C1D1D",
+    "ratio": 2.9,
+    "threshold": null,
+    "result": "report only",
+    "note": null
+  },
+  {
+    "fg": "line.on-light",
+    "fgHex": "#BEC6C7",
+    "bg": "surface.primary",
+    "bgHex": "#E4E9EA",
+    "ratio": 1.42,
+    "threshold": null,
+    "result": "report only",
+    "note": null
+  },
+  {
+    "fg": "color.base.ink",
+    "fgHex": "#0C1D1D",
+    "bg": "color.base.signal",
+    "bgHex": "#7DD774",
+    "ratio": 9.8,
+    "threshold": 4.5,
+    "result": "PASS",
+    "note": "chip label on KEEP fill on dark"
+  }
+]

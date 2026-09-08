@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Format and episode tag, the RADAR / 04 line that opens a piece. -->
+<!-- Slots: slot-format, slot-number (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="278" height="72" viewBox="0 0 278 72" fill="none">
+  <rect x="0" y="0" width="277.55" height="72" fill="#0C1D1D"/>
+  <text id="slot-format" x="24" y="48.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="500" fill="#E4E9EA" letter-spacing="5.76" xml:space="preserve">RADAR</text>
+  <rect x="178.81" y="16" width="2" height="40" fill="#BEC6C7"/>
+  <text id="slot-number" x="198.81" y="48.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="500" fill="#BEC6C7" letter-spacing="5.76" xml:space="preserve">04</text>
+</svg>

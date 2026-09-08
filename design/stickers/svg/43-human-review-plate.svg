@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Names the approval step before output leaves the team. -->
+<!-- Slots: slot-label (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="437" height="88" viewBox="0 0 437 88" fill="none">
+  <rect x="1" y="1" width="434.33" height="86" fill="none" stroke="#0C1D1D" stroke-width="2" stroke-dasharray="12 8"/>
+  <g transform="translate(24 24) scale(1.67)" fill="none" stroke="#0C1D1D" stroke-width="0.9" stroke-linecap="square" stroke-linejoin="miter"><path d="m16 11 2 2 4-4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></g>
+  <text id="slot-label" x="84" y="56.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="500" fill="#0C1D1D" letter-spacing="5.76" xml:space="preserve">HUMAN REVIEW</text>
+</svg>

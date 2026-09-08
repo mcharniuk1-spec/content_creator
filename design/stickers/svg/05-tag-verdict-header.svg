@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: M2 VERDICT header tag with a Signal bar, opens the verdict card. -->
+<!-- Slots: slot-header (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="437" height="96" viewBox="0 0 437 96" fill="none">
+  <rect x="0" y="0" width="436.81" height="96" fill="#0C1D1D"/>
+  <rect x="0" y="0" width="12" height="96" fill="#7DD774"/>
+  <text id="slot-header" x="40" y="64.75" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="48" font-weight="600" fill="#E4E9EA" letter-spacing="7.68" xml:space="preserve">M2 VERDICT</text>
+</svg>

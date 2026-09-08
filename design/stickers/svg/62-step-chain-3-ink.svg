@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Three process boxes joined by plain connectors. No arrowheads anywhere in the system. Ink surface. -->
+<!-- Slots: slot-step-1, slot-step-2, slot-step-3 (edit the text inside each element) Ink surface. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="784" height="88" viewBox="0 0 784 88" fill="none">
+  <rect x="1" y="1" width="222" height="86" fill="none" stroke="#E4E9EA" stroke-width="2"/>
+  <text id="slot-step-1" x="51.2" y="55.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#E4E9EA" letter-spacing="5.12" xml:space="preserve">INPUT</text>
+  <line x1="224" y1="44" x2="280" y2="44" stroke="#E4E9EA" stroke-width="2"/>
+  <rect x="246" y="38" width="12" height="12" fill="#E4E9EA"/>
+  <rect x="281" y="1" width="222" height="86" fill="none" stroke="#E4E9EA" stroke-width="2"/>
+  <text id="slot-step-2" x="331.2" y="55.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#E4E9EA" letter-spacing="5.12" xml:space="preserve">MODEL</text>
+  <line x1="504" y1="44" x2="560" y2="44" stroke="#E4E9EA" stroke-width="2"/>
+  <rect x="526" y="38" width="12" height="12" fill="#E4E9EA"/>
+  <rect x="561" y="1" width="222" height="86" fill="none" stroke="#E4E9EA" stroke-width="2"/>
+  <text id="slot-step-3" x="599.04" y="55.17" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#E4E9EA" letter-spacing="5.12" xml:space="preserve">REVIEW</text>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Phone frame at 9:16 with a plain notch bar. Holds a screenshot, never a stock image. -->
+<!-- Slots: slot-placeholder, slot-caption (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="676" viewBox="0 0 380 676" fill="none">
+  <rect x="4" y="4" width="372" height="668" fill="#E4E9EA"/>
+  <rect x="2" y="2" width="376" height="672" fill="none" stroke="#0C1D1D" stroke-width="4"/>
+  <rect x="120" y="20" width="140" height="12" fill="#0C1D1D"/>
+  <text id="slot-placeholder" x="28" y="92" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="32" font-weight="500" fill="#5C6565" letter-spacing="5.12" xml:space="preserve">[SCREEN]</text>
+  <rect x="28" y="112" width="324" height="2" fill="#BEC6C7"/>
+  <rect x="0" y="612" width="380" height="64" fill="#0C1D1D"/>
+  <text id="slot-caption" x="28" y="654" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="28" font-weight="500" fill="#E4E9EA" letter-spacing="4.48" xml:space="preserve">REEL COVER</text>
+</svg>

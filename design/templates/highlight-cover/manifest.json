@@ -1,0 +1,36 @@
+{
+  "canvas": "highlight",
+  "width": 1080,
+  "height": 1920,
+  "placement": "highlight-cover",
+  "note": "Circle crop, r 486 at (540, 960). Every box is verified fully inside that circle, corners included. Only one of mark, word or numeral is used per cover.",
+  "slots": {
+    "mark": {
+      "importance": "primary",
+      "box": {
+        "x": 230,
+        "y": 650,
+        "w": 620,
+        "h": 620
+      }
+    },
+    "word": {
+      "importance": "primary",
+      "box": {
+        "x": 198,
+        "y": 812,
+        "w": 684,
+        "h": 297
+      }
+    },
+    "numeral": {
+      "importance": "primary",
+      "box": {
+        "x": 198,
+        "y": 754,
+        "w": 684,
+        "h": 412
+      }
+    }
+  }
+}

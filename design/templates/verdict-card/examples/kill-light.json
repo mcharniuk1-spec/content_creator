@@ -1,0 +1,7 @@
+{
+  "slots": {
+    "surface": "light",
+    "verdict": "KILL",
+    "why": "It broke on every booking\nwith two dates, and the cost\nof that error is a lost room."
+  }
+}

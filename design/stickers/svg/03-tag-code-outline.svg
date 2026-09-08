@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Code-style format tag as a 4 px outline, the quiet tag inside a carousel slide. -->
+<!-- Slots: slot-tag (edit the text inside each element) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="337" height="88" viewBox="0 0 337 88" fill="none">
+  <rect x="2" y="2" width="332.81" height="84" fill="none" stroke="#0C1D1D" stroke-width="4"/>
+  <text id="slot-tag" x="32" y="59.36" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="44" font-weight="600" fill="#0C1D1D" letter-spacing="0.88" xml:space="preserve">&lt;Handoff/&gt;</text>
+</svg>

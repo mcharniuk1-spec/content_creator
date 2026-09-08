@@ -1,0 +1,94 @@
+{
+  "canvas": "reel",
+  "width": 1080,
+  "height": 1920,
+  "placement": "reel",
+  "note": "Boxes are the laid-out pixel boxes on the 1080x1920 canvas. Fixed slots: the hook block always reserves 3 lines, so every box below it holds whatever the hook length is.",
+  "control_slots": {
+    "surface": "light (Paper, default) | dark (Ink). Drives the body class, has no box of its own."
+  },
+  "slots": {
+    "tag": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 272,
+        "w": 864,
+        "h": 36
+      }
+    },
+    "hook": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 356,
+        "w": 864,
+        "h": 297
+      }
+    },
+    "proof_frame": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 729,
+        "w": 888,
+        "h": 257
+      }
+    },
+    "proof_src": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 729,
+        "w": 888,
+        "h": 257
+      }
+    },
+    "proof": {
+      "importance": "primary",
+      "box": {
+        "x": 120,
+        "y": 1002,
+        "w": 660,
+        "h": 32
+      }
+    },
+    "episode": {
+      "importance": "primary",
+      "box": {
+        "x": 348,
+        "y": 1114,
+        "w": 432,
+        "h": 32
+      }
+    },
+    "verdict": {
+      "importance": "primary",
+      "box": {
+        "x": 324,
+        "y": 1162,
+        "w": 160,
+        "h": 56
+      }
+    },
+    "mark": {
+      "importance": "primary",
+      "box": {
+        "x": 96,
+        "y": 1098,
+        "w": 120,
+        "h": 120
+      }
+    }
+  },
+  "static_elements": {
+    "rule": {
+      "box": {
+        "x": 96,
+        "y": 677,
+        "w": 888,
+        "h": 4
+      }
+    }
+  }
+}

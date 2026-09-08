@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Purpose: Three checklist rows. State reads from the shape of the box, not from colour. Ink surface. -->
+<!-- Slots: slot-done, slot-pending, slot-blocked (edit the text inside each element) Ink surface. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="584" height="248" viewBox="0 0 584 248" fill="none">
+  <rect x="0" y="16" width="40" height="40" fill="#E4E9EA"/>
+  <g transform="translate(6 22) scale(1.17)" fill="none" stroke="#0C1D1D" stroke-width="1.93" stroke-linecap="square" stroke-linejoin="miter"><path d="M20 6 9 17l-5-5"/></g>
+  <text id="slot-done" x="64" y="48.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="500" fill="#E4E9EA" letter-spacing="5.76" xml:space="preserve">FRAGMENTS WRITTEN</text>
+  <rect x="1" y="105" width="38" height="38" fill="none" stroke="#E4E9EA" stroke-width="2"/>
+  <text id="slot-pending" x="64" y="136.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="500" fill="#E4E9EA" letter-spacing="5.76" xml:space="preserve">FIRST TEST QUEUED</text>
+  <rect x="1" y="193" width="38" height="38" fill="none" stroke="#E4E9EA" stroke-width="2" stroke-dasharray="12 8"/>
+  <text id="slot-blocked" x="64" y="224.56" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="36" font-weight="500" fill="#E4E9EA" letter-spacing="5.76" xml:space="preserve">HANDOFF NOT AGREED</text>
+</svg>

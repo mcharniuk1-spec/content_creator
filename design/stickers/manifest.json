@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "01",
+    "file": "svg/01-tag-code-signal-plate.svg",
+    "family": "tags",
+    "purpose": "Code-style format tag on a Signal plate, the loudest tag on a Reel cover.",
+    "slots": [
+      "tag"
+    ],
+    "size": {
+      "w": 392,
+      "h": 88
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "02",
+    "file": "svg/02-tag-code-ink-plate.svg",
+    "family": "tags",
+    "purpose": "Code-style format tag on an Ink plate, the default tag on Paper.",
+    "slots": [
+      "tag"
+    ],
+    "size": {
+      "w": 365,
+      "h": 88
+    },
+    "surfaces": [
+      "paper",
+      "ink"
+    ]
+  },
+  {
+    "id": "03",
+    "file": "svg/03-tag-code-outline.svg",
+    "family": "tags",
+    "purpose": "Code-style format tag as a 4 px outline, the quiet tag inside a carousel slide.",
+    "slots": [
+      "tag"
+    ],
+    "size": {
+      "w": 337,
+      "h": 88
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "04",
+    "file": "svg/04-tag-format-episode.svg",
+    "family": "tags",
+    "purpose": "Format and episode tag, the RADAR / 04 line that opens a piece.",
+    "slots": [
+      "format",
+      "number"
+    ],
+    "size": {
+      "w": 278,
+      "h": 72
+    },
+    "surfaces": [
+      "paper",
+      "ink"
+    ]
+  },
+  {
+    "id": "05",
+    "file": "svg/05-tag-verdict-header.svg",
+    "family": "tags",
+    "purpose": "M2 VERDICT header tag with a Signal bar, opens the verdict card.",
+    "slots": [
+      "header"
+    ],
+    "size": {
+      "w": 437,
+      "h": 96
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "06",
+    "file": "svg/06-highlight-bar-oxide.svg",
+    "family": "highlights",
+    "purpose": "Highlight bar in Oxide. Only under a phrase naming what is broken or killed.",
+    "slots": [
+      "phrase"
+    ],
+    "size": {
+      "w": 839,
+      "h": 124
+    },
+    "surfaces": [
+      "paper",
+      "ink"
+    ]
+  },
+  {
+    "id": "07",
+    "file": "svg/07-highlight-bar-signal.svg",
+    "family": "highlights",
+    "purpose": "Highlight bar in Signal under the phrase that carries the measured result. Ink surfaces only.",
+    "slots": [
+      "phrase"
+    ],
+    "size": {
+      "w": 751,
+      "h": 124
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "08",
+    "file": "svg/08-highlight-bar-ink.svg",
+    "family": "highlights",
+    "purpose": "Highlight bar in Ink, the neutral emphasis for one phrase inside a Paper headline.",
+    "slots": [
+      "phrase"
+    ],
+    "size": {
+      "w": 618,
+      "h": 124
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "09",
+    "file": "svg/09-highlight-underline-12.svg",
+    "family": "highlights",
+    "purpose": "Key phrase with a 12 px rule under it, for emphasis that leaves the type readable.",
+    "slots": [
+      "phrase"
+    ],
+    "size": {
+      "w": 1003,
+      "h": 128
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "10",
+    "file": "svg/10-highlight-bracketed.svg",
+    "family": "highlights",
+    "purpose": "Phrase held inside two 4 px brackets, marks a term being defined.",
+    "slots": [
+      "phrase"
+    ],
+    "size": {
+      "w": 544,
+      "h": 116
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "11",
+    "file": "svg/11-callout-left.svg",
+    "family": "callouts",
+    "purpose": "Label with a leader line running left to a square point. Points at something on its left.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 517,
+      "h": 56
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "12",
+    "file": "svg/12-callout-right.svg",
+    "family": "callouts",
+    "purpose": "Label with a leader line running right to a square point. Points at something on its right.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 566,
+      "h": 56
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "13",
+    "file": "svg/13-callout-up.svg",
+    "family": "callouts",
+    "purpose": "Label under a vertical leader line ending in a square point above it.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 120,
+      "h": 154
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "14",
+    "file": "svg/14-callout-down-numbered.svg",
+    "family": "callouts",
+    "purpose": "Numbered label over a vertical leader line ending in a square point below it.",
+    "slots": [
+      "number",
+      "label"
+    ],
+    "size": {
+      "w": 336,
+      "h": 158
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "15",
+    "file": "svg/15-callout-human-step.svg",
+    "family": "callouts",
+    "purpose": "Dashed plate naming the step that stays human, pointed at by a leader line.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 636,
+      "h": 88
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "16",
+    "file": "svg/16-verdict-keep.svg",
+    "family": "verdict",
+    "purpose": "KEEP verdict chip, 160x56, solid Ink plate with a Paper label.",
+    "slots": [
+      "verdict"
+    ],
+    "size": {
+      "w": 160,
+      "h": 56
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "17",
+    "file": "svg/17-verdict-kill.svg",
+    "family": "verdict",
+    "purpose": "KILL verdict chip, 160x56, 4 px Oxide outline with an Ink label.",
+    "slots": [
+      "verdict"
+    ],
+    "size": {
+      "w": 160,
+      "h": 56
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "18",
+    "file": "svg/18-verdict-test.svg",
+    "family": "verdict",
+    "purpose": "TEST verdict chip, 160x56, 2 px Ink dashed outline with an Ink label.",
+    "slots": [
+      "verdict"
+    ],
+    "size": {
+      "w": 160,
+      "h": 56
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "19",
+    "file": "svg/19-stamp-tested-own-process.svg",
+    "family": "verdict",
+    "purpose": "Square stamp declaring the source of a number. Never rotated.",
+    "slots": [
+      "line-1",
+      "line-2",
+      "line-3"
+    ],
+    "size": {
+      "w": 360,
+      "h": 360
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "20",
+    "file": "svg/20-marker-broke-here.svg",
+    "family": "verdict",
+    "purpose": "Oxide marker for the exact step that failed. The only decorative use of Oxide is none.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 414,
+      "h": 76
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "21",
+    "file": "svg/21-numbers-was-now-saved.svg",
+    "family": "numbers",
+    "purpose": "The only frame for a time or volume number: WAS, NOW, SAVED on three plates.",
+    "slots": [
+      "was",
+      "now",
+      "saved"
+    ],
+    "size": {
+      "w": 736,
+      "h": 208
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "22",
+    "file": "svg/22-number-big-with-unit.svg",
+    "family": "numbers",
+    "purpose": "One large number with its unit and its WAS / NOW / SAVED label above it.",
+    "slots": [
+      "label",
+      "value",
+      "unit"
+    ],
+    "size": {
+      "w": 495,
+      "h": 232
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "23",
+    "file": "svg/23-delta-plate.svg",
+    "family": "numbers",
+    "purpose": "Ink plate carrying one change figure and what it is a change in.",
+    "slots": [
+      "label",
+      "value",
+      "unit"
+    ],
+    "size": {
+      "w": 440,
+      "h": 200
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "24",
+    "file": "svg/24-counter-of-total.svg",
+    "family": "numbers",
+    "purpose": "Position counter for a carousel or a step list, with a unit tick per step.",
+    "slots": [
+      "current",
+      "total"
+    ],
+    "size": {
+      "w": 210,
+      "h": 92
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "25",
+    "file": "svg/25-percentage-with-baseline.svg",
+    "family": "numbers",
+    "purpose": "A percentage that cannot be published without the baseline it was measured against.",
+    "slots": [
+      "value",
+      "baseline"
+    ],
+    "size": {
+      "w": 511,
+      "h": 216
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "26",
+    "file": "svg/26-list-numbered-row.svg",
+    "family": "lists",
+    "purpose": "One numbered row with a structure bar at the left. Stack five for an 01 to 05 list.",
+    "slots": [
+      "number",
+      "text"
+    ],
+    "size": {
+      "w": 703,
+      "h": 88
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "27",
+    "file": "svg/27-checklist-row-states.svg",
+    "family": "lists",
+    "purpose": "Three checklist rows. State reads from the shape of the box, not from colour.",
+    "slots": [
+      "done",
+      "pending",
+      "blocked"
+    ],
+    "size": {
+      "w": 584,
+      "h": 248
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "28",
+    "file": "svg/28-step-chain-3.svg",
+    "family": "lists",
+    "purpose": "Three process boxes joined by plain connectors. No arrowheads anywhere in the system.",
+    "slots": [
+      "step-1",
+      "step-2",
+      "step-3"
+    ],
+    "size": {
+      "w": 784,
+      "h": 88
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "29",
+    "file": "svg/29-table-keep-kill.svg",
+    "family": "lists",
+    "purpose": "Two-column mini table splitting what we kept from what we killed.",
+    "slots": [
+      "head-left",
+      "head-right",
+      "keep-1",
+      "keep-2",
+      "keep-3",
+      "kill-1",
+      "kill-2",
+      "kill-3"
+    ],
+    "size": {
+      "w": 768,
+      "h": 256
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "30",
+    "file": "svg/30-ranked-row.svg",
+    "family": "lists",
+    "purpose": "Ranked row with a rank square and the figure that earned the rank.",
+    "slots": [
+      "rank",
+      "text",
+      "value"
+    ],
+    "size": {
+      "w": 880,
+      "h": 64
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "31",
+    "file": "svg/31-chart-card-line.svg",
+    "family": "data",
+    "purpose": "One Signal series on Ink with both axes labelled. A chart without axis labels does not ship.",
+    "slots": [
+      "title",
+      "y-axis",
+      "x-axis"
+    ],
+    "size": {
+      "w": 760,
+      "h": 440
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "32",
+    "file": "svg/32-bar-compare-card.svg",
+    "family": "data",
+    "purpose": "Two bars comparing the same measure before and after. Bars share one scale.",
+    "slots": [
+      "label-a",
+      "value-a",
+      "label-b",
+      "value-b"
+    ],
+    "size": {
+      "w": 800,
+      "h": 304
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "33",
+    "file": "svg/33-progress-bar-time.svg",
+    "family": "data",
+    "purpose": "Watch-time bar with the elapsed mark. Ink plate, Signal fill, no rounded ends.",
+    "slots": [
+      "time"
+    ],
+    "size": {
+      "w": 760,
+      "h": 128
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "34",
+    "file": "svg/34-isotype-row-10.svg",
+    "family": "data",
+    "purpose": "Quantity by repeating one unit at one size. Outline units are the ones no longer there.",
+    "slots": [
+      "caption"
+    ],
+    "size": {
+      "w": 724,
+      "h": 124
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "35",
+    "file": "svg/35-oscilloscope-cursor.svg",
+    "family": "data",
+    "purpose": "A cursor on the point under discussion, with its value beside it. Never a bare number.",
+    "slots": [
+      "y-axis",
+      "value",
+      "x-axis"
+    ],
+    "size": {
+      "w": 760,
+      "h": 348
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "36",
+    "file": "svg/36-screen-phone-9x16.svg",
+    "family": "screens",
+    "purpose": "Phone frame at 9:16 with a plain notch bar. Holds a screenshot, never a stock image.",
+    "slots": [
+      "placeholder",
+      "caption"
+    ],
+    "size": {
+      "w": 380,
+      "h": 676
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "37",
+    "file": "svg/37-screen-browser.svg",
+    "family": "screens",
+    "purpose": "Browser window frame with a hairline title row. Holds a tool screenshot.",
+    "slots": [
+      "title",
+      "placeholder"
+    ],
+    "size": {
+      "w": 760,
+      "h": 520
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "38",
+    "file": "svg/38-screen-script-card.svg",
+    "family": "screens",
+    "purpose": "Script structure as four labelled bars. Bar length is the share of the runtime.",
+    "slots": [
+      "hook",
+      "body",
+      "rehook",
+      "cta"
+    ],
+    "size": {
+      "w": 620,
+      "h": 460
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "39",
+    "file": "svg/39-screen-document-card.svg",
+    "family": "screens",
+    "purpose": "Document stand-in: a title and hairline rows. Stands for a fragmentation or a brief.",
+    "slots": [
+      "title"
+    ],
+    "size": {
+      "w": 500,
+      "h": 620
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "40",
+    "file": "svg/40-screen-terminal-card.svg",
+    "family": "screens",
+    "purpose": "Terminal card for a real command and its output. Block cursor, no blink.",
+    "slots": [
+      "line-1",
+      "line-2",
+      "line-3",
+      "line-4"
+    ],
+    "size": {
+      "w": 760,
+      "h": 380
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "41",
+    "file": "svg/41-name-plate-lower-third.svg",
+    "family": "people",
+    "purpose": "Lower third naming the person on camera and what they own.",
+    "slots": [
+      "name",
+      "role"
+    ],
+    "size": {
+      "w": 489,
+      "h": 140
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "42",
+    "file": "svg/42-role-chip.svg",
+    "family": "people",
+    "purpose": "Role chip for the process owner, the champion or the user of a workflow.",
+    "slots": [
+      "role"
+    ],
+    "size": {
+      "w": 243,
+      "h": 56
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "43",
+    "file": "svg/43-human-review-plate.svg",
+    "family": "people",
+    "purpose": "Names the approval step before output leaves the team.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 437,
+      "h": 88
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "44",
+    "file": "svg/44-speaker-cutout-frame.svg",
+    "family": "people",
+    "purpose": "Placeholder frame for a person on camera. Filled by a real still, never by stock.",
+    "slots": [
+      "caption"
+    ],
+    "size": {
+      "w": 420,
+      "h": 560
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "45",
+    "file": "svg/45-quote-plate.svg",
+    "family": "people",
+    "purpose": "A quote we can attribute, held by a 4 px rule. Two lines maximum.",
+    "slots": [
+      "line-1",
+      "line-2",
+      "attribution"
+    ],
+    "size": {
+      "w": 552,
+      "h": 244
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "46",
+    "file": "svg/46-meta-view-count.svg",
+    "family": "meta",
+    "purpose": "View count plate for a screenshot of a published post.",
+    "slots": [
+      "count"
+    ],
+    "size": {
+      "w": 274,
+      "h": 76
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "47",
+    "file": "svg/47-meta-time-badge.svg",
+    "family": "meta",
+    "purpose": "Runtime badge. Sits with the progress bar or alone on a cover.",
+    "slots": [
+      "time"
+    ],
+    "size": {
+      "w": 245,
+      "h": 72
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "48",
+    "file": "svg/48-meta-swipe-units.svg",
+    "family": "meta",
+    "purpose": "Swipe indicator built from repeated unit squares. The system has no arrow glyph.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 146,
+      "h": 62
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "49",
+    "file": "svg/49-meta-sound-off.svg",
+    "family": "meta",
+    "purpose": "Tells the reader the piece works with the sound off. Sits low on a cover.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 444,
+      "h": 72
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "50",
+    "file": "svg/50-meta-source-plate.svg",
+    "family": "meta",
+    "purpose": "Source line under any borrowed number or claim. Nothing publishes without one.",
+    "slots": [
+      "source"
+    ],
+    "size": {
+      "w": 681,
+      "h": 60
+    },
+    "surfaces": [
+      "paper"
+    ]
+  },
+  {
+    "id": "51",
+    "file": "svg/51-callout-left-ink.svg",
+    "family": "callouts",
+    "purpose": "Label with a leader line running left to a square point. Points at something on its left. Ink surface.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 517,
+      "h": 56
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "52",
+    "file": "svg/52-callout-up-ink.svg",
+    "family": "callouts",
+    "purpose": "Label under a vertical leader line ending in a square point above it. Ink surface.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 120,
+      "h": 154
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "53",
+    "file": "svg/53-callout-down-numbered-ink.svg",
+    "family": "callouts",
+    "purpose": "Numbered label over a vertical leader line ending in a square point below it. Ink surface.",
+    "slots": [
+      "number",
+      "label"
+    ],
+    "size": {
+      "w": 336,
+      "h": 158
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "54",
+    "file": "svg/54-callout-human-step-ink.svg",
+    "family": "callouts",
+    "purpose": "Dashed plate naming the step that stays human, pointed at by a leader line. Ink surface.",
+    "slots": [
+      "label"
+    ],
+    "size": {
+      "w": 636,
+      "h": 88
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "55",
+    "file": "svg/55-verdict-keep-ink.svg",
+    "family": "verdict",
+    "purpose": "KEEP verdict chip, 160x56, solid Signal plate with an Ink label. Ink surface.",
+    "slots": [
+      "verdict"
+    ],
+    "size": {
+      "w": 160,
+      "h": 56
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "56",
+    "file": "svg/56-verdict-kill-ink.svg",
+    "family": "verdict",
+    "purpose": "KILL verdict chip, 160x56, 4 px Oxide outline with a Paper label. Ink surface.",
+    "slots": [
+      "verdict"
+    ],
+    "size": {
+      "w": 160,
+      "h": 56
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "57",
+    "file": "svg/57-verdict-test-ink.svg",
+    "family": "verdict",
+    "purpose": "TEST verdict chip, 160x56, 2 px Paper dashed outline with a Paper label. Ink surface.",
+    "slots": [
+      "verdict"
+    ],
+    "size": {
+      "w": 160,
+      "h": 56
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "58",
+    "file": "svg/58-numbers-was-now-saved-ink.svg",
+    "family": "numbers",
+    "purpose": "The only frame for a time or volume number: WAS, NOW, SAVED on three plates. Ink surface.",
+    "slots": [
+      "was",
+      "now",
+      "saved"
+    ],
+    "size": {
+      "w": 736,
+      "h": 208
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "59",
+    "file": "svg/59-number-big-with-unit-ink.svg",
+    "family": "numbers",
+    "purpose": "One large number with its unit and its WAS / NOW / SAVED label above it. Ink surface.",
+    "slots": [
+      "label",
+      "value",
+      "unit"
+    ],
+    "size": {
+      "w": 495,
+      "h": 232
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "60",
+    "file": "svg/60-list-numbered-row-ink.svg",
+    "family": "lists",
+    "purpose": "One numbered row with a structure bar at the left. Stack five for an 01 to 05 list. Ink surface.",
+    "slots": [
+      "number",
+      "text"
+    ],
+    "size": {
+      "w": 703,
+      "h": 88
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "61",
+    "file": "svg/61-checklist-row-states-ink.svg",
+    "family": "lists",
+    "purpose": "Three checklist rows. State reads from the shape of the box, not from colour. Ink surface.",
+    "slots": [
+      "done",
+      "pending",
+      "blocked"
+    ],
+    "size": {
+      "w": 584,
+      "h": 248
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "62",
+    "file": "svg/62-step-chain-3-ink.svg",
+    "family": "lists",
+    "purpose": "Three process boxes joined by plain connectors. No arrowheads anywhere in the system. Ink surface.",
+    "slots": [
+      "step-1",
+      "step-2",
+      "step-3"
+    ],
+    "size": {
+      "w": 784,
+      "h": 88
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "63",
+    "file": "svg/63-table-keep-kill-ink.svg",
+    "family": "lists",
+    "purpose": "Two-column mini table splitting what we kept from what we killed. Ink surface.",
+    "slots": [
+      "head-left",
+      "head-right",
+      "keep-1",
+      "keep-2",
+      "keep-3",
+      "kill-1",
+      "kill-2",
+      "kill-3"
+    ],
+    "size": {
+      "w": 768,
+      "h": 256
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "64",
+    "file": "svg/64-ranked-row-ink.svg",
+    "family": "lists",
+    "purpose": "Ranked row with a rank square and the figure that earned the rank. Ink surface.",
+    "slots": [
+      "rank",
+      "text",
+      "value"
+    ],
+    "size": {
+      "w": 880,
+      "h": 64
+    },
+    "surfaces": [
+      "ink"
+    ]
+  },
+  {
+    "id": "65",
+    "file": "svg/65-isotype-row-10-ink.svg",
+    "family": "data",
+    "purpose": "Quantity by repeating one unit at one size. Outline units are the ones no longer there. Ink surface.",
+    "slots": [
+      "caption"
+    ],
+    "size": {
+      "w": 724,
+      "h": 124
+    },
+    "surfaces": [
+      "ink"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "slots": {
+    "tag": "TEARDOWN / 05",
+    "page": "7",
+    "pages": "8",
+    "mark": "1",
+    "is_verdict": "1",
+    "verdict": "TEST",
+    "why": "Scanned invoices still fail, so a person checks every batch.",
+    "conditions_html": "<li><span class=\"n\">01</span><span>A person signs off before payment</span></li><li><span class=\"n\">02</span><span>Scanned pages go back to the old route</span></li><li><span class=\"n\">03</span><span>We keep the timings for four weeks</span></li>"
+  }
+}

@@ -21,3 +21,7 @@ archive/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Чужие рабочие папки и зависимости: в репозиторий кода не идут
+design/
+node_modules/

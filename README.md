@@ -70,3 +70,13 @@ Everything else — frames, transcription, tagging, pages — is local and free.
 checked before every run and the spend is written to the database.
 
 The key lives outside the repository and is never printed anywhere.
+
+---
+
+## Brand book and design system (added 8 September 2026)
+
+Everything visual and verbal for M2 Lab lives in `design/`. An agent producing any asset or
+copy starts at `design/SKILL.md` (router), a person starts at `design/README.md` and the PDF
+`design/pdf/out/M2-Lab-Brandbook.pdf`. Values come only from `design/tokens/tokens.json`;
+templates in `design/templates/`; stickers in `design/stickers/`; checks in `design/checks/`.
+The radar scripts do not read this folder, so it is safe for the cron.

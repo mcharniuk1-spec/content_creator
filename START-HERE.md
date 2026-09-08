@@ -141,3 +141,13 @@ python3 check.py && for t in baseline roster topup posts journal cards deep coll
 4. **Look at the Accounts table in Notion** — eighteen accounts have a written judgement of
    what to borrow. The other 88 are waiting. If you disagree with any of the eighteen, say so
    in the comments there; the agent reads them on the next run.
+
+---
+
+## Brand book and design system (added 8 September 2026)
+
+Everything visual and verbal for M2 Lab lives in `design/`. An agent producing any asset or
+copy starts at `design/SKILL.md` (router), a person starts at `design/README.md` and the PDF
+`design/pdf/out/M2-Lab-Brandbook.pdf`. Values come only from `design/tokens/tokens.json`;
+templates in `design/templates/`; stickers in `design/stickers/`; checks in `design/checks/`.
+The radar scripts do not read this folder, so it is safe for the cron.

@@ -42,4 +42,6 @@ Every workflow we publish names who reviews the output and who owns the process.
 M2 Builds and M2 Teardowns carry all three. M2 Radar carries at least two. "Real
 proof" is our own artifact: our screen, our workflow file, our fragmentation, our
 number, never somebody else's demo. "One labeled verdict" is the Verdict Card on
-screen, readable with the sound off, as set out in `04-voice.md`.
+screen, readable with the sound off, as set out in `04-voice.md`. The labeled
+verdict is the third element when the piece makes a call; a piece without a call
+carries face and proof.

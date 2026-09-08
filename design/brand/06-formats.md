@@ -19,11 +19,12 @@ Same five beats in all three formats. The bands are targets, not a stopwatch.
 | Hook | 0-3 s | The one work decision this signal forces. | The thing we ran and how long for. | The process and where its time goes. |
 | Context | 3-12 s | The task it touches and who owns it today. | What we were trying to replace, and the baseline. | The current steps, in order. |
 | Proof | 12-38 s | Our own test on one task, plus the limitation we hit. | The screen, the run, and the step that broke. | The map: CURRENT, AI LAYER, VERDICT, with the step that stays human. |
-| Verdict | 38-50 s | KEEP, TEST or KILL, with the condition. | Verdict Card on screen, plus the WAS / NOW / SAVED number. | Verdict Card on screen: which steps to automate, which not. |
+| Verdict or conclusion | 38-50 s | KEEP, TEST or KILL with the condition when the piece makes a call; otherwise the one-sentence conclusion of the proof. | Verdict Card on screen, plus the WAS / NOW / SAVED number, when the piece makes a call; otherwise the one-sentence conclusion of the proof. | Verdict Card on screen: which steps to automate, which not, when the piece makes a call; otherwise the one-sentence conclusion of the proof. |
 | Next step | 50-60 s | One thing they do in their own work today. | One thing they do, or the workflow file in the channel. | One thing they do before their next process review. |
 
-Verdict Card is required in Builds and Teardowns. In Radar it is required whenever
-we ran the tool ourselves, which should be most of the time.
+The Verdict Card is used when the piece delivers a call on a tool or a process. It is
+not required in every piece; a piece without a verdict ends its proof with one plain
+conclusion. When a verdict is given it is shape-coded and readable with the sound off.
 
 ## Mandatory editorial filter
 
@@ -94,3 +95,7 @@ file, the prompts, and the part that did not work.
 - Is the proof ours?
 - Is a human review step named?
 - Does the closing line give an action the viewer can take alone?
+
+## Changelog
+
+- 8 Sep 2026: was "required in Builds and Teardowns", became optional (Misha).

@@ -10,6 +10,15 @@ Three pillars. Education is not a fourth pillar; it lives inside all three.
 | **M2 Builds** | Show a workflow M2 actually built and tested. | "What does a first working version look like?" | Process, result, failure, and human review. |
 | **M2 Teardowns** | Break down a repeated process before automation. | "Is this process suitable for AI, and how would it work?" | Inputs, friction, AI boundary, owner, and risk. |
 
+## Scope
+
+Educational and informative pieces for the small or medium business leader are in
+scope — prompting for a task, a repository that builds a deliverable, a process with
+agents for faster lead response — and they pass through the same mandatory editorial
+filter below. Out of scope: developer-only tutorials and agent infrastructure for
+technical builders (already listed under "Do not publish"), generated personas,
+cloned voices, and promotion of bypassing restrictions.
+
 ## Structure at 50 to 60 seconds
 
 Same five beats in all three formats. The bands are targets, not a stopwatch.
@@ -99,3 +108,5 @@ file, the prompts, and the part that did not work.
 ## Changelog
 
 - 8 Sep 2026: was "required in Builds and Teardowns", became optional (Misha).
+- 8 Sep 2026 (night): content scope clarified — educational and informative pieces
+  for the SMB leader are in scope, not only workflow-with-verdict pieces (Misha).

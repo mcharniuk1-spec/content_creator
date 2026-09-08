@@ -23,7 +23,8 @@ API calls is local and free.
 
 | File | Why |
 | --- | --- |
-| `POSITIONING.md` | our angle, the three formats and their rules — the agent reads it to write cards |
+| `POSITIONING.md` | **the approved playbook** — audience, the three pillars, the mandatory editorial filter. The agent reads it before writing any card |
+| `PRODUCTION.md` | how a reel is built: length, cuts, the two questions before filming — measured on the set |
 | `SPEC.md` | how the tool works and, more useful, **why each decision was made** |
 | `audit.html` | four independent audits of this tool, 3 September. Open it in a browser |
 | `RULES.md` | topic selection rules |

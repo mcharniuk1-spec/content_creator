@@ -1,6 +1,6 @@
 """Отбор на разбор: окно свежести, кап на автора, повторно не качаем. На копии базы."""
 import datetime, os, shutil, sys, collections
-import deep
+import cards, deep
 from db import connect, DB_PATH
 TMP = DB_PATH.replace('.db', '.test.db'); shutil.copy(DB_PATH, TMP)
 con = connect(TMP); fail = []
@@ -20,7 +20,11 @@ eq('все внутри окна свежести', min(r['ts'] for r in rows) >
 eq('старше окна не берём',
    con.execute('SELECT COUNT(*) FROM reels WHERE ts < ?', (edge,)).fetchone()[0] > 0, True)
 cnt = collections.Counter(r['username'] for r in rows)
-eq('на автора не больше двух', max(cnt.values()), deep.CAP)
+# кап держит добор, но карточки берутся всегда: без них у карточки не будет кадров
+picked, _, _ = cards.select(con, today=TODAY)
+extra = [r for r in rows if r['code'] not in {c['code'] for c in picked}]
+cnt_extra = collections.Counter(r['username'] for r in extra)
+eq('на автора не больше двух в доборе', max(cnt_extra.values()) if cnt_extra else 0, deep.CAP)
 eq('порядок покрывает все три линейки формата',
    len({round(r['resh_1k'] or 0) for r in rows[:20]}) > 1, True)
 eq('все прошли порог отбора',
@@ -42,8 +46,12 @@ import cards
 eq('окно разбора совпадает с окном карточек', deep.WINDOW, cards.FRESH_DAYS)
 pool_cards = {r['code'] for r in cards._pool(con, TODAY)}
 picked, _, _ = cards.select(con, TODAY)
-eq('каждая отобранная карточка попадает в разбор',
-   len({c['code'] for c in picked} - {r['code'] for r in rows}), 0)
+# у карточки должен быть материал: либо она в очереди разбора, либо разобрана раньше
+# и кадры с расшифровкой уже лежат в базе. Повторно качать её незачем.
+queued = {r['code'] for r in rows}
+done = {x[0] for x in con.execute('SELECT code FROM deepdives')}
+eq('у каждой карточки есть кадры или очередь на разбор',
+   len([c for c in picked if c['code'] not in queued and c['code'] not in done]), 0)
 
 eq('таймкоды: девять кадров на минутном ролике', len(deep.timecodes(60)), 9)
 eq('короткий ролик даёт меньше кадров', len(deep.timecodes(3)) < 9, True)

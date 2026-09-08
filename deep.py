@@ -35,8 +35,24 @@ def pick(con, n=N, window=WINDOW, cap=CAP, today=None):
     done = {x[0] for x in con.execute('SELECT code FROM deepdives')}
     pool = [r for r in pool if r['code'] not in done]
 
-    seen, out, taken = collections.Counter(), [], set()
-    for key in ('resh_1k', 'save_1k', 'z'):        # порядок важен: карточки берут первые два
+    # Сначала — то, что станет карточками. Отбор карточек идёт по своим правилам
+    # (свой ранг у каждого формата, один автор — одна карточка), и если разбор
+    # отберёт что-то другое, у карточки не будет ни кадров, ни расшифровки. Это уже
+    # случалось: пересечение было нулевым.
+    out, taken, seen = [], set(), collections.Counter()
+    try:
+        picked, _, _ = cards.select(con, today)
+        want = {c['code'] for c in picked}
+    except Exception:
+        want = set()
+    for r in pool:
+        if r['code'] in want:
+            taken.add(r['code']); seen[r['username']] += 1
+            out.append(dict(r))
+
+    # Остальное добираем по трём линейкам с капом на автора, чтобы одна плодовитая
+    # страница не заняла разбор целиком.
+    for key in ('resh_1k', 'save_1k', 'z'):
         for r in sorted(pool, key=lambda x: -(x.get(key) or 0)):
             if len(out) >= n:
                 break

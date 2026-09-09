@@ -33,6 +33,18 @@ if [ $code -eq 0 ]; then
         || echo "агент не отработал — карточки остались без углов"
     timeout 900 .venv/bin/python notion.py push >>"$LOG" 2>&1 \
         || echo "выгрузка углов в Notion не прошла"
+
+    # читаемые страницы недели. Пока Notion не настроен, это единственный
+    # человеческий вид результата, поэтому складываем их рядом с журналом
+    # прогона: каждая неделя остаётся, а не затирается следующей.
+    RUN_DIR="data/runs/$(date +%Y-%m-%d)"
+    mkdir -p "$RUN_DIR"
+    if .venv/bin/python pages.py >>"$LOG" 2>&1; then
+        cp -f niche.html shoot.html radar.html "$RUN_DIR"/ 2>/dev/null
+        echo "страницы недели сохранены: $RUN_DIR (shoot.html — что снимаем)"
+    else
+        echo "страницы недели собрать не удалось"
+    fi
 fi
 
 # оставляем последние двадцать журналов, остальное ни к чему

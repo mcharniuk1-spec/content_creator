@@ -1,0 +1,917 @@
+{
+ "DRXZJeHiAES": {
+  "lang": "en",
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 2.8,
+    "t": "Here's how to make YouTube shorts that post themselves, step by step."
+   },
+   {
+    "s": 2.8,
+    "e": 5.0,
+    "t": "Go to nnn.io and create a new workflow."
+   },
+   {
+    "s": 5.0,
+    "e": 7.9,
+    "t": "In step one, add an open AI node to write your short script."
+   },
+   {
+    "s": 7.9,
+    "e": 10.9,
+    "t": "Step two, add a voice node with 11 labs to generate the voiceover."
+   },
+   {
+    "s": 10.9,
+    "e": 14.5,
+    "t": "Step three, add pica labs or runway to turn that audio into a full video."
+   },
+   {
+    "s": 14.5,
+    "e": 18.4,
+    "t": "Step four, add a YouTube node, connect your API key and set it to output automatically."
+   },
+   {
+    "s": 18.4,
+    "e": 22.1,
+    "t": "Now every time you run it, AI writes, voices, edits, and posts a brand new short."
+   },
+   {
+    "s": 22.1,
+    "e": 24.4,
+    "t": "Your YouTube channel basically runs itself on autopilot."
+   },
+   {
+    "s": 24.4,
+    "e": 28.0,
+    "t": "So if you want my exact workflow set up in prompts, just comment system and I'll send them over."
+   }
+  ]
+ },
+ "DT0fJmxjVnI": {
+  "lang": "en",
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 3.0,
+    "t": "Today is a romantic rollercoaster"
+   },
+   {
+    "s": 3.0,
+    "e": 6.0,
+    "t": "He don't do anything he's supposed to"
+   },
+   {
+    "s": 6.0,
+    "e": 8.0,
+    "t": "I like him tough than me"
+   },
+   {
+    "s": 8.0,
+    "e": 12.0,
+    "t": "Jim is the worst that I've ever seen"
+   }
+  ]
+ },
+ "DU9OIJUCBQz": {
+  "lang": "en",
+  "segments": [
+   {
+    "s": 0.2,
+    "e": 5.0,
+    "t": "I built apps with AI and one question that people ask me mostly is how much does it cost"
+   },
+   {
+    "s": 5.0,
+    "e": 6.6,
+    "t": "to build your apps?"
+   },
+   {
+    "s": 6.6,
+    "e": 10.8,
+    "t": "Now currently I have something running right now, AI is running right now and I'm using"
+   },
+   {
+    "s": 10.8,
+    "e": 16.7,
+    "t": "cloud code and I pay an average of $200 per month to build my apps and I build with multiple"
+   },
+   {
+    "s": 16.7,
+    "e": 21.3,
+    "t": "projects for even for clients too, currently we have for client projects back to back"
+   },
+   {
+    "s": 21.3,
+    "e": 22.8,
+    "t": "plus my own startup."
+   },
+   {
+    "s": 22.8,
+    "e": 25.6,
+    "t": "Now but you don't need to spend that much money and even when I first started"
+   },
+   {
+    "s": 25.6,
+    "e": 29.6,
+    "t": "using AI products I was spending a whole lot of money so let me show you how you"
+   },
+   {
+    "s": 29.6,
+    "e": 31.6,
+    "t": "you can actually save a lot of money."
+   },
+   {
+    "s": 31.6,
+    "e": 33.7,
+    "t": "Now, if you want to build any kind of application,"
+   },
+   {
+    "s": 33.7,
+    "e": 36.1,
+    "t": "and there are different AI tools you can use,"
+   },
+   {
+    "s": 36.1,
+    "e": 37.4,
+    "t": "that give you a lot of free tiers,"
+   },
+   {
+    "s": 37.4,
+    "e": 38.8,
+    "t": "you can just play around with them."
+   },
+   {
+    "s": 38.8,
+    "e": 40.8,
+    "t": "But if you want to go big leagues,"
+   },
+   {
+    "s": 40.8,
+    "e": 41.8,
+    "t": "you actually want to build an app"
+   },
+   {
+    "s": 41.8,
+    "e": 43.3,
+    "t": "for your startup idea or something,"
+   },
+   {
+    "s": 43.3,
+    "e": 45.6,
+    "t": "and you have up to, now this is my quote,"
+   },
+   {
+    "s": 45.6,
+    "e": 48.0,
+    "t": "150,000 error, right?"
+   },
+   {
+    "s": 48.0,
+    "e": 49.9,
+    "t": "You can register for Cloud Code."
+   },
+   {
+    "s": 49.9,
+    "e": 52.0,
+    "t": "I recommend the $100 plan."
+   },
+   {
+    "s": 52.0,
+    "e": 55.2,
+    "t": "But what you do, go on your app store, play store,"
+   },
+   {
+    "s": 55.2,
+    "e": 59.0,
+    "t": "and pay the subscription for the $100 plan"
+   },
+   {
+    "s": 59.0,
+    "e": 61.0,
+    "t": "from there to be 100,000."
+   },
+   {
+    "s": 61.0,
+    "e": 62.5,
+    "t": "So it's quite cheaper."
+   },
+   {
+    "s": 62.5,
+    "e": 64.8,
+    "t": "You save over 50K."
+   },
+   {
+    "s": 64.8,
+    "e": 66.5,
+    "t": "Now, once you do that,"
+   },
+   {
+    "s": 66.5,
+    "e": 68.3,
+    "t": "I would recommend my app, VisualPRD."
+   },
+   {
+    "s": 68.3,
+    "e": 71.8,
+    "t": "So you see, even me right now, I'm using it."
+   },
+   {
+    "s": 71.8,
+    "e": 74.0,
+    "t": "When you write out the app you want,"
+   },
+   {
+    "s": 74.0,
+    "e": 75.5,
+    "t": "it will plan out everything for you."
+   },
+   {
+    "s": 75.5,
+    "e": 77.4,
+    "t": "It's called visualprd.com."
+   },
+   {
+    "s": 77.4,
+    "e": 79.6,
+    "t": "So I'm on localhost right now, visualprd.com."
+   },
+   {
+    "s": 79.6,
+    "e": 81.0,
+    "t": "It will plan everything out for you."
+   },
+   {
+    "s": 81.0,
+    "e": 83.9,
+    "t": "And all the prompts, see all the prompts,"
+   },
+   {
+    "s": 83.9,
+    "e": 85.4,
+    "t": "all the prompts you need,"
+   },
+   {
+    "s": 85.4,
+    "e": 87.8,
+    "t": "then you can connect it to your Cloud Code account,"
+   },
+   {
+    "s": 87.8,
+    "e": 89.5,
+    "t": "and it will be building it automatically."
+   },
+   {
+    "s": 89.5,
+    "e": 92.2,
+    "t": "See, Visual PRD Mac completes."
+   },
+   {
+    "s": 92.2,
+    "e": 94.5,
+    "t": "It's currently talking to Visual PRD"
+   },
+   {
+    "s": 94.5,
+    "e": 96.4,
+    "t": "and building everything automatically."
+   },
+   {
+    "s": 96.4,
+    "e": 98.9,
+    "t": "So all the prompts to generate on Visual PRD"
+   },
+   {
+    "s": 98.9,
+    "e": 101.7,
+    "t": "that it generates for you is to be telling cloud code"
+   },
+   {
+    "s": 101.7,
+    "e": 104.0,
+    "t": "what to do next, what to do next, what to do next."
+   },
+   {
+    "s": 104.0,
+    "e": 106.2,
+    "t": "And by the time you're done, you have a functional app."
+   },
+   {
+    "s": 106.2,
+    "e": 107.6,
+    "t": "So within a month,"
+   },
+   {
+    "s": 107.6,
+    "e": 109.4,
+    "t": "you will have something that you can actually present."
+   },
+   {
+    "s": 109.4,
+    "e": 111.7,
+    "t": "Now, of course, there's some human intervention"
+   },
+   {
+    "s": 111.7,
+    "e": 114.0,
+    "t": "needed here and there to test everything"
+   },
+   {
+    "s": 114.0,
+    "e": 115.4,
+    "t": "and make sure everything is fully functional."
+   },
+   {
+    "s": 115.4,
+    "e": 118.3,
+    "t": "but this has elevated my workflow."
+   },
+   {
+    "s": 118.3,
+    "e": 120.8,
+    "t": "I'm able to work on multiple projects side by side"
+   },
+   {
+    "s": 120.8,
+    "e": 122.9,
+    "t": "and I'm able to justify my $200 plan."
+   },
+   {
+    "s": 122.9,
+    "e": 124.8,
+    "t": "So for you, you can start with that amount"
+   },
+   {
+    "s": 124.8,
+    "e": 126.3,
+    "t": "and it will go well for you."
+   }
+  ]
+ },
+ "DZw4aTtzJpg": {
+  "lang": "en",
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 2.0,
+    "t": "You"
+   }
+  ]
+ },
+ "Db5sXEAP6C4": {
+  "lang": "en",
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 4.0,
+    "t": "I used to work at Meta where I learned exactly how some of the biggest brands in the world"
+   },
+   {
+    "s": 4.0,
+    "e": 5.0,
+    "t": "advertise."
+   },
+   {
+    "s": 5.0,
+    "e": 7.4,
+    "t": "And then I left to build two eight figure businesses."
+   },
+   {
+    "s": 7.4,
+    "e": 11.2,
+    "t": "And today, the best ad copy that I write actually comes from Reddit."
+   },
+   {
+    "s": 11.2,
+    "e": 13.7,
+    "t": "Let me show you the AI skill that I built that helps me find it."
+   },
+   {
+    "s": 13.7,
+    "e": 17.0,
+    "t": "So you give it your product, your audience, and the Reddit communities where your customers"
+   },
+   {
+    "s": 17.0,
+    "e": 18.2,
+    "t": "are spending the most time."
+   },
+   {
+    "s": 18.2,
+    "e": 21.7,
+    "t": "And then it searches the most active conversations and reads hundreds of comments and it's"
+   },
+   {
+    "s": 21.7,
+    "e": 25.6,
+    "t": "going to find the exact problems, desires and objections that keep coming up."
+   },
+   {
+    "s": 25.6,
+    "e": 28.2,
+    "t": "But it doesn't just give you some giant research document."
+   },
+   {
+    "s": 28.2,
+    "e": 32.7,
+    "t": "It turns everything into ad angles that you can actually test and finds hooks for you based"
+   },
+   {
+    "s": 32.7,
+    "e": 36.8,
+    "t": "on real pain points and copy that is the exact language that your customers are using."
+   },
+   {
+    "s": 36.8,
+    "e": 40.7,
+    "t": "And you can run the skill inside of codecs or cloth and reuse it anytime you launch a"
+   },
+   {
+    "s": 40.7,
+    "e": 43.2,
+    "t": "new product or you need fresh creative ideas."
+   },
+   {
+    "s": 43.2,
+    "e": 46.6,
+    "t": "This is how I would research ads before I spend a single dollar testing them."
+   },
+   {
+    "s": 46.6,
+    "e": 49.4,
+    "t": "If you comment angles down below, I'll send you the exact skills so you can"
+   },
+   {
+    "s": 49.4,
+    "e": 50.0,
+    "t": "run it yourself."
+   }
+  ]
+ },
+ "Db9AEm5upfu": {
+  "lang": "en",
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 5.1,
+    "t": "Most people use agentic OS like a dashboard, all while mine is saving me 31 hours a week"
+   },
+   {
+    "s": 5.1,
+    "e": 7.0,
+    "t": "in my business and I never open it."
+   },
+   {
+    "s": 7.0,
+    "e": 10.2,
+    "t": "The biggest problem that I've noticed is majority of you guys believe that the power"
+   },
+   {
+    "s": 10.2,
+    "e": 14.4,
+    "t": "of this agentic OS is in the dashboard and the design of it itself."
+   },
+   {
+    "s": 14.4,
+    "e": 19.0,
+    "t": "But the reality is, the power lies underneath, a.k.a. all of your agent skills."
+   },
+   {
+    "s": 19.0,
+    "e": 21.6,
+    "t": "And of course the attached agent brand that you're building over time."
+   },
+   {
+    "s": 21.6,
+    "e": 25.0,
+    "t": "So the question is, how do we turn something that looks like a toy to many into something"
+   },
+   {
+    "s": 25.0,
+    "e": 27.2,
+    "t": "that can actually save you time and generate revenue?"
+   },
+   {
+    "s": 27.2,
+    "e": 30.8,
+    "t": "Let's start with what you shouldn't do to build a profitable agentic OS."
+   },
+   {
+    "s": 30.8,
+    "e": 34.0,
+    "t": "First off, you shouldn't automate what's not already proven and repeatable."
+   },
+   {
+    "s": 34.0,
+    "e": 37.0,
+    "t": "If you can't put an ROI on something, don't add it or build it."
+   },
+   {
+    "s": 37.0,
+    "e": 39.5,
+    "t": "And if you're not already profitable, you're wasting your time."
+   },
+   {
+    "s": 39.5,
+    "e": 41.9,
+    "t": "You should be focusing on what's already working."
+   },
+   {
+    "s": 41.9,
+    "e": 45.6,
+    "t": "Focus on building skills around processes that are already proven and profitable."
+   },
+   {
+    "s": 45.6,
+    "e": 48.9,
+    "t": "Secondly, build an agentic brain using graphify and obsidian."
+   },
+   {
+    "s": 48.9,
+    "e": 53.0,
+    "t": "And third, turn those skills into scheduled tasks with clod attached to the graphify"
+   },
+   {
+    "s": 53.0,
+    "e": 54.0,
+    "t": "brain."
+   },
+   {
+    "s": 54.0,
+    "e": 58.0,
+    "t": "And only then dare to actually build an agentic OS dashboard."
+   },
+   {
+    "s": 58.0,
+    "e": 61.3,
+    "t": "Building agentic arms into your business is a non-negotiable at this point."
+   },
+   {
+    "s": 61.3,
+    "e": 65.3,
+    "t": "And speaking with some of my private equity clients, they sometimes have 10, 20, 30 different"
+   },
+   {
+    "s": 65.3,
+    "e": 67.4,
+    "t": "businesses in their portfolio at a time."
+   },
+   {
+    "s": 67.4,
+    "e": 71.0,
+    "t": "So organizing all the different businesses' information and attaching different agents"
+   },
+   {
+    "s": 71.0,
+    "e": 75.0,
+    "t": "to those databases are key in effectively helping them save time and make more money."
+   },
+   {
+    "s": 75.0,
+    "e": 78.9,
+    "t": "The annual opportunity cost of not adding these agentic arms into your business"
+   },
+   {
+    "s": 78.9,
+    "e": 82.4,
+    "t": "for a business owner running multiple operations at the same time reaches into the tens"
+   },
+   {
+    "s": 82.4,
+    "e": 84.5,
+    "t": "of millions of dollars every single year."
+   },
+   {
+    "s": 84.5,
+    "e": 85.5,
+    "t": "If not more."
+   },
+   {
+    "s": 85.5,
+    "e": 88.8,
+    "t": "So if you want access to my free agentic OS playbook, just come and agentic and I'll"
+   },
+   {
+    "s": 88.8,
+    "e": 89.3,
+    "t": "send it to you."
+   }
+  ]
+ },
+ "DbOUP9OPDAQ": {
+  "lang": "en",
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 3.0,
+    "t": "Google just released 15 AI tools that are completely free"
+   },
+   {
+    "s": 3.0,
+    "e": 5.5,
+    "t": "and can save you thousands of dollars every single month."
+   },
+   {
+    "s": 5.5,
+    "e": 6.6,
+    "t": "The first is Pamelli."
+   },
+   {
+    "s": 6.6,
+    "e": 8.1,
+    "t": "It's their free AI marketing tool"
+   },
+   {
+    "s": 8.1,
+    "e": 10.3,
+    "t": "that generates entire social media content"
+   },
+   {
+    "s": 10.3,
+    "e": 12.1,
+    "t": "for your brand from just a website link."
+   },
+   {
+    "s": 12.1,
+    "e": 13.3,
+    "t": "The second is called Stitch."
+   },
+   {
+    "s": 13.3,
+    "e": 15.4,
+    "t": "It turns your normal prompts into beautiful,"
+   },
+   {
+    "s": 15.4,
+    "e": 18.1,
+    "t": "modern UI designs for your apps and your websites."
+   },
+   {
+    "s": 18.1,
+    "e": 19.4,
+    "t": "The third is called Google Opal."
+   },
+   {
+    "s": 19.4,
+    "e": 20.9,
+    "t": "You can use it to build AI workflows"
+   },
+   {
+    "s": 20.9,
+    "e": 22.6,
+    "t": "just like N8N or Make.com"
+   },
+   {
+    "s": 22.6,
+    "e": 24.8,
+    "t": "using Google's own built-in AI models."
+   },
+   {
+    "s": 24.8,
+    "e": 26.0,
+    "t": "The fourth is Anti-Gravity,"
+   },
+   {
+    "s": 26.0,
+    "e": 27.6,
+    "t": "their own AI code editor that works"
+   },
+   {
+    "s": 27.6,
+    "e": 29.2,
+    "t": "just like Claude Code and Cursor"
+   },
+   {
+    "s": 29.2,
+    "e": 30.8,
+    "t": "and is pretty solid for vibe coding."
+   },
+   {
+    "s": 30.8,
+    "e": 32.0,
+    "t": "And finally, Mixsport,"
+   },
+   {
+    "s": 32.0,
+    "e": 34.3,
+    "t": "which is basically a mixture of Canva and Pinterest"
+   },
+   {
+    "s": 34.3,
+    "e": 36.1,
+    "t": "where you can generate multiple AI images"
+   },
+   {
+    "s": 36.1,
+    "e": 38.3,
+    "t": "and combine them until you get exactly what you want."
+   },
+   {
+    "s": 38.3,
+    "e": 39.8,
+    "t": "There are 10 more that I couldn't fit in here,"
+   },
+   {
+    "s": 39.8,
+    "e": 41.0,
+    "t": "so if you guys want the full list,"
+   },
+   {
+    "s": 41.0,
+    "e": 42.4,
+    "t": "just comment at Google down below"
+   },
+   {
+    "s": 42.4,
+    "e": 44.2,
+    "t": "and it'll send you the links directly."
+   }
+  ]
+ },
+ "DcdbJKmxZ5o": {
+  "lang": "ru",
+  "segments": [
+   {
+    "s": 0.0,
+    "e": 3.2,
+    "t": "Я не понимаю почему этим до сих пор никто не пользуется"
+   },
+   {
+    "s": 3.2,
+    "e": 6.5,
+    "t": "и как без этого сейчас вообще можно вести свой инстаграм"
+   },
+   {
+    "s": 6.5,
+    "e": 9.4,
+    "t": "когда вы можете открыть клот, отправить ему специальный"
+   },
+   {
+    "s": 9.4,
+    "e": 11.9,
+    "t": "промод, подключить к нему вот этот вот инструмент"
+   },
+   {
+    "s": 11.9,
+    "e": 13.2,
+    "t": "называется Hiker App"
+   },
+   {
+    "s": 13.2,
+    "e": 16.4,
+    "t": "и клот будет получать доступ к данным из инстаграма"
+   },
+   {
+    "s": 16.4,
+    "e": 18.2,
+    "t": "и вы можете отправить ему свой аккаунт"
+   },
+   {
+    "s": 18.2,
+    "e": 21.4,
+    "t": "и он проанализирует его полностью под детальком"
+   },
+   {
+    "s": 21.4,
+    "e": 24.4,
+    "t": "разберет по месяцам как вы росли, какой контент"
+   },
+   {
+    "s": 24.4,
+    "e": 27.4,
+    "t": "у вас самый лучший, как он вас видит сделает выводы"
+   },
+   {
+    "s": 27.4,
+    "e": 30.8,
+    "t": "прям по скриншотам, разберет если нужно ваши видосы"
+   },
+   {
+    "s": 30.8,
+    "e": 34.9,
+    "t": "покажет самое лучше и сделает для вас вот такой вот офигенный отчет"
+   },
+   {
+    "s": 34.9,
+    "e": 37.1,
+    "t": "и это делается вот буквально 10 минут"
+   },
+   {
+    "s": 37.1,
+    "e": 41.0,
+    "t": "все что вам нужно это иметь клот, сделать несколько дополнительных действий"
+   },
+   {
+    "s": 41.0,
+    "e": 43.8,
+    "t": "и после этого вы получаете по сути готового агента"
+   },
+   {
+    "s": 43.8,
+    "e": 45.9,
+    "t": "который может анализировать ваш аккаунт"
+   },
+   {
+    "s": 45.9,
+    "e": 47.8,
+    "t": "может анализировать аккаунты конкурента"
+   },
+   {
+    "s": 47.8,
+    "e": 52.3,
+    "t": "может посмотреть и проанализировать хоть 10 000 рилсов ваших там конкурентов"
+   },
+   {
+    "s": 52.3,
+    "e": 55.0,
+    "t": "понять что у них заходит, чем вы от них отличаетесь"
+   },
+   {
+    "s": 55.0,
+    "e": 57.8,
+    "t": "и вшить это вашу персональную стратегию"
+   },
+   {
+    "s": 57.8,
+    "e": 60.1,
+    "t": "если бы мне сказали об этом еще 2 года назад"
+   },
+   {
+    "s": 60.1,
+    "e": 61.3,
+    "t": "честно я бы не поверил"
+   },
+   {
+    "s": 61.3,
+    "e": 63.3,
+    "t": "я сделал простую понятную инструкцию"
+   },
+   {
+    "s": 63.3,
+    "e": 66.0,
+    "t": "как это реализовать оставил там основной промк"
+   },
+   {
+    "s": 66.0,
+    "e": 67.2,
+    "t": "и все ссылки"
+   },
+   {
+    "s": 67.2,
+    "e": 69.0,
+    "t": "кто хочет получить смотрите описание"
+   },
+   {
+    "s": 69.0,
+    "e": 71.5,
+    "t": "ну и оставайтесь со мной если хотите идти в будущее"
+   },
+   {
+    "s": 71.5,
+    "e": 72.6,
+    "t": "которое уже наступило"
+   },
+   {
+    "s": 72.6,
+    "e": 73.4,
+    "t": "правда Джарвис?"
+   },
+   {
+    "s": 73.4,
+    "e": 74.4,
+    "t": "точно Макс"
+   },
+   {
+    "s": 74.4,
+    "e": 77.0,
+    "t": "идем в ногу со временем и даже на шах впереди"
+   },
+   {
+    "s": 77.0,
+    "e": 78.5,
+    "t": "все, сейчас будем работать"
+   },
+   {
+    "s": 78.5,
+    "e": 81.3,
+    "t": "готовься, сделай скриншот экран и отправь на него в телеграм"
+   },
+   {
+    "s": 81.3,
+    "e": 82.1,
+    "t": "понял Макс"
+   },
+   {
+    "s": 82.1,
+    "e": 83.9,
+    "t": "сейчас сделаю и отправлю в телеграм"
+   },
+   {
+    "s": 83.9,
+    "e": 84.6,
+    "t": "спасибо"
+   }
+  ]
+ }
+}

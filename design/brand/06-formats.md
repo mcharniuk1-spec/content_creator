@@ -61,7 +61,6 @@ A Reel shows the problem and the solution, so all three read it.
 ## Do not publish
 
 - Model news without a practical work decision.
-- Generic "top AI tools" lists.
 - Deep technical tutorials aimed at developers.
 - AI-agent demos without a real process owner.
 - Revenue, conversion or time-saving claims without evidence.

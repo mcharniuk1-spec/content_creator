@@ -77,7 +77,9 @@ examples inside these brand files.
 - `follow for more`
 - `save this or you'll regret it`
 - `tag someone who needs this`
-- emoji anywhere in published copy, including emoji used as bullets, dividers or punctuation
+- emoji on screen and in captions, including emoji used as bullets, dividers or
+  punctuation. The profile bio is the one exception, decided 9 September 2026: a single
+  emoji may open a line there, where the niche reads them as list markers.
 - the long dash character in body copy; use a comma or a full stop
 
 ## Naming rules

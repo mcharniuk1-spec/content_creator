@@ -23,19 +23,26 @@ m2lab.ai
 
 ### Bio — 150 символов
 
+Стоит в аккаунте с 9 сентября 2026. Собрано из позиционирования: первая строка —
+аудитория из публичного обещания, вторая — «one workflow at a time, without coding»,
+третья — принцип 3 голоса (провал публикуется вместе с результатом) и «keep a human
+in control» из supporting line.
+
+```
+🧩 AI for non-technical business leaders
+One repeated workflow at a time. No code.
+We test it, publish what broke, keep a person in control.
+```
+139 символов. Одна эмодзи в начале, как метка темы; в остальных строках эмодзи нет.
+Средние точки убраны: Anthropic называет их признаком сгенерированного текста, а
+поисковой пользы они не несут.
+
+**Прежняя версия, до 9 сентября** (старая территория, ролевая строка снята решением
+8 сентября):
 ```
 AI workflows for real business processes
 Automation · agents · lead research · ops
 Michael builds the case. Max builds the thing.
-```
-129 символов. Первая строка — тема, а не «мы такие-то»: так делают 48% ниши.
-Вторая — поисковые ключи. Третья — разделение ролей, то единственное, чего нет ни у кого.
-
-**Запасной вариант, суше:**
-```
-AI workflows for real business processes
-Automation · agents · lead research · ops
-Business + tech · build → test → verdict
 ```
 
 **Не писать:** «helping you master AI», «10x your productivity», обещаний дохода.

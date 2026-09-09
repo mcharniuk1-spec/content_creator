@@ -1,0 +1,650 @@
+{
+ "version": 2,
+ "date": "2026-09-08",
+ "structure": "5 introduction (4 by reference, 1 new scenario) + 5 regular (4 by reference, 1 synthesis)",
+ "source_gate": "1.5 to 20 times the author's own median, baseline of 20 reels or more, transcript present, topic useful to a small business leader; frames or a contact sheet on disk",
+ "educational": [
+  "01",
+  "02",
+  "03",
+  "06",
+  "07"
+ ],
+ "recommended_six": [
+  "01",
+  "02",
+  "06",
+  "04",
+  "03",
+  "08"
+ ],
+ "recommended_order_note": "01 pinned outside the weekly cadence, then 02 Radar, 06 Builds, 04 Teardowns, 03 Radar, 08 Builds: 2 Radar, 2 Builds, 1 Teardown, alternating.",
+ "topics": [
+  {
+   "id": "01",
+   "type": "Intro by reference",
+   "format": "M2 Builds",
+   "kind": "educational",
+   "reference": [
+    {
+     "account": "@albert.olgaard",
+     "shortcode": "DVtgbY8Av6A",
+     "url": "https://www.instagram.com/reel/DVtgbY8Av6A/",
+     "published": "2026-03-10",
+     "views": 272175,
+     "shares_per_1k": 20.0,
+     "saves_per_1k": 57.3,
+     "x_author_median": 16.34,
+     "author_median_views": 16656,
+     "score_z": 3.61,
+     "duration_s": 25.2,
+     "transcript": true,
+     "frames_on_disk": true,
+     "device": "Every instruction is named by the job it does, not by the model and not by the wording.",
+     "why_reference": "57.3 saves per 1,000 on a 25 second reel with no demonstration at all: the naming alone does the saving.",
+     "gate": "PASS. Multiple 16.34 inside 1.5 to 20, baseline 25, transcript present, frames present, topic useful to a leader who writes the same instructions weekly. The reel is a list of fifteen and ends on a trade for a comment; we take the naming and refuse both."
+    }
+   ],
+   "hook": "We stopped writing prompts. We write one file for each job.",
+   "problem": "The person who answers customer email. Turning an inbound message into a quote request happens three or four times a day, and each time somebody retypes the instructions from memory and gets a different shape of answer.",
+   "solution": "One instruction file per job, holding the five facts a quote request needs, the sentence ask do not guess, and the words we never put in a customer reply. Human review step: Michael reads the five facts against the original message before it reaches the estimator.",
+   "tool": "The chat assistant we already pay for. The file is plain text. No new purchase.",
+   "cta": "Take the instruction you retyped three times last week and save it as one file named after the job.",
+   "why_now": "On 3 September the niche started arguing about instruction files as objects, after a security scan of them was published (Dc1oIn8CyDW, topic 07).",
+   "utility": "Our one-page instruction file for a quote request, with the five facts, as a file to copy.",
+   "close": "verdict",
+   "verdict": "KEEP",
+   "condition": "A person still reads the five facts: the file makes the answer consistent and cannot make it true.",
+   "proof": "One real message run twice on our own screen, as a typed prompt and through the file, with the missing fact circled, plus the file itself.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "One file per job\n",
+    "title_key": "beats a new prompt",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "39-screen-document-card",
+     "15-callout-human-step"
+    ],
+    "caption": "file"
+   },
+   "risk": {
+    "process": "Turning an inbound message into a quote request, daily.",
+    "friction": "The instruction is retyped from memory.",
+    "boundary": "The file drafts, a person checks the facts.",
+    "next_step": "Save one file.",
+    "brand_rule": "Close to a prompt tips piece, so the framing stays on the job and the file, never on clever wording."
+   },
+   "recommended": true
+  },
+  {
+   "id": "02",
+   "type": "Intro by reference",
+   "format": "M2 Radar",
+   "kind": "educational",
+   "reference": [
+    {
+     "account": "@liamjohnston.ai",
+     "shortcode": "DczDlj4qQjI",
+     "url": "https://www.instagram.com/reel/DczDlj4qQjI/",
+     "published": "2026-09-02",
+     "views": 161211,
+     "shares_per_1k": 23.8,
+     "saves_per_1k": 57.1,
+     "x_author_median": 13.5,
+     "author_median_views": 11944,
+     "score_z": 4.85,
+     "duration_s": 63.2,
+     "transcript": true,
+     "frames_on_disk": "contact sheet at runs/2026-09-07/DczDlj4qQjI.jpg",
+     "device": "A free repository presented as eleven named jobs, the setup shown as three clicks, and the approval said out loud: nothing gets posted until you say yes.",
+     "why_reference": "The highest scoring reel in the gated set and the only one that puts a human approval step inside the promise, to an audience that saved it 57.1 per 1,000.",
+     "gate": "PASS. Multiple 13.5, baseline 26, transcript present, contact sheet present, topic useful to a leader who wants a deliverable rather than a subscription. Our own radar proposed this reel on 7 September as card 5 and a person struck it out for want of proof; the proof exists now."
+    }
+   ],
+   "hook": "A free repository wrote our weekly one-pager. We checked it after.",
+   "problem": "The owner of a small firm who needs the same document every week. It is assembled by hand from four places every Monday and is dropped first in a busy week.",
+   "solution": "We install one repository that produces that document, run it on our own week, and show its output next to the document we would have written. Human review step: Michael marks every line the document cannot support.",
+   "tool": "Named on screen at shoot time: the exact repository we installed, with its setup time.",
+   "cta": "Pick the one document you rebuild by hand every week and write down its four inputs before you install anything.",
+   "why_now": "The reel is six days old, and on 3 September the same author published the security answer to it, which is topic 07.",
+   "utility": "The four-input list for a weekly document, and our own before and after pages side by side.",
+   "close": "verdict",
+   "verdict": "TEST",
+   "condition": "The deliverable is one we already need and its inputs are already digital; setup time measured, not estimated.",
+   "proof": "A screen recording of the install with a stopwatch, the document it produced, and the list of what it got wrong on our own data.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "A free repo built\n",
+    "title_key": "our weekly one-pager",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "37-screen-browser",
+     "22-number-big-with-unit"
+    ],
+    "caption": "repo"
+   },
+   "risk": {
+    "process": "The weekly document, rebuilt by hand.",
+    "friction": "Four inputs collected manually.",
+    "boundary": "The repository drafts, a person marks the unsupported lines.",
+    "next_step": "List four inputs.",
+    "brand_rule": "Somebody else's demo is never our substance, so we install it ourselves and show only our own screen."
+   },
+   "recommended": true
+  },
+  {
+   "id": "03",
+   "type": "Intro by reference",
+   "format": "M2 Radar",
+   "kind": "educational",
+   "reference": [
+    {
+     "account": "@manthanjethwani",
+     "shortcode": "Dbi-yxNgrhG",
+     "url": "https://www.instagram.com/reel/Dbi-yxNgrhG/",
+     "published": "2026-08-03",
+     "views": 240255,
+     "shares_per_1k": 58.4,
+     "saves_per_1k": 58.9,
+     "x_author_median": 9.92,
+     "author_median_views": 24222,
+     "score_z": 2.85,
+     "duration_s": 56.8,
+     "transcript": true,
+     "frames_on_disk": true,
+     "device": "Four numbered settings shown on the real screen, with the stake in the first sentence.",
+     "why_reference": "The best forwarding and best saving reel in the entire gated set, 58.4 and 58.9 per 1,000 at once; our own radar proposed it independently on 3 September as card 3.",
+     "gate": "PASS. Multiple 9.92, baseline 23, transcript present, frames present, topic useful to any leader whose team pastes customer mail into an assistant. Its claim is stated more strongly than its evidence carries, so we borrow the four-step shape and state our own stake."
+    }
+   ],
+   "hook": "Your team turned on AI in the inbox. Nobody chose what it reads.",
+   "problem": "The team lead of a five to fifty person company. Assistant features arrive switched on in the mail client the team already uses, where customer mail, contracts and invoices sit together.",
+   "solution": "Four settings walked through on our own screen, each with the sentence that says what it changes and who should decide it, then the line that belongs in the team rule sheet. Human review step: Michael owns the rule sheet and the answer given to a customer who asks.",
+   "tool": "Named at shoot time: the exact mail and workspace settings pages, ours, on our own account.",
+   "cta": "Open the settings page of the mail client your team uses and write down which of these four is on.",
+   "why_now": "Our own radar surfaced this reel on 3 September and it is still the strongest forwarding device in the set on 7 September, across two snapshots.",
+   "utility": "A four-line settings sheet, plus the sentence to give a customer who asks.",
+   "close": "conclusion",
+   "verdict": null,
+   "condition": "A setting left at its default is still a decision, and it is currently being made by the vendor.",
+   "proof": "Our own four settings pages recorded before and after, and our written rule sheet with the date it was agreed.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "Your team turned on\n",
+    "title_key": "AI inside the inbox",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "27-checklist-row-states",
+     "50-meta-source-plate"
+    ],
+    "caption": "inbox"
+   },
+   "risk": {
+    "process": "Handling customer mail, daily.",
+    "friction": "Features arrive on by default.",
+    "boundary": "The setting is a human decision and stays one.",
+    "next_step": "Open one settings page.",
+    "brand_rule": "No claim without evidence, so we describe what each setting does and never what it allegedly leaks."
+   },
+   "recommended": true
+  },
+  {
+   "id": "04",
+   "type": "Intro by reference",
+   "format": "M2 Teardowns",
+   "kind": "workflow and economics",
+   "reference": [
+    {
+     "account": "@sharmadhruveshh",
+     "shortcode": "DcvqwODzjpe",
+     "url": "https://www.instagram.com/reel/DcvqwODzjpe/",
+     "published": "2026-09-01",
+     "views": 5955,
+     "shares_per_1k": 18.0,
+     "saves_per_1k": 25.9,
+     "x_author_median": 4.33,
+     "author_median_views": 1374,
+     "score_z": 3.22,
+     "duration_s": 61.7,
+     "transcript": true,
+     "frames_on_disk": "contact sheet at runs/2026-09-07/DcvqwODzjpe.jpg",
+     "device": "Play the work first, price it second: the recorded call, then the per minute price compared three ways.",
+     "why_reference": "The only reel in the gated set that attaches a per unit price to a process step instead of a monthly subscription. Small base, 5,955 views, so it is read as a device and not as a reach case.",
+     "gate": "PASS on all four arms, with the small absolute audience stated: multiple 4.33, baseline 26, transcript present, contact sheet present, topic useful to any firm that answers inbound enquiries."
+    }
+   ],
+   "hook": "A first reply costs money in four places. Most quotes name one.",
+   "problem": "The owner of a services firm who answers enquiries personally. The first reply is late because it waits for a person, and the fix is quoted as one subscription line while the real bill is the tool, the minutes, the review and the enquiry answered wrongly.",
+   "solution": "The map on screen, CURRENT, AI LAYER, VERDICT. Collecting facts and drafting go to the model. Human review step: the send stays with a person, because a wrong first reply reaches a stranger under the company name.",
+   "tool": "None on screen. One page, four columns, and our own spend log for the per unit figures we hold.",
+   "cta": "Take your last ten enquiries, mark the step that made the reply late, and write what one wrong reply would have cost you.",
+   "why_now": "The first fully automatic run on 7 September gave us a real per unit price for a workflow of our own, 106 accounts at two dollars twelve.",
+   "utility": "The four-column fragmentation sheet with a cost line per fragment, as a page.",
+   "close": "verdict card",
+   "verdict": "KEEP the fact collection fragment, TEST the drafting fragment, KILL the automatic send",
+   "condition": "The TEST condition is the number of drafts sendable without an edit, measured in topic 06.",
+   "proof": "Our fragmentation sheet for the first reply, photographed with the AI boundary drawn by hand, and our spend rows: 623 units at twelve dollars forty six, 106 at two dollars twelve.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "The first reply is\n",
+    "title_key": "where the cost hides",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "28-step-chain-3",
+     "43-human-review-plate"
+    ],
+    "caption": "reply"
+   },
+   "risk": {
+    "process": "Answering inbound enquiries, daily.",
+    "friction": "The reply waits for a person.",
+    "boundary": "The send is human owned and named.",
+    "next_step": "Mark one step in ten enquiries.",
+    "brand_rule": "No cost saving claim without a published baseline, so the two unmeasured lines stay visibly empty and labeled to measure."
+   },
+   "recommended": true
+  },
+  {
+   "id": "05",
+   "type": "Intro, new scenario",
+   "format": "M2 Teardowns",
+   "kind": "workflow and economics",
+   "reference": [],
+   "reference_note": "None by design. Derived from topics.csv and top-reels.csv: AI in a specific business process has 29 scored reels, median score 0.473 and zero of the top 100, against 80 reels and 5 for AI agency as a business and 117 and 9 for Design and websites via AI. Three reels from one agency account hold six of the top 15 rows by score. Gate not applicable: no reference reel is used.",
+   "hook": "You looked for AI help with one process. You found somebody selling an agency.",
+   "problem": "The operations lead of a small firm searches for how AI fits one repeated process. The feed answers with income offers and agency funnels, so they leave without a decision and the process keeps its hours.",
+   "solution": "One repeated workflow on the table, broken into fragments with input, output, decision and risk, the line drawn where the model stops. Human review step: Michael owns the sheet, Max builds only the fragments that survive it.",
+   "tool": "None. One page, four columns.",
+   "cta": "Take the workflow you ran three times last week and fill four columns: input, output, decision, risk.",
+   "why_now": "The 7 September snapshot is the first scored across 106 accounts and it confirms the hole: zero of the top 100 reels sit in our own topic.",
+   "utility": "The fragmentation sheet as a page, with our radar workflow filled in as the worked example.",
+   "close": "conclusion",
+   "verdict": null,
+   "condition": "The first decision is not which tool, it is which workflow, and it belongs to a person with a name.",
+   "proof": "Our own fragmentation sheet for the radar, photographed, with the AI boundary drawn by hand, plus the two topic rows on screen from topics.csv.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "You looked for help\n",
+    "title_key": "and found a pitch",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "39-screen-document-card",
+     "43-human-review-plate"
+    ],
+    "caption": "process"
+   },
+   "risk": {
+    "process": "The viewer's own first repeated workflow.",
+    "friction": "The search returns pitches.",
+    "boundary": "The boundary is drawn on the page and the approver named.",
+    "next_step": "Four columns to fill.",
+    "brand_rule": "This criticizes a neighboring niche, so we name a pattern and a measurement and never an account."
+   },
+   "recommended": false
+  },
+  {
+   "id": "06",
+   "type": "Regular by reference",
+   "format": "M2 Builds",
+   "kind": "educational",
+   "reference": [
+    {
+     "account": "@divyannshisharma",
+     "shortcode": "Dcq0nmpyEUR",
+     "url": "https://www.instagram.com/reel/Dcq0nmpyEUR/",
+     "published": "2026-08-30",
+     "views": 57579,
+     "shares_per_1k": 32.0,
+     "saves_per_1k": 48.8,
+     "x_author_median": 3.05,
+     "author_median_views": 18906,
+     "score_z": 1.46,
+     "duration_s": 35.7,
+     "transcript": true,
+     "frames_on_disk": "contact sheet at runs/2026-09-07/Dcq0nmpyEUR.jpg",
+     "device": "The chain named as six steps a person can repeat, with the approval inside it: review it, approve it and launch.",
+     "why_reference": "32.0 shares and 48.8 saves per 1,000 on a mid-size account with no giveaway of the result, and the approval step is stated as part of the method.",
+     "gate": "PASS. Multiple 3.05, baseline 24, transcript present, contact sheet present, topic useful to anyone whose leads wait for a reply. The reel sells an outreach outcome; we take the six step shape and put it on inbound replies."
+    }
+   ],
+   "hook": "We drafted the first reply to twenty real messages. A person sent them.",
+   "problem": "The person answering inbound messages in a small firm. The reply is late, not wrong: it waits for someone to be free, and every late first reply is a lead deciding somebody else answered faster.",
+   "solution": "The message arrives, the draft is written against the instruction file from topic 01, missing facts are listed instead of guessed, and the draft waits. Human review step: Michael reads and sends, and we report how many of twenty went out unedited.",
+   "tool": "Named at shoot time: the assistant and the mailbox we ran it in. No new subscription.",
+   "cta": "Count how many hours your last ten first replies took, then set one number you want them under.",
+   "why_now": "The first automatic run on 7 September proved the pattern on our own tooling: the machine proposes, a person decides, and both halves are recorded.",
+   "utility": "The draft-and-hold checklist as a file, plus our own count of edited and unedited drafts.",
+   "close": "verdict",
+   "verdict": "TEST",
+   "condition": "The edit rate measured on the twenty. If more than half need an edit, the honest label is not yet, and we publish that.",
+   "proof": "The run on twenty real messages in our own inbox, timestamped, with the edit count, the time to first draft, and one draft wrong enough to show.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "We drafted the reply\n",
+    "title_key": "a person sent it",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "36-screen-phone-9x16",
+     "15-callout-human-step"
+    ],
+    "caption": "drafts"
+   },
+   "risk": {
+    "process": "Replying to inbound messages, daily.",
+    "friction": "The reply waits for a free person.",
+    "boundary": "The draft is machine written, the send is human.",
+    "next_step": "Count ten replies.",
+    "brand_rule": "No time saving claim without a baseline, so the before number is counted on our own inbox before the build is shown."
+   },
+   "recommended": true
+  },
+  {
+   "id": "07",
+   "type": "Regular by reference",
+   "format": "M2 Radar",
+   "kind": "educational",
+   "reference": [
+    {
+     "account": "@liamjohnston.ai",
+     "shortcode": "Dc1oIn8CyDW",
+     "url": "https://www.instagram.com/reel/Dc1oIn8CyDW/",
+     "published": "2026-09-03",
+     "views": 222097,
+     "shares_per_1k": 12.9,
+     "saves_per_1k": 36.8,
+     "x_author_median": 18.59,
+     "author_median_views": 11944,
+     "score_z": 1.97,
+     "duration_s": 76.1,
+     "transcript": true,
+     "frames_on_disk": "contact sheet at runs/2026-09-07/Dc1oIn8CyDW.jpg",
+     "device": "Redefine the object, then hand over a gate: a skill is just a text file that runs with everything you have access to, then a free scanner returning a risk score out of 100.",
+     "why_reference": "18.59 times its author's median three days after publication, and the only reel in the set pairing a named risk with a check the viewer can run.",
+     "gate": "PASS. Multiple 18.59, baseline 26, transcript present, contact sheet present, topic useful to any leader whose team installs templates. Its numbers come from a vendor report we have not read, so we quote none of them and run the check ourselves."
+    }
+   ],
+   "hook": "A template is a text file that runs with your access. We scanned ours first.",
+   "problem": "The owner sent a link on Monday and told it is free. A template runs with whatever the person installing it can already reach: the client folder, the mailbox, the saved keys.",
+   "solution": "Run the scanner on the repository we installed in topic 02 and read the score out loud, including what it cannot judge, then the rule we keep: a template on a work machine gets its own account and never the client folder. Human review step: Max runs the scan, Michael signs the rule.",
+   "tool": "Named at shoot time: the open scanner we ran, and the repository from topic 02 as its subject.",
+   "cta": "List every template your team installed this month and write next to each what it can reach today.",
+   "why_now": "The reel is five days old, the pairing with topic 02 is live this fortnight, and our own install is the subject.",
+   "utility": "The install rule as three lines, and our scan output with its score visible.",
+   "close": "verdict",
+   "verdict": "KEEP",
+   "condition": "It scores patterns in a file and cannot judge what the file is for, which is why a person still reads it.",
+   "proof": "A recorded scan of the topic 02 repository with the score on screen, and our own written install rule with the date.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "A template runs with\n",
+    "title_key": "the access you have",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "25-percentage-with-baseline",
+     "50-meta-source-plate"
+    ],
+    "caption": "scan",
+    "note": "If our scan flags the file, the supporter becomes 20-marker-broke-here and stays the only accent."
+   },
+   "risk": {
+    "process": "Installing templates on work machines, monthly.",
+    "friction": "Nobody owns what a template may reach.",
+    "boundary": "The scanner scores, a person decides.",
+    "next_step": "List this month's installs.",
+    "brand_rule": "Close to a developer topic, so it stays on the access a file gets and never on the code inside it."
+   },
+   "recommended": false
+  },
+  {
+   "id": "08",
+   "type": "Regular by reference",
+   "format": "M2 Builds",
+   "kind": "workflow",
+   "reference": [
+    {
+     "account": "@vanshh_ai",
+     "shortcode": "DX9kWTYzssE",
+     "url": "https://www.instagram.com/reel/DX9kWTYzssE/",
+     "published": "2026-05-05",
+     "views": 99127,
+     "shares_per_1k": 41.4,
+     "saves_per_1k": 36.2,
+     "x_author_median": 11.6,
+     "author_median_views": 8546,
+     "score_z": 3.16,
+     "duration_s": 60.6,
+     "transcript": true,
+     "frames_on_disk": true,
+     "device": "The role board: six agents named as jobs, each with its own instruction panel, plus a panel showing what each contributed.",
+     "why_reference": "41.4 shares per 1,000, the highest forwarding rate in the gated set after the settings walkthrough, earned by showing a process as named jobs a manager recognizes.",
+     "gate": "PASS. Multiple 11.6, baseline 26, transcript present, frames present, topic useful to a leader who wants to see who does what. Its board has no human step anywhere; ours is the difference."
+    }
+   ],
+   "hook": "Our tool ranked nine ideas on Monday. A person cut four of them.",
+   "problem": "The team lead who automates a selection step, trusts the ranking, and publishes something the company should not have said. Ranking is not deciding, and rejected options leave no trace.",
+   "solution": "The run on screen as named jobs: 1,260 reels collected, 1,255 scored, 1,156 through the entry gate, 97 taken apart frame by frame, nine cards proposed, four struck with the rule each one failed. Human review step: the tool ranks, Michael decides, and the reason is written next to the removal.",
+   "tool": "Our own radar, with the rule that scores a reel against its own author's median, not the crowd.",
+   "cta": "Find the step where a tool proposes and nobody records why the proposal was rejected. Record it.",
+   "why_now": "The 7 September run is the first that proposed and struck cards with no person in the loop until the review point.",
+   "utility": "The nine proposals and four removals as a screenshot, plus the rule list that did the removing.",
+   "close": "verdict",
+   "verdict": "TEST",
+   "condition": "The ranking stays, the selection is not automatable, and we do not try again until rejection reasons have been counted for four weeks.",
+   "proof": "The cards rows for week 2026-09-07 showing nine proposals and four struck, the four reasons from the run write-up, and a recording of one removal being written.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "The tool ranked nine\n",
+    "title_key": "a person cut four",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "30-ranked-row",
+     "15-callout-human-step"
+    ],
+    "caption": "judgment"
+   },
+   "risk": {
+    "process": "Weekly selection of what to publish or pursue.",
+    "friction": "Rejections are never recorded.",
+    "boundary": "The tool ranks, the person decides.",
+    "next_step": "Start recording rejections.",
+    "brand_rule": "It is our own tool, so it is told as a process the viewer also has, never as a tour of our tooling."
+   },
+   "recommended": true
+  },
+  {
+   "id": "09",
+   "type": "Regular by reference",
+   "format": "M2 Radar",
+   "kind": "workflow and economics",
+   "reference": [
+    {
+     "account": "@manthanjethwani",
+     "shortcode": "Dc89JaxAhA1",
+     "url": "https://www.instagram.com/reel/Dc89JaxAhA1/",
+     "published": "2026-09-06",
+     "views": 174151,
+     "shares_per_1k": 29.7,
+     "saves_per_1k": 14.7,
+     "x_author_median": 6.16,
+     "author_median_views": 28251,
+     "score_z": 0.59,
+     "duration_s": 91.6,
+     "transcript": true,
+     "frames_on_disk": false,
+     "device": "Refuse the release frame in the first sentence, then show one long artifact chain built from a single input.",
+     "why_reference": "The freshest strong reel in the window, picked on shares, which is the Radar metric. Its own claim is unverifiable, which is the gap we fill with a fixed task.",
+     "gate": "PARTIAL. Multiple 6.16, baseline 27, transcript present, topic useful to a leader asked to switch, but frames FAIL: none on disk. Under the frame gate it ships only if they are re-pulled while the links are alive, otherwise it drops."
+    }
+   ],
+   "hook": "A new version landed. One step of our own week changed, and one did not.",
+   "problem": "Every release resets the team's confidence. The lead is asked whether to switch and cannot answer, because nobody ran the old and the new on the same task.",
+   "solution": "One fixed task from our own week, unchanged, run on both versions, with the one step where the output differed and the one where it did not. Human review step: Michael reads both and writes the condition under which we would switch.",
+   "tool": "Named at shoot time: the exact versions we ran, both of them, with their version strings visible.",
+   "cta": "Keep one fixed task and one fixed input, and run it on any version you are asked to switch to before you switch.",
+   "why_now": "The reference is dated 6 September and the argument it answers is two days old. Our Radar rule asks whether a topic survives three to seven days: this one does, and then it decays.",
+   "utility": "Our fixed-task file, so the viewer has a test to reuse at the next release.",
+   "close": "decided by the run",
+   "verdict": null,
+   "condition": "TEST with a condition if one step improves, KILL if the new version costs more for the same output, not yet if nothing separates them.",
+   "proof": "Both runs on our own screen, same task, same input, version strings visible, a stopwatch on each, and the re-pulled frames of the reference.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "A new version landed\n",
+    "title_key": "one step changed",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "32-bar-compare-card",
+     "18-verdict-test"
+    ],
+    "caption": "version"
+   },
+   "risk": {
+    "process": "The recurring switch decision.",
+    "friction": "No fixed task exists to compare on.",
+    "boundary": "A person writes the condition.",
+    "next_step": "Keep one fixed task.",
+    "brand_rule": "Model news without a work decision is on the do-not-publish list, so the piece opens on the task and names the version second."
+   },
+   "recommended": false
+  },
+  {
+   "id": "10",
+   "type": "Regular synthesis",
+   "format": "M2 Radar",
+   "kind": "workflow and economics",
+   "reference": [
+    {
+     "account": "@manthanjethwani",
+     "shortcode": "Dbi-yxNgrhG",
+     "url": "https://www.instagram.com/reel/Dbi-yxNgrhG/",
+     "published": "2026-08-03",
+     "views": 240255,
+     "shares_per_1k": 58.4,
+     "saves_per_1k": 58.9,
+     "x_author_median": 9.92,
+     "author_median_views": 24222,
+     "score_z": 2.85,
+     "duration_s": 56.8,
+     "transcript": true,
+     "frames_on_disk": true,
+     "device": "Numbered steps with the stake on step one.",
+     "why_reference": "Best forwarding and saving pair in the gated set.",
+     "gate": "PASS"
+    },
+    {
+     "account": "@liamjohnston.ai",
+     "shortcode": "DczDlj4qQjI",
+     "url": "https://www.instagram.com/reel/DczDlj4qQjI/",
+     "published": "2026-09-02",
+     "views": 161211,
+     "shares_per_1k": 23.8,
+     "saves_per_1k": 57.1,
+     "x_author_median": 13.5,
+     "author_median_views": 11944,
+     "score_z": 4.85,
+     "duration_s": 63.2,
+     "transcript": true,
+     "frames_on_disk": "contact sheet",
+     "device": "Named jobs plus a stated approval step.",
+     "why_reference": "Highest scoring reel in the gated set.",
+     "gate": "PASS"
+    },
+    {
+     "account": "@albert.olgaard",
+     "shortcode": "DVtgbY8Av6A",
+     "url": "https://www.instagram.com/reel/DVtgbY8Av6A/",
+     "published": "2026-03-10",
+     "views": 272175,
+     "shares_per_1k": 20.0,
+     "saves_per_1k": 57.3,
+     "x_author_median": 16.34,
+     "author_median_views": 16656,
+     "score_z": 3.61,
+     "duration_s": 25.2,
+     "transcript": true,
+     "frames_on_disk": true,
+     "device": "Instructions named by the job.",
+     "why_reference": "Saves earned by naming alone.",
+     "gate": "PASS"
+    },
+    {
+     "account": "@vanshh_ai",
+     "shortcode": "DX9kWTYzssE",
+     "url": "https://www.instagram.com/reel/DX9kWTYzssE/",
+     "published": "2026-05-05",
+     "views": 99127,
+     "shares_per_1k": 41.4,
+     "saves_per_1k": 36.2,
+     "x_author_median": 11.6,
+     "author_median_views": 8546,
+     "score_z": 3.16,
+     "duration_s": 60.6,
+     "transcript": true,
+     "frames_on_disk": true,
+     "device": "A role board with a contribution panel.",
+     "why_reference": "Highest forwarding rate after the settings walkthrough.",
+     "gate": "PASS"
+    },
+    {
+     "account": "@divyannshisharma",
+     "shortcode": "Dcq0nmpyEUR",
+     "url": "https://www.instagram.com/reel/Dcq0nmpyEUR/",
+     "published": "2026-08-30",
+     "views": 57579,
+     "shares_per_1k": 32.0,
+     "saves_per_1k": 48.8,
+     "x_author_median": 3.05,
+     "author_median_views": 18906,
+     "score_z": 1.46,
+     "duration_s": 35.7,
+     "transcript": true,
+     "frames_on_disk": "contact sheet",
+     "device": "Review and approve inside the chain.",
+     "why_reference": "Approval stated as method, not disclaimer.",
+     "gate": "PASS"
+    }
+   ],
+   "what_they_share": "Each hands the viewer an object they can keep and check: a setting, a file, a named job, an approval. Not one says what the thing costs to keep running, and nothing in the gated set does.",
+   "hook": "Five lines tell you what one AI workflow costs you in a week.",
+   "problem": "A leader approves a workflow on the subscription price alone, then meets the setup hours, the per run charge, the review minutes and the price of one wrong output.",
+   "solution": "The five-line cost sheet filled in live on our own radar: build cost twelve dollars forty six over 623 data requests, weekly run two dollars twelve over 106 accounts, wall clock 78 minutes, review minutes to measure, one wrong card to measure. Human review step: Michael reads it before any workflow gets a second week.",
+   "tool": "The cost sheet itself, one page. No purchase.",
+   "cta": "Fill the five lines for the workflow you ran three times last week and stop at the line you cannot fill. That line is your next measurement.",
+   "why_now": "The 7 September run is the first with a real weekly figure attached, and the niche is arguing about model prices while counting none of the other four lines.",
+   "utility": "The five-line sheet as a file, with our numbers in it and two lines honestly empty.",
+   "close": "conclusion",
+   "verdict": null,
+   "condition": "Two of the five lines are unmeasured on our own process, so this is a method we are running, not a result we are claiming.",
+   "proof": "The spend rows on screen, a stopwatch on one full review pass, and one deliberately wrong card costed in minutes of rework.",
+   "cover": {
+    "surface": "paper",
+    "title_before": "Five lines tell you\n",
+    "title_key": "what your run costs",
+    "title_after": "",
+    "plate": "ink",
+    "stickers": [
+     "26-list-numbered-row",
+     "50-meta-source-plate"
+    ],
+    "caption": "cost"
+   },
+   "risk": {
+    "process": "Approving and renewing an AI workflow.",
+    "friction": "Four of five cost lines are invisible at approval.",
+    "boundary": "The sheet is read by a named person.",
+    "next_step": "Fill five lines.",
+    "brand_rule": "A cost saving claim without a published baseline is forbidden, so two lines stay empty on screen and are labeled to measure."
+   },
+   "recommended": false
+  }
+ ]
+}

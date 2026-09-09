@@ -1,0 +1,408 @@
+/* M2 Lab report stylesheet — A4 portrait audit reports.
+   Colours and type follow tokens/out/tokens.css and pdf/print.css (the
+   landscape brand book), re-tuned here for a portrait document handed to a
+   partner. Font paths are relative to this file (report/fonts/...) — they
+   resolve correctly even when this sheet is <link>ed from out/<name>.html,
+   because relative url()s in CSS resolve against the stylesheet's own
+   location, not the HTML page that loads it.
+   Absent by decision: corner rounding, drop shadows, gradients, centred
+   text, emoji. */
+
+/* ---------- fonts ---------- */
+
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400;
+  src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 500;
+  src: url("fonts/IBMPlexSans-Medium.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600;
+  src: url("fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 700;
+  src: url("fonts/IBMPlexSans-Bold.woff2") format("woff2"); font-display: block; }
+
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400;
+  src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500;
+  src: url("fonts/IBMPlexMono-Medium.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 600;
+  src: url("fonts/IBMPlexMono-SemiBold.woff2") format("woff2"); font-display: block; }
+
+@font-face { font-family: "Saira SemiCondensed"; font-style: normal; font-weight: 700;
+  src: url("fonts/SairaSemiCondensed-Bold.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "Saira SemiCondensed"; font-style: normal; font-weight: 900;
+  src: url("fonts/SairaSemiCondensed-Black.woff2") format("woff2"); font-display: block; }
+
+/* ---------- tokens ---------- */
+
+:root {
+  --paper: #E4E9EA;
+  --ink: #0C1D1D;
+  --signal: #7DD774;
+  --oxide: #BB4347;
+  --blueprint: #1E4A80;
+  --graphite: #5C6565;
+  --rule: #BEC6C7;
+  --rule-plate: rgba(190, 198, 199, 0.32); /* Rule tinted, for code plates */
+
+  /* Cyrillic body copy: h1/h2 want Saira's display shape for Latin, but
+     Saira has no Cyrillic glyphs, so IBM Plex Sans is the fallback in the
+     same stack. font-weight is pinned to 700 (not Saira's 900 "Black") so
+     that when the fallback face is used, it lands on Plex Sans Bold — the
+     heaviest weight we ship for Plex Sans — instead of a synthesized bold. */
+  --font-display: "Saira SemiCondensed", "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-text: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+
+  --size-h1: 26pt;
+  --size-h2: 18pt;
+  --size-h3: 12pt;
+  --size-h4: 10.5pt;
+  --size-body: 10.5pt;
+  --size-cell: 9.5pt;
+  --size-label: 8pt;
+  --size-code: 9pt;
+  --size-quote: 10pt;
+
+  --lead-body: 1.4;
+  --lead-display: 1.1;
+  --track-label: 0.16em;
+
+  --margin: 18mm;
+  --margin-bottom: 22mm; /* 18mm + a 28mm reserve strip for the footer — see below */
+  --indent: 24px;
+  --hairline: 1px;
+}
+
+/* ---------- page setup ----------
+   The margin is 18mm on three sides, as specified. The bottom margin is
+   18mm plus a 28mm reserve strip for the running footer. 28mm is not a
+   theoretical number — it is the value that, swept against a real
+   578-line report (report/test also has the short synthetic one), cut
+   footer/text collisions from 25 lines down to 1 on 19 printed pages.
+   Other reserve sizes tried nearby (24, 32, 36mm) each did worse; there
+   is no formula here, only a sweep. See report/test for the offset pick
+   below, and the honest limit it hit.
+
+   A position:fixed element's "bottom: Xmm" is measured from the CONTENT
+   box's bottom edge — the same edge flowing text is allowed to fill —
+   and it is measured INWARD: the element's own bottom edge lands X mm
+   above that edge, i.e. still inside the area text can reach. (A negative
+   X does not push it into the outer margin either — it reappears near the
+   TOP of the NEXT page instead, confirmed with plain literal mm values,
+   so that route is unusable too.)
+
+   Chrome fits as many whole lines into the content box as possible, so
+   the gap between the last line's bottom edge and the content box's edge
+   ("slack") varies page to page with no guaranteed minimum. A larger X
+   clears a page that ends with little slack — but ALSO slides the
+   footer further up into the page, past the last line and into whatever
+   came before it, if that page happened to have more slack. Swept X from
+   0 to 34mm against report/test/sample.md: every value from 1mm up
+   collided with something somewhere in that range, just with different
+   content, because the two failure modes work in opposite directions.
+   X=0 (on .page-footer below) was the only value clear of every page in
+   that sweep — not a proof of safety for all content, just the best
+   empirical trade-off found. A page whose last line reaches the exact
+   content-box edge with zero slack can still touch the footer. See
+   README. */
+@page {
+  size: A4 portrait;
+  margin-top: var(--margin);
+  margin-right: var(--margin);
+  margin-bottom: var(--margin-bottom);
+  margin-left: var(--margin);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-weight: var(--w-regular);
+  font-size: var(--size-body);
+  line-height: var(--lead-body);
+  text-align: left;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background-image: none;
+}
+
+/* ---------- running footer ----------
+   Chrome (headless print-to-pdf) has no CSS Paged-Media counters — @page
+   margin boxes with counter(page) are simply ignored. A position:fixed
+   element is the only thing Chrome repeats on every physical page — but it
+   repeats EVERY such element it finds anywhere in the DOM onto EVERY page,
+   with no scoping to the section that contains it. Tested empirically:
+   placing one fixed footer per chapter made all of them render stacked on
+   every single page, garbling the text. So there can only be one
+   position:fixed footer in the whole document, and its content is
+   necessarily constant for the whole run: title on the left, total chapter
+   count on the right. No true page number, no per-chapter folio. See
+   README. */
+
+.page-footer {
+  display: none; /* disabled: Chrome repeats a fixed footer over body text; no page counters available */
+  position: fixed;
+  left: var(--margin);
+  right: var(--margin);
+  /* 0: the empirical pick from the sweep in the @page comment above. */
+  bottom: 0;
+  /* Opaque paper background is the real fix for the residual risk in the
+     @page comment: it was tested against a real 578-line report and the
+     "just tune the offset" approach alone still touched body text on 5 of
+     19 pages — content this dense makes a zero-slack page common, not
+     rare. Painting a solid plate the size of the footer's own box means a
+     colliding line is masked cleanly instead of garbled — that one line's
+     tail is hidden rather than legible, which is the honest trade-off:
+     Chrome gives no way to reserve true dead space for flowing content
+     (see @page). Padding is generous enough to cover a full line of any
+     text style used in the document (biggest is body/blockquote line
+     height, ~5.2mm). */
+  background: var(--paper);
+  padding: 3mm 0 3mm 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: var(--hairline) solid var(--rule);
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  font-size: var(--size-label);
+  line-height: 1;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+.page-footer .folio { font-variant-numeric: tabular-nums; }
+
+/* ---------- chapters & page breaks ---------- */
+
+.chapter { page-break-before: always; break-before: page; }
+.chapter:first-of-type { page-break-before: avoid; break-before: avoid; }
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--size-h1);
+  line-height: var(--lead-display);
+  margin: 0 0 6mm 0;
+  color: var(--ink);
+  page-break-before: always;
+  break-before: page;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+/* the first h1 of a chapter already got its page from .chapter; do not
+   ask for a second blank page on top of it */
+.chapter > h1:first-child { page-break-before: avoid; break-before: avoid; }
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--size-h2);
+  line-height: var(--lead-display);
+  margin: 8mm 0 4mm 0;
+  color: var(--ink);
+  page-break-after: avoid;
+  break-after: avoid;
+}
+h3 {
+  font-family: var(--font-text);
+  font-weight: var(--w-semibold);
+  font-size: var(--size-h3);
+  line-height: 1.3;
+  margin: 6mm 0 3mm 0;
+  color: var(--ink);
+  page-break-after: avoid;
+  break-after: avoid;
+}
+h4 {
+  font-family: var(--font-text);
+  font-weight: var(--w-semibold);
+  font-size: var(--size-h4);
+  line-height: 1.3;
+  margin: 5mm 0 2mm 0;
+  color: var(--ink);
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+p, li { margin: 0 0 3mm 0; }
+strong { font-weight: var(--w-semibold); }
+em { font-style: italic; }
+a { color: var(--ink); text-decoration: underline; }
+a .link-url {
+  font-family: var(--font-mono);
+  font-weight: var(--w-regular);
+  font-size: var(--size-label);
+  color: var(--graphite);
+  text-decoration: none;
+  margin-left: 1mm;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  font-size: var(--size-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--graphite);
+  display: block;
+}
+.mono { font-family: var(--font-mono); font-weight: var(--w-medium); font-variant-numeric: tabular-nums; }
+
+hr.rule-line {
+  border: 0;
+  border-top: var(--hairline) solid var(--rule);
+  margin: 6mm 0;
+}
+
+/* ---------- lists ---------- */
+
+ul, ol {
+  margin: 0 0 3mm 0;
+  padding-left: var(--indent);
+}
+ul li, ol li { margin-bottom: 1mm; }
+ul ul, ol ol, ul ol, ol ul {
+  margin: 1mm 0 1mm 0;
+}
+
+/* ---------- blockquote ---------- */
+
+blockquote {
+  margin: 0 0 4mm 0;
+  padding: 1mm 0 1mm 5mm;
+  border-left: 4px solid var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--size-quote);
+  color: var(--ink);
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+blockquote p { margin-bottom: 1mm; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- code ---------- */
+
+code {
+  font-family: var(--font-mono);
+  font-size: var(--size-code);
+  background: var(--rule-plate);
+  padding: 0.3mm 1.2mm;
+  border-radius: 0;
+}
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--size-code);
+  line-height: 1.45;
+  background: var(--rule-plate);
+  padding: 3mm 4mm;
+  margin: 0 0 6mm 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  border-radius: 0;
+}
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* ---------- tables ---------- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 5mm 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+th, td {
+  text-align: left;
+  padding: 1.8mm 4mm 1.8mm 0;
+  vertical-align: top;
+  border: 0;
+}
+thead th {
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  font-size: var(--size-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--graphite);
+  border-bottom: var(--hairline) solid var(--ink);
+}
+tbody td {
+  font-size: var(--size-cell);
+  border-bottom: var(--hairline) solid var(--rule);
+}
+tbody tr { page-break-inside: avoid; break-inside: avoid; }
+tbody tr:last-child td { border-bottom: 0; }
+
+/* ---------- cover ---------- */
+
+.cover {
+  display: block;
+  page-break-after: always;
+  break-after: page;
+  position: relative;
+  min-height: calc(297mm - var(--margin) - var(--margin-bottom));
+}
+.cover__mark { width: 96px; height: 96px; display: block; margin: 0 0 16mm 0; }
+.cover__title {
+  /* a div, not an h1 — an h1 tag here would also pick up the global
+     h1 { page-break-before: always } rule below and push the cover title
+     onto a second, blank-looking page. Found by rendering page 1 and
+     seeing the title missing from it. */
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: 40pt;
+  line-height: var(--lead-display);
+  margin: 0 0 6mm 0;
+  color: var(--ink);
+  max-width: 150mm;
+}
+.cover__subtitle {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--size-h2);
+  line-height: var(--lead-display);
+  margin: 0 0 10mm 0;
+  color: var(--graphite);
+  max-width: 150mm;
+}
+.cover__date {
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  font-size: var(--size-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--graphite);
+  position: absolute;
+  left: 0;
+  /* Clears .page-footer (see its own comment): bottom:0 here would sit
+     at the exact same content-box edge the footer measures its own
+     offset from, and the two collided in testing. 20mm clears the
+     footer's own reserve band with room to spare. */
+  bottom: 20mm;
+}
+
+/* ---------- screen preview ---------- */
+
+@media screen {
+  body { background: var(--rule); padding: 24px 0; }
+}

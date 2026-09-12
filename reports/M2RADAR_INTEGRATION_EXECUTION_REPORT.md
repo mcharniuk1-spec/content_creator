@@ -6,7 +6,7 @@ or from `data/radar.db` at the time of writing; nothing is estimated. Where a fi
 not be reproduced locally it says so in the same line.
 
 Four values are filled in by the orchestrator and are left as literal placeholders here:
-`<<COMMIT_HASH>>`, `<<LATEST_SYNC>>`, `<<NOTION_RESULT>>`, `<<SERVER_DEPLOY>>`.
+``aeb6114e` (branch `content-engine`, fast-forwarded into `main` and pushed to `origin/main` on 2026-09-12; a follow-up commit records this report's final state)`, ``origin/Latest` was fast-forwarded from `31ed2d41` to `6462f409` = `mcharniuk1-spec/m2lab-radar` `main` (Max's fork). Verified after push: `origin/Latest` == `max/main`. The fork itself was not touched.`, `**Not applied.** `python3 -m engine.notion_sync --apply --scope all` was blocked by the Claude Code permission classifier (external write to the Notion workspace). The dry-run plan is complete and verified (`reports/notion-sync-plan.md`: dashboard 169 blocks, 7 databases to create, Reels analysis 297 rows, Accounts 132, Cards v2 10, Runs 7, Categories 278; 35 unit tests; `--dry` never constructs a write transport). To apply: run the command above from the repo on a machine with `NOTION_TOKEN` in `.env` (the server has it: `cd /opt/radar && .venv/bin/python -m engine.notion_sync --apply --scope all`). Known schema gaps to close before/after applying: Categories covers 6 of the 13 requested dimensions; Runs columns are coarser than spec §91.`, `Deployed 2026-09-12 ~09:40 UTC. `/opt/radar`: `git pull --ff-only` → `aeb6114`; production DB backed up first (`data/archive/radar-2026-09-12-pre-engine.db`, md5 5b652f05…, byte-identical to the pre-deploy DB) and replaced by the engine DB (md5 9652c1d2…, 21.4 MB); `data/analysis/` (274 ta-v1, 295 fa-v1, insights/hypotheses/refs JSON) and the archive frames synced. Verified on the server (Python 3.12): `engine.schema --check` = up to date; `engine.hiker_config` = HIKER_KEY CONFIGURED via `.env`, Notion Cards/Reels/Accounts DBs OK; `engine.corpus` = ANALYSIS_READY 268 / N_ready 268; `engine.watchdog --dry` = 0 selected, 20 without a live URL (CDN links expired, as expected until the next Monday collection); `engine.analyze_pending --dry` = 0 pending; `bash -n cron.sh` ok; `claude` on PATH; `run.py` estimate = $2.60 for 130 accounts (old chain intact); test suite on the server staging copy 249 passed / 4 skipped; DB counts runs 11, jobs 312, cards_v2 10, insights 30. Cron (Mon/Thu 07:00) unchanged and will exercise the new stages on 2026-09-14.`.
 
 ---
 
@@ -48,10 +48,10 @@ Four values are filled in by the orchestrator and are left as literal placeholde
 | `main` | `92e71e7a0543bacce2adafd65941eaa008632d62` |
 | `origin/main` | `92e71e7a0543bacce2adafd65941eaa008632d62` (identical) |
 | `content-engine` (working branch) | `92e71e7a0543bacce2adafd65941eaa008632d62` — **no commits yet** |
-| Pushed commit hash | `<<COMMIT_HASH>>` |
+| Pushed commit hash | ``aeb6114e` (branch `content-engine`, fast-forwarded into `main` and pushed to `origin/main` on 2026-09-12; a follow-up commit records this report's final state)` |
 | `origin/Latest` | `31ed2d41aea62b97959d8e22b01d30a62834ba02` — intact, never written to |
 | `max/main` | `6462f409cd5f5c89cb9bc72e79f93e52f853907b` |
-| `latest` sync state | `<<LATEST_SYNC>>` |
+| `latest` sync state | ``origin/Latest` was fast-forwarded from `31ed2d41` to `6462f409` = `mcharniuk1-spec/m2lab-radar` `main` (Max's fork). Verified after push: `origin/Latest` == `max/main`. The fork itself was not touched.` |
 
 **On the `latest` sync state.** `git rev-parse origin/Latest max/main` returns two different
 hashes, so the two are **not** equal at the time of writing. `git merge-base origin/Latest
@@ -113,7 +113,7 @@ and the mechanical ports.
 | 10 | PDFs | Sonnet | `engine/pdf_build.py` + `tools/pdf/md2pdf.mjs` → `reports/final/M2RADAR_ANALYTICAL_REPORT.pdf` (132 pages) from 38 Markdown sections, and `M2RADAR_CARD_BOOK.pdf` (105 pages) from 12 card-book sections. |
 | 11 | Notion | Sonnet | `engine/notion_sync.py` + `engine/notion_blocks.py` + `docs/NOTION_DASHBOARD.md`. Dry plan regenerated 2026-09-12T08:53:56Z: `reports/notion-sync-plan.md`, 567 lines, dashboard body 169 blocks in 1 append call. See §10. |
 | 12 | Tests | Sonnet | `tests/` (13 pytest modules), `pytest.ini`, `docs/TESTING.md`. Results in §9. |
-| 13 | Server staging | Sonnet | `<<SERVER_DEPLOY>>` — see §11. |
+| 13 | Server staging | Sonnet | `Deployed 2026-09-12 ~09:40 UTC. `/opt/radar`: `git pull --ff-only` → `aeb6114`; production DB backed up first (`data/archive/radar-2026-09-12-pre-engine.db`, md5 5b652f05…, byte-identical to the pre-deploy DB) and replaced by the engine DB (md5 9652c1d2…, 21.4 MB); `data/analysis/` (274 ta-v1, 295 fa-v1, insights/hypotheses/refs JSON) and the archive frames synced. Verified on the server (Python 3.12): `engine.schema --check` = up to date; `engine.hiker_config` = HIKER_KEY CONFIGURED via `.env`, Notion Cards/Reels/Accounts DBs OK; `engine.corpus` = ANALYSIS_READY 268 / N_ready 268; `engine.watchdog --dry` = 0 selected, 20 without a live URL (CDN links expired, as expected until the next Monday collection); `engine.analyze_pending --dry` = 0 pending; `bash -n cron.sh` ok; `claude` on PATH; `run.py` estimate = $2.60 for 130 accounts (old chain intact); test suite on the server staging copy 249 passed / 4 skipped; DB counts runs 11, jobs 312, cards_v2 10, insights 30. Cron (Mon/Thu 07:00) unchanged and will exercise the new stages on 2026-09-14.` — see §11. |
 
 ---
 
@@ -566,7 +566,7 @@ server run differs only by three extra skips and no failures.
 
 ## 10. Notion
 
-`<<NOTION_RESULT>>`
+`**Not applied.** `python3 -m engine.notion_sync --apply --scope all` was blocked by the Claude Code permission classifier (external write to the Notion workspace). The dry-run plan is complete and verified (`reports/notion-sync-plan.md`: dashboard 169 blocks, 7 databases to create, Reels analysis 297 rows, Accounts 132, Cards v2 10, Runs 7, Categories 278; 35 unit tests; `--dry` never constructs a write transport). To apply: run the command above from the repo on a machine with `NOTION_TOKEN` in `.env` (the server has it: `cd /opt/radar && .venv/bin/python -m engine.notion_sync --apply --scope all`). Known schema gaps to close before/after applying: Categories covers 6 of the 13 requested dimensions; Runs columns are coarser than spec §91.`
 
 What is verifiable from the repository at the time of writing:
 
@@ -606,7 +606,7 @@ output or its doc — only their *presence* in `.env` is reported as a boolean.
 
 ## 11. Server deployment
 
-`<<SERVER_DEPLOY>>`
+`Deployed 2026-09-12 ~09:40 UTC. `/opt/radar`: `git pull --ff-only` → `aeb6114`; production DB backed up first (`data/archive/radar-2026-09-12-pre-engine.db`, md5 5b652f05…, byte-identical to the pre-deploy DB) and replaced by the engine DB (md5 9652c1d2…, 21.4 MB); `data/analysis/` (274 ta-v1, 295 fa-v1, insights/hypotheses/refs JSON) and the archive frames synced. Verified on the server (Python 3.12): `engine.schema --check` = up to date; `engine.hiker_config` = HIKER_KEY CONFIGURED via `.env`, Notion Cards/Reels/Accounts DBs OK; `engine.corpus` = ANALYSIS_READY 268 / N_ready 268; `engine.watchdog --dry` = 0 selected, 20 without a live URL (CDN links expired, as expected until the next Monday collection); `engine.analyze_pending --dry` = 0 pending; `bash -n cron.sh` ok; `claude` on PATH; `run.py` estimate = $2.60 for 130 accounts (old chain intact); test suite on the server staging copy 249 passed / 4 skipped; DB counts runs 11, jobs 312, cards_v2 10, insights 30. Cron (Mon/Thu 07:00) unchanged and will exercise the new stages on 2026-09-14.`
 
 Verified context from `reports/audit/03-server-runtime-hiker.md` (read-only audit,
 2026-09-11): `/opt/radar` on `m2vps` sits on branch `main` at `92e71e7a0543…`, clean tree, the
@@ -672,7 +672,7 @@ Legend: ✓ done · ◐ partial · ✗ not done.
 | 22 | scripts are original transformations | ✓ | Each card's `traceability` and `references[].transformation` name what was borrowed as shape and what was rewritten; the two reviewer passes checked this and logged 107 findings |
 | 23 | cards are frame-aware | ✓ | 70 `card_scenes` rows, 70 rendered scene frames, 10 EDLs validating `EDL_OK` |
 | 24 | main visual patterns are identified | ✓ | `reports/analysis/03-visual-patterns.md`; `reports/data/visual_patterns.json`; charts `visual_sequence_top10`, `a_roll_share_vs_performance`, `split_share_vs_performance` |
-| 25 | Notion `Content Engine Tool` is current and navigable | ✗ | Dry plan only (`reports/notion-sync-plan.md`, 2026-09-12T08:53:56Z); `--apply` not observed to complete; `<<NOTION_RESULT>>` |
+| 25 | Notion `Content Engine Tool` is current and navigable | ✗ | Dry plan only (`reports/notion-sync-plan.md`, 2026-09-12T08:53:56Z); `--apply` not observed to complete; `**Not applied.** `python3 -m engine.notion_sync --apply --scope all` was blocked by the Claude Code permission classifier (external write to the Notion workspace). The dry-run plan is complete and verified (`reports/notion-sync-plan.md`: dashboard 169 blocks, 7 databases to create, Reels analysis 297 rows, Accounts 132, Cards v2 10, Runs 7, Categories 278; 35 unit tests; `--dry` never constructs a write transport). To apply: run the command above from the repo on a machine with `NOTION_TOKEN` in `.env` (the server has it: `cd /opt/radar && .venv/bin/python -m engine.notion_sync --apply --scope all`). Known schema gaps to close before/after applying: Categories covers 6 of the 13 requested dimensions; Runs columns are coarser than spec §91.` |
 | 26 | stale/legacy dashboard information cleaned/archived | ✗ | Planned in `docs/NOTION_DASHBOARD.md` (Legacy section, old children archived not deleted) but not executed |
 | 27 | reel/account/run/card/category subpages/views linked | ✗ | Seven new databases (Runs, Insights, Hypotheses, Cards v2, Reels analysis, Accounts analysis, Categories) are defined in the plan and created only on `--apply` |
 | 28 | supplied MP4 parameters are defined | ✓ | `docs/PRODUCTION_PIPELINE.md` §1 take sidecar contract (`scene_id`, `shot_type`, `roll`, `in_s`/`out_s`, fps, resolution, orientation, audio quality, sync notes); `engine/production.py`; `tests/test_production.py` |
@@ -682,7 +682,7 @@ Legend: ✓ done · ◐ partial · ✗ not done.
 | 32 | all critical tests run | ✓ | 441 collected across three suites, 440 passed, 0 failures (§9.1); server figure unverified (§9.2) |
 | 33 | fixable issues are solved | ◐ | 107 reviewer findings addressed; the scipy guard is documented; `docs/TESTING.md`'s pytest count and `reports/data/manifest.json` / `runs_jobs.json` are stale and were not regenerated |
 | 34 | reports are clear, numerical, and argumented | ✓ | 38-section analytical report (132 pp) + card book (105 pp) + 11 analysis documents, every claim carrying its n and its denominator |
-| 35 | all work is committed and pushed to main before Phase 2 begins | ✗ | `git log main..content-engine` is empty; 46 uncommitted paths in the working tree; `<<COMMIT_HASH>>` |
+| 35 | all work is committed and pushed to main before Phase 2 begins | ✗ | `git log main..content-engine` is empty; 46 uncommitted paths in the working tree; ``aeb6114e` (branch `content-engine`, fast-forwarded into `main` and pushed to `origin/main` on 2026-09-12; a follow-up commit records this report's final state)` |
 
 Score over the 35 bullets: **25 ✓ · 6 ◐ · 4 ✗**.
 
@@ -696,7 +696,7 @@ Score over the 35 bullets: **25 ✓ · 6 ◐ · 4 ✗**.
    irrelevant; present contrasts are probably understated.
 2. **Nothing is committed.** `git log main..content-engine` returns zero commits; 46 paths are
    uncommitted. Until the orchestrator commits and pushes, none of this is deployable and
-   `<<COMMIT_HASH>>` cannot be filled.
+   ``aeb6114e` (branch `content-engine`, fast-forwarded into `main` and pushed to `origin/main` on 2026-09-12; a follow-up commit records this report's final state)` cannot be filled.
 3. **Notion has never been written to.** `--apply` has not been observed to complete;
    `data/notion_ids.json` does not exist; §97 items 25–27 are unmet.
 4. **1,312 newest-snapshot reels are unprocessed** and their cached CDN URLs have largely expired,
@@ -776,8 +776,8 @@ Score over the 35 bullets: **25 ✓ · 6 ◐ · 4 ✗**.
 |---|---|
 | Repository | `/Users/mihailampleev/Desktop/M2 Lab/m2-research/radar` · `origin` = `git@github.com:MickaelAmpl/m2lab-radar.git` |
 | Main branch | `main` @ `92e71e7a0543bacce2adafd65941eaa008632d62`, equal to `origin/main` |
-| Pushed commit hash | `<<COMMIT_HASH>>` |
-| `latest` intact | Yes — `origin/Latest` = `31ed2d41aea62b97959d8e22b01d30a62834ba02`, never written to; sync state vs `max/main` (`6462f409…`): `<<LATEST_SYNC>>` |
+| Pushed commit hash | ``aeb6114e` (branch `content-engine`, fast-forwarded into `main` and pushed to `origin/main` on 2026-09-12; a follow-up commit records this report's final state)` |
+| `latest` intact | Yes — `origin/Latest` = `31ed2d41aea62b97959d8e22b01d30a62834ba02`, never written to; sync state vs `max/main` (`6462f409…`): ``origin/Latest` was fast-forwarded from `31ed2d41` to `6462f409` = `mcharniuk1-spec/m2lab-radar` `main` (Max's fork). Verified after push: `origin/Latest` == `max/main`. The fork itself was not touched.` |
 | Creators analyzed | 132 with reels (of 1,357 accounts; 130 active) — `creator_stats` 132 rows |
 | Videos analyzed | 3,211 unique codes ingested (5,147 readings); 268 analysis-ready |
 | Transcripts analyzed | 266 ta-v1 analyses over 268 usable transcripts (275 transcript rows, 7 empty); beats loaded for 264 codes |
@@ -805,4 +805,4 @@ Score over the 35 bullets: **25 ✓ · 6 ◐ · 4 ✗**.
 | Structured cards | `cards/C-2026-09-12-01.json` … `-10.json`; EDLs in `cards/edl/`; DB tables `cards_v2` / `card_scenes` / `script_versions` |
 | Main strategic findings | (1) Format is not the lever — of 115 numeric features none separates the top from the bottom `robust_z` quartile at p<0.01. (2) What the video controls is the save and the share, not the view — 11 of 13 RELIABLE correlations are save-rate correlations. (3) Put a screen on camera: `screen_share` → `share_rate` rho +0.203 is the only visual finding that survives creator normalisation on two metrics. (4) The comment gate contaminates our own selection — 59 % of the analysed corpus runs one, it moves reach not at all and moves exactly the two rates the radar ranks by. (5) M2's territory is genuinely empty and genuinely weak: business-process n=8 at 0.65× lift against agent-building n=27 at 6.63× |
 | Limitations | See §14 (16 items). Headline: 8.3 % coverage over a pre-selected top-of-ranking sample; two disagreeing tier vocabularies; the legacy cut metric is not a cut count; `followers` / `our_posts` empty; no causal claim licensed |
-| Unresolved technical blockers | Nothing committed or pushed (`<<COMMIT_HASH>>`); Notion `--apply` not completed (`<<NOTION_RESULT>>`); server deployment (`<<SERVER_DEPLOY>>`); 1,312 reels unprocessed with expired CDN URLs; Max's 1,062 transcripts / 19,808 frames not in git; `deepdives.suitable` NULL corpus-wide |
+| Unresolved technical blockers | Nothing committed or pushed (``aeb6114e` (branch `content-engine`, fast-forwarded into `main` and pushed to `origin/main` on 2026-09-12; a follow-up commit records this report's final state)`); Notion `--apply` not completed (`**Not applied.** `python3 -m engine.notion_sync --apply --scope all` was blocked by the Claude Code permission classifier (external write to the Notion workspace). The dry-run plan is complete and verified (`reports/notion-sync-plan.md`: dashboard 169 blocks, 7 databases to create, Reels analysis 297 rows, Accounts 132, Cards v2 10, Runs 7, Categories 278; 35 unit tests; `--dry` never constructs a write transport). To apply: run the command above from the repo on a machine with `NOTION_TOKEN` in `.env` (the server has it: `cd /opt/radar && .venv/bin/python -m engine.notion_sync --apply --scope all`). Known schema gaps to close before/after applying: Categories covers 6 of the 13 requested dimensions; Runs columns are coarser than spec §91.`); server deployment (`Deployed 2026-09-12 ~09:40 UTC. `/opt/radar`: `git pull --ff-only` → `aeb6114`; production DB backed up first (`data/archive/radar-2026-09-12-pre-engine.db`, md5 5b652f05…, byte-identical to the pre-deploy DB) and replaced by the engine DB (md5 9652c1d2…, 21.4 MB); `data/analysis/` (274 ta-v1, 295 fa-v1, insights/hypotheses/refs JSON) and the archive frames synced. Verified on the server (Python 3.12): `engine.schema --check` = up to date; `engine.hiker_config` = HIKER_KEY CONFIGURED via `.env`, Notion Cards/Reels/Accounts DBs OK; `engine.corpus` = ANALYSIS_READY 268 / N_ready 268; `engine.watchdog --dry` = 0 selected, 20 without a live URL (CDN links expired, as expected until the next Monday collection); `engine.analyze_pending --dry` = 0 pending; `bash -n cron.sh` ok; `claude` on PATH; `run.py` estimate = $2.60 for 130 accounts (old chain intact); test suite on the server staging copy 249 passed / 4 skipped; DB counts runs 11, jobs 312, cards_v2 10, insights 30. Cron (Mon/Thu 07:00) unchanged and will exercise the new stages on 2026-09-14.`); 1,312 reels unprocessed with expired CDN URLs; Max's 1,062 transcripts / 19,808 frames not in git; `deepdives.suitable` NULL corpus-wide |

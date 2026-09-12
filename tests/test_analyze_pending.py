@@ -169,7 +169,10 @@ def test_transcript_export_item_matches_existing_batch_format(con):
     item = ap._export_transcript_item(con, 'TAPEND01')
     assert set(item.keys()) == TA_ITEM_KEYS
 
-    existing = json.loads((ROOT / 'data' / 'analysis' / 'input' / 'transcripts-batch-1.json')
+    _fixture = ROOT / 'data' / 'analysis' / 'input' / 'transcripts-batch-1.json'
+    if not _fixture.exists():   # data/ is gitignored: the real batch file exists only where analysis ran
+        pytest.skip('transcripts-batch-1.json not present on this machine')
+    existing = json.loads((_fixture)
                           .read_text(encoding='utf-8'))
     assert set(existing[0].keys()) == TA_ITEM_KEYS
     assert item['code'] == 'TAPEND01'
@@ -188,7 +191,10 @@ def test_frame_export_item_matches_existing_batch_format(con, tmp_path):
     assert item['frames'][0]['exists'] is False   # frames.path here points nowhere real
     assert item['has_transcript'] is False         # FRPEND01 has no transcripts row
 
-    existing = json.loads((ROOT / 'data' / 'analysis' / 'input' / 'frames-batch-1.json')
+    _fixture = ROOT / 'data' / 'analysis' / 'input' / 'frames-batch-1.json'
+    if not _fixture.exists():   # data/ is gitignored: the real batch file exists only where analysis ran
+        pytest.skip('frames-batch-1.json not present on this machine')
+    existing = json.loads((_fixture)
                           .read_text(encoding='utf-8'))
     assert set(existing[0].keys()) == FA_ITEM_KEYS
     assert set(existing[0]['frames'][0].keys()) == FA_FRAME_KEYS

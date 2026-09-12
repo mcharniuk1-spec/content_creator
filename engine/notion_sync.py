@@ -667,7 +667,7 @@ def build_dashboard_blocks(sections):
                            for h in hyp_rows[:30]]))
 
     b.append(nb.heading('Cards', 2))
-    b.append(nb.link_to_page(CARDS_DB_ID))
+    b.append(nb.link_to_database(CARDS_DB_ID))
     b.append(nb.paragraph("New analysis-backed cards live in the 'Cards v2' database (linked below); "
                           "the 10 reviewed 7 September shooting plans stay in the reused Cards DB above."))
 

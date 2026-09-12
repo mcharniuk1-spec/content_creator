@@ -106,6 +106,13 @@ def link_to_page(page_id):
     return {'object': 'block', 'type': 'link_to_page', 'link_to_page': {'type': 'page_id', 'page_id': page_id}}
 
 
+def link_to_database(database_id):
+    """A `link_to_page` block pointing at a database. Notion rejects a database id under
+    `page_id` ("page_id must reference a page"); databases need `database_id`."""
+    return {'object': 'block', 'type': 'link_to_page',
+            'link_to_page': {'type': 'database_id', 'database_id': database_id}}
+
+
 def child_database(database_id):
     return {'object': 'block', 'type': 'child_database', 'child_database': {'title': ''}, 'id': database_id}
 

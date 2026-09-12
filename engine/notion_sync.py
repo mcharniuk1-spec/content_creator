@@ -274,8 +274,18 @@ class LiveTransport(ReadOnlyTransport):
     def replace_children(self, page_id, blocks):
         """Archive every existing top-level child, then append the new body in
         <=100-block chunks. Mirrors `notion.py:push`'s own archive-then-rewrite pattern."""
+        kept = 0
         for b in self.get_blocks_children(page_id):
+            # Child pages and databases cannot be archived through the blocks endpoint
+            # (Notion 400: "Updating a page via the blocks endpoint unsupported") and the
+            # dashboard rebuild keeps them anyway (existing release page, Cards DB, the new
+            # analysis databases live under this page). Only body blocks are replaced.
+            if b.get('type') in ('child_page', 'child_database'):
+                kept += 1
+                continue
             self.archive_block(b['id'])
+        if kept:
+            print(f'  kept {kept} child page(s)/database(s) under the dashboard', flush=True)
         self.append_children(page_id, blocks)
 
     def create_database(self, parent_page_id, title, properties_schema):

@@ -1,0 +1,232 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-10",
+ "title": "Twenty-three plans, nothing made",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 1992,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 228,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "23 plans. Three weeks.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 228,
+   "duration_frames": 204,
+   "layout": "motion_graphic",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Collect. Score. Shortlist. Strike. Hand over.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 432,
+   "duration_frames": 384,
+   "layout": "motion_graphic",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "65 minutes. Nine struck.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 816,
+   "duration_frames": 516,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Zero rows. Three repeats.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1332,
+   "duration_frames": 396,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Broken at the handover",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1728,
+   "duration_frames": 264,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "A name on every line",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-10_S00.png",
+   "sha256": "d01ab1c83fc84f8b0fae684c6cd3efbf9da8596103b2efe6aed5460952e4f175",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-10_S01.png",
+   "sha256": "21fc43e92247a0b4233fe9d05de05ef26e77eaa7680c08dffb88cc62350a0493",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-10_S02.png",
+   "sha256": "27a25f66e63dad81262d04a324bcda1f63c8d0aa3c63fb3d31405b2d5f8f7e62",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-10_S03.png",
+   "sha256": "c50db278fe015da412e33b1e6a3102cb3906a16af5e1b5cbc7c82b6b98771c96",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-10_S04.png",
+   "sha256": "fb83d06051563765722c1ebc2019bd64040d0e35a62a662568c1c84d8a66b92a",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-10_S05.png",
+   "sha256": "130f4f716c49161ce6ecc4cdea981681e52841123bc8e535e535be263330cd1c",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 228,
+   "text": "This is what our Monday produces. Twenty-three of these in three weeks. Not one of them was ever made."
+  },
+  {
+   "from_frame": 228,
+   "duration_frames": 204,
+   "text": "Five steps. Collect, score, shortlist, strike out, hand over. Four of them run without anyone touching anything."
+  },
+  {
+   "from_frame": 432,
+   "duration_frames": 384,
+   "text": "The whole machine run took sixty-five minutes. Collecting, scoring, shortlisting, all of it. Striking out is the one step that waits for one of us, and it removed nine of the twenty-three."
+  },
+  {
+   "from_frame": 816,
+   "duration_frames": 516,
+   "text": "Then the fifth step. Hand over. The table that would record a made item has nothing in it at all. And three of the twenty-three are the same source proposed again a week later, because nobody had marked the first one as used."
+  },
+  {
+   "from_frame": 1332,
+   "duration_frames": 396,
+   "text": "The process is not broken where the money went. It is broken at the step where a plan is supposed to become somebody's job, and that step has no name and no owner."
+  },
+  {
+   "from_frame": 1728,
+   "duration_frames": 264,
+   "text": "Take last week's list, write a name next to every line, and count the blanks. Send this to whoever runs your Monday."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

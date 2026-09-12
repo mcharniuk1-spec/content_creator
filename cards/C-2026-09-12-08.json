@@ -1,0 +1,431 @@
+{
+  "card_id": "C-2026-09-12-08",
+  "claims": [
+    {
+      "source": "data/analysis/insights.json I-22; reports/analysis/01-general-conclusions.md §C - of 115 features, none reaches p<0.01 and only seven reach p<0.05.",
+      "state": "OBSERVED",
+      "text": "We computed 115 numeric features across 268 analysis-ready videos, and none of them separates the top from the bottom performance quartile at p<0.01."
+    },
+    {
+      "source": "reports/analysis/01-general-conclusions.md §C; data/analysis/insights.json I-22.",
+      "state": "OBSERVED",
+      "text": "Of 460 correlation pairs tested, 13 clear our reliability bar, eleven of them against save rate (ten distinct features) and none at all against robust_z, our creator-relative reach measure; one clears it against view_lift."
+    },
+    {
+      "source": "data/analysis/insights.json I-08 - screen_share against share_rate, rho +0.203, p=0.00085, creator-normalised +0.129, survives.",
+      "state": "OBSERVED",
+      "text": "The one visual instruction that survived is 'put a real screen on camera'."
+    },
+    {
+      "source": "No footage exists yet. The comparison must be in the footage or the reel becomes an opinion; the hypothesis names this as its main risk.",
+      "state": "PLANNED",
+      "text": "The two runs shown on screen - one paragraph of instructions and one multi-step build - are recorded on the shoot day on a task the presenters actually repeat."
+    },
+    {
+      "source": "We tested nothing of the kind. The reel shows one comparison on one task and hands over three questions that decide it, never a general verdict.",
+      "state": "MISSING",
+      "text": "That a written prompt beats a multi-step build in general."
+    },
+    {
+      "source": "Not measured. The script names the three questions to ask rather than numbers we do not have, and no clock or timer appears on screen.",
+      "state": "TO_MEASURE",
+      "text": "How long each version takes to set up, and what each costs to maintain."
+    },
+    {
+      "source": "Not asserted. The closing hands over three questions; the case where the larger build is right is left open rather than argued away.",
+      "state": "MISSING",
+      "text": "That agents are the wrong choice."
+    },
+    {
+      "source": "It is one experiment on one corpus, offered as a shape to recognise, not as evidence about anyone else's build.",
+      "state": "MISSING",
+      "text": "That our own measurement failure generalises to the viewer's task."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "One continuous filmed-monitor take of the simple version running end to end, with the written paragraph and its three checks visible",
+      "Across-the-room filmed-monitor shot of the multi-step version with one step stalled",
+      "Screenshot of our own strong-versus-weak feature table with the p-value column visible (real, from reports/data/associations.json and reports/analysis/04-strong-vs-weak.md)",
+      "Presenter A-roll, one continuous take, one location, banner plate fixed"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 40px, Paper on an Ink plate with 24px padding, bottom safe zone, two lines maximum. One persistent Ink banner plate in Saira SemiCondensed Black at the top for the whole reel. No emoji on screen.",
+    "cut_timing": "Seven sections, three visible cuts. The first three sections are one unbroken filmed-monitor take, modelled on the corpus's highest-lift visual sequence; the presenter material at the end is a second unbroken take. There is no speaker change, which is the only cut PRODUCTION.md allows.",
+    "emphasis": "No colour on the elaborate run - it is not marked as bad, it is simply shown stalling. Oxide appears once, on the stalled step's own error state as the screen actually renders it, never as an added graphic.",
+    "motion": "Linear easing only, per design/rules/motion.md. No bounce, no gradients, no rounded corners, no centred text. No clock or timer overlay anywhere.",
+    "zooms": "One ui_zoom onto the three checks in the paragraph. No zoom on the elaborate run and none on any A-roll scene."
+  },
+  "format": "M2 Radar",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "Same job, twice. This one is a paragraph of instructions. That one is six agents. Watch where each stops.",
+      "type": "demo_first"
+    },
+    {
+      "is_question": false,
+      "text": "Here is the same job done two ways, and the version that finishes is the one you could have written in a text box.",
+      "type": "result_first"
+    },
+    {
+      "is_question": true,
+      "text": "Do you actually need an agent for a task you do five times a week? Watch both versions run.",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-09",
+  "references": [
+    {
+      "code": "Dbs2JdJKUDd",
+      "creator_median_play": 3619.0,
+      "function": "explanation",
+      "play": 16290,
+      "reason": "The only reel in the pool whose whole argument is that the heavy tool should be abandoned for one prompt, and its pain block is stated as acts rather than as a condition: think about it, adjust the layout, no colours, boring template. Pain first, demo second, objection third - the three things stopping a switch answered in the order they arise. Small numbers (16 290 plays) but a clean structure and robust_z 3.28.",
+      "save_rate": 0.0426,
+      "share_rate": 0.02983,
+      "transformed_how": "Borrowed: the pain-demo-objection ordering and the habit of naming the pain as a sequence of acts rather than a state. Changed: our comparison is run on screen in both directions rather than asserted, the task is an ordinary business task rather than a carousel, and 'Kenwa' is our own ASR's spelling of a product name - a standing reminder that we quote the structure and never the words.",
+      "url": "https://www.instagram.com/reel/Dbs2JdJKUDd/",
+      "useful_frame": {
+        "scene_id": "Dbs2JdJKUDd-S02",
+        "what": "the replacement workflow is shown running full-frame, then cut back to the face only to interpret it"
+      },
+      "useful_transcript": {
+        "beat_id": "Dbs2JdJKUDd-B1",
+        "quote": "If you make a carousel in Kenwa, it takes hours. Think about it, adjust the layout. There are no colors. And in the end, it becomes the boring template."
+      },
+      "username": "dainikautomates",
+      "view_lift": 3.5
+    },
+    {
+      "code": "DbVKVz0y8xo",
+      "creator_median_play": 9734.0,
+      "function": "b_roll",
+      "play": 70474,
+      "reason": "A single unbroken B_ROLL_PROCESS state for the full 87 seconds - the highest median view_lift of any visual sequence with more than three reels behind it (30.90 on n=6, 4 creators; only a three-reel sequence, A_ROLL_CLOSE_UP>SCREENSHOT>A_ROLL_CLOSE_UP at 52.04, scores higher) - narrated over a live artefact. It proves that a long single take over a working screen holds attention, which is exactly what a two-runs comparison needs. Ungated, 33.0 shares and 57.6 saves per 1 000. The contact sheet shows a hand moving over a real monitor and no presenter face at all until the close.",
+      "save_rate": 0.05758,
+      "share_rate": 0.03301,
+      "transformed_how": "Borrowed: one continuous process shot with narration over it and no cut to a presenter until the end. Changed: we run the shot twice - the small version, then the elaborate one - so the comparison happens in the footage rather than in a sentence; and the tech stack it recites in its CTA is replaced by a single paragraph plus three checks. Different function from this reel's use in H-04, which takes only the spoken boundary statement.",
+      "url": "https://www.instagram.com/reel/DbVKVz0y8xo/",
+      "useful_frame": {
+        "scene_id": "DbVKVz0y8xo-S00",
+        "what": "one continuous camera-filmed monitor take for the entire runtime, a live hand pointing at each part as it is named, word-by-word captions"
+      },
+      "useful_transcript": {
+        "beat_id": "DbVKVz0y8xo-B2",
+        "quote": "build this thing. First you're going to scrape any short form account and get all of their clips."
+      },
+      "username": "olivermerrick___",
+      "view_lift": 6.24
+    },
+    {
+      "code": "DZQZOVhgNvK",
+      "creator_median_play": 24492.0,
+      "function": "proof",
+      "play": 124032,
+      "reason": "Puts the output before the architecture and never lets the viewer hold an unanswered question: the result is named in full, then the phases. Proof inside the first fifteen seconds, numbered phases afterwards. 25.0 shares and 50.2 saves per 1 000, 4.06x lift, robust_z 2.18. Its contact sheet also shows the tell we are inverting - a running clock overlay from the midpoint on, dramatising speed that is never actually compared with anything.",
+      "save_rate": 0.05024,
+      "share_rate": 0.02501,
+      "transformed_how": "Borrowed: output-before-architecture ordering, so the viewer sees the result before any mechanism. Changed: we show two outputs rather than one, and the comparison is the point; we refuse its proof style, an outcome claim about views we are not allowed to make, and its paid-community CTA; and we do not use the clock overlay, because a speed comparison we have not measured is a claim.",
+      "url": "https://www.instagram.com/reel/DZQZOVhgNvK/",
+      "useful_frame": {
+        "scene_id": "DZQZOVhgNvK-S00",
+        "what": "the output is on screen before any mechanism is described, with a running clock overlay added from the midpoint"
+      },
+      "useful_transcript": {
+        "beat_id": "DZQZOVhgNvK-B1",
+        "quote": "I get all the top-performing posts in my niche fully transcribed with a visual analysis. I get the light count, I get the hook, I get the comment count, I get an outlier score, I get everything that I need. Here is exactly how it works."
+      },
+      "username": "jasoncooperson",
+      "view_lift": 4.06
+    },
+    {
+      "code": "DVaBP3wDAFE",
+      "creator_median_play": 7471.0,
+      "function": "topic",
+      "play": 533528,
+      "reason": "The archetype of the thing this reel argues against, and therefore the reference that defines our angle: a six-agent command centre narrated as self-evidently good, two thirds of its runtime an unbroken UI_DEMO, demo before threat, gate last. 70.4x lift, robust_z 5.0 clipped, 22.4 shares per 1 000. Its contact sheet gives us the exact look of the elaborate run: a dense multi-panel dashboard filmed across the room off a real monitor.",
+      "save_rate": 0.03835,
+      "share_rate": 0.02243,
+      "transformed_how": "Borrowed: nothing of its voice. What is borrowed is the subject as a foil - the dashboard-of-agents genre whose energy the corpus rewards (agent building, n=27, median view_lift 6.63) and whose shape our positioning refuses - plus the across-the-room filmed-dashboard framing for our elaborate run. Changed: we show the same kind of artefact stalling rather than triumphing, we name the person who owns the task, and we drop the fear register and the profanity of its last third entirely.",
+      "url": "https://www.instagram.com/reel/DVaBP3wDAFE/",
+      "useful_frame": {
+        "scene_id": "DVaBP3wDAFE-S00",
+        "what": "dense multi-panel agent dashboard filmed across the room off a real monitor, badge-title held top-left, sentence-building captions at the bottom"
+      },
+      "useful_transcript": {
+        "beat_id": "DVaBP3wDAFE-B1",
+        "quote": "So I have my researcher my script writer my editor my scheduler and my analytics here"
+      },
+      "username": "tenfoldmarc",
+      "view_lift": 70.41
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-08.json",
+  "review": {
+    "findings": [
+      "[evidence] The script said 'Not one separated a strong reel from a weak one'. reports/analysis/01-general-conclusions.md §C and I-22 say none of the 115 features reaches p<0.01 but seven reach p<0.05, so seven do separate them at the weaker bar → changed to 'Not one reliably separated a strong reel from a weak one', which is exactly the project's RELIABLE threshold. One word added; the section goes to 41 words / 16.4 s and the reel to 174 words / 69.6 s, still inside the band.",
+      "[evidence] claims[1] said 13 RELIABLE pairs with 'none at all against the reach measure'. Nine are save-rate and none is against robust_z, but one (lex_entities_distinct → view_lift, +0.161, cn +0.198) is against view_lift, which is also a reach measure → claim reworded to name robust_z and to state the one view_lift pair.",
+      "[evidence] Reference DbVKVz0y8xo was credited with 'the highest median view_lift of any visual sequence in the corpus (30.90 on n=6)'. reports/data/visual_patterns.json has A_ROLL_CLOSE_UP>SCREENSHOT>A_ROLL_CLOSE_UP at 52.04 on n=3 → qualified to 'the highest of any sequence with more than three reels behind it', in the reference reason and in traceability.",
+      "[evidence] The other headline numbers reproduce: 115 features, none at p<0.01 and seven at p<0.05 (I-22, §C); 460 pairs and 13 RELIABLE (§C); screen_share → share_rate +0.203, p=0.00085, survives creator normalisation (I-08); agent building n=27 at median view_lift 6.63 and 23 agent_build solution types (I-25, I-29); contrarian hooks at 0.0076 share and 0.0139 save, the lowest of the large hook cells (§D); myth_bust at robust_z 1.93 on the smallest explanation share (05-script-parts §6) → left.",
+      "[originality] 'Not one of them argues against the build' is the hypothesis' own novelty note, but the corpus does contain DcbPb2yxrTx ('Please stop building Jarvis dashboards', myth_bust / warning_dont, agent-building topic), which argues against the dashboard while defending the architecture underneath → the counter-example is now named in traceability so the novelty claim is falsifiable rather than absolute. No script change: the claim is not spoken.",
+      "[evidence] All four reference metric sets re-derived from data/radar.db and all four function tags match data/analysis/hypothesis_refs.json; the four quotes are verbatim from the beat ids given; the script shares no five-word sequence with any of the four transcripts → left.",
+      "[evidence] The demo is PLANNED. If the two runs are not both recorded the card must not be shot - the hypothesis names 'sounds like an opinion' as its main risk → left.",
+      "[hook] Demo-first rather than contrarian, per the hypothesis reviewer's note; the disagreement is shown and never spoken; three candidates, one question, first one used; 19 words / 7.6 s → left.",
+      "[positioning] No clock or timer overlay anywhere, because a speed comparison we have not measured would be a claim (recorded TO_MEASURE); the elaborate run is filmed to look as impressive as the genre does and the stalled step is not dressed as a failure → left.",
+      "[positioning] No split screen, no comment gate, no income or savings framing, no vendor named → left.",
+      "[visual] Coarse sequence SCR>A: the first three sections are one unbroken filmed-monitor take and the presenter appears only for the verdict, which is pattern 4 in reports/analysis/03-visual-patterns.md. Opens on a running screen at 0.0 s (I-09) → left.",
+      "[timing] Recomputed: 174 words, 69.6 s at 2.5 wps, storyboard contiguous 0.0-69.6 s, no scene under 1.5 s, every overlay ≤ 7 words → passes.",
+      "[schema] python3 -m engine.cards_v2 validate → 0 errors, 0 warnings after the edits."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "permission to start with the small thing, given by someone who did not",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 7.6,
+        "text": "Same job, twice. This one is a paragraph of instructions. That one is six agents. Watch where each stops.",
+        "words": 19
+      },
+      {
+        "role": "problem",
+        "seconds": 9.2,
+        "text": "The task runs about five times a week. A quote, a summary, a reply. Whatever you build, somebody has to keep it running.",
+        "words": 23
+      },
+      {
+        "role": "explanation",
+        "seconds": 10.0,
+        "text": "This is the paragraph. What the task is, what good looks like, three checks at the bottom. Anyone doing the job can read every line.",
+        "words": 25
+      },
+      {
+        "role": "proof",
+        "seconds": 9.2,
+        "text": "This is the other one. Six steps, four of them fine, and this one waiting on something nobody in the room can fix.",
+        "words": 23
+      },
+      {
+        "role": "example",
+        "seconds": 16.4,
+        "text": "We did the elaborate version to ourselves. A hundred and fifteen measurements across two hundred and sixty-eight videos. Not one reliably separated a strong reel from a weak one. What survived was a question we could have asked on day one.",
+        "words": 41
+      },
+      {
+        "role": "payoff",
+        "seconds": 8.4,
+        "text": "Three questions before you build. Who can change it. What happens when it is wrong. How long until it first runs.",
+        "words": 21
+      },
+      {
+        "role": "cta",
+        "seconds": 8.8,
+        "text": "Write your task as one paragraph and run it by hand five times this week. Send this to whoever is scoping it.",
+        "words": 22
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "unhurried, evidential, willing to be the one who overbuilt",
+    "total_s": 69.6,
+    "total_words": 174,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-08_S00.png",
+      "asset_status": "template",
+      "editing": "Open on the running artefact, not the face. The Ink banner plate carrying the promise appears on frame one and holds for the whole reel. No clock overlay: we have not measured speed.",
+      "end_s": 7.6,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "Same job. Two versions.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "Same job, twice. This one is a paragraph of instructions. That one is six agents. Watch where each stops.",
+      "source_inspiration": [
+        {
+          "code": "DbVKVz0y8xo",
+          "scene_id": "DbVKVz0y8xo-S00",
+          "why": "one continuous filmed-monitor take with a live hand, no presenter until the end"
+        },
+        {
+          "code": "DZQZOVhgNvK",
+          "scene_id": "DZQZOVhgNvK-S00",
+          "why": "the output is on screen before any mechanism is described"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full-frame, filmed off a real monitor: the simple version already running, the written paragraph visible in the box above the output. A hand rests at the edge of frame. No presenter."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-08_S01.png",
+      "asset_status": "template",
+      "editing": "No cut. The friction is stated over the artefact, in the first quarter of the reel.",
+      "end_s": 16.8,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 1,
+      "layout": "demo",
+      "overlay_text": "Five times a week",
+      "scene_id": "S01",
+      "script_role": "problem",
+      "script_text": "The task runs about five times a week. A quote, a summary, a reply. Whatever you build, somebody has to keep it running.",
+      "source_inspiration": [
+        {
+          "code": "Dbs2JdJKUDd",
+          "scene_id": "Dbs2JdJKUDd-S02",
+          "why": "the pain is named as acts while the replacement is already on screen"
+        }
+      ],
+      "start_s": 7.6,
+      "transition": "none",
+      "visual": "Same unbroken take. The output finishes and sits there while the narration names the kind of task this is."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-08_S02.png",
+      "asset_status": "template",
+      "editing": "Slow ui_zoom onto the three checks. Still the same unbroken take; the whole first act is one shot.",
+      "end_s": 26.8,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 2,
+      "layout": "demo",
+      "overlay_text": "One paragraph. Three checks.",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "This is the paragraph. What the task is, what good looks like, three checks at the bottom. Anyone doing the job can read every line.",
+      "source_inspiration": [
+        {
+          "code": "DbVKVz0y8xo",
+          "scene_id": "DbVKVz0y8xo-S00",
+          "why": "the hand physically points at each part as it is named"
+        }
+      ],
+      "start_s": 16.8,
+      "transition": "ui_zoom",
+      "visual": "Same take. The hand scrolls up to the paragraph itself and stops on the three checks at the bottom of it."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-08_S03.png",
+      "asset_status": "template",
+      "editing": "Shot to look exactly as impressive as the genre does. The stalled step is not zoomed or circled; it is simply the one that is not moving.",
+      "end_s": 36.0,
+      "frame_type": "UI_DEMO",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "Six steps. One stuck.",
+      "scene_id": "S03",
+      "script_role": "proof",
+      "script_text": "This is the other one. Six steps, four of them fine, and this one waiting on something nobody in the room can fix.",
+      "source_inspiration": [
+        {
+          "code": "DVaBP3wDAFE",
+          "scene_id": "DVaBP3wDAFE-S00",
+          "why": "the across-the-room filmed-dashboard framing that the agent genre uses to look impressive"
+        }
+      ],
+      "start_s": 26.8,
+      "transition": "hard_cut",
+      "visual": "Cut to the elaborate version, filmed across the room off a real monitor: a dense multi-panel build, six steps in a row, four green and one stalled with an error nobody in shot can read."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-08_S04.png",
+      "asset_status": "template",
+      "editing": "This is our own failure and it stays on screen for the whole section. No animation, no highlight beyond the one surviving line.",
+      "end_s": 52.4,
+      "frame_type": "DATA_VISUAL",
+      "idx": 4,
+      "layout": "demo",
+      "overlay_text": "115 measurements. None separated.",
+      "scene_id": "S04",
+      "script_role": "example",
+      "script_text": "We did the elaborate version to ourselves. A hundred and fifteen measurements across two hundred and sixty-eight videos. Not one reliably separated a strong reel from a weak one. What survived was a question we could have asked on day one.",
+      "source_inspiration": [
+        {
+          "code": "DZQZOVhgNvK",
+          "scene_id": "DZQZOVhgNvK-S00",
+          "why": "the result is put in front of the viewer before the method is explained"
+        }
+      ],
+      "start_s": 36.0,
+      "transition": "hard_cut",
+      "visual": "Full-frame screenshot of our own results: the strong-versus-weak table with a hundred and fifteen feature rows and a p-value column, none of them clearing the threshold, and one line at the bottom naming the single instruction that survived."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-08_S05.png",
+      "asset_status": "template",
+      "editing": "First and only appearance of the presenter. All three questions are on screen together by the end of the section so the frame can be screenshotted.",
+      "end_s": 60.8,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "Change it. Wrong. How long.",
+      "scene_id": "S05",
+      "script_role": "payoff",
+      "script_text": "Three questions before you build. Who can change it. What happens when it is wrong. How long until it first runs.",
+      "source_inspiration": [
+        {
+          "code": "Dbs2JdJKUDd",
+          "scene_id": "Dbs2JdJKUDd-S01",
+          "why": "the face is used only to interpret what the screen has already shown"
+        }
+      ],
+      "start_s": 52.4,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, one location, banner plate held above him. The three questions appear one at a time beside him as he says them and none of them leaves."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-08_S06.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "One ask only. Hold the last frame for one second before the cut.",
+      "end_s": 69.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "One paragraph. Five runs. By hand.",
+      "scene_id": "S06",
+      "script_role": "cta",
+      "script_text": "Write your task as one paragraph and run it by hand five times this week. Send this to whoever is scoping it.",
+      "source_inspiration": [],
+      "start_s": 60.8,
+      "transition": "none",
+      "visual": "Same take, no reframe. Michael holds still for the closing line."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company responsible for one repeated process. Specifically someone who has been told they need an agent.",
+    "concept": "The same job run twice on screen - one paragraph of written instructions, then a multi-step build - with the comparison happening in the footage rather than in an argument. Then the same lesson taken from our own work: a hundred and fifteen measurements across two hundred and sixty-eight videos separated nothing, and the one instruction that survived was a question we could have asked on day one.",
+    "filter": {
+      "ai_boundary": "A written paragraph plus three checks keeps the judgement with the person running the task; they can read every line and change any of it. A multi-step build moves that judgement into software that has no owner in the room.",
+      "friction": "The advice on offer is to build a multi-step agent, and nobody in a company of nine can maintain one. The elaborate version fails quietly, at a step nobody in the room can read.",
+      "next_action": "Write the task out as one paragraph with three checks and run it by hand five times this week before automating anything.",
+      "process": "A knowledge task the team repeats about five times a week: a quote, a call summary, a reply to a standard enquiry, a weekly status note - something with a clear input, a clear output and a person who owns it."
+    },
+    "objective": "Get one viewer to write their repeated task out as a single paragraph with three checks and run it by hand five times before commissioning anything larger.",
+    "pain": "dont_know_where_to_start",
+    "positioning": "builder",
+    "promise": "A first version that works this week and that the person doing the job can change without asking anybody.",
+    "rationale": "Agent building is the highest-lift topic in the corpus (n=27, median view_lift 6.63) and 23 reels carry an agent_build solution type; not one of them argues against the build (I-25). myth_bust carries the second-highest robust_z of any narrative at 1.93 on the smallest explanation share, which is this reel's shape. The register risk is real - contrarian hooks sit at 0.0076 share and 0.0139 save, the lowest of the large hook cells - so the reel opens on the demo, not on the disagreement."
+  },
+  "title": "The paragraph that beat the agents",
+  "traceability": {
+    "evidence_summary": "Our own elaborate version lost: 115 numeric features over 268 analysis-ready videos, none separating the strong from the weak quartile at p<0.01, only seven at p<0.05, and of 460 correlation pairs just 13 clear the reliability bar with none against reach (I-22). The single instruction that survived was 'put a real screen on camera' (I-08, rho +0.203, p=0.00085, survives creator normalisation) - a question we could have asked on day one. The angle takes the energy of the corpus's highest-lift topic and refuses its shape: agent building runs at n=27, median view_lift 6.63, and not one of the 23 agent_build reels argues against the build (I-25; the nearest counter-example, DcbPb2yxrTx, argues against the dashboard and for the architecture underneath, not against building). The visual model is the single unbroken process shot, the highest median view_lift of any visual sequence with more than three reels behind it (30.90 on n=6, 4 creators; only a three-reel sequence scores higher), carried here by DbVKVz0y8xo's 87-second unbroken take at 33.0 shares and 57.6 saves per 1 000; DVaBP3wDAFE (70.4x lift) supplies the look of the elaborate run as a foil, DZQZOVhgNvK (50.2 saves/1k) the output-before-architecture ordering, Dbs2JdJKUDd (robust_z 3.28) the pain-demo-objection order.",
+    "hypothesis": "H-09",
+    "insights": [
+      "I-22",
+      "I-25",
+      "I-08",
+      "I-09",
+      "I-27",
+      "I-16",
+      "I-05"
+    ],
+    "original_synthesis": "The corpus contains 27 agent-build reels and 23 with an agent_build solution type, and not one of them argues against the build - the nearest thing to a counter-example, DcbPb2yxrTx ('Please stop building Jarvis dashboards', myth_bust / warning_dont), argues against the visible dashboard and for the architecture underneath it. A demonstrated 'the small version won', with the author's own overbuild shown as the evidence, is unrepresented. The three questions - who can change it, what happens when it is wrong, how long until the first version runs - are ours and appear in no reference.",
+    "why_better_than_generic": "A generic AI script would praise agents or, in the contrarian version, call them hype and show nothing. This one opens on the demo rather than the disagreement, because contrarian hooks carry the lowest share and save rates of the large hook cells (0.0076 and 0.0139), runs both versions in the footage so the comparison is watchable rather than arguable, and uses our own failed measurement as the proof - which means the reel's evidence is a thing we did badly, not a thing we are selling."
+  }
+}

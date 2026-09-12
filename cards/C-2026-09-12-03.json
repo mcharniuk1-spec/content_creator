@@ -1,0 +1,423 @@
+{
+  "card_id": "C-2026-09-12-03",
+  "claims": [
+    {
+      "source": "Insight I-21 in data/analysis/insights.json (n_codes_alignment_done = 264) and reports/data/alignment.json (n_beats_with_scene_ids 1 527 of 1 527 beats, 264 of 264 codes returned a result, so nothing was skipped); alignment stage described in engine/SPEC.md section 6.5. There is no jobs row for an ALIGNMENT stage, so 'never failed' rests on complete coverage of the 264 codes rather than on a job-state trace.",
+      "state": "OBSERVED",
+      "text": "A step we built matched the spoken beats of a video to the points where its picture changes, and it ran on all 264 parsed videos without failing."
+    },
+    {
+      "source": "Insight I-21: semantic_boundary_cut_rate 0.036, n_beat_boundaries_checked 1 527; reports/analysis/03-visual-patterns.md, Transitions section.",
+      "state": "OBSERVED",
+      "text": "It found 55 matches out of 1 527 possible boundaries, a hit rate of 3.6 %."
+    },
+    {
+      "source": "Insight I-21: codes_with_any_aligned_boundary = 49 of 264.",
+      "state": "OBSERVED",
+      "text": "215 of the 264 videos produced no match at all."
+    },
+    {
+      "source": "Insight I-21: robust_z 1.445 vs 1.251 (p=0.603), share rate 0.0168 vs 0.0149 (p=0.276), save rate p=0.636, view_lift p=0.373. I-21's own confidence is INSUFFICIENT and its interpretation reads 'there is no evidence that cutting on meaning helps, and no evidence it does not' - the script is worded to match that, not to claim the two groups are the same.",
+      "state": "OBSERVED",
+      "text": "Where it did match we could measure no difference against the videos where it did not - a null result, not a demonstrated equality."
+    },
+    {
+      "source": "reports/analysis/03-visual-patterns.md, 'The limitation that shapes every number here'; confidence on the alignment null is recorded as INSUFFICIENT for exactly this reason. Stated aloud in the script so the null is not oversold.",
+      "state": "OBSERVED",
+      "text": "Part of the miss rate is our own measurement: the corpus carries nine fixed frames per video, so a picture change between two samples is invisible."
+    },
+    {
+      "source": "Decision taken 2026-09-12 on insight I-21's implication; not yet reflected in the shipped run.",
+      "state": "PLANNED",
+      "text": "The alignment step is being removed from the weekly run, and every automation will get a stated threshold and a review date at the moment it is built."
+    },
+    {
+      "source": "No before/after run timed; the reel makes no time or cost claim.",
+      "state": "TO_MEASURE",
+      "text": "Retiring the step makes the weekly run faster, cheaper or better."
+    },
+    {
+      "source": "We have not re-run the alignment against scene-v1 detector frames. Flagged here so the reel is not read as proving the step could never work.",
+      "state": "MISSING",
+      "text": "A finer frame sampling would leave the retirement decision unchanged."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Continuous screen capture of the alignment step running green and then being switched off (S00-S01)",
+      "Capture of the step's own output showing spoken beats against picture changes (S02)",
+      "Chart of 1 527 candidate boundaries with 55 lit (S03)",
+      "Two-column comparison of matched vs unmatched videos on the same outcome figures (S04)",
+      "Max A-roll, medium shot, one take",
+      "One-page retirement checklist published in the caption, not gated"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 600 at 40px, two lines maximum, bottom-anchored in Instagram zone A/B; one persistent top banner held for the whole reel.",
+    "cut_timing": "One hard cut in the whole reel, at 48.8 s, where the screen hands over to the presenter. Everything before it is screen: two full-frame captures of the step itself (running, then its own output) followed by two full-frame graphics built from the same run, changed inside the frame with a zoom, an overlay reveal and a punch-in rather than by cutting to a presenter. Everything after it is a single continuous face take.",
+    "emphasis": "The three numbers - 264, 1 527, 55 - are on screen in the same words they are spoken, and nothing else is. The null is never written as an equals sign.",
+    "motion": "Linear easing only, no bounce, per design/rules/motion.md.",
+    "zooms": "One push into the step's own output at 27.9 s. Nowhere else."
+  },
+  "format": "M2 Builds",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "This step has never failed. We turned it off this week. Here is the number that decided it.",
+      "type": "demo_first"
+    },
+    {
+      "is_question": false,
+      "text": "A step that works and changes nothing is not an asset. It is a bill nobody opens.",
+      "type": "contrarian"
+    },
+    {
+      "is_question": true,
+      "text": "How would you know which of your automations has earned another month?",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-18",
+  "references": [
+    {
+      "code": "Dbs2JdJKUDd",
+      "creator_median_play": 3619.0,
+      "function": "hook",
+      "play": 16290,
+      "reason": "The pool's only genuinely subtractive opening: it tells the viewer to stop using something before it offers a replacement, and at 11.4 s it drops a one-line re-hook straight into the demo. robust_z 3.28 on a small 16 290-play reel, 29.8 shares and 42.6 saves per 1 000.",
+      "save_rate": 0.0426,
+      "share_rate": 0.02983,
+      "transformed_how": "Borrowed the instruction to switch something off as the first words, and the one-line re-hook into the demo. Changed: we switch off something of our own rather than somebody else's product, and the hook shows the working step before the turn, because contrarian openings carry the lowest share and save rates of the large hook cells (0.0076 and 0.0139) and must not be the whole opening. Its Hinglish captions are heavily mis-transcribed in our files, so the structure is borrowed and never the wording.",
+      "url": "https://www.instagram.com/reel/Dbs2JdJKUDd/",
+      "useful_frame": {
+        "scene_id": "Dbs2JdJKUDd-S00",
+        "what": "frame one is a full-frame screen recording of the tool being abandoned, still open and still working, with the instruction to stop burned across it - no presenter until 4 s"
+      },
+      "useful_transcript": {
+        "beat_id": "Dbs2JdJKUDd-B2",
+        "quote": "Now look at this."
+      },
+      "username": "dainikautomates",
+      "view_lift": 3.5
+    },
+    {
+      "code": "Dc_TX1CttIc",
+      "creator_median_play": 22421.0,
+      "function": "proof",
+      "play": 562094,
+      "reason": "The most evidentially honest beat in the pool: it states the test conditions before the conclusion and concedes what would improve the result before drawing one. Ungated (cta_type none), 31.7 shares per 1 000, robust_z 5.0 (clipped). It is the shape a 'we measured it and it failed' beat needs in order not to sound like an excuse. save_rate is recorded as -1.0 because the source never returned a save count for this reel; it is a not-measured sentinel, not a rate.",
+      "save_rate": null,
+      "share_rate": 0.03167,
+      "transformed_how": "Borrowed the ordering: conditions first, concession second, conclusion third. Changed: our conclusion is that the step is being removed, which no reel in the corpus does; we state the threshold in advance so the retirement reads as a rule rather than as a mood; and the concession we make is against ourselves - part of our miss rate is our own coarse measurement, and we say so on screen.",
+      "url": "https://www.instagram.com/reel/Dc_TX1CttIc/",
+      "useful_frame": {
+        "scene_id": "Dc_TX1CttIc-S01",
+        "what": "cuts away from the face to a full-frame capture of the actual prompt and the actual output, so the conditions being described are legible on screen while they are spoken"
+      },
+      "useful_transcript": {
+        "beat_id": "Dc_TX1CttIc-B5",
+        "quote": "Every one of these was one shot. And yes, more context makes it better, but even cold it is clearly ahead of GPT 5.6 while sitting roughly level with fable 5.1."
+      },
+      "username": "v.i.s.h.ai",
+      "view_lift": 24.07
+    },
+    {
+      "code": "DMQMNNHSJRF",
+      "creator_median_play": 7281.0,
+      "function": "cta",
+      "play": 140763,
+      "reason": "One of the few spoken save asks in the whole corpus, and it gives the save a reason rather than a keyword. Five seconds, in the last 5 % of the script, no gate. With save_share appearing as a cta_type only twice in 266 reels, this is the closest thing to a working model for the ask M2 is allowed to make. save_rate is -1.0 for the same not-measured reason as above.",
+      "save_rate": null,
+      "share_rate": 0.03514,
+      "transformed_how": "Borrowed the save ask with a stated reason for saving, placed in the final seconds and returned to the face. Changed: ours names the artefact being published in the caption - the retirement checklist with its threshold and review date - so the save collects something rather than deferring the watch, and we drop the 'next video' series framing entirely, because series preambles and series closes belong to the setup-first family that runs at median robust_z 0.67 against 1.36.",
+      "url": "https://www.instagram.com/reel/DMQMNNHSJRF/",
+      "useful_frame": {
+        "scene_id": "DMQMNNHSJRF-S03",
+        "what": "the closing seconds return from the full-frame product page to the presenter inset, so the ask is delivered by a face and not over a screen"
+      },
+      "useful_transcript": {
+        "beat_id": "DMQMNNHSJRF-B6",
+        "quote": "And save this video so that you can try it later. And we will meet in the next video."
+      },
+      "username": "wokecoder",
+      "view_lift": 18.33
+    },
+    {
+      "code": "DZQZOVhgNvK",
+      "creator_median_play": 24492.0,
+      "function": "a_roll",
+      "play": 124032,
+      "reason": "A 40-second unbroken close-up that carries a whole build story before a single cut. It is the pool's evidence that the 'I built this' register holds on one face take - and it is exactly the register our retirement reel has to invert in its second half. 25.0 shares and 50.2 saves per 1 000, robust_z 2.18.",
+      "save_rate": 0.05024,
+      "share_rate": 0.02501,
+      "transformed_how": "Borrowed the builder register and the confidence to hold one long face take for the reasoning half. Changed: our version ends with the build being removed rather than offered, we refuse both of its proof moves - the view-count claim and the paid-community CTA - and the inset is replaced by a full-frame screen, because split states run at median robust_z 1.03 against 1.43 (p=0.044).",
+      "url": "https://www.instagram.com/reel/DZQZOVhgNvK/",
+      "useful_frame": {
+        "scene_id": "DZQZOVhgNvK-S00",
+        "what": "one 40-second close-up, single-word captions punched in on the beat, a small screen inset floated above the shoulder rather than cut to full frame"
+      },
+      "useful_transcript": {
+        "beat_id": "DZQZOVhgNvK-B0",
+        "quote": "I just built this clawed skill that can predict exactly what you need to post in order to go viral. And yeah, it works."
+      },
+      "username": "jasoncooperson",
+      "view_lift": 4.06
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-03.json",
+  "review": {
+    "findings": [
+      "[evidence] the proof beat read 'the videos it matched performed exactly like the ones it did not' - that asserts an equality from a null (medians 1.445 vs 1.251, p=0.603) on an insight whose own confidence is INSUFFICIENT -> rewrote the line as 'came out no different from the ones it did not', rewrote claims[3] to say null rather than same, and quoted I-21's interpretation in the source. Script version 2; total_s 69.2 -> 69.6, storyboard retimed from S04.",
+      "[visual] editing.cut_timing described everything before the hand-over as 'a single continuous screen take', but the card's own assets_required lists four separate screen assets (the step running, the step's output, a 1 527-mark chart, a two-column comparison) -> rewritten to name two captures plus two graphics changed inside the frame, with the one hard cut kept.",
+      "[evidence] claims[0]'s 'never failed' cited only I-21's n=264. There is no ALIGNMENT row in the jobs table -> source now also cites reports/data/alignment.json (264 of 264 codes, 1 527 of 1 527 beats carry scene ids) and says the claim rests on complete coverage, not on a job-state trace.",
+      "[visual] S04's overlay 'Matched or not, same result' repeated the equality error on screen -> 'Matched or not: no difference found'.",
+      "[visual] the opening frame carried transition hard_cut, which reads as a cut into frame one -> set to none, consistent with the reel's own 'one hard cut' description.",
+      "[evidence] verified: 264 codes, 1 527 boundaries checked, 55 aligned (3.60 %), 215 codes with none - all reproduce exactly from reports/data/alignment.json and I-21. references save_rate -1.0 on Dc_TX1CttIc and DMQMNNHSJRF is a genuine NULL in video_features (no save count returned), and both reason fields say so -> left, sentinel is disclosed.",
+      "[hook] 18 words / 7.5 s sits just under general-conclusions section G rule 3 (20-30 words) -> left: the three sentences are the whole payoff and padding them weakens the turn.",
+      "[pacing] left as is: the CTA carries a caption pointer and an action against rule 14's one ask. free_resource is the ask; 'keep it or kill it' is the filter's next_action and cannot be dropped."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "permission to stop maintaining something that never earned its place",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 7.5,
+        "text": "This step has never failed. We turned it off this week. Here is the number that decided it.",
+        "words": 18
+      },
+      {
+        "role": "problem",
+        "seconds": 10.0,
+        "text": "You have one of these. A script, a mailbox rule, something set up months ago. It still runs. Nobody has asked what it changes.",
+        "words": 24
+      },
+      {
+        "role": "explanation",
+        "seconds": 10.4,
+        "text": "Ours matched what is said in a video to where the picture changes. It ran on two hundred and sixty-four videos. It never crashed once.",
+        "words": 25
+      },
+      {
+        "role": "proof",
+        "seconds": 6.7,
+        "text": "Out of one thousand five hundred and twenty-seven places it could have matched, it found fifty-five.",
+        "words": 16
+      },
+      {
+        "role": "proof",
+        "seconds": 14.2,
+        "text": "Two hundred and fifteen videos gave it nothing at all. Some of that is our own measurement being coarse. And the videos it matched came out no different from the ones it did not.",
+        "words": 34
+      },
+      {
+        "role": "payoff",
+        "seconds": 12.5,
+        "text": "So it is off. Every automation now gets two things written down the day it is built: the number that proves it is worth keeping, and the date we check.",
+        "words": 30
+      },
+      {
+        "role": "cta",
+        "seconds": 8.3,
+        "text": "The checklist is in the caption. Find the one that fired least last month, then keep it or kill it.",
+        "words": 20
+      }
+    ],
+    "target_wps": 2.4,
+    "tone": "plain, unsentimental, a builder reporting a decision rather than defending it",
+    "total_s": 69.6,
+    "total_words": 167,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-03_S00.png",
+      "asset_status": "template",
+      "editing": "Real capture, no speed-up. The switch lands on the word 'off'. Nothing cuts into this frame - it is the first.",
+      "end_s": 7.5,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "Never failed. Switched off.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "This step has never failed. We turned it off this week. Here is the number that decided it.",
+      "source_inspiration": [
+        {
+          "code": "Dbs2JdJKUDd",
+          "scene_id": "Dbs2JdJKUDd-S00",
+          "why": "same subtractive opening on the working thing itself, the instruction to stop burned across frame one"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full-frame screen recording of the step running: a green pass, then another, then the hand switching it off. No presenter in frame."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-03_S01.png",
+      "asset_status": "template",
+      "editing": "One take, no cut. The log keeps moving under the voice.",
+      "end_s": 17.5,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 1,
+      "layout": "demo",
+      "overlay_text": "Still running. Nobody asks why.",
+      "scene_id": "S01",
+      "script_role": "problem",
+      "script_text": "You have one of these. A script, a mailbox rule, something set up months ago. It still runs. Nobody has asked what it changes.",
+      "source_inspiration": [
+        {
+          "code": "DZQZOVhgNvK",
+          "scene_id": "DZQZOVhgNvK-S00",
+          "why": "borrowed the willingness to hold one continuous take under the reasoning rather than cutting to illustrate each noun"
+        }
+      ],
+      "start_s": 7.5,
+      "transition": "none",
+      "visual": "The same unbroken take continues: the step's log scrolling on, pass after pass, unremarkable."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-03_S02.png",
+      "asset_status": "template",
+      "editing": "Zoom inside the same take, no cut; the counter reaches 264 as it is spoken.",
+      "end_s": 27.9,
+      "frame_type": "UI_DEMO",
+      "idx": 2,
+      "layout": "demo",
+      "overlay_text": "264 videos. Zero crashes.",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "Ours matched what is said in a video to where the picture changes. It ran on two hundred and sixty-four videos. It never crashed once.",
+      "source_inspiration": [],
+      "start_s": 17.5,
+      "transition": "ui_zoom",
+      "visual": "Slow push into the step's own output: the spoken beats on one side of the timeline, the picture changes on the other."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-03_S03.png",
+      "asset_status": "template",
+      "editing": "The 55 light up one at a time and stop early; hold on the gap.",
+      "end_s": 34.6,
+      "frame_type": "DATA_VISUAL",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "55 matches out of 1,527",
+      "scene_id": "S03",
+      "script_role": "proof",
+      "script_text": "Out of one thousand five hundred and twenty-seven places it could have matched, it found fifty-five.",
+      "source_inspiration": [
+        {
+          "code": "Dc_TX1CttIc",
+          "scene_id": "Dc_TX1CttIc-S01",
+          "why": "conditions shown on screen at the moment they are stated, before any conclusion is drawn"
+        }
+      ],
+      "start_s": 27.9,
+      "transition": "overlay_reveal",
+      "visual": "Full-frame: 1 527 small marks, 55 of them lit. The lit ones are hard to find."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-03_S04.png",
+      "asset_status": "template",
+      "editing": "The concession line gets its own punch-in; the two columns settle on figures a viewer cannot tell apart.",
+      "end_s": 48.8,
+      "frame_type": "DATA_VISUAL",
+      "idx": 4,
+      "layout": "demo",
+      "overlay_text": "Matched or not: no difference found",
+      "scene_id": "S04",
+      "script_role": "proof",
+      "script_text": "Two hundred and fifteen videos gave it nothing at all. Some of that is our own measurement being coarse. And the videos it matched came out no different from the ones it did not.",
+      "source_inspiration": [
+        {
+          "code": "Dc_TX1CttIc",
+          "scene_id": "Dc_TX1CttIc-S01",
+          "why": "the concession comes before the conclusion, in the same breath, so the conclusion is not an excuse"
+        }
+      ],
+      "start_s": 34.6,
+      "transition": "text_punch_in",
+      "visual": "Two columns of results side by side, matched and unmatched, with the same numbers at the bottom of each."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-03_S05.png",
+      "asset_status": "template",
+      "editing": "No cut inside the section; the overlay appears on 'two things' and holds.",
+      "end_s": 61.3,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "A number and a date",
+      "scene_id": "S05",
+      "script_role": "payoff",
+      "script_text": "So it is off. Every automation now gets two things written down the day it is built: the number that proves it is worth keeping, and the date we check.",
+      "source_inspiration": [
+        {
+          "code": "DZQZOVhgNvK",
+          "scene_id": "DZQZOVhgNvK-S00",
+          "why": "the builder register held on one face take, here inverted: the build is removed rather than offered"
+        }
+      ],
+      "start_s": 48.8,
+      "transition": "hard_cut",
+      "visual": "Max, medium shot, plain wall, first appearance in the reel."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-03_S06.png",
+      "asset_status": "template",
+      "cta_type": "free_resource",
+      "editing": "Hold the last frame one second before the cut.",
+      "end_s": 69.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "Checklist in the caption",
+      "scene_id": "S06",
+      "script_role": "cta",
+      "script_text": "The checklist is in the caption. Find the one that fired least last month, then keep it or kill it.",
+      "source_inspiration": [
+        {
+          "code": "DMQMNNHSJRF",
+          "scene_id": "DMQMNNHSJRF-S03",
+          "why": "a spoken save ask with a stated reason, delivered on the face in the final seconds"
+        }
+      ],
+      "start_s": 61.3,
+      "transition": "none",
+      "visual": "Max, same take, closing line to camera."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company who is responsible for one repeated process and has tried ChatGPT but has no repeatable way of using it at work. Specifically anyone maintaining an automation they inherited or built months ago and has never reviewed.",
+    "concept": "We switched off a step we had built that ran on every file and never once failed, because we finally measured what it changed and the answer was nothing.",
+    "filter": {
+      "ai_boundary": "The machine can report how often a step actually fired and what measurably changed when it did. Deciding whether that is worth keeping is a human decision, and it needs a threshold written down before the answer is known.",
+      "friction": "Nothing in a small company ever gets switched off. Each item is individually cheap, none of them has an owner after the person who built it moved on, and because they keep running without erroring nobody ever asks what they change.",
+      "next_action": "List your automations, find the one that fired least last month, and either write down the number that justifies keeping it or switch it off.",
+      "process": "Keeping an existing automation alive - the weekly script, the scheduled export, the rule in the mailbox, the zap somebody set up months ago - and deciding each month whether it still earns the maintenance it costs."
+    },
+    "objective": "Give the viewer a retirement rule - a number and a date, written down the day a thing is built - by showing a working step of ours being turned off for a stated reason.",
+    "pain": "time_waste",
+    "positioning": "builder",
+    "promise": "A way to decide which of your automations deserves to survive, that does not depend on whether it is still running.",
+    "rationale": "The corpus contains 62 demo walkthroughs and not one reel in which the author removes something they built; warning_dont is the smallest solution type at 6 of 266 and every one of those warns about somebody else's tool. So the subject is unrepresented and the references can only supply grammar: a subtractive opening that shows the working thing first (Dbs2JdJKUDd), conditions-then-concession-then-conclusion for the measurement beat (Dc_TX1CttIc), the builder register held on one long face take (DZQZOVhgNvK), and a spoken save ask with a stated reason (DMQMNNHSJRF)."
+  },
+  "title": "We built it, it worked, and we switched it off",
+  "traceability": {
+    "evidence_summary": "We built an alignment step that matched spoken beats to visual scene boundaries. It ran on all 264 parsed videos and never failed. It produced 55 aligned boundaries out of 1 527 (3.6 %), 215 of the 264 videos produced none at all, and the videos where it did fire performed no differently on any metric (robust_z 1.445 vs 1.251, p=0.603; share p=0.276; save p=0.636). Part of that miss rate is our own nine-frames-per-video sampling, which the reel says out loud. The four references contribute grammar only: a subtractive opening on the working artefact (Dbs2JdJKUDd, robust_z 3.28, 42.6 saves/1k), conditions-concession-conclusion ordering (Dc_TX1CttIc, ungated, 31.7 shares/1k), a long unbroken builder take to invert (DZQZOVhgNvK, 50.2 saves/1k) and an ungated spoken save ask (DMQMNNHSJRF, 35.1 shares/1k).",
+    "hypothesis": "H-18",
+    "insights": [
+      "I-21",
+      "I-20",
+      "I-22",
+      "I-08",
+      "I-09",
+      "I-14",
+      "I-18"
+    ],
+    "original_synthesis": "The corpus contains no reel in which an author removes something they built: warning_dont is the smallest solution type at 6 of 266 and every one warns about somebody else's tool. The retired step, the hit rate and the null are ours, dated, and reproducible from data/analysis/insights.json and the beats/scenes tables. The retirement rule - a number and a date written down on the day a thing is built - is ours and is published in the caption rather than gated, because what gets saved is a deliverable, not an explanation.",
+    "why_better_than_generic": "A generic AI script would argue that 'you should not automate everything' from a standing start and offer a checklist nobody tested. This one argues against automation from inside a build, shows the step succeeding before it shows the number, concedes the part of the miss rate that is our own instrument, and ends on a rule with two concrete fields. It is also the only shape available that cannot be copied back by the 62 demo walkthroughs in the corpus, because none of them has ever removed anything."
+  }
+}

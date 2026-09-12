@@ -25,3 +25,12 @@ __pycache__/
 
 # Чужие рабочие папки и зависимости: в репозиторий кода не идут
 node_modules/
+
+# Content engine (added 2026-09-12)
+.venv/
+tools/pdf/out/
+studio/remotion/node_modules/
+cards/takes/*.mp4
+data/renders/
+.pytest_cache/
+reports/final/cardbook/

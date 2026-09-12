@@ -1,0 +1,477 @@
+{
+  "card_id": "C-2026-09-12-01",
+  "claims": [
+    {
+      "source": "Recomputed 2026-09-12 over video_features in data/radar.db: 243 codes carry a share rate, a save rate and a labelled cta_type. Rank = sum of the two percentile ranks, percentile = share of the 243 strictly below. 19 of the top 20 are cta_type=comment_keyword. The two-rate framing is I-12's own reading of our selection ('M2's reference selection ranks by share and save per 1 000') and 01-general-conclusions.md section H item 4.",
+      "state": "OBSERVED",
+      "text": "Ranked on forwards and saves per thousand - the two rates our reference selection ranks on - nineteen of the top twenty candidates carry a comment-keyword prompt."
+    },
+    {
+      "source": "Same query; matches the 158-of-266 (59 %) figure in reports/analysis/01-general-conclusions.md §B.",
+      "state": "OBSERVED",
+      "text": "143 of those 243 candidates (59 %) carry the prompt, so it is common but not universal."
+    },
+    {
+      "source": "Insight I-12 in data/analysis/insights.json: save 0.0340 vs 0.0120 (p=3.5e-10), share 0.0170 vs 0.0096 (p=1.5e-04), view_lift p=0.578, robust_z p=0.63.",
+      "state": "OBSERVED",
+      "text": "The prompt multiplies the median save rate by 2.8 and the median share rate by 1.8, and does not move reach."
+    },
+    {
+      "source": "Same computation with the two percentile ranks taken inside each cta_type group instead of across the pool: DOMAtCmiSEn 67 -> 8, DNA7-d3o5sQ 61 -> 9; posts that never ask for a comment go from 1 of the top 20 to 8 (6 cta_type=none, 1 link_in_bio, 1 follow). Reproduces exactly on the convention stated in the first claim.",
+      "state": "OBSERVED",
+      "text": "Comparing candidates only against others with the same closing ask puts eight ungated posts in the top twenty, and moves two of them from 67th and 61st to 8th and 9th."
+    },
+    {
+      "source": "reports/analysis/06-creators-and-references.md section 6 defines the pool rule as the mean percentile rank across robust_z, share_rate and save_rate. Recomputed 2026-09-12 over the same 243 rows: pooled top 20 = 17 gated / 3 ungated; re-ranked within cta_type = 15 gated / 5 ungated.",
+      "state": "OBSERVED",
+      "text": "The same re-ranking under the documented candidate-pool rule moves the ungated share of the top twenty from 3 to 5, so the direction does not depend on which of our two ranking rules is used."
+    },
+    {
+      "source": "score.py W_IG weights; scores.z recomputed against the same 243 rows on 2026-09-12. Recorded so the reel's 'ours sorted by forwards and saves' is read as the two rates the selection ranks on, not as a line of code.",
+      "state": "OBSERVED",
+      "text": "The shipped scorer is not a pure share-and-save ranking: score.py weights views 0.15, engagement 0.15, forwards 0.30, saves 0.30 and comments 0.10, and its own top twenty over the same 243 rows carries 14 gated posts, not 19."
+    },
+    {
+      "source": "Insight I-12 implication; not yet in the shipped weekly run.",
+      "state": "PLANNED",
+      "text": "The selection script will record the closing ask on every candidate and compare only within the same type."
+    },
+    {
+      "source": "No published reel from either list yet; our_posts is empty.",
+      "state": "TO_MEASURE",
+      "text": "The fair comparison produces a better shortlist than the old one."
+    },
+    {
+      "source": "Asserted as a parallel in the script and nowhere claimed as measured - we have never looked inside a customer's queue. Flagged so it is not implied on screen as evidence.",
+      "state": "MISSING",
+      "text": "The same distortion exists in an ordinary business queue of enquiries, tickets or invoices."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Screen recording of our own weekly candidate list ranked on forwards and saves per thousand plays, mid-scroll, real rows (S00)",
+      "Chart of save, forward and reach with and without the comment prompt, generated from our own run (S03)",
+      "Before/after screen of the same twenty rows re-sorted within cta_type, with the two travelling rows visible (S05)",
+      "Michael A-roll, medium shot, one location, four takes"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 600 at 40px, two lines maximum, bottom-anchored in Instagram zone A/B; one persistent top banner carrying the promise, held for the whole reel.",
+    "cut_timing": "Five hard cuts, all of them either a screen insert replacing the presenter or the presenter replacing a screen. The opening frame is not a cut. Two scenes run on inside the same take with no cut (S02 into S01's take, S07 into S06's).",
+    "emphasis": "Every number spoken is also on screen, in the same words, and nothing is on screen that is not spoken.",
+    "motion": "Linear easing only, no bounce, per design/rules/motion.md.",
+    "zooms": "One slow zoom, on the two travelling rows in the proof scene. Nowhere else."
+  },
+  "format": "M2 Builds",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "This is the list our system put at the top. Nineteen of the top twenty are there on a trick.",
+      "type": "result_first"
+    },
+    {
+      "is_question": false,
+      "text": "Two items our own ranking buried in the sixties belonged in the top ten.",
+      "type": "number_stat"
+    },
+    {
+      "is_question": true,
+      "text": "What is your priority list actually measuring?",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-11",
+  "references": [
+    {
+      "code": "DZLDk9ySi-7",
+      "creator_median_play": 3421.0,
+      "function": "hook",
+      "play": 179093,
+      "reason": "Puts the state of the world first and the mechanism second, so the pain lands as reward rather than as complaint. result_first hook type; result_first and demo_first together are the highest-performing hook family measured (median robust_z 2.17 against 1.21). Its view_lift of 51.35 - that is 52.4x the author's own median, since view_lift is the ratio minus one - rests on a 3 421-view median, so the multiplier is not a finding and the ordering is.",
+      "save_rate": 0.04539,
+      "share_rate": 0.04191,
+      "transformed_how": "Borrowed the ordering only: state of the world first, mechanism second. Changed: our first frame is a real list of our own that was wrong, not an imagined good morning; we delete the second-person future-pacing entirely because setup-first openings run at median robust_z 0.67 against 1.36 (p=0.002); and we replace its invented counters with a screen recording of our own output.",
+      "url": "https://www.instagram.com/reel/DZLDk9ySi-7/",
+      "useful_frame": {
+        "scene_id": "DZLDk9ySi-7-S00",
+        "what": "opens with no presenter at all - a full-frame animated pipeline board whose counters climb while the voice talks over it"
+      },
+      "useful_transcript": {
+        "beat_id": "DZLDk9ySi-7-B0",
+        "quote": "Imagine, a client in the morning is already interested to take your service because your AI Automation Agency system is automatic"
+      },
+      "username": "aiforbusinesses247",
+      "view_lift": 51.35
+    },
+    {
+      "code": "DNA7-d3o5sQ",
+      "creator_median_play": 8010.0,
+      "function": "rhythm",
+      "play": 451491,
+      "reason": "Carries the corpus's cleanest mid-roll re-hook: a 1.8-second beat at 32.0-33.8 s placed exactly where the mechanism stops being new and immediately before the proof. It is the only ungated reel in the pool (cta_type none), so its 36.5 saves per 1 000 carry no keyword inflation.",
+      "save_rate": 0.03652,
+      "share_rate": 0.02334,
+      "transformed_how": "Borrowed one short re-hook before the evidence, and only one - the corpus median is a single open loop and only 15 of 264 reels carry an explicit re-hook. Changed: ours is a statement, not a question, because questions in the script correlate negatively with saves (-0.229, creator-normalised -0.162, RELIABLE), and it is delivered on the face rather than over the canvas.",
+      "url": "https://www.instagram.com/reel/DNA7-d3o5sQ/",
+      "useful_frame": {
+        "scene_id": "DNA7-d3o5sQ-S00",
+        "what": "one 56-second unbroken screen take of the workflow canvas, presenter reduced to a small head at the bottom of frame, so the artefact keeps the whole picture"
+      },
+      "useful_transcript": {
+        "beat_id": "DNA7-d3o5sQ-B3",
+        "quote": "But how about the results?"
+      },
+      "username": "edhillai",
+      "view_lift": 55.37
+    },
+    {
+      "code": "DbO4zvJR1k8",
+      "creator_median_play": 14448.0,
+      "function": "pain",
+      "play": 209121,
+      "reason": "The highest save rate in the whole corpus (87.4 per 1 000) bought with a repeated shape: the consequence of not doing it, then the exact clause that closes it, four times without variation, over one unbroken 71-second close-up. It is how a reel about a defect stays usable rather than merely alarming.",
+      "save_rate": 0.08735,
+      "share_rate": 0.0529,
+      "transformed_how": "Borrowed the consequence-then-fix pairing and the persistent title plate. Changed: our cost is stated as work that went the wrong way, never as damages or money, and we drop its warning_fear register after the first sentence - urgency and fear vocabulary track negatively on every metric we measured (urgency vs view_lift -0.164, p=0.007). Its legal claims are recorded in our files as unverified and are irrelevant to us.",
+      "url": "https://www.instagram.com/reel/DbO4zvJR1k8/",
+      "useful_frame": {
+        "scene_id": "DbO4zvJR1k8-S00",
+        "what": "single close-up held for the whole reel, one persistent title plate at the top, occasional quoted-text cards dropped in low in the frame as each item is named"
+      },
+      "useful_transcript": {
+        "beat_id": "DbO4zvJR1k8-B2",
+        "quote": "For example, under CCPA, California has laws that can cost you $750 per user per incident."
+      },
+      "username": "shrug.manny",
+      "view_lift": 13.47
+    },
+    {
+      "code": "DX9kWTYzssE",
+      "creator_median_play": 8982.5,
+      "function": "screen_proof",
+      "play": 99558,
+      "reason": "Most dashboard reels stop at 'here are my agents'; this one shows contribution per item, which is exactly the screen a re-sorted priority list needs. The proof beat runs 36.5-56.9 s over a DATA_VISUAL state and the reel is not comment-gated (cta_type dm), so its 41.3 shares per 1 000 carry no keyword inflation.",
+      "save_rate": 0.03606,
+      "share_rate": 0.04132,
+      "transformed_how": "Borrowed showing per-item contribution on screen instead of a summary, so the viewer can watch the re-ranking happen. Changed: our screen shows the same list twice - before and after one field is made comparable - rather than a performance dashboard, and the close is not a DM. Its Hinglish ASR is heavily garbled in our files, so we take the screen idea and none of the wording.",
+      "url": "https://www.instagram.com/reel/DX9kWTYzssE/",
+      "useful_frame": {
+        "scene_id": "DX9kWTYzssE-S02",
+        "what": "full-frame analytics page filmed off a monitor, ending on a doughnut chart that attributes the result to each agent by share"
+      },
+      "useful_transcript": {
+        "beat_id": "DX9kWTYzssE-B2",
+        "quote": "And then you have performance tags here where you can see how many videos you posted, how many views generated, how much average engagement rate, how many followers gain."
+      },
+      "username": "vanshh_ai",
+      "view_lift": 10.08
+    },
+    {
+      "code": "DTCOU9DkRTG",
+      "creator_median_play": 4124.0,
+      "function": "cta",
+      "play": 218733,
+      "reason": "The pool's best ungated close - it converts the ask into a bounded, falsifiable test instead of a keyword, and it is the only shape in the pool that invites a reply without gating an artefact, which is the position M2 is in by rule. 29.7 shares and 42.0 saves per 1 000 with cta_type question_to_audience.",
+      "save_rate": 0.04202,
+      "share_rate": 0.02968,
+      "transformed_how": "Borrowed an ungated close that names a bounded test the viewer can run and report back on. Changed: ours asks the viewer to check their own queue's top five and to forward the reel to the person who owns that list, delivered on the face in the last 11 % of the script - the position the whole corpus has converged on (median CTA start at 90 % of spoken length).",
+      "url": "https://www.instagram.com/reel/DTCOU9DkRTG/",
+      "useful_frame": {
+        "scene_id": "DTCOU9DkRTG-S02",
+        "what": "cuts back off the laptop screen to a plain close-up against a curtain for the closing line, no overlay left on the frame"
+      },
+      "useful_transcript": {
+        "beat_id": "DTCOU9DkRTG-B4",
+        "quote": "And if it doesn't work for you within the first five people you reach out to, you can roast my eyebrows in the comments."
+      },
+      "username": "buildingwithstring.com_",
+      "view_lift": 52.04
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-01.json",
+  "review": {
+    "findings": [
+      "[evidence] claims[0] attributed the ranking to 'our selection script' - the shipped score.py z is a five-component weighted robust-z and its own top 20 over the same 243 rows carries 14 gated posts, not 19 -> rewrote both claim sources to state the exact ranking and the percentile convention, and added two OBSERVED claims: the robustness check under the documented candidate-pool rule (17/20 -> 15/20) and score.py's actual weights. The 19-of-20 and 8-of-20 figures are correct for the ranking the script describes and reproduce exactly; script text left unchanged.",
+      "[evidence] claims[3] was not reproducible as written - 67 -> 8 and 61 -> 9 only come out when percentile is the share of the pool strictly below a value; the midpoint convention gives 62 -> 10 -> stated the convention in the source.",
+      "[visual] S00 said 'our own weekly candidate list' without saying how it is sorted; shot from the shipped scorer the top twenty would show 14 gated rows and contradict the voice-over -> S00's visual and assets_required now specify the list ranked on forwards and saves per thousand.",
+      "[evidence] references[0] called DZLDk9ySi-7's view_lift '51.4x'; view_lift is the ratio minus one, so the reel is 52.4x its author's median -> reworded. Not in the script.",
+      "[hook] hooks[1] restated hooks[0] with different words, so only two of the three candidates were distinct -> replaced with a number_stat hook built on the rank movement.",
+      "[traceability] S07 cited DczDlj4qQjI, which is not one of this card's five references (reports/analysis/09 R4/R5 fix the set) -> removed; DTCOU9DkRTG in the same scene already carries the ungated-close borrowing.",
+      "[visual] editing.cut_timing counted the opening frame as one of six hard cuts, unlike cards 03/05/09 -> S00's transition set to none and the count corrected to five.",
+      "[clarity] left as is: 21.6-33.2 s asks a level 0-6 viewer to hold three social-media rates at once. The mitigation is already in the storyboard - all three pairs on one chart, the flat pair last - and the section is 11.6 s for 29 words.",
+      "[pacing] left as is: the CTA carries two asks against general-conclusions section G rule 14. The filter's next_action and PRODUCTION.md's forwarding question both have to land, and the second ask is four words."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the uneasy recognition that the list you work from every morning was never audited",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 8.0,
+        "text": "This is the list our system put at the top. Nineteen of the top twenty are there on a trick.",
+        "words": 20
+      },
+      {
+        "role": "problem",
+        "seconds": 11.2,
+        "text": "You work from a list like this. Something decides which enquiry, which ticket, which invoice gets looked at first, and nobody has re-read the rule that sorts it.",
+        "words": 28
+      },
+      {
+        "role": "explanation",
+        "seconds": 2.4,
+        "text": "Ours sorted by forwards and saves.",
+        "words": 6
+      },
+      {
+        "role": "explanation",
+        "seconds": 11.6,
+        "text": "Ask people to comment a word under a post and its saves go up nearly three times, its forwards nearly double, and its reach does not move at all.",
+        "words": 29
+      },
+      {
+        "role": "rehook",
+        "seconds": 4.8,
+        "text": "So we sorted the same list again, comparing only like with like.",
+        "words": 12
+      },
+      {
+        "role": "proof",
+        "seconds": 12.8,
+        "text": "Eight of the top twenty are now posts that never asked for a comment. Two of them had been sixty-seventh and sixty-first. Nothing about them changed. Only what we divided by did.",
+        "words": 32
+      },
+      {
+        "role": "payoff",
+        "seconds": 10.0,
+        "text": "The rule we added: record the habit on every item, and only compare items that share it. A ranking measures exactly what you feed it.",
+        "words": 25
+      },
+      {
+        "role": "cta",
+        "seconds": 7.6,
+        "text": "Find what your top five have in common that is not importance. Send this to whoever owns that list.",
+        "words": 19
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "plain, self-critical, specific - a builder reporting a defect, not confessing",
+    "total_s": 68.4,
+    "total_words": 171,
+    "version": 1
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S00.png",
+      "asset_status": "template",
+      "editing": "Hold the scroll for the whole 8 s; the banner is burned in from frame one. Nothing cuts into this frame - it is the first.",
+      "end_s": 8.0,
+      "frame_type": "UI_DEMO",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "19 of the top 20",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "This is the list our system put at the top. Nineteen of the top twenty are there on a trick.",
+      "source_inspiration": [
+        {
+          "code": "DZLDk9ySi-7",
+          "scene_id": "DZLDk9ySi-7-S00",
+          "why": "same open-on-the-artefact-in-motion shape, no establishing shot of a person"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full-frame screen recording of our own weekly candidate list ranked on forwards and saves per thousand plays, mid-scroll, real rows and real numbers, no presenter in frame."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S01.png",
+      "asset_status": "template",
+      "editing": "No cut inside the section; the three nouns land on three beats of the hand.",
+      "end_s": 19.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 1,
+      "layout": "a_roll",
+      "overlay_text": "Who re-reads the sort rule?",
+      "scene_id": "S01",
+      "script_role": "problem",
+      "script_text": "You work from a list like this. Something decides which enquiry, which ticket, which invoice gets looked at first, and nobody has re-read the rule that sorts it.",
+      "source_inspiration": [
+        {
+          "code": "DbO4zvJR1k8",
+          "scene_id": "DbO4zvJR1k8-S00",
+          "why": "consequence stated plainly on one unbroken close framing before any fix is offered"
+        }
+      ],
+      "start_s": 8.0,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, plain wall, direct to camera."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S02.png",
+      "asset_status": "template",
+      "editing": "Same take as the previous scene, no cut.",
+      "end_s": 21.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 2,
+      "layout": "a_roll",
+      "overlay_text": "Sorted by forwards and saves",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "Ours sorted by forwards and saves.",
+      "source_inspiration": [],
+      "start_s": 19.2,
+      "transition": "none",
+      "visual": "Michael, same take, same framing."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S03.png",
+      "asset_status": "template",
+      "editing": "Bars animate in from zero, linear easing, then hold; the reach pair lands last and does not move.",
+      "end_s": 33.2,
+      "frame_type": "DATA_VISUAL",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "Saves x2.8. Forwards x1.8. Reach x1.",
+      "scene_id": "S03",
+      "script_role": "explanation",
+      "script_text": "Ask people to comment a word under a post and its saves go up nearly three times, its forwards nearly double, and its reach does not move at all.",
+      "source_inspiration": [
+        {
+          "code": "DX9kWTYzssE",
+          "scene_id": "DX9kWTYzssE-S01",
+          "why": "borrowed the habit of putting the per-item numbers on screen rather than summarising them out loud"
+        }
+      ],
+      "start_s": 21.6,
+      "transition": "hard_cut",
+      "visual": "Full-frame chart from our own run: three pairs of bars - saves, forwards, reach - with and without the comment prompt. The first two pairs are far apart, the third is level."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S04.png",
+      "asset_status": "template",
+      "editing": "Shortest scene in the reel; cut out of it on the last syllable.",
+      "end_s": 38.0,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 4,
+      "layout": "a_roll",
+      "overlay_text": "Same list. Fair comparison.",
+      "scene_id": "S04",
+      "script_role": "rehook",
+      "script_text": "So we sorted the same list again, comparing only like with like.",
+      "source_inspiration": [
+        {
+          "code": "DNA7-d3o5sQ",
+          "scene_id": "DNA7-d3o5sQ-S00",
+          "why": "one short re-hook placed immediately before the evidence, at the point the mechanism stops being new"
+        }
+      ],
+      "start_s": 33.2,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, same setup."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S05.png",
+      "asset_status": "template",
+      "editing": "One slow zoom onto the two travelling rows; no other motion.",
+      "end_s": 50.8,
+      "frame_type": "UI_DEMO",
+      "idx": 5,
+      "layout": "demo",
+      "overlay_text": "67th and 61st became 8th and 9th",
+      "scene_id": "S05",
+      "script_role": "proof",
+      "script_text": "Eight of the top twenty are now posts that never asked for a comment. Two of them had been sixty-seventh and sixty-first. Nothing about them changed. Only what we divided by did.",
+      "source_inspiration": [
+        {
+          "code": "DX9kWTYzssE",
+          "scene_id": "DX9kWTYzssE-S02",
+          "why": "same per-item contribution screen, so the movement is visible rather than asserted"
+        }
+      ],
+      "start_s": 38.0,
+      "transition": "hard_cut",
+      "visual": "Full-frame screen: the same twenty rows twice, before and after, with two rows visibly travelling up the list from 67 and 61 to 8 and 9."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S06.png",
+      "asset_status": "template",
+      "editing": "Hold the frame; the overlay appears on 'compare' and stays to the end of the scene.",
+      "end_s": 60.8,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "Compare like with like",
+      "scene_id": "S06",
+      "script_role": "payoff",
+      "script_text": "The rule we added: record the habit on every item, and only compare items that share it. A ranking measures exactly what you feed it.",
+      "source_inspiration": [
+        {
+          "code": "DbO4zvJR1k8",
+          "scene_id": "DbO4zvJR1k8-S00",
+          "why": "fixed item shape: the consequence, then the exact clause that closes it, in the same grammar every time"
+        }
+      ],
+      "start_s": 50.8,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, back on camera for the interpretation."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-01_S07.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "Hold the last frame one second before the cut.",
+      "end_s": 68.4,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 7,
+      "layout": "a_roll",
+      "overlay_text": "Check your own top five",
+      "scene_id": "S07",
+      "script_role": "cta",
+      "script_text": "Find what your top five have in common that is not importance. Send this to whoever owns that list.",
+      "source_inspiration": [
+        {
+          "code": "DTCOU9DkRTG",
+          "scene_id": "DTCOU9DkRTG-S02",
+          "why": "ungated close naming a bounded test the viewer can run"
+        }
+      ],
+      "start_s": 60.8,
+      "transition": "none",
+      "visual": "Michael, same take, hand gesture toward camera on the closing line."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company who is responsible for one repeated process and has tried ChatGPT but has no repeatable way of using it at work. Specifically anyone who works from a queue somebody else sorted: enquiries, tickets, applications, invoices.",
+    "concept": "We re-sorted our own weekly priority list after making the comparison fair, and nineteen of the top twenty items turned out to be there on a habit that has nothing to do with quality.",
+    "filter": {
+      "ai_boundary": "The machine ranks and has to show, per item, which field put it where. A named human owns the definition of 'important', re-reads it against a handful of items by hand, and is the only one who may change the weighting.",
+      "friction": "The sort order comes out of a formula nobody re-reads, so over time the queue quietly optimises for whatever the formula happens to count rather than for what actually matters, and the drift is invisible because the list still looks sorted.",
+      "next_action": "Take the five items your system put at the top this week and find what they have in common that has nothing to do with importance.",
+      "process": "Deciding what to look at first in a recurring queue of incoming work - which enquiry gets answered, which ticket gets picked up, which invoice gets chased - where the order is produced by a rule or a score rather than by reading every item."
+    },
+    "objective": "Hand the viewer one check they can run on their own priority list this week, using our own ranking being wrong as the demonstration.",
+    "pain": "quality_trust",
+    "positioning": "builder",
+    "promise": "One check that tells you whether your priority list is measuring importance or measuring a habit.",
+    "rationale": "The references supply the shape only: a result-first opening on the artefact (DZLDk9ySi-7), one short mid-roll re-hook before the evidence (DNA7-d3o5sQ), a fixed consequence-then-fix cadence (DbO4zvJR1k8), per-item contribution shown on screen rather than a summary (DX9kWTYzssE), and an ungated close that names a bounded test (DTCOU9DkRTG). Nothing in the 266-reel analysed corpus shows an author's own system producing a wrong answer, so the subject is ours alone."
+  },
+  "title": "Nineteen of our top twenty were there on a trick",
+  "traceability": {
+    "evidence_summary": "Our own weekly selection script ranks candidates by shares and saves per thousand views. In the analysed corpus the comment-keyword prompt multiplies the median save rate 2.8-fold and the median share rate 1.8-fold while moving reach not at all (view_lift p=0.578, robust_z p=0.63), and 143 of the 243 candidates that carry both rates and a labelled ask use it. Ranked the way the script ranks, nineteen of the top twenty carry the prompt; re-ranked within the same ask, eight ungated posts appear in the top twenty and two travel from 67th and 61st to 8th and 9th. The five references contribute structure only: an artefact-first opening (DZLDk9ySi-7, 51.4x on a 3 421-view author median), one 1.8-second mid-roll re-hook (DNA7-d3o5sQ, ungated, 36.5 saves/1k), a fixed consequence-then-fix cadence (DbO4zvJR1k8, 87.4 saves/1k), per-item contribution on screen (DX9kWTYzssE, ungated, 41.3 shares/1k) and an ungated bounded-test close (DTCOU9DkRTG, 29.7 shares/1k).",
+    "hypothesis": "H-11",
+    "insights": [
+      "I-12",
+      "I-23",
+      "I-09",
+      "I-11",
+      "I-08",
+      "I-26",
+      "I-22"
+    ],
+    "original_synthesis": "The failure, the re-ranking and both rank movements are ours, computed from our own database on 2026-09-12 and reproducible from video_features. No reel in the 266-reel analysed corpus shows an author's own system producing a wrong answer; before_after is the second-rarest proof type at n=5 and not one reel anywhere shows the author's build breaking. The generalisation - that every sorted queue is optimising whatever it happens to count - is stated as a parallel and listed in claims as MISSING rather than as evidence.",
+    "why_better_than_generic": "A generic AI script would say 'don't blindly trust AI rankings' and stop. This one names the exact field that broke the sort, the exact multipliers it inflates (2.8 and 1.8), the exact thing it does not touch (reach), the exact fix (compare within the same ask) and the exact movement that fix produced (67th and 61st to 8th and 9th) - and it shows the movement on screen, which is the only visual feature in the corpus that survives creator normalisation on two independent metrics."
+  }
+}

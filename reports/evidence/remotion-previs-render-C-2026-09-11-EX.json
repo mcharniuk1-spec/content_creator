@@ -1,0 +1,11 @@
+{
+ "file": "render-ex.mp4 (kept in session scratchpad, not committed)",
+ "bytes": 3433827,
+ "ffmpeg_info": [
+  "Duration: 00:01:00.05, start: 0.000000, bitrate: 457 kb/s",
+  "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 131 kb/s, 30 fps, 30 tbr, 90k tbn (default)"
+ ],
+ "command": "node studio/remotion/render.mjs --edl cards/edl/C-2026-09-11-EX.json --assets . --output <scratch>/render-ex.mp4 --browser \"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
+ "environment": "macOS 14 (Remotion warns: older than macOS 15), Node 22.20, Remotion 4.0.520, Chrome from /Applications",
+ "date": "2026-09-12"
+}

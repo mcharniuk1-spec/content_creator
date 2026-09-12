@@ -1,0 +1,131 @@
+{
+ "charts": [
+  {
+   "n": 30,
+   "name": "creator_median_views",
+   "png": "creator_median_views.png",
+   "status": "ok",
+   "title": "Creator median views, top 30"
+  },
+  {
+   "n": 132,
+   "name": "creator_dispersion",
+   "png": "creator_dispersion.png",
+   "status": "ok",
+   "title": "Creator median vs MAD (dispersion)"
+  },
+  {
+   "n": 3211,
+   "name": "video_view_lift_distribution",
+   "png": "video_view_lift_distribution.png",
+   "status": "ok",
+   "title": "Video performance ratio distribution (view_lift)"
+  },
+  {
+   "n": 206,
+   "name": "topic_vs_performance",
+   "png": "topic_vs_performance.png",
+   "status": "ok",
+   "title": "Topic vs performance"
+  },
+  {
+   "n": 263,
+   "name": "pain_vs_performance",
+   "png": "pain_vs_performance.png",
+   "status": "ok",
+   "title": "Pain point vs performance"
+  },
+  {
+   "n": 259,
+   "name": "hook_type_vs_performance",
+   "png": "hook_type_vs_performance.png",
+   "status": "ok",
+   "title": "Hook type vs performance"
+  },
+  {
+   "n": 268,
+   "name": "script_length_vs_performance",
+   "png": "script_length_vs_performance.png",
+   "status": "ok",
+   "title": "Script length vs performance"
+  },
+  {
+   "n": 262,
+   "name": "hook_length_vs_performance",
+   "png": "hook_length_vs_performance.png",
+   "status": "ok",
+   "title": "Hook length vs performance"
+  },
+  {
+   "n": 3211,
+   "name": "duration_vs_performance",
+   "png": "duration_vs_performance.png",
+   "status": "ok",
+   "title": "Video duration vs performance"
+  },
+  {
+   "n": 258,
+   "name": "cta_type_vs_performance",
+   "png": "cta_type_vs_performance.png",
+   "status": "ok",
+   "title": "CTA type vs performance"
+  },
+  {
+   "n": 282,
+   "name": "scenes_vs_performance",
+   "png": "scenes_vs_performance.png",
+   "status": "ok",
+   "title": "Scene count vs performance"
+  },
+  {
+   "n": 282,
+   "name": "cuts_per_min_vs_performance",
+   "png": "cuts_per_min_vs_performance.png",
+   "status": "ok",
+   "title": "Cut frequency vs performance"
+  },
+  {
+   "n": 295,
+   "name": "a_roll_share_vs_performance",
+   "png": "a_roll_share_vs_performance.png",
+   "status": "ok",
+   "title": "A-roll share vs performance"
+  },
+  {
+   "n": 295,
+   "name": "split_share_vs_performance",
+   "png": "split_share_vs_performance.png",
+   "status": "ok",
+   "title": "Split-screen share vs performance"
+  },
+  {
+   "n": 132,
+   "name": "script_parts_strong_vs_weak",
+   "png": "script_parts_strong_vs_weak.png",
+   "status": "ok",
+   "title": "Script part shares, strong vs weak"
+  },
+  {
+   "n": 75,
+   "name": "visual_sequence_top10",
+   "png": "visual_sequence_top10.png",
+   "status": "ok",
+   "title": "Visual sequence frequency, top 10"
+  },
+  {
+   "n": 2899,
+   "name": "share_vs_save_rate",
+   "png": "share_vs_save_rate.png",
+   "status": "ok",
+   "title": "Share rate vs save rate"
+  },
+  {
+   "n": 3211,
+   "name": "corpus_coverage_funnel",
+   "png": "corpus_coverage_funnel.png",
+   "status": "ok",
+   "title": "Corpus coverage funnel"
+  }
+ ],
+ "generated_at": "2026-09-12T09:32:13Z"
+}

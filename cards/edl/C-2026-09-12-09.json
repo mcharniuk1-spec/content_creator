@@ -1,0 +1,267 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-09",
+ "title": "Supported is not the same as connected",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2040,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 240,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Inbox. Sheet. Calendar.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 240,
+   "duration_frames": 324,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Three names to check",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 564,
+   "duration_frames": 228,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Six named places. Two refused.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 792,
+   "duration_frames": 384,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "0 of 130 updated. 404, three times.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1176,
+   "duration_frames": 300,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Worked Monday. Gone Thursday.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1476,
+   "duration_frames": 360,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Supported. Connected. Still connected.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1836,
+   "duration_frames": 204,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Missing name, manual step",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-09_S00.png",
+   "sha256": "4a2eefe9777073be78ab89ff369ede0aad68806f184b857814151a396a0c5eaf",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-09_S01.png",
+   "sha256": "09a6df8cd6f045953ff776bde46533a7268493844f1a85b2ae4ce1cda38493da",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-09_S02.png",
+   "sha256": "af881ac1c9547ac8a5e89611c2f358e483959ec2b0533d836e6fedd60cf3032c",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-09_S03.png",
+   "sha256": "0747ee39755b405219f7e19bb0e5d974ad04c484b774a5fcf45b535b55c8d46f",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-09_S04.png",
+   "sha256": "3fcb1bc95a668dd6ebed51ae2cc2485543d66296ac29b82698d37085b2d7e9e1",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-09_S05.png",
+   "sha256": "c3a34f1751dcdc53fcd5a604f4dc50866f480e1b98365a32ed5c85ab4d965297",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-09_S06.png",
+   "sha256": "2c7ada0bf5accf5ba6e7910d646aab6123f7e65870a5722346ad5ba692e0091d",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 240,
+   "text": "Watch an enquiry go from the inbox to the sheet to the calendar. Each name is where a tool stops."
+  },
+  {
+   "from_frame": 240,
+   "duration_frames": 324,
+   "text": "Nothing clever happens here. It reads the inbox, writes a row in the sheet, puts a slot in the calendar. Three names to check before you pay."
+  },
+  {
+   "from_frame": 564,
+   "duration_frames": 228,
+   "text": "Our own weekly run is a chain like that. Six named places. On Thursday two of them refused us."
+  },
+  {
+   "from_frame": 792,
+   "duration_frames": 384,
+   "text": "One source went quiet five times in a row, so none of the hundred and thirty profiles updated. And the notes tool said the same thing three times: cannot find the database."
+  },
+  {
+   "from_frame": 1176,
+   "duration_frames": 300,
+   "text": "Three days earlier that same connection worked. Someone moved the destination and the tool lost it. The one place nobody moved saved everything, first time."
+  },
+  {
+   "from_frame": 1476,
+   "duration_frames": 360,
+   "text": "Supported is not the same as connected, and connected is not the same as still connected. Write down the three systems your work lives in and check them by name."
+  },
+  {
+   "from_frame": 1836,
+   "duration_frames": 204,
+   "text": "Where a name is missing, that step stays manual. Send this to whoever is picking the tool."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

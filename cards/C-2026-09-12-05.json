@@ -1,0 +1,446 @@
+{
+  "card_id": "C-2026-09-12-05",
+  "claims": [
+    {
+      "source": "RULES.md section 2a, added 1 September 2026. The file's own header still marks it a draft awaiting Misha's edits, so the reel says we wrote the rule, which is what the file records.",
+      "state": "OBSERVED",
+      "text": "Since 1 September 2026 our own rules have required a suitability check on every candidate reel, after the storyboard and before a card is written."
+    },
+    {
+      "source": "Query of deepdives in data/radar.db on 2026-09-12: 282 rows, 4 with suitable set (DUduffIE5w5, DUGghN2E82c, DcWCLtCpaKu, Dca2CyhJP1B), all done_at 2026-09-01, all rejections.",
+      "state": "OBSERVED",
+      "text": "The field that records that check is filled in on 4 rows out of 282, and all four were written on 2026-09-01, the day the rule was added."
+    },
+    {
+      "source": "Same query joined to the cards table on 2026-09-12: 23 of 23 card source codes have a deepdives row and 0 of them have suitable set. The earlier reading - that three had no row at all - does not reproduce.",
+      "state": "OBSERVED",
+      "text": "None of the 23 cards drafted since has the check recorded on its source reel, and every one of the 23 has a row in which it could have been recorded."
+    },
+    {
+      "source": "reports/analysis/09-reference-selection.md §4 (DUduffIE5w5, DK9pFUjPQcx, Dbd7VDgP9PR); only DUduffIE5w5 has deepdives.suitable set.",
+      "state": "OBSERVED",
+      "text": "Three reels on this week's forty-reel shortlist were excluded on content grounds; one of the three is recorded in the field and two are not."
+    },
+    {
+      "source": "Decision taken 2026-09-12; not yet in the shipped pipeline.",
+      "state": "PLANNED",
+      "text": "The check will be made a blocking step, so a card cannot be written while the field is empty."
+    },
+    {
+      "source": "No run under the blocking rule yet.",
+      "state": "TO_MEASURE",
+      "text": "Making the step block raises the fill rate and catches something a human reading would have missed."
+    },
+    {
+      "source": "Nothing has been published at all - our_posts is empty - so the clean record is not evidence that the control worked. Flagged so the reel does not imply it.",
+      "state": "MISSING",
+      "text": "Nothing disqualifying has ever reached publication because the check was working."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Screen capture of the suitability column scrolled to the newest rows, every cell blank (S01)",
+      "The same take pulling back to the rule as written in our own process document, with the requiring sentence highlighted (S02)",
+      "Continuous screen capture of the table with the suitability column scrolling, blank (S03-S04)",
+      "The four filled rows showing the same date (S04)",
+      "Three-row comparison of this week's content rejections, one recorded and two not (S05)",
+      "Michael A-roll, close-up, one location, two takes (opening and closing block)"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 600 at 40px, two lines maximum, bottom-anchored in Instagram zone A/B; one persistent top banner held for the whole reel.",
+    "cut_timing": "Two hard cuts: face to screen at 5.0 s, screen back to face at 49.6 s. The screen block between them is one continuous 44.6-second take with a zoom and a reveal inside it; both face blocks are one take each.",
+    "emphasis": "Only three numbers appear on screen - 4, 282, 3 - each in the same words as spoken. No emoji, and no text generated inside any image.",
+    "motion": "Linear easing only, no bounce, per design/rules/motion.md.",
+    "zooms": "One zoom, onto the four identical dates at 27.7 s."
+  },
+  "format": "M2 Builds",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "We wrote a mandatory check into our own process on the first of September. Here is the box. Empty.",
+      "type": "result_first"
+    },
+    {
+      "is_question": false,
+      "text": "A check that nothing stops for is not a check. Ours stopped nothing for eleven days.",
+      "type": "bold_claim"
+    },
+    {
+      "is_question": true,
+      "text": "Where does your process actually record that a person checked?",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-13",
+  "references": [
+    {
+      "code": "DbO4zvJR1k8",
+      "creator_median_play": 14448.0,
+      "function": "rhythm",
+      "play": 209121,
+      "reason": "A 71-second single-take close-up that never flattens, because every item has the identical shape - the consequence of not doing it, then the exact clause that fixes it. Highest save rate in the corpus (87.4 per 1 000) with no screen in it at all, which proves a control reel can hold on a face if the cadence is strict.",
+      "save_rate": 0.08735,
+      "share_rate": 0.0529,
+      "transformed_how": "Borrowed the fixed item shape repeated without variation, and the persistent title plate. Changed: we have three items instead of four, the middle two thirds of our reel is a full-frame screen rather than a face because the empty column is the proof, and the register drops the legal-fear framing after the first line.",
+      "url": "https://www.instagram.com/reel/DbO4zvJR1k8/",
+      "useful_frame": {
+        "scene_id": "DbO4zvJR1k8-S00",
+        "what": "one close-up for the entire reel; a persistent two-line title plate at the top and a plain white quote card dropped in low in the frame only when a specific clause is named"
+      },
+      "useful_transcript": {
+        "beat_id": "DbO4zvJR1k8-B1",
+        "quote": "Number one and most important, if your terms and service doesn't cap your liability, there's no limit to how much somebody can sue you for."
+      },
+      "username": "shrug.manny",
+      "view_lift": 13.47
+    },
+    {
+      "code": "DZ-wujrTJ0u",
+      "creator_median_play": 6358.0,
+      "function": "a_roll",
+      "play": 334706,
+      "reason": "Second-highest save rate in the pool (64.9 per 1 000) on a 172-second reel, and it survives that length by bookending: the artefact demonstrates itself early and again at the very end, with the instructions in between. Ungated (cta_type follow). Its 57-second opening close-up is the longest single face take in the pool that still works.",
+      "save_rate": 0.06491,
+      "share_rate": 0.01968,
+      "transformed_how": "Borrowed the reward bookend - something concrete at the start and again at the close, so a long middle is tolerable - and the confidence to hold one face take. Changed: our bookend is the same column shown empty and then shown blocked, not a product demo; we drop the countdown device; and the reel's own conversion target is the creator's product behind a follow-only CTA, which we do not reproduce.",
+      "url": "https://www.instagram.com/reel/DZ-wujrTJ0u/",
+      "useful_frame": {
+        "scene_id": "DZ-wujrTJ0u-S00",
+        "what": "57 seconds of one close-up with a black title plate above the head and a live countdown ring in the corner, so a long take still reads as going somewhere"
+      },
+      "useful_transcript": {
+        "beat_id": "DZ-wujrTJ0u-B0",
+        "quote": "I'm going to show you how you can build your very own AI drivers in under three minutes so you can get something like I have here with Trillian."
+      },
+      "username": "kevinfremon",
+      "view_lift": 51.64
+    },
+    {
+      "code": "DVaBP3wDAFE",
+      "creator_median_play": 7471.0,
+      "function": "screen_proof",
+      "play": 533528,
+      "reason": "Holds one unbroken UI_DEMO state from 0.4 s to 60.3 s - two thirds of the reel - and narrates over it continuously before cutting to the face. It is the pool's proof that a long unbroken screen take with live narration holds attention without a single cut, which is exactly what showing one empty column demands. robust_z 5.0 (clipped).",
+      "save_rate": 0.03835,
+      "share_rate": 0.02243,
+      "transformed_how": "Borrowed the unbroken screen take with live narration and the single late cut to the face. Changed: the narration is an admission rather than a boast, the screen shows a control that did not run instead of a dashboard that does, we capture the screen cleanly rather than filming a monitor, and the reel's final third - explicit fear pressure and profanity, flagged as such in our own analysis - is replaced by the redesign.",
+      "url": "https://www.instagram.com/reel/DVaBP3wDAFE/",
+      "useful_frame": {
+        "scene_id": "DVaBP3wDAFE-S00",
+        "what": "the screen is filmed off a monitor across the room rather than captured, held unbroken for 60 seconds, with a small persistent badge top-left and sentence captions along the bottom"
+      },
+      "useful_transcript": {
+        "beat_id": "DVaBP3wDAFE-B2",
+        "quote": "If I have an idea I just drop it in here It's going to go in my pipeline automatically and here I can see the difference in terms of engagement."
+      },
+      "username": "tenfoldmarc",
+      "view_lift": 70.41
+    },
+    {
+      "code": "DczDlj4qQjI",
+      "creator_median_play": 13448.5,
+      "function": "cta",
+      "play": 173629,
+      "reason": "Its close carries two asks and only the second is usable: the share-with-a-peer half is the pure form of the question RULES.md §4 makes us answer first - who exactly will forward this, and to whom - and it is why the reel carries 23.6 shares per 1 000 with an explicit share ask at the end.",
+      "save_rate": 0.05664,
+      "share_rate": 0.02361,
+      "transformed_how": "Borrowed the forward-to-a-named-role close, specified by role rather than 'send this to a friend'. Changed: the comment gate half is deleted, not softened - the gate moves save rate 2.8x and share rate 1.8x and reach not at all, so dropping it costs no distribution and removes the inflation from our own future numbers - and the role we name is the person who signs off, not a generic contact.",
+      "url": "https://www.instagram.com/reel/DczDlj4qQjI/",
+      "useful_frame": {
+        "scene_id": "DczDlj4qQjI-S03",
+        "what": "returns from the full-frame product screenshots to a plain seated close-up for the closing line, captions in a dark box at the seam"
+      },
+      "useful_transcript": {
+        "beat_id": "DczDlj4qQjI-B5",
+        "quote": "Just comment Claude and I'll send you the full repo and setup and send this to someone you know who needs to post on LinkedIn more."
+      },
+      "username": "liamjohnston.ai",
+      "view_lift": 11.91
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-05.json",
+  "review": {
+    "findings": [
+      "[evidence] claims[2] said '20 of the 23 card source codes have a deepdives row' and the script said every drafted card 'has an empty box behind it, or no box at all'. Recomputed on data/radar.db: all 23 card source codes have a deepdives row and none has suitable set -> the false half of the line is gone ('has a row waiting and the box behind it empty') and the claim now says 23 of 23. Script version 2; total_s 68.9 -> 68.5.",
+      "[visual] the hook says 'Here is the box. Empty.' over a close-up of Michael with no box anywhere on screen, and general-conclusions section G rule 1 wants the artefact first -> the hook is split across two scenes: face for the first sentence, then a full-frame cut to the blank column at 5.0 s, which also puts the proof screen inside the first ten seconds (I-09) instead of at 7.3. Scenes renumbered S00-S07, storyboard retimed, asset paths follow.",
+      "[visual] with the box now opening the screen block, S02 followed it by cutting back out to a document -> S02 becomes the same take pulling back from the column to the rule, so the whole middle is one continuous screen block between two hard cuts, exactly as editing.cut_timing describes.",
+      "[evidence] verified against data/radar.db: deepdives has 282 rows, 4 with suitable set (DUduffIE5w5, DUGghN2E82c, DcWCLtCpaKu, Dca2CyhJP1B), all done_at 2026-09-01, all rejections. Of the three reels excluded on content grounds in reports/analysis/09 section 4, only DUduffIE5w5 is in the field. Both figures stand as written.",
+      "[positioning] claims[0] leans on RULES.md, which is still headed as a draft awaiting Misha's edits -> left, and the source now says so; the reel's claim is that we wrote the rule, not that it was ratified.",
+      "[pacing] left as is: the CTA carries two asks against section G rule 14. The count-your-last-fifty action is the filter's next_action and the forward is PRODUCTION.md's share question.",
+      "[hook] 19 words / 7.3 s, one word under rule 3's 20-30 band -> left."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the urge to go and check your own sign-off step before anyone asks about it",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 7.3,
+        "text": "We wrote a mandatory check into our own process on the first of September. Here is the box. Empty.",
+        "words": 19
+      },
+      {
+        "role": "problem",
+        "seconds": 10.0,
+        "text": "You have one too. Somewhere in your process a document says a person checks this before it goes out. Now find where that check is recorded.",
+        "words": 26
+      },
+      {
+        "role": "explanation",
+        "seconds": 10.4,
+        "text": "Ours is a single column. It has been there since the rule was written. It is filled in on four rows out of two hundred and eighty-two.",
+        "words": 27
+      },
+      {
+        "role": "proof",
+        "seconds": 11.5,
+        "text": "All four were filled on the same day, the day we wrote the rule. Every card we have drafted since has a row waiting and the box behind it empty.",
+        "words": 30
+      },
+      {
+        "role": "proof",
+        "seconds": 10.4,
+        "text": "Three items on this week's shortlist should have failed that check. We caught them by reading. One of the three is in the record. Two are not.",
+        "words": 27
+      },
+      {
+        "role": "payoff",
+        "seconds": 11.2,
+        "text": "A check nothing stops for is a preference. Three ways out: make the step block, put it where someone already looks, or delete the rule. We took the first.",
+        "words": 29
+      },
+      {
+        "role": "cta",
+        "seconds": 7.7,
+        "text": "Open where your process says the check is recorded and count the last fifty. Send this to whoever signs off.",
+        "words": 20
+      }
+    ],
+    "target_wps": 2.6,
+    "tone": "plain, uncomfortable, and specific - the tone of a post-mortem, not an apology",
+    "total_s": 68.5,
+    "total_words": 178,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S00.png",
+      "asset_status": "template",
+      "editing": "Hold the close-up for the full five seconds. Nothing cuts into this frame - it is the first.",
+      "end_s": 5.0,
+      "frame_type": "A_ROLL_CLOSE_UP",
+      "idx": 0,
+      "layout": "a_roll",
+      "overlay_text": "Written 1 September. Never ticked.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "We wrote a mandatory check into our own process on the first of September.",
+      "source_inspiration": [
+        {
+          "code": "DZ-wujrTJ0u",
+          "scene_id": "DZ-wujrTJ0u-S00",
+          "why": "same confidence to open on one close-up with the promise on a plate above the head"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Michael, close-up, direct to camera, plain wall, no screen yet."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S01.png",
+      "asset_status": "template",
+      "editing": "The cut lands on 'Here'; the blank column is on screen before the word 'box' is spoken.",
+      "end_s": 7.3,
+      "frame_type": "UI_DEMO",
+      "idx": 1,
+      "layout": "demo",
+      "overlay_text": "Empty",
+      "scene_id": "S01",
+      "script_role": "hook",
+      "script_text": "Here is the box. Empty.",
+      "source_inspiration": [
+        {
+          "code": "DVaBP3wDAFE",
+          "scene_id": "DVaBP3wDAFE-S00",
+          "why": "the screen takes over the whole frame and the voice keeps going over it, no inset, no split"
+        }
+      ],
+      "start_s": 5.0,
+      "transition": "hard_cut",
+      "visual": "Full-frame: the suitability column in our own table, scrolled to the newest rows, every cell in it blank. No presenter."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S02.png",
+      "asset_status": "template",
+      "editing": "Highlight appears on 'a person checks'; no motion otherwise.",
+      "end_s": 17.3,
+      "frame_type": "SCREENSHOT",
+      "idx": 2,
+      "layout": "demo",
+      "overlay_text": "The rule, as written",
+      "scene_id": "S02",
+      "script_role": "problem",
+      "script_text": "You have one too. Somewhere in your process a document says a person checks this before it goes out. Now find where that check is recorded.",
+      "source_inspiration": [
+        {
+          "code": "DVaBP3wDAFE",
+          "scene_id": "DVaBP3wDAFE-S00",
+          "why": "the screen takes over the whole frame and the voice keeps going over it, no inset, no split"
+        }
+      ],
+      "start_s": 7.3,
+      "transition": "none",
+      "visual": "The same screen take pulls back from the column to the rule as written in our own process document, the sentence that requires the check highlighted."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S03.png",
+      "asset_status": "template",
+      "editing": "Continuous scroll at reading speed; the count appears only when it is spoken.",
+      "end_s": 27.7,
+      "frame_type": "UI_DEMO",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "4 rows filled out of 282",
+      "scene_id": "S03",
+      "script_role": "explanation",
+      "script_text": "Ours is a single column. It has been there since the rule was written. It is filled in on four rows out of two hundred and eighty-two.",
+      "source_inspiration": [
+        {
+          "code": "DVaBP3wDAFE",
+          "scene_id": "DVaBP3wDAFE-S00",
+          "why": "one unbroken screen state narrated live for the whole middle of the reel"
+        }
+      ],
+      "start_s": 17.3,
+      "transition": "none",
+      "visual": "The same unbroken screen take pans from the document to the table itself: one column, scrolling, blank cell after blank cell."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S04.png",
+      "asset_status": "template",
+      "editing": "Zoom on the four identical dates, then release and scroll.",
+      "end_s": 39.2,
+      "frame_type": "UI_DEMO",
+      "idx": 4,
+      "layout": "demo",
+      "overlay_text": "All four on the same day",
+      "scene_id": "S04",
+      "script_role": "proof",
+      "script_text": "All four were filled on the same day, the day we wrote the rule. Every card we have drafted since has a row waiting and the box behind it empty.",
+      "source_inspiration": [
+        {
+          "code": "DbO4zvJR1k8",
+          "scene_id": "DbO4zvJR1k8-S00",
+          "why": "each item stated in the identical shape so a long stretch does not flatten"
+        }
+      ],
+      "start_s": 27.7,
+      "transition": "ui_zoom",
+      "visual": "The four filled rows, all carrying the same date, then a scroll through the drafted work with the column blank the whole way."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S05.png",
+      "asset_status": "template",
+      "editing": "The two blank cells reveal last and hold.",
+      "end_s": 49.6,
+      "frame_type": "DATA_VISUAL",
+      "idx": 5,
+      "layout": "demo",
+      "overlay_text": "Caught by reading, not by the field",
+      "scene_id": "S05",
+      "script_role": "proof",
+      "script_text": "Three items on this week's shortlist should have failed that check. We caught them by reading. One of the three is in the record. Two are not.",
+      "source_inspiration": [
+        {
+          "code": "DbO4zvJR1k8",
+          "scene_id": "DbO4zvJR1k8-S00",
+          "why": "the consequence named before the fix, in the same grammar as the previous item"
+        }
+      ],
+      "start_s": 39.2,
+      "transition": "overlay_reveal",
+      "visual": "Three rows side by side: one with a recorded rejection and a reason, two with the cell blank."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S06.png",
+      "asset_status": "template",
+      "editing": "Three fingers on the three options; no cut inside the section.",
+      "end_s": 60.8,
+      "frame_type": "A_ROLL_CLOSE_UP",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "Block it, show it, or drop it",
+      "scene_id": "S06",
+      "script_role": "payoff",
+      "script_text": "A check nothing stops for is a preference. Three ways out: make the step block, put it where someone already looks, or delete the rule. We took the first.",
+      "source_inspiration": [
+        {
+          "code": "DZ-wujrTJ0u",
+          "scene_id": "DZ-wujrTJ0u-S02",
+          "why": "reward bookend - the reel returns to the framing it opened on to close the loop"
+        }
+      ],
+      "start_s": 49.6,
+      "transition": "hard_cut",
+      "visual": "Michael, back on camera, same close-up as the opening."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-05_S07.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "Hold the last frame one second before the cut.",
+      "end_s": 68.5,
+      "frame_type": "A_ROLL_CLOSE_UP",
+      "idx": 7,
+      "layout": "a_roll",
+      "overlay_text": "Count your last fifty",
+      "scene_id": "S07",
+      "script_role": "cta",
+      "script_text": "Open where your process says the check is recorded and count the last fifty. Send this to whoever signs off.",
+      "source_inspiration": [
+        {
+          "code": "DczDlj4qQjI",
+          "scene_id": "DczDlj4qQjI-S03",
+          "why": "forward-to-a-named-role close with the comment gate removed"
+        }
+      ],
+      "start_s": 60.8,
+      "transition": "none",
+      "visual": "Michael, same take, closing line to camera."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company who is responsible for one repeated process and has tried ChatGPT but has no repeatable way of using it at work. Specifically anyone who has written an approval or sign-off step into a process document.",
+    "concept": "We wrote a mandatory human check into our own process eleven days ago, built the field that records it, and then never filled it in - so the control existed on paper and nowhere else.",
+    "filter": {
+      "ai_boundary": "Automation may prepare the item and queue it for approval. The record that a person actually checked has to be produced by that person's action - it can never be inferred, defaulted or filled in by the system that did the work.",
+      "friction": "The rule lives in a document, the field lives in the system, and nothing connects them. The work can complete with the box empty, so the box stays empty, and nobody notices until something goes out that should not have.",
+      "next_action": "Open the place your process document says the check is recorded, and count how many of the last fifty records have it filled in.",
+      "process": "The sign-off step inside any repeated process - who checks the work before it leaves the building, and where the fact that they checked it is written down. Quotes before they go to a customer, invoices before they are sent, copy before it is published."
+    },
+    "objective": "Make the viewer go and count how many of their last fifty records actually carry the sign-off their process document promises, by showing ours turn out to be decorative.",
+    "pain": "quality_trust",
+    "positioning": "builder",
+    "promise": "A two-minute way to find out whether your sign-off step is a control or a preference.",
+    "rationale": "Twenty-five of 266 reels prove by authority claim and none admits that the author's own governance did not run. The references supply cadence and framing only: a fixed item shape repeated without variation over a long face take (DbO4zvJR1k8), a reward bookend that makes a long middle tolerable (DZ-wujrTJ0u), an unbroken screen take with live narration (DVaBP3wDAFE), and a forward-to-a-named-role close with its comment gate deleted (DczDlj4qQjI)."
+  },
+  "title": "The approval box we designed and never ticked",
+  "traceability": {
+    "evidence_summary": "Our own rules have required a suitability check on every candidate reel since 1 September 2026. The field that records it is filled on 4 rows out of 282, all four on the day the rule was written, and none of the 23 cards drafted since carries it. Three reels on this week's forty-reel shortlist were excluded on content grounds and only one of the three is in the record. The four references contribute cadence and framing: a strict repeated item shape over one long face take (DbO4zvJR1k8, 87.4 saves/1k, robust_z 3.01), a reward bookend that carries a long middle (DZ-wujrTJ0u, 64.9 saves/1k, ungated), an unbroken 60-second screen take narrated live (DVaBP3wDAFE, robust_z 5.0) and a forward-to-a-named-role close with its gate deleted (DczDlj4qQjI, 23.6 shares/1k).",
+    "hypothesis": "H-13",
+    "insights": [
+      "I-11",
+      "I-08",
+      "I-09",
+      "I-15",
+      "I-18",
+      "I-14",
+      "I-26"
+    ],
+    "original_synthesis": "Twenty-five of 266 reels prove by authority claim and not one admits that the author's own governance did not run. The rule, the field, the four dated rows and the three content rejections are all ours and queryable from data/radar.db; the fix we chose - make the step block - is stated with the two alternatives we rejected, so the reel is a redesign rather than a confession, and two thirds of the runtime sits on the proof and the redesign rather than on the admission.",
+    "why_better_than_generic": "A generic AI script would advise 'always keep a human in the loop' and show a stock approval screen. This one shows that we wrote the human into the loop, built the box, and then produced a count of four out of two hundred and eighty-two - and it names the difference between a control and a preference as whether the work can complete without it. The proof is a single unambiguous number on a real screen, which is the cheapest possible thing to shoot and the only visual feature in the corpus that survives creator normalisation on two independent metrics."
+  }
+}

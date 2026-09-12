@@ -1,0 +1,42 @@
+{
+  "schema": "m2.remotion-render-receipt.v1",
+  "status": "RENDERED_REVIEW_REQUIRED",
+  "render_mode": "PREVIS",
+  "remotion_version": "4.0.520",
+  "edl_sha256": "bfd8aa9a159981bb4fa3eebaf560b3fdb24910273b70e17c643a7d3a58ab0510",
+  "output_sha256": "0716c154c1d4b076a22b4475d9ad623726e9315e67b51ada1b9b22d93b72245f",
+  "duration_frames": 1800,
+  "fps": 30,
+  "assets": [
+    {
+      "asset_id": "img-S00",
+      "sha256": "7c2df1c22b0f6a783eaadf30a0512ccbd3df0e06db6204c1921a43e9472fbbbe"
+    },
+    {
+      "asset_id": "img-S01",
+      "sha256": "0d2cab62a3b97165ebcf3bde32f6a2d5792cab83ea0ac0d6ff3d238e66212a7d"
+    },
+    {
+      "asset_id": "img-S02",
+      "sha256": "2b02362284bbbceb2755f608862cbbcd75a782a417d29ea02d562e731eecfb63"
+    },
+    {
+      "asset_id": "img-S03",
+      "sha256": "2e7d7a63a4d6577ea705e0606f60cb17058662cd3ab599480b34134906f4f2f0"
+    },
+    {
+      "asset_id": "img-S04",
+      "sha256": "4151b64b4fb4dee1573aa84a695d1b5294e6e09da35b388071eaaba25afbd47e"
+    },
+    {
+      "asset_id": "img-S05",
+      "sha256": "d526f13fbc6385c1f05516a54770e9f93d74a640cf749b34c3e51e6e47dc695d"
+    },
+    {
+      "asset_id": "img-S06",
+      "sha256": "8f452e740fedcf795feb715fa3337e717599aeb9287693f62a0027cbe8274f23"
+    }
+  ],
+  "provider_execution": false,
+  "downloaded_browser": false
+}

@@ -1,0 +1,438 @@
+{
+  "card_id": "C-2026-09-12-09",
+  "claims": [
+    {
+      "source": "engine/SPEC.md section 0.3 production default path plus run.py's Notion and follower steps; each step of the 2026-09-10 07:00 run is quoted in reports/audit/03-server-runtime-hiker.md section 3, which quotes the run line by line; the log itself is on the server at /opt/radar/data/runs/2026-09-10_0700.log and is not in this repository (data/runs/ does not exist locally).",
+      "state": "OBSERVED",
+      "text": "Our weekly run is a chain of six named systems: a paid data source, a free public-profile source, local transcription, local frame extraction, a database file and a notes tool."
+    },
+    {
+      "source": "Step 5 of that run, quoted in reports/audit/03-server-runtime-hiker.md section 3, which quotes the run line by line; the log itself is on the server at /opt/radar/data/runs/2026-09-10_0700.log and is not in this repository (data/runs/ does not exist locally).",
+      "state": "OBSERVED",
+      "text": "In the run of 2026-09-10 the free public-profile source returned nothing five times in a row and 0 of 130 profiles were updated."
+    },
+    {
+      "source": "Steps 7, 10 and 12, quoted in reports/audit/03-server-runtime-hiker.md section 3, which quotes the run line by line; the log itself is on the server at /opt/radar/data/runs/2026-09-10_0700.log and is not in this repository (data/runs/ does not exist locally). Steps 7 and 10 name d5b6ab42-...; step 12 names a different id, 679fa6d6-..., so it is the same message on two destinations, not one.",
+      "state": "OBSERVED",
+      "text": "Three steps of the same run failed with the same Notion 404 message asking that the destination be shared with the integration - steps 7 and 10 on the Cards database, step 12 on the Reels database."
+    },
+    {
+      "source": "Step 11 of that run ('the stats block was updated'), quoted in reports/audit/03-server-runtime-hiker.md section 3, which quotes the run line by line; the log itself is on the server at /opt/radar/data/runs/2026-09-10_0700.log and is not in this repository (data/runs/ does not exist locally). It writes to a page rather than to a database.",
+      "state": "OBSERVED",
+      "text": "In the same run the step that wrote to a page rather than to a database succeeded."
+    },
+    {
+      "source": "reports/audit/03-server-runtime-hiker.md section 3 (09-07 run: step 7 'statuses updated: 5', step 10 '9 of 9 uploaded') and section 4, which reads the 404 text as Notion's generic 'the integration lost access' message and matches it to the three databases being moved to trash around 7 September. The 404 body names a remedy, not a cause.",
+      "state": "OBSERVED",
+      "text": "The destination had been reachable three days earlier - steps 7 and 10 of the 2026-09-07 run both succeeded - and was gone by 2026-09-10. Our audit attributes that to the databases being moved to trash around 7 September, not to a connection that was listed and never made."
+    },
+    {
+      "source": "No integrations page was opened during the audit. Recorded so 'supported is not the same as connected' is read as the lesson from a connection that stopped, not as a finding about a published list.",
+      "state": "MISSING",
+      "text": "What the integrations page said at any point is not something we checked; the reel makes no claim about it and names no vendor."
+    },
+    {
+      "source": "Not written yet; the reel does not offer it as an existing download.",
+      "state": "PLANNED",
+      "text": "We will publish the two-minute pre-trial check - name the three systems, find them on the integrations page, mark the missing ones as manual - as a written list."
+    },
+    {
+      "source": "We have not run a trial with and without the check.",
+      "state": "TO_MEASURE",
+      "text": "Running that check before a trial reduces how often a tool turns out to be unusable for the process."
+    },
+    {
+      "source": "We have only tested our own chain. No commercial tool's integrations page has been checked against a real company's inbox, spreadsheet and calendar, and the reel names no tool.",
+      "state": "MISSING",
+      "text": "A named commercial tool's integrations page is accurate about what it can reach in a real small business."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Continuous screen capture of one enquiry moving inbox to spreadsheet to calendar, our own accounts (S00-S01)",
+      "Capture of the 2026-09-10 run log showing the six named steps (S02)",
+      "Capture of the same log at the five silent attempts, the 0-of-130 line, and the three repeated 404 messages (S03)",
+      "Capture of the 2026-09-07 and 2026-09-10 logs side by side: the same step answering on Monday and 404-ing on Thursday, beside the destination that answered in both (S04)",
+      "Max A-roll, medium shot, one location, one take"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 600 at 40px, two lines maximum, bottom-anchored in Instagram zone A/B; one persistent top banner that accumulates the three destination names and then holds.",
+    "cut_timing": "Three hard cuts: into our own run log at 18.8 s, into the two runs side by side at 39.2 s, and to the presenter at 49.2 s. The opening frame is not a cut. Everything before 18.8 s is one capture, the log block is one capture, and the closing face block is one take.",
+    "emphasis": "Every named system on the banner is one the viewer already has. The two failures are quoted from the log exactly as the log wrote them, and no tool is named in the first three seconds.",
+    "motion": "Linear easing only, no bounce, per design/rules/motion.md.",
+    "zooms": "None. The log is captured at a size that reads without a zoom."
+  },
+  "format": "M2 Radar",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "Watch an enquiry go from the inbox to the sheet to the calendar. Each name is where a tool stops.",
+      "type": "demo_first"
+    },
+    {
+      "is_question": false,
+      "text": "The integrations page decides whether a tool touches your work. The feature page does not.",
+      "type": "bold_claim"
+    },
+    {
+      "is_question": true,
+      "text": "Can the tool you are about to trial even see your inbox?",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-05",
+  "references": [
+    {
+      "code": "DNA7-d3o5sQ",
+      "creator_median_play": 8010.0,
+      "function": "explanation",
+      "play": 451491,
+      "reason": "Rated the best overall template in the pool and the only ungated reel in it (cta_type none, so its 23.3 shares per 1 000 carry no keyword inflation). Its mechanism beats are a connector list read aloud in dependency order - two named ordinary systems, each introduced by the reason it is needed, which is exactly the grammar a connector reel needs. Screen-first opening held for 56 seconds.",
+      "save_rate": 0.03652,
+      "share_rate": 0.02334,
+      "transformed_how": "Borrowed naming each destination at the moment the workflow needs it, and opening on the artefact doing its own first move rather than on a presenter. Changed: our subject is whether the tool can reach those systems at all, not how to assemble an agent; the owner of the process is named, which this reel never does; the systems shown are an inbox, a spreadsheet and a calendar rather than a voice stack; and our presenter is absent from the frame entirely until 50 s rather than sitting under it, because any split state runs at median robust_z 1.03 against 1.43.",
+      "url": "https://www.instagram.com/reel/DNA7-d3o5sQ/",
+      "useful_frame": {
+        "scene_id": "DNA7-d3o5sQ-S00",
+        "what": "frame one is the workflow canvas already listening, held unbroken for 56 seconds; the presenter is a small head at the bottom of frame and never takes the picture"
+      },
+      "useful_transcript": {
+        "beat_id": "DNA7-d3o5sQ-B1",
+        "quote": "This agent understands your goal but needs data. Therefore, it uses Google Calendar to check your schedule and Google Sheets to save any details."
+      },
+      "username": "edhillai",
+      "view_lift": 55.37
+    },
+    {
+      "code": "DZU9x_1AY2t",
+      "creator_median_play": 6678.0,
+      "function": "rhythm",
+      "play": 1282458,
+      "reason": "The densest reel in the pool - 37 seconds, no intro, no story, two identically shaped steps, five named artefacts - and the line that carries it is pure specificity: three exact numbers in one breath. 25.8 shares and 48.1 saves per 1 000.",
+      "save_rate": 0.04813,
+      "share_rate": 0.02577,
+      "transformed_how": "Borrowed the cadence - two steps of identical shape, each closing on a concrete count - which is how we name three destinations and two failures without the middle sagging. Changed: the numbers are our own and describe a process rather than a product's feature inventory, and we do not copy its visual sequence, which alternates into split screen four times.",
+      "url": "https://www.instagram.com/reel/DZU9x_1AY2t/",
+      "useful_frame": {
+        "scene_id": "DZU9x_1AY2t-S04",
+        "what": "the install log filling the frame with the success line highlighted, so the claim and its receipt are the same image"
+      },
+      "useful_transcript": {
+        "beat_id": "DZU9x_1AY2t-B1",
+        "quote": "This gives Claude a database of over 50 UI styles, 97 color palettes and 57 font pairings."
+      },
+      "username": "badarmunir_official",
+      "view_lift": 191.04
+    },
+    {
+      "code": "Db9MT-axxcO",
+      "creator_median_play": 14448.0,
+      "function": "screen_proof",
+      "play": 37791,
+      "reason": "Best combined share and save rates in the corpus (47.9 and 68.9 per 1 000) on a reel that barely beat its own author's median (1.62x, robust_z 1.08), which makes it the purest available example of resonance without reach - forwarding behaviour rather than algorithmic luck. Its mechanism beat is a connector literally being attached on screen.",
+      "save_rate": 0.06885,
+      "share_rate": 0.0479,
+      "transformed_how": "Borrowed the act of showing a connection being made or refused on screen in real time. Changed: the connectors are the viewer's existing inbox, sheet and calendar rather than a sponsor's product - our own analysis records this reel as an undisclosed tool partnership, which is exactly what we must not reproduce - and we claim no outcome number of any kind, where it claims six interviews in 24 hours.",
+      "url": "https://www.instagram.com/reel/Db9MT-axxcO/",
+      "useful_frame": {
+        "scene_id": "Db9MT-axxcO-S01",
+        "what": "full-frame capture of the connector menu itself, each connector listed with its toggle visibly on or off - the settings screen, not a marketing page"
+      },
+      "useful_transcript": {
+        "beat_id": "Db9MT-axxcO-B1",
+        "quote": "First, hit the plus, add the Higgs Field Connector, upload your resume, any inputs and the dream job that you want to land."
+      },
+      "username": "shrug.manny",
+      "view_lift": 1.62
+    },
+    {
+      "code": "DVZGBgTk6zz",
+      "creator_median_play": 1374.5,
+      "function": "hook",
+      "play": 419000,
+      "reason": "Names an objection the audience has never heard said out loud and then repeats it back solved: one sentence of friction, one sentence of promise, 6.8 seconds, inside the corpus's 5-10 s hook norm. The 303.8x rests on a 1 374-view author median, so it is read as a curiosity and the sentence shape is the finding.",
+      "save_rate": 0.04622,
+      "share_rate": 0.03483,
+      "transformed_how": "Borrowed the shape - the friction named as a concrete act, immediately followed by the promise - and the habit of putting the subject on screen before the sentence ends. Changed: our friction is an ordinary business fact (the tool cannot see your inbox) rather than a developer's discomfort with a terminal, we name no tool in the hook, and the 1 374-view author median means we take the sentence shape and none of the performance claim.",
+      "url": "https://www.instagram.com/reel/DVZGBgTk6zz/",
+      "useful_frame": {
+        "scene_id": "DVZGBgTk6zz-S01",
+        "what": "cuts to the tool's own splash screen animating in on the second word, so the subject is on screen before the sentence finishes"
+      },
+      "useful_transcript": {
+        "beat_id": "DVZGBgTk6zz-B0",
+        "quote": "Everyone using cloud code to build AI agent but nobody wants to touch terminal. Here's the easiest way to set this up under 5 minutes."
+      },
+      "username": "sharmadhruveshh",
+      "view_lift": 303.84
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-09.json",
+  "review": {
+    "findings": [
+      "[evidence] HARD - the reel's central claim contradicted our own audit. The script said 'It was on the list of things that tool supports. The database was simply not shared with it', and claims[4] said the 404 body 'names the cause'. reports/audit/03 section 4 reads it the other way: the three databases were moved to trash around 7 September and the 404 text is Notion's generic 'the integration lost access' message. Section 3 shows the same destination answering on 2026-09-07 (step 7 'statuses updated: 5', step 10 '9 of 9 uploaded'), so the connection existed and was removed - it was never listed-but-never-made. -> explanation section rewritten to 'Three days earlier that same connection worked. Someone moved the destination and the tool lost it.', claims[4] rewritten, strategy.concept and filter.friction corrected, S04's visual and overlay rebuilt around the two runs side by side. Script version 2; total_s 68.8 -> 68.0.",
+      "[evidence] the payoff carried the whole lesson on one distinction that no longer fits -> 'Supported is not the same as connected, and connected is not the same as still connected', which is what the two logs actually show. Title kept.",
+      "[evidence] 'Five named places' counted the follower source and the paid data source as one link, but they are different systems: step 1 (Hiker, 130 accounts, $2.60) succeeded and step 5 (freeprofile.py, the free public-profile source) is the one that went silent -> six named places, in the script, in claims[0], in S02's visual and overlay, and in assets_required.",
+      "[evidence] claims[2] said 'the same 404' on one database. Steps 7 and 10 are the Cards database (d5b6ab42-...); step 12 is the Reels database (679fa6d6-...) -> claim reworded to the same message on two destinations. The spoken line, 'the notes tool said the same thing three times', is accurate and stays.",
+      "[traceability] every source cited data/runs/2026-09-10_0700.log, which is not in this repository - data/runs/ does not exist locally and the log is on the server -> all four sources now cite reports/audit/03 section 3, which quotes the run, and name the server path.",
+      "[evidence] added a MISSING claim: no integrations page was ever opened, so the reel makes no claim about what any published list says.",
+      "[visual] the opening frame carried transition hard_cut against the card's own 'three hard cuts' description -> set to none.",
+      "[structure] left as is, noted: the script has no problem or friction section, against general-conclusions section G rule 11 and POSITIONING section 8's second filter item. The friction is carried by the hook's second sentence and by S04, and adding a section would push the reel past 70 s.",
+      "[evidence] verified unchanged: five silent attempts and 0 of 130 profiles, three 404s, the page-destination step succeeding - all quoted verbatim in reports/audit/03 section 3. 2026-09-10 is a Thursday and 2026-09-07 a Monday."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the relief of having one checkable question to ask before committing to a tool",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 8.0,
+        "text": "Watch an enquiry go from the inbox to the sheet to the calendar. Each name is where a tool stops.",
+        "words": 20
+      },
+      {
+        "role": "explanation",
+        "seconds": 10.8,
+        "text": "Nothing clever happens here. It reads the inbox, writes a row in the sheet, puts a slot in the calendar. Three names to check before you pay.",
+        "words": 27
+      },
+      {
+        "role": "proof",
+        "seconds": 7.6,
+        "text": "Our own weekly run is a chain like that. Six named places. On Thursday two of them refused us.",
+        "words": 19
+      },
+      {
+        "role": "proof",
+        "seconds": 12.8,
+        "text": "One source went quiet five times in a row, so none of the hundred and thirty profiles updated. And the notes tool said the same thing three times: cannot find the database.",
+        "words": 32
+      },
+      {
+        "role": "explanation",
+        "seconds": 10.0,
+        "text": "Three days earlier that same connection worked. Someone moved the destination and the tool lost it. The one place nobody moved saved everything, first time.",
+        "words": 25
+      },
+      {
+        "role": "payoff",
+        "seconds": 12.0,
+        "text": "Supported is not the same as connected, and connected is not the same as still connected. Write down the three systems your work lives in and check them by name.",
+        "words": 30
+      },
+      {
+        "role": "cta",
+        "seconds": 6.8,
+        "text": "Where a name is missing, that step stays manual. Send this to whoever is picking the tool.",
+        "words": 17
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "plain, concrete, unhurried - a chain named link by link",
+    "total_s": 68.0,
+    "total_words": 170,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-09_S00.png",
+      "asset_status": "template",
+      "editing": "One continuous capture, no speed-up; each name lands on the banner as the item arrives there. Nothing cuts into this frame - it is the first.",
+      "end_s": 8.0,
+      "frame_type": "UI_DEMO",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "Inbox. Sheet. Calendar.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "Watch an enquiry go from the inbox to the sheet to the calendar. Each name is where a tool stops.",
+      "source_inspiration": [
+        {
+          "code": "DVZGBgTk6zz",
+          "scene_id": "DVZGBgTk6zz-S01",
+          "why": "the subject is on screen before the opening sentence finishes"
+        },
+        {
+          "code": "DNA7-d3o5sQ",
+          "scene_id": "DNA7-d3o5sQ-S00",
+          "why": "frame one is the artefact already doing its first move, no establishing shot of a person"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full frame, no presenter: one enquiry arrives in an inbox, a row appears in a spreadsheet, a slot appears in a calendar. Real screens, one continuous move."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-09_S01.png",
+      "asset_status": "template",
+      "editing": "Names accumulate on the banner and stay; nothing is removed.",
+      "end_s": 18.8,
+      "frame_type": "UI_DEMO",
+      "idx": 1,
+      "layout": "demo",
+      "overlay_text": "Three names to check",
+      "scene_id": "S01",
+      "script_role": "explanation",
+      "script_text": "Nothing clever happens here. It reads the inbox, writes a row in the sheet, puts a slot in the calendar. Three names to check before you pay.",
+      "source_inspiration": [
+        {
+          "code": "DNA7-d3o5sQ",
+          "scene_id": "DNA7-d3o5sQ-S00",
+          "why": "each destination named at the moment the workflow needs it, in dependency order"
+        }
+      ],
+      "start_s": 8.0,
+      "transition": "none",
+      "visual": "The same take continues; each of the three destinations gets its name added to the top banner as the item lands in it."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-09_S02.png",
+      "asset_status": "template",
+      "editing": "Scroll stops on the step list; no zoom.",
+      "end_s": 26.4,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 2,
+      "layout": "demo",
+      "overlay_text": "Six named places. Two refused.",
+      "scene_id": "S02",
+      "script_role": "proof",
+      "script_text": "Our own weekly run is a chain like that. Six named places. On Thursday two of them refused us.",
+      "source_inspiration": [
+        {
+          "code": "DZU9x_1AY2t",
+          "scene_id": "DZU9x_1AY2t-S04",
+          "why": "the claim and its receipt are the same image - the log itself, not a description of it"
+        }
+      ],
+      "start_s": 18.8,
+      "transition": "hard_cut",
+      "visual": "Full-frame capture of our own run log, scrolled to the top, the six named steps visible in order."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-09_S03.png",
+      "asset_status": "template",
+      "editing": "The three identical error lines are brought together on one screen so the repetition is visible.",
+      "end_s": 39.2,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "0 of 130 updated. 404, three times.",
+      "scene_id": "S03",
+      "script_role": "proof",
+      "script_text": "One source went quiet five times in a row, so none of the hundred and thirty profiles updated. And the notes tool said the same thing three times: cannot find the database.",
+      "source_inspiration": [
+        {
+          "code": "DZU9x_1AY2t",
+          "scene_id": "DZU9x_1AY2t-S06",
+          "why": "two identically shaped steps, each closing on a concrete count"
+        }
+      ],
+      "start_s": 26.4,
+      "transition": "none",
+      "visual": "The log continues: the five silent attempts and the zero-of-130 line, then the same 404 message repeated at three different steps."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-09_S04.png",
+      "asset_status": "template",
+      "editing": "Hold on the two log lines, one from each run, for the full line.",
+      "end_s": 49.2,
+      "frame_type": "SCREENSHOT",
+      "idx": 4,
+      "layout": "demo",
+      "overlay_text": "Worked Monday. Gone Thursday.",
+      "scene_id": "S04",
+      "script_role": "explanation",
+      "script_text": "Three days earlier that same connection worked. Someone moved the destination and the tool lost it. The one place nobody moved saved everything, first time.",
+      "source_inspiration": [
+        {
+          "code": "Db9MT-axxcO",
+          "scene_id": "Db9MT-axxcO-S01",
+          "why": "the settings screen where a connection is actually on or off, shown rather than described"
+        }
+      ],
+      "start_s": 39.2,
+      "transition": "hard_cut",
+      "visual": "Full-frame: the same step in two runs three days apart - Monday's log line where the destination answered, and Thursday's 404 in its place, beside the one destination that answered in both."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-09_S05.png",
+      "asset_status": "template",
+      "editing": "No cut inside the section; three fingers on the three systems.",
+      "end_s": 61.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "Supported. Connected. Still connected.",
+      "scene_id": "S05",
+      "script_role": "payoff",
+      "script_text": "Supported is not the same as connected, and connected is not the same as still connected. Write down the three systems your work lives in and check them by name.",
+      "source_inspiration": [
+        {
+          "code": "DNA7-d3o5sQ",
+          "scene_id": "DNA7-d3o5sQ-S01",
+          "why": "the reel hands back to a human only once the artefact has finished making the argument"
+        }
+      ],
+      "start_s": 49.2,
+      "transition": "hard_cut",
+      "visual": "Max, medium shot, plain wall, first appearance in the reel."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-09_S06.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "Hold the last frame one second before the cut.",
+      "end_s": 68.0,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "Missing name, manual step",
+      "scene_id": "S06",
+      "script_role": "cta",
+      "script_text": "Where a name is missing, that step stays manual. Send this to whoever is picking the tool.",
+      "source_inspiration": [
+        {
+          "code": "Db9MT-axxcO",
+          "scene_id": "Db9MT-axxcO-S04",
+          "why": "returns to the face for the closing line after the screen has carried the mechanism"
+        }
+      ],
+      "start_s": 61.2,
+      "transition": "none",
+      "visual": "Max, same take, closing line to camera."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company who is responsible for one repeated process and has tried ChatGPT but has no repeatable way of using it at work. Specifically anyone about to trial a tool for a process that already lives in an inbox, a spreadsheet or a calendar.",
+    "concept": "A tool is only as useful as the systems it can already reach, and on Thursday our own weekly run proved it twice: one source went silent, and one destination that had answered three days earlier stopped answering because it had been moved at the other end.",
+    "filter": {
+      "ai_boundary": "The tool moves and drafts between named systems. The human owns the account access, decides what the tool may see, and stays responsible for whether a connection is actually open rather than merely listed.",
+      "friction": "A tool that cannot read and write those three systems turns the work into copying and pasting, which is more manual work than there was before. And 'supported' on a feature page is not the same as connected: a connection can be live on Monday, be removed at the other end, and be gone by Thursday without anything on the feature page changing.",
+      "next_action": "Write down the three systems your process actually touches and check them, by name, against the tool's own integrations page before the trial starts.",
+      "process": "Any repeated task whose inputs and outputs already sit in an inbox, a spreadsheet and a calendar - taking an enquiry, recording it, and putting a slot in the diary for it."
+    },
+    "objective": "Get the viewer to open the integrations page before the feature page, check three named systems against it before a trial starts, and check again that each one is still answering.",
+    "pain": "manual_repetition",
+    "positioning": "builder",
+    "promise": "A two-minute check, before you trial anything, that tells you whether the tool can touch the work you actually do.",
+    "rationale": "Naming specific things is the only lexical feature that predicts reach and survives creator normalisation (distinct entities vs view_lift +0.161 pooled, +0.198 within creators), and this reel is built entirely out of names. The references supply grammar: each destination introduced at the moment the workflow needs it (DNA7-d3o5sQ), two identically shaped steps each closing on a concrete count (DZU9x_1AY2t), a connector being attached on screen in real time (Db9MT-axxcO), and the everybody-wants-X-but-nobody-does-Y opening with the friction named as a concrete act (DVZGBgTk6zz)."
+  },
+  "title": "Supported is not the same as connected",
+  "traceability": {
+    "evidence_summary": "Our own weekly run is a chain of six named systems and on 2026-09-10 two of the links failed for two different reasons. The free public-profile source returned nothing five times in a row and 0 of 130 profiles were updated. Three separate steps failed with the same 404 from the notes tool - two on one database, one on another - while the one step in the same run that wrote to a page rather than a database succeeded. The same destination had answered three days earlier, on 2026-09-07, when steps 7 and 10 both went through: the connection existed and was removed at the other end. The four references contribute grammar only: destinations named in dependency order over a 56-second unbroken screen take (DNA7-d3o5sQ, ungated, 23.3 shares/1k), two identically shaped steps each closing on a count (DZU9x_1AY2t, 25.8 shares/1k), a connection shown being made on the settings screen (Db9MT-axxcO, best combined 47.9 and 68.9 per 1k on only 1.62x lift) and a friction-then-promise opening (DVZGBgTk6zz, 34.8 shares/1k).",
+    "hypothesis": "H-05",
+    "insights": [
+      "I-09",
+      "I-13",
+      "I-08",
+      "I-15",
+      "I-02",
+      "I-05"
+    ],
+    "original_synthesis": "The corpus names tools constantly and integrations almost never; the connector list is treated as plumbing rather than as the buying decision. The failure is ours, dated and quotable from two run logs three days apart, and it is the more interesting failure mode because the connection was live on Monday and gone by Thursday with nothing on the tool's side changing. The reel names no vendor, makes no time or cost claim, and hands over a check rather than a tool recommendation.",
+    "why_better_than_generic": "A generic AI script would list five tools that integrate with Gmail. This one shows a single item crossing three ordinary systems, then produces two real logs three days apart in which the same supported connection worked and then did not, for a reason that has nothing to do with the model - and it separates supported, connected and still connected, which is the sentence the viewer can use in a sales call. Naming specific things is the only lexical feature that predicts reach and survives creator normalisation (+0.161 pooled, +0.198 within creators), and every load-bearing noun in this script is a name."
+  }
+}

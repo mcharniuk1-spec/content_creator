@@ -1,0 +1,267 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-08",
+ "title": "The paragraph that beat the agents",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2088,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 228,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Same job. Two versions.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 228,
+   "duration_frames": 276,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Five times a week",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 504,
+   "duration_frames": 300,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "One paragraph. Three checks.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 804,
+   "duration_frames": 276,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Six steps. One stuck.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1080,
+   "duration_frames": 492,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "115 measurements. None separated.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1572,
+   "duration_frames": 252,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Change it. Wrong. How long.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1824,
+   "duration_frames": 264,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "One paragraph. Five runs. By hand.",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-08_S00.png",
+   "sha256": "6a0c8374c0daf7434590b912832f66a2df689065133cc985a0aebbd368ad8b47",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-08_S01.png",
+   "sha256": "879bca6babccde1b70006e3ca73d791ee02688e9fe147de38e5f3cfed6d15cdf",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-08_S02.png",
+   "sha256": "0e1b96afd7b08c62ca67e59d46f0b3f8b56ca4b21a3e5ebca6f2c50a63a20d95",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-08_S03.png",
+   "sha256": "83986f17cfd54f3ce83b37ece54b0f0c43fa7b0b39d6e56f47e2441abedbe308",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-08_S04.png",
+   "sha256": "215d692c431034d4fd74eb6d5020a2bdc3c6c8068b31cefc955e6b55be1835a7",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-08_S05.png",
+   "sha256": "5f73713fc60881a80bf2110d556ec206d120eeb06e658bf4a560e9c9bbc1c51b",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-08_S06.png",
+   "sha256": "515dcce70baf80527ca35ab8e530a6069a619b29206590430cfe8398315a2310",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 228,
+   "text": "Same job, twice. This one is a paragraph of instructions. That one is six agents. Watch where each stops."
+  },
+  {
+   "from_frame": 228,
+   "duration_frames": 276,
+   "text": "The task runs about five times a week. A quote, a summary, a reply. Whatever you build, somebody has to keep it running."
+  },
+  {
+   "from_frame": 504,
+   "duration_frames": 300,
+   "text": "This is the paragraph. What the task is, what good looks like, three checks at the bottom. Anyone doing the job can read every line."
+  },
+  {
+   "from_frame": 804,
+   "duration_frames": 276,
+   "text": "This is the other one. Six steps, four of them fine, and this one waiting on something nobody in the room can fix."
+  },
+  {
+   "from_frame": 1080,
+   "duration_frames": 492,
+   "text": "We did the elaborate version to ourselves. A hundred and fifteen measurements across two hundred and sixty-eight videos. Not one reliably separated a strong reel from a weak one. What survived was a question we could have asked on day one."
+  },
+  {
+   "from_frame": 1572,
+   "duration_frames": 252,
+   "text": "Three questions before you build. Who can change it. What happens when it is wrong. How long until it first runs."
+  },
+  {
+   "from_frame": 1824,
+   "duration_frames": 264,
+   "text": "Write your task as one paragraph and run it by hand five times this week. Send this to whoever is scoping it."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

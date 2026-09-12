@@ -1,0 +1,12 @@
+{
+ "interpretation": "",
+ "limitations": "Uses the metric-only corpus (N_ingested), the widest denominator; duration itself carries no visual or script evidence. The analysis-ready corpus is not a random sample of the niche: deep.py only ever processed reels that score.py had already ranked near the top of their creator's output, so its median robust_z is above zero by construction. Any contrast computed inside it compares strong videos with other strong videos, not strong with average (docs/M2RADAR_ANALYSIS_METHOD.md §1.4).",
+ "method": "Scatter of reel duration (from reels, newest reading) against robust_z, across the whole ingested corpus (not just analysis-ready).",
+ "n": 3211,
+ "source": "M2Radar data/radar.db, analysis-ready corpus n=268, 2026-09-12",
+ "title": "Video duration vs performance",
+ "variables": {
+  "x": "dur (seconds)",
+  "y": "robust_z"
+ }
+}

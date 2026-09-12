@@ -199,7 +199,20 @@ def push(con, today=None):
             if any(MARKER in t.get('plain_text', '') for t in rt):
                 hit = True
         if hit:
-            notion.call('PATCH', f'/blocks/{b["id"]}', {'archived': True})
+            # Баг из аудита (reports/audit/03 §3, 09-07: "Notion ответил 400: Updating
+            # a page via the blocks endpoint unsupported. Call patch /v1/pages/:page_id
+            # instead"). Причина: если среди дочерних блоков страницы затесался вложенный
+            # child_page/child_database (например, кто-то руками создал подстраницу под
+            # разделом со статистикой), его id — это id страницы/базы, и Notion прямо
+            # запрещает архивировать его через /blocks/{id} — нужен /pages/{id} или
+            # /databases/{id} соответственно. Обычные блоки (paragraph, table, heading…)
+            # по-прежнему архивируются через /blocks/.
+            if b['type'] == 'child_page':
+                notion.call('PATCH', f'/pages/{b["id"]}', {'archived': True})
+            elif b['type'] == 'child_database':
+                notion.call('PATCH', f'/databases/{b["id"]}', {'archived': True})
+            else:
+                notion.call('PATCH', f'/blocks/{b["id"]}', {'archived': True})
     for i in range(0, len(blocks), 90):
         notion.call('PATCH', f'/blocks/{page}/children', {'children': blocks[i:i + 90]})
     return len(blocks)

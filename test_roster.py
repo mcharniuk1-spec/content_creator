@@ -1,12 +1,19 @@
 """Проверка выбраковки: два промаха подряд — выбыл, один — ждёт. И что повторный
-запуск на том же снимке ничего не меняет. Второй снимок имитируем на копии базы.
-"""
-import datetime, os, shutil, sys, time
-import roster
-from db import connect, DB_PATH
+запуск на том же снимке ничего не меняет.
 
-TMP = DB_PATH.replace('.db', '.test.db')
-shutil.copy(DB_PATH, TMP)
+База синтетическая (db.SCHEMA на временном файле), а не копия рабочей: на живой базе
+второй снимок строился сдвигом дат поверх реальных таймкодов роликов, и то, сколько
+аккаунтов "промахнётся дважды", зависело от того, как реальная активность 130 аккаунтов
+легла на новое окно в 30 дней — не от логики roster.check(), а от текущего состояния
+продакшен-данных. Здесь пять аккаунтов с таймкодами, которые сам тест и придумал,
+поэтому исход предсказан заранее, а не подогнан под то, что вышло на этот раз.
+"""
+import datetime, os, sys, time
+import roster
+from db import connect
+
+TMP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'radar.roster-test.db')
+if os.path.exists(TMP): os.remove(TMP)
 con = connect(TMP)
 fail = []
 
@@ -15,35 +22,69 @@ def eq(name, got, want):
     if got != want: fail.append(name)
 
 n = lambda s: con.execute(s).fetchone()[0]
+ts = lambda d: int(time.mktime(d.timetuple()))
 
-# первая проверка уже прошла на рабочей базе — переигрываем её здесь с нуля
-con.execute('UPDATE accounts SET misses=0, checked_snapshot=NULL, status=?, dropped_at=NULL '
-            "WHERE status IN ('active','dropped')", ('active',))
+# ---- набор: пятеро с известным заранее поведением -------------------------------
+# alive1     — всегда набирает свежие ролики, никогда не мажет
+# miss_a/b   — ни разу не набирают ролики: первый снимок — первый промах, второй — выбывает
+# skip_acc   — сбор её вообще не покрывает (нет строк в reels): пропуск, не промах
+# silent_acc — как alive1, но на последнем снимке "молчит" (silent_accounts)
+ACCOUNTS = ['alive1', 'miss_a', 'miss_b', 'skip_acc', 'silent_acc']
+for pk, u in enumerate(ACCOUNTS, 1):
+    con.execute("INSERT INTO accounts (pk,username,status) VALUES (?,?,'active')", (pk, u))
 con.commit()
+PK = {u: i for i, u in enumerate(ACCOUNTS, 1)}
+
+
+def add_reels(sid, taken_date, alive_usernames):
+    """Три свежих ролика (внутри окна ALIVE_DAYS) для каждого из alive_usernames."""
+    recent = ts(taken_date - datetime.timedelta(days=5))
+    for u in alive_usernames:
+        for i in range(3):
+            con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play)
+                VALUES (?,?,?,?,?,?)""", (sid, f'{u[:6]}{sid}{i}A', PK[u], u, recent, 1000))
+    con.commit()
+
+
+def add_stale_reel(sid, taken_date, stale_usernames):
+    """Один старый ролик (за пределами окна ALIVE_DAYS) — сбор его видел, значит
+    это промах, а не пропуск: разница между 'молчал' и 'не набрал' именно в этом."""
+    old = ts(taken_date - datetime.timedelta(days=roster.ALIVE_DAYS + 10))
+    for u in stale_usernames:
+        con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play)
+            VALUES (?,?,?,?,?,?)""", (sid, f'{u[:6]}{sid}OLD', PK[u], u, old, 500))
+    con.commit()
+
+
 было = n("SELECT COUNT(*) FROM accounts WHERE status='active'")
+
+# ---- снимок 1: только alive1 и silent_acc набирают свежие ролики ---------------
+d1 = datetime.date(2026, 1, 1)
+con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done) VALUES (?,5,0,1)", (d1.isoformat(),))
+sid1 = n(f"SELECT id FROM snapshots WHERE taken='{d1.isoformat()}'")
+add_reels(sid1, d1, ['alive1', 'silent_acc'])
+add_stale_reel(sid1, d1, ['miss_a', 'miss_b'])   # видны сбору, но неактивны — промах
+# skip_acc — ни одной строки в этом снимке вовсе — пропуск, не промах
+
 roster.check(con)
 first_miss = n("SELECT COUNT(*) FROM accounts WHERE misses=1")
 eq('после первой проверки: промахи есть', first_miss > 0, True)
+eq('после первой проверки: ровно два промаха (miss_a, miss_b)', first_miss, 2)
 eq('после первой проверки: выбывших', n("SELECT COUNT(*) FROM accounts WHERE status='dropped'"), 0)
+eq('skip_acc не промахнулась — сбор её не покрыл', n("SELECT misses FROM accounts WHERE pk=?" .replace('?', str(PK['skip_acc']))), 0)
 
-# повторный запуск на том же снимке
+# повторный запуск на том же снимке — ничего не меняет
 roster.check(con)
 eq('повтор на том же снимке не добавил промахов',
    n("SELECT COUNT(*) FROM accounts WHERE misses=1"), first_miss)
 
-# второй снимок: копируем ролики как есть, значит те же 15 снова не наберут свежих
-sid1 = n('SELECT id FROM snapshots ORDER BY taken LIMIT 1')
-# второй снимок через две недели: промах засчитывается не чаще раза в 12 дней,
-# иначе два сбора одной недели выбивают аккаунт за три дня
-con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done,note) VALUES ('2026-09-15',100,0,1,'тест')")
-sid2 = n("SELECT id FROM snapshots WHERE taken='2026-09-15'")
-cols = [d[0] for d in con.execute('SELECT * FROM reels LIMIT 1').description]
-put = ','.join(cols)
-for r in con.execute('SELECT * FROM reels WHERE snapshot_id=?', (sid1,)).fetchall():
-    d = dict(r); d['snapshot_id'] = sid2
-    con.execute(f"INSERT INTO reels ({put}) VALUES ({','.join('?' * len(cols))})",
-                [d[c] for c in cols])
-con.commit()
+# ---- снимок 2, через 12 дней (MISS_GAP_DAYS): miss_a/b мажут второй раз --------
+d2 = d1 + datetime.timedelta(days=roster.MISS_GAP_DAYS)
+con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done) VALUES (?,5,0,1)", (d2.isoformat(),))
+sid2 = n(f"SELECT id FROM snapshots WHERE taken='{d2.isoformat()}'")
+add_reels(sid2, d2, ['alive1', 'silent_acc'])
+add_stale_reel(sid2, d2, ['miss_a', 'miss_b'])   # снова видны, снова неактивны
+
 roster.check(con)
 eq('после второй проверки: выбыли все, кто промахнулся дважды',
    n("SELECT COUNT(*) FROM accounts WHERE status='dropped'"), first_miss)
@@ -52,31 +93,24 @@ eq('у выбывших проставлена дата',
 eq('выбывшие не удалены из базы', n("SELECT COUNT(*) FROM accounts WHERE status='dropped'") > 0, True)
 eq('активных осталось', n("SELECT COUNT(*) FROM accounts WHERE status='active'"), было - first_miss)
 
-# аккаунт, которого нет в снимке, не штрафуется
-pk = n("SELECT pk FROM accounts WHERE status='active' AND misses=0 LIMIT 1")
-con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done,note) VALUES ('2026-09-30',100,0,1,'тест')")
-sid3 = n("SELECT id FROM snapshots WHERE taken='2026-09-30'")
-for r in con.execute('SELECT * FROM reels WHERE snapshot_id=? AND pk_user<>?', (sid1, pk)).fetchall():
-    d = dict(r); d['snapshot_id'] = sid3
-    con.execute(f"INSERT INTO reels ({put}) VALUES ({','.join('?' * len(cols))})",
-                [d[c] for c in cols])
-con.commit()
-before = n(f"SELECT misses FROM accounts WHERE pk={pk}")
+# ---- снимок 3: аккаунт вне снимка не получает промах ----------------------------
+d3 = d2 + datetime.timedelta(days=roster.MISS_GAP_DAYS)
+con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done) VALUES (?,5,0,1)", (d3.isoformat(),))
+sid3 = n(f"SELECT id FROM snapshots WHERE taken='{d3.isoformat()}'")
+add_reels(sid3, d3, ['silent_acc'])          # alive1 в этом снимке отсутствует вовсе
+before = n(f"SELECT misses FROM accounts WHERE pk={PK['alive1']}")
 roster.check(con)
-eq('аккаунт вне снимка не получил промах', n(f"SELECT misses FROM accounts WHERE pk={pk}"), before)
+eq('аккаунт вне снимка не получил промах', n(f"SELECT misses FROM accounts WHERE pk={PK['alive1']}"), before)
 
-# а тот, кто в сборе молчал, промах получает
-pk2 = n("SELECT pk FROM accounts WHERE status='active' AND misses=0 LIMIT 1")
-u2 = con.execute(f"SELECT username FROM accounts WHERE pk={pk2}").fetchone()[0]
-con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done,note) VALUES ('2026-10-20',100,0,1,'тест')")
-sid4 = n("SELECT id FROM snapshots WHERE taken='2026-10-20'")
-for row in con.execute('SELECT * FROM reels WHERE snapshot_id=? AND pk_user<>?', (sid1, pk2)).fetchall():
-    d = dict(row); d['snapshot_id'] = sid4
-    con.execute(f"INSERT INTO reels ({put}) VALUES ({','.join('?' * len(cols))})", [d[c] for c in cols])
-con.commit()
-b2 = n(f"SELECT misses FROM accounts WHERE pk={pk2}")
-roster.check(con, silent_accounts={u2})
-eq('молчавший на сборе аккаунт промах получил', n(f"SELECT misses FROM accounts WHERE pk={pk2}"), b2 + 1)
+# ---- снимок 4: аккаунт, который на сборе "молчал", промах получает -------------
+d4 = d3 + datetime.timedelta(days=roster.MISS_GAP_DAYS)
+con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done) VALUES (?,5,0,1)", (d4.isoformat(),))
+sid4 = n(f"SELECT id FROM snapshots WHERE taken='{d4.isoformat()}'")
+add_reels(sid4, d4, ['alive1'])              # silent_acc в этом снимке тоже без строк,
+                                               # но передана явно как "молчавшая"
+b2 = n(f"SELECT misses FROM accounts WHERE pk={PK['silent_acc']}")
+roster.check(con, silent_accounts={'silent_acc'})
+eq('молчавший на сборе аккаунт промах получил', n(f"SELECT misses FROM accounts WHERE pk={PK['silent_acc']}"), b2 + 1)
 
 con.close(); os.remove(TMP)
 print('\n' + ('ТЕСТ ПРОЙДЕН' if not fail else f'ПРОВАЛЕНО: {fail}'))

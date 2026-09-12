@@ -1,0 +1,232 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-02",
+ "title": "The wrong name in twenty-seven files",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 1956,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 240,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "27 of 266 files",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 240,
+   "duration_frames": 288,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "The page reads finished",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 528,
+   "duration_frames": 348,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Names. Numbers. Said once.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 876,
+   "duration_frames": 372,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Five fields, every time",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1248,
+   "duration_frames": 480,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Check against the recording",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1728,
+   "duration_frames": 228,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Five fields, in the caption",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-02_S00.png",
+   "sha256": "d4096d1af6c2f8a58429ba54ba7c28d2a485c209acaddfc733ba52857bad3f08",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-02_S01.png",
+   "sha256": "6d8bc3fc669e560ff978fe86f6caa98f26cf862f7a9f1781366ec87194e83282",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-02_S02.png",
+   "sha256": "9321d181db0954e35573a43e6ce4662930d8aa3811854797ebdaba365c89c5c8",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-02_S03.png",
+   "sha256": "42db996b40e57aaa9c89bd3c672bf0ecd320a89608a9e1c9acf55ddff3be2512",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-02_S04.png",
+   "sha256": "e9939b795b237d670b20dc285aa6e2b50de8adb8467fd8d778c6b9d9cf597d56",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-02_S05.png",
+   "sha256": "7b495b0d2abd384c69d294ac84fe5dd60462987742c478afbb213a7574642239",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 240,
+   "text": "We ran two hundred and sixty-six recordings through a machine. Twenty-seven came back with the wrong product name in them."
+  },
+  {
+   "from_frame": 240,
+   "duration_frames": 288,
+   "text": "You type up a call, forward the summary, and somebody acts on it. The page reads finished, so nobody rereads it. Nothing is underlined."
+  },
+  {
+   "from_frame": 528,
+   "duration_frames": 348,
+   "text": "It does not fail at random. It fails on the parts that carry no context: proper nouns, figures, and anything said only once. The sentences around them stay clean."
+  },
+  {
+   "from_frame": 876,
+   "duration_frames": 372,
+   "text": "So the check is small. Five fields, the same five every time. Names, numbers, dates, decisions, and who owes what. Here it is running against one of the bad files. There."
+  },
+  {
+   "from_frame": 1248,
+   "duration_frames": 480,
+   "text": "And here is what it does not catch on its own. When the machine writes a name as another real word every single time, the page still reads clean. So check the five against the recording, not against the page."
+  },
+  {
+   "from_frame": 1728,
+   "duration_frames": 228,
+   "text": "The five fields are in the caption, not behind a comment. Send this to whoever types up your calls."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

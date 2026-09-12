@@ -1,0 +1,418 @@
+{
+  "card_id": "C-2026-09-12-10",
+  "claims": [
+    {
+      "source": "data/radar.db `cards`, grouped by week; reports/audit/04-existing-cards-review.md §A confirms 23 unique cards after deduplication across three databases.",
+      "state": "OBSERVED",
+      "text": "Our weekly run produced 23 planning cards across three weeks: five on 3 September, nine on 7 September and nine on 10 September 2026."
+    },
+    {
+      "source": "data/radar.db `our_posts` - 0 rows, and `our_metrics` - 0 rows; reports/audit/04-existing-cards-review.md - 'Zero of these cards have ever been shot or published'.",
+      "state": "OBSERVED",
+      "text": "None of the 23 has been shot or published: the table that would record a produced reel has zero rows."
+    },
+    {
+      "source": "data/radar.db `cards` status counts: 9 struck out, 5 proposed, 9 draft.",
+      "state": "OBSERVED",
+      "text": "A person struck out 9 of the 23; 14 were developed into a full angle and hook."
+    },
+    {
+      "source": "data/radar.db `cards` - three codes appear twice across weeks; reports/audit/04-existing-cards-review.md classifies two of them as 'recycled, then cut without a new angle'.",
+      "state": "OBSERVED",
+      "text": "Three source reels were proposed a second time in a later week, because the first proposal was never marked as used."
+    },
+    {
+      "source": "reports/audit/03-server-runtime-hiker.md, run 2026-09-10 07:00-08:08: 'прогон занял 65 мин, потрачено сегодня $2.60'. The log records a duration for the run as a whole and for no single step.",
+      "state": "OBSERVED",
+      "text": "The whole weekly machine run took sixty-five minutes on 10 September - collection, scoring, shortlisting and card generation together. No individual step has a recorded duration."
+    },
+    {
+      "source": "Never timed. The script says it is the one step that waits for a person and gives its outcome (9 of 23), not its duration; no minutes figure for it appears on screen.",
+      "state": "MISSING",
+      "text": "How long the strike-out step takes a person."
+    },
+    {
+      "source": "We take apart one process, ours. The generalisation is offered as something to test on last week's list, never as a finding about anyone else.",
+      "state": "MISSING",
+      "text": "That the same failure shape exists in the viewer's own weekly ritual."
+    },
+    {
+      "source": "We are adding the owner column to our own list this week and have no result yet; the reel says what we are changing, not what it fixed.",
+      "state": "TO_MEASURE",
+      "text": "That naming an owner on every line makes the handover work."
+    },
+    {
+      "source": "Not asserted. They run without a person, which is a different statement from running well; their output quality is audited elsewhere and is not this reel's subject.",
+      "state": "MISSING",
+      "text": "That the four automated steps are working correctly."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Filmed-screen scroll of our own plan table, twenty-three rows over three weeks with the produced column empty",
+      "Screen recording of the produced-items table showing zero rows, then the plan table filtered to the three repeated source codes",
+      "Five-row step stack rendered from design/tokens/tokens.json, with a figure column",
+      "Presenter A-roll, one continuous take, one location, banner plate fixed"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 40px, Paper on an Ink plate with 24px padding, bottom safe zone, two lines maximum. One persistent Ink banner plate in Saira SemiCondensed Black at the top for the whole reel. Step names and counts are set in IBM Plex Mono Medium as labels. No emoji on screen.",
+    "cut_timing": "Six sections, three visible cuts. The two graphic scenes are one continuous build of the same stack; the presenter material at the end is one unbroken take. There is no speaker change, which is the only cut PRODUCTION.md allows.",
+    "emphasis": "Oxide appears exactly once, on the fifth row in the payoff scene. The four working steps are Graphite; nothing in the reel is coloured to look like a success.",
+    "motion": "Linear easing only, per design/rules/motion.md. Rows reveal, figures do not count up. No bounce, no gradients, no rounded corners, no centred text.",
+    "zooms": "None. The stack is read, not zoomed, and the empty table is held rather than pushed into."
+  },
+  "format": "M2 Teardown",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "This is what our Monday produces. Twenty-three of these in three weeks. Not one of them was ever made.",
+      "type": "demo_first"
+    },
+    {
+      "is_question": false,
+      "text": "Our weekly planning run has produced twenty-three plans in three weeks and the table that records a finished one is empty.",
+      "type": "result_first"
+    },
+    {
+      "is_question": true,
+      "text": "Where does your Monday list actually stop? Ours stops at the step nobody has a name for.",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-19",
+  "references": [
+    {
+      "code": "DYuivWzSj5k",
+      "creator_median_play": 3421.0,
+      "function": "hook",
+      "play": 113697,
+      "reason": "50.8 shares per 1 000 - fourth-highest in the 40-reel pool, where 58.4, 53.4 and 52.9 are higher - from 59 spoken words, no tool, no step and no number, which makes it the purest available test of an opening that is nothing but a recognisable morning. 32.2x lift on a 3 421 median, so the multiplier is a curiosity and the forwarding rate is the finding. Its contact sheet is a single held DATA_VISUAL: an animated pipeline with live counters accumulating under each node.",
+      "save_rate": 0.04714,
+      "share_rate": 0.05082,
+      "transformed_how": "Borrowed: the recognisable-weekday frame as the entry point to a process teardown, and the node-with-a-counter treatment. Changed: the direction is reversed - we open on the artefact our Monday actually produced rather than on an imagined better one, because openings spent on the audience rather than the subject carry median robust_z 0.67 against 1.36 (p=0.002); and our last counter stays at zero, where theirs climbs. Its single held state and its comment gate are not borrowed.",
+      "url": "https://www.instagram.com/reel/DYuivWzSj5k/",
+      "useful_frame": {
+        "scene_id": "DYuivWzSj5k-S00",
+        "what": "one held pipeline diagram for the entire runtime, six named nodes in a row with live counters climbing underneath them"
+      },
+      "useful_transcript": {
+        "beat_id": "DYuivWzSj5k-B0",
+        "quote": "Think, when you wake up in the morning, the clients are already interested in your service."
+      },
+      "username": "aiforbusinesses247",
+      "view_lift": 32.24
+    },
+    {
+      "code": "DZLDk9ySi-7",
+      "creator_median_play": 3421.0,
+      "function": "pain",
+      "play": 179093,
+      "reason": "The corpus's best example of pain named as acts rather than as a condition, delivered as a four-line list at 26-33s: every line is a thing a person does with their hands, which is the framing the demand analysis measures as the strong one (manual_repetition median view_lift 6.94 against chaos_no_process 0.87). 41.9 shares and 45.4 saves per 1 000. Its contact sheet gives us the exact stacked-step grammar: a vertical list of named steps revealed one at a time, each with its own count on the right.",
+      "save_rate": 0.04539,
+      "share_rate": 0.04191,
+      "transformed_how": "Borrowed: the pain list written as acts, and the stacked-step-with-a-count layout. Changed: our list is the five steps of our own Monday with the real counts attached, it sits in the first quarter as a friction statement rather than late as a benefit stack, and the counts are measurements rather than an animation. The author median is 3 421, so its 51x multiplier is not a finding and is not cited as one. Different function from this reel's use in H-11.",
+      "url": "https://www.instagram.com/reel/DZLDk9ySi-7/",
+      "useful_frame": {
+        "scene_id": "DZLDk9ySi-7-S01",
+        "what": "vertical stack of named workflow steps revealed one row at a time, each row carrying its own live count on the right-hand side"
+      },
+      "useful_transcript": {
+        "beat_id": "DZLDk9ySi-7-B3",
+        "quote": "No manual data scraping No cold outreach headache No manually demo websites No hours waste to find leads"
+      },
+      "username": "aiforbusinesses247",
+      "view_lift": 51.35
+    },
+    {
+      "code": "Db9MT-axxcO",
+      "creator_median_play": 14448.0,
+      "function": "rhythm",
+      "play": 37791,
+      "reason": "Result at 3 seconds, three steps in the next thirty, ask at forty-three - simultaneously a story and a procedure, which is what a process teardown has to be. Third-best combined share and save rates in the analysis-ready corpus (47.9 and 68.9 per 1 000; DbO4zvJR1k8 at 140.3 and Dbi-yxNgrhG at 117.3 are higher) on a lift of only 1.62x, so the forwarding is the signal and the reach is not. Its contact sheet shows the artefact held up in hand as a phone screen, with the presenter's hand still in frame, rather than cut to as a clean insert.",
+      "save_rate": 0.06885,
+      "share_rate": 0.0479,
+      "transformed_how": "Borrowed: the beat clock - the outcome inside the first five seconds, the steps in a single uninterrupted run, the ask in the last tenth - and the artefact-in-hand framing. Changed: our outcome is the unflattering one, twenty-three plans and nothing produced, and we ask no question in the hook, because question hooks sit at 0.0054 share and 0.0198 save against the corpus medians. Different function from this reel's use in H-05.",
+      "url": "https://www.instagram.com/reel/Db9MT-axxcO/",
+      "useful_frame": {
+        "scene_id": "Db9MT-axxcO-S00",
+        "what": "the outcome artefact held up in hand as a real screen with the hand still in frame, alternating with the face as the steps are named"
+      },
+      "useful_transcript": {
+        "beat_id": "Db9MT-axxcO-B0",
+        "quote": "What happens when you ask Claw to apply to 500 jobs for you? I tried this and I landed six interviews in 24 hours. Here's what I would do if I was looking for a job."
+      },
+      "username": "shrug.manny",
+      "view_lift": 1.62
+    },
+    {
+      "code": "DbbA7wwTIZ8",
+      "creator_median_play": 13009.0,
+      "function": "cta",
+      "play": 294197,
+      "reason": "Narrows an enormous market claim down to one industry, one job, one business and one month, which is the best next-action shape in the pool: the ask occupies the final fourteen seconds and bounds the action on four axes at once. 24.6 shares per 1 000, 21.6x lift, robust_z 5.0 clipped. Its contact sheet shows the closing delivered over plain black cards carrying one bold word at a time rather than over the face.",
+      "save_rate": 0.03051,
+      "share_rate": 0.02458,
+      "transformed_how": "Borrowed: bounding the next action on several axes at once so it is small enough to do this week. Changed: ours is one action on one artefact the viewer already has - write the owner's name next to each item on last week's list and count the blanks - and the comment keyword that follows it in the original is dropped. We also do not borrow its stock b-roll or its third-party claim, which our own analysis records as contradicted by the reel's own caption.",
+      "url": "https://www.instagram.com/reel/DbbA7wwTIZ8/",
+      "useful_frame": {
+        "scene_id": "DbbA7wwTIZ8-S04",
+        "what": "the next action is delivered over plain black text cards carrying one bold word each, not over stock footage or a face"
+      },
+      "useful_transcript": {
+        "beat_id": "DbbA7wwTIZ8-B4",
+        "quote": "So pick one industry you already understand. Find that one job nobody wants to do and build that for one local business this month."
+      },
+      "username": "heystevetan",
+      "view_lift": 21.61
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-10.json",
+  "review": {
+    "findings": [
+      "[evidence] The script said 'Collecting took the machine sixty-five minutes'. reports/audit/03-server-runtime-hiker.md times the run 2026-09-10 07:00-08:08 as 65 minutes for all thirteen steps together and records no per-step duration; 'Scoring is instant' had no source at all → the line is now 'The whole machine run took sixty-five minutes. Collecting, scoring, shortlisting, all of it.' The claim and the S02 overlay, visual and editing note were changed with it, so the figure is never attached to the collect row alone. Script goes to version 2; 166 words, 66.4 s.",
+      "[evidence] Reference DYuivWzSj5k was called 'the second-highest share rate in the pool'. It is fourth: Dbi-yxNgrhG 58.4, Dbd7VDgP9PR 53.4 and DbO4zvJR1k8 52.9 per 1 000 are higher in the same 40-reel pool → corrected in the reference reason and in traceability.",
+      "[evidence] Reference Db9MT-axxcO was called 'best combined share and save rates in the corpus'. It is third, and the card's own source (06-creators-and-references §6, row 32) already names the two higher rows → corrected to 'third-best', with the two higher reels named.",
+      "[evidence] '1.62x its author's median' misreads the lift convention: view_lift is play/median − 1, so 1.62 lift is 2.62x the author's median → reworded to 'on a lift of only 1.62x' here and 'its 51.4x lift' for DZLDk9ySi-7. The point being made - that the reach multiplier is not the finding - is unchanged.",
+      "[evidence] The counting that carries the reel reproduces exactly from data/radar.db: 23 cards across three weeks (5 on 2026-09-03, 9 on 09-07, 9 on 09-10), 9 struck out and 14 developed, our_posts and our_metrics both empty, and three source codes proposed twice (DcvBtiNtbYO, Dco1mOJzZ4L, DcwCCgivcIQ) → left.",
+      "[evidence] The writer's decision to use 23 rather than the hypothesis' 33 is confirmed: reports/audit/04-existing-cards-review.md reaches 33 only by adding a separate ten-card lane to our 23 → left.",
+      "[evidence] All four reference metric sets re-derived from data/radar.db and all four function tags match data/analysis/hypothesis_refs.json; the four quotes are verbatim from the beat ids given; the script shares no five-word sequence with any of the four transcripts → left.",
+      "[positioning] The Teardown pass criteria are met: a named process with a named owner in shot ('the one step that waits for one of us') and a reason to forward (the count of zero). Our own process is the only Teardown source available today per RULES.md §2 → left.",
+      "[hook] Opens on the artefact rather than on a recognisable morning, reversing the hook reference's direction, because openings spent on the audience carry median robust_z 0.67 against 1.36, p=0.002 (I-06). Three candidates, one question, first one used, 19 words / 7.6 s → left.",
+      "[positioning] No split screen, no comment gate, no stock footage, no duration invented for the human step (recorded MISSING), no claim that naming an owner fixes anything (recorded TO_MEASURE) → left.",
+      "[timing] Recomputed after the edit: 166 words, 66.4 s at 2.5 wps, storyboard contiguous 0.0-66.4 s, no scene under 1.5 s, every overlay ≤ 7 words → passes.",
+      "[scheduling] Runs on the same Monday as C-2026-09-12-06, which describes the same pipeline as twenty-five named stages while this card describes it as five steps. Both are honest at their own level of description, but they should not be published in the same week.",
+      "[schema] python3 -m engine.cards_v2 validate → 0 errors, 0 warnings after the edits."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the discomfort of recognising your own Monday, and the relief of being handed one column to add",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 7.6,
+        "text": "This is what our Monday produces. Twenty-three of these in three weeks. Not one of them was ever made.",
+        "words": 19
+      },
+      {
+        "role": "setup",
+        "seconds": 6.8,
+        "text": "Five steps. Collect, score, shortlist, strike out, hand over. Four of them run without anyone touching anything.",
+        "words": 17
+      },
+      {
+        "role": "explanation",
+        "seconds": 12.8,
+        "text": "The whole machine run took sixty-five minutes. Collecting, scoring, shortlisting, all of it. Striking out is the one step that waits for one of us, and it removed nine of the twenty-three.",
+        "words": 32
+      },
+      {
+        "role": "proof",
+        "seconds": 17.2,
+        "text": "Then the fifth step. Hand over. The table that would record a made item has nothing in it at all. And three of the twenty-three are the same source proposed again a week later, because nobody had marked the first one as used.",
+        "words": 43
+      },
+      {
+        "role": "payoff",
+        "seconds": 13.2,
+        "text": "The process is not broken where the money went. It is broken at the step where a plan is supposed to become somebody's job, and that step has no name and no owner.",
+        "words": 33
+      },
+      {
+        "role": "cta",
+        "seconds": 8.8,
+        "text": "Take last week's list, write a name next to every line, and count the blanks. Send this to whoever runs your Monday.",
+        "words": 22
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "plain, exact, willing to be the example; a count read out rather than a confession",
+    "total_s": 66.4,
+    "total_words": 166,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-10_S00.png",
+      "asset_status": "template",
+      "editing": "Open on the artefact, not the face, and let it keep scrolling past the end of the sentence. The Ink banner plate carrying the promise appears on frame one and holds for the whole reel.",
+      "end_s": 7.6,
+      "frame_type": "SCREENSHOT",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "23 plans. Three weeks.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "This is what our Monday produces. Twenty-three of these in three weeks. Not one of them was ever made.",
+      "source_inspiration": [
+        {
+          "code": "Db9MT-axxcO",
+          "scene_id": "Db9MT-axxcO-S00",
+          "why": "the outcome artefact is shown in the first seconds as a real screen, hand still in frame"
+        },
+        {
+          "code": "DYuivWzSj5k",
+          "scene_id": "DYuivWzSj5k-S00",
+          "why": "the process artefact carries the opening instead of a presenter"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full-frame, filmed off a real screen and scrolling: our own plan table, twenty-three rows across three weeks, every row filled in and the produced column empty on every one of them. No presenter."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-10_S01.png",
+      "asset_status": "template",
+      "editing": "One row per named step, on the word. Never centred; left-aligned on the grid with the 24px indent, per design/rules/typography.md.",
+      "end_s": 14.4,
+      "frame_type": "MOTION_GRAPHIC",
+      "idx": 1,
+      "layout": "motion_graphic",
+      "overlay_text": "Collect. Score. Shortlist. Strike. Hand over.",
+      "scene_id": "S01",
+      "script_role": "setup",
+      "script_text": "Five steps. Collect, score, shortlist, strike out, hand over. Four of them run without anyone touching anything.",
+      "source_inspiration": [
+        {
+          "code": "DZLDk9ySi-7",
+          "scene_id": "DZLDk9ySi-7-S01",
+          "why": "a vertical stack of named steps revealed one row at a time, each with room for its own count"
+        }
+      ],
+      "start_s": 7.6,
+      "transition": "hard_cut",
+      "visual": "Full-frame vertical stack of the five step names, revealed one row at a time, left-aligned on the grid. The first four rows are set in Graphite; the fifth stays empty for now."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-10_S02.png",
+      "asset_status": "template",
+      "editing": "Figures do not count up. They appear at their final value, because they are measurements and an animated counter would read as a dramatisation. The sixty-five minutes is bracketed across the four automated rows, never against 'collect' alone: the log times the run, not the step.",
+      "end_s": 27.2,
+      "frame_type": "MOTION_GRAPHIC",
+      "idx": 2,
+      "layout": "motion_graphic",
+      "overlay_text": "65 minutes. Nine struck.",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "The whole machine run took sixty-five minutes. Collecting, scoring, shortlisting, all of it. Striking out is the one step that waits for one of us, and it removed nine of the twenty-three.",
+      "source_inspiration": [
+        {
+          "code": "DYuivWzSj5k",
+          "scene_id": "DYuivWzSj5k-S00",
+          "why": "a named node with its own counter underneath it, read in sequence"
+        },
+        {
+          "code": "DZLDk9ySi-7",
+          "scene_id": "DZLDk9ySi-7-S01",
+          "why": "each step carries its count on the right rather than in a separate summary"
+        }
+      ],
+      "start_s": 14.4,
+      "transition": "overlay_reveal",
+      "visual": "The same stack. The four automated rows are bracketed together against one figure - sixty-five minutes for the whole machine run - and the strike-out row carries nine struck of twenty-three. The fifth row's figure column is still blank."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-10_S03.png",
+      "asset_status": "template",
+      "editing": "Hold on the empty table for a full two seconds before the filter is applied. The emptiness is the evidence and it needs the time.",
+      "end_s": 44.4,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "Zero rows. Three repeats.",
+      "scene_id": "S03",
+      "script_role": "proof",
+      "script_text": "Then the fifth step. Hand over. The table that would record a made item has nothing in it at all. And three of the twenty-three are the same source proposed again a week later, because nobody had marked the first one as used.",
+      "source_inspiration": [
+        {
+          "code": "Db9MT-axxcO",
+          "scene_id": "Db9MT-axxcO-S02",
+          "why": "the alternation between the artefact and the interpretation carries a procedure without losing the story"
+        }
+      ],
+      "start_s": 27.2,
+      "transition": "hard_cut",
+      "visual": "Cut to the real thing: the produced-items table, open and empty, zero rows, and then the plan table filtered to the three source codes that appear twice with their two week dates side by side in the same column."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-10_S04.png",
+      "asset_status": "template",
+      "editing": "First appearance of the presenter. Oxide is used here and nowhere else in the reel: the fifth row is the thing that is broken.",
+      "end_s": 57.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 4,
+      "layout": "a_roll",
+      "overlay_text": "Broken at the handover",
+      "scene_id": "S04",
+      "script_role": "payoff",
+      "script_text": "The process is not broken where the money went. It is broken at the step where a plan is supposed to become somebody's job, and that step has no name and no owner.",
+      "source_inspiration": [
+        {
+          "code": "Db9MT-axxcO",
+          "scene_id": "Db9MT-axxcO-S04",
+          "why": "the reel returns to the face to say what the artefact meant, in the last fifth"
+        }
+      ],
+      "start_s": 44.4,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, one location, banner plate held above him. The five-row stack returns as a small inset with the fifth row highlighted in Oxide and its figure column still blank."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-10_S05.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "One ask only, on one artefact the viewer already has. Hold the last frame for one second before the cut.",
+      "end_s": 66.4,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "A name on every line",
+      "scene_id": "S05",
+      "script_role": "cta",
+      "script_text": "Take last week's list, write a name next to every line, and count the blanks. Send this to whoever runs your Monday.",
+      "source_inspiration": [
+        {
+          "code": "DbbA7wwTIZ8",
+          "scene_id": "DbbA7wwTIZ8-S04",
+          "why": "the next action is bounded tightly enough to be done this week, and delivered plainly"
+        }
+      ],
+      "start_s": 57.6,
+      "transition": "none",
+      "visual": "Same take, no reframe. Michael holds still for the closing line."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company responsible for one repeated process. Specifically whoever runs the weekly planning ritual.",
+    "concept": "We take our own weekly planning ritual apart step by step on screen, with the artefact each step produces and the real count beside it, and show that the leak is not in any of the four automated steps but in the fifth - the handover, which has no name, no owner and, in three weeks, nothing recorded against it at all.",
+    "filter": {
+      "ai_boundary": "The machine can collect, score, shortlist and draft. Deciding which items are real and who owns each one stays with a person - in our week that is one of us on Monday - and no step downstream may begin without that name attached.",
+      "friction": "All the effort goes into producing the list, and the list is not where the process fails. It fails at the handover, where no name is attached, so nothing downstream can start and nobody notices that nothing did.",
+      "next_action": "Take last week's list, write the owner's name next to every item, and count how many are blank.",
+      "process": "The recurring weekly planning meeting or run that produces a list of things to do - the Monday list, the sprint board, the shortlist of jobs for the week - in any business where the same ritual repeats and produces the same kind of list."
+    },
+    "objective": "Get one viewer to take last week's list, write an owner's name next to every line, and count how many lines come back blank.",
+    "pain": "manual_repetition",
+    "positioning": "builder",
+    "promise": "A five-step teardown of a weekly ritual, with the real counts, and the exact step where a plan stops being anybody's job.",
+    "rationale": "The corpus states a problem in only 64 of 264 reels and never takes apart a process the author runs (I-17). RULES.md §2 names our own processes as the only Teardown source available from day one, and the format's second pass criterion - a reason to forward - is carried by the count itself: twenty-three plans, nothing produced. The reel opens on the artefact rather than on a face, because openings spent on the audience carry median robust_z 0.67 against 1.36 (I-06)."
+  },
+  "title": "Twenty-three plans, nothing made",
+  "traceability": {
+    "evidence_summary": "Every number is our own and reproducible from data/radar.db: 23 planning cards across three weeks (5 / 9 / 9 on 3, 7 and 10 September 2026), a person struck out 9 of them, three source reels came back a second time in a later week, the whole machine run took 65 minutes, and the table that would record a produced reel has zero rows. That last figure is the reason to forward it, which is the Teardown format's second pass criterion. The corpus states a problem in only 64 of 264 reels and never takes apart a process the author runs (I-17), so a step-by-step of the author's own week with the failure point named is unrepresented. The references contribute shape only: DYuivWzSj5k (50.8 shares/1k, fourth in the 40-reel pool) the recognisable-weekday entry and the node-with-a-counter treatment, DZLDk9ySi-7 (41.9 shares, 45.4 saves/1k) the pain-as-acts list and the stacked-step layout, Db9MT-axxcO (47.9 shares and 68.9 saves per 1 000, third-best combined pair in the analysis-ready corpus, on a lift of only 1.62x) the beat clock and the artefact-in-hand framing, DbbA7wwTIZ8 the tightly bounded next action.",
+    "hypothesis": "H-19",
+    "insights": [
+      "I-17",
+      "I-09",
+      "I-08",
+      "I-15",
+      "I-13",
+      "I-29",
+      "I-05"
+    ],
+    "original_synthesis": "The process is ours, we may show it without anyone's permission - which RULES.md §2 names as the only Teardown source available from day one - and the finding is unflattering: the four steps we automated all work, and the one that does not is the step nobody built anything for. The five-step map with a real count against each step, ending on a count of zero, is ours and appears in no reference.",
+    "why_better_than_generic": "A generic process teardown would find the leak in the manual step and sell automation for it. This one automates four steps successfully and still produces nothing, which locates the failure in the handover instead - the part no tool is being sold for. It also refuses the two numbers it does not have: how long the human step takes, and whether naming an owner fixes anything."
+  }
+}

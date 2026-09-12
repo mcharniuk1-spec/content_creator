@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://m2radar.local/content-engine/render-record.schema.json",
+  "title": "RenderRecord",
+  "description": "One rendered/generated video artifact (engine/SPEC.md Phase 3; M2Radar_Content_Engine_Full_Execution_Prompt_v4.md §83). Written by engine.storage.Storage.record_render() to data/renders/<run_id>-<card_id>.json and, guarded, to the render_records SQL table engine/storage.py creates. Supabase is the canonical store for storage_provider='supabase'; storage_provider='local' is the LocalStorage fallback used in development and tests.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id", "card_id", "script_version", "storyboard_version", "render_version",
+    "source_take_ids", "final_object_key", "thumbnail_key", "duration_s",
+    "render_metadata", "qa_status", "storage_provider", "created_at"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string", "minLength": 1,
+      "description": "engine.state run_id (SPEC §1: YYYY-MM-DD_HHMM-<6 hex>) of the run that produced this render."
+    },
+    "card_id": {
+      "type": "string", "minLength": 1,
+      "description": "cards_v2.card_id this render is for."
+    },
+    "script_version": {
+      "type": "integer", "minimum": 1,
+      "description": "card.script.version bound into this render — see engine/cards_v2.py's script_versions log."
+    },
+    "storyboard_version": {
+      "type": "integer", "minimum": 1,
+      "description": "Storyboard revision bound into this render. cards_v2 does not version the storyboard separately from the card today; this module treats it as 1 unless a future card format adds explicit storyboard versioning."
+    },
+    "render_version": {
+      "type": "integer", "minimum": 1,
+      "description": "1-based counter of renders for this (run_id, card_id) pair; lets a card be re-rendered without overwriting an earlier reviewed export."
+    },
+    "source_take_ids": {
+      "type": "array", "items": {"type": "string", "minLength": 1},
+      "description": "Identifiers of the supplied takes used, formatted '<scene_id>#<take>' (e.g. 'S01#2'), one per storyboard scene bound to real footage. Empty array is valid for a previs-only render with no owner footage yet."
+    },
+    "final_object_key": {
+      "type": "string", "minLength": 1,
+      "description": "Key/path the video was stored under (Storage.put()'s return value) — a relative path for LocalStorage, a 'bucket/key' string for SupabaseStorage."
+    },
+    "thumbnail_key": {
+      "type": ["string", "null"],
+      "description": "Key/path of a stored thumbnail image, or null when none was generated."
+    },
+    "duration_s": {
+      "type": "number", "exclusiveMinimum": 0,
+      "description": "Final rendered video duration in seconds."
+    },
+    "render_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fps", "width", "height", "codec", "remotion_version", "edl_sha256"],
+      "properties": {
+        "fps": {"type": "integer", "minimum": 1},
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1},
+        "codec": {"type": "string", "minLength": 1},
+        "remotion_version": {"type": "string", "minLength": 1},
+        "edl_sha256": {
+          "type": "string", "pattern": "^[0-9a-f]{64}$",
+          "description": "sha256 of the exact EDL JSON file rendered — the same field render.mjs's own receipt writes as edl_sha256, so a render_records row and a render.mjs receipt can be cross-checked byte-for-byte."
+        }
+      }
+    },
+    "qa_status": {
+      "enum": ["PENDING", "OK", "FAILED"],
+      "description": "Quality-check outcome per cards/README.md/PRODUCTION_PIPELINE.md's QA step. PENDING immediately after render.mjs produces a review export; OK/FAILED only after a human (or a documented automated check) records a verdict."
+    },
+    "storage_provider": {
+      "enum": ["supabase", "local"],
+      "description": "Which Storage implementation actually holds final_object_key. 'supabase' is canonical for anything meant to be reviewed by someone other than the operator's own machine; 'local' is the LocalStorage fallback."
+    },
+    "created_at": {
+      "type": "string", "minLength": 1,
+      "description": "ISO-8601 UTC timestamp (engine.db_util.now() format), when this record was written."
+    }
+  }
+}

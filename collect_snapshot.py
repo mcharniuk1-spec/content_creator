@@ -11,11 +11,29 @@
 Ссылки на видео живут часы, поэтому сразу после сбора должен идти разбор — этот порядок
 зашит в run.py, руками цепочку лучше не собирать.
 """
-import datetime, os, pathlib, sys
+import datetime, json, os, pathlib, sqlite3, sys, uuid
 from db import connect, safe_code
+from lib.hiker import PRICE   # единственный источник тарифа, см. lib/hiker.py
 
 PAGES = 1
-PRICE = 0.02
+
+
+def _table_exists(con, name):
+    """engine/schema.py (другой владелец) может ещё не существовать в этой ветке —
+    провенанс тогда просто не пишется, старый пайплайн не ломается."""
+    try:
+        return con.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (name,)
+        ).fetchone() is not None
+    except sqlite3.OperationalError:
+        return False
+
+
+def _column_exists(con, table, col):
+    try:
+        return col in {r[1] for r in con.execute(f"PRAGMA table_info({table})")}
+    except sqlite3.OperationalError:
+        return False
 
 
 def balance():
@@ -64,22 +82,56 @@ def run(con, today=None):
 
     u0 = hiker._units          # счётчик накопительный за процесс: пишем разницу, не абсолют
     total, miss, bad = 0, [], []
+
+    # Провенанс: engine/schema.py (владелец — другой агент) добавляет таблицу fetch_log
+    # и колонку reels.fetch_id, но может ещё не существовать в этой ветке. Если их нет —
+    # просто не пишем, старый пайплайн работает как раньше. hiker.last_fetch_meta может
+    # отсутствовать у замоканного в тестах модуля hiker — тогда тоже молча пропускаем.
+    has_fetch_log = _table_exists(con, 'fetch_log')
+    has_fetch_id_col = _column_exists(con, 'reels', 'fetch_id')
+    get_meta = getattr(hiker, 'last_fetch_meta', None)
+    reel_cols = ('snapshot_id,code,pk_user,username,ts,kind,play,likes,comm,resh,save,dur,cap,followers'
+                 + (',fetch_id' if has_fetch_id_col else ''))
+    reel_qs = ','.join(['?'] * (15 if has_fetch_id_col else 14))
+
     try:
         for i, a in enumerate(accounts, 1):
             raw = hiker.clips(a['pk'], pages=PAGES)
             if not raw:
                 miss.append(a['username']); continue
+
+            fetch_id = None
+            if has_fetch_log and get_meta:
+                try:
+                    meta = get_meta()
+                except Exception:
+                    meta = None
+                if meta:
+                    fetch_id = uuid.uuid4().hex
+                    try:
+                        con.execute("""INSERT INTO fetch_log
+                            (fetch_id,provider,endpoint,params_json,fetched_at,http_status,
+                             units,price,cache_path,sha256,snapshot_id,run_id,note)
+                            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                            (fetch_id, 'hiker', meta.get('endpoint'),
+                             json.dumps(meta.get('params') or {}, ensure_ascii=False),
+                             meta.get('fetched_at'), meta.get('http_status'), meta.get('units'),
+                             PRICE, meta.get('cache_path'), meta.get('sha256'), sid, None,
+                             f"collect_snapshot account={a['username']}"))
+                    except sqlite3.OperationalError:
+                        fetch_id = None
+
             for m in raw:
                 r = hiker.row(m)
                 if not safe_code(r.get('code')):      # кривой код дальше не идёт никуда
                     bad.append(r.get('code'))
                     continue
-                con.execute("""INSERT OR REPLACE INTO reels
-                    (snapshot_id,code,pk_user,username,ts,kind,play,likes,comm,resh,save,dur,cap,followers)
-                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
-                    (sid, r['code'], a['pk'], a['username'], r['ts'], r['kind'], r['play'],
-                     r['like'], r['comm'], r['resh'], r['save'], r['dur'], r['cap'],
-                     a['follower_count']))
+                vals = (sid, r['code'], a['pk'], a['username'], r['ts'], r['kind'], r['play'],
+                        r['like'], r['comm'], r['resh'], r['save'], r['dur'], r['cap'],
+                        a['follower_count'])
+                if has_fetch_id_col:
+                    vals = vals + (fetch_id,)
+                con.execute(f"INSERT OR REPLACE INTO reels ({reel_cols}) VALUES ({reel_qs})", vals)
                 total += 1
             if i % 25 == 0:
                 con.commit()

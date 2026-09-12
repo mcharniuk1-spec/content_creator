@@ -1,0 +1,436 @@
+{
+  "card_id": "C-2026-09-12-06",
+  "claims": [
+    {
+      "source": "engine/SPEC.md §3, the canonical stage list: DISCOVERED through COMPLETED, twenty-five names.",
+      "state": "OBSERVED",
+      "text": "Our own pipeline has twenty-five named processing stages between a video being discovered and a run completing."
+    },
+    {
+      "source": "data/radar.db `cards`: 23 rows over weeks 2026-09-03 / 09-07 / 09-10, of which 9 carry the struck-out status; reports/audit/04-existing-cards-review.md §A.",
+      "state": "OBSERVED",
+      "text": "Across three weeks that pipeline produced 23 plans and a person struck out 9 of them."
+    },
+    {
+      "source": "engine/SPEC.md §0.3 - the production default path is local; the paid provider is OPTIONAL_PROVIDER only.",
+      "state": "OBSERVED",
+      "text": "The paid provider in our pipeline is registered but switched off, and the default path needs no credentials."
+    },
+    {
+      "source": "No footage exists yet. The card must not be shot without it; asserting the behaviour without the recording would break hard rule 2.",
+      "state": "PLANNED",
+      "text": "The two runs shown on screen - the same task with send on and with hold on - are recorded on the shoot day in a tool the presenters already use."
+    },
+    {
+      "source": "The stage list does not name it. It happens between card generation and script writing and is not recorded as a stage, so the script says 'one place where it waits for a person' rather than naming a stage.",
+      "state": "MISSING",
+      "text": "That the human strike-out step is formally one of the twenty-five named stages."
+    },
+    {
+      "source": "We have not measured error rates with and without a gate, in our own pipeline or anyone else's. The reel gives the viewer a question to ask, not a measured effect.",
+      "state": "TO_MEASURE",
+      "text": "That a hold-and-release setting prevents mistakes from reaching customers."
+    },
+    {
+      "source": "No vendor is named and no comparison is claimed anywhere in the script.",
+      "state": "MISSING",
+      "text": "Which named tools do and do not have the setting."
+    },
+    {
+      "source": "reports/analysis/08-hypotheses.md H-04 novelty note over the 266 analysis-ready reels; the single instance is DczDlj4qQjI beat B3. Used in the card rationale only, never spoken on screen.",
+      "state": "OBSERVED",
+      "text": "That the corpus contains only one reel stating an AI boundary out loud."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Filmed-monitor shot of a real draft queue with an untouched release control and a name in the owner column",
+      "Screen recording of one small task run twice, full-frame and sequential: send on, then hold on",
+      "Screenshot of our own plan table, twenty-three rows over three weeks with the nine struck rows greyed",
+      "Presenter A-roll, one continuous take, one location, banner plate fixed"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 40px, Paper on an Ink plate with 24px padding, bottom safe zone, two lines maximum. One persistent Ink banner plate in Saira SemiCondensed Black at the top for the whole reel. No emoji on screen.",
+    "cut_timing": "Seven sections, four visible cuts, each a full-frame screen insert replacing the presenter or the presenter returning. The presenter material is one continuous take; there is no speaker change, and a speaker change is the only cut PRODUCTION.md allows.",
+    "emphasis": "The word 'hold' is the only word that ever takes a plate of its own. Oxide is reserved for the sent run in the proof scene, because that is the state we are warning about; the held run is Signal.",
+    "motion": "Linear easing only, per design/rules/motion.md. No bounce, no gradients, no rounded corners, no centred text.",
+    "zooms": "One ui_zoom onto the untouched release button in the hook. No zoom on any A-roll scene."
+  },
+  "format": "M2 Radar",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "Watch this reply sit here. It is written, it is right, and it goes nowhere until somebody presses the button.",
+      "type": "demo_first"
+    },
+    {
+      "is_question": false,
+      "text": "The only feature worth comparing in an AI tool is the one that stops it. Here is what that looks like.",
+      "type": "bold_claim"
+    },
+    {
+      "is_question": true,
+      "text": "Where does the person sit in the tool you are about to buy? The feature list will not tell you.",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-04",
+  "references": [
+    {
+      "code": "DbVKVz0y8xo",
+      "creator_median_play": 9734.0,
+      "function": "explanation",
+      "play": 70474,
+      "reason": "The closest thing in the whole 266-reel corpus to an explicit AI-boundary statement, and it is the pivot of the reel rather than a reassurance: thirty seconds are spent killing the obvious answer before anything is offered. Ungated (question_to_audience), so its 33.0 shares and 57.6 saves per 1 000 are clean, and its pain label, chaos_no_process, is the nearest in the pool to M2's territory. The contact sheet is one unbroken filmed-monitor take with a live hand pointing at the parts being named.",
+      "save_rate": 0.05758,
+      "share_rate": 0.03301,
+      "transformed_how": "Borrowed: the kill-the-obvious-answer-first structure and the explicit naming of what the machine cannot judge. Changed: the boundary becomes the subject of the whole reel rather than a pivot inside a build, and it is stated about the viewer's outward-facing work rather than about clip selection. The same reel is our b_roll reference in H-09 for the held single take; the two uses do not overlap.",
+      "url": "https://www.instagram.com/reel/DbVKVz0y8xo/",
+      "useful_frame": {
+        "scene_id": "DbVKVz0y8xo-S00",
+        "what": "one unbroken 87-second take filmed off a real monitor, a hand physically pointing at the element under discussion, no presenter face until the end"
+      },
+      "useful_transcript": {
+        "beat_id": "DbVKVz0y8xo-B1",
+        "quote": "Because the AI knows how to cut a video but it doesn't know the exact moment that needs to be a clip. It has no context and no content intelligence."
+      },
+      "username": "olivermerrick___",
+      "view_lift": 6.24
+    },
+    {
+      "code": "DczDlj4qQjI",
+      "creator_median_play": 13448.5,
+      "function": "proof",
+      "play": 173629,
+      "reason": "The one reel in the pool that puts an approval step on screen and says it out loud, delivered as an objection beat at 43-48s - immediately after the capability list and immediately before the setup steps, which is exactly where a viewer worried about control would otherwise leave. 23.6 shares and 56.6 saves per 1 000 on an 11.9x lift. Its contact sheet shows the useful frame: the draft sitting in a composer, unposted, rather than a finished post.",
+      "save_rate": 0.05664,
+      "share_rate": 0.02361,
+      "transformed_how": "Borrowed: the sentence's job and its position, the control statement placed at the exact moment of doubt and shown on screen rather than promised. Changed: for us it is the thesis rather than a reassurance, and we show the draft actually waiting in a queue with a name on it instead of asserting that it would. Its split-screen opening and its comment gate are not borrowed.",
+      "url": "https://www.instagram.com/reel/DczDlj4qQjI/",
+      "useful_frame": {
+        "scene_id": "DczDlj4qQjI-S03",
+        "what": "UI_DEMO of the draft still sitting in the composer with the publish control untouched - the waiting state, not the sent state"
+      },
+      "useful_transcript": {
+        "beat_id": "DczDlj4qQjI-B3",
+        "quote": "And nothing gets posted until you say yes. Every skill shows you the draft first and waits on you."
+      },
+      "username": "liamjohnston.ai",
+      "view_lift": 11.91
+    },
+    {
+      "code": "Dbi-yxNgrhG",
+      "creator_median_play": 35050.5,
+      "function": "topic",
+      "play": 240255,
+      "reason": "The highest share rate in the 40-reel reference pool at 58.4 per 1 000 - fourth in the 266-reel analysis-ready corpus, where 61.3, 59.2 and 58.9 are higher (reports/analysis/06-creators-and-references.md §6, row 22) - built on three cheap choices: a system everybody already uses, a bounded count, and settings the viewer has never looked at. It sits at robust_z 1.45, so it is a forwarding machine rather than a reach outlier, which is the behaviour we want. Its contact sheet shows the settings screen filmed on a real device with a finger physically on the toggle.",
+      "save_rate": 0.05894,
+      "share_rate": 0.05838,
+      "transformed_how": "Borrowed: the topic shape - a bounded number of controls inside a system the viewer already runs, where the controls decide what software may do on their behalf - and the finger-on-the-real-control framing. Changed: our control is the hold-for-review setting in a tool the viewer is evaluating, not a mail provider's privacy toggle, and we verify what we claim. That reel's privacy claim is recorded as unverified in our own analysis and is not repeated.",
+      "url": "https://www.instagram.com/reel/Dbi-yxNgrhG/",
+      "useful_frame": {
+        "scene_id": "Dbi-yxNgrhG-S01",
+        "what": "the control being discussed is filmed on a real device with a finger resting on it, under a persistent black title plate"
+      },
+      "useful_transcript": {
+        "beat_id": "Dbi-yxNgrhG-B0",
+        "quote": "If you don't have these four settings, you can access any private documents or bank statements on your Gmail."
+      },
+      "username": "manthanjethwani",
+      "view_lift": 5.85
+    },
+    {
+      "code": "DTCOU9DkRTG",
+      "creator_median_play": 4124.0,
+      "function": "hook",
+      "play": 218733,
+      "reason": "Demo-first in the most literal sense: the first word is an instruction and the screen is already executing it. Every second afterwards does exactly one job - prompt, offer, objection killed, proof, dare. Ungated, 29.7 shares and 42.0 saves per 1 000, 52.0x lift on its author's median of 4 124, and the A>SCREEN>A shape we intend to use. The contact sheet shows a real finger pointing at the exact field on a filmed monitor while a persistent white plate holds the promise above it.",
+      "save_rate": 0.04202,
+      "share_rate": 0.02968,
+      "transformed_how": "Borrowed: the imperative opening over an already-running screen, and the objection beat placed at 13-20s. Changed: our imperative points at a control the viewer can check in their own tool rather than at a money-making move, and the account behind this reel is the tool vendor's own - the thing our positioning most explicitly refuses. We borrow the timing and none of the intent.",
+      "url": "https://www.instagram.com/reel/DTCOU9DkRTG/",
+      "useful_frame": {
+        "scene_id": "DTCOU9DkRTG-S01",
+        "what": "26-second filmed-monitor run with a finger pointing at the exact field, persistent title plate held above it throughout"
+      },
+      "useful_transcript": {
+        "beat_id": "DTCOU9DkRTG-B0",
+        "quote": "Watch this. Ask Chachi BT to make you a list of 10 companies hiring for a virtual assistant or receptionist. Boom."
+      },
+      "username": "buildingwithstring.com_",
+      "view_lift": 52.04
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-06.json",
+  "review": {
+    "findings": [
+      "[originality] The script opened with 'Watch this.' - verbatim the first sentence of DTCOU9DkRTG beat B0, the very beat this card quotes in references[].useful_transcript. Script-writer rule 4 puts verbatim reference wording in the quote field and nowhere else → hook rewritten to 'Watch this reply sit here. It is written, it is right, and it goes nowhere until somebody presses the button.' It keeps the hypothesis' imperative-over-a-running-screen shape and removes the borrowed sentence. 20 words / 8.0 s, at the ceiling and inside the corpus band.",
+      "[evidence] The script said 'Twenty-five named steps between a video going in and a plan coming out'. engine/SPEC.md §3 lists 25 stages from DISCOVERED to COMPLETED; the plan appears at CARD_GENERATION, the sixteenth, and nine more stages follow it → rewritten to 'Twenty-five named steps from a video coming in to the job being finished'. Same 35 words, no timing change. claims[0], which already said 'between a video being discovered and a run completing', was already correct and is unchanged.",
+      "[evidence] Reference Dbi-yxNgrhG was described as 'the highest share rate in the entire analysis-ready corpus'. It is fourth: Dc_tsSeAjBy 61.3, DcvBtiNtbYO 59.2 and DMu90OwPzno 58.9 per 1 000 are higher, and the card's own source (06-creators-and-references §6, row 22) already says 'third-highest' → corrected in the reference reason and in traceability to 'highest in the 40-reel pool, fourth in the analysis-ready corpus'.",
+      "[evidence] DTCOU9DkRTG was described as '52x its author's median'. 52.04 is view_lift, i.e. play/median − 1, so the reel is 53x its author's median → reworded to '52.0x lift'.",
+      "[evidence] The 25-stage list, the 23 cards, the 9 struck and engine/SPEC.md §0.3 (paid provider registered but off, no credentials on the default path) all reproduce - 25 names in SPEC §3, and data/radar.db `cards` returns 23 rows with 9 'вычеркнута' → left.",
+      "[evidence] claims[7] is faithful to the H-04 novelty note in data/analysis/hypotheses.json and reports/analysis/08-hypotheses.md, and the single instance really is DczDlj4qQjI beat B3 → left.",
+      "[evidence] All four reference metric sets re-derived from data/radar.db and all four function tags match data/analysis/hypothesis_refs.json → left.",
+      "[positioning] The two runs are full-frame and sequential, never side by side (I-10: any split state median robust_z 1.03 against 1.43, p=0.044), which is also the hypothesis reviewer's explicit warning → left.",
+      "[evidence] The demo is PLANNED, not OBSERVED. The card must not be shot until both runs exist as footage → left, and repeated here so it survives the review.",
+      "[positioning] No vendor named, no comparison claimed, no comment gate, no time or savings claim, CTA is one save_share ask → left.",
+      "[visual] Opens on the screen at 0.0 s (I-09, RELIABLE) rather than the A>SCREEN>A the hypothesis proposed; the A>SCREEN>A run that I-11 rewards is preserved from scene 1 on. Three of seven scenes are screens, which is the fix for the compliance-lecture risk → left.",
+      "[timing] Recomputed after the hook edit: 173 words, 69.2 s at 2.5 wps, storyboard contiguous 0.0-69.2 s, no scene under 1.5 s, every overlay ≤ 7 words → passes, inside the 50-70 s band.",
+      "[schema] python3 -m engine.cards_v2 validate → 0 errors, 0 warnings after the edits."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the quiet of knowing nothing will go out with your name on it that you have not seen",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 8.0,
+        "text": "Watch this reply sit here. It is written, it is right, and it goes nowhere until somebody presses the button.",
+        "words": 20
+      },
+      {
+        "role": "problem",
+        "seconds": 9.6,
+        "text": "You are choosing a tool that writes what your customers read. The feature list says what it produces. It never says where you sit.",
+        "words": 24
+      },
+      {
+        "role": "explanation",
+        "seconds": 10.4,
+        "text": "A person can sit in three places. Before the draft, which is a form. After it is sent, which is an apology. Or here, in between.",
+        "words": 26
+      },
+      {
+        "role": "proof",
+        "seconds": 10.8,
+        "text": "Same task, twice. First with the tool set to send. Now set to hold. One queue, one draft, one name on it, a button nobody has pressed.",
+        "words": 27
+      },
+      {
+        "role": "example",
+        "seconds": 14.0,
+        "text": "We counted our own. Twenty-five named steps from a video coming in to the job being finished, and one place where it waits for a person. That person struck out nine of the last twenty-three.",
+        "words": 35
+      },
+      {
+        "role": "payoff",
+        "seconds": 8.4,
+        "text": "So the question for the sales call is not which model is inside. It is: show me where my draft waits.",
+        "words": 21
+      },
+      {
+        "role": "cta",
+        "seconds": 8.0,
+        "text": "If that screen does not exist, do not buy it for anything a customer reads. Send this to whoever signs.",
+        "words": 20
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "steady, practical, slightly stubborn; a buyer's question rather than a warning",
+    "total_s": 69.2,
+    "total_words": 173,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-06_S00.png",
+      "asset_status": "template",
+      "editing": "Open on the screen, not the face. The Ink banner plate carrying the promise appears on frame one and holds for the whole reel. The finger never presses the button in this scene.",
+      "end_s": 8.0,
+      "frame_type": "UI_DEMO",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "Written. Correct. Not sent.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "Watch this reply sit here. It is written, it is right, and it goes nowhere until somebody presses the button.",
+      "source_inspiration": [
+        {
+          "code": "DTCOU9DkRTG",
+          "scene_id": "DTCOU9DkRTG-S01",
+          "why": "imperative opening over an already-running screen, finger pointing at the exact field"
+        },
+        {
+          "code": "DczDlj4qQjI",
+          "scene_id": "DczDlj4qQjI-S03",
+          "why": "the waiting state on screen rather than the sent state"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full-frame, filmed off a real monitor: a finished draft sitting in a queue, the release control untouched, a name in the owner column. A finger comes into frame and rests beside the un-pressed button without pressing it. No presenter."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-06_S01.png",
+      "asset_status": "template",
+      "editing": "First appearance of the presenter. No cut inside the section.",
+      "end_s": 17.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 1,
+      "layout": "a_roll",
+      "overlay_text": "Feature lists never say this",
+      "scene_id": "S01",
+      "script_role": "problem",
+      "script_text": "You are choosing a tool that writes what your customers read. The feature list says what it produces. It never says where you sit.",
+      "source_inspiration": [
+        {
+          "code": "DbVKVz0y8xo",
+          "scene_id": "DbVKVz0y8xo-S00",
+          "why": "the obvious answer is killed before anything is offered"
+        }
+      ],
+      "start_s": 8.0,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, one location, banner plate held above him."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-06_S02.png",
+      "asset_status": "template",
+      "editing": "Same unbroken take, no speaker change. Lines reveal on the stressed word; the third line is the only one still lit when the section ends.",
+      "end_s": 28.0,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 2,
+      "layout": "a_roll",
+      "overlay_text": "Before. After. In between.",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "A person can sit in three places. Before the draft, which is a form. After it is sent, which is an apology. Or here, in between.",
+      "source_inspiration": [
+        {
+          "code": "DbVKVz0y8xo",
+          "scene_id": "DbVKVz0y8xo-S00",
+          "why": "naming plainly what the machine is not allowed to judge, one item at a time"
+        }
+      ],
+      "start_s": 17.6,
+      "transition": "overlay_reveal",
+      "visual": "Same take continuing. A three-line list reveals one line at a time beside him: before the draft, after it is sent, in between. The third line stays after the other two dim."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-06_S03.png",
+      "asset_status": "template",
+      "editing": "Never a split screen: the two runs are full-frame, one after the other, per the hypothesis reviewer's note and I-10. Recorded as a separate insert so the presenter take stays continuous.",
+      "end_s": 38.8,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "Same task. Send, then hold.",
+      "scene_id": "S03",
+      "script_role": "proof",
+      "script_text": "Same task, twice. First with the tool set to send. Now set to hold. One queue, one draft, one name on it, a button nobody has pressed.",
+      "source_inspiration": [
+        {
+          "code": "DczDlj4qQjI",
+          "scene_id": "DczDlj4qQjI-S03",
+          "why": "the control statement is shown on screen at the exact moment of doubt, not promised"
+        },
+        {
+          "code": "Dbi-yxNgrhG",
+          "scene_id": "Dbi-yxNgrhG-S01",
+          "why": "the control is filmed on a real device with a finger on it"
+        }
+      ],
+      "start_s": 28.0,
+      "transition": "hard_cut",
+      "visual": "Full-frame recording, the two runs one after the other and never side by side: the same task with send on, then the same task with hold on, ending on the queue with the draft, the owner name and the untouched button."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-06_S04.png",
+      "asset_status": "template",
+      "editing": "Do not animate the count. Both numbers are on screen together for the whole section so the ratio is readable, not asserted.",
+      "end_s": 52.8,
+      "frame_type": "SCREENSHOT",
+      "idx": 4,
+      "layout": "demo",
+      "overlay_text": "25 steps. One waits.",
+      "scene_id": "S04",
+      "script_role": "example",
+      "script_text": "We counted our own. Twenty-five named steps from a video coming in to the job being finished, and one place where it waits for a person. That person struck out nine of the last twenty-three.",
+      "source_inspiration": [
+        {
+          "code": "Dbi-yxNgrhG",
+          "scene_id": "Dbi-yxNgrhG-S00",
+          "why": "a bounded count inside a system, stated as a number the viewer can hold"
+        }
+      ],
+      "start_s": 38.8,
+      "transition": "hard_cut",
+      "visual": "Full-frame screenshot of our own plan table: twenty-three rows across three weeks, the nine struck rows visibly greyed out, with the stage name of the one step that waits for a person set as a mono label above the table."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-06_S05.png",
+      "asset_status": "template",
+      "editing": "The overlay is the question verbatim, so it can be screenshotted and taken into a call.",
+      "end_s": 61.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "Show me where my draft waits",
+      "scene_id": "S05",
+      "script_role": "payoff",
+      "script_text": "So the question for the sales call is not which model is inside. It is: show me where my draft waits.",
+      "source_inspiration": [
+        {
+          "code": "DTCOU9DkRTG",
+          "scene_id": "DTCOU9DkRTG-S02",
+          "why": "the reel comes back to the face to hand over the one thing to do"
+        }
+      ],
+      "start_s": 52.8,
+      "transition": "hard_cut",
+      "visual": "Michael back on camera, same framing and light, no props."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-06_S06.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "One ask only. Hold the last frame for one second before the cut.",
+      "end_s": 69.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "No hold screen, no purchase",
+      "scene_id": "S06",
+      "script_role": "cta",
+      "script_text": "If that screen does not exist, do not buy it for anything a customer reads. Send this to whoever signs.",
+      "source_inspiration": [],
+      "start_s": 61.2,
+      "transition": "none",
+      "visual": "Same take, no reframe. Michael holds still for the closing line."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company responsible for one repeated process. Specifically the person choosing a tool that will write or send something a customer reads.",
+    "concept": "One question replaces a feature comparison: does the tool stop and wait for a person before anything leaves the company. We show the same task run twice, full-frame and one after the other - once set to send, once set to hold - and then count the same gate in our own pipeline, where twenty-five named steps run unattended and one waits for a person who struck out nine of the last twenty-three plans.",
+    "filter": {
+      "ai_boundary": "The tool drafts and queues. A named person releases. Nothing addressed to somebody outside the company leaves without that person having seen it on a screen.",
+      "friction": "Feature lists say what the tool can produce and never say where the person sits, so the approval step is discovered after the tool is already inside the workflow and something has already gone out unread.",
+      "next_action": "Open the tool you are evaluating, find the setting that holds output for review, and if it does not exist, do not buy it for outward-facing work.",
+      "process": "Buying or switching a tool that produces outward-facing text - replies, quotes, summaries, posts, anything a customer or a supplier will read with the company's name on it."
+    },
+    "objective": "Get one viewer to open the tool they are evaluating, look for the setting that holds output for review, and refuse the purchase for outward-facing work if that setting does not exist.",
+    "pain": "quality_trust",
+    "positioning": "builder",
+    "promise": "One question that replaces a feature comparison, and the exact screen to ask for before you sign.",
+    "rationale": "Exactly one reel in the 266-reel analysed corpus states the boundary out loud, and it does so as a throwaway objection beat inside a tool promotion. Making the boundary the subject is unrepresented. The visual shape is the one the data supports: A>SCREEN>A carries median share_rate 0.0213 against 0.0140 (p=0.00076, I-11) and opening on the screen is worth roughly half again the forwarding rate (I-09)."
+  },
+  "title": "The pause is the feature",
+  "traceability": {
+    "evidence_summary": "Exactly one reel in the 266-reel analysis-ready corpus states an AI boundary out loud, and it does so as a throwaway objection beat inside a tool promotion (DczDlj4qQjI, beat B3, 56.6 saves per 1 000): making the boundary the subject is unrepresented. Our own gate count is real and checkable: twenty-five named stages in engine/SPEC.md §3, one place that waits for a person, and that person struck 9 of the 23 plans the pipeline produced across three weeks. The visual grammar follows the two strongest findings we have - opening on a screen carries median share_rate 0.0213 against 0.0140 with a creator-normalised correlation of +0.285, p=0.00025 (I-09), and the A>SCREEN>A run carries the same 0.0213 against 0.0140 at p=0.00076 across 39 reels and 32 creators (I-11). The topic reference Dbi-yxNgrhG holds the reference pool's highest share rate at 58.4 per 1 000, fourth in the analysis-ready corpus on a bounded-controls-in-a-familiar-system shape, and DTCOU9DkRTG (52.0x lift, ungated) supplies the imperative opening over an already-running screen.",
+    "hypothesis": "H-04",
+    "insights": [
+      "I-08",
+      "I-11",
+      "I-09",
+      "I-13",
+      "I-15",
+      "I-27",
+      "I-05"
+    ],
+    "original_synthesis": "The subject is the pause itself, which nothing in the corpus treats as the subject. The gate count is ours, dated and reproducible from engine/SPEC.md §3 and data/radar.db, and it is offered as an experiment rather than as a client result. The three-positions frame - before the draft, after the send, in between - is ours and is not in any reference.",
+    "why_better_than_generic": "A generic AI script would list five tools with a 'human in the loop' bullet and call the boundary a best practice. This one replaces the feature comparison with a single screen the viewer can ask to see, films the two runs full-frame and sequentially rather than as the split screen the corpus over-uses and under-rewards (I-10), names our own gate ratio instead of a principle, and refuses to claim that the gate prevents anything, because we have not measured it."
+  }
+}

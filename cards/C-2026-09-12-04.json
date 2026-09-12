@@ -1,0 +1,442 @@
+{
+  "card_id": "C-2026-09-12-04",
+  "claims": [
+    {
+      "source": "reports/data/spend.json - n_entries 10, total_usd 17.78; the ten entries sum to 889 units at a recorded unit price of 0.02.",
+      "state": "OBSERVED",
+      "text": "Our own spend ledger records ten entries between 1 and 10 September 2026: 889 paid units at $0.02 each, $17.78 in total."
+    },
+    {
+      "source": "Arithmetic on reports/data/spend.json; $0.02 is also the unit price recorded on every entry.",
+      "state": "OBSERVED",
+      "text": "$17.78 divided by 889 runs is two cents a run."
+    },
+    {
+      "source": "reports/data/spend.json entries 8 and 10 (2026-09-07: 106 units, $2.12; 2026-09-10: 130 units, $2.60); reports/audit/03-server-runtime-hiker.md - one page per account, one unit per account.",
+      "state": "OBSERVED",
+      "text": "The most recent weekly collection run cost $2.60: 130 accounts, one page each, at $0.02 a unit. The same job cost $2.12 the week before, when the roster held 106 accounts."
+    },
+    {
+      "source": "reports/data/spend.json entries 6 and 7, both dated 2026-09-03; the note on entry 7 records the recovery after the interruption.",
+      "state": "OBSERVED",
+      "text": "Sixteen cents of the total was paid twice: one run broke partway through and eight of the answers were no longer in the cache."
+    },
+    {
+      "source": "engine/SPEC.md §0.8.",
+      "state": "OBSERVED",
+      "text": "Our own spec requires any module that costs money to print an estimate and wait for an explicit confirmation before spending."
+    },
+    {
+      "source": "The rule binds new modules. The weekly collection job predates it and has not been audited against it; not asserted on screen.",
+      "state": "MISSING",
+      "text": "That every module in our pipeline already complies with that rule."
+    },
+    {
+      "source": "An illustration of the arithmetic only, labelled on screen as an example rather than a measurement.",
+      "state": "MISSING",
+      "text": "That any particular business runs a task six hundred times a day."
+    },
+    {
+      "source": "No saving is claimed anywhere in the script; POSITIONING.md §6 forbids a savings claim without a client baseline.",
+      "state": "MISSING",
+      "text": "That pricing by the run saves money, or that this arithmetic reduced anyone's bill."
+    },
+    {
+      "source": "It is one vendor's price on 10 September 2026 and it will move. We re-read the ledger at the next renewal; the arithmetic, not the price, is the message.",
+      "state": "TO_MEASURE",
+      "text": "That the $0.02 unit price will hold."
+    },
+    {
+      "source": "Unknown to us by definition. The reel asks the viewer to count it rather than estimating it for them.",
+      "state": "MISSING",
+      "text": "How many times the viewer's own task runs, and therefore what their per-run cost is."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Screenshot of our own spend ledger, ten rows, unit price and total visible (real, from reports/data/spend.json)",
+      "Screen recording of the same ledger with a runs-per-week column added and the weekly line highlighted",
+      "Screenshot of the two 3 September rows - interrupted run and recovery - with the note legible",
+      "Presenter A-roll, one continuous take, one location, banner plate fixed",
+      "A small mono 'example, not a measurement' label for the six-hundred-runs figure"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 40px, Paper on an Ink plate with 24px padding, bottom safe zone, two lines maximum. One persistent Ink banner plate in Saira SemiCondensed Black at the top for the whole reel. Every money figure is set in IBM Plex Mono Medium as a label, per design/rules/typography.md. No emoji on screen.",
+    "cut_timing": "Seven sections, four visible cuts, each of them a full-frame screen insert replacing the presenter or the presenter returning. The presenter material is one continuous take; there is no speaker change in this reel, and a speaker change is the only cut PRODUCTION.md allows.",
+    "emphasis": "Only one cell is highlighted at a time on any ledger screen, in Blueprint - nothing here is broken, it is mispriced. Oxide appears exactly once, on the duplicated pair of rows.",
+    "motion": "Linear easing only, per design/rules/motion.md. No bounce, no gradients, no rounded corners, no centred text.",
+    "zooms": "One ui_zoom onto the weekly cell, one onto the duplicated pair. No zoom on any A-roll scene."
+  },
+  "format": "M2 Radar",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "This is our whole bill for ten days. Seventeen dollars, seventy-eight cents. The number that matters is not on it.",
+      "type": "result_first"
+    },
+    {
+      "is_question": false,
+      "text": "Our ten-day bill came to seventeen dollars and seventy-eight cents, and that figure tells you nothing about whether the tool is expensive.",
+      "type": "bold_claim"
+    },
+    {
+      "is_question": true,
+      "text": "How much does your AI tool cost? If the answer has the word month in it, you cannot answer the question.",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-01",
+  "references": [
+    {
+      "code": "Dc_TX1CttIc",
+      "creator_median_play": 22421.0,
+      "function": "explanation",
+      "play": 562094,
+      "reason": "SAVE RATE NOT MEASURED: the provider returned no save count for this reel in any snapshot (reels.save and video_features.save are NULL), so save_rate is null rather than a number; only its share rate can be read. Ungated (cta_type none), so its 31.7 shares per 1 000 can be taken at face value - one of only seven ungated rows in the 40-reel pool. It is also the only reel in the pool whose closing verdict is a cost verdict rather than a capability verdict, and it arrives after the evidence rather than before it. The agenda is announced in the first nine seconds and every case is labelled aloud, which is the ordering a four-step arithmetic reel needs.",
+      "save_rate": null,
+      "share_rate": 0.03167,
+      "transformed_how": "Borrowed: the announce-the-agenda-then-earn-the-verdict ordering, and the decision to close on an economic limitation rather than a recommendation. Changed: the verdict is about one repeated task in a small business rather than a model's capability ceiling, and our cost numbers come from our own ledger rather than a vendor's price list. We also add the CTA this reel lacks entirely.",
+      "url": "https://www.instagram.com/reel/Dc_TX1CttIc/",
+      "useful_frame": {
+        "scene_id": "Dc_TX1CttIc-S02",
+        "what": "the verdict returns to a full-frame face after a 62-second unbroken screen run, so the interpretation is delivered where the evidence is not"
+      },
+      "useful_transcript": {
+        "beat_id": "Dc_TX1CttIc-B6",
+        "quote": "So here is my verdict. Very good model for sure, but the API cost has shot up so high that any business trying to build a real product on Astra is walking into a train wreck because capability alone does not save you from that math."
+      },
+      "username": "v.i.s.h.ai",
+      "view_lift": 24.07
+    },
+    {
+      "code": "DcUNlNvy6J9",
+      "creator_median_play": 3568.0,
+      "function": "pain",
+      "play": 82878,
+      "reason": "The cleanest statement of metered-pricing pain in the pool, said in money the speaker has actually paid: a named range, a first-person amount, and the fact that the bill grows with success, all inside nine seconds. 42.9 saves per 1 000 on a 22.2x lift. The contact sheet shows the move worth copying - the pricing page fills the frame, the figure itself is highlighted, and the caption chip is pinned directly beside the price it refers to rather than at the bottom of the frame.",
+      "save_rate": 0.04287,
+      "share_rate": 0.02202,
+      "transformed_how": "Borrowed: the three-part pain shape - named range, first-person amount, the bill scales with your own success - and the caption chip pinned to the number it names. Changed: we say it once, in the first quarter, as a named process cost rather than as an argument for a free alternative, and we never name a competitor product. Its topic, free access and bypassing payment, is an excluded genre for us and is not borrowed.",
+      "url": "https://www.instagram.com/reel/DcUNlNvy6J9/",
+      "useful_frame": {
+        "scene_id": "DcUNlNvy6J9-S03",
+        "what": "full-frame pricing page with the monthly figure highlighted and the caption chip pinned to that exact cell"
+      },
+      "useful_transcript": {
+        "beat_id": "DcUNlNvy6J9-B2",
+        "quote": "Most people are paying anywhere from 15 to 60 bucks a month for many chat. I even paid 200 bucks last month. And the crazy prize is the price will keep climbing the more views you get."
+      },
+      "username": "benkimball.ai",
+      "view_lift": 22.23
+    },
+    {
+      "code": "DbVq4mwz38L",
+      "creator_median_play": 13009.0,
+      "function": "proof",
+      "play": 439974,
+      "reason": "The pool's best objection handling: fifteen continuous seconds volunteering every catch before asking for anything, placed at 32-48s, exactly where a viewer doing the arithmetic in their head would object. 32.8x lift, 27.9 shares and 54.0 saves per 1 000. Its contact sheet also carries the single-big-figure treatment we use for the weekly line - one large money number set beside the artefact with a two-word label under it, rather than a table.",
+      "save_rate": 0.05396,
+      "share_rate": 0.02786,
+      "transformed_how": "Borrowed: the placement and function of a volunteered-caveat beat immediately after the cost claim, and the one-big-figure treatment. Changed: our caveat is about our own spend and our own unmeasured overheads, not about somebody else's repository, and it is delivered over our own ledger on screen rather than over a text card. That reel never demonstrates its tool working; ours shows the artefact throughout.",
+      "url": "https://www.instagram.com/reel/DbVq4mwz38L/",
+      "useful_frame": {
+        "scene_id": "DbVq4mwz38L-S03",
+        "what": "one large money figure ('$39 / Bill amount') set against the artefact instead of a table of numbers"
+      },
+      "useful_transcript": {
+        "beat_id": "DbVq4mwz38L-B3",
+        "quote": "The repo itself is free. You just cover hosting. Since a background worker and a couple of databases need to stay running. So figure a few dollars a month."
+      },
+      "username": "heystevetan",
+      "view_lift": 32.82
+    },
+    {
+      "code": "DaGTeJNN1GR",
+      "creator_median_play": 28959.0,
+      "function": "hook",
+      "play": 298226,
+      "reason": "A money number inside the first four seconds with the mechanism landing by twenty-five. The pool's clearest example of money-not-spent framing, which the corpus rewards, against money-earned framing, which costs reach (median view_lift 1.19 against 2.12). 30.2 shares per 1 000 on a 9.3x lift over a 28 959 median. The contact sheet shows the number stated three ways at once: a persistent title plate, the figure calculated on a real device held into frame, and a large overlay on the same beat.",
+      "save_rate": 0.03611,
+      "share_rate": 0.03018,
+      "transformed_how": "Borrowed: a measured amount in the opening sentence, stated as money not spent, and shown on a real screen in the same second it is spoken. Changed: the amount is our documented total spend rather than a saving, because POSITIONING.md §6 forbids a savings claim; the subject is a recurring business cost, not a holiday booking; and we drop its CTA, which sells a skill that did not exist at publication.",
+      "url": "https://www.instagram.com/reel/DaGTeJNN1GR/",
+      "useful_frame": {
+        "scene_id": "DaGTeJNN1GR-S00",
+        "what": "the money figure appears simultaneously as a persistent title plate and as a real calculation on a device held into frame"
+      },
+      "useful_transcript": {
+        "beat_id": "DaGTeJNN1GR-B0",
+        "quote": "All right, so Claude just saved us $2,800 on our Airbnb booking."
+      },
+      "username": "aiwithremy",
+      "view_lift": 9.3
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-04.json",
+  "review": {
+    "findings": [
+      "[schema] Reference Dc_TX1CttIc carried save_rate 0.0 as a placeholder for a count the provider never returned (reels.save and video_features.save are both NULL in every snapshot). Per the orchestrator's update the validator now accepts null → save_rate set to null and the 'not measured' note kept at the head of the reason.",
+      "[evidence] The whole ledger reproduces from reports/data/spend.json and from the spend table in data/radar.db: 10 entries dated 1-10 September 2026, 889 units, $0.02 each, $17.78 total, and 889 x $0.02 = $17.78 exactly → left.",
+      "[evidence] The sixteen cents paid twice is entries 6 and 7, both 2026-09-03: 52 units interrupted, then 8 units re-fetched because the answers had left the cache → left.",
+      "[evidence] 'The repeating weekly collection run costs $2.60' was stated as a fixed weekly figure. The same job cost $2.12 on 2026-09-07 (106 accounts) and $2.60 on 2026-09-10 (130 accounts); the figure moves with the roster → claim rewritten to name both runs, and the spoken line changed from 'Here is the line that repeats every week. A hundred and thirty accounts...' to 'Here is the line that repeats every week. Last week, a hundred and thirty accounts...' so the number is dated rather than presented as constant. Script goes to version 2; the section grows from 29 to 31 words and the reel from 67.2 s to 68.0 s, still inside the 50-70 s band.",
+      "[evidence] engine/SPEC.md §0.8 does require any module that costs money to print an estimate and require --yes → claim left as OBSERVED.",
+      "[evidence] All four references re-derived from data/radar.db: play, creator_median_play, view_lift, share_rate and save_rate match, and the four function tags match data/analysis/hypothesis_refs.json → left.",
+      "[originality] '84 have a money-shaped desire and every one of them frames it as money not spent on somebody else's product' is a universal the sources do not state; 01-general-conclusions §B classifies 84 reels as money-saving desire and I-25 counts 71 money-framed reels → rewritten in strategy.rationale and traceability.original_synthesis to what the two sources actually say. The load-bearing original point (nobody shows their own bill) is unchanged.",
+      "[positioning] 'Six hundred times a day' is the only unsourced figure spoken; it is labelled on screen as an example and recorded as MISSING in claims → left.",
+      "[positioning] No vendor named, no savings claim (POSITIONING.md §6), no comment gate (RULES.md §1.2), no split screen (I-10), CTA is a single save_share ask → left.",
+      "[visual] Opens on the ledger at 0.0 s (I-09), four screen inserts, presenter take continuous, every overlay ≤ 7 words, no scene under 1.5 s → left.",
+      "[timing] Recomputed after the edit: 170 words, 68.0 s at 2.5 wps, every section = words/wps, storyboard contiguous 0.0-68.0 s → passes.",
+      "[scheduling] This card, C-2026-09-12-06 and C-2026-09-12-10 all open on our own pipeline artefacts. Keep at least a week between them, and note that 06 describes the same Monday as twenty-five named stages while 10 describes it as five steps - the two are different levels of description and should not run in the same week.",
+      "[schema] python3 -m engine.cards_v2 validate → 0 errors, 0 warnings after the edits."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the calm of having one number to say out loud in a meeting instead of an opinion",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 8.0,
+        "text": "This is our whole bill for ten days. Seventeen dollars, seventy-eight cents. The number that matters is not on it.",
+        "words": 20
+      },
+      {
+        "role": "problem",
+        "seconds": 10.0,
+        "text": "Every tool you approve is priced by the month or by the seat. Your work does not happen by the month. It happens in runs.",
+        "words": 25
+      },
+      {
+        "role": "explanation",
+        "seconds": 9.6,
+        "text": "So divide the bill by the number of times the task actually ran. Ours ran eight hundred and eighty-nine times. Two cents a run.",
+        "words": 24
+      },
+      {
+        "role": "proof",
+        "seconds": 12.4,
+        "text": "Here is the line that repeats every week. Last week, a hundred and thirty accounts, one page each. Two dollars sixty. That is the number to defend, not the plan name.",
+        "words": 31
+      },
+      {
+        "role": "objection",
+        "seconds": 10.8,
+        "text": "What the bill leaves out: our own machine time, and sixteen cents we paid twice because a run broke halfway and eight answers had left the cache.",
+        "words": 27
+      },
+      {
+        "role": "payoff",
+        "seconds": 9.2,
+        "text": "Two cents a run is nothing. Two cents a run, six hundred times a day, is another conversation. Price the run, then decide.",
+        "words": 23
+      },
+      {
+        "role": "cta",
+        "seconds": 8.0,
+        "text": "Before the next renewal, count how many times that task ran last month, then divide. Send this to whoever signs.",
+        "words": 20
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "flat, arithmetical, unembarrassed about a small bill",
+    "total_s": 68.0,
+    "total_words": 170,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-04_S00.png",
+      "asset_status": "template",
+      "editing": "Open on the ledger, not on a face. The Ink banner plate carrying the promise appears on frame one and is held for the whole reel.",
+      "end_s": 8.0,
+      "frame_type": "SCREENSHOT",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "Ten days. Our whole bill.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "This is our whole bill for ten days. Seventeen dollars, seventy-eight cents. The number that matters is not on it.",
+      "source_inspiration": [
+        {
+          "code": "DaGTeJNN1GR",
+          "scene_id": "DaGTeJNN1GR-S00",
+          "why": "the money figure is spoken and shown on a real screen in the same second"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full-frame screenshot of our own spend ledger: ten rows, the unit-price column and the total both legible. The total is boxed. No presenter in frame."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-04_S01.png",
+      "asset_status": "template",
+      "editing": "First appearance of the presenter. No cut inside the section.",
+      "end_s": 18.0,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 1,
+      "layout": "a_roll",
+      "overlay_text": "Priced by month. Paid by run.",
+      "scene_id": "S01",
+      "script_role": "problem",
+      "script_text": "Every tool you approve is priced by the month or by the seat. Your work does not happen by the month. It happens in runs.",
+      "source_inspiration": [
+        {
+          "code": "DcUNlNvy6J9",
+          "scene_id": "DcUNlNvy6J9-S04",
+          "why": "the metered-pricing pain is stated once, on the face, as a cost the speaker has actually paid"
+        }
+      ],
+      "start_s": 8.0,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, one location, banner plate held above him."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-04_S02.png",
+      "asset_status": "template",
+      "editing": "Same unbroken take, no speaker change. Each figure lands on its word and none of them leaves before the section ends.",
+      "end_s": 27.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 2,
+      "layout": "a_roll",
+      "overlay_text": "17.78 divided by 889",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "So divide the bill by the number of times the task actually ran. Ours ran eight hundred and eighty-nine times. Two cents a run.",
+      "source_inspiration": [
+        {
+          "code": "Dc_TX1CttIc",
+          "scene_id": "Dc_TX1CttIc-S02",
+          "why": "the arithmetic is announced on the face before it is earned on the screen"
+        }
+      ],
+      "start_s": 18.0,
+      "transition": "text_punch_in",
+      "visual": "Same take continuing. The division punches in beside him as he says it: 17.78, then 889, then 0.02."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-04_S03.png",
+      "asset_status": "template",
+      "editing": "Recorded as a separate full-frame insert so the presenter take stays continuous. Slow ui_zoom onto the highlighted cell on the words 'two dollars sixty'.",
+      "end_s": 40.0,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "$2.60. Every week. One run.",
+      "scene_id": "S03",
+      "script_role": "proof",
+      "script_text": "Here is the line that repeats every week. Last week, a hundred and thirty accounts, one page each. Two dollars sixty. That is the number to defend, not the plan name.",
+      "source_inspiration": [
+        {
+          "code": "DcUNlNvy6J9",
+          "scene_id": "DcUNlNvy6J9-S03",
+          "why": "caption chip pinned to the exact cell rather than to the bottom of the frame"
+        },
+        {
+          "code": "DbVq4mwz38L",
+          "scene_id": "DbVq4mwz38L-S03",
+          "why": "one large money figure against the artefact instead of a table of numbers"
+        }
+      ],
+      "start_s": 27.6,
+      "transition": "hard_cut",
+      "visual": "Full-frame recording of the same ledger scrolled to the weekly collection line, with a runs-per-week column now added. The two-dollars-sixty cell is the only thing highlighted."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-04_S04.png",
+      "asset_status": "template",
+      "editing": "Stay on the screen for the caveat. Both rows are highlighted together so the duplication is visible rather than asserted.",
+      "end_s": 50.8,
+      "frame_type": "SCREENSHOT",
+      "idx": 4,
+      "layout": "demo",
+      "overlay_text": "Paid twice: sixteen cents",
+      "scene_id": "S04",
+      "script_role": "objection",
+      "script_text": "What the bill leaves out: our own machine time, and sixteen cents we paid twice because a run broke halfway and eight answers had left the cache.",
+      "source_inspiration": [
+        {
+          "code": "DbVq4mwz38L",
+          "scene_id": "DbVq4mwz38L-S04",
+          "why": "the caveat is volunteered immediately after the cost claim, before anything is asked for"
+        }
+      ],
+      "start_s": 40.0,
+      "transition": "ui_zoom",
+      "visual": "Same ledger, scrolled to the two adjacent rows dated 3 September - the interrupted run and the recovery - both highlighted, with the note on the second row legible."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-04_S05.png",
+      "asset_status": "template",
+      "editing": "The hypothetical multiplier is labelled on screen as an example so it cannot be read as one of our figures.",
+      "end_s": 60.0,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "Price the run, then decide",
+      "scene_id": "S05",
+      "script_role": "payoff",
+      "script_text": "Two cents a run is nothing. Two cents a run, six hundred times a day, is another conversation. Price the run, then decide.",
+      "source_inspiration": [
+        {
+          "code": "Dc_TX1CttIc",
+          "scene_id": "Dc_TX1CttIc-S02",
+          "why": "the verdict returns to the face and is economic rather than a recommendation"
+        }
+      ],
+      "start_s": 50.8,
+      "transition": "hard_cut",
+      "visual": "Michael back on camera, same framing and light. A small mono label reading 'example, not a measurement' sits under the six-hundred figure for as long as it is on screen."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-04_S06.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "One ask only. Hold the last frame for one second before the cut.",
+      "end_s": 68.0,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "Count the runs. Then renew.",
+      "scene_id": "S06",
+      "script_role": "cta",
+      "script_text": "Before the next renewal, count how many times that task ran last month, then divide. Send this to whoever signs.",
+      "source_inspiration": [],
+      "start_s": 60.0,
+      "transition": "none",
+      "visual": "Same take, no reframe. Michael holds still for the closing line."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company responsible for one repeated process. Specifically the person who approves and renews software spend.",
+    "concept": "We open our own ten-day bill on screen - seventeen dollars and seventy-eight cents, eight hundred and eighty-nine paid units at two cents each - and do the one piece of arithmetic a pricing page never does: divide the bill by the number of times the task actually ran. Then we volunteer what the bill leaves out, including the sixteen cents we paid twice when a run broke halfway.",
+    "filter": {
+      "ai_boundary": "The machine performs the run and prints what it will cost before it starts. The human sets the cap, reads the ledger and decides when the price stops being worth the task; no tool is allowed to spend without an explicit confirmation.",
+      "friction": "Pricing pages quote per seat or per month and the work happens in runs, so the person who signs has no unit to compare against. The bill grows with use and the growth stays invisible until the invoice lands.",
+      "next_action": "Take one repeated task, count how many times it actually ran last month, divide the bill by that number, and only then renew.",
+      "process": "Approving or renewing a paid tool that runs one repeated task in the business - the weekly report, the batch of quotes, the inbox triage - where the invoice arrives monthly and nobody in the company can say whether it is expensive."
+    },
+    "objective": "Get one viewer to count how many times their repeated task actually ran last month and divide the bill by it before the next renewal, so they walk into that conversation with one number instead of a plan name.",
+    "pain": "cost_money",
+    "positioning": "builder",
+    "promise": "One number you can defend to whoever signs, worked out on our own bill in front of you.",
+    "rationale": "cost_money is the largest pain cell in the analysed corpus (n=48, 33 creators) and money-not-spent framing sits above the corpus median on save rate (0.0306 against 0.0250, p=0.007), while money-earned framing costs reach (view_lift 1.19 against 2.12, I-25) - this reel is on the profitable side of that line. Nobody in the 266 analysed reels shows their own bill: 84 carry a money-saving desire (01-general-conclusions §B) and 71 frame the outcome as money (I-25), and in both cells the money is somebody else's price rather than the author's own ledger."
+  },
+  "title": "Cost per run, not price per month",
+  "traceability": {
+    "evidence_summary": "Everything on screen is our own ledger: ten entries between 1 and 10 September 2026, 889 paid units at $0.02, $17.78 total, of which the repeating weekly line is 130 accounts at one page each for $2.60, and sixteen cents were paid twice after a run broke partway through. cost_money is the largest pain cell in the analysed corpus (n=48, 33 creators) and money-not-spent framing sits above the corpus median on save rate (0.0306 against 0.0250, p=0.007) while money-earned framing costs reach (view_lift 1.19 against 2.12, I-25). The four references contribute structure only: DaGTeJNN1GR (9.3x lift, 30.2 shares/1k) the measured amount in the opening sentence shown on a real screen, DcUNlNvy6J9 (22.2x, 42.9 saves/1k) the three-part metered-pricing pain with the caption chip pinned to the exact cell, DbVq4mwz38L (32.8x, 54.0 saves/1k) the volunteered caveat straight after the cost claim, Dc_TX1CttIc (24.1x, 31.7 shares/1k, ungated) the announce-then-earn-the-verdict ordering with an economic close. Opening on the screen rather than the face is worth roughly half again the forwarding rate (I-09: 0.0213 against 0.0140, creator-normalised +0.285, p=0.00025).",
+    "hypothesis": "H-01",
+    "insights": [
+      "I-09",
+      "I-08",
+      "I-13",
+      "I-25",
+      "I-15",
+      "I-29",
+      "I-05"
+    ],
+    "original_synthesis": "Nobody in the 266 analysed reels shows their own bill; 84 carry a money-saving desire (§B) and 71 frame the outcome as money (I-25), always somebody else's price rather than their own ledger. The itemised ledger, the single division, the repeating weekly line item and the volunteered duplicate charge are ours and reproducible line by line from reports/data/spend.json.",
+    "why_better_than_generic": "A generic AI script would compare three tools' pricing pages and warn about hidden costs. This one performs a single division in front of the viewer on a real bill, isolates the repeating line item that a renewal conversation actually turns on, volunteers the sixteen cents we wasted, and refuses the savings claim the format invites - which POSITIONING.md §6 forbids and which the reach data (I-25) says costs distribution anyway."
+  }
+}

@@ -1,0 +1,12 @@
+{
+ "interpretation": "",
+ "limitations": "Legacy corpus scenes are runs of identical frame_type across 9 fixed samples, not detected shot boundaries; scenes_n is a lower bound on real cuts. The analysis-ready corpus is not a random sample of the niche: deep.py only ever processed reels that score.py had already ranked near the top of their creator's output, so its median robust_z is above zero by construction. Any contrast computed inside it compares strong videos with other strong videos, not strong with average (docs/M2RADAR_ANALYSIS_METHOD.md §1.4).",
+ "method": "Scatter of scenes_n (frame_labels/scenes derived) against robust_z.",
+ "n": 282,
+ "source": "M2Radar data/radar.db, analysis-ready corpus n=268, 2026-09-12",
+ "title": "Scene count vs performance",
+ "variables": {
+  "x": "scenes_n",
+  "y": "robust_z"
+ }
+}

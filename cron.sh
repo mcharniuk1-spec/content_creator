@@ -18,8 +18,25 @@ exec >>"$LOG" 2>&1
 
 echo "═══ прогон $(date '+%Y-%m-%d %H:%M') ═══"
 
-# код мог обновиться на рабочей машине
-git pull -q --rebase 2>/dev/null || echo "git pull не прошёл, идём на текущем коде"
+# код мог обновиться на рабочей машине. --ff-only вместо --rebase: конфликт ребейза
+# раньше просто логировался и прогон шёл дальше на возможном полу-слитом дереве
+# (аудит reports/audit/03, риск §7c) — ff-only либо применяется чисто, либо не
+# применяется вовсе, третьего не остаётся.
+git pull -q --ff-only 2>/dev/null || echo "git pull не прошёл, идём на текущем коде"
+
+# конфигурация: HIKER_KEY обязателен, Notion — нет. Раньше сломанный доступ к Notion
+# был виден только как несколько 404 в середине лога; теперь это одна строка в начале.
+CONFIG_OUT=$(.venv/bin/python -m engine.hiker_config 2>&1)
+echo "$CONFIG_OUT"
+# держит таблицу providers (engine/schema.py) в согласии с реестром engine/providers.py —
+# перезаписывает разовый бутстрап из migrate_legacy.py на каждом прогоне; если таблицы
+# ещё нет, refresh() тихо ничего не делает
+.venv/bin/python -m engine.providers refresh >/dev/null 2>&1 || true
+if echo "$CONFIG_OUT" | grep -q '^HIKER_KEY: NOT_CONFIGURED\|^HIKER_KEY: FAILED'; then
+    echo "HIKER_KEY не настроен — прогон остановлен до платного сбора"
+    echo "═══ конец $(date '+%H:%M') (остановлено на конфигурации) ═══"
+    exit 2
+fi
 
 # сам прогон: сбор, оценка, разбор, темы, решения, карточки, дельта, страницы
 timeout 7200 .venv/bin/python run.py --yes
@@ -46,6 +63,13 @@ if [ $code -eq 0 ]; then
         echo "страницы недели собрать не удалось"
     fi
 fi
+
+# новые стадии (пишутся другими агентами, engine/watchdog.py и engine/features.py могут
+# ещё не существовать в этой ветке) — запускаются независимо от кода выхода run.py и
+# друг от друга: сбой здесь не должен трогать старую цепочку выше.
+timeout 3600 .venv/bin/python -m engine.watchdog --limit 40 --yes || echo "watchdog failed"
+timeout 7200 .venv/bin/python -m engine.analyze_pending --yes --limit 60 || echo "semantic analysis failed"
+timeout 1800 .venv/bin/python -m engine.features --refresh || echo "features failed"
 
 # оставляем последние двадцать журналов, остальное ни к чему
 ls -1t data/runs/*.log 2>/dev/null | tail -n +21 | xargs -r rm --

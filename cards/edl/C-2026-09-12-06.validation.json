@@ -1,0 +1,16 @@
+{
+ "card_id": "C-2026-09-12-06",
+ "edl": "cards/edl/C-2026-09-12-06.json",
+ "contract": "m2.remotion-edl.v1",
+ "render_mode": "PREVIS",
+ "duration_frames": 2076,
+ "fps": 30,
+ "result": {
+  "ok": true,
+  "skipped": false,
+  "returncode": 0,
+  "stdout": "EDL_OK",
+  "stderr": ""
+ },
+ "checked_at": "2026-09-12T08:53:27Z"
+}

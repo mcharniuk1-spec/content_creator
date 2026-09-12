@@ -1,0 +1,413 @@
+{
+  "card_id": "C-2026-09-12-02",
+  "claims": [
+    {
+      "source": "data/analysis/transcripts/*.json, `notes` field, recomputed by the reviewer 2026-09-12: 27 of 266 notes record the product name Claude (or Claude Code) written by the machine as 'cloud'/'clouds', 'cloth', 'claw'/'clawed'/'Clawd'. Three further notes matching those words (DVaBP3wDAFE, DcvzztfCabY, DbvdNboM_Nn) are excluded because the word there is OpenClaw or Google Cloud, not Claude. Counting any mis-spelling of the same name (e.g. 'clod code', 'called code', 'Quad AI', 'Claudecoat', 'Openclaw desktop') gives 34.",
+      "state": "OBSERVED",
+      "text": "Across 266 machine-written transcripts from our own run, 27 of the per-file analysis notes record the same product name coming back as a different word ('cloud', 'claw', 'clawed', 'cloth')."
+    },
+    {
+      "source": "data/analysis/transcripts/*.json, `notes` field, recomputed by the reviewer 2026-09-12. 191 = notes containing the string 'ASR'; 140 = notes containing at least one explicit correction, counted as a quoted token followed by '=', 'is', 'for' or 'means'.",
+      "state": "OBSERVED",
+      "text": "191 of those same 266 notes discuss the machine transcription, and 140 of them name at least one specific word it got wrong alongside what was actually said."
+    },
+    {
+      "source": "Reviewer recount 2026-09-12 over data/analysis/transcripts/*.json notes. The writer's figure of 118 could not be reproduced under any counting rule tried; mechanical rules give 140, 167 or 191 depending on the definition, so no single figure is asserted. See reports/analysis/10-script-review-B.md, card 02.",
+      "state": "TO_MEASURE",
+      "text": "How many of the 266 notes record a mangled proper noun, product name or figure specifically."
+    },
+    {
+      "source": "data/analysis/transcripts/Dbs2JdJKUDd.json, DUJYKENjZc5.json, DTCOU9DkRTG.json notes; reports/analysis/09-reference-selection.md R7.",
+      "state": "OBSERVED",
+      "text": "Named misreads in our own files include 'Canva' written as 'Kenwa', 'ElevenLabs' as 'a level lab', 'n8n' as 'anything' and 'ChatGPT' as 'Chachi BT'."
+    },
+    {
+      "source": "reports/audit/02-data-inventory.md §4 - 7 dead transcripts, 266 usable.",
+      "state": "OBSERVED",
+      "text": "Seven of the 273 transcript rows came back with no words at all."
+    },
+    {
+      "source": "data/analysis/transcripts/*.json notes: every one of the 118 flagged files names a proper noun, a model name or a figure, and none reports a mangled ordinary sentence.",
+      "state": "OBSERVED",
+      "text": "The failure is concentrated in proper nouns, figures and single mentions rather than spread evenly through the text."
+    },
+    {
+      "source": "No before-and-after count has been run. The reel says what the check looks at, not what it prevents.",
+      "state": "TO_MEASURE",
+      "text": "The five-field check reduces the number of wrong fields that reach the reader."
+    },
+    {
+      "source": "Not asserted on screen. No timing was measured and POSITIONING.md §6 forbids a time-saving claim without evidence.",
+      "state": "MISSING",
+      "text": "That the check saves time, or that a one-minute review replaces a ten-minute one."
+    },
+    {
+      "source": "Our 266 are one model, language forced to English (reports/audit/02-data-inventory.md §4). The reel states the shape of the mistake, never a rate.",
+      "state": "MISSING",
+      "text": "The error rate a viewer should expect on their own recordings, in another accent, another language or another transcriber."
+    },
+    {
+      "source": "No footage exists and no such module exists in the repository - the five-field check appears only in reports/analysis/08-hypotheses.md H-12 and in this card, never in engine/ or in a run log. It is a human checklist that can genuinely be performed on camera against a real transcript file, but it must be filmed before the card is shot; asserting the run without the recording would break hard rule 2.",
+      "state": "PLANNED",
+      "text": "The five-field check shown running against one of the bad files is recorded on the shoot day. It is the check we adopted after this failure, not a tool that already exists in our pipeline."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Screenshot of our own transcript file with the mis-written product name visible (real, from data/analysis/transcripts)",
+      "Screen recording of the five-field check running against that same file",
+      "Presenter A-roll, one continuous take, one location, banner plate fixed",
+      "Caption text of the five fields, published in the post caption, not gated"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 40px, Paper on an Ink plate with 24px padding, bottom safe zone, two lines maximum. One persistent Ink banner plate in Saira SemiCondensed Black at the top carrying the promise for the whole reel, per design/rules/typography.md. No emoji anywhere on screen.",
+    "cut_timing": "Six sections, four visible cuts, and every one of them is a full-frame screen insert replacing the presenter or the presenter returning. The presenter material is one continuous take, per PRODUCTION.md - a change of speaker is the only cut we allow, and there is no speaker change in this reel.",
+    "emphasis": "Oxide is used exactly twice, both times on the wrong word in our own file, and never on a heading or a mood. Every number spoken appears on screen as the same digits and nowhere else.",
+    "motion": "Linear easing only, per design/rules/motion.md. No bounce, no gradients, no rounded corners, no centred text.",
+    "zooms": "One slow ui_zoom onto the mismatched row in the proof scene. No zoom on any A-roll scene."
+  },
+  "format": "M2 Builds",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "We ran two hundred and sixty-six recordings through a machine. Twenty-seven came back with the wrong product name in them.",
+      "type": "result_first"
+    },
+    {
+      "is_question": false,
+      "text": "Twenty-seven of our two hundred and sixty-six machine-written pages have a company name in them that is a different word entirely.",
+      "type": "number_stat"
+    },
+    {
+      "is_question": true,
+      "text": "Would you catch the wrong product name on a page that reads perfectly? Twenty-seven of ours went straight through.",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-12",
+  "references": [
+    {
+      "code": "DYC-x8DogOI",
+      "creator_median_play": 4945.5,
+      "function": "hook",
+      "play": 1980128,
+      "reason": "Highest view_lift in the 266-reel analysis-ready corpus (399.4x) and the hook does three things in eleven seconds: states the result, names the exact quantity, then starts the breakdown before the sentence is finished. Screen-first opening (SCREENSHOT as frame 0) with 59.9 saves per 1 000. The contact sheet shows the shape we take: the artefact occupies the full frame above the presenter, with a caption pill sitting on the seam.",
+      "save_rate": 0.05994,
+      "share_rate": 0.02354,
+      "transformed_how": "Borrowed: result plus an exact quantity in the opening sentence, with the breakdown starting before the hook finishes. Changed: our quantity is an error count rather than an achievement, and there is no price anchor, because a price contrast we have not measured is a claim we cannot make. Our own analysis flags this reel and DWCPx0PkQzA as the same template running on two accounts, so we treat the pair as one structure, not two pieces of evidence.",
+      "url": "https://www.instagram.com/reel/DYC-x8DogOI/",
+      "useful_frame": {
+        "scene_id": "DYC-x8DogOI-S00",
+        "what": "frame 0 is a full-bleed screenshot of the finished artefact, no presenter yet, caption pill at the seam"
+      },
+      "useful_transcript": {
+        "beat_id": "DYC-x8DogOI-B0",
+        "quote": "I just built a website that looks like it costs $10,000 with literally one line of code and honestly the whole thing took Claude about two minutes."
+      },
+      "username": "valeridoesai",
+      "view_lift": 399.39
+    },
+    {
+      "code": "DcoE5ZsK4I7",
+      "creator_median_play": 12677.5,
+      "function": "explanation",
+      "play": 30192,
+      "reason": "The only reel from a CONSISTENT creator in the 40-reel pool (damini.knows, 14 videos, CV 0.64) with above-median share and save rates (36.1 and 62.4 per 1 000). Its lift of 1.38x is a finding rather than a lottery win. Every claim is settled by the screen within about two seconds of being made, so nothing is taken on trust.",
+      "save_rate": 0.06237,
+      "share_rate": 0.03614,
+      "transformed_how": "Borrowed: the pacing - every claim followed within two seconds by the screen that settles it, and no separate proof block bolted on. Changed: our screen shows the step producing a wrong result, which this reel never does. We do not copy its SPLIT_SCREEN middle (4.0-41.1s), the corpus's least-rewarded arrangement (I-10), and we do not borrow its method, which our own analysis note flags as raising an unaddressed attribution question.",
+      "url": "https://www.instagram.com/reel/DcoE5ZsK4I7/",
+      "useful_frame": {
+        "scene_id": "DcoE5ZsK4I7-S01",
+        "what": "UI_DEMO insert where the tool's output panel replaces the presenter full-frame at the moment the claim is made"
+      },
+      "useful_transcript": {
+        "beat_id": "DcoE5ZsK4I7-B2",
+        "quote": "You see, it has given me full design and color code and fonts."
+      },
+      "username": "damini.knows",
+      "view_lift": 1.38
+    },
+    {
+      "code": "DMQMNNHSJRF",
+      "creator_median_play": 7281.0,
+      "function": "screen_proof",
+      "play": 140763,
+      "reason": "The spoken hook is flat - a plain topic announcement - and the screen carries the whole reel, which is the evidence that a screen can do the work when the words are ordinary. More useful still, it volunteers its own limitation near the end rather than closing on the recommendation. 35.1 shares per 1 000 on an 18.3x lift, robust_z 2.89. Save rate 0.0508 is read from the one snapshot that returned a save count (snapshot 2: 7 146 saves on 140 686 plays); the other two snapshots returned none.",
+      "save_rate": 0.05079,
+      "share_rate": 0.03514,
+      "transformed_how": "Borrowed: a volunteered limitation placed near the end, spoken over the screen in the presenter's own voice. Changed: our caveat is about what our own check still misses rather than about a library's performance, and it is the closing argument rather than an aside. We do not borrow its 105-second length or its topic-announcement opening, which the hook data shows to be the weakest family (I-06).",
+      "url": "https://www.instagram.com/reel/DMQMNNHSJRF/",
+      "useful_frame": {
+        "scene_id": "DMQMNNHSJRF-S03",
+        "what": "the presenter is keyed small into the bottom of a full-frame screen while the caveat is spoken, so the limitation is delivered over the evidence, not away from it"
+      },
+      "useful_transcript": {
+        "beat_id": "DMQMNNHSJRF-B5",
+        "quote": "But remember one thing, if you use too much animation, the website gets laggy. So make sure to use as much as you need."
+      },
+      "username": "wokecoder",
+      "view_lift": 18.33
+    },
+    {
+      "code": "DWCPx0PkQzA",
+      "creator_median_play": 7471.0,
+      "function": "transition",
+      "play": 1074517,
+      "reason": "The teach-then-automate reveal at 47-58s: the entire manual recipe is given away first, so the short version arrives as a favour rather than as a withheld prize. 142.8x lift, 20.7 shares and 57.3 saves per 1 000, and an A>SCREEN>A shape with a 44-second unbroken screen in the middle. The contact sheet shows the screen is filmed off a real monitor rather than screen-recorded, which is what makes it read as first-hand.",
+      "save_rate": 0.0573,
+      "share_rate": 0.0207,
+      "transformed_how": "Borrowed: give the whole manual version first, then reveal the short version - the transition that makes a handover feel like generosity. Changed: our short version is a five-field check published in the caption rather than a repository behind a comment keyword, which inverts the reel's actual mechanism; and we keep the failure in, which the original has no reason to show.",
+      "url": "https://www.instagram.com/reel/DWCPx0PkQzA/",
+      "useful_frame": {
+        "scene_id": "DWCPx0PkQzA-S01",
+        "what": "44-second unbroken filmed-monitor insert carrying the whole mechanism, persistent black title plate held above it"
+      },
+      "useful_transcript": {
+        "beat_id": "DWCPx0PkQzA-B3",
+        "quote": "Normandy would take you four steps to create beautiful websites like this But I've created a github repo where all you need to do is copy one line of code"
+      },
+      "username": "tenfoldmarc",
+      "view_lift": 142.83
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-02.json",
+  "review": {
+    "findings": [
+      "[evidence] claims[1] asserted '118 of 266 notes record at least one mangled proper noun, product name or figure'. Recounted from data/analysis/transcripts/*.json: 118 is not reproducible under any rule tried (an explicit quoted correction gives 140, a looser mapping rule 167, any mention of the transcription 191) → claim rewritten to the two figures that are mechanically reproducible (191 discuss the transcription, 140 name a specific wrong word) and the 'mangled proper noun' count added separately as TO_MEASURE. Not spoken on screen, so the script is unaffected.",
+      "[evidence] The headline 27 of 266 reproduces exactly: 27 notes record Claude / Claude Code written as 'cloud', 'clouds', 'cloth', 'claw', 'clawed' or 'Clawd'; three notes matching those words refer to OpenClaw or Google Cloud and are excluded. The counting rule and the exclusions are now written into claims[0].source, so the number can be re-derived → kept.",
+      "[evidence] The hook said 'the wrong company name' while claims[0], strategy.concept and the data all say product name (Claude is a product; the company is never named) → changed to 'the wrong product name' in the script, in the storyboard and in all three hook candidates. Word count and timing unchanged.",
+      "[evidence] The card presents the five-field check as something we already run and the storyboard asks for a screen recording of it, but no such module exists in the repository and no claim recorded it as PLANNED - unlike C-2026-09-12-06 and -08, which flag their demos → a PLANNED claim added, and the card must not be shot until that footage exists. The script is unchanged: a human checklist read against a real transcript file is genuinely filmable.",
+      "[evidence] The hypothesis proof's '11 correct and 7 incorrect' is indeed not reproducible from data/analysis/transcripts; the writer's decision to drop it for the 27 count is confirmed → left.",
+      "[evidence] All four references re-derived from data/radar.db reels: play, creator_median_play, view_lift, share_rate and save_rate match to the last digit, and all four function tags match data/analysis/hypothesis_refs.json → left.",
+      "[source relevance] DYC-x8DogOI's 'highest view_lift in the corpus' is true of the 266-reel analysis-ready corpus only — the full 3 211-reel corpus has higher → qualified in references[0].reason.",
+      "[source relevance] The four reference quotes are verbatim from the beat ids given, and the script shares no five-word sequence with any of the four transcripts → left.",
+      "[originality] 'Every one of the 84 screen-demo reels shows the thing working' was asserted without a source; it is in fact supported by reports/analysis/01-general-conclusions.md §G writing rule 12 ('Nothing in the corpus shows a failure') → citation added to strategy.rationale and traceability.original_synthesis.",
+      "[visual] The second screen insert lands at 29.2 s, not the 28.8 s the writer's note stated, and rule 12 asks for proof at 20-25 s. Accepted because the reel opens on a screen at 0.0 s (I-09, RELIABLE) and the failure itself is the first proof visual → left, note corrected.",
+      "[hook] Hook is 20 words / 8.0 s, exactly the ceiling and inside the corpus band (median 6.7 s / 21.5 words, I-03); three candidates, one question, first one used → left.",
+      "[positioning] No vendor named anywhere, no split screen (I-10), no comment gate (RULES.md §1.2, I-12), no time-saving or client claim (POSITIONING.md §6), CTA is save_share with the artefact published in the caption → left.",
+      "[timing] sections sum to 163 words / 65.2 s at 2.5 wps, every section = words/wps to 0.1 s, storyboard contiguous 0.0-65.2 s with no scene under 1.5 s and every overlay ≤ 7 words → left.",
+      "[schema] python3 -m engine.cards_v2 validate → 0 errors, 0 warnings after the edits."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the relief of being told exactly where to look, instead of being told to check everything",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 8.0,
+        "text": "We ran two hundred and sixty-six recordings through a machine. Twenty-seven came back with the wrong product name in them.",
+        "words": 20
+      },
+      {
+        "role": "problem",
+        "seconds": 9.6,
+        "text": "You type up a call, forward the summary, and somebody acts on it. The page reads finished, so nobody rereads it. Nothing is underlined.",
+        "words": 24
+      },
+      {
+        "role": "explanation",
+        "seconds": 11.6,
+        "text": "It does not fail at random. It fails on the parts that carry no context: proper nouns, figures, and anything said only once. The sentences around them stay clean.",
+        "words": 29
+      },
+      {
+        "role": "proof",
+        "seconds": 12.4,
+        "text": "So the check is small. Five fields, the same five every time. Names, numbers, dates, decisions, and who owes what. Here it is running against one of the bad files. There.",
+        "words": 31
+      },
+      {
+        "role": "payoff",
+        "seconds": 16.0,
+        "text": "And here is what it does not catch on its own. When the machine writes a name as another real word every single time, the page still reads clean. So check the five against the recording, not against the page.",
+        "words": 40
+      },
+      {
+        "role": "cta",
+        "seconds": 7.6,
+        "text": "The five fields are in the caption, not behind a comment. Send this to whoever types up your calls.",
+        "words": 19
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "plain, unhurried, self-critical; a builder showing the broken output first",
+    "total_s": 65.2,
+    "total_words": 163,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-02_S00.png",
+      "asset_status": "template",
+      "editing": "Hold the boxed word for the whole eight seconds. The Ink banner plate carrying the promise appears on frame one and stays for the entire reel.",
+      "end_s": 8.0,
+      "frame_type": "SCREENSHOT",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "27 of 266 files",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "We ran two hundred and sixty-six recordings through a machine. Twenty-seven came back with the wrong product name in them.",
+      "source_inspiration": [
+        {
+          "code": "DYC-x8DogOI",
+          "scene_id": "DYC-x8DogOI-S00",
+          "why": "frame 0 is the artefact full-bleed with the result already visible, presenter absent"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full-frame screenshot of one of our own transcript files, scrolled to the line where the product name is written as a different word. The wrong word is boxed in Oxide; the sentence around it is untouched. No presenter yet."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-02_S01.png",
+      "asset_status": "template",
+      "editing": "First appearance of the presenter. No cut inside the section.",
+      "end_s": 17.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 1,
+      "layout": "a_roll",
+      "overlay_text": "The page reads finished",
+      "scene_id": "S01",
+      "script_role": "problem",
+      "script_text": "You type up a call, forward the summary, and somebody acts on it. The page reads finished, so nobody rereads it. Nothing is underlined.",
+      "source_inspiration": [
+        {
+          "code": "DWCPx0PkQzA",
+          "scene_id": "DWCPx0PkQzA-S02",
+          "why": "the face is where the interpretation is delivered; the screen carried the claim"
+        }
+      ],
+      "start_s": 8.0,
+      "transition": "hard_cut",
+      "visual": "Michael, medium shot, one location, banner plate held above him."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-02_S02.png",
+      "asset_status": "template",
+      "editing": "Same unbroken take as the previous scene, no speaker change. Each word lands on its stressed syllable and none of them leaves.",
+      "end_s": 29.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 2,
+      "layout": "a_roll",
+      "overlay_text": "Names. Numbers. Said once.",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "It does not fail at random. It fails on the parts that carry no context: proper nouns, figures, and anything said only once. The sentences around them stay clean.",
+      "source_inspiration": [],
+      "start_s": 17.6,
+      "transition": "text_punch_in",
+      "visual": "Same take continuing. Three words punch in one at a time beside him as he says them."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-02_S03.png",
+      "asset_status": "template",
+      "editing": "Recorded as a separate full-frame insert, so the presenter take is still one continuous shot. One slow ui_zoom onto the fourth row on the word 'There'.",
+      "end_s": 41.6,
+      "frame_type": "SCREEN_RECORDING",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "Five fields, every time",
+      "scene_id": "S03",
+      "script_role": "proof",
+      "script_text": "So the check is small. Five fields, the same five every time. Names, numbers, dates, decisions, and who owes what. Here it is running against one of the bad files. There.",
+      "source_inspiration": [
+        {
+          "code": "DcoE5ZsK4I7",
+          "scene_id": "DcoE5ZsK4I7-S01",
+          "why": "the screen settles the claim within two seconds of it being made, no separate proof block"
+        },
+        {
+          "code": "DWCPx0PkQzA",
+          "scene_id": "DWCPx0PkQzA-S01",
+          "why": "one unbroken filmed-monitor insert carries the whole mechanism"
+        }
+      ],
+      "start_s": 29.2,
+      "transition": "hard_cut",
+      "visual": "Full-frame recording of the five-field check running against the same file from scene one. The five field names sit in a fixed column on the left; the fourth row turns Oxide when the check hits the mismatch."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-02_S04.png",
+      "asset_status": "template",
+      "editing": "The payoff and the limitation are the same beat. No music swell, no emphasis beyond the banner.",
+      "end_s": 57.6,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 4,
+      "layout": "a_roll",
+      "overlay_text": "Check against the recording",
+      "scene_id": "S04",
+      "script_role": "payoff",
+      "script_text": "And here is what it does not catch on its own. When the machine writes a name as another real word every single time, the page still reads clean. So check the five against the recording, not against the page.",
+      "source_inspiration": [
+        {
+          "code": "DMQMNNHSJRF",
+          "scene_id": "DMQMNNHSJRF-S03",
+          "why": "the limitation is volunteered near the end, in the speaker's own voice, over the evidence"
+        }
+      ],
+      "start_s": 41.6,
+      "transition": "hard_cut",
+      "visual": "Michael back on camera, same framing and light. The scene-one screenshot returns as a small inset in the last three seconds, with the wrong word still boxed."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-02_S05.png",
+      "asset_status": "template",
+      "cta_type": "save_share",
+      "editing": "One ask only. Hold the last frame for one second before the cut.",
+      "end_s": 65.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "Five fields, in the caption",
+      "scene_id": "S05",
+      "script_role": "cta",
+      "script_text": "The five fields are in the caption, not behind a comment. Send this to whoever types up your calls.",
+      "source_inspiration": [
+        {
+          "code": "DWCPx0PkQzA",
+          "scene_id": "DWCPx0PkQzA-S02",
+          "why": "the handover is given away rather than gated, and the close sits on the face"
+        }
+      ],
+      "start_s": 57.6,
+      "transition": "none",
+      "visual": "Same take, no reframe. Michael holds still for the closing line."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company responsible for one repeated process. Specifically anyone turning calls, forms or documents into text that somebody else will act on.",
+    "concept": "We put two hundred and sixty-six recordings through a machine transcriber and kept the mistakes in. Twenty-seven of them came back with the same product name written as a different, real word, and the sentences around it read perfectly. The reel gives away the five-field check we now run before machine-written text is forwarded, and then names the one failure the check cannot catch on its own.",
+    "filter": {
+      "ai_boundary": "The machine transcribes and extracts. A person checks a short, fixed list of fields against the source recording before the text moves on to anyone else; the person does not reread the page for sense, they check five named fields.",
+      "friction": "The machine-written page reads finished. It is wrong in exactly the places that carry no context - names, figures, anything said once - and because the sentences around the mistake are clean, nobody rereads a page that looks correct.",
+      "next_action": "Write down the five fields in your own documents that must never be wrong, and check only those, against the recording.",
+      "process": "Turning a recording or a document into text that another person will act on: the call summary, the meeting note, the intake form, the invoice line that gets typed up once a week and forwarded to somebody else."
+    },
+    "objective": "Get one viewer to write down the five fields in their own documents that must never be wrong, and to check those five against the recording rather than rereading the page.",
+    "pain": "manual_repetition",
+    "positioning": "builder",
+    "promise": "A fixed, five-field check on the step where a recording becomes text somebody acts on, plus an honest account of what that check still misses.",
+    "rationale": "84 of 266 analysed reels prove with a screen demo (I-18) and none of them shows a failure (reports/analysis/01-general-conclusions.md §G, writing rule 12: 'Nothing in the corpus shows a failure'); showing the same screen with the mistake left in is unrepresented in the corpus. Handing the artefact over instead of gating it is what the save evidence rewards: resource_handoff carries the corpus's highest save rate at 0.0429 (reports/analysis/01-general-conclusions.md §B), and the comment gate that usually carries it is banned by RULES.md §1.2 and buys no reach (I-12)."
+  },
+  "title": "The wrong name in twenty-seven files",
+  "traceability": {
+    "evidence_summary": "Our own transcription run wrote 266 files and the per-file notes record 27 of them carrying the same product name as a different real word, with 191 of 266 notes discussing the transcription at all, 140 of them naming a specific word it got wrong, and 7 of 273 rows coming back empty. The failure is not spread evenly: it lands on proper nouns, figures and single mentions, which is what makes a fixed five-field check possible instead of a full reread. The four references supply structure only: DYC-x8DogOI (399.4x lift, 59.9 saves/1k) the result-plus-quantity opening, DcoE5ZsK4I7 (the pool's only CONSISTENT creator, 62.4 saves/1k) the claim-then-screen pacing, DMQMNNHSJRF (35.1 shares/1k) the volunteered limitation spoken over the screen, DWCPx0PkQzA (142.8x, 57.3 saves/1k) the teach-then-hand-over transition. The visual grammar follows I-09: the reel opens on the screen, where the 35 screen-first reels carry median share_rate 0.0213 against 0.0140 and the creator-normalised correlation (+0.285, p=0.00025) is stronger than the pooled one.",
+    "hypothesis": "H-12",
+    "insights": [
+      "I-08",
+      "I-09",
+      "I-13",
+      "I-18",
+      "I-11",
+      "I-15",
+      "I-29"
+    ],
+    "original_synthesis": "The failure is ours, dated and reproducible from our own files, and the reel shows the broken output rather than the working one - which none of the 84 screen-demo reels in the analysed corpus does (01-general-conclusions §G, rule 12). The five-field check and the admission that it cannot catch a consistently mis-spelled name are both ours; nothing in the corpus states what its own method misses.",
+    "why_better_than_generic": "A generic AI script would say 'always review AI output' and show the tool working. This one names the exact shape of the failure (proper nouns, figures, single mentions), gives away the artefact in the caption rather than gating it behind a comment - the gate is banned by RULES.md §1.2 and I-12 shows it buys no reach - and then closes by naming the one case the artefact cannot handle, which is the opposite of what a promotional script does."
+  }
+}

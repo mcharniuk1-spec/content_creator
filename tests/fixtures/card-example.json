@@ -1,0 +1,184 @@
+{
+  "schema": "m2radar.card.v2",
+  "card_id": "C-2026-09-11-EX",
+  "hypothesis_id": "H-2026-09-11-EX",
+  "format": "M2 Builds",
+  "title": "EXAMPLE — not a real card",
+  "strategy": {
+    "concept": "We ran our own weekly card-selection ranker on a repeated internal question and show where it broke.",
+    "audience": "Small AI/automation studios of 1-5 people who already run some AI workflow but track it in spreadsheets.",
+    "objective": "Show one honest process teardown with a specific, checkable number, not a generic AI tip.",
+    "positioning": "builder",
+    "pain": "chaos_no_process",
+    "promise": "One repeatable check you can run on your own ranking before you trust it.",
+    "rationale": "The reference reel got 9.1x its own author's median play by admitting a process gap instead of selling a fix; we mirror the structure, not the topic.",
+    "filter": {
+      "process": "Every Monday our ranker picks the week's candidate reels from the eligible pool and writes the shot-plan columns automatically.",
+      "friction": "The ranker sorted a 654-view reel above a 25,000-view one because it ranks by save-rate, which is not view-normalised.",
+      "ai_boundary": "The model proposes the ranked order; a human still reads the transcript and contact sheet before anything is scripted.",
+      "next_action": "Add a view-floor gate before the save-rate sort ships in next week's run."
+    }
+  },
+  "references": [
+    {
+      "code": "Dc_tsSeAjBy",
+      "username": "example_creator_one",
+      "url": "https://www.instagram.com/reel/Dc_tsSeAjBy/",
+      "function": "hook",
+      "play": 2350035,
+      "creator_median_play": 257026,
+      "view_lift": 8.1,
+      "share_rate": 0.061,
+      "save_rate": 0.031,
+      "reason": "Opens on a repeated manual task with a number in the first three seconds, no jargon.",
+      "useful_transcript": {"beat_id": "b0", "quote": "Somebody retypes the same numbers from a PDF every week."},
+      "useful_frame": {"scene_id": "S00", "what": "close-up talking head, no on-screen text yet"},
+      "transformed_how": "Borrowed the plain-number-in-3-seconds structure; swapped the PDF-retyping task for our own ranker anecdote."
+    },
+    {
+      "code": "DcmK70aO5VP",
+      "username": "example_creator_two",
+      "url": "https://www.instagram.com/reel/DcmK70aO5VP/",
+      "function": "proof",
+      "play": 654000,
+      "creator_median_play": 344210,
+      "view_lift": 1.9,
+      "share_rate": 0.04,
+      "save_rate": 0.062,
+      "reason": "Names the exact before/after numbers instead of a vague improvement claim.",
+      "useful_transcript": {"beat_id": "b4", "quote": "We dropped the two riskiest verticals and kept the cheap-to-fail one."},
+      "useful_frame": {"scene_id": "S03", "what": "split screen: dashboard left, presenter right"},
+      "transformed_how": "Reused the named-number proof beat; the underlying number is our own ranker's, not theirs."
+    },
+    {
+      "code": "DcvBtiNtbYO",
+      "username": "example_creator_three",
+      "url": "https://www.instagram.com/reel/DcvBtiNtbYO/",
+      "function": "cta",
+      "play": 890000,
+      "creator_median_play": 254285,
+      "view_lift": 3.5,
+      "share_rate": 0.06,
+      "save_rate": 0.057,
+      "reason": "Closes with one concrete next action instead of a generic follow-for-more.",
+      "useful_transcript": {"beat_id": "b6", "quote": "We are testing the fix next week and will say if it held."},
+      "useful_frame": {"scene_id": "S06", "what": "medium shot, hand gesture toward camera on the closing line"},
+      "transformed_how": "Reused the next-week-we-test-it closing shape; the test itself is our own."
+    }
+  ],
+  "hooks": [
+    {"text": "Our own ranking script put a 654-view reel above a 25,000-view one. Here is why.", "type": "bold_claim", "is_question": false},
+    {"text": "Would you trust a ranker that can't tell 654 views from 25,000?", "type": "question", "is_question": true},
+    {"text": "We found the exact line of code that broke our card ranking.", "type": "curiosity_gap", "is_question": false}
+  ],
+  "script": {
+    "version": 2,
+    "sections": [
+      {"role": "hook", "text": "Our own ranking script put a 654-view reel above a 25,000-view one. Here is why.", "words": 17, "seconds": 4.0},
+      {"role": "setup", "text": "Every Monday our ranker reads the week's eligible reels and writes a shot plan automatically, no human in the loop yet.", "words": 20, "seconds": 6.0},
+      {"role": "problem", "text": "It ranks by save-rate per thousand views, not by raw views, so a small reel with a high ratio can outrank a much bigger one.", "words": 23, "seconds": 10.0},
+      {"role": "explanation", "text": "That is fine when both reels have enough views to trust the ratio. It breaks when one of them barely has any.", "words": 22, "seconds": 12.0},
+      {"role": "proof", "text": "This week it picked a 654-view reel over one with 25,000 views, because the small one had a slightly higher save-rate.", "words": 21, "seconds": 13.0},
+      {"role": "payoff", "text": "We are adding a minimum-view floor before the save-rate sort even runs, so a tiny sample can't win on ratio alone.", "words": 21, "seconds": 8.0},
+      {"role": "cta", "text": "We are testing the fix next week and will say here if it held.", "words": 14, "seconds": 7.0}
+    ],
+    "total_words": 138,
+    "total_s": 60.0,
+    "target_wps": 2.3,
+    "tone": "plain, self-critical, specific",
+    "emotional_effect": "relief that someone finally checked the thing everyone assumes just works"
+  },
+  "storyboard": [
+    {
+      "scene_id": "S00", "idx": 0, "start_s": 0.0, "end_s": 4.0,
+      "script_text": "Our own ranking script put a 654-view reel above a 25,000-view one. Here is why.",
+      "script_role": "hook", "frame_type": "A_ROLL_CLOSE_UP", "layout": "a_roll",
+      "visual": "Misha, close-up, direct to camera, plain background",
+      "overlay_text": "654 views > 25,000 views?", "transition": "hard_cut",
+      "source_inspiration": [{"code": "Dc_tsSeAjBy", "scene_id": "S00", "why": "same close-up-with-number hook shape"}],
+      "asset_status": "missing", "asset_path": null, "editing": "hold on the number overlay for the full 4s"
+    },
+    {
+      "scene_id": "S01", "idx": 1, "start_s": 4.0, "end_s": 10.0,
+      "script_text": "Every Monday our ranker reads the week's eligible reels and writes a shot plan automatically, no human in the loop yet.",
+      "script_role": "setup", "frame_type": "A_ROLL_MEDIUM", "layout": "a_roll",
+      "visual": "Misha, medium shot, same background", "overlay_text": "Every Monday, automatically", "transition": "hard_cut",
+      "source_inspiration": [], "asset_status": "missing", "asset_path": null, "editing": "no cuts within the section"
+    },
+    {
+      "scene_id": "S02", "idx": 2, "start_s": 10.0, "end_s": 20.0,
+      "script_text": "It ranks by save-rate per thousand views, not by raw views, so a small reel with a high ratio can outrank a much bigger one.",
+      "script_role": "problem", "frame_type": "UI_DEMO", "layout": "demo",
+      "visual": "screen recording of the ranker's own output table, save-rate column highlighted",
+      "overlay_text": "Ranks by save-rate, not views", "transition": "hard_cut",
+      "source_inspiration": [], "asset_status": "missing", "asset_path": null, "editing": "zoom on the save-rate column"
+    },
+    {
+      "scene_id": "S03", "idx": 3, "start_s": 20.0, "end_s": 32.0,
+      "script_text": "That is fine when both reels have enough views to trust the ratio. It breaks when one of them barely has any.",
+      "script_role": "explanation", "frame_type": "SPLIT_SCREEN", "layout": "split_screen",
+      "visual": "top: two bars, one tiny one large, both same height ratio; bottom: Misha talking",
+      "overlay_text": "Fine at scale. Breaks at 654 views.", "transition": "hard_cut",
+      "source_inspiration": [{"code": "DcmK70aO5VP", "scene_id": "S03", "why": "same split-screen proof-then-presenter shape"}],
+      "asset_status": "missing", "asset_path": null, "editing": "bars animate in from zero"
+    },
+    {
+      "scene_id": "S04", "idx": 4, "start_s": 32.0, "end_s": 45.0,
+      "script_text": "This week it picked a 654-view reel over one with 25,000 views, because the small one had a slightly higher save-rate.",
+      "script_role": "proof", "frame_type": "DATA_VISUAL", "layout": "demo",
+      "visual": "screen: the actual ranker output row for both reels side by side, real numbers",
+      "overlay_text": "654 views, 6.2% saves > 25,000 views, 3.1% saves", "transition": "hard_cut",
+      "source_inspiration": [{"code": "DcmK70aO5VP", "scene_id": "S03", "why": "named-number proof beat"}],
+      "asset_status": "missing", "asset_path": null, "editing": "hold on the two numbers, no motion"
+    },
+    {
+      "scene_id": "S05", "idx": 5, "start_s": 45.0, "end_s": 53.0,
+      "script_text": "We are adding a minimum-view floor before the save-rate sort even runs, so a tiny sample can't win on ratio alone.",
+      "script_role": "payoff", "frame_type": "MOTION_GRAPHIC", "layout": "motion_graphic",
+      "visual": "statement card: 'Add a view floor before the ratio sort.'",
+      "overlay_text": "Add a view floor before the ratio sort.", "transition": "hard_cut",
+      "source_inspiration": [], "asset_status": "missing", "asset_path": null, "editing": "no motion beyond the accent rule"
+    },
+    {
+      "scene_id": "S06", "idx": 6, "start_s": 53.0, "end_s": 60.0,
+      "script_text": "We are testing the fix next week and will say here if it held.",
+      "script_role": "cta", "frame_type": "A_ROLL_MEDIUM", "layout": "a_roll",
+      "visual": "Misha, medium shot, hand gesture toward camera on the closing line",
+      "overlay_text": "Testing next week. We'll say if it held.", "transition": "hard_cut",
+      "source_inspiration": [{"code": "DcvBtiNtbYO", "scene_id": "S06", "why": "same next-week-we-test-it closing shape"}],
+      "asset_status": "missing", "asset_path": null, "editing": "hold on last frame 1s before cut", "cta_type": "next_video"
+    }
+  ],
+  "editing": {
+    "cut_timing": "one hard cut per script section, seven cuts total, no cuts inside a section",
+    "captions": "burned-in, two lines max, Plex Sans SemiBold, bottom safe zone",
+    "emphasis": "overlay text matches the spoken number exactly, no added claims",
+    "zooms": "slow zoom on the ranker output table in the problem and proof scenes only",
+    "motion": "linear easing only, no bounce, per rules/motion.md",
+    "assets_required": ["ranker output screenshot (real, our own)", "presenter A-roll, 3 short takes"]
+  },
+  "claims": [
+    {"text": "The ranker ranked a 654-view reel above a 25,000-view one this week.", "state": "OBSERVED", "source": "run log, week of 2026-09-08"},
+    {"text": "A minimum-view floor will be added before the save-rate sort.", "state": "PLANNED", "source": "engine/HANDOFF_NOTES.md next-action item"},
+    {"text": "The fix reduces how often a low-view reel outranks a high-view one.", "state": "TO_MEASURE", "source": "no A/B run yet"},
+    {"text": "This exact pair of reels was chosen deliberately to make a point.", "state": "MISSING", "source": "not asserted in the script; flagged here so it is not implied on screen"}
+  ],
+  "traceability": {
+    "insights": ["I-2026-09-11-01"],
+    "hypothesis": "H-2026-09-11-EX",
+    "evidence_summary": "Own ranker log shows a 654-view reel outranking a 25,000-view reel via unnormalised save-rate; three reference reels (9.1x, 1.9x, 3.5x their own authors' medians) supply the hook/proof/cta shapes only, not the topic.",
+    "original_synthesis": "No client or invented scenario: the broken ranking run is this project's own, dated and reproducible from the run log.",
+    "why_better_than_generic": "Names the exact mechanism (unnormalised ratio) and the exact fix (view floor) instead of a generic 'trust your data' message."
+  },
+  "review": {
+    "version": 1,
+    "findings": [
+      "Cut the second hook candidate's 'trust' framing — too close to a generic AI-ethics line.",
+      "Confirmed the 654 / 25,000 numbers against the week-of-09-08 run log before allowing them on screen.",
+      "Added the MISSING claim explicitly so the deliberate example choice is not implied as evidence."
+    ],
+    "revised": true
+  },
+  "remotion_edl_path": "cards/edl/C-2026-09-11-EX.json",
+  "status": "REVIEWED"
+}

@@ -1,0 +1,302 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-01",
+ "title": "Nineteen of our top twenty were there on a trick",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2052,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 240,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "19 of the top 20",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 240,
+   "duration_frames": 336,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Who re-reads the sort rule?",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 576,
+   "duration_frames": 72,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Sorted by forwards and saves",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 648,
+   "duration_frames": 348,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Saves x2.8. Forwards x1.8. Reach x1.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 996,
+   "duration_frames": 144,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Same list. Fair comparison.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1140,
+   "duration_frames": 384,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "67th and 61st became 8th and 9th",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1524,
+   "duration_frames": 300,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Compare like with like",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S07",
+   "from_frame": 1824,
+   "duration_frames": 228,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S07",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Check your own top five",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S00.png",
+   "sha256": "a4efba7caee280e5609dbad2865a7f991929f5ca60492ce48db96e0c30b88599",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S01.png",
+   "sha256": "d9138eef036ac38a3dad771e0ea063704ed70504850fbe52ccc3c44dfe244071",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S02.png",
+   "sha256": "713bf54ba3dd540644ea4aa7d6731814d416af8a0144ce1e715c83d9f434668c",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S03.png",
+   "sha256": "3f52c9aeeab91b81dd9fc9a07821d9ee50c1454093ae62978dd795182f20c592",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S04.png",
+   "sha256": "a63385a5f05436c44aadbe40287618fa3497bd54fe4a338b1d222e35a9f3d8d4",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S05.png",
+   "sha256": "b9af40b3437a5e4e6d2401bad26b2d54d463a75644f2b7fd10430ea4c69239b1",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S06.png",
+   "sha256": "e28c9a67b40e761edd682b6bb263090dc8750746e10287e4a697470ed2d5d1e3",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S07",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-01_S07.png",
+   "sha256": "1540ac5e333c6b916e32e102058cf4ee38972640df93e6643aa8322e5e43b901",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 240,
+   "text": "This is the list our system put at the top. Nineteen of the top twenty are there on a trick."
+  },
+  {
+   "from_frame": 240,
+   "duration_frames": 336,
+   "text": "You work from a list like this. Something decides which enquiry, which ticket, which invoice gets looked at first, and nobody has re-read the rule that sorts it."
+  },
+  {
+   "from_frame": 576,
+   "duration_frames": 72,
+   "text": "Ours sorted by forwards and saves."
+  },
+  {
+   "from_frame": 648,
+   "duration_frames": 348,
+   "text": "Ask people to comment a word under a post and its saves go up nearly three times, its forwards nearly double, and its reach does not move at all."
+  },
+  {
+   "from_frame": 996,
+   "duration_frames": 144,
+   "text": "So we sorted the same list again, comparing only like with like."
+  },
+  {
+   "from_frame": 1140,
+   "duration_frames": 384,
+   "text": "Eight of the top twenty are now posts that never asked for a comment. Two of them had been sixty-seventh and sixty-first. Nothing about them changed. Only what we divided by did."
+  },
+  {
+   "from_frame": 1524,
+   "duration_frames": 300,
+   "text": "The rule we added: record the habit on every item, and only compare items that share it. A ranking measures exactly what you feed it."
+  },
+  {
+   "from_frame": 1824,
+   "duration_frames": 228,
+   "text": "Find what your top five have in common that is not importance. Send this to whoever owns that list."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

@@ -1,0 +1,267 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-04",
+ "title": "Cost per run, not price per month",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2040,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 240,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Ten days. Our whole bill.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 240,
+   "duration_frames": 300,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Priced by month. Paid by run.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 540,
+   "duration_frames": 288,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "17.78 divided by 889",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 828,
+   "duration_frames": 372,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "$2.60. Every week. One run.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1200,
+   "duration_frames": 324,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Paid twice: sixteen cents",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1524,
+   "duration_frames": 276,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Price the run, then decide",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1800,
+   "duration_frames": 240,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Count the runs. Then renew.",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-04_S00.png",
+   "sha256": "ad83c7c9860e1d8579d18c007bbb9ae2a12d1a2878047ec121fdf65da7359f8e",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-04_S01.png",
+   "sha256": "ed3f774140ed4f00977a9cc669804a9cd3396f1e0b9e72d52674cc6c642510d1",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-04_S02.png",
+   "sha256": "8b1212fa41c156c6f1d9aa66dea9a8ac8932b83c9a1bcb85fb1e54b656bfe123",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-04_S03.png",
+   "sha256": "ca2cdb6105915380cf3a69ae5f3de90b0d2a0b0f9655a33689a615d1d5c7b72d",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-04_S04.png",
+   "sha256": "f812e09f43ca9daaaffda56d6fa7ff1732aabe30e857fb2889b700f37707f95e",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-04_S05.png",
+   "sha256": "ee204f13ee1ed57f3611bba19e7e4d34924467d59dece79df570a8b41ef81714",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-04_S06.png",
+   "sha256": "baab03d19f564b57dc4096ad0b926b5d71f47f1718e88a48a5f22f149bf9dbe1",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 240,
+   "text": "This is our whole bill for ten days. Seventeen dollars, seventy-eight cents. The number that matters is not on it."
+  },
+  {
+   "from_frame": 240,
+   "duration_frames": 300,
+   "text": "Every tool you approve is priced by the month or by the seat. Your work does not happen by the month. It happens in runs."
+  },
+  {
+   "from_frame": 540,
+   "duration_frames": 288,
+   "text": "So divide the bill by the number of times the task actually ran. Ours ran eight hundred and eighty-nine times. Two cents a run."
+  },
+  {
+   "from_frame": 828,
+   "duration_frames": 372,
+   "text": "Here is the line that repeats every week. Last week, a hundred and thirty accounts, one page each. Two dollars sixty. That is the number to defend, not the plan name."
+  },
+  {
+   "from_frame": 1200,
+   "duration_frames": 324,
+   "text": "What the bill leaves out: our own machine time, and sixteen cents we paid twice because a run broke halfway and eight answers had left the cache."
+  },
+  {
+   "from_frame": 1524,
+   "duration_frames": 276,
+   "text": "Two cents a run is nothing. Two cents a run, six hundred times a day, is another conversation. Price the run, then decide."
+  },
+  {
+   "from_frame": 1800,
+   "duration_frames": 240,
+   "text": "Before the next renewal, count how many times that task ran last month, then divide. Send this to whoever signs."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

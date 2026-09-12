@@ -1,0 +1,267 @@
+{
+  "assets": [
+    {
+      "asset_id": "img-S00",
+      "kind": "image",
+      "path": "cards/frames/C-2026-09-11-EX_S00.png",
+      "rights_approved": true,
+      "rights_receipt_id": "internal-template",
+      "sha256": "d024ba3662d521fa8ad75e9032a9a15189e8c285cb450cfe8418ffcfe75763e9"
+    },
+    {
+      "asset_id": "img-S01",
+      "kind": "image",
+      "path": "cards/frames/C-2026-09-11-EX_S01.png",
+      "rights_approved": true,
+      "rights_receipt_id": "internal-template",
+      "sha256": "d70fcebba324ca16884c539e835c7522a18dfb97ce7d48680052f330453ef5ee"
+    },
+    {
+      "asset_id": "img-S02",
+      "kind": "image",
+      "path": "cards/frames/C-2026-09-11-EX_S02.png",
+      "rights_approved": true,
+      "rights_receipt_id": "internal-template",
+      "sha256": "eb9c077673dbb51e7953124887a5b84ede96a91299351d022e0a5ef57c2e5275"
+    },
+    {
+      "asset_id": "img-S03",
+      "kind": "image",
+      "path": "cards/frames/C-2026-09-11-EX_S03.png",
+      "rights_approved": true,
+      "rights_receipt_id": "internal-template",
+      "sha256": "530309ad7f95445c9e6a96daa686dbcf0d3729aef1ddb0caf2d65eecc6ae58f3"
+    },
+    {
+      "asset_id": "img-S04",
+      "kind": "image",
+      "path": "cards/frames/C-2026-09-11-EX_S04.png",
+      "rights_approved": true,
+      "rights_receipt_id": "internal-template",
+      "sha256": "55a7a66c59fdd9a0e505997ab4e7f18538ac26b6dbd63735f581705da0c7bb62"
+    },
+    {
+      "asset_id": "img-S05",
+      "kind": "image",
+      "path": "cards/frames/C-2026-09-11-EX_S05.png",
+      "rights_approved": true,
+      "rights_receipt_id": "internal-template",
+      "sha256": "81af3d3b3691222830cb9f94a5dc5addcb14795337cffe6dfd4da48b923db79b"
+    },
+    {
+      "asset_id": "img-S06",
+      "kind": "image",
+      "path": "cards/frames/C-2026-09-11-EX_S06.png",
+      "rights_approved": true,
+      "rights_receipt_id": "internal-template",
+      "sha256": "2cc2a62552ea8122844b79a170ccf53d4db6c5b2281a6553187032dc42f6397d"
+    }
+  ],
+  "audio_stems": [],
+  "captions": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "text": "Our own ranking script put a 654-view reel above a 25,000-view one. Here is why."
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 120,
+      "text": "Every Monday our ranker reads the week's eligible reels and writes a shot plan automatically, no human in the loop yet."
+    },
+    {
+      "duration_frames": 300,
+      "from_frame": 300,
+      "text": "It ranks by save-rate per thousand views, not by raw views, so a small reel with a high ratio can outrank a much bigger one."
+    },
+    {
+      "duration_frames": 360,
+      "from_frame": 600,
+      "text": "That is fine when both reels have enough views to trust the ratio. It breaks when one of them barely has any."
+    },
+    {
+      "duration_frames": 390,
+      "from_frame": 960,
+      "text": "This week it picked a 654-view reel over one with 25,000 views, because the small one had a slightly higher save-rate."
+    },
+    {
+      "duration_frames": 240,
+      "from_frame": 1350,
+      "text": "We are adding a minimum-view floor before the save-rate sort even runs, so a tiny sample can't win on ratio alone."
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 1590,
+      "text": "We are testing the fix next week and will say here if it held."
+    }
+  ],
+  "card_id": "C-2026-09-11-EX",
+  "duration_frames": 1800,
+  "fps": 30,
+  "height": 1920,
+  "pending_audio_assets": [
+    "speech"
+  ],
+  "render_mode": "PREVIS",
+  "review_state": "REVIEWED",
+  "scenes": [
+    {
+      "duration_frames": 120,
+      "from_frame": 0,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full"
+        },
+        {
+          "asset_id": "img-S00",
+          "kind": "image",
+          "panel": "full"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "654 views > 25,000 views?"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "S00"
+    },
+    {
+      "duration_frames": 180,
+      "from_frame": 120,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full"
+        },
+        {
+          "asset_id": "img-S01",
+          "kind": "image",
+          "panel": "full"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Every Monday, automatically"
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "S01"
+    },
+    {
+      "duration_frames": 300,
+      "from_frame": 300,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full"
+        },
+        {
+          "asset_id": "img-S02",
+          "kind": "image",
+          "panel": "full"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Ranks by save-rate, not views"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "S02"
+    },
+    {
+      "duration_frames": 360,
+      "from_frame": 600,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "bottom"
+        },
+        {
+          "asset_id": "img-S03",
+          "kind": "image",
+          "panel": "full"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Fine at scale. Breaks at 654 views."
+        }
+      ],
+      "layout": "split_screen",
+      "scene_id": "S03"
+    },
+    {
+      "duration_frames": 390,
+      "from_frame": 960,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full"
+        },
+        {
+          "asset_id": "img-S04",
+          "kind": "image",
+          "panel": "full"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "654 views, 6.2% saves > 25,000 views, 3.1% saves"
+        }
+      ],
+      "layout": "demo",
+      "scene_id": "S04"
+    },
+    {
+      "duration_frames": 240,
+      "from_frame": 1350,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full"
+        },
+        {
+          "asset_id": "img-S05",
+          "kind": "image",
+          "panel": "full"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Add a view floor before the ratio sort."
+        }
+      ],
+      "layout": "motion_graphic",
+      "scene_id": "S05"
+    },
+    {
+      "duration_frames": 210,
+      "from_frame": 1590,
+      "layers": [
+        {
+          "kind": "placeholder",
+          "panel": "full"
+        },
+        {
+          "asset_id": "img-S06",
+          "kind": "image",
+          "panel": "full"
+        },
+        {
+          "kind": "text",
+          "panel": "full",
+          "text": "Testing next week. We'll say if it held."
+        }
+      ],
+      "layout": "a_roll",
+      "scene_id": "S06"
+    }
+  ],
+  "schema": "m2.remotion-edl.v1",
+  "speech_policy": "REQUIRED_RECORDED_SPEECH",
+  "title": "EXAMPLE — not a real card",
+  "width": 1080
+}

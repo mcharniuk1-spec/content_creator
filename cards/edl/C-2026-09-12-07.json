@@ -1,0 +1,267 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-07",
+ "title": "The same number in two places",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2076,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 228,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "14.4x and 1.87x. Same item.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 228,
+   "duration_frames": 288,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Two receipts, one job",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 516,
+   "duration_frames": 264,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Twelve videos. Nothing in the middle.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 780,
+   "duration_frames": 372,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Out: 19,624. In: 151,570.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1152,
+   "duration_frames": 288,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Ordinary for its author",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1440,
+   "duration_frames": 372,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "The question travels with the number",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1812,
+   "duration_frames": 264,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Definition sheet in the caption",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-07_S00.png",
+   "sha256": "6b8e4e5cbc46d89b58449b5be1c98d1172cfdf319ae2b9395ca83e6d3167254f",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-07_S01.png",
+   "sha256": "047fcea64f4fd2c8369193c9a99916664791c16be4ba0338771e956a44daf7c7",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-07_S02.png",
+   "sha256": "8b63ad2e180fb480f44e86e0dfda0aad16d736be22da08d5d1d033044293f014",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-07_S03.png",
+   "sha256": "c5959d6476c41c3f62b7507f8631dcd629264d1cfbc34464714e4b49be56e95b",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-07_S04.png",
+   "sha256": "6cc3ffc796da17e35cf731c9efff7f0be75699d2107875e7dd847a27efa728f3",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-07_S05.png",
+   "sha256": "86ee2b09b3ea89ae6d0bc0cb3b84609910014e62abc830be7a2bbd5f11dcf70c",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-07_S06.png",
+   "sha256": "a40161499a5a6d7b28693a1b91c3a6d3d28db96e4dbf2cfb667ea9c1e7ba5f4e",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 228,
+   "text": "Fourteen times normal. One point nine times normal. Same item, same week. The first one went into the plan."
+  },
+  {
+   "from_frame": 228,
+   "duration_frames": 288,
+   "text": "Think of two receipts for the same job with different totals. Both correct. Added up differently. You quote a number like that every month."
+  },
+  {
+   "from_frame": 516,
+   "duration_frames": 264,
+   "text": "We hold twelve of this person's videos. Six under twenty thousand views. Six over two hundred and eighty thousand. Nothing in between."
+  },
+  {
+   "from_frame": 780,
+   "duration_frames": 372,
+   "text": "Normal is the middle one. Leave this video out and the middle is nineteen thousand. Leave it in and the middle falls in the gap, at a hundred and fifty thousand."
+  },
+  {
+   "from_frame": 1152,
+   "duration_frames": 288,
+   "text": "Neither number is wrong. Same twelve videos, both times. Nobody checked which one the decision needed, and the video is ordinary for this author."
+  },
+  {
+   "from_frame": 1440,
+   "duration_frames": 372,
+   "text": "A number is not a fact. It is the answer to a question, and the question has to travel with it. One definition, written down once, carried everywhere the number goes."
+  },
+  {
+   "from_frame": 1812,
+   "duration_frames": 264,
+   "text": "The one-page definition sheet is in the caption. Take the figure you quote most, find the second place it is worked out."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

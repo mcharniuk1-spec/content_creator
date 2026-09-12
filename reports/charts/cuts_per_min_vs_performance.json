@@ -1,0 +1,13 @@
+{
+ "interpretation": "",
+ "limitations": "cut_metric_quality=ffmpeg_scene_0.35_count_only is a relative busy/calm signal inside this dataset only, never an absolute or externally comparable cut rate (docs/M2RADAR_ANALYSIS_METHOD.md §7.1). The analysis-ready corpus is not a random sample of the niche: deep.py only ever processed reels that score.py had already ranked near the top of their creator's output, so its median robust_z is above zero by construction. Any contrast computed inside it compares strong videos with other strong videos, not strong with average (docs/M2RADAR_ANALYSIS_METHOD.md §1.4).",
+ "method": "Scatter of cuts_per_min against robust_z; legacy (ffmpeg_scene_0.35_count_only) and detector (scene-v1) points share the same axis but are not the same measurement.",
+ "n": 282,
+ "source": "M2Radar data/radar.db, analysis-ready corpus n=268, 2026-09-12",
+ "title": "Cut frequency vs performance",
+ "variables": {
+  "color": "cut_metric_quality (grey=legacy count-only)",
+  "x": "cuts_per_min",
+  "y": "robust_z"
+ }
+}

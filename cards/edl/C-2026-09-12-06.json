@@ -1,0 +1,267 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-06",
+ "title": "The pause is the feature",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2076,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 240,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Written. Correct. Not sent.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 240,
+   "duration_frames": 288,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Feature lists never say this",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 528,
+   "duration_frames": 312,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Before. After. In between.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 840,
+   "duration_frames": 324,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Same task. Send, then hold.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1164,
+   "duration_frames": 420,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "25 steps. One waits.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1584,
+   "duration_frames": 252,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Show me where my draft waits",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1836,
+   "duration_frames": 240,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "No hold screen, no purchase",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-06_S00.png",
+   "sha256": "69adbeac70fbe46d0ee1a204552090fe0c425d89f2b66ab7a75aef0ee92f57f8",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-06_S01.png",
+   "sha256": "a39f0f961af6ca54a5f4821890407c0f096652c99093c2a4394a7043d46a225f",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-06_S02.png",
+   "sha256": "eb812fd4dbd6ee1d41aab0532cec6119da701944c0aad3898db2615879974990",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-06_S03.png",
+   "sha256": "fbdbe0afcec6970dcce677509efad35613d2e0994856f11348a56d61295657d9",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-06_S04.png",
+   "sha256": "80d4d11f6bf46573322137ff8fbd5cb9ae4177922c31a741556c69c01ff56f5b",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-06_S05.png",
+   "sha256": "e21020cb20400604db3fbc352568fb976a91f49abc2fa9d36cb1d9d87eeabb54",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-06_S06.png",
+   "sha256": "73ceab9a1cef361b674f45436057cd070d225bcb64a805f4852664f35f5e5d75",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 240,
+   "text": "Watch this reply sit here. It is written, it is right, and it goes nowhere until somebody presses the button."
+  },
+  {
+   "from_frame": 240,
+   "duration_frames": 288,
+   "text": "You are choosing a tool that writes what your customers read. The feature list says what it produces. It never says where you sit."
+  },
+  {
+   "from_frame": 528,
+   "duration_frames": 312,
+   "text": "A person can sit in three places. Before the draft, which is a form. After it is sent, which is an apology. Or here, in between."
+  },
+  {
+   "from_frame": 840,
+   "duration_frames": 324,
+   "text": "Same task, twice. First with the tool set to send. Now set to hold. One queue, one draft, one name on it, a button nobody has pressed."
+  },
+  {
+   "from_frame": 1164,
+   "duration_frames": 420,
+   "text": "We counted our own. Twenty-five named steps from a video coming in to the job being finished, and one place where it waits for a person. That person struck out nine of the last twenty-three."
+  },
+  {
+   "from_frame": 1584,
+   "duration_frames": 252,
+   "text": "So the question for the sales call is not which model is inside. It is: show me where my draft waits."
+  },
+  {
+   "from_frame": 1836,
+   "duration_frames": 240,
+   "text": "If that screen does not exist, do not buy it for anything a customer reads. Send this to whoever signs."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

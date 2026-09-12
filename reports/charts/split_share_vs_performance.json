@@ -1,0 +1,12 @@
+{
+ "interpretation": "",
+ "limitations": "Shares are estimated from 9 fixed-timecode samples per legacy video, not true screen-time fractions (docs/M2RADAR_ANALYSIS_METHOD.md §7). The analysis-ready corpus is not a random sample of the niche: deep.py only ever processed reels that score.py had already ranked near the top of their creator's output, so its median robust_z is above zero by construction. Any contrast computed inside it compares strong videos with other strong videos, not strong with average (docs/M2RADAR_ANALYSIS_METHOD.md §1.4).",
+ "method": "Scatter of split_share against robust_z, one point per analysed code.",
+ "n": 295,
+ "source": "M2Radar data/radar.db, analysis-ready corpus n=268, 2026-09-12",
+ "title": "Split-screen share vs performance",
+ "variables": {
+  "x": "split_share",
+  "y": "robust_z"
+ }
+}

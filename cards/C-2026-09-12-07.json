@@ -1,0 +1,439 @@
+{
+  "card_id": "C-2026-09-12-07",
+  "claims": [
+    {
+      "source": "reports/analysis/07-existing-cards-verdict.md section 1, card #20 DdCvFdHsnj1; reproduced from data/radar.db on 2026-09-12 (283 515 plays / 19 624 = 14.45; 283 515 / 151 569.5 = 1.87).",
+      "state": "OBSERVED",
+      "text": "One of our 23 drafted planning cards carried a headline figure of 14.4 times normal; recomputed against all twelve of that author's reels in our files the same item is 1.87 times normal."
+    },
+    {
+      "source": "scores.baseline_n = 11 and scores.author_median_play = 19 624 for DdCvFdHsnj1; video_features.creator_median_play = 151 569.5 with creator_n = 12; reels holds exactly 12 distinct codes for soojintech, all in snapshot 3. score.py excludes a reel from its own baseline and narrows to an age band only when that band itself has enough reels - baseline_n = 11 = 12 minus 1 shows the age band was not applied, so there is no narrow window and no separate history: the two figures differ only by whether the item is inside its own comparison.",
+      "state": "OBSERVED",
+      "text": "Both yardsticks come from the same twelve reels by that creator in the same snapshot. 19 624 is the middle of the eleven that are not the item itself; 151 569.5 is the middle of all twelve."
+    },
+    {
+      "source": "reels in data/radar.db, snapshot 3, username soojintech, 12 distinct codes: 7 402, 8 231, 9 725, 10 951, 13 057, 19 624, 283 515, 319 265, 325 781, 326 412, 652 304, 768 383. Middle of all twelve = (19 624 + 283 515)/2 = 151 569.5; middle of the eleven without 283 515 = 19 624.",
+      "state": "OBSERVED",
+      "text": "That creator's plays fall into two clumps with nothing between them - six reels from 7 402 to 19 624 and six from 283 515 to 768 383 - so the middle sits in the empty stretch and one removal moves it across the gap."
+    },
+    {
+      "source": "creator_stats for soojintech: n_videos 12, reliability HIGH_VARIANCE (engine/SPEC.md section 7). The 115-of-132 share is I-23, quoted in reports/analysis/09-reference-selection.md R1. Recorded so the reel does not imply a warning was ignored that would have singled this creator out.",
+      "state": "OBSERVED",
+      "text": "Our own stats already label this creator HIGH_VARIANCE on twelve videos, but the label is not diagnostic on its own: 115 of 132 creators carry it."
+    },
+    {
+      "source": "Same two rows; 151 569.5 / 19 624 = 7.72.",
+      "state": "OBSERVED",
+      "text": "The two yardsticks differ by nearly eight times: 19,624 against 151,570."
+    },
+    {
+      "source": "video_features for DdCvFdHsnj1: percentile_in_creator 54.17, robust_z 0.492, outlier_status NORMAL.",
+      "state": "OBSERVED",
+      "text": "The item is ordinary for its author: seventh of that author's twelve reels, 54th percentile, outlier_status NORMAL."
+    },
+    {
+      "source": "reports/audit/04-existing-cards-review.md row 20 (week 09-10, priority 6, 'Yes, 14.4x'); our_posts is empty, so nothing was published.",
+      "state": "OBSERVED",
+      "text": "The card was prioritised on the strength of the larger figure and was never shot."
+    },
+    {
+      "source": "reports/analysis/07-existing-cards-verdict.md §1, 'Rule this implies'; not yet enforced in the pipeline.",
+      "state": "PLANNED",
+      "text": "Every card's headline figure will be recomputed against the accumulated creator median, with the number of items behind it travelling alongside."
+    },
+    {
+      "source": "The definition sheet has not yet been used on a full weekly run.",
+      "state": "TO_MEASURE",
+      "text": "Carrying one written definition with the figure prevents the error from recurring."
+    },
+    {
+      "source": "Asserted as a parallel in the script and never claimed as measured - we have not looked inside any company's books. Flagged so the reel does not present the parallel as a finding.",
+      "state": "MISSING",
+      "text": "Every business has the same figure calculated in two places."
+    }
+  ],
+  "editing": {
+    "assets_required": [
+      "Side-by-side capture of the two figures for the same item from our own files (S00)",
+      "Capture of all twelve of that creator's rows sorted by views, with the empty stretch between the two clusters visible (S02)",
+      "The same twelve rows with the middle marked twice - this video out, then this video in - showing 19,624 and 151,570 (S03)",
+      "The same twelve rows with this video marked seventh of twelve (S04)",
+      "Max A-roll, medium shot, one location, two takes",
+      "One-page definition sheet published in the caption, not gated"
+    ],
+    "captions": "Burned-in speech captions, IBM Plex Sans SemiBold 600 at 40px, two lines maximum, bottom-anchored in Instagram zone A/B; one persistent top banner held for the whole reel.",
+    "cut_timing": "Three hard cuts, every one of them a handover between the screen and a presenter: screen to Max at 7.6 s, Max back to the screen at 17.2 s, and the screen to Max at 48.0 s. The opening frame is not a cut. The two screen blocks each run as a single take; the closing face block runs as a single take through payoff and CTA.",
+    "emphasis": "Every figure on screen is one we can open the file on: 14.4, 1.87, 19,624, 151,570. The words median, baseline and percentile appear nowhere, on screen or in speech.",
+    "motion": "Linear easing only, no bounce, per design/rules/motion.md.",
+    "zooms": "None. The two records are shown at a size that can be read without a zoom."
+  },
+  "format": "M2 Teardown",
+  "hooks": [
+    {
+      "is_question": false,
+      "text": "Fourteen times normal. One point nine times normal. Same item, same week. The first one went into the plan.",
+      "type": "result_first"
+    },
+    {
+      "is_question": false,
+      "text": "The same twelve videos gave us two different normals, seven times apart. Both were right.",
+      "type": "bold_claim"
+    },
+    {
+      "is_question": true,
+      "text": "Which number does your report use when two of them are correct?",
+      "type": "question"
+    }
+  ],
+  "hypothesis_id": "H-20",
+  "references": [
+    {
+      "code": "DaGTeJNN1GR",
+      "creator_median_play": 28959.0,
+      "function": "b_roll",
+      "play": 298226,
+      "reason": "The pool's only reel where the physical thing the number describes is itself the visual argument, cut as process B-roll around a figure being checked. An exact figure spoken over the thing it refers to is exactly how two disagreeing numbers have to be shown. 30.2 shares per 1 000, robust_z 3.41.",
+      "save_rate": 0.03611,
+      "share_rate": 0.03018,
+      "transformed_how": "Borrowed shooting the artefact the number describes while the exact figure is spoken over it. Changed: our artefact is two records carrying the same figure with different values, and we make no savings claim of any kind - the original's dollar and euro figures are recorded in our own files as unreconciled, which is precisely the defect our reel is about.",
+      "url": "https://www.instagram.com/reel/DaGTeJNN1GR/",
+      "useful_frame": {
+        "scene_id": "DaGTeJNN1GR-S03",
+        "what": "a phone held up to camera showing the arithmetic itself - a currency conversion with the claimed saving overlaid on the calculator - shot in the place the number is about"
+      },
+      "useful_transcript": {
+        "beat_id": "DaGTeJNN1GR-B1",
+        "quote": "It was 12,645 euros on booking.com. So we pasted the link and then asked it to try to find the property online and then where it was listed on other sites for cheaper."
+      },
+      "username": "aiwithremy",
+      "view_lift": 9.3
+    },
+    {
+      "code": "DUJYKENjZc5",
+      "creator_median_play": 1374.5,
+      "function": "rhythm",
+      "play": 534953,
+      "reason": "33 seconds, four named things, one per step, and the deliverable is a file - the tightest one-named-thing-per-beat cadence in the pool. 36.6 shares and 46.3 saves per 1 000. The 388x rests on a 1 374-view author median, so the cadence is the finding and the multiplier is not.",
+      "save_rate": 0.04628,
+      "share_rate": 0.03662,
+      "transformed_how": "Borrowed one named thing per step with no connective tissue, so a trace through two systems stays followable. Changed: the things named are the two places our figure is worked out rather than four products, the deliverable is a one-page definition sheet published in the caption rather than a workflow file behind a keyword, and we do not copy its floating-card layout. Our notes record this reel's tool names as heavily mis-transcribed, so nothing verbal is carried across.",
+      "url": "https://www.instagram.com/reel/DUJYKENjZc5/",
+      "useful_frame": {
+        "scene_id": "DUJYKENjZc5-S00",
+        "what": "frame one is the workflow already executing in a floating card above the presenter, one caption word at the seam, no establishing shot of anybody"
+      },
+      "useful_transcript": {
+        "beat_id": "DUJYKENjZc5-B1",
+        "quote": "Step 1, add OpenAI node to write the short script. Step 2, add a level lab to generate the voice over."
+      },
+      "username": "sharmadhruveshh",
+      "view_lift": 388.2
+    },
+    {
+      "code": "DYC-x8DogOI",
+      "creator_median_play": 4945.5,
+      "function": "screen_proof",
+      "play": 1980128,
+      "reason": "Screen, face, screen - the mirror of the talk-show-come-back pattern - with the payoff delivered over the screen at 28.9-39.2 s and the face reserved for interpretation. Highest view_lift in the corpus with 59.9 saves per 1 000, and the whole reel is 43 seconds, which is roughly where a two-number trace has to land.",
+      "save_rate": 0.05994,
+      "share_rate": 0.02354,
+      "transformed_how": "Borrowed the screen-face-screen arrangement and the habit of letting the screen carry the payoff while the face carries only the interpretation. Changed: the payoff is a correction rather than a shortcut, the $10 000 price anchor is dropped entirely because money framing runs at median view_lift 1.19 against 2.12, and the two numbers sit in one full-frame shot rather than in two half-frames.",
+      "url": "https://www.instagram.com/reel/DYC-x8DogOI/",
+      "useful_frame": {
+        "scene_id": "DYC-x8DogOI-S00",
+        "what": "opens on the finished artefact filling the frame before any face appears, then drops to a plain seated close-up only to say what it means"
+      },
+      "useful_transcript": {
+        "beat_id": "DYC-x8DogOI-B2",
+        "quote": "But here's the crazy part. We wrapped all four into one single repo. So you literally paste one line and Claude builds the whole thing."
+      },
+      "username": "valeridoesai",
+      "view_lift": 399.39
+    },
+    {
+      "code": "DVtgbY8Av6A",
+      "creator_median_play": 16490.0,
+      "function": "cta",
+      "play": 272294,
+      "reason": "The purest example of deliberate incompleteness in the pool and therefore the clearest thing we have to invert: 57.3 saves per 1 000 from 84 spoken words, where the save is bought entirely by withholding the files. Our own note also records that its hook promises fifteen items in sixty seconds and the reel is 25 seconds long and names eleven.",
+      "save_rate": 0.05728,
+      "share_rate": 0.02003,
+      "transformed_how": "Borrowed nothing of its mechanism - it is the negative example. What is borrowed is the proof that the save comes from there being something concrete to collect. Changed: we publish the one-page definition sheet in the caption and say so in the close, which converts the same impulse without the gate, and the promise in our hook is the promise the reel actually keeps.",
+      "url": "https://www.instagram.com/reel/DVtgbY8Av6A/",
+      "useful_frame": {
+        "scene_id": "DVtgbY8Av6A-S01",
+        "what": "each named item appears as a real file listing floated beside the presenter, so the withheld thing is visibly real - which is what makes the withholding work"
+      },
+      "useful_transcript": {
+        "beat_id": "DVtgbY8Av6A-B3",
+        "quote": "If you want all of my skills completely for free just come in skills and I'll send them to you."
+      },
+      "username": "albert.olgaard",
+      "view_lift": 15.51
+    }
+  ],
+  "remotion_edl_path": "cards/edl/C-2026-09-12-07.json",
+  "review": {
+    "findings": [
+      "[evidence] HARD - the mechanism was wrong. The script said the first figure compared the item 'against eleven others from one narrow window' and the second 'against everything that person had ever posted'. Neither is true: reels holds exactly twelve reels for soojintech, all in snapshot 3, and both yardsticks are computed from those same twelve. 19 624 is the middle of the eleven that are not the item (score.py excludes a reel from its own baseline); 151 569.5 is the middle of all twelve. baseline_n = 11 = 12 minus 1 proves the age band was never applied, because score.py narrows to an age band only when the band itself has enough reels. -> both explanation sections rewritten, claims[1] rewritten, S02/S03 visuals, overlays and assets rebuilt. Script version 2.",
+      "[evidence] the real cause is now in the reel: that creator's plays fall into two clumps - six from 7 402 to 19 624 and six from 283 515 to 768 383, nothing in between - so the middle sits in the empty stretch and removing one high value drops it across the gap. Added as an OBSERVED claim with all twelve play counts listed.",
+      "[evidence] 'We acted on the first one' implied action beyond what happened - reports/audit/04 row 20 records the card as drafted, week 09-10, priority 6, never shot -> 'The first one went into the plan', in the script and in hooks[0].",
+      "[evidence] added an OBSERVED claim that creator_stats labels this creator HIGH_VARIANCE, with the caveat that 115 of 132 creators carry the same label (I-23), so the reel does not imply a decisive warning was ignored. Deliberately kept out of the spoken script.",
+      "[hook] hooks[1] was hooks[0] reordered -> replaced with a distinct bold_claim on the two normals.",
+      "[visual] editing.cut_timing said 'four hard cuts, every one of them a handover'; three are handovers and the fourth was the opening frame's own transition -> S00 set to none and the count corrected to three.",
+      "[evidence] verified unchanged: 14.45 and 1.87, baseline_n 11, author_median_play 19 624, creator_median_play 151 569.5, 151 569.5 / 19 624 = 7.72, percentile_in_creator 54.17, robust_z 0.492, outlier_status NORMAL - all reproduce from video_features and scores. The figures were never the problem; their explanation was.",
+      "[pacing] left as is: the CTA carries a caption pointer and an action against general-conclusions section G rule 14."
+    ],
+    "revised": true,
+    "version": 1
+  },
+  "schema": "m2radar.card.v2",
+  "script": {
+    "emotional_effect": "the quiet worry that a figure you have quoted to someone was the other one",
+    "sections": [
+      {
+        "role": "hook",
+        "seconds": 7.6,
+        "text": "Fourteen times normal. One point nine times normal. Same item, same week. The first one went into the plan.",
+        "words": 19
+      },
+      {
+        "role": "setup",
+        "seconds": 9.6,
+        "text": "Think of two receipts for the same job with different totals. Both correct. Added up differently. You quote a number like that every month.",
+        "words": 24
+      },
+      {
+        "role": "explanation",
+        "seconds": 8.8,
+        "text": "We hold twelve of this person's videos. Six under twenty thousand views. Six over two hundred and eighty thousand. Nothing in between.",
+        "words": 22
+      },
+      {
+        "role": "explanation",
+        "seconds": 12.4,
+        "text": "Normal is the middle one. Leave this video out and the middle is nineteen thousand. Leave it in and the middle falls in the gap, at a hundred and fifty thousand.",
+        "words": 31
+      },
+      {
+        "role": "proof",
+        "seconds": 9.6,
+        "text": "Neither number is wrong. Same twelve videos, both times. Nobody checked which one the decision needed, and the video is ordinary for this author.",
+        "words": 24
+      },
+      {
+        "role": "payoff",
+        "seconds": 12.4,
+        "text": "A number is not a fact. It is the answer to a question, and the question has to travel with it. One definition, written down once, carried everywhere the number goes.",
+        "words": 31
+      },
+      {
+        "role": "cta",
+        "seconds": 8.8,
+        "text": "The one-page definition sheet is in the caption. Take the figure you quote most, find the second place it is worked out.",
+        "words": 22
+      }
+    ],
+    "target_wps": 2.5,
+    "tone": "plain, forensic, no statistics - two receipts for the same job",
+    "total_s": 69.2,
+    "total_words": 173,
+    "version": 2
+  },
+  "status": "REVIEWED",
+  "storyboard": [
+    {
+      "asset_path": "cards/frames/C-2026-09-12-07_S00.png",
+      "asset_status": "template",
+      "editing": "Both numbers on screen from frame one; nothing animates in, and nothing cuts into this frame - it is the first.",
+      "end_s": 7.6,
+      "frame_type": "DATA_VISUAL",
+      "idx": 0,
+      "layout": "demo",
+      "overlay_text": "14.4x and 1.87x. Same item.",
+      "scene_id": "S00",
+      "script_role": "hook",
+      "script_text": "Fourteen times normal. One point nine times normal. Same item, same week. The first one went into the plan.",
+      "source_inspiration": [
+        {
+          "code": "DYC-x8DogOI",
+          "scene_id": "DYC-x8DogOI-S00",
+          "why": "opens on the artefact filling the frame before any face, and lets the screen carry the claim"
+        }
+      ],
+      "start_s": 0.0,
+      "transition": "none",
+      "visual": "Full frame, no presenter: the two figures from our own files side by side, 14.4x on the left and 1.87x on the right, both labelled with the same item and the same date."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-07_S01.png",
+      "asset_status": "template",
+      "editing": "No cut inside the section; no props, the image stays in the words.",
+      "end_s": 17.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 1,
+      "layout": "a_roll",
+      "overlay_text": "Two receipts, one job",
+      "scene_id": "S01",
+      "script_role": "setup",
+      "script_text": "Think of two receipts for the same job with different totals. Both correct. Added up differently. You quote a number like that every month.",
+      "source_inspiration": [
+        {
+          "code": "DYC-x8DogOI",
+          "scene_id": "DYC-x8DogOI-S01",
+          "why": "the face appears only to say what the screen meant, then hands straight back"
+        }
+      ],
+      "start_s": 7.6,
+      "transition": "hard_cut",
+      "visual": "Max, medium shot, plain wall, direct to camera."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-07_S02.png",
+      "asset_status": "template",
+      "editing": "Highlight the lower six, then the upper six, then hold on the empty stretch between them.",
+      "end_s": 26.0,
+      "frame_type": "SCREENSHOT",
+      "idx": 2,
+      "layout": "demo",
+      "overlay_text": "Twelve videos. Nothing in the middle.",
+      "scene_id": "S02",
+      "script_role": "explanation",
+      "script_text": "We hold twelve of this person's videos. Six under twenty thousand views. Six over two hundred and eighty thousand. Nothing in between.",
+      "source_inspiration": [
+        {
+          "code": "DUJYKENjZc5",
+          "scene_id": "DUJYKENjZc5-S00",
+          "why": "one named thing per beat with no connective tissue, so a trace stays followable"
+        }
+      ],
+      "start_s": 17.2,
+      "transition": "hard_cut",
+      "visual": "Full-frame capture of all twelve of this creator's rows in our own files, sorted by views: six between seven thousand and nineteen thousand, a blank stretch, then six between two hundred and eighty thousand and seven hundred and sixty-eight thousand."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-07_S03.png",
+      "asset_status": "template",
+      "editing": "The two markers end up on screen together; hold three seconds.",
+      "end_s": 38.4,
+      "frame_type": "SCREENSHOT",
+      "idx": 3,
+      "layout": "demo",
+      "overlay_text": "Out: 19,624. In: 151,570.",
+      "scene_id": "S03",
+      "script_role": "explanation",
+      "script_text": "Normal is the middle one. Leave this video out and the middle is nineteen thousand. Leave it in and the middle falls in the gap, at a hundred and fifty thousand.",
+      "source_inspiration": [
+        {
+          "code": "DUJYKENjZc5",
+          "scene_id": "DUJYKENjZc5-S02",
+          "why": "second step given exactly the shape of the first, so the difference is the only thing that moves"
+        }
+      ],
+      "start_s": 26.0,
+      "transition": "none",
+      "visual": "The same unbroken screen take: the middle of the same twelve rows marked twice - once with this video taken out, landing on 19,624, once with it left in, landing at 151,570 inside the empty stretch."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-07_S04.png",
+      "asset_status": "template",
+      "editing": "The item's marker reveals last, seventh of twelve.",
+      "end_s": 48.0,
+      "frame_type": "DATA_VISUAL",
+      "idx": 4,
+      "layout": "demo",
+      "overlay_text": "Ordinary for its author",
+      "scene_id": "S04",
+      "script_role": "proof",
+      "script_text": "Neither number is wrong. Same twelve videos, both times. Nobody checked which one the decision needed, and the video is ordinary for this author.",
+      "source_inspiration": [
+        {
+          "code": "DaGTeJNN1GR",
+          "scene_id": "DaGTeJNN1GR-S06",
+          "why": "the exact figure spoken over the record it refers to, not over a stand-in"
+        }
+      ],
+      "start_s": 38.4,
+      "transition": "overlay_reveal",
+      "visual": "The same twelve rows: this video sits seventh of the twelve, at the bottom of the upper cluster, with both middles still marked."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-07_S05.png",
+      "asset_status": "template",
+      "editing": "No cut inside the section; overlay lands on 'travel'.",
+      "end_s": 60.4,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 5,
+      "layout": "a_roll",
+      "overlay_text": "The question travels with the number",
+      "scene_id": "S05",
+      "script_role": "payoff",
+      "script_text": "A number is not a fact. It is the answer to a question, and the question has to travel with it. One definition, written down once, carried everywhere the number goes.",
+      "source_inspiration": [
+        {
+          "code": "DYC-x8DogOI",
+          "scene_id": "DYC-x8DogOI-S02",
+          "why": "the face carries only the interpretation after the screen has carried the payoff"
+        }
+      ],
+      "start_s": 48.0,
+      "transition": "hard_cut",
+      "visual": "Max, back on camera, medium shot, same setup as the setup beat."
+    },
+    {
+      "asset_path": "cards/frames/C-2026-09-12-07_S06.png",
+      "asset_status": "template",
+      "cta_type": "free_resource",
+      "editing": "Hold the last frame one second before the cut.",
+      "end_s": 69.2,
+      "frame_type": "A_ROLL_MEDIUM",
+      "idx": 6,
+      "layout": "a_roll",
+      "overlay_text": "Definition sheet in the caption",
+      "scene_id": "S06",
+      "script_role": "cta",
+      "script_text": "The one-page definition sheet is in the caption. Take the figure you quote most, find the second place it is worked out.",
+      "source_inspiration": [
+        {
+          "code": "DVtgbY8Av6A",
+          "scene_id": "DVtgbY8Av6A-S02",
+          "why": "inverted: the same collect-something impulse, with the artefact published instead of withheld"
+        }
+      ],
+      "start_s": 60.4,
+      "transition": "none",
+      "visual": "Max, same take, closing line to camera."
+    }
+  ],
+  "strategy": {
+    "audience": "Non-technical small-business leader, AI level 0-6 of 10 (POSITIONING.md §4): an owner, operations lead or team lead in a 5-50 person company who is responsible for one repeated process and has tried ChatGPT but has no repeatable way of using it at work. Specifically anyone who quotes a figure that is calculated somewhere else - a margin, a price, a stock count, a headline number in a monthly report.",
+    "concept": "One figure in our own files has two correct values, fourteen times and one point nine times, because one calculation leaves the item out of its own comparison and the other leaves it in - and on a creator whose plays fall into two clumps with nothing between them, that alone moves the yardstick nearly eightfold. We acted on the bigger one.",
+    "filter": {
+      "ai_boundary": "The machine can recompute the figure wherever it appears and flag the moment two places disagree. Deciding which definition is the authoritative one is a human decision, and it has to be written down once rather than re-argued each month.",
+      "friction": "Both versions are defensible and both are quoted by people who trust them, so the disagreement is invisible until a decision has already been made on whichever one was nearer to hand. Reviewing harder does not find it, because neither number is wrong.",
+      "next_action": "Take the figure you quote most often, find the second place it is worked out, and write down which of the two is authoritative.",
+      "process": "Producing a recurring figure that other people act on - the margin in the monthly pack, the headline number in a report, a price, a stock count - where the figure is worked out in one system and quoted in another."
+    },
+    "objective": "Send the viewer looking for the second place their most-quoted figure is worked out, by showing a fourteen-fold difference that survived a review inside our own files.",
+    "pain": "quality_trust",
+    "positioning": "builder",
+    "promise": "One page that stops the same figure meaning two things in two systems.",
+    "rationale": "No reel in the 266-reel corpus corrects its own number: 36 use numbers as proof and every one presents the number as settled. The references supply shape only - an exact figure spoken over the record it describes (DaGTeJNN1GR), one named thing per step with no connective tissue (DUJYKENjZc5), the screen carrying the payoff while the face carries only the interpretation (DYC-x8DogOI), and, as a negative example, a save bought entirely by withholding the artefact (DVtgbY8Av6A), which we invert by publishing it."
+  },
+  "title": "The same number in two places",
+  "traceability": {
+    "evidence_summary": "One of our 23 drafted planning cards carried a headline figure of 14.4 times normal. The same item recomputed against all twelve of that author's reels in our files is 1.87 times normal, and it sits seventh of the twelve, at the 54th percentile, outlier_status NORMAL. Both figures come from the same twelve reels in the same snapshot and differ only by whether the item is inside its own comparison: 19 624 is the middle of the other eleven, 151 569.5 the middle of all twelve. It moves that far because the creator's plays fall into two clumps - six from 7 402 to 19 624, six from 283 515 to 768 383 - with the middle sitting in the empty stretch. Both figures reproduce from data/radar.db. The four references contribute shape only: an exact figure spoken over the thing it describes (DaGTeJNN1GR, 30.2 shares/1k, robust_z 3.41), one named thing per step (DUJYKENjZc5, 36.6 shares/1k), the screen carrying the payoff and the face only the interpretation (DYC-x8DogOI, 59.9 saves/1k) and, inverted, a save bought by withholding the artefact (DVtgbY8Av6A, 57.3 saves/1k).",
+    "hypothesis": "H-20",
+    "insights": [
+      "I-23",
+      "I-13",
+      "I-08",
+      "I-09",
+      "I-01",
+      "I-29",
+      "I-15"
+    ],
+    "original_synthesis": "No reel in the 266-reel corpus corrects its own number - 36 use numbers as proof and every one presents the number as settled. The wrong figure, the right figure, the twelve rows behind both and the decision taken on the larger one are ours and dated. The script deliberately contains no statistical vocabulary: the mechanism is delivered as two receipts for the same job with different totals, and the artefact we hand over is a one-page definition sheet published in the caption rather than gated behind a comment.",
+    "why_better_than_generic": "A generic AI script would warn that 'AI can hallucinate numbers' and move on. Nothing hallucinated here: both figures are arithmetically correct on the same twelve rows, which is the whole point and the reason reviewing harder does not catch it. This reel names the exact item, both middles, the gap in the data that makes them seven times apart, and the one-line rule that closes it - and it does so without using the words median, baseline or percentile once."
+  }
+}

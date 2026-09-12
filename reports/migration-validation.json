@@ -1,0 +1,323 @@
+{
+  "corpus_tier": {
+    "ANALYSIS_READY": 268,
+    "FRAMES_ONLY": 29,
+    "INGESTED_NOT_ANALYZED": 2914
+  },
+  "db_path": "data/radar.db",
+  "dry_run": false,
+  "duplicates": {
+    "codes_with_two_creator_ids": 1,
+    "duplicate_caption_codes": 56,
+    "duplicate_caption_groups": 25,
+    "frames_pk_violations": 0,
+    "reels_pk_violations": 0
+  },
+  "flags": {
+    "BROKEN_FRAME_REFERENCE": 1,
+    "DUPLICATE_VIDEO": 56,
+    "MISSING_FRAMES": 2914,
+    "MISSING_MEDIA": 1,
+    "MISSING_STATS": 1,
+    "MISSING_TRANSCRIPT": 2936,
+    "STALE_METRICS": 1676,
+    "UNALIGNED_TRANSCRIPT": 7,
+    "UNRESOLVED_CREATOR_ID": 1
+  },
+  "foreign_key_violations": [],
+  "generated_at": "2026-09-11T22:20:22Z",
+  "integrity_check": "ok",
+  "orphans": {
+    "cards_without_reel": 0,
+    "deepdives_without_reel": 0,
+    "frame_codes_without_reel": 6,
+    "frames_broken_reference": 8,
+    "frames_unchecked": 0,
+    "our_metrics_without_post": 0,
+    "reels_from_unknown_account": 0,
+    "scores_without_reel": 0,
+    "topics_without_reel": 0,
+    "transcript_meta_without_transcript": 0,
+    "transcripts_without_reel": 6,
+    "video_state_without_reel": 0
+  },
+  "row_count_delta": {},
+  "row_counts_after": {
+    "accounts": 1357,
+    "beats": 1527,
+    "card_scenes": 0,
+    "cards": 23,
+    "cards_v2": 0,
+    "creator_stats": 132,
+    "deepdives": 282,
+    "fetch_log": 0,
+    "followers": 0,
+    "frame_labels": 2600,
+    "frames": 2727,
+    "hypotheses": 0,
+    "hypothesis_refs": 0,
+    "insights": 0,
+    "jobs": 0,
+    "our_metrics": 0,
+    "our_posts": 0,
+    "providers": 9,
+    "reels": 5147,
+    "runs": 0,
+    "scenes": 948,
+    "schema_migrations": 2,
+    "scores": 7477,
+    "script_versions": 0,
+    "snapshots": 3,
+    "spend": 10,
+    "tool_log": 37,
+    "topics": 2482,
+    "transcript_meta": 281,
+    "transcripts": 281,
+    "video_features": 3211,
+    "video_state": 3211
+  },
+  "row_counts_before": {
+    "accounts": 1357,
+    "beats": 1527,
+    "card_scenes": 0,
+    "cards": 23,
+    "cards_v2": 0,
+    "creator_stats": 132,
+    "deepdives": 282,
+    "fetch_log": 0,
+    "followers": 0,
+    "frame_labels": 2600,
+    "frames": 2727,
+    "hypotheses": 0,
+    "hypothesis_refs": 0,
+    "insights": 0,
+    "jobs": 0,
+    "our_metrics": 0,
+    "our_posts": 0,
+    "providers": 9,
+    "reels": 5147,
+    "runs": 0,
+    "scenes": 948,
+    "schema_migrations": 2,
+    "scores": 7477,
+    "script_versions": 0,
+    "snapshots": 3,
+    "spend": 10,
+    "tool_log": 37,
+    "topics": 2482,
+    "transcript_meta": 281,
+    "transcripts": 281,
+    "video_features": 3211,
+    "video_state": 3211
+  },
+  "steps": {
+    "august_archive": {
+      "codes": {
+        "DRXZJeHiAES": {
+          "frames": "already present, left untouched",
+          "in_reels": true,
+          "transcript": "already present, left untouched"
+        },
+        "DT0fJmxjVnI": {
+          "frames": "already present, left untouched",
+          "in_reels": false,
+          "transcript": "already present, left untouched"
+        },
+        "DU9OIJUCBQz": {
+          "frames": "already present, left untouched",
+          "in_reels": false,
+          "transcript": "already present, left untouched"
+        },
+        "DZw4aTtzJpg": {
+          "frames": "already present, left untouched",
+          "in_reels": false,
+          "transcript": "already present, left untouched"
+        },
+        "Db5sXEAP6C4": {
+          "frames": "already present, left untouched",
+          "in_reels": true,
+          "transcript": "already present, left untouched"
+        },
+        "Db9AEm5upfu": {
+          "frames": "already present, left untouched",
+          "in_reels": false,
+          "transcript": "already present, left untouched"
+        },
+        "DbOUP9OPDAQ": {
+          "frames": "already present, left untouched",
+          "in_reels": false,
+          "transcript": "already present, left untouched"
+        },
+        "DcdbJKmxZ5o": {
+          "frames": "already present, left untouched",
+          "in_reels": false,
+          "transcript": "already present, left untouched"
+        }
+      },
+      "frame_codes_imported": 0,
+      "frame_files_dir": "data/server-mirror/archive/2026-08-niche-research/frames",
+      "frames_from_base64": 0,
+      "frames_imported": 0,
+      "missing_frame_files": [],
+      "source_manifests": "dataset/2026-08-niche-research",
+      "transcripts_imported": 0,
+      "transcripts_skipped_present": 8,
+      "unresolved_codes": [
+        "DT0fJmxjVnI",
+        "DU9OIJUCBQz",
+        "DZw4aTtzJpg",
+        "Db9AEm5upfu",
+        "DbOUP9OPDAQ",
+        "DcdbJKmxZ5o"
+      ]
+    },
+    "db_path": "data/radar.db",
+    "deepdives_evidence_state": {
+      "rows": 282,
+      "value": "fixed9-v1"
+    },
+    "dry_run": false,
+    "frames_files": {
+      "broken": 8,
+      "broken_by_code": {
+        "DcxV37-CJOC": 8
+      },
+      "exists_ok": 2719,
+      "rows": 2727
+    },
+    "providers": [
+      {
+        "env_var": "HIKER_KEY",
+        "kind": "social_data",
+        "name": "hiker",
+        "role": "DEFAULT",
+        "state": "NOT_CONFIGURED"
+      },
+      {
+        "env_var": null,
+        "kind": "transcription",
+        "name": "local-faster-whisper",
+        "role": "DEFAULT",
+        "state": "CONFIGURED"
+      },
+      {
+        "env_var": null,
+        "kind": "frames",
+        "name": "local-ffmpeg-scenes",
+        "role": "DEFAULT",
+        "state": "CONFIGURED"
+      },
+      {
+        "env_var": "LOORE_KEY",
+        "kind": "transcription",
+        "name": "loore",
+        "role": "OPTIONAL_PROVIDER",
+        "state": "DISABLED"
+      },
+      {
+        "env_var": null,
+        "kind": "render",
+        "name": "remotion",
+        "role": "DEFAULT",
+        "state": "NOT_CONFIGURED"
+      },
+      {
+        "env_var": "SUPABASE_KEY",
+        "kind": "storage",
+        "name": "supabase",
+        "role": "OPTIONAL_PROVIDER",
+        "state": "NOT_CONFIGURED"
+      },
+      {
+        "env_var": "CLOUDFLARE_API_TOKEN",
+        "kind": "storage",
+        "name": "cloudflare",
+        "role": "OPTIONAL_PROVIDER",
+        "state": "NOT_CONFIGURED"
+      },
+      {
+        "env_var": "HIGGSFIELD_API_KEY",
+        "kind": "image_gen",
+        "name": "higgsfield",
+        "role": "OPTIONAL_PROVIDER",
+        "state": "NOT_CONFIGURED"
+      },
+      {
+        "env_var": "OPENAI_API_KEY",
+        "kind": "image_gen",
+        "name": "openai-images",
+        "role": "OPTIONAL_PROVIDER",
+        "state": "NOT_CONFIGURED"
+      }
+    ],
+    "schema": {
+      "all_versions": [
+        1,
+        2
+      ],
+      "applied_now": []
+    },
+    "transcript_meta": {
+      "left_untouched": 8,
+      "local_faster_whisper": 273,
+      "rows": 281,
+      "unknown_provenance": 0,
+      "words_differ_from_transcripts": 0
+    },
+    "video_state": {
+      "codes": 3211,
+      "corpus_tier": {
+        "ANALYSIS_READY": 268,
+        "FRAMES_ONLY": 29,
+        "INGESTED_NOT_ANALYZED": 2914
+      },
+      "flags": {
+        "BROKEN_FRAME_REFERENCE": 1,
+        "DUPLICATE_VIDEO": 56,
+        "MISSING_FRAMES": 2914,
+        "MISSING_MEDIA": 1,
+        "MISSING_STATS": 1,
+        "MISSING_TRANSCRIPT": 2936,
+        "STALE_METRICS": 1676,
+        "UNALIGNED_TRANSCRIPT": 7,
+        "UNRESOLVED_CREATOR_ID": 1
+      },
+      "states": {
+        "alignment_state": {
+          "MISSING": 268,
+          "NOT_POSSIBLE": 2943
+        },
+        "frames_state": {
+          "DONE_FIXED9": 296,
+          "MISSING": 2914,
+          "PARTIAL": 1
+        },
+        "media_state": {
+          "EXPIRED": 281,
+          "MISSING": 1,
+          "UNKNOWN": 2929
+        },
+        "transcript_state": {
+          "DONE": 268,
+          "EMPTY_NO_SPEECH": 7,
+          "MISSING": 2936
+        }
+      }
+    }
+  },
+  "uniques": {
+    "accounts": 1357,
+    "accounts_active": 130,
+    "cards": 23,
+    "creators_with_reels": 132,
+    "deepdives": 282,
+    "frames_codes": 303,
+    "frames_rows": 2727,
+    "transcript_meta": 281,
+    "transcripts": 281,
+    "transcripts_usable": 274,
+    "video_readings": 5147,
+    "video_state": 3211,
+    "videos_unique_codes": 3211
+  }
+}

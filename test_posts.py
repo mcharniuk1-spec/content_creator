@@ -1,10 +1,13 @@
-"""Память о снятом и ввод своих цифр. Работает на копии базы."""
-import datetime, os, shutil, sys
+"""Память о снятом и ввод своих цифр. Синтетическая база: closed_topics() читает
+ВСЮ таблицу our_posts без фильтра по неделе, и на копии рабочей базы это тихо
+считает продакшен-публикации (сейчас их 0, но это не гарантия). Пустая база
+своя — тест не зависит от того, что когда-либо было опубликовано."""
+import datetime, os, sys
 import posts
-from db import connect, DB_PATH
+from db import connect
 
-TMP = DB_PATH.replace('.db', '.test.db')
-shutil.copy(DB_PATH, TMP)
+TMP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'radar.posts-test.db')
+if os.path.exists(TMP): os.remove(TMP)
 con = connect(TMP)
 fail = []
 def eq(name, got, want):

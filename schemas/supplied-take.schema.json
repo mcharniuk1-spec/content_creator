@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://m2radar.local/content-engine/supplied-take.schema.json",
+  "title": "SuppliedTake",
+  "description": "One user-supplied MP4 shot for one approved storyboard scene (engine/SPEC.md Phase 3; M2Radar_Content_Engine_Full_Execution_Prompt_v4.md §82). One entry in `takes[]` of the `cards/takes/<card_id>.json` sidecar (see cards/README.md's sketch of that file) and the row shape `engine.production.validate_take`/`ingest_takes` check and enrich. Fields the shooter/loader supplies by hand are required and non-null; fields `engine.production.probe_media` derives from the MP4 itself (duration_s, fps, width, height, has_audio, sha256) are required keys but stay null until a real file has been probed — never invented.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "card_id", "scene_id", "script_segment", "take", "shot_type", "roll",
+    "duration_s", "fps", "width", "height", "orientation",
+    "has_audio", "audio_quality", "subject", "in_s", "out_s", "sync_notes",
+    "quality_status", "retake_of", "sha256", "path"
+  ],
+  "properties": {
+    "card_id": {
+      "type": "string", "minLength": 1,
+      "description": "cards_v2.card_id this take belongs to, e.g. C-2026-09-11-01."
+    },
+    "scene_id": {
+      "type": "string", "minLength": 1,
+      "description": "Must match a scene_id already present in cards/<card_id>.json's storyboard[]."
+    },
+    "script_segment": {
+      "type": "string", "minLength": 1,
+      "description": "The script.sections[].role (or a short quote of script_text) this take delivers — business-readable anchor back to the frozen script, not a foreign key."
+    },
+    "take": {
+      "type": "integer", "minimum": 1,
+      "description": "Take number for this scene_id, 1-based; repeated shots of the same scene increment this."
+    },
+    "shot_type": {
+      "type": "string", "minLength": 1,
+      "description": "Free-text shot description (e.g. 'A_ROLL_CLOSE_UP', 'screen recording, dashboard'); not the closed frame_type vocabulary — what the operator actually shot, in their own words."
+    },
+    "roll": {
+      "enum": ["A", "B"],
+      "description": "A = presenter/talking-head footage, B = cutaway/insert footage."
+    },
+    "duration_s": {
+      "type": ["number", "null"], "exclusiveMinimum": 0,
+      "description": "Probed clip duration in seconds. Null until engine.production.probe_media has run against an existing file at `path`."
+    },
+    "fps": {
+      "type": ["number", "null"], "exclusiveMinimum": 0,
+      "description": "Probed frame rate. Null until probed."
+    },
+    "width": {
+      "type": ["integer", "null"], "exclusiveMinimum": 0,
+      "description": "Probed pixel width. Null until probed."
+    },
+    "height": {
+      "type": ["integer", "null"], "exclusiveMinimum": 0,
+      "description": "Probed pixel height. Null until probed."
+    },
+    "orientation": {
+      "enum": ["portrait", "landscape", "square"],
+      "description": "Declared/observed orientation. engine.production.validate_take flags anything other than 'portrait' as an error — every M2Radar card is a 9:16 reel."
+    },
+    "has_audio": {
+      "type": ["boolean", "null"],
+      "description": "Whether the probed file carries an audio stream. Null until probed."
+    },
+    "audio_quality": {
+      "enum": ["clean", "noisy", "none", "unknown"],
+      "description": "Operator's own assessment of the recorded audio, logged at supply time."
+    },
+    "subject": {
+      "type": "string",
+      "description": "Who/what is on camera, e.g. 'Misha, presenter' or 'laptop screen, ranker dashboard'."
+    },
+    "in_s": {
+      "type": "number", "minimum": 0,
+      "description": "Intended in-point (seconds) inside the supplied clip for the trimmed edit."
+    },
+    "out_s": {
+      "type": "number", "exclusiveMinimum": 0,
+      "description": "Intended out-point (seconds). Must exceed in_s and, once duration_s is known, must not exceed it."
+    },
+    "sync_notes": {
+      "type": "string",
+      "description": "Free text for the editor, e.g. 'clap at 0.0s, aligns with script beat hook'. May be an empty string."
+    },
+    "quality_status": {
+      "enum": ["PENDING", "OK", "RETAKE"],
+      "description": "PENDING = not yet reviewed; OK = usable, select_takes() may choose it; RETAKE = rejected, a new take should follow with retake_of pointing back here."
+    },
+    "retake_of": {
+      "type": ["integer", "null"], "minimum": 1,
+      "description": "The take number this one re-shoots, when quality_status of that earlier take was RETAKE. Null for a first attempt."
+    },
+    "sha256": {
+      "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$",
+      "description": "sha256 of the file at `path`. Null until probed (probe_media hashes the file it just measured)."
+    },
+    "path": {
+      "type": "string", "minLength": 1,
+      "description": "Path to the supplied MP4, relative to the repository root (e.g. cards/takes/C-2026-09-11-01/S01-take1.mp4). May point at a file that does not exist yet — ingest_takes reports that explicitly rather than failing silently."
+    }
+  }
+}

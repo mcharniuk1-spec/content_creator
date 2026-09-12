@@ -18,16 +18,30 @@
 
 Флаги: --no-cache, --cache DIR (по умолчанию ./hiker-cache), --pages N.
 """
-import json, os, pathlib, os, sys, time, hashlib, pathlib, subprocess, urllib.parse
+import datetime, json, os, pathlib, os, sys, time, hashlib, pathlib, subprocess, urllib.parse
 
 BASE = "https://api.hikerapi.com"
-PRICE = 0.02            # тариф Start; см. references/cost-model.md
+
+# Единственный источник тарифа: раньше 0.02 было прописано буквально в трёх файлах
+# (lib/hiker.py, collect_snapshot.py, roster.py) — при смене тарифа три места надо было
+# редактировать руками, и ничто не подсказывало, что цифра устарела. Теперь PRICE
+# выводится из этой датированной квитанции; collect_snapshot.py и roster.py делают
+# `from lib.hiker import PRICE` вместо своего литерала.
+PRICE_RECEIPT = {
+    "price_usd": 0.02,
+    "tariff": "Start",
+    "source": "hiker-doc.readthedocs.io/guides/rate-limits",
+    "checked": "2026-08-31",
+}
+PRICE = PRICE_RECEIPT["price_usd"]
+
 RATE_SLEEP = 1 / 15     # 15 запросов в секунду на платных планах
 KEYFILE = pathlib.Path.home() / "Desktop" / ".mcp.json"
 
 _cache_dir = pathlib.Path(os.environ.get("HIKER_CACHE", "hiker-cache"))
 _units = 0              # единицы запроса, списанные за этот процесс
 _last = 0.0
+_last_meta = None       # provenance последнего call(): см. last_fetch_meta()
 
 
 def _key():
@@ -50,9 +64,32 @@ def _key():
         sys.exit(f"ключ не найден: ни в HIKER_KEY, ни в .env, ни в {KEYFILE}: {e}")
 
 
-def call(path, use_cache=True, tries=3, **params):
+def _curl_transport(url, key, timeout=45):
+    """Транспорт по умолчанию: curl (urllib на этой машине падает на SSL, см. модуль).
+    Возвращает сырой stdout — заголовки + пустая строка + тело, как отдаёт curl -D -.
+    Инжектируется через call(transport=...), чтобы тесты не трогали subprocess."""
+    p = subprocess.run(
+        ["curl", "-s", "-D", "-", "--max-time", str(timeout),
+         "-H", f"x-access-key: {key}",
+         "-H", "accept: application/json", url],
+        capture_output=True, text=True)
+    return p.stdout
+
+
+def _meta_path(fn):
+    return fn.with_name(fn.name + ".meta.json")
+
+
+def last_fetch_meta():
+    """Provenance последнего call(): свежего запроса или попадания в кэш.
+    None до первого вызова call() в этом процессе."""
+    return _last_meta
+
+
+def call(path, use_cache=True, tries=3, transport=None, **params):
     """Один вызов. Возвращает разобранный JSON или None."""
-    global _units, _last
+    global _units, _last, _last_meta
+    transport = transport or _curl_transport
     params = {k: v for k, v in params.items() if v is not None}
     qs = urllib.parse.urlencode(params)
     url = f"{BASE}{path}" + (f"?{qs}" if qs else "")
@@ -61,6 +98,16 @@ def call(path, use_cache=True, tries=3, **params):
     slug = path.strip("/").replace("/", "_")
     fn = _cache_dir / f"{slug}_{hashlib.md5(url.encode()).hexdigest()[:12]}.json"
     if use_cache and fn.exists():
+        mp = _meta_path(fn)
+        if mp.exists():
+            try:
+                _last_meta = json.loads(mp.read_text())
+            except Exception:
+                _last_meta = {"endpoint": path, "cache_path": str(fn), "note": "meta unreadable"}
+        else:
+            # кэш старее этой функциональности: провенанса нет, но повторный вызов
+            # всё равно не должен падать
+            _last_meta = {"endpoint": path, "cache_path": str(fn), "note": "no sidecar (pre-provenance cache)"}
         return json.loads(fn.read_text())
 
     last = None
@@ -68,15 +115,11 @@ def call(path, use_cache=True, tries=3, **params):
         gap = time.time() - _last
         if gap < RATE_SLEEP:
             time.sleep(RATE_SLEEP - gap)
-        p = subprocess.run(
-            ["curl", "-s", "-D", "-", "--max-time", "45",
-             "-H", f"x-access-key: {_key()}",
-             "-H", "accept: application/json", url],
-            capture_output=True, text=True)
+        raw = transport(url, _key())
         _last = time.time()
-        head, _, body = p.stdout.partition("\r\n\r\n")
+        head, _, body = raw.partition("\r\n\r\n")
         if not body:
-            head, _, body = p.stdout.partition("\n\n")
+            head, _, body = raw.partition("\n\n")
 
         # x-hiker-info даёт НОМИНАЛЬНУЮ цену эндпоинта, а не факт списания:
         # заголовок приходит и на 50x, которые не билятся. Считаем только реально
@@ -124,6 +167,25 @@ def call(path, use_cache=True, tries=3, **params):
 
         _units += nominal
         fn.write_text(json.dumps(d, ensure_ascii=False))
+        # Провенанс рядом с ответом: раньше кэш был просто файлом с телом ответа,
+        # и по нему нельзя было узнать, когда он получен и по какой цене — только
+        # реверсить md5 в имени файла. Ключ сюда никогда не попадает — только
+        # эндпоинт, параметры (без секретов) и метаданные ответа.
+        _last_meta = {
+            "fetched_at": datetime.datetime.now(datetime.timezone.utc)
+                .isoformat(timespec="seconds").replace("+00:00", "Z"),
+            "endpoint": path,
+            "params": {k: v for k, v in params.items()
+                       if "key" not in k.lower() and "token" not in k.lower()},
+            "http_status": code or 200,
+            "units": nominal,
+            "cache_path": str(fn),
+            "sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(),
+        }
+        try:
+            _meta_path(fn).write_text(json.dumps(_last_meta, ensure_ascii=False))
+        except OSError:
+            pass  # провенанс — удобство, не должен ронять сбор из-за диска
         return d
     print(f"[hiker] не вышло {path}: {last}", file=sys.stderr)
     return None

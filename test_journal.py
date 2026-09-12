@@ -1,8 +1,11 @@
-"""Журнал: запись, закрытие, окно месяца. На копии базы."""
-import datetime, os, shutil, sys
+"""Журнал: запись, закрытие, окно месяца. На синтетической базе (db.SCHEMA), не на
+копии рабочей: журнал считает счётчики от нуля, и живая база с её собственными
+открытыми записями делает "было + 1" правдой по случайности, а не по конструкции."""
+import datetime, os, sys
 import journal
-from db import connect, DB_PATH
-TMP = DB_PATH.replace('.db', '.test.db'); shutil.copy(DB_PATH, TMP)
+from db import connect
+TMP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'radar.journal-test.db')
+if os.path.exists(TMP): os.remove(TMP)
 con = connect(TMP); fail = []
 def eq(n, g, w):
     print(f"  {'✓' if g == w else '✗'} {n:<48} {g}   ожидалось {w}"); fail.append(n) if g != w else None

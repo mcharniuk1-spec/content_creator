@@ -1,0 +1,71 @@
+{
+  "schema": "m2.provider-capabilities.v1",
+  "checked_at": "2026-09-05",
+  "recheck_after": "2026-09-12",
+  "execution_enabled": false,
+  "runtime_adapter": "m2_studio.providers.RunwayImageTransport",
+  "billing": "generation API account; no additional local orchestration subscription",
+  "price_receipt": null,
+  "live_quality_receipt": null,
+  "default_fallback": "deterministic Remotion motion graphic or owner-recorded plate",
+  "models": [
+    {
+      "provider": "runway",
+      "model": "seedance2_5",
+      "routes": ["image_to_video", "first_last_frame", "reference_to_video"],
+      "admitted_seconds": [4, 5, 6, 7, 8, 9, 10],
+      "admitted_ratios": ["720:1280", "1280:720"],
+      "audio_generation": false,
+      "reference_mode_max_images": 3,
+      "use": "reference continuity, controlled insert, first-last-frame transition",
+      "vendor_source": "https://seed.bytedance.com/en/seedance2_5",
+      "adapter_source": "https://github.com/runwayml/sdk-python/blob/main/src/runwayml/types/image_to_video_create_params.py",
+      "status": "PUBLIC_CAPABILITY_VERIFIED_LIVE_UNTESTED"
+    },
+    {
+      "provider": "runway",
+      "model": "veo3.1",
+      "routes": ["image_to_video", "first_last_frame"],
+      "admitted_seconds": [4, 6, 8],
+      "admitted_ratios": ["720:1280", "1280:720"],
+      "audio_generation": false,
+      "use": "frame-constrained transition or cinematic insert",
+      "vendor_source": "https://ai.google.dev/gemini-api/docs/veo",
+      "status": "PUBLIC_CAPABILITY_VERIFIED_LIVE_UNTESTED"
+    },
+    {
+      "provider": "runway",
+      "model": "veo3.1_fast",
+      "routes": ["image_to_video", "first_last_frame"],
+      "admitted_seconds": [4, 6, 8],
+      "admitted_ratios": ["720:1280", "1280:720"],
+      "audio_generation": false,
+      "use": "lower-cost candidate for frame-constrained inserts; verify actual prices",
+      "vendor_source": "https://ai.google.dev/gemini-api/docs/veo",
+      "status": "PUBLIC_CAPABILITY_VERIFIED_LIVE_UNTESTED"
+    },
+    {
+      "provider": "runway",
+      "model": "gen4.5",
+      "routes": ["image_to_video"],
+      "admitted_seconds": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "admitted_ratios": ["720:1280", "1280:720"],
+      "audio_generation": false,
+      "use": "single-start-image cinematic insert; no final keyframe",
+      "vendor_source": "https://docs.dev.runwayml.com/guides/models/",
+      "status": "PUBLIC_CAPABILITY_VERIFIED_LIVE_UNTESTED"
+    }
+  ],
+  "activation_parameters": [
+    "approved provider account route and SDK pin",
+    "exact approved model/capability and documentation receipt",
+    "approved script/shot/reference hashes and data/rights/retention terms",
+    "approved_request_hashes: exact full canonical request digests, no wildcard or approval-ID reuse",
+    "external secret-store client injection; no key in repository or browser",
+    "capability receipt and activation expiry",
+    "per-shot and run maximum cost in integer micro-USD",
+    "one submit per logical request, no blind retry, bounded poll budget",
+    "paid output ingestion, media QA and billing reconciliation receipts",
+    "independent acceptance review"
+  ]
+}

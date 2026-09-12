@@ -11,6 +11,7 @@
 import datetime, json, os, pathlib, sys, time
 
 from db import connect
+from lib.hiker import PRICE   # единственный источник тарифа, см. lib/hiker.py
 
 D = pathlib.Path(__file__).parent / 'data'
 ALIVE_REELS = 3           # роликов за окно, чтобы считаться живым
@@ -20,7 +21,6 @@ MISS_GAP_DAYS = 12        # между промахами: снимков два
                           # «две проверки подряд» превращались в три дня вместо месяца
 MIN_FOLLOWERS, MAX_FOLLOWERS = 5_000, 1_000_000
 TARGET = 250              # целевой размер набора, SPEC §4.1
-PRICE = 0.02              # тариф Start; на Standard в двадцать раз меньше
 
 
 # ---------------------------------------------------------------- живость ----

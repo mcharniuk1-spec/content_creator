@@ -1,0 +1,267 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-03",
+ "title": "We built it, it worked, and we switched it off",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2088,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 225,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Never failed. Switched off.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 225,
+   "duration_frames": 300,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Still running. Nobody asks why.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 525,
+   "duration_frames": 312,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "264 videos. Zero crashes.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 837,
+   "duration_frames": 201,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "55 matches out of 1,527",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 1038,
+   "duration_frames": 426,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Matched or not: no difference found",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1464,
+   "duration_frames": 375,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "A number and a date",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1839,
+   "duration_frames": 249,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Checklist in the caption",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-03_S00.png",
+   "sha256": "cc263167ac06441afbd2b307c9fac1bf5e4351ea87d3ec2daa25e51392997612",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-03_S01.png",
+   "sha256": "7d3110fade5f94ac1a085b4beed3b75da559bc4457ffdfd39c17592437640614",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-03_S02.png",
+   "sha256": "98fb8e2c2e07f94d9620124be6c6c3b728b55a40cf9fc98893d554bb5b629b43",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-03_S03.png",
+   "sha256": "0bb98abfc8f25e53db6f9ac47c51a6c26c7fb1d31d157fc4af9eefbb34159fb2",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-03_S04.png",
+   "sha256": "9b8f4ffe6c08541362876a2af875f40c38237b99b77bad6784ae15336d3ad680",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-03_S05.png",
+   "sha256": "2b5f58044677726e2271079e1310c232b10df6a2a9b49e99e585bb9116a7eb21",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-03_S06.png",
+   "sha256": "4700de6252154bcce90d4f1988174808dfd71dbb753637dfbc68b74257368b5a",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 225,
+   "text": "This step has never failed. We turned it off this week. Here is the number that decided it."
+  },
+  {
+   "from_frame": 225,
+   "duration_frames": 300,
+   "text": "You have one of these. A script, a mailbox rule, something set up months ago. It still runs. Nobody has asked what it changes."
+  },
+  {
+   "from_frame": 525,
+   "duration_frames": 312,
+   "text": "Ours matched what is said in a video to where the picture changes. It ran on two hundred and sixty-four videos. It never crashed once."
+  },
+  {
+   "from_frame": 837,
+   "duration_frames": 201,
+   "text": "Out of one thousand five hundred and twenty-seven places it could have matched, it found fifty-five."
+  },
+  {
+   "from_frame": 1038,
+   "duration_frames": 426,
+   "text": "Two hundred and fifteen videos gave it nothing at all. Some of that is our own measurement being coarse. And the videos it matched came out no different from the ones it did not."
+  },
+  {
+   "from_frame": 1464,
+   "duration_frames": 375,
+   "text": "So it is off. Every automation now gets two things written down the day it is built: the number that proves it is worth keeping, and the date we check."
+  },
+  {
+   "from_frame": 1839,
+   "duration_frames": 249,
+   "text": "The checklist is in the caption. Find the one that fired least last month, then keep it or kill it."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

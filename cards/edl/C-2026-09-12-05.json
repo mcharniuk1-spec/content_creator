@@ -1,0 +1,302 @@
+{
+ "schema": "m2.remotion-edl.v1",
+ "card_id": "C-2026-09-12-05",
+ "title": "The approval box we designed and never ticked",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration_frames": 2055,
+ "scenes": [
+  {
+   "scene_id": "S00",
+   "from_frame": 0,
+   "duration_frames": 150,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S00",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Written 1 September. Never ticked.",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S01",
+   "from_frame": 150,
+   "duration_frames": 69,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S01",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Empty",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S02",
+   "from_frame": 219,
+   "duration_frames": 300,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S02",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "The rule, as written",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S03",
+   "from_frame": 519,
+   "duration_frames": 312,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S03",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "4 rows filled out of 282",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S04",
+   "from_frame": 831,
+   "duration_frames": 345,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S04",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "All four on the same day",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S05",
+   "from_frame": 1176,
+   "duration_frames": 312,
+   "layout": "demo",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S05",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Caught by reading, not by the field",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S06",
+   "from_frame": 1488,
+   "duration_frames": 336,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S06",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Block it, show it, or drop it",
+     "panel": "full"
+    }
+   ]
+  },
+  {
+   "scene_id": "S07",
+   "from_frame": 1824,
+   "duration_frames": 231,
+   "layout": "a_roll",
+   "layers": [
+    {
+     "kind": "placeholder",
+     "panel": "full"
+    },
+    {
+     "kind": "image",
+     "asset_id": "img-S07",
+     "panel": "full"
+    },
+    {
+     "kind": "text",
+     "text": "Count your last fifty",
+     "panel": "full"
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "asset_id": "img-S00",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S00.png",
+   "sha256": "b9f65aa7eaa9ce44c98b4b9c032dc55e19e13f1a79589ef58bcc2bb95f87fb00",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S01",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S01.png",
+   "sha256": "3a88dd4f874268f05c5e9a37c717524bb4b23b9a027a5947adf7c95331a69537",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S02",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S02.png",
+   "sha256": "955c4711447a9c26956d8283a85a03cc3b394e9011eb7165324b67832f8077ba",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S03",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S03.png",
+   "sha256": "ddd914480d7937915474e79bb2a81ef30aaf4dbf577b62c0df2b344230120582",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S04",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S04.png",
+   "sha256": "1c98e9228753a73cd7446bd57eba6f662e775fa7a108ca2681f3ef6f766489d1",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S05",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S05.png",
+   "sha256": "c5a7eeeb323f7ee4988c87ac47137af4be95adad4825608a3d9abffaa0ac911c",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S06",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S06.png",
+   "sha256": "5991ca545a7f7927f1489c5afccf2e8a26b6cc1f6f3cccdf4fb10def00d298f6",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  },
+  {
+   "asset_id": "img-S07",
+   "kind": "image",
+   "path": "cards/frames/C-2026-09-12-05_S07.png",
+   "sha256": "a3201714966645675df7daaebe3ecfe6e799e2edd220f292bda4c4c244527091",
+   "rights_approved": true,
+   "rights_receipt_id": "internal-template"
+  }
+ ],
+ "captions": [
+  {
+   "from_frame": 0,
+   "duration_frames": 150,
+   "text": "We wrote a mandatory check into our own process on the first of September."
+  },
+  {
+   "from_frame": 150,
+   "duration_frames": 69,
+   "text": "Here is the box. Empty."
+  },
+  {
+   "from_frame": 219,
+   "duration_frames": 300,
+   "text": "You have one too. Somewhere in your process a document says a person checks this before it goes out. Now find where that check is recorded."
+  },
+  {
+   "from_frame": 519,
+   "duration_frames": 312,
+   "text": "Ours is a single column. It has been there since the rule was written. It is filled in on four rows out of two hundred and eighty-two."
+  },
+  {
+   "from_frame": 831,
+   "duration_frames": 345,
+   "text": "All four were filled on the same day, the day we wrote the rule. Every card we have drafted since has a row waiting and the box behind it empty."
+  },
+  {
+   "from_frame": 1176,
+   "duration_frames": 312,
+   "text": "Three items on this week's shortlist should have failed that check. We caught them by reading. One of the three is in the record. Two are not."
+  },
+  {
+   "from_frame": 1488,
+   "duration_frames": 336,
+   "text": "A check nothing stops for is a preference. Three ways out: make the step block, put it where someone already looks, or delete the rule. We took the first."
+  },
+  {
+   "from_frame": 1824,
+   "duration_frames": 231,
+   "text": "Open where your process says the check is recorded and count the last fifty. Send this to whoever signs off."
+  }
+ ],
+ "audio_stems": [],
+ "pending_audio_assets": [
+  "speech"
+ ],
+ "speech_policy": "REQUIRED_RECORDED_SPEECH",
+ "render_mode": "PREVIS",
+ "review_state": "REVIEWED"
+}

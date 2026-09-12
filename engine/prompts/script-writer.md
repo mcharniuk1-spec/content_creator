@@ -24,9 +24,12 @@ and caption rules: no emoji on screen, text is never generated inside images, Ve
    numbers come from `data/analysis/insights.json`, `reports/analysis/*.md`, the reference reels' real
    metrics, or our own runs (`reports/audit/*.md`, `reports/data/*.json`). Say "we do not know yet"
    when we do not.
-3. No comment-bait CTA (`comment_keyword` is forbidden by M2 decision). Allowed: save_share,
-   follow, question_to_audience, free_resource, next_video, none. Prefer a CTA that names why someone
-   would forward it (PRODUCTION.md's share question).
+3. CTA (Misha's decision, 12 Sep 2026, reversing the earlier ban): a comment-keyword CTA
+   (`comment_keyword`, "comment WORD and I'll send it") is allowed and SHOULD be used where the card has
+   a real artefact to hand over — it collects the audience and hooks it. The promised artefact must exist
+   (a checklist, a template, our ledger, a prompt); never promise a deliverable we do not have. Where there
+   is nothing to hand over, use save_share, follow, question_to_audience, free_resource, next_video or none,
+   and name why someone would forward it (PRODUCTION.md's share question).
 4. Originality: do not paraphrase any single reel; do not stitch sentences. Borrow STRUCTURE only
    (hook logic, pain framing, explanation order, proof mechanism, CTA logic, visual grammar) and record
    each borrowing in `references[].transformed_how` and `traceability`. Verbatim quotes from references go

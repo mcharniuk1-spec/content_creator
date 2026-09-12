@@ -16,7 +16,7 @@ from db import connect, safe_code
 
 D = pathlib.Path(__file__).parent / 'data'
 OUT = pathlib.Path(__file__).parent
-WINDOW = 14
+WINDOW = 30   # = cards.FRESH_DAYS; 14 → 30 решением Миши 12 сентября 2026
 esc = html.escape
 num = lambda n: f'{int(n):,}'.replace(',', ' ') if n is not None else '—'
 med = lambda xs: statistics.median(xs) if xs else None

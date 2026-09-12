@@ -17,11 +17,13 @@ from db import connect
 from posts import closed_topics
 
 D = pathlib.Path(__file__).parent / 'data'
-FRESH_DAYS = 14
+FRESH_DAYS = 30         # было 14; решение Миши 12 сентября 2026
 PER_FORMAT = 3          # предлагаем с запасом, вычёркивает человек
-MIN_MULT = 1.5          # ролик обязан заметно превышать норму своего автора
+MIN_MULT = 1.5          # автор попадает в пул, если хотя бы один его ролик в окне превысил норму
 DUR_MIN, DUR_MAX = 20, 120   # за этими границами жанр другой, приём не переносится
-ONE_PER_AUTHOR = True   # иначе один автор занимает половину недели
+ONE_PER_AUTHOR = False  # решение Миши 12 сентября 2026: у автора смотрим все ролики окна,
+                        # не только один; в карточки может попасть и его ролик ниже нормы
+RANK = 'hi_intent'      # пересылки + сохранения на тысячу — одна линейка для всех трёх форматов
 
 # Чего не берём никогда. Основание — POSITIONING.md §5 и §8, список «M2 Lab is not»
 # и «Do not publish». Делится на две причины, потому что и лечится по-разному.
@@ -48,22 +50,24 @@ DEV_TOPICS = {
 NOT_TOPICS = {'Темы в подписи нет', 'Только призыв, без темы в подписи'}
 
 # Как формат отбирает и как в нём снимают. Основание — RULES.md §2 и SPEC §7.
+# Ранжирование во всех трёх форматах одно: пересылки + сохранения на тысячу (RANK).
+# Формат решает, о чём мы говорим, а не по какой метрике смотрим.
 FORMATS = {
     'M2 Radar': dict(
-        slots=2, rank='resh_1k', signal='share',
+        slots=2, rank=RANK, signal='share + save',
         looks='new model, tool, trend, viral demo',
         frame='one static shot, presenter fully in frame',
         screen='full-frame insert: before and after, one number',
         banner='a number in the banner, held for the whole reel'),
     'M2 Builds': dict(
-        slots=2, rank='save_1k', signal='save and follow',
+        slots=2, rank=RANK, signal='share + save, then follow',
         looks='builds, tests, tool comparisons',
         frame='own desk and rig, shot in one take',
         screen='terminal or interface where the break is visible',
         banner='what we built and the step where it broke'),
     'M2 Teardown': dict(
-        slots=1, rank='save_1k', signal='save and search',
-        looks='a topic repeated across several authors',
+        slots=1, rank=RANK, signal='share + save, then search',
+        looks='a repeated business process: ours, an industry one, or a viewer-sent one',
         frame='the process in frame: phone, laptop, paper',
         screen='the steps listed one at a time',
         banner='the cost figure: what this runs you per week'),
@@ -71,7 +75,9 @@ FORMATS = {
 
 
 def _pool(con, today):
-    """Свежие, прошедшие порог, пригодные, не из закрытых тем, не использованные."""
+    """Свежие, пригодные, не использованные ролики авторов, у которых в окне есть ролик
+    выше своей нормы. Решение Миши 12 сентября 2026: смотрим все ролики такого автора,
+    не только выстреливший — из пяти его роликов в карточку может пойти и неудачный."""
     edge = int(datetime.datetime.combine(today - datetime.timedelta(days=FRESH_DAYS),
                                          datetime.time()).timestamp())
     closed = closed_topics(con, today=today)   # закрытые темы не выбрасываем, а опускаем вниз
@@ -94,8 +100,14 @@ def _pool(con, today):
           AND s.eligible = 1 AND s.weights = 'ig' AND r.ts >= ?
           AND (d.suitable IS NULL OR d.suitable = 1)""", (edge,)).fetchall()
     out = []
+    qualifying = set()                        # авторы с хотя бы одним роликом выше нормы в окне
+    for r in rows:
+        if r['author_median_play'] and r['play'] / r['author_median_play'] >= MIN_MULT:
+            qualifying.add(r['username'])
     for r in rows:
         if r['code'] in used:
+            continue
+        if r['username'] not in qualifying:       # ни один ролик автора не превысил его норму
             continue
         topics = [t[0] for t in con.execute('SELECT topic FROM topics WHERE code=?', (r['code'],))]
         if set(topics) & OFF_TOPICS:              # не наш жанр
@@ -107,9 +119,9 @@ def _pool(con, today):
         if not (DUR_MIN <= (r['dur'] or 0) <= DUR_MAX):
             continue
         mult = round(r['play'] / r['author_median_play'], 1) if r['author_median_play'] else None
-        if not mult or mult < MIN_MULT:           # не превысил свою же норму — не референс
-            continue
         d = dict(r); d['topics'] = topics; d['mult'] = mult
+        d['above_norm'] = bool(mult and mult >= MIN_MULT)
+        d[RANK] = (r['resh_1k'] or 0) + (r['save_1k'] or 0)
         d['age'] = (today - datetime.date.fromtimestamp(r['ts'])).days
         # доля тем ролика, уже закрытых нами: 1.0 — снимали ровно об этом, 0 — тема свежая
         d['closed_share'] = (len([t for t in topics if t in closed]) / len(topics)) if topics else 0
@@ -118,7 +130,9 @@ def _pool(con, today):
 
 
 def _repeated_topics(pool, min_authors=3):
-    """Для Teardown: темы, которые повторились у нескольких авторов, а не выстрелили раз."""
+    """Справочно: темы, повторившиеся у нескольких авторов. С 12 сентября 2026 Teardown
+    по ним НЕ отбирается (решение Миши: слишком абстрактный признак, ранжируем по
+    пересылкам + сохранениям, как и остальные форматы); счётчик печатается как сигнал спроса."""
     by = {}
     for r in pool:
         for t in r['topics']:
@@ -135,8 +149,6 @@ def select(con, today=None):
     fallback = False
     for fmt, cfg in FORMATS.items():
         cand = [r for r in pool if r['code'] not in seen]
-        if fmt == 'M2 Teardown':
-            cand = [r for r in cand if set(r['topics']) & repeated]
         # сначала по свежести темы, потом по сигналу формата: жёсткое исключение опустошало
         # пул за два месяца — при 30 закрытых темах из 27 оставалось меньше сорока роликов
         cand.sort(key=lambda r: (r['closed_share'], -(r[cfg['rank']] or 0)))
@@ -159,6 +171,11 @@ def _card(r, fmt, cfg, i):
     if r['mult']:
         facts.append(f"{r['mult']}× this author's own norm "
                      f"({r['play']:,} against {r['author_median_play']:,})".replace(',', ' '))
+        if not r.get('above_norm'):
+            facts.append("below the author's norm — taken because another reel of theirs "
+                         "in the window beat it")
+    if r.get(RANK):
+        facts.append(f"{r[RANK]:.0f} shares + saves per thousand")
     if r['resh_1k']:
         facts.append(f"{r['resh_1k']:.0f} shares per thousand")
     if r['save_1k']:
@@ -248,7 +265,7 @@ if __name__ == '__main__':
     else:
         picked, pool_n, rep_n = select(con)
         print(f'кандидатов в окне {FRESH_DAYS} дней: {pool_n}   '
-              f'повторяющихся тем для Teardown: {rep_n}\n')
+              f'тем, повторившихся у нескольких авторов (справочно): {rep_n}\n')
         for c in picked:
             print(f"  {c['n']:>2}. {c['fmt']:<12} {c['author']:<22} {c['age']:>2} дн.  {c['why']}")
             print(f"      темы: {', '.join(c['topics']) or '—'}")

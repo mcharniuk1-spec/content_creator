@@ -11,7 +11,7 @@
 import datetime, statistics, sys
 from db import connect
 
-WINDOW = 14
+WINDOW = 30   # = cards.FRESH_DAYS; 14 → 30 решением Миши 12 сентября 2026
 TOP = 10
 MARKER = 'Numbers behind the picks'
 
@@ -33,9 +33,9 @@ GLOSSARY = [
 ]
 
 FORMAT_SIGNAL = [
-    ('M2 Radar', 'Shares / 1k', 'the topic has to survive another week'),
-    ('M2 Builds', 'Saves / 1k', 'we must be able to build it, and something must break'),
-    ('M2 Teardown', 'Saves / 1k', 'a topic repeated across several authors, plus a reason to forward'),
+    ('M2 Radar', 'Shares + saves / 1k', 'the topic has to survive another week'),
+    ('M2 Builds', 'Shares + saves / 1k', 'we must be able to build it, and something must break'),
+    ('M2 Teardown', 'Shares + saves / 1k', 'a named process with an owner, plus a reason to forward'),
 ]
 
 

@@ -18,7 +18,7 @@ from db import connect
 D = pathlib.Path(__file__).parent / 'data'
 from topics import TOPICS
 
-WINDOW = 14
+WINDOW = 30   # = cards.FRESH_DAYS; 14 → 30 решением Миши 12 сентября 2026
 SAMPLE = 400
 SEED = 20260903        # выборка воспроизводима: та же неделя — та же выборка
 

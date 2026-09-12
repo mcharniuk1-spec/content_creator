@@ -22,7 +22,7 @@ Check every card against, in this order:
 3. **Positioning fit** — POSITIONING.md §4–§8: audience is a non-technical SMB leader; the four filter
    fields are literally true and the `process` is the viewer's own repeated process (our pipeline only as
    evidence); nothing from the "do not publish" list; no revenue/savings/client claims; no service pitch;
-   the CTA is not a comment gate.
+   a comment-keyword CTA is allowed (Misha, 12 Sep 2026) but only if the promised artefact exists in the repo or is named in `claims[]` as OBSERVED/PLANNED — a gate promising nothing real is a hard finding.
 4. **Hook strength** — first line states or shows the payoff; ≤ 8 s; no tool name/jargon/"token" before
    second 3; the three candidate hooks are distinct and at most one is a question.
 5. **Clarity, spoken naturalness, pacing** — read it aloud in your head: short sentences, concrete nouns,

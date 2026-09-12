@@ -93,7 +93,7 @@ if __name__ == '__main__':
             print(f'  {k:<14} {v}')
         sys.exit()
     import datetime
-    edge = int(datetime.datetime.combine(datetime.date.today() - datetime.timedelta(days=14),
+    edge = int(datetime.datetime.combine(datetime.date.today() - datetime.timedelta(days=30),   # окно свежести, 14 → 30 с 12 сентября 2026
                                          datetime.time()).timestamp())
     rows = con.execute("""SELECT r.*, d.cuts_ps FROM reels r
         JOIN scores s USING(snapshot_id,code) LEFT JOIN deepdives d ON d.code=r.code

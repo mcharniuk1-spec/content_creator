@@ -432,13 +432,18 @@ def test_ensure_database_reuses_cached_id(tmp_path):
 # --------------------------------------------------------------------------- #
 # CLI
 # --------------------------------------------------------------------------- #
-def test_cli_apply_is_refused_without_running_anything(con, monkeypatch, capsys):
+def test_cli_apply_without_token_applies_nothing(con, monkeypatch, capsys):
+    # --apply is live since 2026-09-12 (the reviewed plan is approved); without a token it must
+    # still build the plan, apply nothing, and say so — never construct a live transport.
     monkeypatch.setattr(ns.db_util, 'connect', lambda *a, **kw: con)
     monkeypatch.setattr(ns, 'LiveTransport', lambda *a, **kw: (_ for _ in ()).throw(
         AssertionError('must not be constructed')))
+    monkeypatch.setattr(ns.notion, 'env', lambda name: (_ for _ in ()).throw(SystemExit(f'{name} not set')))
+    monkeypatch.setattr(ns, 'apply_plan', lambda *a, **kw: (_ for _ in ()).throw(
+        AssertionError('must not be applied')))
     rc = ns.main(['--apply'])
     assert rc == 2
-    assert 'refused' in capsys.readouterr().err
+    assert 'nothing applied' in capsys.readouterr().err
 
 
 def test_cli_dry_writes_plan_file(con, tmp_path, monkeypatch, capsys):

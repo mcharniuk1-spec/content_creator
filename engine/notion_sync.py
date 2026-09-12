@@ -61,7 +61,8 @@ IDS_CACHE_PATH = ROOT / 'data' / 'notion_ids.json'
 PLAN_OUT_PATH = ROOT / 'reports' / 'notion-sync-plan.md'
 RATE_LIMIT_SLEEP_S = 0.35     # Notion's documented ~3 req/s average limit
 
-SCOPES = ('dashboard', 'dbs', 'reels', 'accounts', 'cards', 'runs', 'all')
+SCOPES = ('dashboard', 'dbs', 'reels', 'accounts', 'cards', 'runs',
+          'insights', 'hypotheses', 'categories', 'all')
 
 NEW_DATABASES = ('Runs', 'Insights', 'Hypotheses', 'Cards v2', 'Reels analysis',
                   'Accounts analysis', 'Categories')
@@ -558,6 +559,48 @@ def categories_rows(con):
     return out
 
 
+def insights_rows(con):
+    """Rows for the 'Insights' database — one per `insights` table row."""
+    out = []
+    for r in con.execute('SELECT * FROM insights ORDER BY insight_id'):
+        row = dict(r)
+        codes = db_util.loads(row.get('supporting_codes_json'), []) or []
+        creators = db_util.loads(row.get('supporting_creators_json'), []) or []
+        out.append({
+            'insight_id': row['insight_id'], 'statement': row.get('statement') or '',
+            'metric': row.get('metric') or '', 'n': row.get('n'),
+            'confidence': row.get('confidence') or 'INSUFFICIENT',
+            'supporting_reels': ', '.join(f'https://www.instagram.com/reel/{c}/' for c in codes[:12]),
+            'supporting_accounts': ', '.join(str(c) for c in creators[:20]),
+            'transcript_pattern': row.get('transcript_pattern') or '',
+            'visual_pattern': row.get('frame_pattern') or '',
+            'implication': row.get('implication') or '',
+            'created': (row.get('created_at') or '')[:10] or None,
+        })
+    return out
+
+
+def hypotheses_rows(con):
+    """Rows for the 'Hypotheses' database — one per `hypotheses` table row."""
+    out = []
+    for r in con.execute('SELECT * FROM hypotheses ORDER BY total_score DESC'):
+        row = dict(r)
+        refs = [x[0] for x in con.execute(
+            'SELECT code FROM hypothesis_refs WHERE hypothesis_id=? ORDER BY code', (row['hypothesis_id'],))]
+        evidence = row.get('statement') or ''
+        sup = db_util.loads(row.get('supporting_insights_json'), []) or []
+        if sup:
+            evidence += ' | insights: ' + ', '.join(str(x) for x in sup)
+        out.append({
+            'title': f"{row['hypothesis_id']} · {row.get('title') or ''}".strip(' ·'),
+            'score': row.get('total_score'), 'evidence': evidence,
+            'references': ', '.join(f'https://www.instagram.com/reel/{c}/' for c in refs),
+            'status': row.get('status') or 'PROPOSED',
+            'resulting_card': row.get('card_id') or '',
+        })
+    return out
+
+
 def runs_rows(con):
     """`runs` rows enriched with the derived, human-readable fields SPEC §91 wants on
     each Notion run page (data scope, counts, statuses, issues, next steps) — none of
@@ -755,6 +798,10 @@ def build_plan(con, scope='all', limit=None, discover=False, id_cache=None):
 
     if scope == 'all':
         plan['categories'] = {'db_title': 'Categories', 'rows': categories_rows(con)}
+    if want('insights'):
+        plan['insights'] = {'db_title': 'Insights', 'rows': insights_rows(con)}
+    if want('hypotheses'):
+        plan['hypotheses'] = {'db_title': 'Hypotheses', 'rows': hypotheses_rows(con)}
         plan['insights_standalone'] = insights_section(con)
         plan['hypotheses_standalone'] = hypotheses_section(con)
         plan['legacy'] = legacy_section()
@@ -980,6 +1027,15 @@ def apply_plan(con, plan, id_cache=None, limit=None):
 
     if 'runs' in plan:
         result['runs'] = upsert_rows(transport, id_cache, 'Runs', runs_rows(con))
+
+    if 'insights' in plan:
+        result['insights'] = upsert_rows(transport, id_cache, 'Insights', insights_rows(con))
+
+    if 'hypotheses' in plan:
+        result['hypotheses'] = upsert_rows(transport, id_cache, 'Hypotheses', hypotheses_rows(con))
+
+    if 'categories' in plan:
+        result['categories'] = upsert_rows(transport, id_cache, 'Categories', plan['categories']['rows'])
 
     return result
 

@@ -796,7 +796,7 @@ def build_plan(con, scope='all', limit=None, discover=False, id_cache=None):
         plan['runs'] = {'db_title': 'Runs', 'row_count': len(rows), 'sample': rows[:3],
                         'existing_cached': len(id_cache.data['rows'].get('Runs', {}))}
 
-    if scope == 'all':
+    if want('categories'):
         plan['categories'] = {'db_title': 'Categories', 'rows': categories_rows(con)}
     if want('insights'):
         plan['insights'] = {'db_title': 'Insights', 'rows': insights_rows(con)}

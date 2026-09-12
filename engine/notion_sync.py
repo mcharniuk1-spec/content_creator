@@ -1002,15 +1002,6 @@ def main(argv=None):
     con = db_util.connect()
     id_cache = IdCache()
 
-    if apply_mode:
-        # This module's own CLI never executes apply during this task; hard-stop here so a
-        # stray `--apply` invocation cannot slip through before an orchestrator has reviewed
-        # a --dry plan. `apply_plan()` above is fully implemented for that later, reviewed run.
-        print('--apply is intentionally refused by this build. Run --dry first, review '
-             f'{args.out}, then have the orchestrator invoke engine.notion_sync.apply_plan() '
-             'directly once the plan is approved.', file=sys.stderr)
-        return 2
-
     plan = build_plan(con, scope=args.scope, limit=args.limit, discover=args.discover, id_cache=id_cache)
     md = render_plan_markdown(plan)
     out_path = pathlib.Path(args.out)
@@ -1019,6 +1010,19 @@ def main(argv=None):
     print(render_plan_summary(plan))
     rel = out_path.relative_to(ROOT) if out_path.is_absolute() and ROOT in out_path.parents else out_path
     print(f'\nfull plan written to {rel}')
+    if not apply_mode:
+        return 0
+
+    # --apply: the plan reviewed on 2026-09-12 (reports/notion-sync-plan.md) is approved by the
+    # orchestrator; execute it. Requires NOTION_TOKEN in the environment/.env.
+    try:
+        notion.env('NOTION_TOKEN')          # same loader notion.py uses (environment, then .env)
+    except SystemExit:
+        print('NOTION_TOKEN not configured — nothing applied.', file=sys.stderr)
+        return 2
+    print('\napplying plan to Notion ...', flush=True)
+    result = apply_plan(con, plan, id_cache=id_cache, limit=args.limit)
+    print(json.dumps(result, ensure_ascii=False, indent=1, default=str))
     return 0
 
 

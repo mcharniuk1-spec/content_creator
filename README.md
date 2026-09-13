@@ -46,7 +46,8 @@ python3 pages.py                          # rebuild the pages once the angles ar
 | `blocks.py` | splits a transcript into hook / body / ending |
 | `tag_topics.py` · `topics.py` | topic tagging by sample |
 | `cards.py` | weekly shortlist: 15 reels in three stages by content block (RULES.md §13), holds the angles |
-| `content_blocks.py` | the nine content blocks and the tag + regex routing of a reel to one of them |
+| `content_blocks.py` | the nine content blocks; a reel's block comes from the agent file (`engine/block_route.py`) or tags + regex |
+| `engine/shortlist_adapt.py` | decision card per shortlist reel: what they shot and what it did, our version, shoot plan by parts (sa-v1) |
 | `roster.py` | the account set: liveness, dropout, top-up, followers |
 | `delta.py` | what moved since the last snapshot |
 | `pages.py` | three weekly pages |

@@ -532,3 +532,25 @@ News 50, What to pick 32, Money 28, Mistakes 16, Trust 2. Shortlist 15 of 15: al
 covered at stage 1. Weak spot: word routing without a tag (a "read these 9 books" reel landed in
 Money on the words cost and pay for from its transcript). Next step: routing by an agent over the
 transcript with stated evidence; tags and regex stay as the fallback.
+
+### 13.6. What the human sees at stage 3: the decision card (sa-v1, 13 September 2026, evening)
+
+Selection facts were not enough for Misha to decide. Each of the 15 cards goes through an
+adaptation stage (`engine/shortlist_adapt.py`, prompt `engine/prompts/shortlist-adapt.md`, files
+`data/analysis/shortlist/<code>.json`) and answers three questions in order:
+1. **What they shot and what it did:** topic, what the reel shows, why it worked for their audience,
+   the result (plays, times the author's own norm, shares and saves per thousand, from our database),
+   what does not transfer to us.
+2. **Our version:** topic in one line, angle, for whom (a role; §12 personas as the example), and the
+   four literal fields of the mandatory filter in `POSITIONING.md` §8: process, friction, AI boundary
+   with a visible human check, the viewer's next action; plus the reason to forward. Fails the filter:
+   `ours: null` with a reason, the reel stays a reference.
+3. **How we shoot it:** format with a reason, 50-70 s, location, presenter, the banner held for the
+   whole reel, and the parts per `PRODUCTION.md`: hook ≤ 8 s (payoff first, no technology names),
+   explanation, proof (a screen with the human check), payoff (what changed, monthly cost and where it
+   stops paying), optional CTA. Each part carries seconds, spoken text, in frame, on screen, overlay
+   ≤ 7 words. Parts add up to the duration.
+Plus claims with a state (OBSERVED / PLANNED / TO_MEASURE / MISSING). The validator checks the
+structure, banned words and length of the hook, the sum of seconds, the CTA artefact file.
+Weekly document: `python3 cards.py --dry --md FILE`; the Notion card body is built from the same
+file (`notion.py blocks_for`), the card title = our topic.

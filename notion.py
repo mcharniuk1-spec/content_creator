@@ -196,8 +196,10 @@ def cards_db():
     legacy = env('NOTION_CARDS_DB', required=False)
     if legacy:
         try:
-            call('GET', f'/databases/{legacy}')
-            return legacy
+            meta = call('GET', f'/databases/{legacy}')
+            if not (meta.get('archived') or meta.get('in_trash')):
+                return legacy
+            print('база Cards из .env лежит в корзине Notion, беру базу Shortlist под страницей инструмента')
         except SystemExit:
             print('NOTION_CARDS_DB недоступна интеграции, беру базу Shortlist под страницей инструмента')
     cache = IdCache()

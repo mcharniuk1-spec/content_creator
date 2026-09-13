@@ -1,0 +1,24 @@
+{
+ "code": "Dct42HhxCkq",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": null,
+ "reject_reason": "Custom animated text in a few minutes instead of hours in After Effects is a video editor's craft. No interest line in any of the three files touches motion graphics, and the routing hint that put Anna at 1.18 matched the word 'minutes' inside her line 'Meeting to minutes to task list without retyping', which is a word collision, not a subject: her minutes are a document, this reel's minutes are a duration. Nothing here is a repeated business process with an owner, so it stays a reference.",
+ "why_this_persona": null,
+ "interest": null,
+ "question": null,
+ "format": "M2 Radar",
+ "borrow": null,
+ "change": null,
+ "hook": "",
+ "on_screen": null,
+ "cta": null,
+ "claims": [
+  {"text": "29 659 plays against this author's median of 22 073, 1.3 times their own norm and the weakest lift of this author's three reels in the batch, with 53.8 saves and 29.9 shares per thousand.", "state": "OBSERVED", "source": "batch metrics Dct42HhxCkq"},
+  {"text": "The Anna routing score of 1.18 rests on the single word 'minutes'.", "state": "OBSERVED", "source": "batch routing_hint Dct42HhxCkq"},
+  {"text": "The corpus serves builders and creators rather than the non-technical leader M2 targets.", "state": "OBSERVED", "source": "insights.json I-27"},
+  {"text": "No transcript or frame analysis exists for this code, so only the caption, the duration and the metrics were available to judge it.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null, transcript_segments null"}
+ ],
+ "confidence": "RELIABLE",
+ "notes": "Rejected with more confidence than the other caption-only calls: the subject is unambiguous from the caption and no reading of it lands in any of the three lists. Same author and same shape as DceFNdVM-NG, a skill handed over behind a keyword. Worth keeping as a warning about the routing hints: three of the eight scores in this batch come from single-word matches inside interest lines, so the hint ranks, it does not decide."
+}

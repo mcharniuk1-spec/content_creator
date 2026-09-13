@@ -1,0 +1,26 @@
+{
+ "code": "DcA56UVyzhM",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": null,
+ "reject_reason": "Getting a stranger's attention with cold outreach is in none of the three interest lists. Rick's problem is the work that already calls him and sits unanswered while he is on a roof; Anna does not sell anything; Emma's Growing lines are about being found inside ChatGPT and Google and about what converts once someone is already looking, never about mailing people who did not ask. The post itself also puts no AI anywhere in the process, the caption and its three hashtags are sales, lead generation and cold email, which is the first of the three refusals in RULES.md §2а, and a cold note written for a stranger is exactly the client-facing copy this audience says it walks away from (RULES.md §11.2.5). Strongest numbers in the batch, so it stays a reference for structure and not a card.",
+ "why_this_persona": null,
+ "interest": null,
+ "question": null,
+ "format": "M2 Radar",
+ "borrow": null,
+ "change": null,
+ "hook": "",
+ "on_screen": null,
+ "cta": null,
+ "claims": [
+  {"text": "118 086 plays against this author's median of 31 600, 3.7 times their own norm and the highest robust_z in the batch at 3.43, with 43.0 saves and 35.5 shares per thousand.", "state": "OBSERVED", "source": "batch metrics DcA56UVyzhM"},
+  {"text": "88 comments on 118 086 plays, by far the lowest comment rate in the batch, with no keyword gate in the caption: it earned its forwards without one.", "state": "OBSERVED", "source": "batch metrics and caption DcA56UVyzhM"},
+  {"text": "Comment-keyword gates raise comment rate 23-fold and saves 2.8-fold while leaving reach untouched, so the absence of a gate here is not what the numbers are made of.", "state": "OBSERVED", "source": "insights.json I-12"},
+  {"text": "108 seconds, the longest reel in the batch, on a single process end to end, and duration does not predict performance anywhere in the dataset (Spearman -0.069).", "state": "OBSERVED", "source": "batch metrics DcA56UVyzhM; insights.json I-02"},
+  {"text": "Both routing hints scored 0.0 with no hits, which is itself a signal that no persona language appears in the post.", "state": "OBSERVED", "source": "batch routing_hint DcA56UVyzhM"},
+  {"text": "No transcript or frame analysis exists for this code, so only the caption, the duration and the metrics were available to judge it.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null, transcript_segments null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Judged on caption and metrics alone. Outreach was the ground of the agency persona that the 13 September portfolio retired, and with Rick, Emma and Anna it has no owner, so this is a clean reject rather than a near miss. The structural lesson is worth keeping in the reference pile: one process, start to finish, no list and no second topic, 108 seconds long, 35.5 shares per thousand with nothing gated. If outreach ever comes back as a persona interest, the card is the research half of it, never the sentence that goes in the mail."
+}

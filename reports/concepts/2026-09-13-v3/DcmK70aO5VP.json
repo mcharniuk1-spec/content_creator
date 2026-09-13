@@ -1,0 +1,49 @@
+{
+ "code": "DcmK70aO5VP",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "anna",
+ "reject_reason": null,
+ "why_this_persona": "The first of the three automations the reel names is the intake pile at a law firm: collect the client details, sort the documents, send everything to the right person. That is Anna's own interest line word for word, and her file already says she answers 'where is this file' twenty times a day while an IT memo tells her no client data goes into AI.",
+ "interest": "Automating my process: Client documents sorted, named and routed to the right person with approval",
+ "question": "Can the file pile sort itself without client data leaving the company, and who is answerable when something lands on the wrong desk?",
+ "format": "M2 Teardown",
+ "borrow": {
+  "hook_logic": "Clear the objections that disqualify most of the audience before any content arrives. The source does it at second 5.6, before the first example, so nobody drops out early (beat 1: 'you don't have to learn how to code or you don't have to show your face'). Ours clears the two that stop Anna in the first ten seconds: 'I am not technical' and 'we are not allowed to put client files into it'.",
+  "proof_mechanism": "Say the process in three plain verbs and let a screen carry the weight instead of a claim. The source does it three times in the same shape: collects new client details, sorts their documents, sends everything to the right person (beats 2, 3, 4), and cuts to a routing diagram and an invoice extraction as its only evidence (scenes 5 and 7). We keep the three-verb sentence and replace the diagram with our own intake mailbox and draft queue.",
+  "ordering": "Hook, objections cleared, the process in three verbs, then the reason these and not the flashier ones (beat 5: 'automations that businesses can actually understand'), then the ask (beat 6).",
+  "visual_grammar": "Talk, show, come back: face at medium, then a full screen with no host and no title banner, then back to the face, twice (scenes 0 to 8). One bold stat callout in a contrasting colour on a single number (scene 3). Single-word captions built word by word throughout. I-11 measures that arrangement as the strongest named visual pattern in the corpus, 39 reels across 32 creators, median share rate 0.0213 against 0.0140.",
+  "beat_ids": ["0", "1", "2", "5", "6"],
+  "scene_ids": ["0", "3", "5", "6", "7"]
+ },
+ "change": {
+  "process": "The weekly intake pile at a 40-person services company: client documents arrive as email attachments and portal uploads, somebody opens each one, works out what it is, renames it, files it in the right folder and tells the person who needs it that it has landed. Owner is Anna; it is in her job description and in nobody else's.",
+  "friction": "Anna is the router. The job has no queue and no record, so it cannot be handed to her two direct reports while she is away, and the answer to 'where is this file' lives in her head, which is why she gives it twenty times a day. The source sells this same pile as an eight thousand dollar a month product with nothing behind the figure; we do not repeat the number and we do not sell the pile, we run it.",
+  "ai_boundary": "The machine reads the attachment, proposes the file name, the folder and the person it goes to, and drafts the one-line handover note. A person approves each one before anything is filed or sent, and client names and account numbers are stripped before anything is read, per the memo Anna already has to live with. The recruitment example from the source is dropped on purpose and we say so on camera: screening people is the one use this audience rejected both times it appeared, and it is on Anna's own list of jobs that should never be handed over. Nobody's hours are being replaced here; Anna's are being given back.",
+  "next_action": "Comment POLICY, get the four questions on one page, and answer them for one folder before any file goes near a model."
+ },
+ "hook": "Client files named, sorted and handed to the right person, with nothing a client owns leaving the building.",
+ "on_screen": {
+  "opening_screen": "Our own shared intake mailbox, attachments unopened, with the filing folder open beside it. Screen first, no face, per I-09.",
+  "human_check": "A draft queue: every file with its proposed name, its folder and the person it goes to, approved one tap at a time. Beside it the source document that says who owns each folder, with the date it was last checked, kept outside the assistant.",
+  "cost_line": "First place to look is the Copilot licence the company already pays for, which costs the team nothing extra. Anna's own ceiling is $20 a month before she has to ask anyone. Past that it needs a budget line with a named owner and hours back per week, and at $100 a month with nobody counting the hours this audience says no."
+ },
+ "cta": {
+  "type": "comment_keyword",
+  "keyword": "POLICY",
+  "artefact": "four-question AI policy one-pager",
+  "viewer_gets": "One page you can put in front of the owner and IT: what goes in, what gets stripped out first, who checks before anything is filed or sent, and what you do the day it is confidently wrong."
+ },
+ "claims": [
+  {"text": "Highest combined engagement in the batch: 62.1 saves and 40.3 shares per thousand plays, on 21 620 plays against this author's median of 11 366.", "state": "OBSERVED", "source": "batch metrics DcmK70aO5VP; ta-v1 notes"},
+  {"text": "Both objections are cleared at second 5.6, before any content starts.", "state": "OBSERVED", "source": "ta-v1 beat 1 (5.6 to 10.0 s), interpretation.structural_reason"},
+  {"text": "The eight thousand dollar a month figure is asserted with no client, screenshot or revenue evidence behind it, so it is not repeated in our card.", "state": "OBSERVED", "source": "ta-v1 semantics.proof, interpretation.proof"},
+  {"text": "Stating the outcome in money costs reach in this niche: the 71 of 266 reels that frame desire or pain in money terms run at median view_lift 1.19 against 2.12 for the rest.", "state": "OBSERVED", "source": "insights.json I-25"},
+  {"text": "The two screens the source shows as proof are a routing diagram and an invoice extraction, both back-office document flows.", "state": "OBSERVED", "source": "fa-v1 scenes 5 and 7, proof_visuals"},
+  {"text": "Face, then screen, then face again is the strongest named visual pattern in the corpus: 39 reels across 32 creators, median share rate 0.0213 against 0.0140.", "state": "OBSERVED", "source": "insights.json I-11"},
+  {"text": "Candidate screening was rejected both times it appeared in the Reddit pass, which is why the recruitment example is dropped.", "state": "OBSERVED", "source": "RULES.md §11.3; personas/anna.json distrusts and 'Which jobs in her department should never be automated'"},
+  {"text": "Hours back per week on our own intake pile after the draft queue has run for a week, which is the number Anna has to report.", "state": "TO_MEASURE", "source": "not run yet; POSITIONING.md §8 proof loop; personas/anna.json cost"}
+ ],
+ "confidence": "RELIABLE",
+ "notes": "Teardown rather than Radar: there is no tool or model in the source to translate, only a process, and both Teardown gates are met, a concrete process with a named owner (Anna's intake pile) and a reason to forward (the data boundary drawn in plain words plus the job we refuse to hand over). The routing hint put Anna first at 3.53 on four interest lines and it is right for once: the reel's subject is document intake, sorting and routing, and that is her line verbatim. Emma scored 1.76 on words about clients, not about her week. The source is a seller talking to people who want to start an agency, so we keep its structure and drop its subject. fa-v1 notes the last 8.6 seconds are unsampled, so the source's closing visual is unknown; ours is built from scratch."
+}

@@ -1,0 +1,25 @@
+{
+ "code": "DceFNdVM-NG",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": null,
+ "reject_reason": "Vox-style motion design produced by prompting instead of by hours in After Effects is a craft upgrade for people who already own After Effects. None of the three has animation anywhere in their lists: Rick wants the phone answered, Anna wants documents routed and minutes that hold decisions, and Emma's nearest lines are about product photos and about one post going into five formats, which is not an animated explainer. There is no repeated business process here and no owner, and explainer animation that fronts a brand is the client-facing creative this audience punishes (RULES.md §11.2.5). Biggest reach in the batch by a distance, so it stays a reference for structure.",
+ "why_this_persona": null,
+ "interest": null,
+ "question": null,
+ "format": "M2 Radar",
+ "borrow": null,
+ "change": null,
+ "hook": "",
+ "on_screen": null,
+ "cta": null,
+ "claims": [
+  {"text": "162 567 plays against this author's median of 22 073, 7.4 times their own norm and the largest reach in the batch, with 54.6 saves and 28.9 shares per thousand and 6 849 comments behind a 'comment VOX' gate.", "state": "OBSERVED", "source": "batch metrics and caption DceFNdVM-NG"},
+  {"text": "Reach and engagement are not the same purchase: keyword gates raise comments 23-fold and saves 2.8-fold while leaving reach untouched, so the 6 849 comments say nothing about why this one travelled.", "state": "OBSERVED", "source": "insights.json I-12"},
+  {"text": "Claude Code skills are among the highest-lift topics in the niche (n=22, median view_lift 4.36) and are on the list M2 is positioned to refuse.", "state": "OBSERVED", "source": "insights.json I-25"},
+  {"text": "Both routing hints scored 0.0 with no hits.", "state": "OBSERVED", "source": "batch routing_hint DceFNdVM-NG"},
+  {"text": "No transcript or frame analysis exists for this code, so only the caption, the duration and the metrics were available to judge it.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null, transcript_segments null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "One of three reels by this author in the batch. The other two are the same shape: a skill handed over behind a keyword, aimed at editors and designers. Only Dcg59jPxqci becomes a card, because product photos on a budget is an interest line Emma actually has, including the part about where they fail. This one and Dct42HhxCkq are the same craft with no job attached. Worth noting for the reference pile that the batch's two biggest reach numbers both come from posts M2 cannot use, which is I-25 stated as a weekly problem rather than a finding."
+}

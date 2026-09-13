@@ -1,0 +1,44 @@
+{
+ "code": "DdAP_tFPOC9",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "anna",
+ "reject_reason": null,
+ "why_this_persona": "A learning path that sorts people by 'new to AI' and 'already using AI at work' is aimed at the one of the three who is being measured on adoption: Anna has a 2026 goal that says adopt AI and a company licence nobody trained her on. Rick wants plain words, not a course; Emma already has the tabs open all day. The interest line is hers and it is the sharp version of the question, fluency rather than the look of interest.",
+ "interest": "How AI works: How to build real fluency instead of performing interest",
+ "question": "I have a licence nobody trained me on and a goal that says adopt AI. What do I actually learn, and how do I show it stuck?",
+ "format": "M2 Radar",
+ "borrow": {
+  "hook_logic": "Sort the viewer before you advise them. The caption asks which one you are, new to AI or already using it at work, and gives each a different first step, so the advice lands as addressed to you rather than broadcast. We keep the sorting move and change the axis: not how much AI you have used, but whether you own a process you can practise on this week.",
+  "proof_mechanism": "The source proves nothing and does not need to; the courses are free and first-party, and that is the whole signal. Ours has to carry the Radar proof instead, one concrete task run before and after, on screen, with the limitation said out loud.",
+  "ordering": "Where to start, then the branch, then the full breakdown. Ours: the one job you already do every week, the hour that goes into it, what comes out different, and what a certificate still does not tell anyone.",
+  "visual_grammar": "Not inferable: no frame analysis exists for this code. We open on the screen rather than the face per I-09, with the course catalogue and this week's meeting recording side by side, and come back to camera for the data rule.",
+  "beat_ids": [],
+  "scene_ids": []
+ },
+ "change": {
+  "process": "Anna's own weekly meeting cycle, the thing she already does every week: run the meeting, record it, write up minutes, chase who owns what. It is the practice ground because she owns it end to end and can tell in one read whether the output is right.",
+  "friction": "Courses get finished and nothing in the week changes, which is what performing interest looks like from the outside. The licence sits unused because nobody mapped a lesson to a job, and the owner's habit of running her proposals through a chat and sending back a wall of text sets the bar she is measured against.",
+  "ai_boundary": "The machine drafts the recap, the decision list and the task list from the recording. Anna decides what counts as a decision, who owns it and what the deadline is, and she reads it against the recording before a line of it reaches the team. Client names and anything the memo names as client data are stripped before the recording goes anywhere, which also decides which of the course exercises she can run at all.",
+  "next_action": "Take this week's meeting recording, do the course exercise on that instead of the sample file, and bring the decision list to the owner rather than the certificate."
+ },
+ "hook": "Free courses, one job you already do every week, and a before and after your owner can see at the end of the week.",
+ "on_screen": {
+  "opening_screen": "The free course catalogue open on one side of the screen and this week's actual meeting recording on the other, no face in the first frame.",
+  "human_check": "The minutes that came out of the exercise read line by line against the recording, with decisions and owners marked by hand before anything is sent, and the source document with the owner's name and the date it was last checked kept next to it.",
+  "cost_line": "The courses are free and the licence the company already pays for covers the practice, so the monthly number is $0 on top of what is already spent, and $20 a month is Anna's own ceiling before she asks anyone. Free is not the answer though: the real cost is two evenings, and it stops paying the moment the week after the course looks exactly like the week before."
+ },
+ "cta": null,
+ "claims": [
+  {"text": "5 138 plays against this author's median of 5 166, so this reel did not beat its own author's norm; it is in the batch because the author cleared the bar, not the post.", "state": "OBSERVED", "source": "batch metrics DdAP_tFPOC9; RULES.md §2, author rather than reel"},
+  {"text": "54.9 saves per thousand, the second highest save rate in the batch, on the lowest reach in the batch.", "state": "OBSERVED", "source": "batch metrics DdAP_tFPOC9"},
+  {"text": "Anna's file names a Copilot licence nobody trained her on and a 2026 goal that says adopt AI alongside an IT memo that forbids client data in AI.", "state": "OBSERVED", "source": "personas/anna.json tools, day"},
+  {"text": "Hours saved per week is the number she reports, not features.", "state": "OBSERVED", "source": "personas/anna.json interests, Cost"},
+  {"text": "Naming specific things is the only language feature that predicts reach and survives creator normalisation (+0.161 pooled, +0.198 within creators on view_lift).", "state": "OBSERVED", "source": "insights.json I-13"},
+  {"text": "Question hooks are rare and expensive: 24 of 264 opening beats carry a question mark and more questions track lower save rates (Spearman -0.229), which is why the sorting move becomes a statement in our hook.", "state": "OBSERVED", "source": "insights.json I-07"},
+  {"text": "What one week of minutes looks like before and after the exercise, measured on our own meeting.", "state": "TO_MEASURE", "source": "not run yet; POSITIONING.md §8 proof loop"},
+  {"text": "No transcript or frame analysis exists for this code; structure was read from the caption and the metrics only, and the caption is truncated mid-sentence in the batch file.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null, transcript_segments null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Radar slot: the signal is a free first-party learning path, the work decision is which single process you practise it on, and the limitation is that a finished course proves nothing to the owner while a changed set of minutes does. A course list for its own sake is a Radar disqualifier in RULES.md §2, so the card is the practice, not the catalogue. No comment CTA: nothing in artefacts/ covers a learning path, the decision-minutes template belongs to the minutes card rather than this one, and RULES.md §12.3 makes the ask optional, so this one ends on a step the viewer takes alone. Weakest reference in the batch by reach, which is a reason to treat its structure as a suggestion, not evidence; the borrowing here is the sorting move only."
+}

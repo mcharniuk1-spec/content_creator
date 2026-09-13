@@ -1,0 +1,49 @@
+{
+ "code": "Dcg59jPxqci",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "emma",
+ "reject_reason": null,
+ "why_this_persona": "The reel's subject is one product photo turned into listing images, ad creatives and thumbnails, and that is Emma's interest line almost word for word, including the part she actually wants answered, where they fail. Her file also prices the alternative: a studio shoot at a thousand dollars against a lightbox and generated variants. Rick sells jobs, not products; Anna has no catalogue.",
+ "interest": "Tools for a task: Tools for product photos and ad creatives on a budget, and where they fail",
+ "question": "Can I stop paying for a shoot every time the catalogue changes, and where do the fake photos get caught?",
+ "format": "M2 Builds",
+ "borrow": {
+  "hook_logic": "Smallest possible input against the longest possible output list: one product image and one prompt, then listing images, ad creatives, commercials, thumbnails. The shape is what makes it stop the scroll, so we keep it and we keep the single real input on screen. What we drop is the word 'pipeline' and the promise that the list comes out finished.",
+  "proof_mechanism": "The source gates its method behind a keyword and earned 4 136 comments on 53 195 plays that way, with no evidence shown in the post. I-12 says exactly what that buys: comment rate up 23-fold, saves 2.8-fold, reach untouched. So we borrow the gate for the sheet at the end and put the evidence in the open instead, our own object photographed once, the variants beside it, and the rejects on screen.",
+  "ordering": "One input, many outputs, then the ask. Ours becomes: one input, many outputs, where it breaks, what stays real, what it costs per usable image.",
+  "visual_grammar": "Screen-first, product held in frame, before and after side by side. Inferred from the caption and the format only: no frame analysis exists for this code. I-09 puts the opening frame on the screen, I-08 keeps a screen in shot throughout, and A-roll is kept for the boundary beat.",
+  "beat_ids": [],
+  "scene_ids": []
+ },
+ "change": {
+  "process": "The catalogue and creative week in a 1 to 8 person online brand: photograph a product once, then produce listing images, ad variants and social crops for every channel, again for every new product and every seasonal push.",
+  "friction": "A studio shoot is a four-figure line Emma rejects, so the work lands on her phone camera and Canva at night, and the ads need new variants faster than a shoot can be booked. The failure is not that generated images look bad; it is that the ones that reach a customer get caught, and her own file lists AI product images first among the things she distrusts.",
+  "ai_boundary": "The real photograph stays the product page. The machine makes variants of what the customer does not inspect: background, surface, scale, seasonal context for a paid ad. It never renders the label, the size, the colour name, the fabric or any claim about the thing; those are read from the product sheet, the same way a price is read and never written. Anything with text printed on the packaging is out of scope and we say so on camera.",
+  "next_action": "Comment RUNS, and divide this month's image bill by the number of images you actually published, not by the number generated."
+ },
+ "hook": "One real photo of the product, ad variants made from it, and the places the fakes give themselves away before a customer spots them.",
+ "on_screen": {
+  "opening_screen": "Our own object shot once on a table with a lightbox, open on screen next to the generated variants, zoomed to the label. No face in the first frame.",
+  "human_check": "Side by side before anything is published: real photo on the left, variant on the right, a person checking the label text, the colour name and the proportions against the product sheet. The reject folder is shown open, with the reasons written on it.",
+  "cost_line": "Emma already pays $20 to $100 a month across tools and the honest comparison in her own file is a $1,000 studio shoot. It stops paying the month that checking and re-making the variants takes longer than photographing the thing on a table, and free is not the answer here either: the bill arrives per image once the trial ends."
+ },
+ "cta": {
+  "type": "comment_keyword",
+  "keyword": "RUNS",
+  "artefact": "cost-per-run sheet",
+  "viewer_gets": "One page that turns a monthly bill into a cost per thing that actually happened. For photos that is cost per published image, not cost per generation."
+ },
+ "claims": [
+  {"text": "53 195 plays against this author's median of 22 073, 2.4 times their own norm, with 52.4 saves and 26.3 shares per thousand, and 4 136 comments behind a keyword gate.", "state": "OBSERVED", "source": "batch metrics Dcg59jPxqci; caption 'Comment CODEX'"},
+  {"text": "Comment-keyword gates raise comment rate 23-fold and saves 2.8-fold while leaving reach untouched (view_lift 2.08 against 1.72, p=0.58).", "state": "OBSERVED", "source": "insights.json I-12"},
+  {"text": "AI product images are first on Emma's list of things she distrusts, and customer-facing AI imagery is publicly rejected by this audience.", "state": "OBSERVED", "source": "personas/emma.json distrusts; RULES.md §11.2.5"},
+  {"text": "Her own cost comparison is a studio photoshoot at $1,000 against a lightbox and generated variants.", "state": "OBSERVED", "source": "personas/emma.json interests, Cost"},
+  {"text": "Reels with any screen state carry median share rate 0.0168 against 0.0118 and save rate 0.0308 against 0.0220.", "state": "OBSERVED", "source": "insights.json I-08"},
+  {"text": "Which parts break on our own product: label text, printed size, colour under a different light, proportions between variants.", "state": "PLANNED", "source": "not run yet; the run is the Builds requirement and has to exist before the card is written"},
+  {"text": "How many generated variants survive the side-by-side check, as a share of what was generated.", "state": "TO_MEASURE", "source": "the failure count is the whole point of the card; RULES.md §2, M2 Builds"},
+  {"text": "No transcript or frame analysis exists for this code; structure was read from the caption, the duration and the metrics only.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null, transcript_segments null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Builds rather than Radar because the interest line asks where the thing fails, and Builds is the slot that owes a breakage; the card cannot be written until we have actually run our own product through it, so every result claim is PLANNED or TO_MEASURE. This is the only one of three reels by this author that becomes a card: the other two are motion design for editors. The source's tool is a command-line tool for developers, which POSITIONING.md §8 puts on the do-not-publish list, so the card shows the job and the failures and names whatever we actually used late and once. The routing hint was right here for the right reason, 4.12 on three of Emma's interest lines rather than on stray words. Emma's second relevant line, 'Where customers punish AI (images, copy, chatbots) and where they do not notice', is what the boundary beat is built from."
+}

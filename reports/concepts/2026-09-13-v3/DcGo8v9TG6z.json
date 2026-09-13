@@ -1,0 +1,25 @@
+{
+ "code": "DcGo8v9TG6z",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": null,
+ "reject_reason": "Ten concepts you should know in 2026, handed over as YouTube links, is a vocabulary list. The caption names its own audience, 'if you're building with AI', which is the builder audience POSITIONING.md §8 tells us not to publish for, and a list for its own sake is a named Radar disqualifier in RULES.md §2. The near miss is real and worth recording: Emma has 'The difference between a chat, an automation and an agent' and 'What agents can do today versus what the demos promise' in her list, so the words are in her file. What is missing is the job. There is no repeated process behind any of the ten, no owner and nothing to decide on Monday, so none of the three would forward it. It stays a reference.",
+ "why_this_persona": null,
+ "interest": null,
+ "question": null,
+ "format": "M2 Radar",
+ "borrow": null,
+ "change": null,
+ "hook": "",
+ "on_screen": null,
+ "cta": null,
+ "claims": [
+  {"text": "67 896 plays, 2.6 times this author's median of 26 356, with 54.2 saves and 37.6 shares per thousand and 1 609 comments behind a 'comment yes' gate.", "state": "OBSERVED", "source": "batch metrics and caption DcGo8v9TG6z"},
+  {"text": "The caption names its audience as people building with AI and its subject as concepts rather than a task.", "state": "OBSERVED", "source": "caption of DcGo8v9TG6z"},
+  {"text": "The corpus serves builders and agency operators rather than the non-technical leader M2 targets: 54 of 266 reels name a developer or coder audience and only a handful name a non-technical one.", "state": "OBSERVED", "source": "insights.json I-27"},
+  {"text": "Both routing hints scored 0.0 with no hits.", "state": "OBSERVED", "source": "batch routing_hint DcGo8v9TG6z"},
+  {"text": "No transcript or frame analysis exists for this code, so only the caption, the duration and the metrics were available to judge it.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null, transcript_segments null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Judged on caption and metrics alone, and rejected on the same grounds as in the first batch, which the three-persona portfolio does not change. If a version of this ever becomes a card it is not the glossary; it is one of the ten words turned back into a job somebody does every week, with Emma's chat-automation-agent line as the interest and one of her own chores on screen. Twenty seconds, the shortest reel in the batch, and a gate on the links: the engagement here is bought, not earned (I-12)."
+}

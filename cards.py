@@ -131,6 +131,8 @@ def _pool(con, today):
         d['age'] = (today - datetime.date.fromtimestamp(r['ts'])).days
         # блок контента — ось отбора с 13 сентября 2026 (content_blocks.py)
         rt = cb.route(r['code'], topics, cb.reel_text(con, r['code'], r['cap']))
+        if rt['source'] == 'agent' and rt.get('reason_if_null'):   # agent read it: off the niche or no text
+            continue
         d['block'], d['block_evidence'], d['block_source'] = rt['block'], rt['evidence'], rt['source']
         d['about'], d['regex_block'], d['block_confidence'] = rt['about'], rt['regex_block'], rt['confidence']
         # доля тем ролика, уже закрытых нами: 1.0 — снимали ровно об этом, 0 — тема свежая
@@ -231,13 +233,7 @@ def _card(r, fmt, cfg, i, stage=None, note=''):
         facts.append('shot in one take' if r['cuts_ps'] < 0.02 else
                      f"{r['cuts_ps']:.2f} cuts per second")
     facts.append(f"{r['dur']:.0f} seconds")
-    try:                                   # решение Миши 13 сентября 2026: карточка адресована персонажу
-        from engine import personas as _personas
-        top = _personas.match((r.get('cap') or ''), r.get('topics') or [])[:2]
-        if top and top[0][1] > 0:
-            facts.append('persona hint: ' + ', '.join(f"{p} ({s})" for p, s, _ in top if s > 0))
-    except Exception:
-        pass
+    # persona hint dropped 13 Sep 2026 (evening): blocks are the axis, personas are the example layer
     if r.get('closed_share'):
         facts.append('we already covered this topic in the last six weeks'
                      if r['closed_share'] == 1 else 'part of its topics we already covered')

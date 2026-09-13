@@ -148,7 +148,9 @@ def route(code, topics, text='', agent_dir=AGENT_DIR):
     block = d.get('block') if d.get('block') in BLOCKS else UNASSIGNED
     return {'block': block, 'evidence': {'tags': [], 'words': list(d.get('evidence') or [])[:3]},
             'source': 'agent', 'about': d.get('about'), 'regex_block': regex_block,
-            'confidence': d.get('confidence'), 'reason_if_null': d.get('reason_if_null')}
+            'confidence': d.get('confidence'),
+            # agent said null: off the niche or no text to judge; cards._pool drops such reels
+            'reason_if_null': (d.get('reason_if_null') or 'no block') if block == UNASSIGNED else None}
 
 
 def label(bid):

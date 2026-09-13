@@ -91,6 +91,10 @@ json.dump({'code': 'X', 'analysis_version': 'br-v1', 'model': 'm', 'block': 'tru
 rt = cb.route('X', ['Токены, стоимость, лимиты'], 'cost', agent_dir=tmpdir)
 eq('agent file overrides regex', (rt['block'], rt['source'], rt['regex_block']), ('trust', 'agent', 'money'))
 eq('agent about travels with the route', rt['about'], 'A reel about checking answers.')
+json.dump({'code': 'Z', 'analysis_version': 'br-v1', 'model': 'm', 'block': None, 'secondary': None,
+           'reason_if_null': 'meme', 'evidence': [], 'about': 'A meme.', 'confidence': 'HIGH',
+           'disagrees_with_regex': False}, open(os.path.join(tmpdir, 'Z.json'), 'w'))
+eq('agent null carries its reason (pool drops it)', cb.route('Z', [], '', agent_dir=tmpdir)['reason_if_null'], 'meme')
 eq('no agent file -> regex', cb.route('Y', ['Токены, стоимость, лимиты'], '', agent_dir=tmpdir)['source'], 'regex')
 from engine import block_route as br
 eq('br-v1 validator accepts the fixture', br.validate(json.load(open(os.path.join(tmpdir, 'X.json')))), [])

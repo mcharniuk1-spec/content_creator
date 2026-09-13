@@ -1,0 +1,767 @@
+[
+ {
+  "code": "DcmK70aO5VP",
+  "url": "https://www.instagram.com/reel/DcmK70aO5VP/",
+  "username": "hassandotai",
+  "format_slot": "M2 Radar",
+  "radar_facts": "1.9× this author's own norm (21 620 against 11 366) · 102 shares + saves per thousand · 40 shares per thousand · 62 saves per thousand · 0.17 cuts per second · 52 seconds · persona hint: mary (1.33), dana (0.56)",
+  "metrics": {
+   "play": 21620,
+   "reshares": 871,
+   "saves": 1342,
+   "comments": 879,
+   "duration_s": 51.7,
+   "resh_1k": 40.28677150786309,
+   "save_1k": 62.07215541165587,
+   "author_median_play": 11366,
+   "robust_z": 2.7909
+  },
+  "topics": [
+   "Только призыв, без темы в подписи"
+  ],
+  "caption": "Comment Ready and I’ll send these automations to you right away.",
+  "routing_hint": [
+   {
+    "persona": "mary",
+    "score": 4.0,
+    "hits": [
+     "customers",
+     "first",
+     "month",
+     "order",
+     "right"
+    ]
+   },
+   {
+    "persona": "dana",
+    "score": 2.78,
+    "hits": [
+     "clients",
+     "automations",
+     "client",
+     "clients"
+    ]
+   }
+  ],
+  "transcript_analysis": {
+   "code": "DcmK70aO5VP",
+   "analysis_version": "ta-v1",
+   "model": "claude-opus-5[1m]",
+   "language": "en",
+   "beats": [
+    {
+     "idx": 0,
+     "role": "hook",
+     "start_s": 0.0,
+     "end_s": 5.6,
+     "text": "I will give you three AI automations that can literally help you make eight thousand dollars in just a month.",
+     "segment_idx": [
+      0,
+      1
+     ],
+     "audience_function": "attaches a number and a timeframe to the promise",
+     "emotion": "ambition",
+     "intention": "stop anyone chasing income with AI",
+     "persuasion": "specific money figure",
+     "key_phrases": [
+      "three AI automations",
+      "eight thousand dollars in just a month"
+     ]
+    },
+    {
+     "idx": 1,
+     "role": "objection",
+     "start_s": 5.6,
+     "end_s": 10.0,
+     "text": "And no, you don't have to learn how to code or you don't have to show your face in order to do this.",
+     "segment_idx": [
+      2,
+      3
+     ],
+     "audience_function": "removes the two objections that disqualify most viewers",
+     "emotion": "reassurance",
+     "intention": "widen the audience immediately",
+     "persuasion": "pre-emptive objection removal",
+     "key_phrases": [
+      "you don't have to learn how to code",
+      "you don't have to show your face"
+     ]
+    },
+    {
+     "idx": 2,
+     "role": "example",
+     "start_s": 10.0,
+     "end_s": 18.2,
+     "text": "So first automation is for law firms. It's an automation that collects new client details, sorts their documents and sends everything to the right person in the team.",
+     "segment_idx": [
+      4,
+      5,
+      6
+     ],
+     "audience_function": "first automation, tied to a named industry",
+     "emotion": "matter-of-fact",
+     "intention": "make the offer concrete and sellable",
+     "persuasion": "industry plus process specificity",
+     "key_phrases": [
+      "first automation is for law firms",
+      "collects new client details, sorts their documents",
+      "sends everything to the right person"
+     ]
+    },
+    {
+     "idx": 3,
+     "role": "example",
+     "start_s": 18.2,
+     "end_s": 27.1,
+     "text": "The second one is for recruitment agencies. This one reads resumes, filters candidates and sends the best ones to the recruiter. This is a huge time saver for a business.",
+     "segment_idx": [
+      7,
+      8,
+      9
+     ],
+     "audience_function": "second automation with the benefit spelled out",
+     "emotion": "matter-of-fact",
+     "intention": "keep the list rhythm and name the value",
+     "persuasion": "industry plus time-saving claim",
+     "key_phrases": [
+      "for recruitment agencies",
+      "reads resumes, filters candidates",
+      "huge time saver for a business"
+     ]
+    },
+    {
+     "idx": 4,
+     "role": "example",
+     "start_s": 27.1,
+     "end_s": 37.0,
+     "text": "Third is an automation for insurance companies. This one collects customers documents, check what's missing and updates their systems automatically to see who is behind with their payments.",
+     "segment_idx": [
+      10,
+      11,
+      12
+     ],
+     "audience_function": "third automation, the most operational",
+     "emotion": "matter-of-fact",
+     "intention": "close the list with a back-office case",
+     "persuasion": "industry plus process specificity",
+     "key_phrases": [
+      "for insurance companies",
+      "collects customers documents, check what's missing",
+      "who is behind with their payments"
+     ]
+    },
+    {
+     "idx": 5,
+     "role": "payoff",
+     "start_s": 37.0,
+     "end_s": 43.0,
+     "text": "Now look, these are the automations that businesses can actually understand and they can actually use inside their business.",
+     "segment_idx": [
+      13,
+      14
+     ],
+     "audience_function": "names why these three and not flashier ones",
+     "emotion": "conviction",
+     "intention": "position the list as sellable rather than impressive",
+     "persuasion": "buyer-comprehension argument",
+     "key_phrases": [
+      "automations that businesses can actually understand",
+      "actually use inside their business"
+     ]
+    },
+    {
+     "idx": 6,
+     "role": "cta",
+     "start_s": 43.0,
+     "end_s": 51.6,
+     "text": "If you want to get access to these automations for free and you want to learn how to build these high end automations for your clients, just comment the word ready and I'll send you my guide.",
+     "segment_idx": [
+      15,
+      16,
+      17
+     ],
+     "audience_function": "gives the keyword and stacks two things behind it",
+     "emotion": "urgency",
+     "intention": "drive comments",
+     "persuasion": "free access plus a guide",
+     "key_phrases": [
+      "get access to these automations for free",
+      "learn how to build these high end automations for your clients",
+      "comment the word ready"
+     ]
+    }
+   ],
+   "semantics": {
+    "topic": "AI-агентство как бизнес",
+    "subtopic": "three industry-specific automations to sell as an AI service business",
+    "subject": "Automations for law firms, recruitment agencies and insurance companies",
+    "thesis": "The automations that sell are the boring back-office ones a business owner can immediately understand",
+    "audience": "beginners who want AI income without coding or being on camera",
+    "audience_stage": "wants to start an AI service business, has no technical background",
+    "pain": "dont_know_where_to_start",
+    "pain_raw": "you want to sell AI services but don't know what to build or who to sell it to",
+    "desire": "a first $8,000 month from AI automations",
+    "problem": "most AI ideas are too abstract for a business owner to buy",
+    "fear": "needing to code or to build a personal brand on camera",
+    "aspiration": "selling high-end automations to clients as a service",
+    "solution": "build one of three named industry automations and sell it into that industry",
+    "solution_type": "resource_handoff",
+    "mechanism": "each automation covers intake, sorting and routing inside one industry's document workflow",
+    "proof_type": "none",
+    "proof": "no client, screenshot or revenue evidence is shown",
+    "examples": [
+     "law firms",
+     "recruitment agencies",
+     "insurance companies"
+    ],
+    "objection": "'I can't code and won't show my face' - both removed in the first ten seconds",
+    "payoff": "three sellable automations plus a guide on building them for clients",
+    "cta": "comment the word 'ready' for the automations and the guide",
+    "cta_type": "comment_keyword",
+    "hook_type": "number_stat",
+    "hook_text": "I will give you three AI automations that can literally help you make eight thousand dollars in just a month.",
+    "narrative": "listicle",
+    "tone": "direct, promotional, beginner-friendly",
+    "emotion_path": "ambition -> reassurance -> clarity -> urgency",
+    "funnel_role": "awareness",
+    "positioning_type": "seller",
+    "tools_mentioned": [],
+    "models_mentioned": [],
+    "numbers_used": [
+     "three",
+     "eight thousand dollars",
+     "a month"
+    ],
+    "rhetorical_devices": [
+     "money figure in the first line",
+     "objection removal before the content",
+     "rule of three",
+     "'actually' repeated as a credibility marker"
+    ],
+    "open_loops": 1,
+    "pattern_interrupts": 0
+   },
+   "interpretation": {
+    "message": "Three boring, industry-specific automations are what businesses will actually pay for.",
+    "intent": "Harvest comments for a guide that funnels into an agency-building offer.",
+    "audience_tension": "Wanting AI income but having neither code skills nor a willingness to be on camera.",
+    "offer": "Free access to the three automations plus a guide, by comment.",
+    "mechanism": "Document intake, sorting and routing automations, one per industry.",
+    "emotion": "Ambition backed by relief that the barriers are removed.",
+    "proof": "None - the $8,000 figure is asserted with nothing behind it.",
+    "structural_reason": "Objections are cleared at second 5, before any content, so nobody disqualifies themselves before the list starts; highest save rate in the batch at 62.1 per 1k.",
+    "visual_reason": "Not inferable from speech; nothing in the transcript describes the screen."
+   },
+   "quality": {
+    "specificity": 3,
+    "novelty": 2,
+    "clarity": 5,
+    "info_density": 3,
+    "grounded": false
+   },
+   "confidence": "RELIABLE",
+   "notes": "The $8,000/month figure is unsupported. The automations are described at a level too general to build from - the detail sits behind the comment gate. Highest combined engagement in the batch (40.3 shares and 62.1 saves per 1k)."
+  },
+  "frame_analysis": {
+   "code": "DcmK70aO5VP",
+   "analysis_version": "fa-v1",
+   "model": "claude-sonnet-5",
+   "frames_version": "fixed9-v1",
+   "frames": {
+    "0": {
+     "frame_type": "A_ROLL_MEDIUM",
+     "roll": "A",
+     "speaker_present": 1,
+     "face_present": 1,
+     "ui_present": 0,
+     "text_overlay": 1,
+     "overlay_text": "Automations that can make you $7.8k in a month / will",
+     "caption_placement": "top",
+     "framing": "medium",
+     "dominant_action": "presenter at a whiteboard, gesturing, hook title pinned above",
+     "visual_density": "medium",
+     "is_visual_hook": 1,
+     "is_cta_visual": 0,
+     "is_proof_visual": 0,
+     "notes": ""
+    },
+    "1": {
+     "frame_type": "A_ROLL_MEDIUM",
+     "roll": "A",
+     "speaker_present": 1,
+     "face_present": 1,
+     "ui_present": 0,
+     "text_overlay": 1,
+     "overlay_text": "Automations that can make you $7.8k in a month / AI",
+     "caption_placement": "top",
+     "framing": "medium",
+     "dominant_action": "same shot continues",
+     "visual_density": "medium",
+     "is_visual_hook": 1,
+     "is_cta_visual": 0,
+     "is_proof_visual": 0,
+     "notes": ""
+    },
+    "2": {
+     "frame_type": "A_ROLL_MEDIUM",
+     "roll": "A",
+     "speaker_present": 1,
+     "face_present": 1,
+     "ui_present": 0,
+     "text_overlay": 1,
+     "overlay_text": "Automations that can make you $7.8k in a month / literally",
+     "caption_placement": "top",
+     "framing": "medium",
+     "dominant_action": "same shot continues",
+     "visual_density": "medium",
+     "is_visual_hook": 1,
+     "is_cta_visual": 0,
+     "is_proof_visual": 0,
+     "notes": ""
+    },
+    "3": {
+     "frame_type": "A_ROLL_MEDIUM",
+     "roll": "A",
+     "speaker_present": 1,
+     "face_present": 1,
+     "ui_present": 0,
+     "text_overlay": 1,
+     "overlay_text": "Automations that can make you $7.8k in a month / $8,000",
+     "caption_placement": "top",
+     "framing": "medium",
+     "dominant_action": "a green bold stat callout ('$8,000') appears",
+     "visual_density": "medium",
+     "is_visual_hook": 0,
+     "is_cta_visual": 0,
+     "is_proof_visual": 1,
+     "notes": ""
+    },
+    "4": {
+     "frame_type": "A_ROLL_MEDIUM",
+     "roll": "A",
+     "speaker_present": 1,
+     "face_present": 1,
+     "ui_present": 0,
+     "text_overlay": 1,
+     "overlay_text": "Automations that can make you $7.8k in a month / face",
+     "caption_placement": "top",
+     "framing": "medium",
+     "dominant_action": "same shot continues, title still held",
+     "visual_density": "medium",
+     "is_visual_hook": 0,
+     "is_cta_visual": 0,
+     "is_proof_visual": 0,
+     "notes": ""
+    },
+    "5": {
+     "frame_type": "DATA_VISUAL",
+     "roll": "SCREEN",
+     "speaker_present": 0,
+     "face_present": 0,
+     "ui_present": 1,
+     "text_overlay": 1,
+     "overlay_text": "right",
+     "caption_placement": "bottom",
+     "framing": "screen",
+     "dominant_action": "black-background workflow diagram: 'Incoming webhook → Claude classifier → Parse classification → Route switch' (support/technical/sales/general outputs)",
+     "visual_density": "high",
+     "is_visual_hook": 0,
+     "is_cta_visual": 0,
+     "is_proof_visual": 1,
+     "notes": "Title banner and host no longer shown."
+    },
+    "6": {
+     "frame_type": "A_ROLL_MEDIUM",
+     "roll": "A",
+     "speaker_present": 1,
+     "face_present": 1,
+     "ui_present": 0,
+     "text_overlay": 1,
+     "overlay_text": "time",
+     "caption_placement": "bottom",
+     "framing": "medium",
+     "dominant_action": "host returns, talking, no title banner",
+     "visual_density": "low",
+     "is_visual_hook": 0,
+     "is_cta_visual": 0,
+     "is_proof_visual": 0,
+     "notes": ""
+    },
+    "7": {
+     "frame_type": "DATA_VISUAL",
+     "roll": "SCREEN",
+     "speaker_present": 0,
+     "face_present": 0,
+     "ui_present": 1,
+     "text_overlay": 1,
+     "overlay_text": "automatically",
+     "caption_placement": "bottom",
+     "framing": "screen",
+     "dominant_action": "black-background workflow diagram: 'Gmail trigger → Filter PDF attachments → Extract invoice details with AI → Split out each invoice line → Add invoice line to Google Sheets → Mark a message as read'",
+     "visual_density": "high",
+     "is_visual_hook": 0,
+     "is_cta_visual": 0,
+     "is_proof_visual": 1,
+     "notes": ""
+    },
+    "8": {
+     "frame_type": "A_ROLL_MEDIUM",
+     "roll": "A",
+     "speaker_present": 1,
+     "face_present": 1,
+     "ui_present": 0,
+     "text_overlay": 1,
+     "overlay_text": "if",
+     "caption_placement": "bottom",
+     "framing": "medium",
+     "dominant_action": "host returns again, talking",
+     "visual_density": "low",
+     "is_visual_hook": 0,
+     "is_cta_visual": 0,
+     "is_proof_visual": 0,
+     "notes": ""
+    }
+   },
+   "first_frame_type": "A_ROLL_MEDIUM",
+   "hook_visual": "Presenter at a whiteboard, bold title 'Automations that can make you $7.8k in a month' pinned top, word-by-word caption building 'will AI literally...'.",
+   "visual_sequence": [
+    "A_ROLL_MEDIUM",
+    "DATA_VISUAL",
+    "A_ROLL_MEDIUM",
+    "DATA_VISUAL",
+    "A_ROLL_MEDIUM"
+   ],
+   "transitions_observed": [
+    {
+     "from_idx": 0,
+     "to_idx": 1,
+     "kind": "same_shot"
+    },
+    {
+     "from_idx": 1,
+     "to_idx": 2,
+     "kind": "same_shot"
+    },
+    {
+     "from_idx": 2,
+     "to_idx": 3,
+     "kind": "same_shot"
+    },
+    {
+     "from_idx": 3,
+     "to_idx": 4,
+     "kind": "same_shot"
+    },
+    {
+     "from_idx": 4,
+     "to_idx": 5,
+     "kind": "hard_cut_or_more"
+    },
+    {
+     "from_idx": 5,
+     "to_idx": 6,
+     "kind": "hard_cut_or_more"
+    },
+    {
+     "from_idx": 6,
+     "to_idx": 7,
+     "kind": "hard_cut_or_more"
+    },
+    {
+     "from_idx": 7,
+     "to_idx": 8,
+     "kind": "hard_cut_or_more"
+    }
+   ],
+   "a_roll_share_est": 0.778,
+   "b_roll_share_est": 0.0,
+   "split_share_est": 0.0,
+   "screen_share_est": 0.222,
+   "text_overlay_density": 1.0,
+   "caption_style": "Bold black title banner pinned during the hook; cream/white single-word captions per beat throughout, with one green bold stat callout ('$8,000'); automation workflow diagrams shown on plain black backgrounds as proof, without host or title overlay",
+   "background": "Presenter in front of a whiteboard covered in handwritten notes and a red spiral graphic, microphone visible; automation-diagram cutaways use a plain black background.",
+   "cta_visual": "none",
+   "proof_visuals": [
+    "n8n-style workflow diagram: 'Incoming webhook → Claude classifier → Parse classification → Route switch' (support/technical/sales/general outputs)",
+    "n8n-style workflow diagram: 'Gmail trigger → Filter PDF attachments → Extract invoice details with AI → Split out each invoice line → Add invoice line to Google Sheets → Mark a message as read'",
+    "'$8,000' stat callout"
+   ],
+   "sync_notes": "has_transcript=true. The two workflow diagrams shown (a support-ticket classifier and an invoice-extraction pipeline) appear to be the concrete 'automations' referenced in the title and post caption, each introduced by single-word captions ('right', 'automatically') consistent with a build-along narration.",
+   "limitations": "9 fixed samples (0.4/1.2/2.4/4/8.6/17.2/25.9/34.5/43.1s) of a 51.7s video; gaps of 8-9s between later samples mean several words/beats of narration between samples are not captured; last sample (43.1s) leaves the final ~8.6s (likely the 'Comment Ready' CTA) unsampled.",
+   "confidence": "PROBABLE"
+  },
+  "transcript_segments": null
+ },
+ {
+  "code": "DcGo8v9TG6z",
+  "url": "https://www.instagram.com/reel/DcGo8v9TG6z/",
+  "username": "meghanify",
+  "format_slot": "M2 Radar",
+  "radar_facts": "2.6× this author's own norm (67 896 against 26 356) · 92 shares + saves per thousand · 38 shares per thousand · 54 saves per thousand · 20 seconds · persona hint: mary (0.67), dana (0.56)",
+  "metrics": {
+   "play": 67896,
+   "reshares": 2553,
+   "saves": 3678,
+   "comments": 1609,
+   "duration_s": 20.0,
+   "resh_1k": 37.60162601626016,
+   "save_1k": 54.17108518911276,
+   "author_median_play": 26356,
+   "robust_z": 1.2499
+  },
+  "topics": [],
+  "caption": "Comment “yes” to get the YouTube video links.   10/10 AI automation concepts you should know in 2026 👇  If you’re building with AI, these are not just buzzwords anymore. They’re becoming the building ",
+  "routing_hint": [
+   {
+    "persona": "mary",
+    "score": 0.67,
+    "hits": [
+     "these"
+    ]
+   },
+   {
+    "persona": "dana",
+    "score": 0.56,
+    "hits": [
+     "building"
+    ]
+   }
+  ],
+  "transcript_analysis": null,
+  "frame_analysis": null,
+  "transcript_segments": null
+ },
+ {
+  "code": "DcQ42PeKux6",
+  "url": "https://www.instagram.com/reel/DcQ42PeKux6/",
+  "username": "damini.knows",
+  "format_slot": "M2 Radar",
+  "radar_facts": "2.9× this author's own norm (35 142 against 12 159) · 86 shares + saves per thousand · 36 shares per thousand · 50 saves per thousand · 41 seconds · persona hint: dana (1.11)",
+  "metrics": {
+   "play": 35142,
+   "reshares": 1253,
+   "saves": 1756,
+   "comments": 2720,
+   "duration_s": 40.7,
+   "resh_1k": 35.655341187183424,
+   "save_1k": 49.96869842353878,
+   "author_median_play": 12159,
+   "robust_z": 1.9601
+  },
+  "topics": [],
+  "caption": "Found this crazy website with 10 Thousand plus Automation templates for n8n.😎  #n8n #aitool #freeaitools #automation #workflow",
+  "routing_hint": [
+   {
+    "persona": "dana",
+    "score": 1.11,
+    "hits": [
+     "n8n"
+    ]
+   },
+   {
+    "persona": "marta",
+    "score": 0.0,
+    "hits": []
+   }
+  ],
+  "transcript_analysis": null,
+  "frame_analysis": null,
+  "transcript_segments": null
+ },
+ {
+  "code": "Dct42HhxCkq",
+  "url": "https://www.instagram.com/reel/Dct42HhxCkq/",
+  "username": "sanji.chien",
+  "format_slot": "M2 Builds",
+  "radar_facts": "1.3× this author's own norm (29 659 against 22 073) · below the author's norm — taken because another reel of theirs in the window beat it · 84 shares + saves per thousand · 30 shares per thousand · 54 saves per thousand · 45 seconds · persona hint: marta (1.67)",
+  "metrics": {
+   "play": 29659,
+   "reshares": 888,
+   "saves": 1595,
+   "comments": 891,
+   "duration_s": 45.2,
+   "resh_1k": 29.940321656158332,
+   "save_1k": 53.77794261438349,
+   "author_median_play": 22073,
+   "robust_z": 1.1263
+  },
+  "topics": [
+   "Темы в подписи нет"
+  ],
+  "caption": "Comment “TEXT” and I’ll send you the Skill  Animated text doesn’t need hours in After Effects anymore.  With Claude + Higgsfield, you can create custom animated text in just a few minutes — from a sin",
+  "routing_hint": [
+   {
+    "persona": "marta",
+    "score": 1.67,
+    "hits": [
+     "minutes",
+     "claude"
+    ]
+   },
+   {
+    "persona": "dana",
+    "score": 0.0,
+    "hits": []
+   }
+  ],
+  "transcript_analysis": null,
+  "frame_analysis": null,
+  "transcript_segments": null
+ },
+ {
+  "code": "DceFNdVM-NG",
+  "url": "https://www.instagram.com/reel/DceFNdVM-NG/",
+  "username": "sanji.chien",
+  "format_slot": "M2 Builds",
+  "radar_facts": "7.4× this author's own norm (162 567 against 22 073) · 84 shares + saves per thousand · 29 shares per thousand · 55 saves per thousand · 71 seconds · persona hint: marta (0.56)",
+  "metrics": {
+   "play": 162567,
+   "reshares": 4700,
+   "saves": 8881,
+   "comments": 6849,
+   "duration_s": 70.8,
+   "resh_1k": 28.91115663080453,
+   "save_1k": 54.62978341237766,
+   "author_median_play": 22073,
+   "robust_z": 1.888
+  },
+  "topics": [],
+  "caption": "Comment “VOX” and I’ll send you the Skill  Vox-style motion design used to mean hours inside After Effects.  Now you can create — and edit — the entire animation just by prompting Claude.  Change the ",
+  "routing_hint": [
+   {
+    "persona": "marta",
+    "score": 0.56,
+    "hits": [
+     "claude"
+    ]
+   },
+   {
+    "persona": "dana",
+    "score": 0.0,
+    "hits": []
+   }
+  ],
+  "transcript_analysis": null,
+  "frame_analysis": null,
+  "transcript_segments": null
+ },
+ {
+  "code": "DdAP_tFPOC9",
+  "url": "https://www.instagram.com/reel/DdAP_tFPOC9/",
+  "username": "myrasayed_",
+  "format_slot": "M2 Builds",
+  "radar_facts": "1.0× this author's own norm (5 138 against 5 166) · below the author's norm — taken because another reel of theirs in the window beat it · 79 shares + saves per thousand · 25 shares per thousand · 55 saves per thousand · 54 seconds · persona hint: sam (1.76), ray (1.0)",
+  "metrics": {
+   "play": 5138,
+   "reshares": 126,
+   "saves": 282,
+   "comments": 208,
+   "duration_s": 53.8,
+   "resh_1k": 24.52316076294278,
+   "save_1k": 54.88516932658622,
+   "author_median_play": 5166,
+   "robust_z": 1.0666
+  },
+  "topics": [
+   "Обучение и навыки"
+  ],
+  "caption": "full breakdown 👇  Here’s where I’d start:  🌱 New to AI? Start with Claude 101 to learn the basics of using Claude for everyday tasks.  💼 Already using AI at work? Take Introduction to Claude Cowork to",
+  "routing_hint": [
+   {
+    "persona": "sam",
+    "score": 1.76,
+    "hits": [
+     "already",
+     "start",
+     "where"
+    ]
+   },
+   {
+    "persona": "ray",
+    "score": 1.0,
+    "hits": [
+     "start",
+     "where"
+    ]
+   }
+  ],
+  "transcript_analysis": null,
+  "frame_analysis": null,
+  "transcript_segments": null
+ },
+ {
+  "code": "Dcg59jPxqci",
+  "url": "https://www.instagram.com/reel/Dcg59jPxqci/",
+  "username": "sanji.chien",
+  "format_slot": "M2 Teardown",
+  "radar_facts": "2.4× this author's own norm (53 195 against 22 073) · 79 shares + saves per thousand · 26 shares per thousand · 52 saves per thousand · 62 seconds · persona hint: mary (2.0)",
+  "metrics": {
+   "play": 53195,
+   "reshares": 1401,
+   "saves": 2788,
+   "comments": 4136,
+   "duration_s": 61.8,
+   "resh_1k": 26.337061753924242,
+   "save_1k": 52.41094087790206,
+   "author_median_play": 22073,
+   "robust_z": 2.3591
+  },
+  "topics": [],
+  "caption": "Comment “CODEX” and I’ll send you the full setup + guide.  OpenAI’s Codex CLI can turn one product image + one prompt into an entire content pipeline.  Listing images, UGC ads, commercials, thumbnails",
+  "routing_hint": [
+   {
+    "persona": "mary",
+    "score": 2.0,
+    "hits": [
+     "ads",
+     "content"
+    ]
+   },
+   {
+    "persona": "dana",
+    "score": 0.0,
+    "hits": []
+   }
+  ],
+  "transcript_analysis": null,
+  "frame_analysis": null,
+  "transcript_segments": null
+ },
+ {
+  "code": "DcA56UVyzhM",
+  "url": "https://www.instagram.com/reel/DcA56UVyzhM/",
+  "username": "suprava.ss",
+  "format_slot": "M2 Teardown",
+  "radar_facts": "3.7× this author's own norm (118 086 against 31 600) · 78 shares + saves per thousand · 35 shares per thousand · 43 saves per thousand · 108 seconds · persona hint: dana (1.11)",
+  "metrics": {
+   "play": 118086,
+   "reshares": 4188,
+   "saves": 5079,
+   "comments": 88,
+   "duration_s": 108.0,
+   "resh_1k": 35.4656775570347,
+   "save_1k": 43.01102586250698,
+   "author_median_play": 31600,
+   "robust_z": 3.4312
+  },
+  "topics": [],
+  "caption": "How to get anyone’s attention with cold outreach   #sales #leadgeneration #coldemail",
+  "routing_hint": [
+   {
+    "persona": "dana",
+    "score": 1.11,
+    "hits": [
+     "outreach"
+    ]
+   },
+   {
+    "persona": "marta",
+    "score": 0.0,
+    "hits": []
+   }
+  ],
+  "transcript_analysis": null,
+  "frame_analysis": null,
+  "transcript_segments": null
+ }
+]

@@ -1,0 +1,48 @@
+{
+ "code": "DdAP_tFPOC9",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "sam",
+ "reject_reason": null,
+ "why_this_persona": "Where to start is Sam's own sentence and the thing he asks before anything else, and he is the one of the five walking into a business run on notebooks and his parent's memory, so a ladder that says start here, then this once you already do that, is the exact shape of the answer he wants.",
+ "question": "Where do I start modernising without breaking what already works?",
+ "format": "M2 Builds",
+ "borrow": {
+  "hook_logic": "Here is where I would start, with a named first rung instead of a promise. The source takes the position itself ('Here's where I'd start') rather than claiming a result, and that is the part worth keeping.",
+  "proof_mechanism": "Every rung names the specific thing, not the category: the source names Claude 101 and Introduction to Claude Cowork instead of saying 'a beginner course'. I-13 makes naming specific things the only language feature that predicts reach and survives creator normalisation, +0.161 pooled and +0.198 within creators. Ours names the counter, the process, the document and the question it got wrong.",
+  "ordering": "Three rungs keyed to where the viewer already is (new to this, already using it at work, already past that), with the full breakdown moved into the caption so the reel holds one idea.",
+  "visual_grammar": "Not inferable: no frame analysis exists for this code. We default to face, screen, face (I-11), opening on the written page rather than on a person (I-09).",
+  "beat_ids": [],
+  "scene_ids": []
+ },
+ "change": {
+  "process": "Staff questions at the counter of a 5 to 50 person family business: what is the price on this, do we take it back after thirty days, which supplier do we order that from. Today they are answered by walking over and asking Sam's dad.",
+  "friction": "The answers and the hundred exceptions live in one person's head, so every new hire asks them again and nothing can be handed over. Everything is still managed the old-fashioned way, and the first useful milestone is not a tool at all, it is one process written down.",
+  "ai_boundary": "The assistant answers only from the one written document, and it says 'ask Dad' when the answer is not in there instead of guessing. Prices are read off the price sheet and never written by the model. Nobody's job goes anywhere: this gives back the hours that get lost walking across the shop floor.",
+  "next_action": "Comment MAP, write one process down this week, and run the counter the old way and the new way side by side before anything is switched off."
+ },
+ "hook": "We wrote down one counter process, then let it answer staff questions. Here is the first version and what it got wrong.",
+ "on_screen": {
+  "opening_screen": "The written page itself: trigger, steps, owner, exceptions, what done looks like, sitting on the counter it came from. Then the assistant answering a real staff question out of it.",
+  "human_check": "The source document lives outside the assistant with an owner's name and a review date on the front. The twenty questions we typed in before it answered anybody, on screen. And the one it got wrong, on screen too, with the exception that was never written down.",
+  "cost_line": "$20 a month once the assistant is reading the document, and the month before that costs nothing but the hour a day it takes to write the process out. It stops paying the week staff go back to asking your dad instead."
+ },
+ "cta": {
+  "type": "comment_keyword",
+  "keyword": "MAP",
+  "artefact": "process map template (trigger, steps, owner, exceptions)",
+  "viewer_gets": "One page for writing down the first process: what starts it, the steps in order, who owns it, the exceptions everybody knows and nobody wrote, and what done looks like."
+ },
+ "claims": [
+  {"text": "5 138 plays against this author's median of 5 166, below their own norm; it is in the batch because another of their reels in the window beat it.", "state": "OBSERVED", "source": "batch radar_facts and metrics DdAP_tFPOC9"},
+  {"text": "55 saves per thousand on the smallest audience in the batch, second only to the $8,000 reel, with no comment keyword in the caption.", "state": "OBSERVED", "source": "batch metrics; caption of DdAP_tFPOC9"},
+  {"text": "Not knowing where to start is the number two pain in the corpus, n=34, save rate 0.0346, and the where-to-start cluster sits above baseline at share 0.0176.", "state": "OBSERVED", "source": "personas/sam.json corpus_signal"},
+  {"text": "Framework content saves at 0.0135, which is why this ships as a concrete card with one counter and one document rather than as a ladder of concepts.", "state": "OBSERVED", "source": "personas/sam.json corpus_signal"},
+  {"text": "Naming specific things is the only language feature that predicts reach and survives creator normalisation: +0.161 pooled, +0.198 within creators.", "state": "OBSERVED", "source": "insights.json I-13"},
+  {"text": "The break the Builds slot requires: the assistant answers an exception that was never written into the document.", "state": "PLANNED", "source": "we run it on one counter process and record what it gets wrong before shooting; RULES.md §2, M2 Builds"},
+  {"text": "The twenty test questions before go-live, and what share of them the first version answered from the document alone.", "state": "TO_MEASURE", "source": "not run yet"},
+  {"text": "No transcript or frame analysis exists for this code; structure was read from the caption and the metrics only.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Builds slot kept rather than moved to Teardown: Sam's question can be answered inside Builds as long as we actually build the thing and show the break, and the process map is what we hand over rather than what we present. Ray also matched (1.0 on start, where) but the counter, the staff and the parent's memory are Sam's ground, not his. The source is a list of free courses, which the Radar slot would disqualify as a tool list; the ladder shape survives, the subject does not."
+}

@@ -1,0 +1,47 @@
+{
+ "code": "DcmK70aO5VP",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "marta",
+ "reject_reason": null,
+ "why_this_persona": "Marta runs operations inside one of the three companies this reel names (a brokerage, an HR or finance function, a services firm), so the intake pile of client documents is a process she already owns rather than a business idea she might buy.",
+ "question": "What are we allowed to do with client data, and who is responsible when it is wrong?",
+ "format": "M2 Radar",
+ "borrow": {
+  "hook_logic": "Clear the two objections that disqualify most viewers before any content arrives. The source does it at second 5.6, before the first example, so nobody drops out early (beat 1: 'you don't have to learn how to code or you don't have to show your face'). Ours clears the two that stop Marta: 'I'm not a programmer' and 'we cannot put client data into any AI'.",
+  "proof_mechanism": "Name the industry, then say the process in three plain verbs instead of naming a tool. The source does it three times in the same shape: collects new client details, sorts their documents, sends everything to the right person (beats 2, 3, 4). The screen cutaways carry the weight, not the claim.",
+  "ordering": "hook, objections cleared, the process in three verbs, the reason these and not the flashier ones (beat 5), call to action (beat 6).",
+  "visual_grammar": "Talk, show, come back: face at medium, then a full screen with no host and no title banner, then back to the face, twice (frames 0-8). One bold stat callout in a contrasting colour on a single number (frame 3). Single-word captions built word by word through the whole reel. I-11 measures this arrangement as the strongest named visual pattern in the corpus (39 reels, median share rate 0.0213 against 0.0140).",
+  "beat_ids": ["0", "1", "2", "5", "6"],
+  "scene_ids": ["0", "3", "5", "6", "7"]
+ },
+ "change": {
+  "process": "The weekly intake pile at a 15 to 60 person brokerage or agency: client documents arrive as email attachments, somebody opens each one, works out what it is, renames it, files it and tells the right person it has landed.",
+  "friction": "Marta is the router. The job has no queue and no record, so it cannot be handed over while she is on holiday, and the answer to 'where is this in SharePoint' lives in her head. The source sells this same pile as an $8,000 a month product with nothing behind the figure; we do not repeat that number and we do not sell the pile, we run it.",
+  "ai_boundary": "The machine reads the attachment, proposes the name, the folder and the person it goes to, and drafts the one line handover note. A person approves each one before anything is filed or recorded. The candidate filtering example from the source is dropped on purpose and we say so on camera: screening people is the one use this audience rejects outright, and we are not promising anybody's hours away, we are giving Marta's back.",
+  "next_action": "Comment POLICY, get the four question page, and answer it for one folder before any file goes near a model."
+ },
+ "hook": "Client files sorted, named and handed to the right person, with nothing a client owns leaving the building.",
+ "on_screen": {
+  "opening_screen": "Our own shared intake mailbox, attachments unopened, with the filing folder open beside it. Screen first, no face, per I-09.",
+  "human_check": "A draft queue: each file with its proposed name, its folder and the person it goes to, approved one tap at a time. Next to it the source document that says who owns each folder, with the date it was last checked, kept outside the assistant.",
+  "cost_line": "$20 a month is what Marta funds herself and the licence the company already pays for costs the team nothing extra. Past that it needs a budget line with a named owner, and at $100 a month this audience says no unless somebody is counting the hours back."
+ },
+ "cta": {
+  "type": "comment_keyword",
+  "keyword": "POLICY",
+  "artefact": "four-question AI policy one-pager",
+  "viewer_gets": "One page you can send your boss and IT: what goes in, what gets stripped out first, who checks before anything is recorded, and what we do the day it is confidently wrong."
+ },
+ "claims": [
+  {"text": "Highest combined engagement in the batch: 62.1 saves and 40.3 shares per thousand plays, on 21 620 plays against this author's median of 11 366.", "state": "OBSERVED", "source": "batch metrics DcmK70aO5VP; ta-v1 notes"},
+  {"text": "Both objections are cleared at second 5.6, before any content starts.", "state": "OBSERVED", "source": "ta-v1 beat 1 (5.6 to 10.0 s), interpretation.structural_reason"},
+  {"text": "The $8,000 a month figure is asserted with no client, screenshot or revenue evidence behind it, so it is not repeated in our card.", "state": "OBSERVED", "source": "ta-v1 semantics.proof, interpretation.proof"},
+  {"text": "The two screens the source shows as proof are a routing diagram and an invoice extraction, both back office document flows.", "state": "OBSERVED", "source": "fa-v1 frames 5 and 7, proof_visuals"},
+  {"text": "Face, then screen, then face again is the strongest named visual pattern in the corpus: 39 reels across 32 creators, median share rate 0.0213 against 0.0140.", "state": "OBSERVED", "source": "insights.json I-11"},
+  {"text": "Candidate screening is the one use the audience rejected both times it appeared in the Reddit pass, which is why the recruitment example is dropped.", "state": "OBSERVED", "source": "RULES.md §11.3; personas/marta.json distrusts"},
+  {"text": "Hours back on our own intake pile after the draft queue runs for a week.", "state": "TO_MEASURE", "source": "not run yet; POSITIONING.md §8 proof loop"}
+ ],
+ "confidence": "RELIABLE",
+ "notes": "The routing hint put Mary first (1.33) on the words customers, first, month, order. Those are the source's sales words, not her week: the three examples are a law firm, a recruiter and an insurer, and Marta's persona file names the brokerage, the HR function and the ATS as her own ground. The source is a seller talking to people who want to start an agency; we keep its structure and drop its subject. Radar slot kept: the required proof is a concrete task, a decision and a limitation, and the limitation here is the data boundary. fa-v1 notes the last 8.6 seconds are unsampled, so the source's call to action visual is unknown; ours is built from scratch."
+}

@@ -1,0 +1,48 @@
+{
+ "code": "DcA56UVyzhM",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "dana",
+ "reject_reason": null,
+ "why_this_persona": "Outreach is the one process Dana runs for her own agency rather than for a client, and the sentence she upvoted about it, a thousand emails and no replies, is already in her file with 329 points behind it.",
+ "question": "If you send 1000 emails and get 0 replies, are you even doing sales?",
+ "format": "M2 Teardown",
+ "borrow": {
+  "hook_logic": "The title promises the reply, not the volume: how to get anyone's attention, not how to send more. The subject of the hook is the outcome the viewer wants, and the method is the body.",
+  "proof_mechanism": "108 seconds, the longest reel in the batch, spent on one process from end to end instead of a list, and it earned 35 shares per thousand with no comment keyword in the caption and 88 comments on 118 086 plays. The method itself carried the forward. Borrow that: earn the share with the process, then add the keyword.",
+  "ordering": "One process, start to finish, no numbered list and no second topic.",
+  "visual_grammar": "Not inferable: no frame analysis exists for this code. We open on the outreach sheet rather than on a face (I-09) and come back to camera for the boundary.",
+  "beat_ids": [],
+  "scene_ids": []
+ },
+ "change": {
+  "process": "Dana's own outreach week at a 1 to 15 person agency: building the list, finding the one true thing to say about each company, writing the note, sending it, following up once. Owner is Dana; nobody else in a shop that size does sales.",
+  "friction": "The research is the whole job and it is the part that gets skipped, so a thousand notes go out saying the same thing and none come back. Clay and Apollo were already bought for this and are already regretted, which means the spend moved and the reply rate did not.",
+  "ai_boundary": "The machine reads what the company published about itself and puts the link next to every line it found, so the claim can be checked in one click. A person reads the source and writes the sentence that actually goes in the note, because copy that could have described any company on earth is what this whole problem is made of. Nothing about someone's business gets sent on a page nobody opened.",
+  "next_action": "Comment RUNS, and divide this month's tool bill by replies instead of by sends before buying anything else."
+ },
+ "hook": "The outreach that gets a reply is mostly research. Here is the process end to end, and the sentence you still write yourself.",
+ "on_screen": {
+  "opening_screen": "Our own outreach sheet: one company per row, a column for the source link, a column for the reply. The reply column mostly empty, on camera, before anything else is said.",
+  "human_check": "Every line the machine found carries the link it came from, and the row does not move until a person has opened that link and written the sentence. On screen: one row rejected because the source did not say what the summary said.",
+  "cost_line": "$20 to $100 a month per tool is what Dana already pays, and the number that decides is that bill divided by replies rather than by sends. It stops paying at a thousand emails and no replies, which is where the spend is today."
+ },
+ "cta": {
+  "type": "comment_keyword",
+  "keyword": "RUNS",
+  "artefact": "cost-per-run sheet",
+  "viewer_gets": "One page that turns a monthly bill into a cost per thing that actually happened. For outreach that is cost per reply, not cost per email sent."
+ },
+ "claims": [
+  {"text": "118 086 plays against this author's median of 31 600, 3.7 times their own norm, with 43 saves and 35 shares per thousand.", "state": "OBSERVED", "source": "batch metrics and radar_facts DcA56UVyzhM"},
+  {"text": "88 comments on 118 086 plays, by far the lowest comment rate in the batch, with no comment keyword in the caption; it earned its forwards without a gate.", "state": "OBSERVED", "source": "batch metrics and caption DcA56UVyzhM"},
+  {"text": "Comment keyword gates raise comment rate 23-fold, save rate 2.8-fold and share rate 1.8-fold, but buy engagement rather than distribution.", "state": "OBSERVED", "source": "insights.json I-12"},
+  {"text": "If you send 1000 emails and get 0 replies, you are not doing sales, 329 points.", "state": "OBSERVED", "source": "personas/dana.json pains (r/Entrepreneur 1qof5yc)"},
+  {"text": "Clay and Apollo are already in Dana's stack and already regretted.", "state": "OBSERVED", "source": "personas/dana.json tools_today"},
+  {"text": "AI copy could have described any saas on earth, 169 points, which is why the sentence stays human.", "state": "OBSERVED", "source": "personas/dana.json pains (r/EntrepreneurRideAlong 1tumnrj)"},
+  {"text": "Our own cost per reply on one month of outreach with the source-link column in place.", "state": "TO_MEASURE", "source": "not run yet; the number is the reason to forward the Teardown, per RULES.md §2"},
+  {"text": "No transcript or frame analysis exists for this code; structure was read from the caption, the duration and the metrics only.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Teardown slot kept: the two gates are met, a concrete process with a named owner (Dana's own outreach) and a reason to forward (the bill divided by replies). Cold email is the most client-facing thing in the batch, which is why the boundary is drawn hard: the machine researches, the person writes. Dana takes a second card this week, on DcQ42PeKux6, which is a scheduling question for cards.py rather than a reason to reroute this one. Mary and Ray got nothing from this batch."
+}

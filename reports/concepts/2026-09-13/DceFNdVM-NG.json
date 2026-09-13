@@ -1,0 +1,25 @@
+{
+ "code": "DceFNdVM-NG",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": null,
+ "reject_reason": "Motion design produced by prompting is a production trick for people who make videos, and at 7.4 times the author's own norm it is the loudest reel in the batch, but there is still no repeated back-office process and no owner behind it. The one person it nearly fits is Dana, whose agency delivers content, and the thing she would actually have to answer is what a client-facing deliverable needs before it leaves the building, which is a question about the check and not about the tool. Sold as the tool it is a demo of somebody else's product, which the Builds slot disqualifies, and it needs Claude Code before minute one. Reference, not a card.",
+ "why_this_persona": null,
+ "question": null,
+ "format": "M2 Builds",
+ "borrow": null,
+ "change": null,
+ "hook": "",
+ "on_screen": null,
+ "cta": null,
+ "claims": [
+  {"text": "162 567 plays against this author's median of 22 073, 7.4 times their own norm, the largest lift in the batch, with 55 saves and 29 shares per thousand.", "state": "OBSERVED", "source": "batch metrics and radar_facts DceFNdVM-NG"},
+  {"text": "6 849 comments on 162 567 plays behind a 'comment VOX' gate; comment gates raise comment rate 23-fold and save rate 2.8-fold without buying distribution.", "state": "OBSERVED", "source": "caption of DceFNdVM-NG; insights.json I-12"},
+  {"text": "Claude Code skills carries median view lift 4.36 across 22 reels and sits on the list of topics M2 is positioned to refuse.", "state": "OBSERVED", "source": "insights.json I-25"},
+  {"text": "Builds requires something we built ourselves and something that breaks; without a break it is an advertisement for somebody else's product.", "state": "OBSERVED", "source": "RULES.md §2, M2 Builds"},
+  {"text": "Dana's unanswered question, what a client-facing AI deliverable needs before it leaves the building, and her artefact for it, the client-facing AI output QA checklist, are both still unclaimed.", "state": "PLANNED", "source": "personas/dana.json questions and cta_artefacts"},
+  {"text": "No transcript or frame analysis exists for this code.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Judged on caption and metrics alone. This is the one rejection worth revisiting: if M2 ever takes a position on client-facing creative, the card is Dana's QA gate before the file leaves the building, with the motion tool as the thing being checked rather than the thing being shown. That card needs the QA checklist written first, and it does not exist in artefacts/ yet."
+}

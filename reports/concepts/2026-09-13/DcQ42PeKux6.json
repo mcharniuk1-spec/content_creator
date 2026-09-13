@@ -1,0 +1,48 @@
+{
+ "code": "DcQ42PeKux6",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "dana",
+ "reject_reason": null,
+ "why_this_persona": "Dana already has fourteen half-built flows on her own canvas, so a library of ten thousand more templates is the exact trap she is in rather than the way out of it, and she is the only one of the five who opens n8n at all.",
+ "question": "Which half-built automations do I kill?",
+ "format": "M2 Radar",
+ "borrow": {
+  "hook_logic": "A found object with a number on it. The source says what it found and how much of it there is, and lets the number carry the hook instead of an adjective ('10 Thousand plus Automation templates'). Ours opens on the same library and the same number, then turns it into a decision.",
+  "proof_mechanism": "The screen is the proof: scroll the thing on camera rather than describe it. I-08 makes putting a screen on camera the most reliable visual finding in the corpus, and I-09 puts the opening frame on the screen rather than the face.",
+  "ordering": "The find, what is inside it, what you do with it. Ours keeps the first two and replaces the third with the three questions and what survives them.",
+  "visual_grammar": "Full screen capture with no face at the open, tool name visible on screen, single subject held rather than cut around. Inferred from the caption and the format only: no frame analysis exists for this code.",
+  "beat_ids": [],
+  "scene_ids": []
+ },
+ "change": {
+  "process": "Choosing which internal chore at a 1 to 15 person agency gets built this month: the monthly client report pull, the brand voice and SOP context Dana pastes into a chat fifty times a day, or the weekly client status update.",
+  "friction": "A template library answers what could be built and never what should exist here. Dana's own words for the failure are on the wall already: no owner, no success metric, no home inside an existing workflow. Fourteen flows are half-built for exactly that reason, and a tenth-thousandth template does not fix any of them.",
+  "ai_boundary": "The machine assembles the steps and can copy the template in minutes. A person owns the thing, names the number it is supposed to move and decides where it lives inside work people already do. The one that touches client deliverables gets a check before it leaves the building.",
+  "next_action": "Comment AUDIT, run the three questions across the flows already on the canvas this week, and kill the ones that fail all three."
+ },
+ "hook": "Ten thousand ready-made templates online, fourteen half-built ones in your agency. Three questions decide which chore is worth handing over this month.",
+ "on_screen": {
+  "opening_screen": "The template library itself, scrolling, with the count visible. Then our own canvas with the half-built flows still sitting on it, unfinished, named badly.",
+  "human_check": "Each surviving flow gets an owner's name and a review date written on the flow itself, and a weekly look at a sample of what it actually produced.",
+  "cost_line": "A flow costs the same $20 to $100 a month as every other tool Dana already pays for. It stops paying the month nobody can name its owner or the hours it gave back, and margin per client is the number that decides, not the price of the tool."
+ },
+ "cta": {
+  "type": "comment_keyword",
+  "keyword": "AUDIT",
+  "artefact": "three-question automation audit sheet",
+  "viewer_gets": "One page with three questions, who owns it, what it is supposed to move, and where it lives in work you already do. Run it on the flows you have before you build another one."
+ },
+ "claims": [
+  {"text": "35 142 plays against this author's median of 12 159, 2.9 times their own norm, with 50 saves and 36 shares per thousand.", "state": "OBSERVED", "source": "batch metrics DcQ42PeKux6"},
+  {"text": "The site holds more than 10 000 n8n templates.", "state": "TO_MEASURE", "source": "the author's caption; we open it on camera and say what we actually count"},
+  {"text": "Fourteen half-built flows and the pattern behind them, no owner, no success metric, no home inside an existing workflow.", "state": "OBSERVED", "source": "personas/dana.json day and pains (r/Entrepreneur 1ssqek0)"},
+  {"text": "Putting a screen on camera correlates with share rate at rho +0.203 and survives creator normalisation, the single most reliable visual finding in the corpus.", "state": "OBSERVED", "source": "insights.json I-08"},
+  {"text": "The 35 reels whose first visual state is a screen carry a median share rate of 0.0213 against 0.0140.", "state": "OBSERVED", "source": "insights.json I-09"},
+  {"text": "Free access and workaround content carries high lift in this niche and is on the list M2 refuses, which is why the card is the decision and not the link.", "state": "OBSERVED", "source": "insights.json I-25"},
+  {"text": "How many of our own half-built flows survive the three questions.", "state": "PLANNED", "source": "run the audit on our canvas before the shoot"},
+  {"text": "No transcript or frame analysis exists for this code; structure was read from the caption and the metrics only.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "This is a free-resource post, the category I-25 puts on M2's refusal list, and it is taken only because the card is the decision rather than the link: a Radar needs a concrete task, a decision and a limitation, and the limitation is that a template carries somebody else's exceptions, never your client's. The source caption has no comment keyword and still earned 36 shares per thousand. Ours adds one, per RULES.md §12.3."
+}

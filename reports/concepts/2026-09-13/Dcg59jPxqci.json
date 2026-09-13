@@ -1,0 +1,26 @@
+{
+ "code": "Dcg59jPxqci",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": null,
+ "reject_reason": "One product photo turned into listing images, UGC ads, commercials and thumbnails lands on the pain Mary names loudest, $800 to $1500 minimum for a product shoot and DIY that looks terrible, and on the thing she says in the same breath that she will not touch: AI images of products sit at the top of her distrust list, and customer-facing AI imagery is outside our territory. The tool is also a command-line tool, so the first step is a terminal. Taking it would mean selling her the one thing she told us she walks away from. Reference, not a card.",
+ "why_this_persona": null,
+ "question": null,
+ "format": "M2 Teardown",
+ "borrow": null,
+ "change": null,
+ "hook": "",
+ "on_screen": null,
+ "cta": null,
+ "claims": [
+  {"text": "53 195 plays against this author's median of 22 073, 2.4 times their own norm, with 52 saves and 26 shares per thousand.", "state": "OBSERVED", "source": "batch metrics and radar_facts Dcg59jPxqci"},
+  {"text": "4 136 comments on 53 195 plays behind a 'comment CODEX' gate, the highest comment rate in the batch; gates raise comment rate 23-fold without buying distribution.", "state": "OBSERVED", "source": "batch metrics; caption; insights.json I-12"},
+  {"text": "AI images of products are named in Mary's distrust list alongside AI copy that could describe any store.", "state": "OBSERVED", "source": "personas/mary.json distrusts"},
+  {"text": "A product shoot costs $800 to $1500 minimum and DIY looks terrible, which is why this pain keeps getting sold to.", "state": "OBSERVED", "source": "personas/mary.json pains (r/ecommerce 1rubl90)"},
+  {"text": "Customer-facing AI, including images on menus and flyers, is publicly rejected by this audience, with after-hours intake the single named exception.", "state": "OBSERVED", "source": "RULES.md §11.2 item 5"},
+  {"text": "Deep technical tutorials aimed at developers are on the do-not-publish list.", "state": "OBSERVED", "source": "POSITIONING.md §8"},
+  {"text": "No transcript or frame analysis exists for this code.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Judged on caption and metrics alone, and the closest call in the batch: the routing hint put Mary at 2.0 and the underlying pain is real and expensive. The Teardown that would work is the catalogue process behind the picture, who writes the description, who checks the size chart, who approves before it goes live, not the image generation. That card can be built from Mary's batch catalogue prompt pack without touching product imagery."
+}

@@ -1,0 +1,25 @@
+{
+ "code": "Dct42HhxCkq",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": null,
+ "reject_reason": "Animated text is an effect inside a design tool, not a repeated work process with an owner. None of the five has 'custom animated text' anywhere in their week: Marta's routing hint of 1.67 comes from the words 'minutes' and 'claude' sitting in the caption, not from anything she does. What it produces goes straight to a feed or a client, and customer-facing AI creative is the territory this audience publicly walks away from. The setup also runs through Claude Code skills, which needs a technical person before minute one. Reference, not a card.",
+ "why_this_persona": null,
+ "question": null,
+ "format": "M2 Builds",
+ "borrow": null,
+ "change": null,
+ "hook": "",
+ "on_screen": null,
+ "cta": null,
+ "claims": [
+  {"text": "29 659 plays against this author's median of 22 073, below their own norm; it is in the batch because another of their reels in the window beat it.", "state": "OBSERVED", "source": "batch radar_facts and metrics Dct42HhxCkq"},
+  {"text": "The persona hint for Marta (1.67) matched on 'minutes' and 'claude', both of which appear in the caption as tool and duration words rather than as her process.", "state": "OBSERVED", "source": "batch routing_hint Dct42HhxCkq; caption"},
+  {"text": "Chatbots, AI receptionists, AI images and AI copy aimed at customers are rejected by this audience; back office is our territory and after-hours intake is the single named exception.", "state": "OBSERVED", "source": "RULES.md §11.2 item 5; reports/audience/07-reddit-pass.md"},
+  {"text": "Claude Code skills is one of the three highest-lift topics in the niche and one M2 is positioned to refuse.", "state": "OBSERVED", "source": "insights.json I-25"},
+  {"text": "A pure demonstration of somebody else's tool is a named disqualifier for the Builds slot, which requires something we built and something that breaks.", "state": "OBSERVED", "source": "RULES.md §2, M2 Builds"},
+  {"text": "No transcript or frame analysis exists for this code.", "state": "MISSING", "source": "batch file: transcript_analysis null, frame_analysis null"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Judged on caption and metrics alone. Same author and same mechanism as DceFNdVM-NG, which is rejected for the same reason; three of this batch's four rejections are this creator, whose whole output is Claude Code creative demos."
+}

@@ -1,0 +1,53 @@
+{
+ "code": "DdCvFdHsnj1",
+ "analysis_version": "pa-v1",
+ "model": "claude-opus-5[1m]",
+ "persona": "marta",
+ "reject_reason": null,
+ "why_this_persona": "The one thing this reel actually teaches, that the tool answers about the world until you hand it your own documents, is already written in Marta's file as the trick she forwards, and she is the one of the five whose work gets checked against a chat by her boss.",
+ "question": "My boss checked my work against Claude. How do I answer?",
+ "format": "M2 Teardown",
+ "borrow": {
+  "hook_logic": "Beat 0 sets a compressed challenge and promises the speaker's own method: if you had to learn this in one day, here is how I do it. We keep the promise of a method that runs today and drop the hypothetical, and we open on the screen instead of the face, because the 35 reels whose first visual state is a screen carry median share rate 0.0213 against 0.0140 (insight I-09).",
+  "proof_mechanism": "Beats 2 to 4 run definition, then a person shaped analogy, then a one line callback, and beat 3 carries the whole reel on a contrasting pair of questions: Bob can tell you how big Central Park is, and cannot tell you where your company's IT desk is until you hand him your documents. That pair is what we borrow whole. The second thing we borrow is that the reel finishes one complete unit of teaching on screen rather than promising it after the keyword, which is why it holds the highest save rate in the batch at 58 saves per thousand plays.",
+  "ordering": "Screen first, then the pair of questions, then the fix run live on the second ask, then the one line rule, then beat 5's rehook that this applies everywhere an answer leaves the building, then the keyword last. The reference puts its own call at 56.2 of 58.4 seconds, and 94 % of the 216 CTAs in the corpus sit in the last quarter (insight I-12).",
+  "visual_grammar": "From the frames: captions in the top third for the whole reel (text overlay density 1.0), the lesson page stacked above the facecam at scene 4, a plain screen recording of the tool as proof at scene 8. We take the screen above face arrangement for the two answers side by side and the top third captions, we do not open on split screen (the niche's most used and weakest opening state, median robust_z 1.03 against 1.43, insight I-10), and we come back to camera for the boundary and the keyword (face, screen, face carries median share rate 0.0213 against 0.0140, p=0.00076, insight I-11). The floating pink keyword tags at scenes 1 and 2 are the one element we refuse: they are a glossary of the exact words rule 13 keeps out of the first ten seconds.",
+  "beat_ids": ["0", "2", "3", "4", "5", "7"],
+  "scene_ids": ["0", "4", "8"]
+ },
+ "change": {
+  "process": "The check that happens to Marta's work after it leaves her desk in a 15 to 60 person services company. She writes the recommendation out of the handbook, the signed contract or the HRIS export, sends it up, and the owner pastes the same question into his own chat before he replies to her. Owner of the process is Marta, because she is the one who has to answer for the difference.",
+  "friction": "The owner's chat answered about the industry, not about this company: nobody attached the handbook or the contract, so it returned the general default, and Marta spends the afternoon defending an answer that was already right. Her file records the pattern at 113 points, boss uses AI for everything and checked her HR advice against Claude, and her team has stopped reading the summaries anyway, which means the wrong answer travels further than the right one.",
+  "ai_boundary": "The machine reads the documents it is handed and has to name the document, the clause and the date it came from, and say which document it could not find an answer in. It does not decide which source governs when the handbook and the signed contract disagree; that is Marta's call and it is said out loud on camera. It never sees the client's own file, because the memo on her desk says no client data goes into any of these tools. Nobody's job moves anywhere. What comes back is the afternoon.",
+  "next_action": "Comment SOURCES, and the next time it happens attach the handbook and ask the same question again, then send both answers up side by side with the clause marked."
+ },
+ "hook": "Here is the reply when your boss checks your work against a chat: the chat never saw the handbook, so give it the handbook.",
+ "on_screen": {
+  "opening_screen": "The boss's chat window full width, his question and a confident answer that is wrong for this company, and next to it the page of our own handbook that says otherwise, with the owner's name and the review date printed on it. No face for the first few seconds.",
+  "human_check": "The same question asked a second time with the handbook, the signed contract and the policy attached, and the two answers put side by side on screen. The rule on the overlay: an answer counts only when it names the document and the clause it came from. One answer is rejected live because the clause it quoted is not in the document. Then the line a person keeps, which source governs when two of them disagree, and whether it goes out at all.",
+  "cost_line": "Nothing on top of the licence already sitting on her desk, and $20 a month is the personal ceiling she funds herself. It stops paying at the line her IT memo draws: the moment the answer needs the client's own file, the sources cannot be attached and this is guesswork again."
+ },
+ "cta": {
+  "type": "comment_keyword",
+  "keyword": "SOURCES",
+  "artefact": "'ask it again with sources' reply template",
+  "viewer_gets": "One page: the three lines you send back when the boss's chat disagrees with you, which documents to attach, and the sentence that makes any answer name its clause and its date before you forward it."
+ },
+ "claims": [
+  {"text": "283 515 plays against this author's median of 19 624, 14.4 times their own norm, with 76 shares plus saves per thousand.", "state": "OBSERVED", "source": "batch metrics and radar_facts DdCvFdHsnj1"},
+  {"text": "58 saves per thousand plays, the highest save rate in the batch, and the only reel here that completes a full teaching unit on screen instead of promising one after the call to action.", "state": "OBSERVED", "source": "batch metrics and transcript_analysis notes DdCvFdHsnj1 (ta-v1)"},
+  {"text": "3 318 comments on 283 515 plays, a comment rate of 0.0117, with the keyword gate spoken in the closing beat at 56.2 seconds.", "state": "OBSERVED", "source": "batch metrics and beat 7 DdCvFdHsnj1"},
+  {"text": "Comment keyword gates raise comment rate 23-fold, save rate 2.8-fold and share rate 1.8-fold and leave reach untouched, so the gate explains this reel's engagement but not its 14.4 times reach.", "state": "OBSERVED", "source": "insights.json I-12"},
+  {"text": "Opening on a screen rather than a face carries median share rate 0.0213 against 0.0140, creator-normalised +0.285 at p=0.00025.", "state": "OBSERVED", "source": "insights.json I-09"},
+  {"text": "Face, then screen, then face again carries median share rate 0.0213 against 0.0140 at p=0.00076 across 39 reels and 32 creators.", "state": "OBSERVED", "source": "insights.json I-11"},
+  {"text": "Boss uses AI for everything and checked her HR advice against Claude, 113 points on r/humanresources 1vlmxlv.", "state": "OBSERVED", "source": "personas/marta.json pains"},
+  {"text": "We expect you to use AI everyday, and you cannot put client data into any AI, a 98-point comment on r/Accounting 1r21wsv.", "state": "OBSERVED", "source": "personas/marta.json pains"},
+  {"text": "Answering the boss by handing the same tool the sources is upvoted 69 times in r/msp as paste in these doc URLs as sources, and it is the named remedy for Marta's second request.", "state": "OBSERVED", "source": "RULES.md §11.5 item 2, citing reports/audience/07-reddit-pass.md"},
+  {"text": "Her team members confirmed that they do not read the AI summaries, 71 points on r/projectmanagement 1w0383c.", "state": "OBSERVED", "source": "personas/marta.json pains"},
+  {"text": "The 'ask it again with sources' reply template is one of Marta's five artefacts but is not yet one of the ten drafts in artefacts/, so it has to be written before this card can be shot.", "state": "PLANNED", "source": "personas/marta.json cta_artefacts against artefacts/README.md"},
+  {"text": "Whether the second ask with the documents attached actually settles the disagreement, on our own handbook and contract, and how often the model quotes a clause that is not in the document.", "state": "TO_MEASURE", "source": "not run yet; this is the number that makes the Teardown worth forwarding, per RULES.md §2"},
+  {"text": "What the reference does visually between the nine sampled frames, including whether it returns to camera after the Replit screen at 41.5 to 56.2 seconds.", "state": "MISSING", "source": "frame_analysis limitations DdCvFdHsnj1: 9 fixed samples only, confidence PROBABLE"}
+ ],
+ "confidence": "PROBABLE",
+ "notes": "Teardown slot kept: both gates are met, a repeated process with a named owner (the check Marta's work goes through after it leaves her desk, and she owns the answer) and a reason to forward (a rule she can send to the team, an answer counts only when it names the document and the clause). What we refuse from the source is its actual subject: a card that teaches the nine terms would be the deep technical tutorial POSITIONING.md §8 puts on the do-not-publish list, and RAG and MCP are exactly the words rule 13a bans from the hook. What survives is beat 3, the one sentence in the reel that changes a working week. Against the batch hints: the persona hint named Mary (0.67) and Sam (0.59) and the routing hint Dana (2.78) and Sam (1.76), none of them Marta, because the hints score word overlap and this reel's overlapping words are vocabulary. Sam already carries DdAP_tFPOC9 in this batch, which is the same mechanism as a counter bot reading one written document, so routing this here as well would have produced two cards on one idea. Dana holds two cards already. Mary and Ray still have nothing from this batch, which is a scheduling matter for cards.py rather than a reason to bend this reel onto a persona whose file does not name the trick. Marta's second card after DcmK70aO5VP, different question, different artefact, no keyword collision with POLICY, MAP, RUNS or AUDIT. The artefact does not exist yet and blocks publication until it is written (RULES.md §12.3)."
+}

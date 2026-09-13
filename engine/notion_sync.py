@@ -178,11 +178,11 @@ class IdCache:
 
     def __init__(self, path=IDS_CACHE_PATH):
         self.path = pathlib.Path(path)
-        self.data = {'databases': {}, 'rows': {}}
+        self.data = {'databases': {}, 'rows': {}, 'pages': {}}
         if self.path.exists():
             try:
                 loaded = json.loads(self.path.read_text(encoding='utf-8'))
-                self.data.update({k: loaded.get(k, {}) for k in ('databases', 'rows')})
+                self.data.update({k: loaded.get(k, {}) for k in ('databases', 'rows', 'pages')})
             except (ValueError, OSError):
                 pass
 
@@ -195,6 +195,13 @@ class IdCache:
 
     def row_id(self, db_title, key):
         return self.data['rows'].get(db_title, {}).get(key)
+
+    def page_id(self, title):
+        return self.data.setdefault('pages', {}).get(title)
+
+    def set_page_id(self, title, page_id):
+        self.data.setdefault('pages', {})[title] = page_id
+        self._save()
 
     def set_row_id(self, db_title, key, page_id):
         self.data['rows'].setdefault(db_title, {})[key] = page_id
@@ -717,6 +724,18 @@ def build_dashboard_blocks(sections):
     b.append(nb.heading('Runs', 2))
     b.append(nb.paragraph("Every major execution run gets a row in the 'Runs' database (linked below)."))
 
+    ex = sections.get('execution') or {}
+    b.append(nb.heading('Execution', 2))
+    b.append(nb.paragraph("Kanban of every key task by block (data gathering, analysis, script, video, "
+                          "Notion & docs, infrastructure) and by pipeline stage, plus the written "
+                          "execution review with argumentation and plan (engine/notion_kanban.py)."))
+    if ex.get('kanban_db'):
+        b.append(nb.link_to_database(ex['kanban_db']))
+    if ex.get('review_page'):
+        b.append(nb.link_to_page(ex['review_page']))
+    if not ex.get('kanban_db'):
+        b.append(nb.paragraph("Kanban not created yet: run `python3 -m engine.notion_kanban --apply`."))
+
     b.append(nb.heading('Legacy', 2))
     b.append(nb.callout(legacy['decision_open'], icon='❗'))
     b.append(nb.bookmark(f"https://app.notion.com/p/{legacy['release_page'].replace('-', '')}",
@@ -750,6 +769,8 @@ def build_plan(con, scope='all', limit=None, discover=False, id_cache=None):
             'architecture': architecture_section(con), 'data_coverage': data_coverage_section(con),
             'analytics': analytics_section(con), 'insights': insights_section(con),
             'hypotheses': hypotheses_section(con), 'legacy': legacy_section(),
+            'execution': {'kanban_db': id_cache.database_id('Execution Kanban'),
+                          'review_page': id_cache.page_id('Execution Review')},
         }
         blocks = build_dashboard_blocks(sections)
         plan['dashboard'] = {
@@ -1004,6 +1025,8 @@ def apply_plan(con, plan, id_cache=None, limit=None):
             'architecture': architecture_section(con), 'data_coverage': data_coverage_section(con),
             'analytics': analytics_section(con), 'insights': insights_section(con),
             'hypotheses': hypotheses_section(con), 'legacy': legacy_section(),
+            'execution': {'kanban_db': id_cache.database_id('Execution Kanban'),
+                          'review_page': id_cache.page_id('Execution Review')},
         }
         blocks = build_dashboard_blocks(sections)
         transport.replace_children(DASHBOARD_PAGE_ID, blocks)

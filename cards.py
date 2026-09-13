@@ -30,6 +30,10 @@ DUR_MIN, DUR_MAX = 20, 120   # за этими границами жанр др�
 ONE_PER_AUTHOR = False  # решение Миши 12 сентября 2026: у автора смотрим все ролики окна,
                         # не только один; в карточки может попасть и его ролик ниже нормы
 RANK = 'hi_intent'      # пересылки + сохранения на тысячу — одна линейка для всех трёх форматов
+# Два правила Миши от 13 сентября 2026 (вечер), RULES.md §13.7: без полной расшифровки и кадров
+# ролик не существует для карточек — подписи недостаточно; и только английская речь.
+MIN_WORDS = 30          # меньше — это не расшифровка ролика, а обрывок
+LANG = 'en'
 
 # Чего не берём никогда. Основание — POSITIONING.md §5 и §8, список «M2 Lab is not»
 # и «Do not publish». Делится на две причины, потому что и лечится по-разному.
@@ -80,7 +84,7 @@ FORMATS = {
 }
 
 
-def _pool(con, today):
+def _pool(con, today, require_evidence=True):
     """Свежие, пригодные, не использованные ролики авторов, у которых в окне есть ролик
     выше своей нормы. Решение Миши 12 сентября 2026: смотрим все ролики такого автора,
     не только выстреливший — из пяти его роликов в карточку может пойти и неудачный."""
@@ -106,6 +110,7 @@ def _pool(con, today):
           AND s.eligible = 1 AND s.weights = 'ig' AND r.ts >= ?
           AND (d.suitable IS NULL OR d.suitable = 1)""", (edge,)).fetchall()
     out = []
+    dropped = {'no_transcript': 0, 'no_frames': 0, 'not_english': 0}
     qualifying = set()                        # авторы с хотя бы одним роликом выше нормы в окне
     for r in rows:
         if r['author_median_play'] and r['play'] / r['author_median_play'] >= MIN_MULT:
@@ -124,6 +129,14 @@ def _pool(con, today):
         # человек по обязательному фильтру, а не regex по словарю тем.
         if not (DUR_MIN <= (r['dur'] or 0) <= DUR_MAX):
             continue
+        ev = evidence(con, r['code'])           # §13.7: полная расшифровка, кадры, английский
+        if require_evidence:                     # deep.py берёт пул без этого фильтра: ему и добывать улики
+            if not ev['transcript']:
+                dropped['no_transcript'] += 1; continue
+            if not ev['frames']:
+                dropped['no_frames'] += 1; continue
+            if ev['lang'] != LANG:
+                dropped['not_english'] += 1; continue
         mult = round(r['play'] / r['author_median_play'], 1) if r['author_median_play'] else None
         d = dict(r); d['topics'] = topics; d['mult'] = mult
         d['above_norm'] = bool(mult and mult >= MIN_MULT)
@@ -137,8 +150,29 @@ def _pool(con, today):
         d['about'], d['regex_block'], d['block_confidence'] = rt['about'], rt['regex_block'], rt['confidence']
         # доля тем ролика, уже закрытых нами: 1.0 — снимали ровно об этом, 0 — тема свежая
         d['closed_share'] = (len([t for t in topics if t in closed]) / len(topics)) if topics else 0
+        d['evidence'] = ev
         out.append(d)
+    _pool.dropped = dropped                    # печатается в CLI: сколько отсеяно и почему
     return out
+
+
+def evidence(con, code):
+    """Что у нас есть по ролику (RULES.md §13.7): полная расшифровка (transcripts.words >= MIN_WORDS),
+    кадры (frames), язык речи. Язык берём из разбора ta-v1, если он есть, иначе из transcripts.lang.
+    До 13 сентября 2026 локальный ASR работал с принудительным 'en' и переводил чужую речь на
+    английский, поэтому у старых расшифровок без ta-v1 язык может быть неверным; с 13 сентября
+    язык определяется (engine/local_pipeline.py)."""
+    t = con.execute('SELECT lang, words FROM transcripts WHERE code=?', (code,)).fetchone()
+    words = (t['words'] if t else 0) or 0
+    lang = (t['lang'] if t else None)
+    ta = D / 'analysis' / 'transcripts' / f'{code}.json'
+    if ta.exists():
+        try:
+            lang = json.loads(ta.read_text(encoding='utf-8')).get('language') or lang
+        except ValueError:
+            pass
+    frames = con.execute('SELECT COUNT(*) FROM frames WHERE code=?', (code,)).fetchone()[0]
+    return {'transcript': words >= MIN_WORDS, 'words': words, 'frames': frames, 'lang': lang}
 
 
 def _repeated_topics(pool, min_authors=3):
@@ -332,8 +366,11 @@ if __name__ == '__main__':
         print(f'карточка №{a[1]} вычеркнута')
     else:
         picked, pool_n, rep_n = select(con)
+        dr = getattr(_pool, 'dropped', {})
         print(f'кандидатов в окне {FRESH_DAYS} дней: {pool_n}   '
-              f'тем, повторившихся у нескольких авторов (справочно): {rep_n}\n')
+              f'тем, повторившихся у нескольких авторов (справочно): {rep_n}')
+        print(f"отсеяно по §13.7: без расшифровки {dr.get('no_transcript', 0)}, без кадров {dr.get('no_frames', 0)}, "
+              f"не английский {dr.get('not_english', 0)}\n")
         print(f'шортлист {len(picked)} из {SHORTLIST}: ступень 1 — по одному на блок, '
               f'ступень 2 — по силе, потолок {MAX_PER_BLOCK} на блок; выбрать {PICK}\n')
         for c in picked:

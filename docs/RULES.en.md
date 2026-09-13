@@ -554,3 +554,26 @@ Plus claims with a state (OBSERVED / PLANNED / TO_MEASURE / MISSING). The valida
 structure, banned words and length of the hook, the sum of seconds, the CTA artefact file.
 Weekly document: `python3 cards.py --dry --md FILE`; the Notion card body is built from the same
 file (`notion.py blocks_for`), the card title = our topic.
+
+### 13.7. No evidence, no card (two rules from Misha, 13 September 2026, evening)
+
+1. **No full transcript of the reel and no frames means the reel does not exist for us.** No card,
+   no reference, no "shoot it like this". Caption and metrics are not enough: without the spoken
+   text and the frames the agent fills the gaps, and things we must not shoot reach the plan.
+   Threshold: a transcript of at least 30 words (`cards.MIN_WORDS`) and at least one row in `frames`.
+2. **English speech only.** An English caption does not count: the language is read from the
+   transcript of the whole reel (`ta-v1` `language`, else `transcripts.lang`). Not English, not taken.
+
+Where it lives: `cards.evidence()` and the filter in `cards._pool()`, from which the shortlist,
+the blocks, the decision cards and the adaptation all grow. `deep.py` takes the pool **without**
+this filter: the deep dive is where a reel acquires its transcript and frames. What was dropped and
+why is printed by `cards.py --dry`.
+
+Known cause of the earlier mistakes: until 13 September the local ASR ran with English forced and
+**translated** Hindi speech into English, so the base called such reels English (card 8 in the
+13 September shortlist). Since 13 September the language is detected (`engine/local_pipeline.py`);
+older transcripts without `ta-v1` may carry a wrong language.
+
+Check on the 13 September shortlist: 6 of 15 cards had full evidence (1, 3, 4, 9, 14, 15); 8 were
+made from a caption alone, one from Hindi. Under these rules the pool on 13 September is 107 reels
+instead of 427 (456 without a transcript, 4 not English).

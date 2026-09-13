@@ -345,7 +345,9 @@ def transcribe(mp4, model_size='small'):
             model = WhisperModel(model_size, device='cpu', compute_type='int8')
             _WHISPER_MODELS[model_size] = model
         started = time.monotonic()
-        segs, info = model.transcribe(str(mp4), language='en', vad_filter=True, word_timestamps=False)
+        # language=None: detect, never force. Forced 'en' made Whisper TRANSLATE Hindi speech into
+        # English and the base called the reel English (Misha's rule of 13 Sep 2026: English speech only)
+        segs, info = model.transcribe(str(mp4), language=None, vad_filter=True, word_timestamps=False)
         segments = [{'s': round(s.start, 2), 'e': round(s.end, 2), 't': s.text.strip()} for s in segs]
         elapsed = round(time.monotonic() - started, 2)
     except PipelineError:

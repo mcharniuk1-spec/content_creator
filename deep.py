@@ -31,7 +31,8 @@ def pick(con, n=N, window=WINDOW, cap=CAP, today=None):
     """
     import cards
     today = today or datetime.date.today()
-    pool = [r for r in cards._pool(con, today) if (r.get('dur') or 0) > 0]
+    # без фильтра §13.7: разбор и есть то место, где ролик получает расшифровку и кадры
+    pool = [r for r in cards._pool(con, today, require_evidence=False) if (r.get('dur') or 0) > 0]
     done = {x[0] for x in con.execute('SELECT code FROM deepdives')}
     pool = [r for r in pool if r['code'] not in done]
 

@@ -68,7 +68,8 @@ edge = int(datetime.datetime.combine(TODAY - datetime.timedelta(days=deep.WINDOW
                                      datetime.time()).timestamp())
 
 eq('берём не больше сотни', len(rows) <= 100, True)
-pool_codes = {r['code'] for r in cards._pool(con, TODAY)}
+# разбор берёт пул БЕЗ фильтра §13.7 (расшифровка и кадры): он их и добывает
+pool_codes = {r['code'] for r in cards._pool(con, TODAY, require_evidence=False)}
 eq('всё к разбору — из пула карточек', {r['code'] for r in rows} <= pool_codes, True)
 eq('все внутри окна свежести', min(r['ts'] for r in rows) >= edge, True)
 eq('старше окна не берём',

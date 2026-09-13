@@ -241,6 +241,7 @@ def _card(r, fmt, cfg, i, stage=None, note=''):
         n=i, code=r['code'], fmt=fmt, ref=f"https://instagram.com/reel/{r['code']}",
         block=r.get('block') or cb.UNASSIGNED, stage=stage, above_norm=bool(r.get('above_norm')),
         about=r.get('about'), block_source=r.get('block_source'), stage_note=note,
+        block_evidence=r.get('block_evidence'),
         author=r['username'], age=r['age'], topics=r['topics'],
         why=' · '.join(facts), signal=cfg['signal'], sheet=r['sheet'],
         words=r['words'], cap=(r['cap'] or '')[:400],
@@ -253,34 +254,10 @@ def _card(r, fmt, cfg, i, stage=None, note=''):
 
 
 def render_md(picked, pool_n, today=None):
-    """The shortlist as one markdown document: everything the machine writes about a card.
-    The human reads this to pick PICK of SHORTLIST; angle and hook stay empty on purpose."""
-    today = today or datetime.date.today()
-    L = [f'# Shortlist {today.isoformat()}: {len(picked)} of {SHORTLIST}', '',
-         f'Pool in the {FRESH_DAYS}-day window: {pool_n} reels. Stage 1 = best reel of each block above its '
-         f'author norm; stage 2 = by shares + saves, at most {MAX_PER_BLOCK} per block. '
-         f'Pick {PICK}, at most {PICK_PER_BLOCK} from one block. Angle and hook are written after the pick.', '']
-    by_block = {}
-    for c in picked:
-        by_block.setdefault(c['block'], []).append(c['n'])
-    L += ['| Block | Cards |', '|---|---|'] + [f"| {cb.label(b)} | {', '.join(map(str, ns))} |" for b, ns in by_block.items()] + ['']
-    for c in picked:
-        facts = c['why'].split(' · ')
-        about = next((f[len('about: '):] for f in facts if f.startswith('about: ')), None)
-        routed = next((f for f in facts if f.startswith('routed by')), '')
-        rest = [f for f in facts if not f.startswith(('about: ', 'routed by', 'block ', 'stage '))]
-        L += [f"## {c['n']}. {cb.label(c['block'])} · stage {c['stage']} · {c['fmt']}", '',
-              f"**Reference:** [{c['author']}]({c['ref']}), {c['age']} days old",
-              f"**About:** {about or '— (no agent reading; caption: ' + (c['cap'] or '')[:120].replace(chr(10), ' ') + ')'}",
-              f"**Why it is here:** stage {c['stage']}, {c['stage_note']}",
-              f"**Routing:** {routed or 'unassigned, strength only'}",
-              f"**Numbers:** {' · '.join(rest)}",
-              f"**Topic tags:** {', '.join(c['topics']) or '—'}",
-              f"**Shoot:** in frame — {c['shot']['in frame']}; on screen — {c['shot']['on screen']}; "
-              f"banner — {c['shot']['in the banner']}",
-              f"**Caption skeleton:** {' · '.join(f'{k}: {v}' for k, v in c['caption'].items())}",
-              '**Angle / hook:** — (written after the pick)', '']
-    return '\n'.join(L)
+    """The shortlist as one markdown document (engine.shortlist_adapt.render_md): selection facts
+    plus, once adapted, what they shot / our version / how we shoot it."""
+    from engine import shortlist_adapt
+    return shortlist_adapt.render_md(picked, pool_n, today)
 
 
 def save(con, picked, week=None):

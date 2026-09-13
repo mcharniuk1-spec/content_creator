@@ -114,8 +114,45 @@ def blocks_for(con, card):
                 out.append(text(f'{label} · {b["words"][k]} words', 'heading_3'))
                 out.append(text(b[k]))
 
+    from engine import shortlist_adapt                       # sa-v1 decision card, 13 Sep 2026
+    d = shortlist_adapt.load(card['code'])
+    if d:
+        o = d.get('original') or {}; r = o.get('result') or {}
+        out.append(head('What they shot and what it did'))
+        for label, v in (('Topic', o.get('topic')), ('What the reel shows', o.get('what_they_show')),
+                         ('Why it worked for them', o.get('why_it_worked')),
+                         ('Result', f"{r.get('plays')} plays, {r.get('vs_author_norm')}x the author's own norm, "
+                                    f"{r.get('shares_1k')} shares and {r.get('saves_1k')} saves per thousand"),
+                         ('Does not transfer', o.get('does_not_transfer'))):
+            if v:
+                out.append(text(f'{label}: {v}'))
+        u = d.get('ours')
+        if u:
+            out.append(head('Our version'))
+            for label, k in (('Topic', 'topic'), ('Angle', 'angle'), ('For whom', 'for_whom'), ('Process', 'process'),
+                             ('Friction', 'friction'), ('AI does / human keeps', 'ai_boundary'),
+                             ('Next action for the viewer', 'next_action'), ('Why someone forwards it', 'why_forward')):
+                if u.get(k):
+                    out.append(text(f'{label}: {u[k]}'))
+            out.append(text(f"Format: {d.get('format')}: {d.get('format_reason') or ''}"))
+            sh = d.get('shoot') or {}
+            out.append(head(f"How we shoot it: {sh.get('duration_s')} s, {sh.get('location')}, presenter {sh.get('presenter')}"))
+            out.append(text(f"Banner, held for the whole reel: {sh.get('banner')}", 'quote'))
+            for part in sh.get('parts') or []:
+                out.append(text(f"{part.get('part')} · {part.get('seconds')} s", 'heading_3'))
+                out.append(text(f"Says: {part.get('says')}"))
+                out.append(text(f"In frame: {part.get('in_frame')} · On screen: {part.get('on_screen')}"
+                                + (f" · Overlay: {part.get('overlay')}" if part.get('overlay') else '')))
+            cta = d.get('cta')
+            out.append(text('CTA: ' + (f"{cta.get('type')}" + (f", comment {cta.get('keyword')} -> {cta.get('artefact')}" if cta.get('keyword') else '')
+                                       + (f". {cta.get('viewer_gets')}" if cta.get('viewer_gets') else '') if cta else 'none')))
+            if d.get('claims'):
+                out.append(text('Claims: ' + '; '.join(f"{x.get('text')} [{x.get('state')}]" for x in d['claims'][:8])))
+        else:
+            out.append(head('Rejected by the adaptation step'))
+            out.append(text(d.get('reject_reason') or ''))
     out.append(head('Our angle'))
-    out.append(text(card['angle'] or 'Not written yet — the agent fills this in.'))
+    out.append(text(card['angle'] or (((d or {}).get('ours') or {}).get('angle') or 'Not written yet — the agent fills this in.')))
     if card['hook']:
         out.append(text(f'Draft hook: {card["hook"]}', 'quote'))
 
@@ -136,6 +173,12 @@ def blocks_for(con, card):
     out.append(text('Set Status above and leave a comment on this page. '
                     'Both are read back by the radar on the next run.'))
     return out
+
+
+def _topic_of(code):
+    from engine import shortlist_adapt
+    d = shortlist_adapt.load(code)
+    return ((d or {}).get('ours') or {}).get('topic')
 
 
 def _ensure_block_props(db):
@@ -175,7 +218,7 @@ def push(con, week=None):
         mult = round(c['play'] / (c['author_median_play'] or 1), 1)
         age = (datetime.date.fromisoformat(week) - datetime.date.fromtimestamp(c['ts'])).days
         props = {
-            'Name': {'title': [{'text': {'content': (c['hook'] or c['why'] or c['code'])[:80]}}]},
+            'Name': {'title': [{'text': {'content': (c['hook'] or _topic_of(c['code']) or c['why'] or c['code'])[:80]}}]},
             'Week': {'date': {'start': week}},
             'Format': {'select': {'name': c['fmt']}},
             'Priority': {'number': c['pri']},

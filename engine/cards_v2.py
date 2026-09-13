@@ -292,6 +292,25 @@ def validate(card: dict) -> list[str]:
     elif claims is not None:
         errors.append('card.claims: must be a list')
 
+    # ---- persona + CTA artefact (Misha, 13 Sep 2026): advisory here, hard finding for the reviewer
+    persona = (card.get('strategy') or {}).get('persona') if isinstance(card.get('strategy'), dict) else None
+    if not persona:
+        errors.append('WARNING: card.strategy.persona: missing — every card is adapted to one persona (personas/*.json)')
+    else:
+        try:
+            from engine import personas as _personas
+            known = set(_personas.load_all())
+            if known and persona not in known:
+                errors.append(f'WARNING: card.strategy.persona: {persona!r} is not one of {sorted(known)}')
+        except Exception:
+            pass
+    cta = card.get('cta')
+    if not isinstance(cta, dict) or cta.get('type') != 'comment_keyword' or not cta.get('artefact'):
+        errors.append('WARNING: card.cta: every video ends with a comment call-to-action for a real artefact '
+                      '({"type":"comment_keyword","keyword":"WORD","artefact":"artefacts/<file>.md"})')
+    elif not (ROOT / str(cta['artefact'])).exists():
+        errors.append(f"WARNING: card.cta.artefact: {cta['artefact']} does not exist yet — produce it before publishing")
+
     # ---- review -------------------------------------------------------------
     review = card.get('review')
     if isinstance(review, dict):

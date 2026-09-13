@@ -184,6 +184,13 @@ def _card(r, fmt, cfg, i):
         facts.append('shot in one take' if r['cuts_ps'] < 0.02 else
                      f"{r['cuts_ps']:.2f} cuts per second")
     facts.append(f"{r['dur']:.0f} seconds")
+    try:                                   # решение Миши 13 сентября 2026: карточка адресована персонажу
+        from engine import personas as _personas
+        top = _personas.match((r.get('cap') or ''), r.get('topics') or [])[:2]
+        if top and top[0][1] > 0:
+            facts.append('persona hint: ' + ', '.join(f"{p} ({s})" for p, s, _ in top if s > 0))
+    except Exception:
+        pass
     if r.get('closed_share'):
         facts.append('we already covered this topic in the last six weeks'
                      if r['closed_share'] == 1 else 'part of its topics we already covered')

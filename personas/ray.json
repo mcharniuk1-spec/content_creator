@@ -1,0 +1,94 @@
+{
+ "id": "ray",
+ "name": "Ray",
+ "archetype": "Local services owner",
+ "role": "Owner of a small local services firm: HVAC, cleaning, junk removal, auto detailing, brokerage, clinic; on the tools or on the phone most of the day",
+ "business": "Local, appointment-based, quotes and invoices, crews or a partner; revenue depends on answering fast and not losing margin in the estimate",
+ "size": "1-18 people",
+ "ai_level": 2,
+ "tools_today": [
+  "phone and WhatsApp",
+  "spreadsheets and notebooks",
+  "a half-used CRM (Jobber / Housecall Pro / ServiceTitan) or none",
+  "free ChatGPT on the phone",
+  "Google Voice / Calendly (the organised ones)"
+ ],
+ "day": "Hands full until lunch; 15 spam calls an hour on the personal number; quotes written at night; the exceptions every customer asked for live in his head.",
+ "pains": [
+  {
+   "text": "I'm 100% losing jobs because I can't answer fast enough",
+   "src": "r/sweatystartup 1oex952"
+  },
+  {
+   "text": "managing the AI is starting to feel like a full-time job",
+   "src": "r/smallbusiness 1w640zy, 55 comments"
+  },
+  {
+   "text": "Gas is too expensive to be driving around for nothing (no-shows)",
+   "src": "r/sweatystartup 1rcq5vo, 45 pts"
+  },
+  {
+   "text": "I'm the one who built a service with 100 little exceptions",
+   "src": "r/sweatystartup 1w3krwn, 27 pts"
+  },
+  {
+   "text": "I can't figure out if I'm bad at estimating or bad at tracking costs",
+   "src": "r/sweatystartup 1rg0rml, 43 pts"
+  },
+  {
+   "text": "the stuff behind the scenes takes even more time (payroll, bookkeeping)",
+   "src": "r/sweatystartup 1uoh3pw"
+  },
+  {
+   "text": "I don't like the descriptions it pops out",
+   "src": "BiggerPockets 1244728 (broker)"
+  }
+ ],
+ "questions": [
+  "How does one repeated job get handled: voicemail follow-up, quotes, booking confirmations?",
+  "Is it worth paying for, and does it get it right the first time?",
+  "What do people in my trade actually use it for?",
+  "Should an AI answer my phone?",
+  "Where do I start with no technical person?",
+  "Why did the job that looked profitable clear 8 %?",
+  "How do I stop saying yes to every exception?"
+ ],
+ "forwards": "'this is what it costs you per week'; a deposit/no-show policy that worked; a quote checklist; a story of a shop like his",
+ "saves": "price-sheet template, quote checklist, customer exception card, after-hours script",
+ "distrusts": "AI receptionists (callers hang up), anything that writes prices, dashboards he has to open, consultants, vendor replies",
+ "cost": "Google Voice free; $69/month intake tool fine; VA $1,100/month is the benchmark; will not build a custom stack first",
+ "cta_artefacts": [
+  "price-sheet template (the model reads, never writes prices)",
+  "quote checklist with the incidentals line",
+  "customer exception card",
+  "after-hours intake script",
+  "no-show policy one-pager"
+ ],
+ "topics": [
+  "hvac",
+  "cleaning",
+  "junk removal",
+  "detailing",
+  "plumbing",
+  "contractor",
+  "quote",
+  "estimate",
+  "invoice",
+  "voicemail",
+  "missed call",
+  "no-show",
+  "scheduling",
+  "spam calls",
+  "receptionist",
+  "crew",
+  "route",
+  "local business",
+  "real estate agent",
+  "clinic"
+ ],
+ "corpus_signal": "sales follow-up n=30 share 0.0188; SMB-owner label lift 1.12 (hardest to reach); slow_response_to_leads named but never landed in the niche",
+ "evidence": [
+  "reports/audience/07-reddit-pass.md (r/sweatystartup, r/smallbusiness HVAC and hardware-store threads)",
+  "reports/audience/02-founders-lens-web.md (BiggerPockets)"
+ ]
+}

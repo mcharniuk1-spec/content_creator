@@ -62,16 +62,17 @@ PLAN_OUT_PATH = ROOT / 'reports' / 'notion-sync-plan.md'
 RATE_LIMIT_SLEEP_S = 0.35     # Notion's documented ~3 req/s average limit
 
 SCOPES = ('dashboard', 'dbs', 'reels', 'accounts', 'cards', 'runs',
-          'insights', 'hypotheses', 'categories', 'all')
+          'insights', 'hypotheses', 'categories', 'personas', 'all')
 
 NEW_DATABASES = ('Runs', 'Insights', 'Hypotheses', 'Cards v2', 'Reels analysis',
-                  'Accounts analysis', 'Categories')
+                  'Accounts analysis', 'Categories', 'Personas')
 
 # db title -> Notion property name treated as the idempotency key (also the title property)
 KEY_PROPERTY = {
     'Runs': 'Run ID', 'Insights': 'Insight ID', 'Hypotheses': 'Title',
     'Cards v2': 'Card ID', 'Reels analysis': 'Code', 'Accounts analysis': 'Username',
     'Categories': 'Label',
+    'Personas': 'Persona ID',
 }
 
 # db title -> {Notion property name: row-dict field name}, for the (few) properties whose
@@ -111,6 +112,13 @@ PROPERTY_SCHEMAS = {
         'Data scope': _plain('rich_text'), 'Counts': _plain('rich_text'),
         'Statuses': _plain('rich_text'), 'Issues': _plain('rich_text'),
         'Reports links': _plain('rich_text'), 'Next steps': _plain('rich_text'),
+    },
+    'Personas': {
+        'Persona ID': _plain('title'), 'Name': _plain('rich_text'), 'Archetype': _plain('rich_text'),
+        'Role': _plain('rich_text'), 'Size': _plain('rich_text'), 'AI level': _plain('number'),
+        'Questions': _plain('rich_text'), 'Pains': _plain('rich_text'),
+        'CTA artefacts': _plain('rich_text'), 'Topics': _plain('rich_text'),
+        'Corpus signal': _plain('rich_text'), 'Evidence': _plain('rich_text'),
     },
     'Insights': {
         'Insight ID': _plain('title'), 'Statement': _plain('rich_text'),
@@ -566,6 +574,22 @@ def categories_rows(con):
     return out
 
 
+def personas_rows():
+    """Rows for the 'Personas' database — one per personas/*.json (engine/personas.py)."""
+    from engine import personas as personas_mod
+    out = []
+    for pid, p in personas_mod.load_all().items():
+        out.append({
+            'persona_id': pid, 'name': p['name'], 'archetype': p['archetype'], 'role': p['role'],
+            'size': p['size'], 'ai_level': p['ai_level'],
+            'questions': '\n'.join(f'{i + 1}. {q}' for i, q in enumerate(p['questions'])),
+            'pains': '\n'.join(f"\u201c{x['text']}\u201d ({x['src']})" for x in p['pains']),
+            'cta_artefacts': '; '.join(p['cta_artefacts']), 'topics': ', '.join(p['topics']),
+            'corpus_signal': p['corpus_signal'], 'evidence': '; '.join(p['evidence']),
+        })
+    return out
+
+
 def insights_rows(con):
     """Rows for the 'Insights' database — one per `insights` table row."""
     out = []
@@ -821,6 +845,10 @@ def build_plan(con, scope='all', limit=None, discover=False, id_cache=None):
         plan['categories'] = {'db_title': 'Categories', 'rows': categories_rows(con)}
     if want('insights'):
         plan['insights'] = {'db_title': 'Insights', 'rows': insights_rows(con)}
+    if want('personas'):
+        rows = personas_rows()
+        plan['personas'] = {'rows': rows, 'row_count': len(rows),
+                            'existing_cached': len(id_cache.data['rows'].get('Personas', {}))}
     if want('hypotheses'):
         plan['hypotheses'] = {'db_title': 'Hypotheses', 'rows': hypotheses_rows(con)}
         plan['insights_standalone'] = insights_section(con)
@@ -1059,6 +1087,9 @@ def apply_plan(con, plan, id_cache=None, limit=None):
 
     if 'categories' in plan:
         result['categories'] = upsert_rows(transport, id_cache, 'Categories', plan['categories']['rows'])
+
+    if 'personas' in plan:
+        result['personas'] = upsert_rows(transport, id_cache, 'Personas', plan['personas']['rows'])
 
     return result
 

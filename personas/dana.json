@@ -1,0 +1,93 @@
+{
+ "id": "dana",
+ "name": "Dana",
+ "archetype": "Agency or consultancy owner selling expertise",
+ "role": "Founder of a small marketing / web / SEO / bookkeeping / recruiting agency or a solo consultant; sells hours and outcomes to small businesses; clients now ask 'can't AI do this?'",
+ "business": "B2B services, 1-15 people, retainers; delivery is content, reports, campaigns, sites, books; margin depends on internal tooling and on trust",
+ "size": "1-15 people",
+ "ai_level": 5,
+ "tools_today": [
+  "ChatGPT and Claude tabs open all day",
+  "Notion or ClickUp",
+  "Fireflies / Otter",
+  "n8n or Zapier flows (some half-built)",
+  "Clay / Apollo (regretted)",
+  "Lovable / v0 for internal tools"
+ ],
+ "day": "Copy-pastes brand voice and SOPs into a chat fifty times a day; 14 half-built n8n flows; clients leaving 'because we're not keeping up with AI'; clients second-guessing recommendations with ChatGPT.",
+ "pains": [
+  {
+   "text": "is automation something that quietly saves time... or mostly hype",
+   "src": "r/agency 1q450xv, 36 pts"
+  },
+  {
+   "text": "No owner. No success metric. No home inside an existing workflow.",
+   "src": "r/Entrepreneur 1ssqek0 (audit of founders' AI stacks)"
+  },
+  {
+   "text": "clients coming to us are leaving their current agency because they feel they're not keeping up with advances in AI",
+   "src": "r/agency 1u4mtlv, 20-pt comment"
+  },
+  {
+   "text": "clients throw every recommendation into ChatGPT and reopen the discussion",
+   "src": "r/msp 1vr7q7i, 86 pts"
+  },
+  {
+   "text": "if you send 1000 emails and get 0 replies, you are not doing sales",
+   "src": "r/Entrepreneur 1qof5yc, 329 pts"
+  },
+  {
+   "text": "the company brain decays way faster than you think",
+   "src": "r/Entrepreneur 1unxhry"
+  },
+  {
+   "text": "AI copy could've described any saas on earth",
+   "src": "r/EntrepreneurRideAlong 1tumnrj, 169 pts"
+  }
+ ],
+ "questions": [
+  "Which internal chore is worth automating and which is hype?",
+  "How do I stop copy-pasting context fifty times a day?",
+  "How do I answer a client who checked my advice against ChatGPT?",
+  "Do I pass AI savings to clients or widen margin, and how do I say it?",
+  "How do I keep our copy from sounding like every other AI copy?",
+  "Which half-built automations do I kill?",
+  "What does a client-facing AI deliverable need before it leaves the building?"
+ ],
+ "forwards": "the three-question audit (owner, metric, home); the 'reply with sources' tactic; an honest 'automation is a multiplier' take",
+ "saves": "internal-tool recipes, the client brain layout, QA checklist for AI output, pricing language for AI-assisted work",
+ "distrusts": "tool pitches in every thread, 'AI-native agency' hype, agents replacing account managers, posts that read as AI",
+ "cost": "pays for several $20-100 tools already; cares about margin per client and hours per deliverable, not per-tool price",
+ "cta_artefacts": [
+  "three-question automation audit sheet",
+  "client-facing AI output QA checklist",
+  "'we used AI on this' disclosure wording for clients",
+  "company-brain folder structure",
+  "kill-list template for half-built automations"
+ ],
+ "topics": [
+  "agency",
+  "consultant",
+  "freelance",
+  "clients",
+  "retainer",
+  "reporting",
+  "seo",
+  "copywriting",
+  "brief",
+  "client brain",
+  "internal tools",
+  "n8n",
+  "zapier",
+  "outreach",
+  "cold email",
+  "proposal",
+  "margin",
+  "disclosure"
+ ],
+ "corpus_signal": "agency/consultant audience label n=43 share 0.0174 lift 2.48; comparison threads are vendor-colonised; trust register shares below baseline so ship as demo",
+ "evidence": [
+  "reports/audience/07-reddit-pass.md (r/agency, r/Entrepreneur, r/msp, r/marketing)",
+  "reports/audience/01-corpus-lens.md"
+ ]
+}

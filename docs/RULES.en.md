@@ -490,13 +490,20 @@ Not blocks (niche filter): coding as such, paywall workarounds, memes, viral eff
 
 ### 13.2. How a reel gets its block
 
-`content_blocks.py`: the reel's tags (`topics`, dictionary in `topics.py`) plus a regex pass over
-the caption and transcript. A tag weighs 2, a word 1 (at most four words). The block with the
+First path — the **agent** (`engine/block_route.py`, prompt `engine/prompts/block-route.md`,
+contract br-v1, files `data/analysis/blocks/<code>.json`): reads caption and transcript, decides
+what the reel is about rather than matching single words, quotes 1-3 fragments as evidence and
+writes one "about" line for the human who picks 5 of 15 without re-watching all of them. A reel
+off the niche or with empty text gets `null` with a reason and stays "Unassigned". Runs on the
+server via `claude -p` over every pool reel without a file yet; spends no money.
+
+Fallback — `content_blocks.classify`: the reel's tags (`topics`, dictionary in `topics.py`) plus a
+regex pass over the caption and transcript. A tag weighs 2, a word 1 (at most four words). The block with the
 highest sum wins; ties go to the earlier block in the list (under-served first: Process, Money,
 Trust, Mistakes, What to pick, Learn, Skills, Builds, News). Nothing matched -> "Unassigned":
-the reel stays in the pool and competes at stage 2 on strength. The card prints what routed the
-reel ("routed by ..."). A hint with evidence, not a verdict: the human at stage 3 sees the block
-and may disagree.
+the reel stays in the pool and competes at stage 2 on strength. The card prints who routed the reel and
+on what ("routed by agent: ..." or "routed by tags/regex: ...") plus the "about" line. A hint
+with evidence, not a verdict: the human at stage 3 sees the block and may disagree.
 
 ### 13.3. The weekly shortlist: 15 in three stages (`cards.select`)
 

@@ -3,6 +3,7 @@
 
     python3 cards.py                    шортлист недели (15, три ступени) и запись в базу
     python3 cards.py --dry              показать, ничего не записывая
+    python3 cards.py --dry --md FILE    то же плюс шортлист одним markdown-документом
     python3 cards.py angle 3 "текст"    вписать угол в карточку №3
     python3 cards.py hook 3 "текст"     то же для хука
     python3 cards.py show               что сейчас в карточках недели
@@ -243,15 +244,47 @@ def _card(r, fmt, cfg, i, stage=None, note=''):
     return dict(
         n=i, code=r['code'], fmt=fmt, ref=f"https://instagram.com/reel/{r['code']}",
         block=r.get('block') or cb.UNASSIGNED, stage=stage, above_norm=bool(r.get('above_norm')),
-        about=r.get('about'), block_source=r.get('block_source'),
+        about=r.get('about'), block_source=r.get('block_source'), stage_note=note,
         author=r['username'], age=r['age'], topics=r['topics'],
         why=' · '.join(facts), signal=cfg['signal'], sheet=r['sheet'],
         words=r['words'], cap=(r['cap'] or '')[:400],
         shot={'in frame': cfg['frame'], 'on screen': cfg['screen'], 'in the banner': cfg['banner']},
-        caption={'sharpen for the query': r['topics'][0] if r['topics'] else '—',
+        caption={'sharpen for the query': next((t for t in r['topics'] if t not in NOT_TOPICS), None)
+                                          or r.get('about') or cb.label(r.get('block')),
                  'must contain': 'process, cost, what changed',
                  'first line': 'written as a search query'},
         angle='', hook='', goal='', lead='', pri=None)
+
+
+def render_md(picked, pool_n, today=None):
+    """The shortlist as one markdown document: everything the machine writes about a card.
+    The human reads this to pick PICK of SHORTLIST; angle and hook stay empty on purpose."""
+    today = today or datetime.date.today()
+    L = [f'# Shortlist {today.isoformat()}: {len(picked)} of {SHORTLIST}', '',
+         f'Pool in the {FRESH_DAYS}-day window: {pool_n} reels. Stage 1 = best reel of each block above its '
+         f'author norm; stage 2 = by shares + saves, at most {MAX_PER_BLOCK} per block. '
+         f'Pick {PICK}, at most {PICK_PER_BLOCK} from one block. Angle and hook are written after the pick.', '']
+    by_block = {}
+    for c in picked:
+        by_block.setdefault(c['block'], []).append(c['n'])
+    L += ['| Block | Cards |', '|---|---|'] + [f"| {cb.label(b)} | {', '.join(map(str, ns))} |" for b, ns in by_block.items()] + ['']
+    for c in picked:
+        facts = c['why'].split(' · ')
+        about = next((f[len('about: '):] for f in facts if f.startswith('about: ')), None)
+        routed = next((f for f in facts if f.startswith('routed by')), '')
+        rest = [f for f in facts if not f.startswith(('about: ', 'routed by', 'block ', 'stage '))]
+        L += [f"## {c['n']}. {cb.label(c['block'])} · stage {c['stage']} · {c['fmt']}", '',
+              f"**Reference:** [{c['author']}]({c['ref']}), {c['age']} days old",
+              f"**About:** {about or '— (no agent reading; caption: ' + (c['cap'] or '')[:120].replace(chr(10), ' ') + ')'}",
+              f"**Why it is here:** stage {c['stage']}, {c['stage_note']}",
+              f"**Routing:** {routed or 'unassigned, strength only'}",
+              f"**Numbers:** {' · '.join(rest)}",
+              f"**Topic tags:** {', '.join(c['topics']) or '—'}",
+              f"**Shoot:** in frame — {c['shot']['in frame']}; on screen — {c['shot']['on screen']}; "
+              f"banner — {c['shot']['in the banner']}",
+              f"**Caption skeleton:** {' · '.join(f'{k}: {v}' for k, v in c['caption'].items())}",
+              '**Angle / hook:** — (written after the pick)', '']
+    return '\n'.join(L)
 
 
 def save(con, picked, week=None):
@@ -334,6 +367,11 @@ if __name__ == '__main__':
             print(f"  {c['n']:>2}. s{c['stage']} {cb.label(c['block']):<18} {c['fmt']:<12} "
                   f"{c['author']:<22} {c['age']:>2} дн.  {c['why']}")
             print(f"      темы: {', '.join(c['topics']) or '—'}")
+        if '--md' in sys.argv:
+            out = pathlib.Path(sys.argv[sys.argv.index('--md') + 1])
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(render_md(picked, pool_n), encoding='utf-8')
+            print(f'\nшортлист записан: {out}')
         if '--dry' not in sys.argv:
             w = save(con, picked)
             print(f'\nзаписано в базу на неделю {w}. Угол и хук: '

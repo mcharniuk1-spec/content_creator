@@ -98,9 +98,12 @@ def live_numbers(con):
     return n
 
 
-def stage_rows(con):
-    """One row per engine stage with live job counts. Stages that have never produced a
-    jobs row are Planned; stages with only failures are Blocked."""
+def stage_rows(con, numbers=None):
+    """One row per engine stage with live job counts. A stage with DONE jobs is Done; DONE plus
+    FAILED is In progress; only failures is Blocked. Stages that ran before the jobs trace
+    existed (the legacy corpus, the run.py steps, the Notion applies) are Done on the strength
+    of the data they left, and the evidence says so; everything else is Planned."""
+    numbers = numbers or live_numbers(con)
     counts = {}
     try:
         for stage, st, c in con.execute('SELECT stage, state, COUNT(*) FROM jobs GROUP BY 1, 2'):
@@ -113,29 +116,41 @@ def stage_rows(con):
             last[stage] = ts
     except Exception:
         pass
-    legacy_done = {'DISCOVERED', 'PROFILE_FETCHED', 'VIDEO_METADATA_FETCHED', 'STATS_FETCHED'}
+    n = numbers
+    # stage -> (data evidence, count) for work done before per-video jobs existed
+    legacy = {
+        'DISCOVERED': ('reels', n['n_ingested']), 'PROFILE_FETCHED': ('reels', n['n_ingested']),
+        'VIDEO_METADATA_FETCHED': ('reels', n['n_ingested']), 'STATS_FETCHED': ('reels', n['n_ingested']),
+        'MEDIA_FETCHED': ('transcripts', n['n_transcripts']), 'TRANSCRIPTION': ('transcripts', n['n_transcripts']),
+        'FRAME_EXTRACTION': ('frames', n['n_frames']), 'ALIGNMENT': ('beats', n['n_beats']),
+        'TRANSCRIPT_ANALYSIS': ('ta-v1 files', n['n_ta']), 'FRAME_ANALYSIS': ('fa-v1 files', n['n_fa']),
+        'STATISTICAL_ANALYSIS': ('video_features', n['n_features']),
+        'CATEGORIZATION': ('Categories rows in Notion', n['n_categories']),
+        'NOTION_SYNC': ('Notion databases applied 12 Sep', 7),
+    }
+    cron_stages = {'DISCOVERED', 'PROFILE_FETCHED', 'VIDEO_METADATA_FETCHED', 'STATS_FETCHED',
+                   'MEDIA_FETCHED', 'TRANSCRIPTION', 'FRAME_EXTRACTION', 'ALIGNMENT',
+                   'TRANSCRIPT_ANALYSIS', 'FRAME_ANALYSIS'}
     rows = []
     for i, stage in enumerate(state.STAGES):
         c = counts.get(stage, {})
         done, failed, skipped = c.get('DONE', 0), c.get('FAILED', 0), c.get('SKIPPED', 0)
+        evidence = f'jobs: {done} DONE, {failed} FAILED, {skipped} SKIPPED'
+        if last.get(stage):
+            evidence += f'; last {last[stage]}'
         if done:
             status = 'Done' if not failed else 'In progress'
         elif failed:
             status = 'Blocked'
-        elif stage in legacy_done:
+        elif stage in legacy and legacy[stage][1]:
             status = 'Done'
+            evidence = (f'no jobs rows (ran before the trace existed); data: {legacy[stage][1]} '
+                        f'{legacy[stage][0]}')
         else:
             status = 'Planned'
-        evidence = (f'jobs: {done} DONE, {failed} FAILED, {skipped} SKIPPED'
-                    + (f'; last {last.get(stage)}' if last.get(stage) else ''))
-        if stage in legacy_done and not c:
-            evidence = 'legacy run.py steps (snapshots, roster, scores) — traced in runs, not per-video jobs'
         rows.append({
             'key': f'stage:{stage}', 'block': 'Infra & ops', 'stage': stage, 'status': status,
-            'owner': 'cron' if stage in legacy_done or stage in ('MEDIA_FETCHED', 'TRANSCRIPTION',
-                                                                   'FRAME_EXTRACTION', 'ALIGNMENT',
-                                                                   'TRANSCRIPT_ANALYSIS',
-                                                                   'FRAME_ANALYSIS') else 'Fable',
+            'owner': 'cron' if stage in cron_stages else 'Fable',
             'evidence': evidence, 'note': 'Pipeline stage (engine.state.STAGES) — live job counts.',
             'order': 900 + i,
         })
@@ -152,7 +167,7 @@ def task_rows(numbers):
 
 def build_rows(con):
     numbers = live_numbers(con)
-    return task_rows(numbers) + stage_rows(con), numbers
+    return task_rows(numbers) + stage_rows(con, numbers), numbers
 
 
 def row_properties(row, updated=None):

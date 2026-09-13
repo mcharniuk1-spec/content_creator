@@ -64,7 +64,11 @@ def test_stage_rows_reflect_jobs(con):
     assert cg['status'] == 'In progress'          # DONE present but also a FAILED
     assert '2 DONE' in cg['evidence'] and '1 FAILED' in cg['evidence']
     assert rows['stage:VIDEO_RENDER']['status'] == 'Planned'
-    assert rows['stage:DISCOVERED']['status'] == 'Done'   # legacy steps count as done
+    assert rows['stage:TRANSCRIPTION']['status'] == 'Planned'    # empty test db: no legacy data either
+    numbers = dict(nk.live_numbers(con), n_ingested=5)
+    rows = {r['key']: r for r in nk.stage_rows(con, numbers)}
+    assert rows['stage:DISCOVERED']['status'] == 'Done'        # legacy data counts as done
+    assert 'ran before the trace' in rows['stage:DISCOVERED']['evidence']
 
 
 def test_row_properties_match_schema(con):

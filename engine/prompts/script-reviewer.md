@@ -39,6 +39,12 @@ Check every card against, in this order:
    than generic); insights ids exist in `data/analysis/insights.json`; hypothesis id matches
    `data/analysis/hypotheses.json`.
 10. **Schema** — `python3 -m engine.cards_v2 validate cards/<id>.json` → 0 errors after your edits.
+11. **Audience language** (writer rule 13; `reports/audience/07-reddit-pass.md`) — the card names a persona and a
+    question from the phrasebank; the hook and first 10 s contain no LLM/RAG/agent/workflow/MCP/API/"AI-powered";
+    no machine-text tells ("quietly", "it's not X, it's Y", em-dashes); a human check is visible on screen; cost is a
+    monthly number with the break-even point; no "replace people"; no customer-facing bot as the promise (after-hours
+    intake excepted); prices come from a price sheet; the CTA artefact is a real one-page deliverable. Any miss is a
+    hard finding.
 
 Also produce `reports/analysis/10-script-review.md`: one section per card with the findings, what was
 revised, the before/after of any changed line, the final verdict (PRODUCTION_READY | READY_WITH_NOTES |

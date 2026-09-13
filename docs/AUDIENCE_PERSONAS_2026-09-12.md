@@ -125,3 +125,32 @@ and explicitly on POSITIONING's do-not-publish list.
 ## Next step (after Misha's decision)
 Regenerate hypotheses from these three personas' questions instead of from the insight list alone,
 then rewrite the ten cards; each card names its persona and the question it answers.
+
+
+## Reddit verdict (2026-09-13, `reports/audience/07-reddit-pass.md`, 101 threads read first-hand)
+
+All three personas survive; two change shape.
+
+- **Mary** — confirmed (r/ecommerce, r/smallbusiness). Add: her overwhelm is abundance ("a backlog of
+  1,000 automation ideas and no time", 88 pts), not ignorance; she asks "I can't read the code, was it
+  built right?"; she weighs a $3,000 AI-visibility audit against a $50/month tool; product photos are a
+  live cost question ($800–1,500 a shoot). Her tool question is "the one I need for this job", never a
+  ranking: comparison threads are colonised by vendors within hours.
+- **Bruce → renamed "Ray"** (the draft borrowed a real broker's name). Confirmed strongly in
+  r/sweatystartup, the 2-person HVAC thread (55 comments) and the hardware-store thread (73). **He does
+  not say "AI".** He says no-shows, voicemails, spam calls, quotes that leak margin, "100 little
+  exceptions in my head", "managing the AI is starting to feel like a full-time job". His AI question is
+  "is it worth paying for, and does it get it right the first time". The crowd's answer to him is always
+  process first: write down how you quote, clean the item master, one loop with a yes/no tap in texts.
+- **Marta** — confirmed in r/humanresources, r/ExecutiveAssistants, r/projectmanagement, r/marketing,
+  r/careerguidance (the 15.1k-point thread is hers: "we should double check anything AI-generated
+  before it goes out"). Two clusters the web lenses missed: the boss who "uses AI for everything" and
+  checks her work against Claude; and being evaluated on AI adoption while forbidden to paste client
+  data. Her wins: one transcript → three documents; minutes that record decisions, not conversation;
+  dashboards from the HRIS with Claude ("2 years ago I would have been totally out of my league", 96 pts).
+
+Seed questions after Reddit: (c) automate this specific process — 38 of 101, answer literally; (e)
+trust/verification — 35, every card must show the human check; (b) which tool — 20, only as one tool on
+one job; (g) where to start — 15; (d) cost — 14, monthly number + break-even; (f) replacement — 14,
+workers only, never our promise; (a) what is AI — 5, never in an owner's words. Language rules are in
+`RULES.md` §11 and writer rule 13.

@@ -57,7 +57,7 @@ for pk, (user, resh_1k, save_1k, topic, cap) in enumerate(ROWS, 1):
     con.execute("""INSERT INTO scores (snapshot_id,code,eligible,author_median_play,
         resh_1k,save_1k,weights) VALUES (?,?,1,1000,?,?,'ig')""", (sid, code, resh_1k, save_1k))
     con.execute("INSERT INTO topics (code,topic,source) VALUES (?,?,'manual')", (code, topic))
-    con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES (?,'en',120,'t','[]')", (code,))
+    con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES (?,'en',120,'t','[{\"s\":0,\"e\":57.5,\"t\":\"x\"}]')", (code,))
     for i in range(9):
         con.execute("INSERT INTO frames (code,idx,t_sec,path) VALUES (?,?,?,?)", (code, i, i * 5.0, f'{code}_{i}.jpg'))
 con.execute("INSERT INTO topics (code,topic,source) VALUES ('N1CODE001','Topic N1','manual')")
@@ -73,15 +73,25 @@ for code, user, pk in (('E1CODE001', 'e1', 201), ('E2CODE001', 'e2', 202), ('E3C
 for i in range(9):
     con.execute("INSERT INTO frames (code,idx,t_sec,path) VALUES ('E1CODE001',?,?,?)", (i, i * 5.0, f'e1_{i}.jpg'))
 # e2: transcript + frames, but the speech is Hindi (ASR forced 'en'; ta-v1 says hi)
-con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES ('E2CODE001','en',200,'t','[]')")
+con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES ('E2CODE001','en',200,'t','[{\"s\":0,\"e\":58,\"t\":\"x\"}]')")
 for i in range(9):
     con.execute("INSERT INTO frames (code,idx,t_sec,path) VALUES ('E2CODE001',?,?,?)", (i, i * 5.0, f'e2_{i}.jpg'))
 TA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'analysis', 'transcripts')
 os.makedirs(TA_DIR, exist_ok=True)
 _ta_e2 = os.path.join(TA_DIR, 'E2CODE001.json')
 open(_ta_e2, 'w').write('{"code":"E2CODE001","analysis_version":"ta-v1","language":"hi","beats":[]}')
+# e4: transcript stops at 40% of the reel: not a full transcript, however many words
+con.execute("INSERT INTO accounts (pk,username,status) VALUES (204,'e4','active')")
+con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play,dur,cap)
+    VALUES (?,?,?,?,?,?,?,?)""", (sid, 'E4CODE001', 204, 'e4', RECENT_TS, 9000, 60.0, 'cap'))
+con.execute("""INSERT INTO scores (snapshot_id,code,eligible,author_median_play,resh_1k,save_1k,weights)
+    VALUES (?,?,1,1000,400,400,'ig')""", (sid, 'E4CODE001'))
+con.execute("INSERT INTO topics (code,topic,source) VALUES ('E4CODE001','Новости моделей и лабораторий','manual')")
+con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES ('E4CODE001','en',150,'t','[{\"s\":0,\"e\":24,\"t\":\"x\"}]')")
+for i in range(9):
+    con.execute("INSERT INTO frames (code,idx,t_sec,path) VALUES ('E4CODE001',?,?,?)", (i, i * 5.0, f'e4_{i}.jpg'))
 # e3: transcript, no frames
-con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES ('E3CODE001','en',200,'t','[]')")
+con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES ('E3CODE001','en',200,'t','[{\"s\":0,\"e\":58,\"t\":\"x\"}]')")
 # n1's second reel: below the author's norm (800 vs 1000), the only Trust reel in the pool.
 # In the pool since 12 Sep (author qualifies), but stage 1 needs a reel above its own norm.
 con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play,dur,cap)
@@ -90,7 +100,7 @@ con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play,dur,
 con.execute("""INSERT INTO scores (snapshot_id,code,eligible,author_median_play,resh_1k,save_1k,weights)
     VALUES (?,?,1,1000,20,10,'ig')""", (sid, 'N1CODE002'))
 con.execute("INSERT INTO topics (code,topic,source) VALUES ('N1CODE002','Темы в подписи нет','manual')")
-con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES ('N1CODE002','en',90,'t','[]')")
+con.execute("INSERT INTO transcripts (code,lang,words,text,segments) VALUES ('N1CODE002','en',90,'t','[{\"s\":0,\"e\":57,\"t\":\"x\"}]')")
 for i in range(9):
     con.execute("INSERT INTO frames (code,idx,t_sec,path) VALUES ('N1CODE002',?,?,?)", (i, i * 5.0, f'n1b_{i}.jpg'))
 # lone author z1 with no reel above norm: never in the pool
@@ -162,7 +172,8 @@ pool_codes = {r['code'] for r in cards._pool(con, TODAY)}
 eq('caption-only reel is not in the pool', 'E1CODE001' in pool_codes, False)
 eq('non-English speech is not in the pool', 'E2CODE001' in pool_codes, False)
 eq('reel without frames is not in the pool', 'E3CODE001' in pool_codes, False)
-eq('drop counters explain it', cards._pool.dropped, {'no_transcript': 1, 'no_frames': 1, 'not_english': 1})
+eq('partial transcript (40% of the reel) is not in the pool', 'E4CODE001' in pool_codes, False)
+eq('drop counters explain it', cards._pool.dropped, {'no_transcript': 2, 'no_frames': 1, 'not_english': 1})
 eq('every pool reel carries its evidence', all(r['evidence']['transcript'] and r['evidence']['frames'] for r in cards._pool(con, TODAY)), True)
 eq('deep.py sees the unfiltered pool', 'E1CODE001' in {r['code'] for r in cards._pool(con, TODAY, require_evidence=False)}, True)
 eq('angle left empty for the human', {c['angle'] for c in picked}, {''})

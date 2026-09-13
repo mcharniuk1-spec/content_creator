@@ -560,9 +560,20 @@ file (`notion.py blocks_for`), the card title = our topic.
 1. **No full transcript of the reel and no frames means the reel does not exist for us.** No card,
    no reference, no "shoot it like this". Caption and metrics are not enough: without the spoken
    text and the frames the agent fills the gaps, and things we must not shoot reach the plan.
-   Threshold: a transcript of at least 30 words (`cards.MIN_WORDS`) and at least one row in `frames`.
+   **Full** means recognised to the end of the reel: the last speech segment covers at least 90 %
+   of the duration (`cards.MIN_COVERAGE`); a fragment does not count. It must also carry something
+   to work with (at least 30 words, otherwise there is no speech) and at least one row in `frames`.
 2. **English speech only.** An English caption does not count: the language is read from the
    transcript of the whole reel (`ta-v1` `language`, else `transcripts.lang`). Not English, not taken.
+
+**The process this follows from** (`run.py` steps 1 → 2 → 3 → 8):
+1. collect reels per blogger (a snapshot over the roster);
+2. select the ones that popped: a reel above its author's own norm by 1.5x (`score.py`, `cards.MIN_MULT`);
+3. download and **fully** transcribe those reels with frames (`deep.py`, local Whisper, language
+   detected) while the video links are alive;
+4. only a reel with a full transcript, frames and English speech enters the candidate base that
+   blocks, the shortlist and the cards are built from. The `reels` table keeps every collected reel
+   as raw material for the author norm; the working base is the pool `cards._pool()`.
 
 Where it lives: `cards.evidence()` and the filter in `cards._pool()`, from which the shortlist,
 the blocks, the decision cards and the adaptation all grow. `deep.py` takes the pool **without**
@@ -575,5 +586,5 @@ Known cause of the earlier mistakes: until 13 September the local ASR ran with E
 older transcripts without `ta-v1` may carry a wrong language.
 
 Check on the 13 September shortlist: 6 of 15 cards had full evidence (1, 3, 4, 9, 14, 15); 8 were
-made from a caption alone, one from Hindi. Under these rules the pool on 13 September is 107 reels
-instead of 427 (456 without a transcript, 4 not English).
+made from a caption alone, one from Hindi. Under these rules the pool on 13 September is 105 reels
+instead of 427 (460 without a full transcript, 4 not English).

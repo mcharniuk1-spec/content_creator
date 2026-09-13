@@ -32,7 +32,8 @@ ONE_PER_AUTHOR = False  # решение Миши 12 сентября 2026: у �
 RANK = 'hi_intent'      # пересылки + сохранения на тысячу — одна линейка для всех трёх форматов
 # Два правила Миши от 13 сентября 2026 (вечер), RULES.md §13.7: без полной расшифровки и кадров
 # ролик не существует для карточек — подписи недостаточно; и только английская речь.
-MIN_WORDS = 30          # меньше — это не расшифровка ролика, а обрывок
+MIN_COVERAGE = 0.9      # расшифровка полная: речь распознана до конца ролика (последний сегмент / длительность)
+MIN_WORDS = 30          # и в ней есть с чем работать: короче — в ролике нет речи, одна музыка
 LANG = 'en'
 
 # Чего не берём никогда. Основание — POSITIONING.md §5 и §8, список «M2 Lab is not»
@@ -157,14 +158,24 @@ def _pool(con, today, require_evidence=True):
 
 
 def evidence(con, code):
-    """Что у нас есть по ролику (RULES.md §13.7): полная расшифровка (transcripts.words >= MIN_WORDS),
+    """Что у нас есть по ролику (RULES.md §13.7): полная расшифровка (распознана до конца ролика,
+    coverage >= MIN_COVERAGE, и не короче MIN_WORDS),
     кадры (frames), язык речи. Язык берём из разбора ta-v1, если он есть, иначе из transcripts.lang.
     До 13 сентября 2026 локальный ASR работал с принудительным 'en' и переводил чужую речь на
     английский, поэтому у старых расшифровок без ta-v1 язык может быть неверным; с 13 сентября
     язык определяется (engine/local_pipeline.py)."""
-    t = con.execute('SELECT lang, words FROM transcripts WHERE code=?', (code,)).fetchone()
+    t = con.execute('SELECT lang, words, segments FROM transcripts WHERE code=?', (code,)).fetchone()
     words = (t['words'] if t else 0) or 0
     lang = (t['lang'] if t else None)
+    dur = (con.execute('SELECT dur FROM reels WHERE code=? ORDER BY snapshot_id DESC LIMIT 1', (code,)).fetchone() or [0])[0] or 0
+    end = 0.0
+    if t and t['segments']:
+        try:
+            segs = json.loads(t['segments'])
+            end = max((float(x.get('e') or x.get('end') or 0) for x in segs if isinstance(x, dict)), default=0.0)
+        except ValueError:
+            pass
+    coverage = round(end / dur, 2) if dur else 0.0
     ta = D / 'analysis' / 'transcripts' / f'{code}.json'
     if ta.exists():
         try:
@@ -172,7 +183,8 @@ def evidence(con, code):
         except ValueError:
             pass
     frames = con.execute('SELECT COUNT(*) FROM frames WHERE code=?', (code,)).fetchone()[0]
-    return {'transcript': words >= MIN_WORDS, 'words': words, 'frames': frames, 'lang': lang}
+    return {'transcript': coverage >= MIN_COVERAGE and words >= MIN_WORDS, 'coverage': coverage,
+            'words': words, 'frames': frames, 'lang': lang}
 
 
 def _repeated_topics(pool, min_authors=3):

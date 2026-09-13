@@ -111,17 +111,22 @@ _whisper = None
 
 
 def transcribe(mp4):
-    """Локально, бесплатно, английский форсирован: автоопределение врёт на акцентах."""
+    """Локально, бесплатно. Язык определяется (до 13 сентября 2026 форсировался английский, и
+    Whisper переводил хинди на английский). Цена: акцентный английский иногда определяется
+    как другой язык и ролик выпадает — по правилу §13.7 это безопасная сторона ошибки.
+    Возвращает (сегменты, язык) или (None, None)."""
     global _whisper
     try:
         if _whisper is None:
             from faster_whisper import WhisperModel
             _whisper = WhisperModel('small', device='cpu', compute_type='int8')
-        segs, _ = _whisper.transcribe(str(mp4), language='en', vad_filter=True)
-        return [{'s': round(s.start, 1), 'e': round(s.end, 1), 't': s.text.strip()} for s in segs]
+        # язык определяется, не навязывается: с 'en' Whisper переводил хинди на английский (13 сентября 2026)
+        segs, info = _whisper.transcribe(str(mp4), language=None, vad_filter=True)
+        out = [{'s': round(s.start, 1), 'e': round(s.end, 1), 't': s.text.strip()} for s in segs]
+        return out, (getattr(info, 'language', None) or 'unknown')
     except Exception as e:
         print(f'    расшифровка не вышла: {e}', flush=True)
-        return None
+        return None, None
 
 
 def run(con, rows, keep_video=False, speech=True):
@@ -156,12 +161,12 @@ def run(con, rows, keep_video=False, speech=True):
                             '-q:v', '4', str(sheet)])
         n = cuts(ff, mp4)
         if speech and not con.execute('SELECT 1 FROM transcripts WHERE code=?', (c,)).fetchone():
-            segs = transcribe(mp4)               # пока mp4 ещё на диске
+            segs, lang = transcribe(mp4)         # пока mp4 ещё на диске
             if segs is not None:
                 text = ' '.join(s['t'] for s in segs).strip()
                 con.execute("""INSERT OR REPLACE INTO transcripts
-                    (code,lang,words,text,segments) VALUES (?,'en',?,?,?)""",
-                    (c, len(text.split()), text, json.dumps(segs, ensure_ascii=False)))
+                    (code,lang,words,text,segments) VALUES (?,?,?,?,?)""",
+                    (c, lang, len(text.split()), text, json.dumps(segs, ensure_ascii=False)))
         con.execute("""INSERT OR REPLACE INTO deepdives
             (code,snapshot_id,cuts,cuts_ps,mp4_mb,sheet,suitable,done_at)
             VALUES (?,?,?,?,?,?,NULL,?)""",

@@ -175,6 +175,43 @@ def blocks_for(con, card):
     return out
 
 
+CARDS_SCHEMA = {
+    'Name': {'title': {}}, 'Week': {'date': {}},
+    'Format': {'select': {'options': [{'name': f} for f in ('M2 Radar', 'M2 Builds', 'M2 Teardown')]}},
+    'Block': {'select': {'options': [{'name': content_blocks.label(b)} for b in content_blocks.ORDER]
+                         + [{'name': content_blocks.label(content_blocks.UNASSIGNED)}]}},
+    'Stage': {'number': {'format': 'number'}}, 'Priority': {'number': {'format': 'number'}},
+    'Reference': {'url': {}}, 'Author': {'rich_text': {}}, 'Signal': {'rich_text': {}},
+    'Vs author norm': {'number': {'format': 'number'}}, 'Age at pickup': {'number': {'format': 'number'}},
+    'Lead': {'select': {'options': [{'name': n} for n in ('Michael', 'Max', 'both')]}},
+    'Status': {'select': {'options': [{'name': n} for n in ('Proposed', 'Taking', 'Not taking', 'Shot', 'Published')]}},
+}
+
+
+def cards_db():
+    """The cards database: NOTION_CARDS_DB from .env when the integration can still see it,
+    else the 'Shortlist' database under the Content Engine Tool page (created once, id cached
+    in data/notion_ids.json next to the other databases). 13 Sep 2026: the old id answered 404."""
+    from engine.notion_sync import IdCache, DASHBOARD_PAGE_ID
+    legacy = env('NOTION_CARDS_DB', required=False)
+    if legacy:
+        try:
+            call('GET', f'/databases/{legacy}')
+            return legacy
+        except SystemExit:
+            print('NOTION_CARDS_DB недоступна интеграции, беру базу Shortlist под страницей инструмента')
+    cache = IdCache()
+    db_id = cache.database_id('Shortlist')
+    if db_id:
+        return db_id
+    db = call('POST', '/databases', {'parent': {'page_id': DASHBOARD_PAGE_ID},
+                                     'title': [{'type': 'text', 'text': {'content': 'Shortlist'}}],
+                                     'properties': CARDS_SCHEMA})
+    cache.set_database_id('Shortlist', db['id'])
+    print(f"создана база Shortlist: {db['id']}")
+    return db['id']
+
+
 def _topic_of(code):
     from engine import shortlist_adapt
     d = shortlist_adapt.load(code)
@@ -195,7 +232,7 @@ def _ensure_block_props(db):
 
 
 def push(con, week=None):
-    db = env('NOTION_CARDS_DB')
+    db = cards_db()
     week = week or con.execute('SELECT MAX(week) FROM cards').fetchone()[0]
     if not week:
         print('карточек ещё нет'); return 0
@@ -257,7 +294,7 @@ def push(con, week=None):
 # ------------------------------------------------------------------ обратно ----
 def pull(con, week=None):
     """Статусы и комментарии обратно в базу. Это и есть замкнутая петля."""
-    db = env('NOTION_CARDS_DB')
+    db = cards_db()
     week = week or con.execute('SELECT MAX(week) FROM cards').fetchone()[0]
     res = call('POST', f'/databases/{db}/query',
                {'filter': {'property': 'Week', 'date': {'equals': week}}})['results']

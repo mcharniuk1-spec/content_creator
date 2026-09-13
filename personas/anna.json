@@ -1,0 +1,122 @@
+{
+ "id": "anna",
+ "name": "Anna",
+ "age": 38,
+ "business": "Operations manager in a 40-person services company (brokerage, consultancy, clinic group, nonprofit); two direct reports; reports to the owner; owns meetings, processes, reporting, onboarding and the CRM",
+ "size": "15-60 people",
+ "ai_level": 3,
+ "tools": [
+  "Microsoft 365 with a Copilot licence nobody trained her on, or Google Workspace",
+  "ChatGPT on a personal account",
+  "CRM, HRIS or ATS",
+  "Teams or Slack",
+  "Excel",
+  "ClickUp, Asana or Notion"
+ ],
+ "day": "Leads meetings and writes the minutes nobody reads; answers 'where is this file' twenty times; a 2026 goal says 'adopt AI', an IT memo says 'no client data in AI'; the owner runs her proposals through a chat and sends back a wall of text.",
+ "interests": {
+  "How AI works": [
+   "How AI actually works, enough to explain it to the team and the owner",
+   "Why it is confidently wrong and how to build the checking habit",
+   "What the company licence (Copilot) can and cannot do compared with ChatGPT",
+   "What 'agent' means in the vendor decks she is sent",
+   "How to build real fluency instead of performing interest",
+   "What skills stay valuable when the tools get better"
+  ],
+  "Tools for a task": [
+   "Top tools for meeting notes that produce decisions and actions, not summaries",
+   "The best tool to turn one transcript into a recap, an exec summary and a task list",
+   "Which tool for reports and dashboards out of the CRM or HRIS without a developer",
+   "The best tool for writing SOPs and onboarding docs from a recording",
+   "Tools for job postings, screening questions and interview notes, and which parts must stay human",
+   "Which tool to answer staff questions from the policy handbook",
+   "The best tool for slides from a one-page summary",
+   "Which tool for research before a vendor decision",
+   "A tool to compare two versions of a contract or policy for changes",
+   "Which tool the team can use safely without pasting client data"
+  ],
+  "Automating my process": [
+   "The process the owner named: from 'automate this' to a first working version",
+   "Meeting to minutes to task list without retyping",
+   "Weekly status report assembled from the tools the team already uses",
+   "Client documents sorted, named and routed to the right person with approval",
+   "Onboarding checklist and first-week answers for a new hire",
+   "Policy questions from staff answered from one source document with an owner and a date",
+   "Data entry between two systems that do not talk to each other",
+   "Reconciliations and expense checks that a person signs off",
+   "A queue of drafts she approves instead of a dashboard she checks"
+  ],
+  "Cost": [
+   "What it costs before she asks the owner for budget",
+   "What makes the bill jump (seats, usage, API) and how to cap it",
+   "Whether the licence they already pay for covers it",
+   "Hours saved per week as the number she reports, not features",
+   "Agents versus one more hire: what the honest comparison looks like"
+  ],
+  "Trust, rules and people": [
+   "What the team is allowed to paste into a tool and what must be stripped first",
+   "Who is responsible when an AI answer goes to a client and is wrong",
+   "A one-page AI policy the owner will sign",
+   "How to reply when the owner checks her work against a chat",
+   "How to stop the team producing AI slop someone else cleans up",
+   "Whether to disclose AI use to clients and colleagues",
+   "How to be evaluated on 'AI adoption' without breaking the data rule",
+   "Which jobs in her department should never be automated (hiring interviews, sensitive HR)"
+  ],
+  "Career and team": [
+   "How to lead the rollout so it does not feel like surveillance",
+   "How to get thirty-year staff and a sceptical CFO to accept a new step",
+   "What managers in other 40-person companies actually did first",
+   "How to keep her own judgement as the thing the company pays for",
+   "How to turn a good rollout into her next role"
+  ]
+ },
+ "distrusts": "AI summaries as the deliverable, pasted chat answers from above, agents sold as headcount replacement, AI first-round interviews, tools that need client data to work",
+ "cost": "uses what the company already pays for; $20 personal ceiling; needs a monthly number and hours back before asking for budget",
+ "cta_artefacts": [
+  "decision-minutes template",
+  "one-transcript-three-documents prompt pack",
+  "four-question AI policy one-pager",
+  "'ask it again with sources' reply template",
+  "team AI usage guideline"
+ ],
+ "topics": [
+  "operations",
+  "manager",
+  "meeting",
+  "minutes",
+  "transcript",
+  "copilot",
+  "teams",
+  "slack",
+  "hr",
+  "recruiting",
+  "hiring",
+  "onboarding",
+  "policy",
+  "compliance",
+  "client data",
+  "report",
+  "status",
+  "dashboard",
+  "crm",
+  "hris",
+  "sop",
+  "handbook",
+  "boss",
+  "owner",
+  "team",
+  "project",
+  "proposal",
+  "reconciliation",
+  "expenses",
+  "excel",
+  "brokerage",
+  "documents",
+  "intake",
+  "filing"
+ ],
+ "evidence": [
+  "Merged from the manager and employee threads: reports/audience/07-reddit-pass.md (r/humanresources, r/ExecutiveAssistants, r/projectmanagement, r/marketing, r/careerguidance, r/Accounting), 03-workers-lens-web.md (Make community, Stack Exchange, surveys)"
+ ]
+}

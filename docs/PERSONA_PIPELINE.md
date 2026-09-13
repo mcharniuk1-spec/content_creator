@@ -7,23 +7,23 @@ Misha's operating model, set on 13 September 2026:
    newest ones locally, and picks the week's references (cards.py: 30-day window, shares + saves
    ladder, all reels of any author with one winner). This tells us **what is popular and what
    people watch**.
-2. **Five people stand for our clients.** `personas/*.json` (rendered in `docs/PERSONAS_v2.md`):
-   Mary (online product owner), Ray (local services owner), Marta (ops manager told to figure out
-   AI), Dana (agency or consultancy owner), Sam (second-generation owner modernising a family
-   business). Each carries pains in their own words with the source thread, the questions they
-   ask, what they forward and save, what they distrust, how they think about cost, and the
-   artefacts they would leave a comment for. Evidence: `reports/audience/01-07`.
-3. **The server agent adapts what was found to one of them.** `engine/persona_adapt.py` exports
-   this week's references with their analysis and a routing hint (`engine/personas.py match`),
-   then runs the unattended agent with `engine/prompts/persona-adapt.md` (contract `pa-v1`). The
-   agent decides: which persona would forward this, the question in the persona's words, what we
-   borrow (structure only) and what changes for our positioning, the hook, the opening screen,
-   the visible human check, the cost line, and the comment call-to-action with its artefact.
-   Reels no persona would care about are rejected with a reason and stay references.
-4. **Every video ends with a comment call-to-action for a real artefact.** "Comment WORD and I
-   send you the price-sheet template." The artefact exists in `artefacts/` before publishing
-   (validator warning `card.cta.artefact`, reviewer check 11). This is how the audience is
-   collected and can be worked with later.
+2. **Three people stand for our clients.** `personas/*.json` (rendered in `docs/PERSONAS.md`):
+   Rick, 34, plumbing and HVAC owner; Emma, 29, founder of a small online business; Anna, 38,
+   operations manager in a 40-person services company. Each is a clear profile (age, business,
+   size, tools, a day) with a long list of interests by category, built from the audience data
+   (`reports/audience/01-07`) and written as interests, not quotes. The interest list is what a
+   found reel is matched against.
+3. **The server agent adapts what was found to the persona whose interest list contains it.**
+   `engine/persona_adapt.py` exports this week's references with their analysis and a routing
+   hint (`engine/personas.py match`, keywords + interest lines), then runs the unattended agent
+   with `engine/prompts/persona-adapt.md` (contract `pa-v1`). The agent decides: which persona
+   and which interest line exactly, the question as that person would say it, what we borrow
+   (structure only) and what changes for our positioning, the hook, the opening screen, the
+   visible human check, the cost line, and, when a real artefact exists, a comment
+   call-to-action. Reels no interest list covers are rejected with a reason and stay references.
+4. **A comment call-to-action is optional.** It is used where an artefact in `artefacts/` fits
+   the interest ("comment WORD and I send you the price-sheet template"); when present, the
+   artefact exists before publishing (validator warning `card.cta.artefact`, reviewer check 11).
 5. **Cards, review, storyboard, EDL** as before (`engine/cards_v2.py`, writer rule 13, reviewer
    check 11), with `strategy.persona` and `cta` filled from the concept.
 6. **Results feed back.** Published reels go to `our_posts`; after 12 published reels the rules

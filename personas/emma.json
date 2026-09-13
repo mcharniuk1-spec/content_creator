@@ -1,0 +1,126 @@
+{
+ "id": "emma",
+ "name": "Emma",
+ "age": 29,
+ "business": "Founder of a small online business: a product brand on Shopify or a boutique services agency (design, marketing, bookkeeping); sells online, markets herself, answers customers herself",
+ "size": "1-8 people",
+ "ai_level": 5,
+ "tools": [
+  "Shopify or a website builder",
+  "ChatGPT Plus and Claude, tabs open all day",
+  "Canva",
+  "Meta Ads Manager, GA4",
+  "a helpdesk or shared inbox",
+  "Notion or ClickUp",
+  "Zapier / Make trial, a few half-built flows"
+ ],
+ "day": "Support inbox and ad numbers in the morning, product pages and content in the afternoon, a backlog of automation ideas at night; pays for more apps than she uses; clients and customers ask if AI could not do it cheaper.",
+ "interests": {
+  "How AI works": [
+   "How AI actually works, explained for someone who runs a business, not a lab",
+   "Why it writes generic copy and how to make it sound like her",
+   "What 'agents' can do today versus what the demos promise",
+   "The difference between a chat, an automation and an agent",
+   "What she should know to not get ripped off by AI-powered apps",
+   "How to tell an AI-written post from a human one, and why customers care",
+   "What happens to her data once she pastes it in"
+  ],
+  "Tools for a task": [
+   "Top 3 tools for market and competitor research",
+   "The best tool to answer the same 20 customer questions",
+   "Which tool writes product descriptions in bulk without sounding like everyone else",
+   "Tools for product photos and ad creatives on a budget, and where they fail",
+   "The best tool for social content: one post into five formats",
+   "Which tool to build a landing page without stitching six subscriptions",
+   "The best tool for bookkeeping and receipts",
+   "Which tool for proposals and client onboarding",
+   "One tool for her email inbox, WhatsApp and Instagram DMs in one place",
+   "A tool to check whether ChatGPT and Gemini recommend her shop",
+   "The best tool to get a first draft of anything, fast"
+  ],
+  "Automating my process": [
+   "Customer questions answered from one document, with her approval before sending",
+   "Where-is-my-order and returns handled without her",
+   "Catalogue and content work in batches, not one item at a time",
+   "Ad reporting: the numbers she needs every morning on one screen",
+   "Cart abandonment and follow-up emails that do not sound automated",
+   "Client briefs and proposals drafted from a call recording",
+   "Reviews and comments answered in her voice",
+   "A profit dashboard: revenue minus ads, goods, shipping, fees, apps",
+   "Prioritising the 1,000 automation ideas: which two are worth it",
+   "Replacing an app subscription with something she builds"
+  ],
+  "Cost": [
+   "What it costs per month and when a tool stops paying for itself",
+   "Twelve subscriptions versus one number: cost per run",
+   "Whether a $3,000 audit is worth it when a $50 tool shows the same",
+   "API bills that arrive after the free trial",
+   "Studio photoshoot at $1,000 versus a lightbox and AI variants",
+   "Whether to pass AI savings to clients or keep the margin"
+  ],
+  "Trust and control": [
+   "Is her customer and order data safe",
+   "Was the app or site someone built with AI done right",
+   "How to know a support bot still matches today's policy",
+   "Where customers punish AI (images, copy, chatbots) and where they do not notice",
+   "Whether to tell customers and clients she used AI",
+   "How to keep a human check without it becoming her full-time job"
+  ],
+  "Growing": [
+   "Getting found inside ChatGPT and Gemini, not only Google",
+   "How to reach the next hundred customers without a bigger team",
+   "What actually converts: real photos, real voice, real proof",
+   "How other small brands and studios use it, with numbers",
+   "Which half-built automations to kill and which to finish",
+   "How to write copy that says what the thing does"
+  ]
+ },
+ "distrusts": "AI product images, copy that could describe any brand, chatbots on the front door, tool rankings written by vendors, 'AI-native' hype, unverified savings claims",
+ "cost": "pays $20-100 a month across several tools already; judges by hours and margin per client, not by tool price; rejects four-figure audits",
+ "cta_artefacts": [
+  "20-question AI-visibility test sheet",
+  "support go-live checklist",
+  "cost-per-run sheet",
+  "three-question automation audit sheet",
+  "client-facing AI output QA checklist"
+ ],
+ "topics": [
+  "ecommerce",
+  "shopify",
+  "store",
+  "brand",
+  "product",
+  "catalogue",
+  "product description",
+  "support",
+  "tickets",
+  "inbox",
+  "dm",
+  "ads",
+  "meta ads",
+  "analytics",
+  "content",
+  "social",
+  "copy",
+  "landing page",
+  "website",
+  "photos",
+  "creative",
+  "agency",
+  "clients",
+  "freelance",
+  "proposal",
+  "brief",
+  "research",
+  "competitor",
+  "subscription",
+  "apps",
+  "chatgpt recommend",
+  "ai visibility",
+  "returns",
+  "cart"
+ ],
+ "evidence": [
+  "Merged from the online-product and agency threads: reports/audience/07-reddit-pass.md (r/ecommerce, r/smallbusiness, r/agency, r/Entrepreneur), 02-founders-lens-web.md (Shopify Community), 01-corpus-lens.md"
+ ]
+}

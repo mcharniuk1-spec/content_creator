@@ -114,11 +114,11 @@ PROPERTY_SCHEMAS = {
         'Reports links': _plain('rich_text'), 'Next steps': _plain('rich_text'),
     },
     'Personas': {
-        'Persona ID': _plain('title'), 'Name': _plain('rich_text'), 'Archetype': _plain('rich_text'),
-        'Role': _plain('rich_text'), 'Size': _plain('rich_text'), 'AI level': _plain('number'),
-        'Questions': _plain('rich_text'), 'Pains': _plain('rich_text'),
-        'CTA artefacts': _plain('rich_text'), 'Topics': _plain('rich_text'),
-        'Corpus signal': _plain('rich_text'), 'Evidence': _plain('rich_text'),
+        'Persona ID': _plain('title'), 'Name': _plain('rich_text'), 'Age': _plain('number'),
+        'Business': _plain('rich_text'), 'Size': _plain('rich_text'), 'AI level': _plain('number'),
+        'Tools': _plain('rich_text'), 'Day': _plain('rich_text'), 'Interests': _plain('rich_text'),
+        'Distrusts': _plain('rich_text'), 'Cost': _plain('rich_text'),
+        'CTA artefacts': _plain('rich_text'), 'Topics': _plain('rich_text'), 'Evidence': _plain('rich_text'),
     },
     'Insights': {
         'Insight ID': _plain('title'), 'Statement': _plain('rich_text'),
@@ -303,6 +303,15 @@ class LiveTransport(ReadOnlyTransport):
         if kept:
             print(f'  kept {kept} child page(s)/database(s) under the dashboard', flush=True)
         self.append_children(page_id, blocks)
+
+    def update_database_schema(self, db_id, properties_schema):
+        """PATCH /databases: adds missing properties (existing ones are kept)."""
+        self.calls.append(('write', 'PATCH', f'/databases/{db_id}'))
+        return self._call('PATCH', f'/databases/{db_id}', {'properties': properties_schema})
+
+    def archive_page(self, page_id):
+        self.calls.append(('write', 'PATCH', f'/pages/{page_id}'))
+        return self._call('PATCH', f'/pages/{page_id}', {'archived': True})
 
     def create_database(self, parent_page_id, title, properties_schema):
         body = {'parent': {'page_id': parent_page_id},
@@ -579,13 +588,13 @@ def personas_rows():
     from engine import personas as personas_mod
     out = []
     for pid, p in personas_mod.load_all().items():
+        interests = '\n'.join(f'{cat}: ' + ' | '.join(items) for cat, items in p['interests'].items())
         out.append({
-            'persona_id': pid, 'name': p['name'], 'archetype': p['archetype'], 'role': p['role'],
-            'size': p['size'], 'ai_level': p['ai_level'],
-            'questions': '\n'.join(f'{i + 1}. {q}' for i, q in enumerate(p['questions'])),
-            'pains': '\n'.join(f"\u201c{x['text']}\u201d ({x['src']})" for x in p['pains']),
-            'cta_artefacts': '; '.join(p['cta_artefacts']), 'topics': ', '.join(p['topics']),
-            'corpus_signal': p['corpus_signal'], 'evidence': '; '.join(p['evidence']),
+            'persona_id': pid, 'name': p['name'], 'age': p['age'], 'business': p['business'],
+            'size': p['size'], 'ai_level': p['ai_level'], 'tools': '; '.join(p['tools']), 'day': p['day'],
+            'interests': interests[:1990], 'distrusts': p['distrusts'], 'cost': p['cost'],
+            'cta_artefacts': '; '.join(p.get('cta_artefacts') or []), 'topics': ', '.join(p['topics']),
+            'evidence': '; '.join(p['evidence']),
         })
     return out
 
@@ -1089,7 +1098,20 @@ def apply_plan(con, plan, id_cache=None, limit=None):
         result['categories'] = upsert_rows(transport, id_cache, 'Categories', plan['categories']['rows'])
 
     if 'personas' in plan:
+        db_id = ensure_database(transport, id_cache, 'Personas')
+        transport.update_database_schema(db_id, PROPERTY_SCHEMAS['Personas'])   # schema may have grown
+        time.sleep(RATE_LIMIT_SLEEP_S)
         result['personas'] = upsert_rows(transport, id_cache, 'Personas', plan['personas']['rows'])
+        current = {r['persona_id'] for r in plan['personas']['rows']}
+        archived = 0
+        for key, page_id in list(id_cache.data['rows'].get('Personas', {}).items()):
+            if key not in current:                    # retired personas (e.g. the five of 12 Sep)
+                transport.archive_page(page_id)
+                del id_cache.data['rows']['Personas'][key]
+                id_cache._save()
+                archived += 1
+                time.sleep(RATE_LIMIT_SLEEP_S)
+        result['personas']['archived'] = archived
 
     return result
 

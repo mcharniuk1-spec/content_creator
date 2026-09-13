@@ -304,12 +304,13 @@ def validate(card: dict) -> list[str]:
                 errors.append(f'WARNING: card.strategy.persona: {persona!r} is not one of {sorted(known)}')
         except Exception:
             pass
-    cta = card.get('cta')
-    if not isinstance(cta, dict) or cta.get('type') != 'comment_keyword' or not cta.get('artefact'):
-        errors.append('WARNING: card.cta: every video ends with a comment call-to-action for a real artefact '
-                      '({"type":"comment_keyword","keyword":"WORD","artefact":"artefacts/<file>.md"})')
-    elif not (ROOT / str(cta['artefact'])).exists():
-        errors.append(f"WARNING: card.cta.artefact: {cta['artefact']} does not exist yet — produce it before publishing")
+    cta = card.get('cta')                     # optional (Misha, 13 Sep 2026); when present it must be real
+    if cta is not None:
+        if not isinstance(cta, dict) or cta.get('type') != 'comment_keyword' or not cta.get('artefact'):
+            errors.append('WARNING: card.cta: when present it is {"type":"comment_keyword","keyword":"WORD",'
+                          '"artefact":"artefacts/<file>.md"}')
+        elif not (ROOT / str(cta['artefact'])).exists():
+            errors.append(f"WARNING: card.cta.artefact: {cta['artefact']} does not exist yet — produce it before publishing")
 
     # ---- review -------------------------------------------------------------
     review = card.get('review')

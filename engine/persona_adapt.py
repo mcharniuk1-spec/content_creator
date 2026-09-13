@@ -33,8 +33,8 @@ PROMPT_PATH = ROOT / 'engine' / 'prompts' / 'persona-adapt.md'
 PROMPT_VERSION = 'pa-v1'
 BATCH_SIZE = 8
 AGENT_TIMEOUT_S = 40 * 60
-PA_KEYS = {'code', 'analysis_version', 'model', 'persona', 'reject_reason', 'why_this_persona', 'question',
-           'format', 'borrow', 'change', 'hook', 'on_screen', 'cta', 'claims', 'confidence', 'notes'}
+PA_KEYS = {'code', 'analysis_version', 'model', 'persona', 'reject_reason', 'why_this_persona', 'interest',
+           'question', 'format', 'borrow', 'change', 'hook', 'on_screen', 'cta', 'claims', 'confidence', 'notes'}
 PERSONA_IDS = tuple(personas_mod.load_all().keys()) if personas_mod.PERSONA_DIR.exists() else ()
 
 
@@ -143,9 +143,13 @@ def validate_concept(d):
     if p is None and not d.get('reject_reason'):
         errs.append('rejected concept needs reject_reason')
     if p is not None:
-        cta = d.get('cta') or {}
-        if cta.get('type') != 'comment_keyword' or not cta.get('keyword') or not cta.get('artefact'):
-            errs.append('cta must be comment_keyword with keyword and artefact')
+        cta = d.get('cta')
+        if cta is not None:                       # optional (Misha, 13 Sep): only when a real artefact exists
+            if not isinstance(cta, dict) or cta.get('type') != 'comment_keyword' or not cta.get('keyword') \
+                    or not cta.get('artefact'):
+                errs.append('cta, when present, must be comment_keyword with keyword and artefact')
+        if not d.get('interest'):
+            errs.append('interest (the persona interest line this reel is adapted to) is required')
         hook = d.get('hook') or ''
         if len(hook.split()) > 25:
             errs.append('hook longer than 25 words')

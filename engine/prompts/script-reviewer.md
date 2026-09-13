@@ -43,8 +43,9 @@ Check every card against, in this order:
     question from the phrasebank; the hook and first 10 s contain no LLM/RAG/agent/workflow/MCP/API/"AI-powered";
     no machine-text tells ("quietly", "it's not X, it's Y", em-dashes); a human check is visible on screen; cost is a
     monthly number with the break-even point; no "replace people"; no customer-facing bot as the promise (after-hours
-    intake excepted); prices come from a price sheet; the CTA artefact is a real one-page deliverable; `strategy.persona` is one of personas/*.json and
-    `cta` is `comment_keyword` with an artefact file under artefacts/ (Misha, 13 Sep 2026). Any miss is a
+    intake excepted); prices come from a price sheet; the CTA artefact is a real one-page deliverable; `strategy.persona` is one of personas/*.json (rick / emma / anna) and
+    the card names the interest line it answers; a CTA is optional, but when present it is `comment_keyword`
+    with an artefact file under artefacts/ (Misha, 13 Sep 2026). Any miss is a
     hard finding.
 
 Also produce `reports/analysis/10-script-review.md`: one section per card with the findings, what was

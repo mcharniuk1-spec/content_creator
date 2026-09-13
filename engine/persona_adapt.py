@@ -2,7 +2,7 @@
 """Persona adaptation stage: what the radar found this week -> a concept for one persona.
 
 The chain Misha set on 2026-09-13: the radar collects what is popular (Hiker, cards.py
-selection), the server agent adapts each found reel to one of the five personas
+selection), the server agent adapts each found reel to one of the three personas
 (`personas/*.json`), every concept ends with a comment call-to-action for a real artefact
 (`artefacts/`). This module is the plumbing around the agent step:
 
@@ -87,7 +87,12 @@ def export(con, codes=None, run_id=None, input_dir=INPUT_DIR, batch_size=BATCH_S
     if codes:
         items = [_reel_item(con, c) for c in codes]
     else:
-        items = [_reel_item(con, c['code'], c['fmt'], c['why']) for c in _week_selection(con)]
+        items = []
+        for c in _week_selection(con):
+            it = _reel_item(con, c['code'], c['fmt'], c['why'])
+            if it:
+                it['block'] = c.get('block'); it['stage'] = c.get('stage')   # content block, 13 Sep 2026
+            items.append(it)
     items = [i for i in items if i]
     input_dir.mkdir(parents=True, exist_ok=True)
     batches = []

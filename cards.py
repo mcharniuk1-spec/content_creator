@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Карточки под съёмку: отбор кандидатов и фактура. SPEC §4.6, правила — RULES.md §2.
 
-    python3 cards.py                    предложить карточки и записать их в базу
+    python3 cards.py                    шортлист недели (15, три ступени) и запись в базу
     python3 cards.py --dry              показать, ничего не записывая
     python3 cards.py angle 3 "текст"    вписать угол в карточку №3
     python3 cards.py hook 3 "текст"     то же для хука
@@ -15,10 +15,15 @@
 import datetime, json, pathlib, sys
 from db import connect
 from posts import closed_topics
+import content_blocks as cb
 
 D = pathlib.Path(__file__).parent / 'data'
 FRESH_DAYS = 30         # было 14; решение Миши 12 сентября 2026
-PER_FORMAT = 3          # предлагаем с запасом, вычёркивает человек
+# Схема шортлиста, решение Миши 13 сентября 2026 (RULES.md §13): 15 роликов в три ступени.
+SHORTLIST = 15          # столько присылаем на выбор
+MAX_PER_BLOCK = 3       # потолок одного блока в пятнадцати (иначе новости заберут всё)
+PICK = 5                # столько Миша выбирает из пятнадцати
+PICK_PER_BLOCK = 2      # правило для его выбора: не больше двух из одного блока (проверяется, не навязывается)
 MIN_MULT = 1.5          # автор попадает в пул, если хотя бы один его ролик в окне превысил норму
 DUR_MIN, DUR_MAX = 20, 120   # за этими границами жанр другой, приём не переносится
 ONE_PER_AUTHOR = False  # решение Миши 12 сентября 2026: у автора смотрим все ролики окна,
@@ -123,6 +128,8 @@ def _pool(con, today):
         d['above_norm'] = bool(mult and mult >= MIN_MULT)
         d[RANK] = (r['resh_1k'] or 0) + (r['save_1k'] or 0)
         d['age'] = (today - datetime.date.fromtimestamp(r['ts'])).days
+        # блок контента — ось отбора с 13 сентября 2026 (content_blocks.py)
+        d['block'], d['block_evidence'] = cb.classify(topics, cb.reel_text(con, r['code'], r['cap']))
         # доля тем ролика, уже закрытых нами: 1.0 — снимали ровно об этом, 0 — тема свежая
         d['closed_share'] = (len([t for t in topics if t in closed]) / len(topics)) if topics else 0
         out.append(d)
@@ -141,33 +148,65 @@ def _repeated_topics(pool, min_authors=3):
     return {t for t, a in by.items() if len(a) >= min_authors}
 
 
+def _strength(r):
+    # сначала по свежести темы, потом по пересылкам + сохранениям: жёсткое исключение
+    # закрытых тем опустошало пул за два месяца, поэтому они опускаются, а не выбрасываются
+    return (r['closed_share'], -(r[RANK] or 0))
+
+
 def select(con, today=None):
+    """Шортлист недели в три ступени (решение Миши 13 сентября 2026, RULES.md §13).
+
+    1. По одному на блок: лучший ролик блока среди тех, что превысили норму своего автора.
+       Нет такого ролика — место не заполняется мусором, а уходит на ступень 2.
+    2. Остаток до SHORTLIST по силе из любого блока, но не больше MAX_PER_BLOCK на блок.
+       Если под потолком кандидатов не хватило, шортлист короче пятнадцати — это сигнал.
+    3. Миша выбирает PICK из шортлиста, не больше PICK_PER_BLOCK из блока (pick_violations)."""
     today = today or datetime.date.today()
     pool = _pool(con, today)
     repeated = _repeated_topics(pool)
-    picked, seen, authors = [], set(), set()
-    fallback = False
-    for fmt, cfg in FORMATS.items():
-        cand = [r for r in pool if r['code'] not in seen]
-        # сначала по свежести темы, потом по сигналу формата: жёсткое исключение опустошало
-        # пул за два месяца — при 30 закрытых темах из 27 оставалось меньше сорока роликов
-        cand.sort(key=lambda r: (r['closed_share'], -(r[cfg['rank']] or 0)))
-        taken = 0
-        for r in cand:
-            if taken >= PER_FORMAT:
-                break
-            if ONE_PER_AUTHOR and r['username'] in authors:
-                continue
-            seen.add(r['code']); authors.add(r['username']); taken += 1
-            picked.append(_card(r, fmt, cfg, len(picked) + 1))
-    if len(picked) < PER_FORMAT:               # пул опустел — это сигнал, а не тишина
-        fallback = True
+    picked, seen, per_block = [], set(), {}
+    for bid in cb.ORDER:                                   # ступень 1
+        cand = sorted((r for r in pool if r['block'] == bid and r['above_norm']), key=_strength)
+        if not cand:
+            continue
+        r = cand[0]
+        seen.add(r['code']); per_block[bid] = 1
+        picked.append(_card(r, cb.default_format(bid), FORMATS[cb.default_format(bid)], len(picked) + 1,
+                            stage=1, note=f'best in block {cb.label(bid)}'))
+    rest = sorted((r for r in pool if r['code'] not in seen), key=_strength)   # ступень 2
+    rank_no = 0
+    for r in rest:
+        if len(picked) >= SHORTLIST:
+            break
+        rank_no += 1
+        if per_block.get(r['block'], 0) >= MAX_PER_BLOCK:
+            continue
+        per_block[r['block']] = per_block.get(r['block'], 0) + 1
+        seen.add(r['code'])
+        fmt = cb.default_format(r['block'])
+        picked.append(_card(r, fmt, FORMATS[fmt], len(picked) + 1,
+                            stage=2, note=f'#{rank_no} by strength this week'))
     return picked, len(pool), len(repeated)
 
 
-def _card(r, fmt, cfg, i):
+def pick_violations(con, week=None):
+    """Ступень 3, проверка: блоки, из которых взято больше PICK_PER_BLOCK карточек.
+    Взятой считается карточка со статусом съёмки или публикации; решает человек в Notion."""
+    week = week or con.execute('SELECT MAX(week) FROM cards').fetchone()[0]
+    rows = con.execute("""SELECT block, COUNT(*) n FROM cards WHERE week=? AND
+        status IN ('взята','Taking','Shot','Published') GROUP BY block""", (week,)).fetchall()
+    return {r['block']: r['n'] for r in rows if r['n'] > PICK_PER_BLOCK}
+
+
+def _card(r, fmt, cfg, i, stage=None, note=''):
     """Фактура карточки. angle и hook человек пишет сам — это не выборка."""
     facts = []
+    if stage:
+        facts.append(f"block {cb.label(r['block'])} · stage {stage}: {note}")
+        ev = r.get('block_evidence') or {}
+        if ev.get('tags') or ev.get('words'):
+            facts.append('routed by ' + ', '.join(ev.get('tags', []) + ev.get('words', [])[:3]))
     if r['mult']:
         facts.append(f"{r['mult']}× this author's own norm "
                      f"({r['play']:,} against {r['author_median_play']:,})".replace(',', ' '))
@@ -196,6 +235,7 @@ def _card(r, fmt, cfg, i):
                      if r['closed_share'] == 1 else 'part of its topics we already covered')
     return dict(
         n=i, code=r['code'], fmt=fmt, ref=f"https://instagram.com/reel/{r['code']}",
+        block=r.get('block') or cb.UNASSIGNED, stage=stage, above_norm=bool(r.get('above_norm')),
         author=r['username'], age=r['age'], topics=r['topics'],
         why=' · '.join(facts), signal=cfg['signal'], sheet=r['sheet'],
         words=r['words'], cap=(r['cap'] or '')[:400],
@@ -212,15 +252,17 @@ def save(con, picked, week=None):
     for c in picked:
         con.execute("""INSERT INTO cards
             (week,code,fmt,pri,lead,why,angle,hook,shot_frame,shot_screen,shot_banner,
-             caption,goal,status)
-            VALUES (?,?,?,?,NULL,?,'','',?,?,?,?,'','draft')
+             caption,goal,status,block,stage)
+            VALUES (?,?,?,?,NULL,?,'','',?,?,?,?,'','draft',?,?)
             ON CONFLICT(week,code) DO UPDATE SET
               fmt=excluded.fmt, pri=excluded.pri, why=excluded.why,
               shot_frame=excluded.shot_frame, shot_screen=excluded.shot_screen,
-              shot_banner=excluded.shot_banner, caption=excluded.caption""",
+              shot_banner=excluded.shot_banner, caption=excluded.caption,
+              block=excluded.block, stage=excluded.stage""",
             (week, c['code'], c['fmt'], c['n'], c['why'],
              c['shot']['in frame'], c['shot']['on screen'], c['shot']['in the banner'],
-             ' · '.join(f'{k}: {v}' for k, v in c['caption'].items())))
+             ' · '.join(f'{k}: {v}' for k, v in c['caption'].items()),
+             c.get('block'), c.get('stage')))
     con.commit()
     return week
 
@@ -242,17 +284,22 @@ def show(con, week=None):
     week = week or con.execute('SELECT MAX(week) FROM cards').fetchone()[0]
     if not week:
         print('карточек ещё нет'); return
-    rows = con.execute("""SELECT c.pri, c.fmt, c.code, c.angle, c.hook, c.status, r.username
+    rows = con.execute("""SELECT c.pri, c.fmt, c.code, c.angle, c.hook, c.status, c.block, c.stage,
+               r.username
         FROM cards c LEFT JOIN reels r ON r.code=c.code
         WHERE c.week=? GROUP BY c.code ORDER BY c.pri""", (week,)).fetchall()
-    print(f'карточки недели {week}: {len(rows)}\n')
+    print(f'карточки недели {week}: {len(rows)}  (выбрать {PICK}, не больше {PICK_PER_BLOCK} из блока)\n')
     for r in rows:
         mark = '✓' if r['angle'] else ' '
-        print(f"  {mark} {r['pri']:>2}. {r['fmt']:<12} {(r['username'] or '—'):<22} "
-              f"{r['status']:<10} {'угол есть' if r['angle'] else 'угла нет'}")
+        print(f"  {mark} {r['pri']:>2}. s{r['stage'] or '-'} {cb.label(r['block']):<18} {r['fmt']:<12} "
+              f"{(r['username'] or '—'):<22} {r['status']:<10} {'угол есть' if r['angle'] else 'угла нет'}")
     n = sum(1 for r in rows if not r['angle'])
     if n:
         print(f'\nбез угла: {n}. Вписать: python3 cards.py angle НОМЕР "текст"')
+    over = pick_violations(con, week)
+    if over:
+        print('\nправило выбора нарушено, больше %d из блока: ' % PICK_PER_BLOCK
+              + ', '.join(f'{cb.label(b)} {n}' for b, n in over.items()))
 
 
 if __name__ == '__main__':
@@ -273,8 +320,11 @@ if __name__ == '__main__':
         picked, pool_n, rep_n = select(con)
         print(f'кандидатов в окне {FRESH_DAYS} дней: {pool_n}   '
               f'тем, повторившихся у нескольких авторов (справочно): {rep_n}\n')
+        print(f'шортлист {len(picked)} из {SHORTLIST}: ступень 1 — по одному на блок, '
+              f'ступень 2 — по силе, потолок {MAX_PER_BLOCK} на блок; выбрать {PICK}\n')
         for c in picked:
-            print(f"  {c['n']:>2}. {c['fmt']:<12} {c['author']:<22} {c['age']:>2} дн.  {c['why']}")
+            print(f"  {c['n']:>2}. s{c['stage']} {cb.label(c['block']):<18} {c['fmt']:<12} "
+                  f"{c['author']:<22} {c['age']:>2} дн.  {c['why']}")
             print(f"      темы: {', '.join(c['topics']) or '—'}")
         if '--dry' not in sys.argv:
             w = save(con, picked)

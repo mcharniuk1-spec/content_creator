@@ -45,7 +45,8 @@ python3 pages.py                          # rebuild the pages once the angles ar
 | `deep.py` | frames, contact sheet, cuts, local transcription |
 | `blocks.py` | splits a transcript into hook / body / ending |
 | `tag_topics.py` · `topics.py` | topic tagging by sample |
-| `cards.py` | picks the cards and holds the angles |
+| `cards.py` | weekly shortlist: 15 reels in three stages by content block (RULES.md §13), holds the angles |
+| `content_blocks.py` | the nine content blocks and the tag + regex routing of a reel to one of them |
 | `roster.py` | the account set: liveness, dropout, top-up, followers |
 | `delta.py` | what moved since the last snapshot |
 | `pages.py` | three weekly pages |

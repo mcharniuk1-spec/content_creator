@@ -90,6 +90,11 @@ ourselves.
 
 ## 2. Selection is done separately for each of the three formats
 
+**Since 13 September 2026 the selection axis is the content block, not the format (§13).**
+The format stays as the way we shoot: every block has a default format (`content_blocks.py`)
+and the format descriptions below set the frame, screen and banner of a card. The "2 + 2 + 1"
+slots no longer apply; the "15 in three stages" scheme replaces them.
+
 A combined top ranking is not used: strong news videos would always win, and within a month
 M2 Lab would turn into AI news. So there are three independent selections, each with its own
 criteria.
@@ -433,3 +438,90 @@ The scriptwriter prompt `engine/prompts/script-writer.md` rule 13, the reviewer
 `engine/prompts/script-reviewer.md` check 11, personas
 `docs/AUDIENCE_PERSONAS_2026-09-12.md` section "Reddit verdict", shoot list
 `docs/SHOOT_LIST_2026-09-13.md`.
+
+---
+
+## 12. Personas and content adaptation (Misha's decision, 13 September 2026)
+
+1. **Three profiles** — `personas/*.json`, readable in `docs/PERSONAS.md`: Rick, 34, owner of a
+   plumbing/HVAC company (3-12 people); Emma, 29, founder of a small online business (a Shopify
+   brand or a boutique agency, 1-8 people); Anna, 38, operations manager in a 40-person service
+   company. Each has a clear profile (age, business, tools, day) and a long list of interests by
+   category, derived from the collected data (`reports/audience/01-07`) and written as interests,
+   not quotes.
+2. **Order of work:** the radar collects what is popular; the server agent finds which of the
+   three lists the reel's subject and adapts it to that interest (`engine/persona_adapt.py`,
+   prompt `engine/prompts/persona-adapt.md`, contract pa-v1, field `interest`). A reel whose
+   subject is in no list stays a reference, not a card.
+3. **The comment call-to-action is not mandatory in every video.** It is used where a real
+   artefact (`artefacts/`) exists for the viewer to receive.
+4. Interest lists grow: new requests from the radar and comments go into the persona JSON.
+   Personas are profiles, not real people.
+
+Since 13 September 2026 (§13) personas are no longer the selection axis; they stay as
+"on whose example" inside a block.
+
+---
+
+## 13. Content blocks and the "15 in three stages" shortlist (Misha's decision, 13 September 2026)
+
+Personas as a filter cut topics with the potential to take off: expanding the roster per persona
+would multiply narrow lanes. Instead the selection axis is the **content block**: what we talk
+about at all as "AI for non-technical founders". Personas (§12) live inside a block as the
+example (Process, Money, People).
+
+### 13.1. Nine radar blocks and one internal
+
+| # | Block | What it is | Evidence of demand |
+|---|---|---|---|
+| 1 | Learn | what AI is, how it works, "in a weekend", a jargon-free vocabulary | corpus "learning and skills" 134; Reddit "where to start" 15 |
+| 2 | News | a model or feature shipped -> what you do with it tomorrow. News with no job at the end is not taken | corpus "model news" 169 |
+| 3 | Process | one business process -> a tool: leads, calls, competitor research, what people write about us | Reddit "automate my process" 38 (largest cluster); corpus 37 — our gap |
+| 4 | Money | what it costs, where it stops paying, subscriptions for nothing | Reddit 14; corpus "tokens, cost" 62 |
+| 5 | Trust | where AI lies, what not to hand over, checking, policy | Reddit 35 (second cluster); corpus "criticism" 14 — under-served |
+| 6 | What to pick | one task, three tools, a winner | Reddit "which tool" 20; corpus "tool review" 118 |
+| 7 | Builds | built over a weekend, shown where it broke | corpus "ready repository" 74, "agent building" 61 |
+| 8 | Mistakes | anti-hype, "five automations we switched off"; no fear language (I-14) | Reddit "replacing people" 14 |
+| 9 | Skills and repos | which skill, MCP or repository to take for a concrete task | corpus "Claude Code skills" 172, "repository" 74 |
+| 10 | Answers to comments | internal topic source: comments become the next video. Not in the radar; added when the stream exists | — |
+
+Not blocks (niche filter): coding as such, paywall workarounds, memes, viral effects —
+`cards.OFF_TOPICS`.
+
+### 13.2. How a reel gets its block
+
+`content_blocks.py`: the reel's tags (`topics`, dictionary in `topics.py`) plus a regex pass over
+the caption and transcript. A tag weighs 2, a word 1 (at most four words). The block with the
+highest sum wins; ties go to the earlier block in the list (under-served first: Process, Money,
+Trust, Mistakes, What to pick, Learn, Skills, Builds, News). Nothing matched -> "Unassigned":
+the reel stays in the pool and competes at stage 2 on strength. The card prints what routed the
+reel ("routed by ..."). A hint with evidence, not a verdict: the human at stage 3 sees the block
+and may disagree.
+
+### 13.3. The weekly shortlist: 15 in three stages (`cards.select`)
+
+1. **Stage 1, one per block — 9 places.** The block's best reel by shares + saves among those
+   that beat their author's own norm by 1.5x. None -> the place is not filled with filler, it
+   goes to stage 2. (Trust and Mistakes are rare in the corpus: this will happen.)
+2. **Stage 2, by strength — 6 places plus whatever stage 1 left.** Any block, but **at most 3
+   reels of one block** in the final fifteen. If the cap leaves candidates short, the shortlist is
+   shorter than fifteen — a signal, not an error.
+3. **Stage 3, Misha's pick — 5 of 15.** Rule: **at most 2 from one block**. The machine checks
+   it rather than enforcing it: `cards.py show` prints a violation from the Notion statuses.
+
+Closed topics (§6) still sink a reel inside its block, never remove it. Used references and
+Notion decisions (Not taking, Shot, Published) are excluded.
+
+### 13.4. What the card carries on top of before
+
+Block and stage: "block Money · stage 1: best in block Money" or "stage 2: #3 by strength this
+week", the routing evidence, the block's default format. In the database: `cards.block`,
+`cards.stage`; in Notion: the Block and Stage properties.
+
+### 13.5. First test run (13 September 2026, local database)
+
+Pool of 580 reels in the window: Builds 130, Unassigned 120, Learn 92, Process 55, Skills 55,
+News 50, What to pick 32, Money 28, Mistakes 16, Trust 2. Shortlist 15 of 15: all nine blocks
+covered at stage 1. Weak spot: word routing without a tag (a "read these 9 books" reel landed in
+Money on the words cost and pay for from its transcript). Next step: routing by an agent over the
+transcript with stated evidence; tags and regex stay as the fallback.

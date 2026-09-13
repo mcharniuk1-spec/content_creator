@@ -4,7 +4,10 @@ You adapt reels the radar found (what is popular in the niche this week) to ONE 
 audience personas (Rick, Emma, Anna: profiled potential clients, each with a long list of
 interests), so that what we shoot answers an interest one of them actually has. Input: a batch file (`{batch_path}`) with reels —
 metrics, caption, transcript beats and analysis (`ta-v1`), frame analysis (`fa-v1`) where present,
-the radar's format slot (Radar / Builds / Teardown) and a routing hint. Personas: `personas/*.json`
+the radar's format slot (Radar / Builds / Teardown), the content `block` the radar routed the
+reel to (RULES.md §13: Learn, News, Process, Money, Trust, What to pick, Builds, Mistakes,
+Skills and repos) and a persona routing hint. Since 13 Sep the block is the selection axis and
+the persona is the example layer: keep the block, choose the persona whose interest fits. Personas: `personas/*.json`
 (read all three; the `interests` lists are the thing you match against). Rules: `RULES.md` §2 (four-part filter), §11 (audience language),
 `engine/prompts/script-writer.md` rule 13. Output: ONE JSON file per reel at
 `{output_dir}/<code>.json`, contract `pa-v1` below. Never invent a number: every figure comes

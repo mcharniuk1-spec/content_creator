@@ -220,7 +220,9 @@ ADDED = [('scores', 'baseline_n', 'INTEGER'),
          ('scores', 'axes', 'INTEGER'),
          ('snapshots', 'done', 'INTEGER'),
          ('accounts', 'why_out', 'TEXT'),
-         ('accounts', 'via', 'TEXT')]
+         ('accounts', 'via', 'TEXT'),
+         ('cards', 'block', 'TEXT'),        # content block (content_blocks.py), 13 Sep 2026
+         ('cards', 'stage', 'INTEGER')]     # 1 = best in block, 2 = by strength
 
 
 def connect(path=DB_PATH):

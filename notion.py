@@ -15,6 +15,7 @@ Notion здесь — не витрина, а контур обратной св
     NOTION_PAGE=...         страница, куда кладём сводку недели
 """
 import datetime, json, mimetypes, os, pathlib, subprocess, sys, tempfile
+import content_blocks
 
 API = 'https://api.notion.com/v1'
 VERSION = '2022-06-28'
@@ -137,6 +138,19 @@ def blocks_for(con, card):
     return out
 
 
+def _ensure_block_props(db):
+    """Adds the Block (select) and Stage (number) properties to the cards database once."""
+    have = call('GET', f'/databases/{db}').get('properties', {})
+    want = {}
+    if 'Block' not in have:
+        want['Block'] = {'select': {'options': [{'name': content_blocks.label(b)} for b in content_blocks.ORDER]
+                                    + [{'name': content_blocks.label(content_blocks.UNASSIGNED)}]}}
+    if 'Stage' not in have:
+        want['Stage'] = {'number': {'format': 'number'}}
+    if want:
+        call('PATCH', f'/databases/{db}', {'properties': want})
+
+
 def push(con, week=None):
     db = env('NOTION_CARDS_DB')
     week = week or con.execute('SELECT MAX(week) FROM cards').fetchone()[0]
@@ -150,6 +164,7 @@ def push(con, week=None):
         JOIN scores s ON s.code=c.code AND s.snapshot_id=r.snapshot_id AND s.weights='ig'
         LEFT JOIN deepdives d ON d.code=c.code
         WHERE c.week=? ORDER BY c.pri""", (week,)).fetchall()
+    _ensure_block_props(db)
     found = call('POST', f'/databases/{db}/query',
                  {'filter': {'property': 'Week', 'date': {'equals': week}}})['results']
     existing = {p['properties']['Reference']['url']: p for p in found
@@ -172,6 +187,10 @@ def push(con, week=None):
         }
         if c['lead']:
             props['Lead'] = {'select': {'name': c['lead']}}
+        if c['block']:                                     # content block + stage, 13 Sep 2026
+            props['Block'] = {'select': {'name': content_blocks.label(c['block'])}}
+        if c['stage']:
+            props['Stage'] = {'number': c['stage']}
         if ref in existing:
             page = existing[ref]
             call('PATCH', f'/pages/{page["id"]}', {'properties': props})

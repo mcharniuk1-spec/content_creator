@@ -1,12 +1,16 @@
-"""Отбор карточек: фильтры, слоты, что машина не заполняет.
+"""Shortlist selection: blocks, three stages, what the machine leaves empty.
 
-База синтетическая (db.SCHEMA на временном файле), а не копия рабочей — с известным
-заранее пулом из 12 роликов (9 обычных + 3 с общей темой для Teardown), так что
-исход cards.select() (кто попадёт в какой формат) предсказан, а не подсмотрен
-после факта на живых данных.
+Synthetic database (db.SCHEMA on a temp file), never a copy of the working one: a pool
+with a known layout per content block, so the outcome of cards.select() (who lands in
+which stage and block) is predicted, not read off live data after the fact.
+
+Scheme (Misha, 13 Sep 2026): 15 reels a week, three stages.
+  stage 1  one per block, the block's best reel that beat its author's own norm
+  stage 2  the rest by shares + saves, any block, at most 3 per block in the 15
+  stage 3  Misha picks 5 of 15, at most 2 from one block (a rule for him, printed by show)
 """
 import datetime, os, sys
-import cards, posts
+import cards, posts, content_blocks as cb
 from db import connect
 
 TMP = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'radar.cards-test.db')
@@ -14,7 +18,7 @@ if os.path.exists(TMP): os.remove(TMP)
 con = connect(TMP); fail = []
 
 def eq(n, g, w):
-    print(f"  {'✓' if g == w else '✗'} {n:<52} {g}   ожидалось {w}")
+    print(f"  {'✓' if g == w else '✗'} {n:<58} {g}   expected {w}")
     if g != w: fail.append(n)
 
 TODAY = datetime.date(2026, 9, 1)
@@ -23,107 +27,124 @@ RECENT_TS = int(datetime.datetime.combine(TODAY - datetime.timedelta(days=2), da
 con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done) VALUES (?,12,0,1)", (TODAY.isoformat(),))
 sid = con.execute("SELECT id FROM snapshots WHERE taken=?", (TODAY.isoformat(),)).fetchone()[0]
 
-# С 12 сентября 2026 все три формата ранжируются одной линейкой: resh_1k + save_1k.
-# A1..A6 — свои уникальные темы. T1..T3 — общая тема ('Shared Topic'): _repeated_topics
-#          её находит, но Teardown по ней больше НЕ отбирается (решение Миши).
-# X1..X3 — тема-заглушка ('Темы в подписи нет') у трёх авторов: заглушки не считаются
-#          «повторяющейся темой» даже справочно.
-# a2b — второй ролик автора a2 ниже его нормы: с 12 сентября он в пуле, потому что у
-#          автора в окне есть ролик выше нормы.
+# username, resh_1k, save_1k, topic tag, caption. play 3000 vs author norm 1000: above norm.
+# News is over-supplied and strongest (six authors, ranks 150-200): without the cap it would
+# take every stage-2 slot. Builds has four. Every other block has exactly one reel.
 ROWS = [
-    # username,  resh_1k, save_1k, topic
-    ('a1', 100, 10, 'Topic A1'),
-    ('a2',  95,  9, 'Topic A2'),
-    ('a3',  90,  8, 'Topic A3'),
-    ('a4',  50, 100, 'Topic A4'),
-    ('a5',  45,  95, 'Topic A5'),
-    ('a6',  40,  90, 'Topic A6'),
-    ('t1',  10,  50, 'Shared Topic'),
-    ('t2',   9,  45, 'Shared Topic'),
-    ('t3',   8,  40, 'Shared Topic'),
-    ('x1',   1,   1, 'Темы в подписи нет'),
-    ('x2',   1,   1, 'Темы в подписи нет'),
-    ('x3',   1,   1, 'Темы в подписи нет'),
+    ('p1', 40, 20, 'AI в конкретном бизнес-процессе', 'cap p1'),
+    ('m1', 35, 20, 'Токены, стоимость, лимиты', 'cap m1'),
+    ('k1', 30, 20, 'Критика и скепсис про AI', 'cap k1'),
+    ('c1', 25, 20, 'Обзор инструмента', 'cap c1'),
+    ('l1', 20, 20, 'Обучение и навыки', 'cap l1'),
+    ('s1', 15, 20, 'Готовый репозиторий с GitHub', 'cap s1'),
+    ('b1', 50, 20, 'Сборка агентов и мультиагентные системы', 'cap b1'),
+    ('b2', 45, 20, 'Сборка агентов и мультиагентные системы', 'cap b2'),
+    ('b3', 42, 20, 'Сборка агентов и мультиагентные системы', 'cap b3'),
+    ('b4', 41, 20, 'Сборка агентов и мультиагентные системы', 'cap b4'),
+    ('n1', 180, 20, 'Новости моделей и лабораторий', 'cap n1'),
+    ('n2', 170, 20, 'Новости моделей и лабораторий', 'cap n2'),
+    ('n3', 160, 20, 'Новости моделей и лабораторий', 'cap n3'),
+    ('n4', 150, 20, 'Новости моделей и лабораторий', 'cap n4'),
+    ('n5', 140, 20, 'Новости моделей и лабораторий', 'cap n5'),
+    ('n6', 130, 20, 'Новости моделей и лабораторий', 'cap n6'),
+    ('u1', 80, 20, 'Темы в подписи нет', 'cap u1'),
 ]
-for pk, (user, resh_1k, save_1k, topic) in enumerate(ROWS, 1):
+for pk, (user, resh_1k, save_1k, topic, cap) in enumerate(ROWS, 1):
     code = f'{user.upper()}CODE001'
     con.execute("INSERT INTO accounts (pk,username,status) VALUES (?,?,'active')", (pk, user))
     con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play,dur,cap)
-        VALUES (?,?,?,?,?,?,?,?)""", (sid, code, pk, user, RECENT_TS, 3000, 60.0, f'cap {user}'))
+        VALUES (?,?,?,?,?,?,?,?)""", (sid, code, pk, user, RECENT_TS, 3000, 60.0, cap))
     con.execute("""INSERT INTO scores (snapshot_id,code,eligible,author_median_play,
         resh_1k,save_1k,weights) VALUES (?,?,1,1000,?,?,'ig')""", (sid, code, resh_1k, save_1k))
     con.execute("INSERT INTO topics (code,topic,source) VALUES (?,?,'manual')", (code, topic))
-# второй ролик автора a2: 800 просмотров при норме 1000 (ниже нормы), но очень высокие доли
+con.execute("INSERT INTO topics (code,topic,source) VALUES ('N1CODE001','Topic N1','manual')")
+# n1's second reel: below the author's norm (800 vs 1000), the only Trust reel in the pool.
+# In the pool since 12 Sep (author qualifies), but stage 1 needs a reel above its own norm.
 con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play,dur,cap)
-    VALUES (?,?,?,?,?,?,?,?)""", (sid, 'A2CODE002', 2, 'a2', RECENT_TS, 800, 60.0, 'cap a2 second'))
+    VALUES (?,?,?,?,?,?,?,?)""", (sid, 'N1CODE002', 11, 'n1', RECENT_TS, 800, 60.0,
+                                  'they trust the answer, never verify, it hallucinated the invoice'))
 con.execute("""INSERT INTO scores (snapshot_id,code,eligible,author_median_play,resh_1k,save_1k,weights)
-    VALUES (?,?,1,1000,120,120,'ig')""", (sid, 'A2CODE002'))
-con.execute("INSERT INTO topics (code,topic,source) VALUES (?,?,'manual')", ('A2CODE002', 'Topic A2 bis'))
-# одинокий автор z1 без единого ролика выше нормы: в пул не попадает
+    VALUES (?,?,1,1000,20,10,'ig')""", (sid, 'N1CODE002'))
+con.execute("INSERT INTO topics (code,topic,source) VALUES ('N1CODE002','Темы в подписи нет','manual')")
+# lone author z1 with no reel above norm: never in the pool
 con.execute("INSERT INTO accounts (pk,username,status) VALUES (99,'z1','active')")
 con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play,dur,cap)
     VALUES (?,?,?,?,?,?,?,?)""", (sid, 'Z1CODE001', 99, 'z1', RECENT_TS, 1200, 60.0, 'cap z1'))
 con.execute("""INSERT INTO scores (snapshot_id,code,eligible,author_median_play,resh_1k,save_1k,weights)
     VALUES (?,?,1,1000,500,500,'ig')""", (sid, 'Z1CODE001'))
-con.execute("INSERT INTO topics (code,topic,source) VALUES (?,?,'manual')", ('Z1CODE001', 'Topic Z1'))
+con.execute("INSERT INTO topics (code,topic,source) VALUES ('Z1CODE001','Новости моделей и лабораторий','manual')")
 con.commit()
 
-picked, pool_n, rep_n = cards.select(con, today=TODAY)
+# ---------------------------------------------------------------- routing
+eq('tag routes to its block', cb.classify(['Токены, стоимость, лимиты'], '')[0], 'money')
+eq('words route when no tag', cb.classify([], 'never verify, it hallucinated')[0], 'trust')
+eq('tag outweighs a stray word', cb.classify(['Новости моделей и лабораторий'], 'cost')[0], 'news')
+eq('nothing matched -> unassigned', cb.classify(['Темы в подписи нет'], 'cap u1')[0], cb.UNASSIGNED)
+eq('tie goes to the under-served block', cb.classify(['Токены, стоимость, лимиты',
+                                                      'Новости моделей и лабораторий'], '')[0], 'money')
 
-eq('карточек предложено', len(picked), 9)
-eq('форматов ровно три', len({c['fmt'] for c in picked}), 3)
-eq('по три на формат', sorted(sum(c['fmt'] == f for c in picked) for f in cards.FORMATS), [3, 3, 3])
-eq('у автора можно взять больше одного ролика', 'a2' in [c['author'] for c in picked] and
-   sum(c['author'] == 'a2' for c in picked) >= 2, True)
-eq('ролик ниже нормы автора-победителя попал в карточки',
-   'A2CODE002' in {c['code'] for c in picked}, True)
-eq('первая карточка — максимум пересылок + сохранений', picked[0]['code'], 'A2CODE002')
-eq('в карточках нет автора без ролика выше нормы', 'z1' in {c['author'] for c in picked}, False)
-eq('угол машиной не написан', {c['angle'] for c in picked}, {''})
-eq('хук машиной не написан', {c['hook'] for c in picked}, {''})
-eq('три колонки съёмки у каждой',
+# ---------------------------------------------------------------- selection
+picked, pool_n, rep_n = cards.select(con, today=TODAY)
+by_code = {c['code']: c for c in picked}
+blocks = [c['block'] for c in picked]
+stage1 = [c for c in picked if c['stage'] == 1]
+stage2 = [c for c in picked if c['stage'] == 2]
+
+eq('pool size', pool_n, 18)
+eq('shortlist never above 15', len(picked) <= cards.SHORTLIST, True)
+eq('shortlist here: 14 (one slot unfillable under the cap)', len(picked), 14)
+eq('stage 1: one per block that has a reel above norm', len(stage1), 8)
+eq('stage 1 blocks are distinct', len({c['block'] for c in stage1}), 8)
+eq('stage 1 skips Trust (its only reel is below norm)', 'trust' in {c['block'] for c in stage1}, False)
+eq('stage 1 reels all beat their author norm', all(c['above_norm'] for c in stage1), True)
+eq('stage 1 comes first, in block order', [c['block'] for c in stage1],
+   [b for b in cb.ORDER if b != 'trust'])
+eq('stage 1 takes the best of the block', by_code['B1CODE001']['stage'], 1)
+eq('stage 2 fills 6 + the unused stage-1 slot', len(stage2), 6)
+eq('stage 2 is ranked by shares + saves', [c['code'] for c in stage2][:2], ['N2CODE001', 'N3CODE001'])
+eq('cap: at most 3 per block', max(blocks.count(b) for b in set(blocks)), 3)
+eq('news capped at 3 despite six strong reels', blocks.count('news'), 3)
+eq('n4 left out by the cap, not by strength', 'N4CODE001' in by_code, False)
+eq('below-norm Trust reel reaches stage 2', by_code.get('N1CODE002', {}).get('stage'), 2)
+eq('unassigned reel competes on strength', by_code.get('U1CODE001', {}).get('block'), cb.UNASSIGNED)
+eq('block explains itself', 'best in block' in by_code['P1CODE001']['why'], True)
+eq('below-norm card says so', "below the author's norm" in by_code['N1CODE002']['why'], True)
+eq('format = block default', all(c['fmt'] == cb.default_format(c['block']) for c in picked), True)
+eq('numbering is 1..n', [c['n'] for c in picked], list(range(1, len(picked) + 1)))
+eq('no author without a reel above norm', 'z1' in {c['author'] for c in picked}, False)
+eq('angle left empty for the human', {c['angle'] for c in picked}, {''})
+eq('hook left empty for the human', {c['hook'] for c in picked}, {''})
+eq('three shooting columns on every card',
    all(set(c['shot']) == {'in frame', 'on screen', 'in the banner'} for c in picked), True)
-eq('каркас описания у каждой', all(c['caption'].get('sharpen for the query') for c in picked), True)
 
 pool = cards._pool(con, TODAY)
-eq('все в окне свежести', max(r['age'] for r in pool) <= cards.FRESH_DAYS, True)
-eq('у каждого автора в пуле есть ролик выше нормы',
-   all(any(x['above_norm'] for x in pool if x['username'] == r['username']) for r in pool), True)
-eq('ранг = пересылки + сохранения', all(abs(r[cards.RANK] - ((r['resh_1k'] or 0) + (r['save_1k'] or 0))) < 1e-9
-                                        for r in pool), True)
-eq('длина в границах',
-   all(cards.DUR_MIN <= r['dur'] <= cards.DUR_MAX for r in pool), True)
-eq('развлекательных тем нет', any(set(r['topics']) & cards.OFF_TOPICS for r in pool), False)
+eq('every pool reel has a block', all('block' in r for r in pool), True)
+eq('all within freshness', max(r['age'] for r in pool) <= cards.FRESH_DAYS, True)
+eq('rank = shares + saves', all(abs(r[cards.RANK] - ((r['resh_1k'] or 0) + (r['save_1k'] or 0))) < 1e-9
+                                for r in pool), True)
+eq('no off-genre topics', any(set(r['topics']) & cards.OFF_TOPICS for r in pool), False)
 
-# закрытая тема опускает ролик вниз, но не выбрасывает: жёсткое исключение
-# опустошало пул за два месяца
-t = picked[0]['topics'][0]
-eq('закрытая тема — своя, не общая (по конструкции фикстуры)', t, 'Topic A2 bis')
-posts.add(con, (TODAY - datetime.timedelta(days=5)).isoformat(), t, 'РАЗБОР')
-pool2 = cards._pool(con, TODAY)
-# подмножество, а не совпадение: пустой список тем — тоже formально "подмножество {t}",
-# но ролик без тем не является "роликом на закрытую тему" — это отфильтровано явно
-closed_only = [r for r in pool2 if r['topics'] and set(r['topics']) <= {t}]
-eq('ролики на закрытую тему остались в пуле', len(closed_only) > 0, True)
-eq('и помечены как уже закрытые',
-   all(r['closed_share'] == 1 for r in closed_only), True)
+# a closed topic sinks a reel inside its block but does not remove it
+posts.add(con, (TODAY - datetime.timedelta(days=5)).isoformat(), 'Topic N1', 'РАЗБОР')
 picked2, _, _ = cards.select(con, TODAY)
-eq('но в карточки идут после свежих',
-   all(c['n'] > 3 or not set(c['topics']) <= {t} for c in picked2), True)
+s1_news = [c for c in picked2 if c['stage'] == 1 and c['block'] == 'news'][0]
+eq('closed topic: block best moves to the next reel', s1_news['code'], 'N2CODE001')
+codes2 = {c['code'] for c in picked2}
+eq('closed-topic reel yields its cap slot to fresher news', ('N1CODE001' in codes2, 'N4CODE001' in codes2), (False, True))
+eq('closed topic is a sink, not a ban: still in the pool',
+   'N1CODE001' in {r['code'] for r in cards._pool(con, TODAY)}, True)
 
-# использованный референс не предлагается второй раз
-posts.add(con, TODAY.isoformat(), 'иная тема', 'РАЗБОР', ref=picked[1]['code'])
-eq('использованный референс исключён',
-   picked[1]['code'] in {r['code'] for r in cards._pool(con, TODAY)}, False)
+# a reference already used is never proposed again
+posts.add(con, TODAY.isoformat(), 'other topic', 'РАЗБОР', ref='B1CODE001')
+eq('used reference excluded', 'B1CODE001' in {r['code'] for r in cards._pool(con, TODAY)}, False)
 
-# Повторяющиеся темы считаются справочно; Teardown по ним больше не отбирается
-rep = cards._repeated_topics(pool)
-eq('повторяющаяся тема найдена (справочно)', rep, {'Shared Topic'})
-td = [c for c in picked if c['fmt'] == 'M2 Teardown']
-eq('Teardown ранжируется по долям, а не по повторяемости темы',
-   any(not (set(c['topics']) & rep) for c in td), True)
-eq('заглушки не считаются повторяющейся темой', bool(rep & cards.NOT_TOPICS), False)
+# stage 3 rule is checked, not enforced: the human picks in Notion
+eq('pick rule constants', (cards.PICK, cards.PICK_PER_BLOCK), (5, 2))
+week = cards.save(con, picked)
+con.execute("UPDATE cards SET status='Shot' WHERE week=? AND code IN ('N1CODE001','N2CODE001','N3CODE001')", (week,))
+con.commit()
+eq('over-picked block reported', cards.pick_violations(con, week), {'news': 3})
 
 con.close(); os.remove(TMP)
-print('\n' + ('ТЕСТ ПРОЙДЕН' if not fail else f'ПРОВАЛЕНО: {fail}'))
+print('\n' + ('TEST PASSED' if not fail else f'FAILED: {fail}'))
 sys.exit(1 if fail else 0)

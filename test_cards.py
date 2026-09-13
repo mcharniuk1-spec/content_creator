@@ -83,6 +83,20 @@ eq('nothing matched -> unassigned', cb.classify(['Темы в подписи н�
 eq('tie goes to the under-served block', cb.classify(['Токены, стоимость, лимиты',
                                                       'Новости моделей и лабораторий'], '')[0], 'money')
 
+import json, tempfile
+tmpdir = tempfile.mkdtemp()
+json.dump({'code': 'X', 'analysis_version': 'br-v1', 'model': 'm', 'block': 'trust', 'secondary': None,
+           'reason_if_null': None, 'evidence': ['never verify'], 'about': 'A reel about checking answers.',
+           'confidence': 'HIGH', 'disagrees_with_regex': True}, open(os.path.join(tmpdir, 'X.json'), 'w'))
+rt = cb.route('X', ['Токены, стоимость, лимиты'], 'cost', agent_dir=tmpdir)
+eq('agent file overrides regex', (rt['block'], rt['source'], rt['regex_block']), ('trust', 'agent', 'money'))
+eq('agent about travels with the route', rt['about'], 'A reel about checking answers.')
+eq('no agent file -> regex', cb.route('Y', ['Токены, стоимость, лимиты'], '', agent_dir=tmpdir)['source'], 'regex')
+from engine import block_route as br
+eq('br-v1 validator accepts the fixture', br.validate(json.load(open(os.path.join(tmpdir, 'X.json')))), [])
+eq('br-v1 validator wants evidence', any('evidence' in e for e in br.validate(
+   dict(json.load(open(os.path.join(tmpdir, 'X.json'))), evidence=[]))), True)
+
 # ---------------------------------------------------------------- selection
 picked, pool_n, rep_n = cards.select(con, today=TODAY)
 by_code = {c['code']: c for c in picked}

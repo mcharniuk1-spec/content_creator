@@ -129,7 +129,9 @@ def _pool(con, today):
         d[RANK] = (r['resh_1k'] or 0) + (r['save_1k'] or 0)
         d['age'] = (today - datetime.date.fromtimestamp(r['ts'])).days
         # блок контента — ось отбора с 13 сентября 2026 (content_blocks.py)
-        d['block'], d['block_evidence'] = cb.classify(topics, cb.reel_text(con, r['code'], r['cap']))
+        rt = cb.route(r['code'], topics, cb.reel_text(con, r['code'], r['cap']))
+        d['block'], d['block_evidence'], d['block_source'] = rt['block'], rt['evidence'], rt['source']
+        d['about'], d['regex_block'], d['block_confidence'] = rt['about'], rt['regex_block'], rt['confidence']
         # доля тем ролика, уже закрытых нами: 1.0 — снимали ровно об этом, 0 — тема свежая
         d['closed_share'] = (len([t for t in topics if t in closed]) / len(topics)) if topics else 0
         out.append(d)
@@ -206,7 +208,12 @@ def _card(r, fmt, cfg, i, stage=None, note=''):
         facts.append(f"block {cb.label(r['block'])} · stage {stage}: {note}")
         ev = r.get('block_evidence') or {}
         if ev.get('tags') or ev.get('words'):
-            facts.append('routed by ' + ', '.join(ev.get('tags', []) + ev.get('words', [])[:3]))
+            src = 'agent' if r.get('block_source') == 'agent' else 'tags/regex'
+            quoted = ev.get('tags', []) + [f'"{w}"' if src == 'agent' else w for w in ev.get('words', [])[:3]]
+            facts.append(f'routed by {src}: ' + ', '.join(quoted)
+                         + (f" ({r['block_confidence']})" if r.get('block_confidence') else ''))
+        if r.get('about'):
+            facts.append('about: ' + r['about'])
     if r['mult']:
         facts.append(f"{r['mult']}× this author's own norm "
                      f"({r['play']:,} against {r['author_median_play']:,})".replace(',', ' '))
@@ -236,6 +243,7 @@ def _card(r, fmt, cfg, i, stage=None, note=''):
     return dict(
         n=i, code=r['code'], fmt=fmt, ref=f"https://instagram.com/reel/{r['code']}",
         block=r.get('block') or cb.UNASSIGNED, stage=stage, above_norm=bool(r.get('above_norm')),
+        about=r.get('about'), block_source=r.get('block_source'),
         author=r['username'], age=r['age'], topics=r['topics'],
         why=' · '.join(facts), signal=cfg['signal'], sheet=r['sheet'],
         words=r['words'], cap=(r['cap'] or '')[:400],

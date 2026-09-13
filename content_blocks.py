@@ -2,8 +2,10 @@
 """Content blocks: the selection axis of the weekly shortlist (Misha, 13 Sep 2026).
 
 Nine blocks answer "what does M2 Lab talk about" for AI-for-non-technical-founders.
-A found reel is routed to ONE block from its topic tags (`topics` table, dictionary in
-topics.py) plus a regex pass over its caption and transcript. Personas (Rick, Emma,
+A found reel is routed to ONE block. First choice: the agent's reading of caption and
+transcript (`data/analysis/blocks/<code>.json`, engine/block_route.py, contract br-v1).
+Fallback: its topic tags (`topics` table, dictionary in topics.py) plus a regex pass over
+caption and transcript. The card says which of the two routed it. Personas (Rick, Emma,
 Anna) are no longer the axis: they stay as "on whose example" inside a block.
 A tenth block, "Answers to comments", is an internal source of topics, not a shelf the
 radar fills; it is added later when the comment stream exists.
@@ -18,6 +20,7 @@ import datetime, json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).parent
 TA_DIR = ROOT / 'data' / 'analysis' / 'transcripts'
+AGENT_DIR = ROOT / 'data' / 'analysis' / 'blocks'     # br-v1 files from engine/block_route.py
 
 # Order = tie-break priority: the under-served blocks first (corpus has few of them,
 # Reddit asks for them most), the over-supplied ones last (news, builds, skills).
@@ -116,6 +119,38 @@ def classify(topics, text=''):
     return best, best_ev
 
 
+_agent_cache = {}
+
+
+def agent_route(code, agent_dir=AGENT_DIR):
+    """br-v1 file for a reel (engine/block_route.py) or None. Cached per process."""
+    key = (str(agent_dir), code)
+    if key not in _agent_cache:
+        p = pathlib.Path(agent_dir) / f'{code}.json'
+        d = None
+        if p.exists():
+            try:
+                d = json.loads(p.read_text(encoding='utf-8'))
+            except ValueError:
+                d = None
+        _agent_cache[key] = d if isinstance(d, dict) and d.get('analysis_version') == 'br-v1' else None
+    return _agent_cache[key]
+
+
+def route(code, topics, text='', agent_dir=AGENT_DIR):
+    """Block of a reel with its provenance: the agent's br-v1 file when it exists, else
+    tags + regex. -> dict(block, evidence, source, about, regex_block, confidence)."""
+    regex_block, ev = classify(topics, text)
+    d = agent_route(code, agent_dir)
+    if d is None:
+        return {'block': regex_block, 'evidence': ev, 'source': 'regex', 'about': None,
+                'regex_block': regex_block, 'confidence': None}
+    block = d.get('block') if d.get('block') in BLOCKS else UNASSIGNED
+    return {'block': block, 'evidence': {'tags': [], 'words': list(d.get('evidence') or [])[:3]},
+            'source': 'agent', 'about': d.get('about'), 'regex_block': regex_block,
+            'confidence': d.get('confidence'), 'reason_if_null': d.get('reason_if_null')}
+
+
 def label(bid):
     return BLOCKS[bid]['name'] if bid in BLOCKS else 'Unassigned'
 
@@ -145,5 +180,5 @@ if __name__ == '__main__':
         print()
         for r in sorted(pool, key=lambda r: (r['block'] or 'zz', -(r[cards.RANK] or 0))):
             ev = r.get('block_evidence') or {}
-            print(f"  {label(r['block']):<20} {r['username']:<22} {r['code']}  "
-                  f"{r[cards.RANK]:>5.0f}  {', '.join(ev.get('tags', []))[:40]} | {', '.join(ev.get('words', []))[:40]}")
+            print(f"  {label(r['block']):<20} {r.get('block_source', '?'):<5} {r['username']:<22} {r['code']}  "
+                  f"{r[cards.RANK]:>5.0f}  {', '.join(ev.get('tags', []))[:40]} | {', '.join(ev.get('words', []))[:60]}")

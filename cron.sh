@@ -56,6 +56,9 @@ if [ $code -eq 0 ]; then
     # прогона: каждая неделя остаётся, а не затирается следующей.
     RUN_DIR="data/runs/$(date +%Y-%m-%d)"
     mkdir -p "$RUN_DIR"
+    # карточки решения недели одним документом (RULES.md §13.6): что сняли они, наша версия, как снимаем
+    .venv/bin/python -m engine.shortlist_adapt md "$RUN_DIR/shortlist.md" >>"$LOG" 2>&1 \
+        || echo "документ шортлиста собрать не удалось"
     if .venv/bin/python pages.py >>"$LOG" 2>&1; then
         cp -f niche.html shoot.html radar.html "$RUN_DIR"/ 2>/dev/null
         echo "страницы недели сохранены: $RUN_DIR (shoot.html — что снимаем)"

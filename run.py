@@ -40,7 +40,7 @@
 внутри самого шага пробрасывается дальше как раньше — трекинг никогда не глотает реальную
 ошибку шага.
 """
-import contextlib, datetime, sys, time
+import contextlib, datetime, subprocess, sys, time
 from db import connect
 
 import cards, collect_snapshot, deep, delta, notion, notion_db, pages, roster, score, stats, tag_topics
@@ -225,14 +225,31 @@ def main(run=False):
             print(f'Notion недоступен, идём дальше: {e}')
             tracker.mark(7, 'FAILED', str(e)[:160])
 
-        line(8, 'карточки')
-        with _job(con, run_id, 'weekly:cards', 'CARD_GENERATION'):
-            picked, pool_n, rep_n = cards.select(con)
-            week = cards.save(con, picked)
-        print(f'кандидатов {pool_n}, повторяющихся тем {rep_n}, записано карточек {len(picked)}')
-        for c in picked:
-            print(f'  {c["n"]:>2}. {c["fmt"]:<12} {c["author"]:<22} {c["age"]:>2} дн.  {c["why"][:56]}')
-        tracker.mark(8, 'OK' if picked else 'SKIPPED', '' if picked else 'кандидатов не набралось')
+        line(8, 'карточки: блоки агентом → шортлист 15 → карточки решения')
+        # 8а. блок каждому новому ролику пула (RULES.md §13.2): агент читает подпись и
+        # расшифровку; ролики с файлом пропускаются, так что в будни это минуты
+        notes = []
+        for what, mod, budget in (('блоки', 'engine.block_route', 3600),
+                                  ('карточки решения', 'engine.shortlist_adapt', 2700)):
+            if what == 'карточки решения':
+                with _job(con, run_id, 'weekly:cards', 'CARD_GENERATION'):
+                    picked, pool_n, rep_n = cards.select(con)
+                    week = cards.save(con, picked)
+                print(f'кандидатов {pool_n}, повторяющихся тем {rep_n}, записано карточек {len(picked)}')
+                for c in picked:
+                    print(f'  {c["n"]:>2}. s{c["stage"]} {c["block"]:<10} {c["author"]:<22} {c["age"]:>2} дн.  {c["why"][:56]}')
+            try:
+                r = subprocess.run([sys.executable, '-m', mod, 'run', '--yes'], timeout=budget,
+                                   capture_output=True, text=True)
+                print((r.stdout or '').strip()[-600:])
+                if r.returncode != 0:
+                    notes.append(f'{what}: код {r.returncode}')
+                    print((r.stderr or '').strip()[-400:])
+            except subprocess.TimeoutExpired:
+                notes.append(f'{what}: таймаут {budget} с')
+                print(f'{what}: не уложились в {budget} с, идём дальше')
+        tracker.mark(8, 'OK' if picked and not notes else ('SKIPPED' if not picked else 'FAILED'),
+                     '; '.join(notes) if notes else ('' if picked else 'кандидатов не набралось'))
 
         line(9, 'что сдвинулось с прошлого снимка')
         delta.report(con)

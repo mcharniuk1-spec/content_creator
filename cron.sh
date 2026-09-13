@@ -74,6 +74,9 @@ timeout 3600 .venv/bin/python -m engine.watchdog --limit 40 --yes || echo "watch
 timeout 7200 .venv/bin/python -m engine.analyze_pending --yes --limit 60 || echo "semantic analysis failed"
 timeout 1800 .venv/bin/python -m engine.features --refresh || echo "features failed"
 
+# менеджер проекта (prompts/pm.md, Sonnet 5): сверяет Notion и репозиторий с тем, что реально произошло
+timeout 2400 /opt/radar/pm.sh || echo "pm pass failed"
+
 # оставляем последние двадцать журналов, остальное ни к чему
 ls -1t data/runs/*.log 2>/dev/null | tail -n +21 | xargs -r rm --
 echo "═══ конец $(date '+%H:%M') ═══"

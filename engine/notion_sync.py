@@ -769,6 +769,16 @@ def build_dashboard_blocks(sections):
     if not ex.get('kanban_db'):
         b.append(nb.paragraph("Kanban not created yet: run `python3 -m engine.notion_kanban --apply`."))
 
+    b.append(nb.heading('Weekly shortlist (rules of 13 September 2026)', 2))
+    b.append(nb.paragraph("Selection axis = content block (Learn, News, Process, Money, Trust, What to pick, "
+                          "Builds, Mistakes, Skills and repos). 15 reels a week in three stages: one per block "
+                          "above the author norm, the rest by shares + saves with at most 3 per block; Misha picks "
+                          "5, at most 2 per block. A reel exists for cards only with a full English transcript "
+                          "(to the end of the reel) and frames. Every card: what they shot and what it did, our "
+                          "version under the four-part filter, the shoot plan by parts. RULES.md §13, docs/RULES.en.md."))
+    if ex.get('shortlist_db'):
+        b.append(nb.link_to_database(ex['shortlist_db']))
+
     b.append(nb.heading('Legacy', 2))
     b.append(nb.callout(legacy['decision_open'], icon='❗'))
     b.append(nb.bookmark(f"https://app.notion.com/p/{legacy['release_page'].replace('-', '')}",
@@ -803,7 +813,8 @@ def build_plan(con, scope='all', limit=None, discover=False, id_cache=None):
             'analytics': analytics_section(con), 'insights': insights_section(con),
             'hypotheses': hypotheses_section(con), 'legacy': legacy_section(),
             'execution': {'kanban_db': id_cache.database_id('Execution Kanban'),
-                          'review_page': id_cache.page_id('Execution Review')},
+                          'review_page': id_cache.page_id('Execution Review'),
+                          'shortlist_db': id_cache.database_id('Shortlist')},
         }
         blocks = build_dashboard_blocks(sections)
         plan['dashboard'] = {
@@ -1063,7 +1074,8 @@ def apply_plan(con, plan, id_cache=None, limit=None):
             'analytics': analytics_section(con), 'insights': insights_section(con),
             'hypotheses': hypotheses_section(con), 'legacy': legacy_section(),
             'execution': {'kanban_db': id_cache.database_id('Execution Kanban'),
-                          'review_page': id_cache.page_id('Execution Review')},
+                          'review_page': id_cache.page_id('Execution Review'),
+                          'shortlist_db': id_cache.database_id('Shortlist')},
         }
         blocks = build_dashboard_blocks(sections)
         transport.replace_children(DASHBOARD_PAGE_ID, blocks)

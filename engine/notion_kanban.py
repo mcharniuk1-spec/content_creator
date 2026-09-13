@@ -31,6 +31,7 @@ from engine import notion_blocks as nb              # noqa: E402
 from engine import notion_sync as ns                # noqa: E402
 from engine.kanban_tasks import TASKS, BLOCKS, STATUSES, OWNERS, CROSS_STAGES   # noqa: E402
 
+PM_NOTE_PATH = ROOT / 'data' / 'pm' / 'latest.md'     # written by prompts/pm.md (project-manager agent)
 KANBAN_TITLE = 'Execution Kanban'
 REVIEW_TITLE = 'Execution Review'
 STAGE_CHOICES = tuple(state.STAGES) + CROSS_STAGES
@@ -320,6 +321,21 @@ def review_blocks(rows, numbers, kanban_db_id=None):
     if kanban_db_id:
         b.append(nb.paragraph('The board:'))
         b.append(nb.link_to_database(kanban_db_id))
+    note = PM_NOTE_PATH
+    if note.exists():
+        b.append(nb.heading('Project manager', 2))
+        b.append(nb.paragraph('Written by the project-manager agent (prompts/pm.md, Sonnet 5) from the live '
+                              'machine; refreshed daily at 08:30 and after every weekly run.'))
+        for line in note.read_text(encoding='utf-8').splitlines():
+            line = line.rstrip()
+            if not line:
+                continue
+            if line.startswith('#'):
+                b.append(nb.heading(line.lstrip('#').strip(), 3))
+            elif line.lstrip().startswith(('- ', '* ')):
+                b.append(nb.bulleted_item(line.lstrip()[2:]))
+            else:
+                b.append(nb.paragraph(line))
     for heading, paras in review_sections(rows, numbers):
         b.append(nb.heading(heading, 2))
         for p in paras:

@@ -91,6 +91,9 @@ TASKS = [
     (260, 'artefact-library', 'Audience', 'SCRIPT_GENERATION', 'In progress', 'Fable',
      'artefacts/ (10 one-pagers + README); validator warning card.cta.artefact',
      'What a viewer gets for a comment where a CTA is used (optional); each becomes a PDF when its card is approved.'),
+    (270, 'project-manager-agent', 'Notion & docs', 'CROSS_CUTTING', 'In progress', 'Opus/Sonnet agents',
+     'prompts/pm.md (pm-v1), pm.sh, cron daily 08:30 + after each weekly run; note in data/pm/latest.md -> Execution Review "Project manager"',
+     'Misha, 13 Sep: a Sonnet 5 agent keeps Notion and the repository consistent with the machine. Read-only on code and data; reports drift, rule compliance, failures, open decisions.'),
     # ---------------------------------------------------------------- Script
     (310, 'cards-v2-pipeline', 'Script', 'CARD_GENERATION', 'Done', 'Fable',
      'engine/cards_v2.py, engine/cards_pipeline.py; cards_v2 {n_cards} rows, card_scenes {n_card_scenes}',

@@ -13,7 +13,7 @@
 расшифровку, три колонки съёмки и каркас описания. Угол и хук предлагает агент, читая
 кадры и расшифровку, — эти поля дописываются командами выше, а не правкой исходника.
 """
-import datetime, json, pathlib, sys
+import datetime, json, math, pathlib, sys
 from db import connect
 from posts import closed_topics
 import content_blocks as cb
@@ -34,8 +34,8 @@ ONE_PER_AUTHOR = False  # решение Миши 12 сентября 2026: у �
 RANK = 'hi_intent'      # пересылки + сохранения на тысячу — одна линейка для всех трёх форматов
 # Два правила Миши от 13 сентября 2026 (вечер), RULES.md §13.7: без полной расшифровки и кадров
 # ролик не существует для карточек — подписи недостаточно; и только английская речь.
-MIN_COVERAGE = 0.9      # расшифровка полная: речь распознана до конца ролика (последний сегмент / длительность)
-MIN_WORDS = 30          # и в ней есть с чем работать: короче — в ролике нет речи, одна музыка
+MIN_COVERAGE = 0.9      # endpoint ratio threshold, not measured speech completeness
+MIN_WORDS = 30          # editorial minimum; fewer words do not prove absence of speech
 LANG = 'en'
 
 # Чего не берём никогда. Основание — POSITIONING.md §5 и §8, список «M2 Lab is not»
@@ -133,7 +133,9 @@ def _pool(con, today, require_evidence=True):
         if not (DUR_MIN <= (r['dur'] or 0) <= DUR_MAX):
             continue
         ev = evidence(con, r['code'])           # §13.7: полная расшифровка, кадры, английский
-        if require_evidence:                     # deep.py берёт пул без этого фильтра: ему и добывать улики
+        if require_evidence:                     # deep.py acquires evidence without this filter
+            if not ev['language_verified']:
+                dropped['not_english'] += 1; continue
             if not ev['transcript']:
                 dropped['no_transcript'] += 1; continue
             if not ev['frames']:
@@ -160,32 +162,56 @@ def _pool(con, today, require_evidence=True):
 
 
 def evidence(con, code):
-    """Что у нас есть по ролику (RULES.md §13.7): полная расшифровка (распознана до конца ролика,
-    coverage >= MIN_COVERAGE, и не короче MIN_WORDS),
-    кадры (frames), язык речи. Язык берём из разбора ta-v1, если он есть, иначе из transcripts.lang.
-    До 13 сентября 2026 локальный ASR работал с принудительным 'en' и переводил чужую речь на
-    английский, поэтому у старых расшифровок без ta-v1 язык может быть неверным; с 13 сентября
-    язык определяется (engine/local_pipeline.py)."""
+    """Structural evidence gate, not acoustic or semantic acceptance.
+
+    transcript_end_ratio is the last valid segment end / duration. It does not
+    measure covered speech or prove English audio. `coverage` is a compatibility
+    alias; legacy forced-English and ta-v1 language values remain unverified.
+    """
     t = con.execute('SELECT lang, words, segments FROM transcripts WHERE code=?', (code,)).fetchone()
     words = (t['words'] if t else 0) or 0
     lang = (t['lang'] if t else None)
     dur = (con.execute('SELECT dur FROM reels WHERE code=? ORDER BY snapshot_id DESC LIMIT 1', (code,)).fetchone() or [0])[0] or 0
     end = 0.0
-    if t and t['segments']:
-        try:
-            segs = json.loads(t['segments'])
-            end = max((float(x.get('e') or x.get('end') or 0) for x in segs if isinstance(x, dict)), default=0.0)
-        except ValueError:
-            pass
-    coverage = round(end / dur, 2) if dur else 0.0
-    ta = D / 'analysis' / 'transcripts' / f'{code}.json'
-    if ta.exists():
-        try:
-            lang = json.loads(ta.read_text(encoding='utf-8')).get('language') or lang
-        except ValueError:
-            pass
+    timing_valid = False
+    try:
+        dur = float(dur)
+        segs = json.loads(t['segments']) if t and t['segments'] else []
+        if not math.isfinite(dur) or dur <= 0 or not isinstance(segs, list) or not segs:
+            raise ValueError('missing valid duration/segments')
+        previous_start = -1.0
+        for segment in segs:
+            if not isinstance(segment, dict):
+                raise ValueError('segment must be an object')
+            start_raw = segment.get('s', segment.get('start'))
+            end_raw = segment.get('e', segment.get('end'))
+            if isinstance(start_raw, bool) or isinstance(end_raw, bool):
+                raise ValueError('boolean timestamp')
+            start, stop = float(start_raw), float(end_raw)
+            if not (math.isfinite(start) and math.isfinite(stop)
+                    and 0 <= start < stop <= dur and start >= previous_start):
+                raise ValueError('invalid or out-of-order timestamp')
+            previous_start = start
+            end = max(end, stop)
+        timing_valid = True
+    except (TypeError, ValueError, OverflowError):
+        pass
+    ratio = end / dur if timing_valid else 0.0
+    # Old forced-en ASR and semantic text labels do not verify spoken language.
+    # Only the acquisition language gate supplies positive provenance here.
+    language_verified = False
+    gate_decision = 'LANGUAGE_UNKNOWN'
+    if con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='language_gate'").fetchone():
+        gate = con.execute('SELECT language,decision FROM language_gate WHERE code=?', (code,)).fetchone()
+        if gate:
+            lang, gate_decision = gate[0], gate[1]
+            language_verified = gate_decision == 'ENGLISH_DETECTED' and lang == 'en'
+    if not language_verified:
+        lang = lang if gate_decision == 'EXCLUDED_NON_ENGLISH' else 'unknown'
     frames = con.execute('SELECT COUNT(*) FROM frames WHERE code=?', (code,)).fetchone()[0]
-    return {'transcript': coverage >= MIN_COVERAGE and words >= MIN_WORDS, 'coverage': coverage,
+    return {'transcript': language_verified and timing_valid and ratio >= MIN_COVERAGE and words >= MIN_WORDS,
+            'coverage': round(ratio, 2), 'transcript_end_ratio': ratio,
+            'timing_valid': timing_valid, 'language_verified': language_verified, 'language_decision': gate_decision,
             'words': words, 'frames': frames, 'lang': lang}
 
 

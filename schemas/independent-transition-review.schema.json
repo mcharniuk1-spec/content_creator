@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/independent-transition-review.schema.json",
+  "title": "ContentEngineIndependentTransitionReview",
+  "type": "object",
+  "required": [
+    "schema",
+    "review_id",
+    "run_id",
+    "case_id",
+    "repair_count",
+    "reviewer_role",
+    "reviewer_actor_id",
+    "maker_separation",
+    "verdict",
+    "reviewed_at",
+    "authorized_transition_at",
+    "decision",
+    "reviewed_hashes"
+  ],
+  "properties": {
+    "schema": {"const": "content-engine.independent-transition-review.v1"},
+    "review_id": {"const": "GOV-20260811-PHASE1-PRE-RESEARCH-REREVIEW-03"},
+    "run_id": {"const": "20260811-phase1-content-batch"},
+    "case_id": {"const": "CASE-20260811-PHASE1-BATCH"},
+    "repair_count": {"const": 3},
+    "reviewer_role": {"const": "governance_orchestrator"},
+    "reviewer_actor_id": {"const": "atlas_governance"},
+    "maker_separation": {
+      "type": "object",
+      "required": ["maker_actor_id", "independent_from_maker", "edited_maker_artifacts"],
+      "properties": {
+        "maker_actor_id": {"const": "codex_root"},
+        "independent_from_maker": {"const": true},
+        "edited_maker_artifacts": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "verdict": {"enum": ["APPROVE", "REVISE", "BLOCK"]},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "authorized_transition_at": {"type": "string", "format": "date-time"},
+    "decision": {"type": "string", "minLength": 1},
+    "reviewed_hashes": {
+      "type": "object",
+      "required": [
+        "runs/20260811-phase1-content-batch/admission-request.json",
+        "runs/20260811-phase1-content-batch/admission-receipt.json",
+        "runs/20260811-phase1-content-batch/capability-receipt.json",
+        "runs/20260811-phase1-content-batch/research-brief.md",
+        "runs/20260811-phase1-content-batch/source-allowlist.json",
+        "runs/20260811-phase1-content-batch/source-rights-register.md",
+        "runs/20260811-phase1-content-batch/output-contract.md",
+        "runs/20260811-phase1-content-batch/responsibility-register.md",
+        "runs/20260811-phase1-content-batch/task-contracts.md",
+        "runs/20260811-phase1-content-batch/discovery-manifest.json",
+        "runs/20260811-phase1-content-batch/content-case.json",
+        "schemas/source-record.schema.json",
+        "schemas/local-context-record.schema.json",
+        "schemas/source-rights-decision.schema.json",
+        "schemas/state-transition-receipt.schema.json",
+        "schemas/independent-transition-review.schema.json",
+        "templates/video-link-ledger.csv",
+        "templates/material-link-ledger.csv",
+        "scripts/content_case_state.py",
+        "tests/test_content_case_state.py",
+        "runs/20260811-phase1-content-batch/state-policy.json"
+      ],
+      "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+    }
+  },
+  "additionalProperties": false
+}

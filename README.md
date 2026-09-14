@@ -1,5 +1,9 @@
 # M2 Lab Radar
 
+> **14 September reconciliation release:** start with [the three-stage contract](docs/m2-three-stage-reconciliation.md), [shared-server executor plan](docs/m2-shared-server-executor-plan.md) and [fal integration](docs/m2-fal-integration.md). Research → scripting/generation/shooting → post-production. Legacy English text does not establish original spoken language. Database union with Max's private corpus still requires a current server backup. New gates intentionally hold legacy references until language provenance is recorded. No server deployment or paid generation is implied by this code release.
+
+The `engine/` operational path is retained from Michael's main; the portable `m2_signal/`, `m2_studio/` and `m2_orchestrator/` evidence/replay modules are restored from Max's work. They are complementary subsystems, not two synchronized databases. The frozen YouTube runtime is excluded from the active Reel trace; see [historical knowledge](docs/m2-legacy-knowledge-summary.md).
+
 Weekly niche radar for the M2 Lab Instagram account. Collects public reel metrics across a
 set of accounts, scores each reel against its own author's norm, takes the top of the freshness
 window apart frame by frame, transcribes the speech, tags topics, and proposes shooting cards.

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/m2-collected-source-record.schema.json",
+  "title": "M2CollectedSourceRecord",
+  "type": "object",
+  "required": ["schema", "source_id", "entity_type", "platform", "canonical_url", "public_native_id", "creator_id", "collected_at", "provider", "provider_version", "raw_payload_path", "raw_payload_sha256", "raw_record_line", "raw_hash", "registration_line", "registration_hash", "metrics", "access_state", "rights_state", "analysis_status", "claim_label", "limitations"],
+  "properties": {
+    "schema": {"const": "m2.collected-source-record.v1"}, "source_id": {"type": "string", "minLength": 1}, "entity_type": {"const": "collected_post_metadata"},
+    "query_id": {"type": ["string", "null"]}, "platform": {"type": "string"}, "canonical_url": {"type": "string", "pattern": "^https://"},
+    "public_native_id": {"type": "string"}, "creator_id": {"type": "string"}, "creator_name": {"type": ["string", "null"]}, "title": {"type": ["string", "null"]},
+    "published_at": {"type": ["string", "null"], "format": "date-time"}, "collected_at": {"type": "string", "format": "date-time"}, "duration_seconds": {"type": ["number", "null"], "minimum": 0},
+    "provider": {"type": "string"}, "provider_version": {"type": "string"}, "raw_payload_path": {"type": "string"}, "raw_payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "raw_record_line": {"type": "integer", "minimum": 1}, "raw_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "registration_line": {"type": "integer", "minimum": 1},
+    "registration_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "metrics": {"type": "object", "additionalProperties": {"type": ["number", "null"], "minimum": 0}},
+    "access_state": {"type": ["string", "null"]}, "rights_state": {"type": ["string", "null"]}, "analysis_status": {"type": ["string", "null"]}, "claim_label": {"const": "FACT"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

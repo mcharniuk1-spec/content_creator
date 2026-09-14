@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/m2-metric-snapshot.schema.json",
+  "title": "M2MetricSnapshot",
+  "type": "object",
+  "required": ["schema", "snapshot_id", "post_id", "collected_at", "provider", "metric_semantics_version", "raw_hash", "metrics", "immutable_hash"],
+  "properties": {
+    "schema": {"const": "m2.metric-snapshot.v1"},
+    "snapshot_id": {"type": "string", "minLength": 1},
+    "post_id": {"type": "string", "minLength": 1},
+    "creator_id": {"type": ["string", "null"]},
+    "platform": {"type": ["string", "null"]},
+    "format": {"type": ["string", "null"]},
+    "duration_bucket": {"type": ["string", "null"]},
+    "collected_at": {"type": "string", "format": "date-time"},
+    "provider": {"type": "string", "minLength": 1},
+    "metric_semantics_version": {"type": "string", "minLength": 1},
+    "raw_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "raw_payload_path": {"type": ["string", "null"]},
+    "raw_record_line": {"type": ["integer", "null"], "minimum": 1},
+    "registration_line": {"type": ["integer", "null"], "minimum": 1},
+    "metrics": {"type": "object", "required": ["views", "likes", "comments", "shares", "reposts", "saves"], "additionalProperties": {"type": ["number", "null"], "minimum": 0}},
+    "immutable_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/identity-candidate.schema.json",
+  "title": "IdentityCandidate",
+  "type": "object",
+  "required": [
+    "candidate_id", "input_handle", "owned_or_consented", "purpose", "platform", "candidate_url",
+    "sherlock_status", "observed_at", "tool_version", "manifest_ref", "exclusions_honored",
+    "site_allowlist_hash", "identity_verification_state", "terms_gate", "allowed_use"
+  ],
+  "properties": {
+    "candidate_id": {"type": "string", "pattern": "^IDC-[A-Z0-9-]+$"},
+    "input_handle": {"type": "string", "minLength": 1},
+    "owned_or_consented": {"const": true},
+    "purpose": {"enum": ["brand_profile_discovery", "product_profile_discovery"]},
+    "platform": {"type": "string", "minLength": 1},
+    "candidate_url": {"type": "string", "format": "uri"},
+    "sherlock_status": {"enum": ["CLAIMED", "AVAILABLE", "UNKNOWN", "ILLEGAL", "WAF"]},
+    "http_status": {"type": ["integer", "null"], "minimum": 100, "maximum": 599},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "tool_version": {"type": "string", "minLength": 1},
+    "manifest_ref": {"type": "string", "minLength": 1},
+    "manifest_hash": {"type": ["string", "null"]},
+    "exclusions_honored": {"const": true},
+    "site_allowlist_hash": {"type": "string", "minLength": 1},
+    "identity_verification_state": {"enum": ["unverified_candidate", "verified_brand_owned", "public_account_verified_by_two_signals", "rejected", "blocked"]},
+    "verification_signals": {"type": "array", "items": {"type": "string"}, "maxItems": 5},
+    "terms_gate": {"enum": ["pending", "pass", "block"]},
+    "reviewer": {"type": ["string", "null"]},
+    "allowed_use": {"const": "discovery_only"},
+    "block_reason": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"identity_verification_state": {"const": "public_account_verified_by_two_signals"}}},
+      "then": {"properties": {"verification_signals": {"minItems": 2}}}
+    }
+  ],
+  "additionalProperties": false
+}

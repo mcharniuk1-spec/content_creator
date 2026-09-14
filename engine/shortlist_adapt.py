@@ -10,8 +10,8 @@ shoot plan part by part in our production system (Misha, 13 Sep 2026 evening).
 
 Batch input: `data/analysis/input/shortlist-<run_id>-N.json` (5 reels per batch: the output is
 long). Output: `data/analysis/shortlist/<code>.json` (engine/prompts/shortlist-adapt.md).
-Every run writes a runs row and one CONCEPT_GENERATION job per batch. No money is spent; the
-agent call is local `claude -p`. Reels already adapted are skipped unless --all.
+Every run writes a runs row and one CONCEPT_GENERATION job per batch. The unattended
+Claude call uses the configured account and budget. Valid adapted reels are skipped unless --all.
 """
 import argparse, datetime, json, pathlib, shutil, subprocess, sys
 
@@ -35,15 +35,18 @@ FORMATS = ('M2 Radar', 'M2 Builds', 'M2 Teardown')
 BANNED_HOOK = ('llm', 'rag', 'agentic', 'workflow', 'api', 'ai-powered', 'mcp')
 
 
-def load(code, out_dir=OUT_DIR):
-    p = pathlib.Path(out_dir) / f'{code}.json'
+def load(code, out_dir=None):
+    p = pathlib.Path(OUT_DIR if out_dir is None else out_dir) / f'{code}.json'
     if not p.exists():
         return None
     try:
         d = json.loads(p.read_text(encoding='utf-8'))
-    except ValueError:
+    except (OSError, ValueError):
         return None
-    return d if isinstance(d, dict) and d.get('analysis_version') == PROMPT_VERSION else None
+    try:
+        return d if isinstance(d, dict) and d.get("code") == code and not validate(d) else None
+    except (TypeError, ValueError, AttributeError, KeyError):
+        return None
 
 
 def _items(con, picked):
@@ -86,24 +89,47 @@ def _prompt(batch_rel):
 def run_agent(con, run_id, batches, claude_path=None):
     claude_path = claude_path or shutil.which('claude')
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    results = []
     for b in batches:
+        outcome = {'codes': b['codes'], 'status': 'FAILED', 'valid_outputs': 0}
+        results.append(outcome)
         with state.job(con, run_id, 'corpus', 'corpus', 'CONCEPT_GENERATION', agent='claude -p',
                         prompt_version=PROMPT_VERSION,
                         input_refs_json={'batch': b['rel'], 'codes': b['codes']}) as j:
             if not claude_path:
+                outcome['status'] = 'BLOCKED'
                 j.skip('claude CLI not found on PATH')
                 continue
             try:
+                # A requested regeneration must not pass on a prior run's file.
+                # Move bytes to unique history before launch; a fresh canonical
+                # file must be emitted by this invocation to count as output.
+                archived = []
+                history = OUT_DIR / 'history' / run_id
+                for code in b['codes']:
+                    previous = OUT_DIR / f'{code}.json'
+                    if previous.exists():
+                        history.mkdir(parents=True, exist_ok=True)
+                        target = history / f'{code}-{db_util.new_id()}.json'
+                        previous.rename(target)
+                        archived.append(str(target))
+                j.set(output_refs_json={'archived_previous': archived})
                 res = subprocess.run([claude_path, '-p', _prompt(b['rel']), '--allowed-tools', 'Read,Write,Bash'],
                                      timeout=AGENT_TIMEOUT_S, capture_output=True, text=True)
-                written = sum((OUT_DIR / f'{c}.json').exists() for c in b['codes'])
-                j.set(output_refs_json={'returncode': res.returncode, 'written': written, 'of': len(b['codes'])})
+                valid = sum(load(c) is not None for c in b['codes'])
+                outcome['valid_outputs'] = valid
+                j.set(output_refs_json={'returncode': res.returncode, 'valid_outputs': valid, 'of': len(b['codes']), 'archived_previous': archived})
                 if res.returncode != 0:
                     j.retry_required('claude exited %d: %s' % (res.returncode, (res.stderr or '')[-500:]))
+                elif valid != len(b['codes']):
+                    j.retry_required('valid outputs %d of %d' % (valid, len(b['codes'])))
+                else:
+                    outcome['status'] = 'DONE'
             except subprocess.TimeoutExpired:
                 j.retry_required('claude timed out after %ds' % AGENT_TIMEOUT_S)
             except OSError as exc:
                 j.retry_required('failed to launch claude: %s' % exc)
+    return results
 
 
 def validate(d):
@@ -294,15 +320,21 @@ def main(argv=None):
         print(f'run_id {run_id}; next: python3 -m engine.shortlist_adapt run --yes')
         return 0
     if not args.yes:
-        print('run needs --yes: it launches an unattended claude -p per batch (no money, local CLI).')
+        print('run needs --yes: it launches an unattended claude -p per batch (configured model account/budget).')
         return 2
     run_id = state.start_run(con, 'analysis', config={'note': 'shortlist adaptation sa-v1', 'prompt_version': PROMPT_VERSION})
-    _, batches = export(con, run_id=run_id, everything=args.all)
-    run_agent(con, run_id, batches)
-    state.finish_run(con, run_id, 'DONE')
-    rows = list_concepts()
-    print(f"run {run_id}: {len(batches)} batch(es), {len(rows)} concept file(s), {sum(bool(r['errors']) for r in rows)} with errors")
-    return 0
+    try:
+        _, batches = export(con, run_id=run_id, everything=args.all)
+        results = run_agent(con, run_id, batches)
+        failed = [r for r in results if r['status'] != 'DONE']
+        status = ('PARTIAL' if failed and any(r['valid_outputs'] for r in results)
+                  else 'FAILED' if failed else 'DONE')
+        state.finish_run(con, run_id, status, {'batches': results})
+    except Exception:
+        state.finish_run(con, run_id, 'FAILED')
+        raise
+    print(f'run {run_id}: {status}; {len(results)} batch(es), {len(failed)} incomplete')
+    return 1 if failed else 0
 
 
 if __name__ == '__main__':

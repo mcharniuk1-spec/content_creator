@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/local-context-record.schema.json",
+  "title": "LocalContextRecord",
+  "type": "object",
+  "required": [
+    "record_id",
+    "campaign_domain",
+    "source_root_ref",
+    "source_path",
+    "content_sha256",
+    "checked_at",
+    "source_role",
+    "claim_label",
+    "rights_state",
+    "analysis_status",
+    "limitations"
+  ],
+  "properties": {
+    "record_id": {"type": "string", "pattern": "^LCTX-[A-Z0-9-]+$"},
+    "campaign_domain": {"enum": ["archflow_onboarding", "hotel_revenue", "shared_governance"]},
+    "source_root_ref": {"const": "archflow_public"},
+    "source_path": {"type": "string", "pattern": "^(project|history|skills|wiki)/", "not": {"pattern": "(^/|\\.\\.)"}},
+    "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "checked_at": {"type": "string", "format": "date-time"},
+    "source_role": {"enum": ["bounded_context", "product_truth", "acceptance_contract", "content_policy", "architecture_handoff"]},
+    "claim_label": {"enum": ["FACT", "INTERPRETATION", "HYPOTHESIS", "GAP"]},
+    "rights_state": {"const": "facts_only"},
+    "analysis_status": {"enum": ["registered", "summarized", "corroborated", "stale", "blocked"]},
+    "limitations": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}

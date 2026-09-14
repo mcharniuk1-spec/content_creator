@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/m2-coverage-report.schema.json",
+  "title": "M2CoverageReport",
+  "type": "object",
+  "required": ["schema", "targets", "observed", "denominators", "missingness", "duplicates", "source_mix", "provider_mode", "cost_usd", "runtime_seconds", "live_market_acceptance", "limitations"],
+  "properties": {
+    "schema": {"const": "m2.coverage-report.v1"}, "targets": {"type": "object"}, "observed": {"type": "object"}, "denominators": {"type": "object"},
+    "missingness": {"type": "object"}, "duplicates": {"type": "object"}, "source_mix": {"type": "object"}, "provider_mode": {"const": "disabled"},
+    "cost_usd": {"const": 0}, "runtime_seconds": {"type": ["number", "null"]}, "live_market_acceptance": {"const": "GAP"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

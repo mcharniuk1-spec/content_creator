@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/channel-capabilities.schema.json",
+  "title": "ChannelCapabilitiesReceipt",
+  "type": "object",
+  "required": ["receipt_id", "captured_at", "sanitized", "rule", "channels", "prohibited_actions"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "captured_at": {"type": "string", "format": "date"},
+    "command": {"type": "string"},
+    "sanitized": {"const": true},
+    "rule": {"type": "string", "minLength": 1},
+    "channels": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["state", "active_backend", "limitations"],
+        "properties": {
+          "state": {"enum": ["READY", "PARTIAL", "MANUAL", "BLOCKED", "NOT_REQUESTED"]},
+          "active_backend": {"type": ["string", "null"]},
+          "allowed_now": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "limitations": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+        },
+        "additionalProperties": false
+      }
+    },
+    "prohibited_actions": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}

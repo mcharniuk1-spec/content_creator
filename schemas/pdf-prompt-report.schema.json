@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/pdf-prompt-report.schema.json",
+  "title": "PDFPromptReport",
+  "type": "object",
+  "required": ["report_id", "video_id", "source_document_path", "pdf_path", "sections", "contact_sheet_manifest_hash", "selectable_text", "urls_clickable", "secret_scan", "storyboard_asset_state", "external_provider_generation_state", "owner_state", "validation_verdict"],
+  "properties": {
+    "report_id": {"type": "string", "pattern": "^PDF-[A-Z0-9-]+$"},
+    "video_id": {"type": "string", "pattern": "^V(0[1-9]|1[0-5])$"},
+    "source_document_path": {"type": "string", "minLength": 1},
+    "pdf_path": {"type": "string", "pattern": "\\.pdf$"},
+    "sections": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "cover_and_truth_state"},
+        {"const": "audience_problem_pain_consequence_mechanism_limitation_cta"},
+        {"const": "source_ledger_and_claim_map"},
+        {"const": "pattern_abstractions_and_clean_room_restrictions"},
+        {"const": "concept_v1_and_critique"},
+        {"const": "story_v2_and_beat_sheet"},
+        {"const": "production_prompt_v3"},
+        {"const": "candidate_set_hash_and_judge_verdicts"},
+        {"const": "timecoded_frame_table"},
+        {"const": "contact_sheet"},
+        {"const": "asset_prompts_negatives_continuity_fallbacks"},
+        {"const": "screen_recording_plan"},
+        {"const": "narration_captions_music_ambience_sfx"},
+        {"const": "edit_timeline_transitions_platform_variants"},
+        {"const": "candidate_provider_model_routing"},
+        {"const": "rights_consent_accessibility_qa_cost_approvals_fallback"},
+        {"const": "platform_copy_transcript_alt_text"}
+      ],
+      "minItems": 17,
+      "maxItems": 17,
+      "uniqueItems": true
+    },
+    "contact_sheet_manifest_hash": {"type": "string", "minLength": 1},
+    "selectable_text": {"type": "boolean"},
+    "urls_clickable": {"type": "boolean"},
+    "secret_scan": {"enum": ["PASS", "FAIL"]},
+    "storyboard_asset_state": {"enum": ["NOT_RUN", "DETERMINISTIC_LOCAL_READY", "LOCAL_CODEX_EXECUTED", "MIXED_LOCAL_READY"]},
+    "external_provider_generation_state": {"const": "NOT_RUN"},
+    "owner_state": {"const": "OWNER_REVIEW_PENDING"},
+    "validation_verdict": {"enum": ["PENDING", "PASS", "FAIL"]},
+    "validation_notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

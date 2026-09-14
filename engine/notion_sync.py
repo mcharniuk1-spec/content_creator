@@ -400,19 +400,22 @@ def analytics_section(con):
     not own and that may not exist yet. When missing, fall back to a minimal snapshot
     derived directly from the DB so the plan is never empty for that reason alone."""
     data = _load_json_dir(ROOT / 'reports' / 'data')
-    if data:
-        return {'source': 'reports/data/*.json', 'files': sorted(data.keys()), 'data': data}
+    if data and not any(isinstance(v, dict) and '_error' in v for v in data.values()):
+        return {'source': 'reports/data/*.json', 'files': sorted(data.keys()), 'data': data,
+                'status': 'SOURCE_FILES_PRESENT_UNVERIFIED',
+                'note': 'Source files exist; verify their release, English cohort and review before applying historical recommendations.'}
     top_accounts = [dict(r) for r in con.execute(
         'SELECT username, followers, n_videos, median_play, consistency_score, reliability '
         'FROM creator_stats ORDER BY median_play DESC LIMIT 10')]
     n_categorized = con.execute('SELECT COUNT(*) FROM video_features WHERE topic IS NOT NULL').fetchone()[0]
     return {
+        'status': 'COVERAGE_ONLY',
         'source': "fallback: engine.corpus/creator_stats (reports/data/*.json not found — "
                   "engine/report_data.py has not produced it yet)",
         'top_accounts_by_median_play': top_accounts,
-        'note': ('category performance tables (topic/pain/hook/solution/CTA/visual/scene-cut) '
-                f'come from video_features — {n_categorized} categorized rows there right now; '
-                 'see the Categories section for the actual breakdown.'),
+        'note': (f'{n_categorized} rows contain category labels. No valid analysis release was loaded. '
+                 'These are inventory figures, not verified English-cohort performance findings. '
+                 'Rebuild and independently review the analysis release before drawing script rules.'),
     }
 
 
@@ -712,12 +715,12 @@ def build_dashboard_blocks(sections):
                        ('Reels with stats', 'reels_with_stats'),
                        ('Reels with transcripts', 'reels_with_transcripts'),
                        ('Reels with frames', 'reels_with_frames'),
-                       ('Fully analyzed reels', 'fully_analyzed'),
+                       ('Legacy analysis-ready flag (not independent acceptance)', 'fully_analyzed'),
                        ('Hiker reels pending watchdog', 'hiker_reels_pending_watchdog'),
                        ('Cards', 'cards'), ('Videos produced', 'videos_produced')):
         b.append(nb.bulleted_item(str(cov[key]), label=label))
 
-    b.append(nb.heading('Current analytics', 2))
+    b.append(nb.heading('Coverage-only inventory' if an.get('status') == 'COVERAGE_ONLY' else 'Analytics source — review required', 2))
     b.append(nb.paragraph(f"Source: {an['source']}"))
     if an.get('top_accounts_by_median_play'):
         b.append(nb.table(['Account', 'Followers', 'Videos', 'Median play', 'Reliability'],
@@ -727,8 +730,8 @@ def build_dashboard_blocks(sections):
     if an.get('note'):
         b.append(nb.callout(an['note'], icon='⚠️'))
 
-    b.append(nb.heading('Insights', 2))
-    ins_rows = ins.get('rows') or []
+    b.append(nb.heading('Historical insights — not current English-cohort conclusions', 2))
+    ins_rows = [] if an.get('status') == 'COVERAGE_ONLY' else (ins.get('rows') or [])
     if not ins_rows:
         b.append(nb.paragraph(f"No insights yet ({ins['source']})."))
     for i in ins_rows[:20]:

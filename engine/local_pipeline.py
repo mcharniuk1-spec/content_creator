@@ -214,6 +214,8 @@ def _refresh_video_state_fallback(con, code):
     analysis_ready = 1 if (transcript_state == 'DONE' and frames_state == 'DONE_SCENE'
                             and transcript_analysis_state == 'DONE'
                             and frame_analysis_state == 'DONE') else 0
+    from engine.language_gate import eligible
+    analysis_ready = analysis_ready if eligible(con, code) else 0
     if transcript_state == 'DONE' and frames_state == 'DONE_SCENE':
         corpus_tier = 'ANALYSIS_READY'
     elif frames_state == 'DONE_SCENE':
@@ -348,7 +350,9 @@ def transcribe(mp4, model_size='small'):
         # language=None: detect, never force. Forced 'en' made Whisper TRANSLATE Hindi speech into
         # English and the base called the reel English (Misha's rule of 13 Sep 2026: English speech only)
         segs, info = model.transcribe(str(mp4), language=None, vad_filter=True, word_timestamps=False)
-        segments = [{'s': round(s.start, 2), 'e': round(s.end, 2), 't': s.text.strip()} for s in segs]
+        language = getattr(info, 'language', None) or 'unknown'
+        segments = ([{'s': round(s.start, 2), 'e': round(s.end, 2), 't': s.text.strip()} for s in segs]
+                    if language == 'en' else [])
         elapsed = round(time.monotonic() - started, 2)
     except PipelineError:
         raise
@@ -357,7 +361,7 @@ def transcribe(mp4, model_size='small'):
     meta = {
         'model': model_size,
         'asr_version': f'faster-whisper-{model_size}-int8-v1',
-        'language': getattr(info, 'language', 'en') or 'en',
+        'language': language,
         'lang_probability': getattr(info, 'language_probability', None),
         'processing_seconds': elapsed,
     }
@@ -387,7 +391,8 @@ def process_video(con, code, media, run_id=None, *, asr_version, frames_version=
     existing = con.execute(
         'SELECT transcript_state, frames_state, asr_version, frames_version FROM video_state WHERE code=?',
         (code,)).fetchone()
-    if not force and existing and existing['transcript_state'] == 'DONE' \
+    from engine.language_gate import eligible
+    if not force and eligible(con, code) and existing and existing['transcript_state'] == 'DONE' \
             and existing['frames_state'] == 'DONE_SCENE' \
             and existing['asr_version'] == asr_version and existing['frames_version'] == frames_version:
         result['skipped'] = True
@@ -419,9 +424,24 @@ def process_video(con, code, media, run_id=None, *, asr_version, frames_version=
 
     # step 3: transcription --------------------------------------------------------------
     try:
-        with job(con, run_id, 'video', code, 'TRANSCRIPTION'):
+        with job(con, run_id, 'video', code, 'TRANSCRIPTION') as transcript_job:
             model_size = _model_size_from_asr_version(asr_version)
             segments, meta = transcribe(mp4, model_size=model_size)
+            from engine.language_gate import record
+            language_state = record(con, code, meta['language'])
+            if language_state != 'ENGLISH_DETECTED':
+                if transcript_job is not None:
+                    transcript_job.skip(language_state)
+                con.commit()
+                result['steps']['transcript'] = {'state': language_state, 'language': meta['language']}
+                result['status'] = language_state
+                if not keep_video:
+                    mp4.unlink(missing_ok=True)
+                refresh_video_state(con, code)
+                con.commit()
+                # Preserve any earlier original transcript; it is historical evidence,
+                # not permission to analyze this non-English/unknown-language Reel.
+                return result
             text = ' '.join(s['t'] for s in segments).strip()
             words = len(text.split())
             speech_seconds = round(sum(s['e'] - s['s'] for s in segments), 2)

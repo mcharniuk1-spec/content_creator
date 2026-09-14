@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/schemas/signal-to-studio.schema.json",
+  "title": "Signal-to-Studio immutable export",
+  "type": "object",
+  "required": ["schema", "export_id", "export_version", "generated_at", "signal_record_id", "source_ids", "evidence_ids", "rights_decision_ids", "epistemic_state", "rights_state", "freshness", "taxonomy_version", "pattern", "studio_constraints", "provenance", "external_provider_state"],
+  "properties": {
+    "schema": {"const": "signal-to-studio.v1"},
+    "export_id": {"type": "string", "pattern": "^SIGEXP-SF-[0-9]{3}$"},
+    "export_version": {"type": "integer", "const": 1},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "signal_record_id": {"type": "string", "pattern": "^SIG-SF-[0-9]{3}$"},
+    "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "rights_decision_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "epistemic_state": {"enum": ["FACT", "DERIVED", "CLASSIFIED", "INFERRED", "HYPOTHESIZED", "GAP"]},
+    "rights_state": {"enum": ["metadata_commentary_only", "original_local_previsualization", "blocked"]},
+    "freshness": {
+      "type": "object",
+      "required": ["observed_at", "valid_until", "supersedes_export_id"],
+      "properties": {
+        "observed_at": {"type": ["string", "null"], "format": "date-time"},
+        "valid_until": {"type": ["string", "null"], "format": "date-time"},
+        "supersedes_export_id": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "taxonomy_version": {"const": "studio-shortform@1.0.0"},
+    "pattern": {"$ref": "studio-framework.schema.json#/properties/taxonomy"},
+    "studio_constraints": {
+      "type": "object",
+      "required": ["duration_ms", "aspect_ratio", "editable_text", "safe_zone", "acceptance_checks"],
+      "properties": {
+        "duration_ms": {"type": "integer", "minimum": 4000, "maximum": 12000},
+        "aspect_ratio": {"const": "9:16"},
+        "editable_text": {"const": true},
+        "safe_zone": {"const": "platform-ui-aware; 8% horizontal and 10% vertical local planning inset; verify per platform at production"},
+        "acceptance_checks": {"type": "array", "minItems": 2, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["raw_object_state", "source_raw_hashes", "record_hash"],
+      "properties": {
+        "raw_object_state": {"enum": ["AVAILABLE", "NOT_AVAILABLE"]},
+        "source_raw_hashes": {"type": "array", "items": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}},
+        "record_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {"if": {"properties": {"raw_object_state": {"const": "AVAILABLE"}}}, "then": {"properties": {"source_raw_hashes": {"minItems": 1}}}},
+        {"if": {"properties": {"raw_object_state": {"const": "NOT_AVAILABLE"}}}, "then": {"properties": {"source_raw_hashes": {"maxItems": 0}}}}
+      ]
+    },
+    "external_provider_state": {"const": "NOT_RUN"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/schemas/edit-decision-list.v1.json",
+  "title": "ArchFlow Edit Decision List",
+  "type": "object",
+  "required": ["schema", "case_id", "source", "segments", "timeline", "style", "captions", "policy"],
+  "properties": {
+    "schema": {"const": "archflow.edit-decision-list.v1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "required": ["path", "sha256", "duration_seconds"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1},
+        "has_audio": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "segments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "source_start", "source_end", "timeline_start", "timeline_duration"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "source_start": {"type": "number", "minimum": 0},
+          "source_end": {"type": "number", "exclusiveMinimum": 0},
+          "timeline_start": {"type": "number", "minimum": 0},
+          "timeline_duration": {"type": "number", "exclusiveMinimum": 0},
+          "label": {"type": "string"},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "required": ["duration_seconds", "fps", "width", "height"],
+      "properties": {
+        "duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "fps": {"type": "number", "exclusiveMinimum": 0},
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1},
+        "aspect_ratio": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "style": {
+      "type": "object",
+      "required": ["color_preset", "audio_leveling"],
+      "properties": {
+        "color_preset": {"enum": ["none", "neutral", "warm", "cool"]},
+        "audio_leveling": {"enum": ["none", "loudnorm", "dynaudnorm"]}
+      },
+      "additionalProperties": true
+    },
+    "captions": {
+      "type": "object",
+      "required": ["mode", "cues"],
+      "properties": {
+        "mode": {"enum": ["none", "embedded_text_track", "sidecar_srt"]},
+        "language": {"type": "string", "minLength": 2},
+        "cues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["start", "end", "text"],
+            "properties": {
+              "start": {"type": "number", "minimum": 0},
+              "end": {"type": "number", "exclusiveMinimum": 0},
+              "text": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": ["provider_execution", "generative_repair"],
+      "properties": {
+        "provider_execution": {"const": false},
+        "generative_repair": {"enum": ["disabled", "approved_exception"]},
+        "resolve_finishing": {"enum": ["optional", "approved"]}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

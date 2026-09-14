@@ -123,8 +123,11 @@ def transcribe(mp4):
             _whisper = WhisperModel('small', device='cpu', compute_type='int8')
         # язык определяется, не навязывается: с 'en' Whisper переводил хинди на английский (13 сентября 2026)
         segs, info = _whisper.transcribe(str(mp4), language=None, vad_filter=True)
+        language = getattr(info, 'language', None) or 'unknown'
+        if language != 'en':
+            return [], language  # do not consume the lazy segment generator
         out = [{'s': round(s.start, 1), 'e': round(s.end, 1), 't': s.text.strip()} for s in segs]
-        return out, (getattr(info, 'language', None) or 'unknown')
+        return out, language
     except Exception as e:
         print(f'    расшифровка не вышла: {e}', flush=True)
         return None, None
@@ -192,6 +195,8 @@ def run(con, rows, keep_video=False, speech=True, deadline=None):
             segs, lang = transcribe(mp4)         # пока mp4 ещё на диске
             spent['расшифровка'] += time.time() - _t
             if segs is not None:
+                from engine.language_gate import record
+                record(con, c, lang)
                 text = ' '.join(s['t'] for s in segs).strip()
                 con.execute("""INSERT OR REPLACE INTO transcripts
                     (code,lang,words,text,segments) VALUES (?,?,?,?,?)""",

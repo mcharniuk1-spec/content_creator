@@ -188,6 +188,22 @@ def test_rate_helper_directly():
     assert stats.lift(0.02, 0) is None
 
 
+def test_combined_intent_requires_both_observed_counts(con):
+    con.execute('UPDATE reels SET save=NULL WHERE code="steady00"')
+    con.commit()
+    stats.video_perf(con)
+    value = con.execute('SELECT hi_intent_rate FROM video_features WHERE code="steady00"').fetchone()[0]
+    assert value is None
+
+
+def test_excluded_language_not_in_feature_comparisons(tmp_path):
+    con = _corpus_with_features(tmp_path)
+    from engine.language_gate import record
+    record(con, 'steady00', 'hi')
+    frame = stats.feature_frame(con)
+    assert 'steady00' not in set(frame['code'])
+
+
 def test_perf_is_written_to_columns_and_json(con):
     stats.video_perf(con)
     row = con.execute('SELECT * FROM video_features WHERE code="spiky06"').fetchone()
@@ -238,6 +254,8 @@ def _corpus_with_features(tmp_path):
     for pk, name, plays in CREATORS:
         for i, play in enumerate(plays):
             code = '%s%02d' % (name, i)
+            from engine.language_gate import record
+            record(con, code, 'en')
             corpus.merge_features(con, code, 'lexical', {
                 'words': 100 + i * 10,
                 'numbers_n': i,

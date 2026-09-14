@@ -1,0 +1,22 @@
+# Dated model and infrastructure assessment
+
+Checked: 2026-09-05. Claims below distinguish public documentation from local execution. No paid generation was performed.
+
+| Use | Candidate and current source evidence | Routing decision | Execution status |
+|---|---|---|---|
+| Final charts, text, UI, demo steps and layout | [Remotion renderer documentation](https://www.remotion.dev/docs/renderer/render-media) | Primary deterministic editor; local React composition, FFmpeg output QA. Keep interface text editable. | Typecheck and actual synthetic render tested. |
+| First/last-frame transition; continuity-constrained insert | [Veo 3.1 official guide](https://ai.google.dev/gemini-api/docs/veo) documents both endpoints, portrait output and 4/6/8-second settings | Veo 3.1 candidate; test a short 720p shot before expensive resolution. | Adapter contract tested; paid call not run. |
+| Controlled reference sequence and complex B-roll motion | [ByteDance Seedance 2.5](https://seed.bytedance.com/en/seedance2_5) confirms the model, longer generation and reference/editing features | Seedance 2.5 is a real candidate. Prefer bounded 4–10 second inserts for this engine rather than automatically using its maximum duration. | No owner-account entitlement or paid-quality proof. |
+| Exact Seedance keyframe API | [Runway official SDK type source](https://github.com/runwayml/sdk-python/blob/main/src/runwayml/types/image_to_video_create_params.py) contains `seedance2_5` with first/last or unpositioned reference-image modes | Direct injected Runway SDK adapter supports this bounded route. Keyframe and reference modes never mix. | Payload compilation, model restrictions and retry controls tested locally. SDK/live call not run. |
+| General short motion / conversational edits | [Google video overview](https://ai.google.dev/gemini-api/docs/video) currently favors Omni Flash for general generation while retaining Veo for last-frame/extension workflows | Evaluate Omni Flash on noncritical inserts later; a current provider preference is not our quality benchmark. | Not wired as an execution adapter in this release. |
+| Single-start-image cinematic insert | [Runway model guide](https://docs.dev.runwayml.com/guides/models/) and its official SDK source list `gen4.5` | Alternate candidate when no final keyframe is needed. Reject last-frame requests for this model. | Compiler/negative test only. |
+
+FACT: Remotion's [current pricing/license page](https://www.remotion.dev/docs/license/pricing) permits free commercial automation for individuals and companies up to three people and requires an upgrade for larger collaborations. The named two-founder partnership alone does not establish total organization size; exact eligibility is an activation parameter.
+
+FACT: [Open-Generative-AI's repository](https://github.com/Anil-matcha/Open-Generative-AI) describes an MIT application whose cloud generation uses Muapi, uploads assets and stores API keys in browser localStorage. Its free application license does not make model inference free or local. Its model lists and unrestricted marketing posture are not an evidence/rights/runtime policy.
+
+INTERPRETATION: retain Open-Generative-AI as an optional catalog/exploration surface; do not adopt its secret storage, moderation posture, installers or dependency monorepo as the engine core. Native Python/SQLite/FFmpeg plus eligible Remotion is sufficient local infrastructure. The main API can be billed directly without an added orchestration subscription; model gateways still bill for inference.
+
+HYPOTHESIS: Seedance 2.5 may be strongest for complex continuity/reference motion and Veo 3.1 may be preferable for precise first/last transitions. These are routing hypotheses, not measured superiority. Use the same approved neutral object, start/end frames, 9:16 target, 4–8 second duration, two matched seeds where supported and fixed budgets; compare factual/visual adherence, continuity, caption-safe composition, failure rate, latency and actual total spend. Rejected outputs count in cost per accepted second. No provider is promoted without an independent review and one bounded live smoke receipt.
+
+GAP: live account entitlement, invoice prices, data retention/training rules, region, SDK pinning for paid execution, confirmed cost/latency/reliability and paid output ingestion are not tested. Credentials/payment and exact shot approval are intentionally pending. Do not describe current models as authenticated, connected successfully, optimal or production-tested.

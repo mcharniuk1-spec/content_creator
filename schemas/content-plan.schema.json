@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/content-plan.schema.json",
+  "title": "ContentPlan",
+  "type": "object",
+  "required": ["video_id", "title", "campaign_domain", "audience", "primary_channel", "target_duration_ms", "problem", "pain", "operating_consequence", "bounded_mechanism", "limitation", "cta", "evidence_ids", "reference_abstractions", "prohibited_similarities", "prompt_iterations", "candidate_set_hash", "judge_verdicts", "frame_sequence_id", "static_companion", "platform_copy", "storyboard_asset_state", "external_provider_generation_state", "owner_state"],
+  "properties": {
+    "video_id": {"type": "string", "pattern": "^V(0[1-9]|1[0-5])$"},
+    "title": {"type": "string", "minLength": 1},
+    "campaign_domain": {"enum": ["archflow_onboarding", "hotel_revenue"]},
+    "audience": {"type": "string", "minLength": 1},
+    "primary_channel": {"enum": ["linkedin", "instagram_reels", "youtube_shorts", "threads", "x"]},
+    "target_duration_ms": {"type": "integer", "exclusiveMinimum": 15000, "maximum": 45000},
+    "problem": {"type": "string", "minLength": 1},
+    "pain": {"type": "string", "minLength": 1},
+    "operating_consequence": {"type": "string", "minLength": 1},
+    "bounded_mechanism": {"type": "string", "minLength": 1},
+    "limitation": {"type": "string", "minLength": 1},
+    "cta": {"type": "string", "minLength": 1},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "reference_abstractions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "prohibited_similarities": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "prompt_iterations": {
+      "type": "array",
+      "prefixItems": [
+        {"$ref": "#/$defs/promptV1"},
+        {"$ref": "#/$defs/promptV2"},
+        {"$ref": "#/$defs/promptV3"}
+      ],
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "candidate_set_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "judge_verdicts": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/judge"}},
+    "frame_sequence_id": {"type": "string"},
+    "static_companion": {"type": "object", "required": ["format", "aspect_ratio", "editable_text", "status"], "properties": {"format": {"enum": ["single", "carousel"]}, "aspect_ratio": {"enum": ["4:5", "1:1", "16:9"]}, "editable_text": {"const": true}, "status": {"enum": ["PLANNED", "READY_FOR_REVIEW"]}}, "additionalProperties": false},
+    "platform_copy": {"type": "object", "required": ["linkedin", "reels", "threads", "x", "transcript", "alt_text"], "properties": {"linkedin": {"type": "string"}, "reels": {"type": "string"}, "threads": {"type": "string"}, "x": {"type": "string"}, "transcript": {"type": "string"}, "alt_text": {"type": "string"}}, "additionalProperties": false},
+    "storyboard_asset_state": {"enum": ["NOT_RUN", "DETERMINISTIC_LOCAL_READY", "LOCAL_CODEX_EXECUTED", "MIXED_LOCAL_READY"]},
+    "external_provider_generation_state": {"const": "NOT_RUN"},
+    "owner_state": {"enum": ["OWNER_REVIEW_PENDING", "REVISE", "APPROVED_FOR_NEXT_GATE"]}
+  },
+  "$defs": {
+    "promptBase": {
+      "type": "object",
+      "required": ["version", "role", "prompt", "input_hashes", "output_hash", "critic_notes", "review_state"],
+      "properties": {
+        "version": {"type": "integer"},
+        "role": {"type": "string"},
+        "prompt": {"type": "string", "minLength": 1},
+        "input_hashes": {"type": "array", "items": {"type": "string"}},
+        "output_hash": {"type": "string"},
+        "critic_notes": {"type": "array", "items": {"type": "string"}},
+        "review_state": {"enum": ["PENDING", "PASS", "REVISE", "BLOCK"]}
+      },
+      "additionalProperties": false
+    },
+    "promptV1": {"allOf": [{"$ref": "#/$defs/promptBase"}, {"properties": {"version": {"const": 1}, "role": {"const": "concept_ideator"}}}]},
+    "promptV2": {"allOf": [{"$ref": "#/$defs/promptBase"}, {"properties": {"version": {"const": 2}, "role": {"const": "story_architect"}}}]},
+    "promptV3": {"allOf": [{"$ref": "#/$defs/promptBase"}, {"properties": {"version": {"const": 3}, "role": {"const": "production_prompt_engineer"}}}]},
+    "judge": {
+      "type": "object",
+      "required": ["judge_role", "candidate_set_hash", "score", "verdict"],
+      "properties": {
+        "judge_role": {"enum": ["editorial_judge", "audience_retention_judge", "production_judge"]},
+        "candidate_set_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "score": {"type": "number", "minimum": 0, "maximum": 100},
+        "verdict": {"enum": ["SELECT", "REJECT", "BLOCK"]},
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/schemas/edit-pipeline-case.v1.json",
+  "title": "ArchFlow Hybrid Edit Case",
+  "type": "object",
+  "required": ["schema", "case_id", "rights", "execution", "policy"],
+  "properties": {
+    "schema": {"const": "archflow.edit-pipeline-case.v1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "rights": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["synthetic_fixture", "owner_owned_approved", "licensed_approved", "not_approved", "unclear"]},
+        "consent": {"enum": ["not_required", "approved", "missing"]},
+        "source_note": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "execution": {
+      "type": "object",
+      "required": ["allow_local_render", "allowed_media_roots", "allowed_output_roots"],
+      "properties": {
+        "allow_local_render": {"type": "boolean"},
+        "allowed_media_roots": {"type": "array", "items": {"type": "string"}},
+        "allowed_output_roots": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "policy": {
+      "type": "object",
+      "required": ["provider_execution", "generative_repair", "resolve_finishing"],
+      "properties": {
+        "provider_execution": {"const": false},
+        "generative_repair": {"enum": ["disabled", "approved_exception"]},
+        "resolve_finishing": {"enum": ["optional", "approved"]}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

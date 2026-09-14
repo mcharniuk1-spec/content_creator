@@ -95,6 +95,12 @@ def con(tmp_path):
             c.execute('INSERT INTO frames (code, idx, t_sec, path, exists_ok) VALUES (?,?,?,?,1)',
                       (code, i, 0.4 * (i + 1), f'data/frames/{code}/{i:02d}.jpg'))
 
+    # These positive fixtures represent audio-detected English, not an ASR text label.
+    from engine.language_gate import record
+    for code in ('TAPEND01', 'TADONE01', 'TAEMPTY1', 'TAJSON01',
+                 'FRPEND01', 'FRDONE01', 'FRNOSHEET1'):
+        record(c, code, 'en')
+
     c.execute("INSERT INTO topics (code, topic, source) VALUES ('TAPEND01','AI tools','sample')")
     c.commit()
     yield c

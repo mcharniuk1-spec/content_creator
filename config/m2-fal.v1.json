@@ -1,0 +1,24 @@
+{
+  "schema": "m2.fal-queue.v1",
+  "checked_at": "2026-09-14",
+  "docs_url": "https://fal.ai/docs/documentation/model-apis/inference/queue",
+  "provider": "fal",
+  "execution_enabled": false,
+  "credential_env": "FAL_KEY",
+  "credential_file_reads": false,
+  "redirect_policy": "refuse",
+  "submit_retry_policy": "none",
+  "queue_origin": "https://queue.fal.run",
+  "capability_mapping": {},
+  "activation_requirements": [
+    "exact model-specific capability mapping and payload builder",
+    "full approved request hash bound to the ProviderJobs activation envelope",
+    "secret-store or environment injection of FAL_KEY",
+    "one submit, bounded poll, and explicit billing reconciliation",
+    "separate result ingestion, media probe, rights check, and QA receipt",
+    "independent review and owner approval"
+  ],
+  "default_fallback": "original deterministic Remotion graphic or owner-recorded plate",
+  "status_completed_policy": "fetch response separately; COMPLETED is not media QA",
+  "cancel_policy": "pending cancellation request is not a final job state"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/knowledge-candidate.schema.json",
+  "title": "KnowledgeCandidate",
+  "type": "object",
+  "required": ["knowledge_candidate_id", "finding_ids", "evidence_card_ids", "reusable_conclusion", "privacy_class", "freshness_state", "contradiction_state", "supersession_target", "promotion_state", "maker", "reviewer"],
+  "properties": {
+    "knowledge_candidate_id": {"type": "string", "pattern": "^KC-[A-Z0-9-]+$"},
+    "finding_ids": {"type": "array", "items": {"type": "string", "pattern": "^FIND-[A-Z0-9-]+$"}, "minItems": 1, "uniqueItems": true},
+    "evidence_card_ids": {"type": "array", "items": {"type": "string", "pattern": "^EV-[A-Z0-9-]+$"}, "minItems": 1, "uniqueItems": true},
+    "reusable_conclusion": {"type": "string", "minLength": 1},
+    "privacy_class": {"enum": ["public", "public_project_context", "restricted"]},
+    "freshness_state": {"enum": ["current", "stable_exception", "stale", "undated"]},
+    "contradiction_state": {"enum": ["none_observed", "corroborated", "unresolved", "superseded"]},
+    "supersession_target": {"type": ["string", "null"]},
+    "promotion_state": {"const": "PENDING_INDEPENDENT_PROMOTION_REVIEW"},
+    "maker": {"type": "string", "minLength": 1},
+    "reviewer": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

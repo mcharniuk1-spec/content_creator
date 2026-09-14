@@ -135,6 +135,9 @@ def select_transcript_pending(con):
     pending = []
     for r in con.execute('SELECT code, words, segments FROM transcripts'):
         code = r['code']
+        from engine.language_gate import eligible
+        if not eligible(con, code):
+            continue
         if code in beats_codes:
             continue
         if not _transcript_usable(r['words'], r['segments']):
@@ -161,6 +164,9 @@ def select_frame_pending(con):
         'SELECT code, sheet FROM deepdives WHERE sheet IS NOT NULL')}
     pending = []
     for code in sorted(frame_codes):
+        from engine.language_gate import eligible
+        if not eligible(con, code):
+            continue
         if code in labeled_codes:
             continue
         sheet = sheets.get(code)

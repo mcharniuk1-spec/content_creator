@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/state-transition-receipt.schema.json",
+  "title": "ContentEnginePhase1StateTransitionReceipt",
+  "type": "object",
+  "required": [
+    "schema",
+    "run_id",
+    "case_id",
+    "controller",
+    "from_state",
+    "state_sequence",
+    "to_state",
+    "transition_at",
+    "policy",
+    "review",
+    "owner_authority",
+    "allowed_routes",
+    "exclusive_output_root",
+    "discovery_manifest",
+    "input_hashes",
+    "repair_count",
+    "prohibited_actions",
+    "provider_execution",
+    "external_actions",
+    "transition_receipt"
+  ],
+  "properties": {
+    "schema": {"const": "content-engine.state-transition.v1"},
+    "run_id": {"const": "20260811-phase1-content-batch"},
+    "case_id": {"const": "CASE-20260811-PHASE1-BATCH"},
+    "controller": {"const": "deterministic_local_state_controller"},
+    "from_state": {"const": "context_bound"},
+    "state_sequence": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "sources.allowlisted"},
+        {"const": "research.capabilities_checked"},
+        {"const": "research.collecting"}
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "to_state": {"const": "research.collecting"},
+    "transition_at": {"type": "string", "format": "date-time"},
+    "policy": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"const": "runs/20260811-phase1-content-batch/state-policy.json"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "required": ["path", "review_id", "reviewer_role", "reviewer_actor_id", "reviewed_at", "authorized_transition_at", "verdict", "sha256"],
+      "properties": {
+        "path": {"const": "runs/20260811-phase1-content-batch/lanes/atlas/pre-research-governance-rereview-3.json"},
+        "review_id": {"const": "GOV-20260811-PHASE1-PRE-RESEARCH-REREVIEW-03"},
+        "reviewer_role": {"const": "governance_orchestrator"},
+        "reviewer_actor_id": {"const": "atlas_governance"},
+        "reviewed_at": {"type": "string", "format": "date-time"},
+        "authorized_transition_at": {"type": "string", "format": "date-time"},
+        "verdict": {"const": "APPROVE"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "owner_authority": {
+      "type": "object",
+      "required": ["path", "sha256", "scope"],
+      "properties": {
+        "path": {"const": "HANDOFF_PROMPT.md"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "scope": {"const": "bounded read-only public research through proved routes and local provider-disabled artifact writes"}
+      },
+      "additionalProperties": false
+    },
+    "allowed_routes": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "yt-dlp"},
+        {"const": "feedparser"},
+        {"const": "Jina Reader"},
+        {"const": "targeted lexical read"}
+      ],
+      "items": false,
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "exclusive_output_root": {"const": "runs/20260811-phase1-content-batch/lanes/scout/"},
+    "discovery_manifest": {"const": "runs/20260811-phase1-content-batch/discovery-manifest.json"},
+    "input_hashes": {
+      "type": "object",
+      "required": [
+        "runs/20260811-phase1-content-batch/admission-request.json",
+        "runs/20260811-phase1-content-batch/admission-receipt.json",
+        "runs/20260811-phase1-content-batch/capability-receipt.json",
+        "runs/20260811-phase1-content-batch/research-brief.md",
+        "runs/20260811-phase1-content-batch/source-allowlist.json",
+        "runs/20260811-phase1-content-batch/source-rights-register.md",
+        "runs/20260811-phase1-content-batch/output-contract.md",
+        "runs/20260811-phase1-content-batch/responsibility-register.md",
+        "runs/20260811-phase1-content-batch/task-contracts.md",
+        "runs/20260811-phase1-content-batch/discovery-manifest.json",
+        "runs/20260811-phase1-content-batch/content-case.json",
+        "schemas/source-record.schema.json",
+        "schemas/local-context-record.schema.json",
+        "schemas/source-rights-decision.schema.json",
+        "schemas/state-transition-receipt.schema.json",
+        "schemas/independent-transition-review.schema.json",
+        "templates/video-link-ledger.csv",
+        "templates/material-link-ledger.csv",
+        "scripts/content_case_state.py",
+        "tests/test_content_case_state.py"
+      ],
+      "properties": {
+        "runs/20260811-phase1-content-batch/admission-request.json": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/admission-receipt.json": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/capability-receipt.json": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/research-brief.md": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/source-allowlist.json": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/source-rights-register.md": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/output-contract.md": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/responsibility-register.md": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/task-contracts.md": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/discovery-manifest.json": {"$ref": "#/$defs/hash"},
+        "runs/20260811-phase1-content-batch/content-case.json": {"$ref": "#/$defs/hash"},
+        "schemas/source-record.schema.json": {"$ref": "#/$defs/hash"},
+        "schemas/local-context-record.schema.json": {"$ref": "#/$defs/hash"},
+        "schemas/source-rights-decision.schema.json": {"$ref": "#/$defs/hash"},
+        "schemas/state-transition-receipt.schema.json": {"$ref": "#/$defs/hash"},
+        "schemas/independent-transition-review.schema.json": {"$ref": "#/$defs/hash"},
+        "templates/video-link-ledger.csv": {"$ref": "#/$defs/hash"},
+        "templates/material-link-ledger.csv": {"$ref": "#/$defs/hash"},
+        "scripts/content_case_state.py": {"$ref": "#/$defs/hash"},
+        "tests/test_content_case_state.py": {"$ref": "#/$defs/hash"}
+      },
+      "additionalProperties": false
+    },
+    "repair_count": {"const": 3},
+    "prohibited_actions": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "dependency installation or clone"},
+        {"const": "authentication or cookie/session reuse"},
+        {"const": "private or logged-in source access"},
+        {"const": "full third-party video retention"},
+        {"const": "provider/model media API execution"},
+        {"const": "private media or real-person voice/likeness work"},
+        {"const": "Figma mutation"},
+        {"const": "publication or social engagement"},
+        {"const": "deployment or Git remote write"},
+        {"const": "external writeback"}
+      ],
+      "items": false,
+      "minItems": 10,
+      "maxItems": 10
+    },
+    "provider_execution": {"const": false},
+    "external_actions": {"const": false},
+    "transition_receipt": {
+      "type": "object",
+      "required": ["id", "status"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "status": {"const": "valid_for_bounded_local_collection"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

@@ -461,6 +461,10 @@ def compute_video_state(ctx, code, asr_version=None, frames_version=None):
         and frames_state in ('DONE_FIXED9', 'DONE_SCENE')
         and transcript_analysis_state == 'DONE'
         and frame_analysis_state == 'DONE')
+    from engine.language_gate import eligible
+    if not eligible(ctx.con, code):
+        analysis_ready = 0
+        flags.add('LANGUAGE_NOT_VERIFIED_ENGLISH')
 
     # --- corpus tier (SPEC §0.4) ---------------------------------------- #
     # ANALYSIS_READY = usable transcript (words>0, timed segments) AND frames.

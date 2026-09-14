@@ -342,8 +342,8 @@ def video_perf(con, write=True):
             share_rate = rate(r.get('resh'), play)
             save_rate = rate(r.get('save'), play)
             hi = None
-            if play and play >= MIN_PLAY_FOR_RATE and (r.get('resh') is not None or r.get('save') is not None):
-                hi = ((r.get('resh') or 0) + (r.get('save') or 0)) / float(play)
+            if play and play >= MIN_PLAY_FOR_RATE and r.get('resh') is not None and r.get('save') is not None:
+                hi = (r['resh'] + r['save']) / float(play)
             z, floored = robust_z_log(play, logs, med_ln, mad_ln)
             if n < MIN_BASELINE:
                 status = 'SMALL_SAMPLE'
@@ -505,6 +505,9 @@ def feature_frame(con, tier_codes=None):
 
     for r in con.execute('SELECT * FROM video_features'):
         code = r['code']
+        from engine.language_gate import eligible
+        if not eligible(con, code):
+            continue
         if tier_codes is not None and code not in tier_codes:
             continue
         try:

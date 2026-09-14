@@ -111,6 +111,7 @@ def _resolve_remotion(env):
 
 
 PROVIDERS = [
+    Provider("fal", "video_gen", "OPTIONAL_PROVIDER", ["FAL_KEY"], note="Disabled transport scaffold; exact model/activation/quality test required"),
     Provider('hiker', 'social_data', 'DEFAULT', ['HIKER_KEY'], resolve=_resolve_hiker),
     Provider('local-faster-whisper', 'transcription', 'DEFAULT', [], resolve=_resolve_local),
     Provider('local-ffmpeg-scenes', 'frames', 'DEFAULT', [], resolve=_resolve_local),

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/content-engine/m2-seed-record.schema.json",
+  "title": "M2SeedRecord",
+  "type": "object",
+  "required": ["schema", "reference_id", "entity_type", "platform", "exact_url", "canonical_url", "aliases", "parent_state", "claim_label", "rights_state", "raw_hash"],
+  "properties": {
+    "schema": {"const": "m2.seed-record.v1"},
+    "reference_id": {"type": "string", "pattern": "^(CR|PR)-[0-9]{3}$"},
+    "entity_type": {"enum": ["creator_reference", "post_reference"]},
+    "platform": {"type": "string", "minLength": 1},
+    "label": {"type": ["string", "null"]},
+    "exact_url": {"type": "string", "pattern": "^https://"},
+    "canonical_url": {"type": "string", "pattern": "^https://"},
+    "aliases": {"type": "array", "items": {"type": "object", "required": ["exact_url", "canonical_url"], "properties": {"exact_url": {"type": "string"}, "canonical_url": {"type": "string"}}, "additionalProperties": false}},
+    "parent_creator_reference_id": {"type": ["string", "null"]},
+    "parent_state": {"enum": ["NOT_APPLICABLE", "RESOLVED", "GAP_UNRESOLVED"]},
+    "evidence_status": {"type": "string"},
+    "metrics": {"type": ["object", "null"], "additionalProperties": {"type": ["number", "null"], "minimum": 0}},
+    "role_vector": {"type": ["object", "null"], "additionalProperties": {"type": ["number", "null"]}},
+    "role_vector_state": {"type": ["string", "null"]},
+    "cohort_id": {"type": "string"},
+    "source_state": {"type": "string"},
+    "claim_label": {"const": "GAP"},
+    "rights_state": {"const": "REFERENCE_ONLY_SEED_ONLY"},
+    "raw_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

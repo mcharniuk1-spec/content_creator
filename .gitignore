@@ -34,3 +34,13 @@ cards/takes/*.mp4
 data/renders/
 .pytest_cache/
 reports/final/cardbook/
+
+# Private local credentials and corpus exports
+/key_fal.yaml
+/key_fal.yml
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+outputs/
+main/current/

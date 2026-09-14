@@ -24,6 +24,7 @@ def eq(n, g, w):
 TODAY = datetime.date(2026, 9, 1)
 RECENT_TS = int(datetime.datetime.combine(TODAY - datetime.timedelta(days=2), datetime.time()).timestamp())
 
+con.execute("CREATE TABLE IF NOT EXISTS language_gate (code TEXT PRIMARY KEY, language TEXT, decision TEXT NOT NULL, observed_at TEXT NOT NULL)")
 con.execute("INSERT INTO snapshots (taken,accounts_n,reels_n,done) VALUES (?,12,0,1)", (TODAY.isoformat(),))
 sid = con.execute("SELECT id FROM snapshots WHERE taken=?", (TODAY.isoformat(),)).fetchone()[0]
 
@@ -110,6 +111,9 @@ con.execute("""INSERT INTO reels (snapshot_id,code,pk_user,username,ts,play,dur,
 con.execute("""INSERT INTO scores (snapshot_id,code,eligible,author_median_play,resh_1k,save_1k,weights)
     VALUES (?,?,1,1000,500,500,'ig')""", (sid, 'Z1CODE001'))
 con.execute("INSERT INTO topics (code,topic,source) VALUES ('Z1CODE001','Новости моделей и лабораторий','manual')")
+# Explicit audio-language fixture provenance, independent of ta-v1 text labels.
+con.execute("INSERT OR REPLACE INTO language_gate SELECT DISTINCT code, 'en', 'ENGLISH_DETECTED', '2026-09-14' FROM reels")
+con.execute("UPDATE language_gate SET language='hi', decision='EXCLUDED_NON_ENGLISH' WHERE code='E2CODE001'")
 con.commit()
 
 # ---------------------------------------------------------------- routing

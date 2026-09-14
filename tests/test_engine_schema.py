@@ -91,6 +91,11 @@ def _seed(con):
         for i in range(3):
             con.execute('INSERT INTO frames (code, idx, t_sec, path, exists_ok) VALUES (?,?,?,?,1)',
                         (code, i, 0.4 * (i + 1), f'data/frames/{code}/{i:02d}.jpg'))
+    # Positive readiness fixtures explicitly carry audio-language provenance.
+    # Unverified/absent-gate behavior is exercised by dedicated negative tests.
+    from engine.language_gate import record
+    for code in ('READY0001', 'READY0002', 'BROKEN0001'):
+        record(con, code, 'en')
     con.execute("UPDATE frames SET exists_ok=0 WHERE code='BROKEN0001' AND idx IN (1,2)")
     con.commit()
 

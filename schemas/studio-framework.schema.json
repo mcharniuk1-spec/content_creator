@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://archflow.local/schemas/studio-framework.schema.json",
+  "title": "Studio Framework",
+  "type": "object",
+  "required": ["framework_id", "version", "kind", "duration_ms", "aspect_ratio", "signal_input", "taxonomy", "frames", "rights_state", "external_provider_state"],
+  "properties": {
+    "framework_id": {"type": "string", "pattern": "^SF-[0-9]{3}$"},
+    "name": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "const": "1.0.0"},
+    "kind": {"enum": ["hook", "intro", "broll", "hook_intro", "hook_broll", "intro_broll"]},
+    "duration_ms": {"type": "integer", "minimum": 4000, "maximum": 12000},
+    "aspect_ratio": {"const": "9:16"},
+    "purpose": {"type": "string", "minLength": 1},
+    "signal_input": {
+      "type": "object",
+      "required": ["export_schema", "export_id", "record_hash", "source_rights_state", "source_ids", "evidence_ids", "rights_decision_ids"],
+      "properties": {
+        "export_schema": {"const": "signal-to-studio.v1"},
+        "export_id": {"type": "string", "pattern": "^SIGEXP-SF-[0-9]{3}$"},
+        "record_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "source_rights_state": {"enum": ["metadata_commentary_only", "original_local_previsualization", "blocked"]},
+        "source_ids": {"type": "array", "items": {"type": "string"}},
+        "evidence_ids": {"type": "array", "items": {"type": "string"}},
+        "rights_decision_ids": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "taxonomy": {
+      "type": "object",
+      "required": ["hook_mechanism", "viewer_job", "broll_function", "proof_form", "visual_grammar", "pacing_profile", "transition_family", "a_roll_integration", "sound_role", "text_role", "cta_exit", "risk_class"],
+      "properties": {
+        "hook_mechanism": {"enum": ["direct_promise", "diagnostic_question", "contradiction", "visual_anomaly", "before_after", "countdown", "object_demo", "consequence", "reveal", "story_in_progress"]},
+        "viewer_job": {"enum": ["identify_problem", "assess_risk", "learn_mechanism", "compare_options", "verify_claim", "imagine_outcome"]},
+        "broll_function": {"enum": ["establish_context", "concretize_abstraction", "demonstrate_process", "prove_state", "contrast", "attention_reset", "emotional_texture", "ui_orientation"]},
+        "proof_form": {"enum": ["observed_artifact", "calculation", "paraphrased_source", "process_trace", "constraint", "before_after_observation", "worked_example", "no_proof_claim"]},
+        "visual_grammar": {"enum": ["center_talking_head", "object_macro", "split_screen", "mock_screen_capture", "diagram_build", "sequential_cards", "tracking_detail", "static_tableau", "layered_pip", "kinetic_type"]},
+        "pacing_profile": {"enum": ["rapid_beat", "measured_beat", "held_reveal", "slow_observation"]},
+        "transition_family": {"enum": ["hard_cut", "match_on_action", "graphic_reveal", "push", "wipe", "dissolve", "cut_on_sound", "none"]},
+        "a_roll_integration": {"enum": ["full_open", "delayed_reveal", "voice_over_broll", "picture_in_picture", "return_cut", "absent"]},
+        "sound_role": {"enum": ["voice_anchor", "music_pulse", "accent_sfx", "ambient_bed", "silence_drop", "voice_plus_accent"]},
+        "text_role": {"enum": ["headline_only", "keyword_captions", "labels", "step_counter", "proof_callout", "question_card", "no_text"]},
+        "cta_exit": {"enum": ["answer_question", "save_reference", "comment_prompt", "next_step", "recap", "loop_to_open", "no_cta"]},
+        "risk_class": {"enum": ["low", "source_dependent", "claim_sensitive", "identity_sensitive", "rights_blocked"]}
+      },
+      "additionalProperties": false
+    },
+    "frames": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["frame_id", "start_ms", "end_ms", "story_function", "visual_change", "composition", "a_roll_state", "broll_function", "shot_scale", "caption_relation", "on_screen_text", "motion", "transition", "sound_cue", "image_path", "acceptance_checks"],
+        "properties": {
+          "frame_id": {"type": "string"},
+          "sequence_number": {"type": "integer", "minimum": 1},
+          "start_ms": {"type": "integer", "minimum": 0},
+          "end_ms": {"type": "integer", "minimum": 1},
+          "story_function": {"type": "string", "minLength": 1},
+          "visual_change": {"type": "string", "minLength": 1},
+          "composition": {"type": "string", "minLength": 1},
+          "a_roll_state": {"enum": ["full", "picture_in_picture", "voice_over", "absent", "return_cut"]},
+          "broll_function": {"type": "string", "minLength": 1},
+          "shot_scale": {"enum": ["close", "medium", "wide", "macro", "screen", "diagram"]},
+          "caption_relation": {"enum": ["before_cut", "on_cut", "after_cut", "continuous", "keyword_emphasis", "none"]},
+          "on_screen_text": {"type": "string"},
+          "motion": {"type": "string"},
+          "transition": {"type": "string"},
+          "sound_cue": {"type": "string"},
+          "image_path": {"type": "string", "pattern": "^frames/.+\\.(webp|png|svg)$"},
+          "acceptance_checks": {"type": "array", "minItems": 2, "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "rights_state": {"enum": ["original_local_previsualization", "metadata_commentary_only", "blocked"]},
+    "external_provider_state": {"const": "NOT_RUN"}
+  },
+  "additionalProperties": false
+}

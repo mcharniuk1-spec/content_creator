@@ -1,0 +1,460 @@
+{
+  "schema": "m2.stage-policy.v1",
+  "stages": [
+    {
+      "id": "admit",
+      "engine": "control",
+      "role": "integrator",
+      "requires": [],
+      "output": "admission",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "freeze_config",
+      "engine": "control",
+      "role": "integrator",
+      "requires": [
+        "admit"
+      ],
+      "output": "config",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "inventory",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "freeze_config"
+      ],
+      "output": "inventory",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "collect_or_replay",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "inventory"
+      ],
+      "output": "observations",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "normalize",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "collect_or_replay"
+      ],
+      "output": "entities",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "audit_all_rows",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "normalize"
+      ],
+      "output": "audit",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "media_manifest",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "audit_all_rows"
+      ],
+      "output": "media_manifest",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "media_acquire",
+      "engine": "signal",
+      "role": "data_engineer",
+      "requires": [
+        "media_manifest"
+      ],
+      "output": "media_acquisition",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "qualify_scope",
+      "engine": "signal",
+      "role": "strategy_analyst",
+      "requires": [
+        "audit_all_rows"
+      ],
+      "output": "scope",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "snapshot_metrics",
+      "engine": "signal",
+      "role": "quantitative_analyst",
+      "requires": [
+        "audit_all_rows"
+      ],
+      "output": "metrics",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "compute_baselines",
+      "engine": "signal",
+      "role": "quantitative_analyst",
+      "requires": [
+        "snapshot_metrics"
+      ],
+      "output": "baselines",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "rank_candidates",
+      "engine": "signal",
+      "role": "quantitative_analyst",
+      "requires": [
+        "compute_baselines"
+      ],
+      "output": "rankings",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "transcript_attempt",
+      "engine": "signal",
+      "role": "text_analyst",
+      "requires": [
+        "audit_all_rows"
+      ],
+      "output": "transcript_attempts",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "transcript_segment",
+      "engine": "signal",
+      "role": "text_analyst",
+      "requires": [
+        "transcript_attempt"
+      ],
+      "output": "transcript_sections",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "visual_attempt",
+      "engine": "signal",
+      "role": "scene_analyst",
+      "requires": [
+        "audit_all_rows"
+      ],
+      "output": "visual_attempts",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "scene_segment",
+      "engine": "signal",
+      "role": "scene_analyst",
+      "requires": [
+        "visual_attempt",
+        "transcript_segment"
+      ],
+      "output": "scenes",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "comment_attempt",
+      "engine": "signal",
+      "role": "comment_analyst",
+      "requires": [
+        "audit_all_rows"
+      ],
+      "output": "comments",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "multimodal_fuse",
+      "engine": "signal",
+      "role": "strategy_analyst",
+      "requires": [
+        "qualify_scope",
+        "rank_candidates",
+        "scene_segment",
+        "comment_attempt"
+      ],
+      "output": "features",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "account_aggregate",
+      "engine": "signal",
+      "role": "quantitative_analyst",
+      "requires": [
+        "multimodal_fuse"
+      ],
+      "output": "account_analysis",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "review_signal",
+      "engine": "signal",
+      "role": "signal_reviewer",
+      "requires": [
+        "account_aggregate"
+      ],
+      "output": "signal_review",
+      "gate": null,
+      "reviewer": true
+    },
+    {
+      "id": "release_to_studio",
+      "engine": "control",
+      "role": "integrator",
+      "requires": [
+        "review_signal"
+      ],
+      "output": "signal_release",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "write_script_cards",
+      "engine": "studio",
+      "role": "script_architect",
+      "requires": [
+        "release_to_studio"
+      ],
+      "output": "script_cards",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "plan_scenes",
+      "engine": "studio",
+      "role": "scene_planner",
+      "requires": [
+        "write_script_cards"
+      ],
+      "output": "scene_plans",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "review_studio",
+      "engine": "studio",
+      "role": "studio_reviewer",
+      "requires": [
+        "plan_scenes"
+      ],
+      "output": "studio_review",
+      "gate": null,
+      "reviewer": true
+    },
+    {
+      "id": "project_notion",
+      "engine": "projection",
+      "role": "projection_engineer",
+      "requires": [
+        "review_studio"
+      ],
+      "output": "projection_readback",
+      "gate": "notion_write",
+      "reviewer": false
+    },
+    {
+      "id": "owner_gate",
+      "engine": "studio",
+      "role": "owner",
+      "requires": [
+        "review_studio"
+      ],
+      "output": "shoot_approval",
+      "gate": "shoot_plan",
+      "reviewer": false
+    },
+    {
+      "id": "await_owner_media",
+      "engine": "studio",
+      "role": "owner",
+      "requires": [
+        "owner_gate"
+      ],
+      "output": "owner_media",
+      "gate": "owner_media",
+      "reviewer": false
+    },
+    {
+      "id": "probe_owner_media",
+      "engine": "studio",
+      "role": "video_engineer",
+      "requires": [
+        "await_owner_media"
+      ],
+      "output": "media_probe",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "lock_edit_plan",
+      "engine": "studio",
+      "role": "video_engineer",
+      "requires": [
+        "probe_owner_media"
+      ],
+      "output": "edit_plan",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "plan_generation",
+      "engine": "studio",
+      "role": "video_engineer",
+      "requires": [
+        "lock_edit_plan"
+      ],
+      "output": "generation_plan",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "generation_approval",
+      "engine": "studio",
+      "role": "owner",
+      "requires": [
+        "plan_generation"
+      ],
+      "output": "generation_approval",
+      "gate": "paid_generation",
+      "reviewer": false
+    },
+    {
+      "id": "generate_assets",
+      "engine": "studio",
+      "role": "video_engineer",
+      "requires": [
+        "generation_approval"
+      ],
+      "output": "generated_assets",
+      "gate": "paid_generation",
+      "reviewer": false
+    },
+    {
+      "id": "review_assets",
+      "engine": "studio",
+      "role": "studio_reviewer",
+      "requires": [
+        "generate_assets"
+      ],
+      "output": "asset_review",
+      "gate": null,
+      "reviewer": true
+    },
+    {
+      "id": "render_remotion",
+      "engine": "studio",
+      "role": "video_engineer",
+      "requires": [
+        "lock_edit_plan"
+      ],
+      "output": "render_receipt",
+      "gate": "render",
+      "reviewer": false
+    },
+    {
+      "id": "media_qa",
+      "engine": "studio",
+      "role": "studio_reviewer",
+      "requires": [
+        "render_remotion"
+      ],
+      "output": "media_qa",
+      "gate": null,
+      "reviewer": true
+    },
+    {
+      "id": "owner_final",
+      "engine": "studio",
+      "role": "owner",
+      "requires": [
+        "media_qa"
+      ],
+      "output": "final_approval",
+      "gate": "final_edit",
+      "reviewer": false
+    },
+    {
+      "id": "publish",
+      "engine": "distribution",
+      "role": "publisher",
+      "requires": [
+        "owner_final"
+      ],
+      "output": "publication",
+      "gate": "publish",
+      "reviewer": false
+    },
+    {
+      "id": "measure_owned_outputs",
+      "engine": "signal",
+      "role": "quantitative_analyst",
+      "requires": [
+        "publish"
+      ],
+      "output": "owned_metrics",
+      "gate": "owned_analytics",
+      "reviewer": false
+    },
+    {
+      "id": "learn",
+      "engine": "knowledge",
+      "role": "knowledge_curator",
+      "requires": [
+        "review_signal",
+        "review_studio"
+      ],
+      "output": "knowledge_candidates",
+      "gate": null,
+      "reviewer": false
+    },
+    {
+      "id": "promote_knowledge",
+      "engine": "knowledge",
+      "role": "knowledge_reviewer",
+      "requires": [
+        "learn"
+      ],
+      "output": "knowledge_review",
+      "gate": null,
+      "reviewer": true
+    },
+    {
+      "id": "close_run",
+      "engine": "control",
+      "role": "integrator",
+      "requires": [
+        "review_studio",
+        "promote_knowledge"
+      ],
+      "output": "terminal_receipt",
+      "gate": null,
+      "reviewer": false
+    }
+  ]
+}

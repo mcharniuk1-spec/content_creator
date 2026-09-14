@@ -40,7 +40,7 @@
 внутри самого шага пробрасывается дальше как раньше — трекинг никогда не глотает реальную
 ошибку шага.
 """
-import contextlib, datetime, subprocess, sys, time
+import contextlib, datetime, signal, subprocess, sys, time
 from db import connect
 
 import cards, collect_snapshot, deep, delta, notion, notion_db, pages, roster, score, stats, tag_topics
@@ -49,6 +49,20 @@ try:
     from engine import state as engine_state
 except ImportError:
     engine_state = None
+
+
+# Собственный срок тяжёлого шага. Общий будильник в cron.sh — предохранитель от
+# зависания, а не рабочий лимит: 14 сентября 2026 он убил прогон на разборе 60-го ролика
+# из 100, и десять оставшихся шагов не выполнились. Теперь разбор сам останавливается
+# на достигнутом, а неразобранное поднимается в очередь следующего прогона.
+DEEP_BUDGET_S = 100 * 60
+
+
+def _on_stop(signum, _frame):
+    """SIGTERM от `timeout` по умолчанию убивает процесс, минуя finally: прогон навсегда
+    остаётся в базе со статусом RUNNING, и отчёт ПМ-агента рассказывает про живой прогон
+    через сутки после его смерти. Превращаем сигнал в SystemExit, чтобы finally отработал."""
+    raise SystemExit(f'прогон остановлен сигналом {signum}')
 
 
 STEP_TITLES = {
@@ -152,6 +166,8 @@ def main(run=False):
     t0 = time.time()
     tracker = StepTracker()
     run_id = _start_run(con)
+    interrupted = False
+    signal.signal(signal.SIGTERM, _on_stop)
 
     try:
         # Шаги 1, 6, 9, 13 не пишутся через engine.state.job(): его stage — фиксированный
@@ -188,9 +204,14 @@ def main(run=False):
                 # разбор верхушки = расшифровка + кадры; ближе по смыслу к TRANSCRIPTION,
                 # хотя deep.run() делает и то, и другое за один проход
                 with _job(con, run_id, 'weekly:deepdive', 'TRANSCRIPTION'):
-                    done, no_url, empty = deep.run(con, rows)
+                    done, no_url, empty, stopped = deep.run(
+                        con, rows, deadline=time.time() + DEEP_BUDGET_S)
                 print(f'разобрано {done} из {len(rows)}, без ссылки {len(no_url)}, пустых {len(empty)}')
-                tracker.mark(3, 'OK')
+                if stopped:
+                    tracker.mark(3, 'PARTIAL',
+                                 f'срок {DEEP_BUDGET_S // 60} мин вышел на {done} из {len(rows)}')
+                else:
+                    tracker.mark(3, 'OK')
         else:
             tracker.mark(3, 'SKIPPED', 'в окне подходящих нет')
 
@@ -301,11 +322,22 @@ def main(run=False):
               f'python3 deep.py check')
         print(f'  2. углы и хуки — python3 cards.py angle НОМЕР "текст"')
         print(f'  3. пересобрать страницы после углов — python3 pages.py')
+    except (SystemExit, KeyboardInterrupt):
+        interrupted = True
+        raise
     finally:
         print(tracker.render())
         if engine_state and run_id:
             try:
-                status = 'FAILED' if any(s == 'FAILED' for s, _ in tracker.rows.values()) else 'DONE'
+                states = [s for s, _ in tracker.rows.values()]
+                if interrupted:
+                    status = 'INTERRUPTED'
+                elif 'FAILED' in states:
+                    status = 'FAILED'
+                elif 'PARTIAL' in states:
+                    status = 'PARTIAL'
+                else:
+                    status = 'DONE'
                 summary = {n: {'title': STEP_TITLES[n], 'state': s, 'reason': r}
                           for n, (s, r) in tracker.rows.items()}
                 engine_state.finish_run(con, run_id, status, summary)

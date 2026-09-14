@@ -20,7 +20,7 @@ import pathlib
 import random
 import socket
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from engine.db_util import ROOT, canonical_json, git_commit, loads, new_id, now, table_exists
 
@@ -68,10 +68,30 @@ def make_run_id(when=None):
     return f"{when.strftime('%Y-%m-%d_%H%M')}-{random.getrandbits(24):06x}"
 
 
+def sweep_stale_runs(con, max_age_h=12):
+    """Mark long-abandoned RUNNING rows as INTERRUPTED and return how many were swept.
+
+    A run killed by a signal (`timeout` sends SIGTERM) never reaches `finish_run`, so its
+    row stays RUNNING for ever. On 14 Sep 2026 the project-manager agent read one of those
+    and reported a live run two hours after it had been killed. Anything still open after
+    `max_age_h` is not running any more: the longest legitimate run is capped well below it.
+    """
+    cutoff = (datetime.now(timezone.utc) - timedelta(hours=max_age_h)).strftime('%Y-%m-%dT%H:%M:%SZ')
+    cur = con.execute(
+        "UPDATE runs SET status='INTERRUPTED', finished_at=? "
+        "WHERE status='RUNNING' AND finished_at IS NULL AND started_at < ?", (now(), cutoff))
+    con.commit()
+    return cur.rowcount
+
+
 def start_run(con, kind, config=None):
     """Open a run and return its run_id."""
     if kind not in RUN_KINDS:
         raise ValueError(f'unknown run kind {kind!r}; expected one of {RUN_KINDS}')
+    try:
+        sweep_stale_runs(con)
+    except Exception:
+        pass      # уборка чужих строк не должна мешать начать свой прогон
     run_id = make_run_id()
     con.execute(
         'INSERT INTO runs (run_id, started_at, finished_at, kind, git_commit, host, '

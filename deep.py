@@ -15,7 +15,7 @@
 Речь распознаётся здесь же, пока видео ещё не удалено: раньше расшифровка жила отдельным
 скриптом, который читал уже стёртые файлы, и у новых роликов её не было бы никогда.
 """
-import collections, datetime, glob, json, pathlib, re, subprocess, sys
+import collections, datetime, glob, json, pathlib, re, subprocess, sys, time
 from db import connect
 
 D = pathlib.Path(__file__).parent / 'data'
@@ -129,25 +129,50 @@ def transcribe(mp4):
         return None, None
 
 
-def run(con, rows, keep_video=False, speech=True):
+def run(con, rows, keep_video=False, speech=True, deadline=None):
+    """Разбор списка роликов. `deadline` — момент времени (time.time()), после которого
+    шаг останавливается на достигнутом и отдаёт управление дальше.
+
+    Собственный срок у шага появился 14 сентября 2026. До этого единственным ограничителем
+    был `timeout 7200` на весь прогон в cron.sh: разбор упёрся в него на 60-м ролике из 100,
+    процесс убили сигналом, и десять оставшихся шагов — включая карточки — не выполнились
+    вовсе. Разобранного к тому моменту материала на карточки хватало с запасом.
+
+    Возвращает (сколько разобрано, без ссылки, пустых, остановлен ли по сроку).
+    """
     import imageio_ffmpeg
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     V.mkdir(exist_ok=True); F.mkdir(exist_ok=True)
     urls = _urls({r['code'] for r in rows})
     sid = con.execute('SELECT id FROM snapshots WHERE done=1 ORDER BY taken DESC LIMIT 1').fetchone()[0]
     today = datetime.date.today().isoformat()
-    done, no_url, empty = 0, [], []
+    done, no_url, empty, stopped = 0, [], [], False
+    # Замер по частям (14 сентября 2026). Один ролик стал обходиться в ~114 секунд против
+    # ~46 неделей раньше при том же размере файла и той же длине. Автоопределение языка
+    # проверено и оправдано: 98,5 с против 102,9 с на одном и том же ролике, то есть ни при
+    # чём. Дальше гадать не на чем — пусть прогон сам покажет, где уходит время.
+    spent = collections.Counter()
     for i, r in enumerate(rows, 1):
+        if deadline is not None and time.time() >= deadline:
+            # неразобранные не теряются: pick() исключает только те, что уже в deepdives,
+            # поэтому остаток сам поднимется в начало очереди следующего прогона
+            stopped = True
+            print(f'  срок шага вышел: разобрано {done} из {len(rows)}, '
+                  f'остальное уйдёт в следующий прогон', flush=True)
+            break
         c = r['code']; mp4 = V / f'{c}.mp4'
         if not mp4.exists():
             u = urls.get(c)
             if not u:
                 no_url.append(c); continue
+            _t = time.time()
             subprocess.run(['curl', '-sL', '--max-time', '150', '-o', str(mp4), u])
+            spent['скачивание'] += time.time() - _t
         if not mp4.exists() or mp4.stat().st_size < 10_000:
             empty.append(c); mp4.unlink(missing_ok=True); continue
         mb = round(mp4.stat().st_size / 1048576, 1)
         od = F / c; od.mkdir(exist_ok=True)
+        _t = time.time()
         tcs = timecodes(r['dur'])
         for j, t in enumerate(tcs):
             p = od / f'{j:02d}_{t:g}s.jpg'
@@ -160,8 +185,11 @@ def run(con, rows, keep_video=False, speech=True):
                             '-i', str(od / '*.jpg'), '-filter_complex', 'tile=3x3',
                             '-q:v', '4', str(sheet)])
         n = cuts(ff, mp4)
+        spent['кадры и склейки'] += time.time() - _t
         if speech and not con.execute('SELECT 1 FROM transcripts WHERE code=?', (c,)).fetchone():
+            _t = time.time()
             segs, lang = transcribe(mp4)         # пока mp4 ещё на диске
+            spent['расшифровка'] += time.time() - _t
             if segs is not None:
                 text = ' '.join(s['t'] for s in segs).strip()
                 con.execute("""INSERT OR REPLACE INTO transcripts
@@ -179,9 +207,12 @@ def run(con, rows, keep_video=False, speech=True):
             mp4.unlink(missing_ok=True)      # SPEC §4.4: видео не храним
         done += 1
         if done % 10 == 0:
-            con.commit(); print(f'  {done}/{len(rows)} · без ссылки {len(no_url)}', flush=True)
+            con.commit()
+            split = ' · '.join(f'{k} {v / done:.0f} с' for k, v in spent.most_common())
+            print(f'  {done}/{len(rows)} · без ссылки {len(no_url)} · на ролик: {split}',
+                  flush=True)
     con.commit()
-    return done, no_url, empty
+    return done, no_url, empty, stopped
 
 
 def mark(con, code, ok, why=None):

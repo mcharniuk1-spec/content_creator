@@ -12,24 +12,36 @@ def canonical(value):
 def load(path):
     return json.loads(path.read_text())
 
+def validate_independent_review(review):
+    maker=review.get('maker');reviewer=review.get('reviewer')
+    if (review.get('status')!='ACCEPTED_MECHANICAL_RECONCILIATION_ONLY'
+        or not isinstance(maker,str) or not maker.strip()
+        or not isinstance(reviewer,str) or not reviewer.strip()
+        or maker.strip()==reviewer.strip()):
+        raise ValueError('INDEPENDENT_REVIEW_REQUIRED')
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--packet',type=Path,required=True)
     parser.add_argument('--release',required=True)
     parser.add_argument('--receipt',type=Path,required=True)
     parser.add_argument('--review',type=Path,required=True)
+    parser.add_argument('--require-cohort',action='store_true')
     args=parser.parse_args(); packet=args.packet
     frozen={name:(packet/name).read_bytes() for name in ['source-manifest.json','identity-dispositions.json','schemas.json']}
     sources=json.loads(frozen['source-manifest.json']); identities=json.loads(frozen['identity-dispositions.json']); schemas=json.loads(frozen['schemas.json'])
     hashes={name:hashlib.sha256(value).hexdigest() for name,value in frozen.items()}
     hashes['observations.jsonl']=hashlib.file_digest((packet/'observations.jsonl').open('rb'),'sha256').hexdigest()
     review=load(args.review)
-    if review.get('status')!='ACCEPTED_MECHANICAL_RECONCILIATION_ONLY': raise ValueError('INDEPENDENT_REVIEW_REQUIRED')
+    validate_independent_review(review)
     if any(review.get('reviewed_artifact_hashes',{}).get(k)!=v for k,v in hashes.items()): raise ValueError('REVIEW_HASH_MISMATCH')
     manifest_hash=hashlib.sha256(canonical(hashes).encode()).hexdigest()
     counts={}; imported=0
     with psycopg.connect(os.environ['M2_DATABASE_DSN']) as conn:
         with conn.cursor() as cur:
+            cur.execute("SELECT to_regclass('m2_shared.release_source_rows')")
+            cohort_supported=bool(cur.fetchone()[0])
+            if args.require_cohort and not cohort_supported: raise ValueError('RELEASE_COHORT_SCHEMA_REQUIRED')
             cur.execute('INSERT INTO m2_shared.releases VALUES (%s,%s,%s,%s) ON CONFLICT DO NOTHING',(args.release,manifest_hash,'candidate',Jsonb(['dated backups; no acoustic acceptance; no live server completeness'])))
             cur.execute('SELECT manifest_sha256 FROM m2_shared.releases WHERE id=%s',(args.release,))
             if cur.fetchone()[0]!=manifest_hash: raise ValueError('RELEASE_INPUT_CHANGED')
@@ -63,9 +75,20 @@ def main():
             cur.execute('SELECT count(*) FROM incoming_rows i JOIN m2_shared.source_rows s USING(source_id,table_name,row_key) WHERE i.payload_sha256=s.payload_sha256 AND i.payload=s.payload')
             matched=cur.fetchone()[0]
             if matched!=imported: raise ValueError('ROW_READBACK_MISMATCH')
+            # Migration 011 adds immutable cohort membership; older schema-only
+            # deployments retain compatibility until that migration is admitted.
+            if cohort_supported:
+                cur.execute('INSERT INTO m2_shared.release_source_rows SELECT DISTINCT %s,source_id,table_name,row_key FROM incoming_rows ON CONFLICT DO NOTHING',(args.release,))
+            cur.execute("SELECT to_regclass('m2_shared.release_seals')")
+            seal_supported=bool(cur.fetchone()[0])
+            if args.require_cohort and not seal_supported: raise ValueError('RELEASE_SEAL_SCHEMA_REQUIRED')
+            cohort_hash=None
+            if seal_supported and cohort_supported:
+                cur.execute('SELECT m2_shared.seal_release(%s)',(args.release,))
+                cohort_hash=cur.fetchone()[0]
             cur.execute('SELECT count(*) FROM m2_shared.reel_assessments WHERE release_id=%s',(args.release,)); matched_reels=cur.fetchone()[0]
             if matched_reels!=len(identities): raise ValueError('IDENTITY_READBACK_MISMATCH')
-    args.receipt.write_text(json.dumps({'status':'PASS','release':args.release,'input_hashes':hashes,'source_rows_matched':matched,'identities_matched':matched_reels,'source_table_counts':counts,'normalized_entity_projection':'NOT_RUN','media_upload':'NOT_RUN','limits':['source_rows preserves all original fields; typed downstream entities remain pending reviewed projection']},indent=2)+'\n')
+    args.receipt.write_text(json.dumps({'status':'PASS','release':args.release,'release_cohort_registered':cohort_supported,'cohort_sha256':cohort_hash,'input_hashes':hashes,'source_rows_matched':matched,'identities_matched':matched_reels,'source_table_counts':counts,'normalized_entity_projection':'NOT_RUN','media_upload':'NOT_RUN','limits':['source_rows preserves all original fields; typed downstream entities remain pending reviewed projection']},indent=2)+'\n')
     print(json.dumps({'status':'PASS','rows':matched,'identities':matched_reels}))
 
 if __name__=='__main__':

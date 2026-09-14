@@ -14,7 +14,7 @@ import datetime, statistics, sys
 import analyze, notion
 from db import connect
 
-WINDOW = 30   # = cards.FRESH_DAYS; 14 → 30 решением Миши 12 сентября 2026
+WINDOW = 14   # = cards.FRESH_DAYS; 30 → 14 обратно решением Миши 14 сентября 2026
 CHUNK = 90
 
 

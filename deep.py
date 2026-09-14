@@ -20,7 +20,8 @@ from db import connect
 
 D = pathlib.Path(__file__).parent / 'data'
 V, F = D / 'video', D / 'frames'
-N, WINDOW, CAP = 100, 30, 2      # роликов за прогон, окно свежести (= cards.FRESH_DAYS, 30 с 12 сентября 2026), кап на автора
+N, WINDOW, CAP = 100, 14, 2      # роликов за прогон, окно свежести (= cards.FRESH_DAYS), кап на автора
+                                 # N ограничивает длину шага 3 грубо; точный ограничитель — DEEP_BUDGET_S в run.py
 
 
 def pick(con, n=N, window=WINDOW, cap=CAP, today=None):

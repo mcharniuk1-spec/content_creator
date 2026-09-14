@@ -113,7 +113,7 @@ def _pool(con, today, require_evidence=True):
           AND s.eligible = 1 AND s.weights = 'ig' AND r.ts >= ?
           AND (d.suitable IS NULL OR d.suitable = 1)""", (edge,)).fetchall()
     out = []
-    dropped = {'no_transcript': 0, 'no_frames': 0, 'not_english': 0}
+    dropped = {'no_transcript': 0, 'no_frames': 0, 'not_english': 0, 'missing_intent_metrics': 0}
     qualifying = set()                        # авторы с хотя бы одним роликом выше нормы в окне
     for r in rows:
         if r['author_median_play'] and r['play'] / r['author_median_play'] >= MIN_MULT:
@@ -145,7 +145,10 @@ def _pool(con, today, require_evidence=True):
         mult = round(r['play'] / r['author_median_play'], 1) if r['author_median_play'] else None
         d = dict(r); d['topics'] = topics; d['mult'] = mult
         d['above_norm'] = bool(mult and mult >= MIN_MULT)
-        d[RANK] = (r['resh_1k'] or 0) + (r['save_1k'] or 0)
+        if r['resh_1k'] is None or r['save_1k'] is None:
+            dropped['missing_intent_metrics'] += 1
+            continue  # combined-rate ranking needs both observed components
+        d[RANK] = r['resh_1k'] + r['save_1k']
         d['age'] = (today - datetime.date.fromtimestamp(r['ts'])).days
         # блок контента — ось отбора с 13 сентября 2026 (content_blocks.py)
         rt = cb.route(r['code'], topics, cb.reel_text(con, r['code'], r['cap']))

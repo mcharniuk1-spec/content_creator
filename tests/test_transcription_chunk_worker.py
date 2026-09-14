@@ -285,10 +285,12 @@ def test_standalone_cli_bootstraps_repository_import():
 
 
 def test_cli_run_manifest_is_resumable_but_binding_mismatch_blocks(tmp_path):
+    config = build_recovery_config(source_media_hash=SOURCE_HASH, duration_ms=2_000, model_bundle_sha256=MODEL_HASH)
     prepared = {
         "record": {"sha256": SOURCE_HASH, "source_pointer": "media.mp4"},
         "model": {"bundle_sha256": MODEL_HASH},
-        "config_hash": "c" * 64,
+        "config": config,
+        "config_hash": object_hash(config),
         "plans": plan_windows(2_000),
         "input_paths": {"source_root_lexical": str(tmp_path), "source_root_resolved": str(tmp_path.resolve())},
         "runtime": {"schema": "m2.transcription-recovery-runtime-receipt.v1", "executable_lexical": "python3", "executable_resolved": "python3", "executable_sha256": "e" * 64, "python_version": "3.12", "implementation": "cpython", "packages": {}, "module_hashes": {}},
@@ -297,10 +299,12 @@ def test_cli_run_manifest_is_resumable_but_binding_mismatch_blocks(tmp_path):
     first = cli._open_or_create_run(output, prepared)
     second = cli._open_or_create_run(output, prepared)
     assert first == second
-    prepared["config_hash"] = "d" * 64
+    prepared["config"] = build_recovery_config(source_media_hash=SOURCE_HASH, duration_ms=2_000, model_bundle_sha256=MODEL_HASH, beam_size=1)
+    prepared["config_hash"] = object_hash(prepared["config"])
     with pytest.raises(ValueError, match="RUN_MANIFEST_BINDING_MISMATCH"):
         cli._open_or_create_run(output, prepared)
-    prepared["config_hash"] = "c" * 64
+    prepared["config"] = config
+    prepared["config_hash"] = object_hash(config)
     prepared["runtime"]["executable_sha256"] = "f" * 64
     with pytest.raises(ValueError, match="RUN_MANIFEST_BINDING_MISMATCH"):
         cli._open_or_create_run(output, prepared)
@@ -398,7 +402,8 @@ def test_runtime_probe_uses_lexical_virtual_environment_executable(monkeypatch, 
 
 
 def test_run_manifest_binds_rights_and_source_record(tmp_path):
-    prepared={'record':{'sha256':SOURCE_HASH,'source_pointer':'media.mp4','source_kind':'approved_research_copy','rights':{'analysis_allowed':True,'receipt_id':'first'}},'model':{'bundle_sha256':MODEL_HASH},'config_hash':'c'*64,'plans':plan_windows(2000),'input_paths':{},'runtime':{}}
+    config = build_recovery_config(source_media_hash=SOURCE_HASH, duration_ms=2_000, model_bundle_sha256=MODEL_HASH)
+    prepared={'record':{'sha256':SOURCE_HASH,'source_pointer':'media.mp4','source_kind':'approved_research_copy','rights':{'analysis_allowed':True,'receipt_id':'first'}},'model':{'bundle_sha256':MODEL_HASH},'config':config,'config_hash':object_hash(config),'plans':plan_windows(2000),'input_paths':{},'runtime':{}}
     output=tmp_path/'recovery';cli._open_or_create_run(output,prepared)
     prepared['record']['rights']['receipt_id']='different-authority'
     with pytest.raises(ValueError,match='RUN_MANIFEST_BINDING_MISMATCH'):

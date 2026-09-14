@@ -40,7 +40,7 @@ def implementation_manifest():
     root = Path(__file__).parent.parent
     paths = set()
     for directory in ["m2_orchestrator", "m2_signal", "m2_studio", "studio/remotion",
-                      "skills/m2-stage-worker", "skills/m2-script-writer"]:
+                      "skills/m2-stage-worker", "skills/m2-script-writer", "skills/humanize-writing", "knowledge/studio"]:
         for p in (root / directory).rglob("*"):
             if p.is_file() and not ({"__pycache__", "node_modules", ".cache"} & set(p.parts)) and p.suffix in {".py", ".sql", ".json", ".mjs", ".ts", ".tsx", ".md"}:
                 paths.add(p)

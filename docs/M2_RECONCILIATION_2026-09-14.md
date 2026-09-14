@@ -14,7 +14,7 @@ Base: Michael main `665ecb01a06f57f72352051e099eff63be2cf3bb`. Portable source a
 
 ## Validation
 
-Portable and partner suite: **507 passed, 12 skipped, 2 deselected**, plus 30 subtests, using existing Python runtimes. Two real Chrome PDF tests crashed with SIGABRT and were explicitly excluded from the final pass. Local media/production suites could not collect because `imageio_ffmpeg` is absent in the test runtime; they were not certified. No dependency installed. Focused language, stale-output, secret-loader, fal, statistics and projection tests passed. No end-to-end server or provider execution was performed.
+Portable and partner suite after fork restoration: **716 passed, 12 skipped, 2 deselected**, plus 30 subtests, using existing Python runtimes. Two real Chrome PDF tests crashed with SIGABRT and were explicitly excluded from the final pass. Local media/production suites could not collect because `imageio_ffmpeg` is absent in the test runtime; they were not certified. Focused card-ranking checks also passed after rejecting missing combined-rate components. No dependency installed. Focused language, stale-output, secret-loader, fal, statistics and projection tests passed. No end-to-end server or provider execution was performed.
 
 ## Database evidence and limitations
 

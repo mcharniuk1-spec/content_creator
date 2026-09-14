@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import worker from './worker.mjs';
+const env={GATEWAY_TOKEN:'test-only',WORKER_TOKEN:'test-worker-only',WORKER_ORIGIN:'https://worker.example'};
+const req=(body,token='test-only')=>new Request('https://gateway.example/v1/jobs',{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body)});
+assert.equal((await worker.fetch(req({}),{})).status,503);
+assert.equal((await worker.fetch(req({},'bad'),env)).status,401);
+assert.equal((await worker.fetch(req({stage:'paid_generation'}),env)).status,400);
+assert.equal((await worker.fetch(req({x:'x'.repeat(17000)}),env)).status,413);
+let called=0;
+globalThis.fetch=async(url,options)=>{called++;assert.equal(options.headers['Idempotency-Key'],`asr:${'a'.repeat(64)}`);assert.equal(options.redirect,'error');return new Response('',{status:201});};
+const body={stage:'asr',input_sha256:'a'.repeat(64),release_id:'fixture'};
+assert.equal((await worker.fetch(req(body),env)).status,202);
+assert.equal(called,1);
+assert.equal((await worker.fetch(req({...body,prompt:'untrusted'}),env)).status,400);
+console.log('PASS: config, auth, cost boundary, body bound, dispatch identity, unknown fields');

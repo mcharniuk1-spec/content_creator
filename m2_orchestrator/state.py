@@ -339,8 +339,8 @@ class Controller:
             raise StateError("FAILURE_CODE_INVALID")
         with self.transaction() as c:
             row = c.execute("SELECT * FROM stages WHERE id=?", (stage_id,)).fetchone()
-            if not row or row["state"] != "RUNNING" or row["token"] != token:
-                raise StateError("STALE_WORKER_TOKEN")
+            if not row or row["state"] != "RUNNING" or row["token"] != token or row["lease_until"] <= time.time():
+                raise StateError("STALE_WORKER_TOKEN_OR_LEASE")
             c.execute("UPDATE stages SET state=?,error=?,token=NULL,lease_until=NULL WHERE id=?", (blocked, error, stage_id))
             self._event(c, "STAGE_FAILED", {"stage": stage_id, "error": error, "state": blocked})
 

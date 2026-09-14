@@ -1,0 +1,10 @@
+{
+  "private_run_root": ".local",
+  "private_source_roots": ["data", ".local", "config"],
+  "legacy_db": "data/radar.db",
+  "snapshot_date": "latest_completed",
+  "run_id": "signal-{snapshot_date}",
+  "run_dir": ".local/runs/{snapshot_date}",
+  "database": ".local/signal.sqlite",
+  "metric_config": "config/m2-metrics.v1.json"
+}

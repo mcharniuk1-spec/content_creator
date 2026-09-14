@@ -1,0 +1,10 @@
+{
+  "approved": false,
+  "approval_id": "REPLACE_WITH_OWNER_EVENT_ID",
+  "approved_by": "REPLACE_WITH_OWNER_IDENTITY",
+  "scopes": ["hikerapi_instagram_reels_collection"],
+  "config_sha256": "REPLACE_WITH_EXACT_PLAN_CONFIG_SHA256",
+  "expires_at": "2000-01-01T00:00:00Z",
+  "live_schema_probe_approved": false,
+  "schema_receipt_sha256": null
+}

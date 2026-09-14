@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-P02",
+  "title": "Turn a competitor post into a customer question",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "regular",
+  "synthesis": true,
+  "hooks": [
+    "That competitor post got a lot of views. Which customer question made it worth watching?",
+    "Before borrowing that hook, find the customer question underneath it.",
+    "A popular post can start your research. Your customer should shape the idea."
+  ],
+  "full_spoken_english": "That competitor post got a lot of views. Which customer question made it worth watching? If you help market a small business, use the number to choose something to inspect. Keep the capture date beside it. Compare it with the same account's usual views. Then read what was said and look at what the viewer could actually see. Write three notes: the problem introduced, the useful answer, and the visual that made that answer clear. Now close the reference. Pick a question your own customers ask, and answer it with your own example. A high view count doesn't tell you which detail caused it. Treat your new idea as something to test, not a proven recipe. Before borrowing a hook, finish this sentence: our customer needs to understand blank. Build the post around that.",
+  "word_count": 134,
+  "cta": "Before borrowing a hook, finish this sentence: our customer needs to understand blank. Build the post around that.",
+  "fixture": {
+    "input": "Fictional reference: strong view count; opening names unclear appointment confirmations; workflow diagram shows a change branch.",
+    "designed_output": "Customer question: How do I ask to change my booking? Original post idea: show the reply and reception handoff.",
+    "check": "A new customer problem and original example, no copied line or causal claim.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-P02-S01",
+      "start_ms": 0,
+      "end_ms": 7000,
+      "mode": "a_roll",
+      "visual": "A-roll: presenter moves a HIGH VIEWS card into a TO REVIEW tray.",
+      "on_screen_text": "Original tray label: CUSTOMER QUESTION; no creator screenshot reused.",
+      "information_job": "Limit what popularity data can decide.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P02-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P02-S02",
+      "start_ms": 7000,
+      "end_ms": 16000,
+      "mode": "demo",
+      "visual": "Top-down original research worksheet with capture date and views fields; neutral reference-post card enters the inspection tray.",
+      "on_screen_text": "DATED RESEARCH LEAD",
+      "information_job": "Explain the comparison design.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P02-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P02-S03",
+      "start_ms": 16000,
+      "end_ms": 26000,
+      "mode": "demo",
+      "visual": "Split-screen fictional source transcript and original process diagram beside two distinct metric columns: views and account median.",
+      "on_screen_text": "READ THE WORDS / INSPECT THE VISUAL",
+      "information_job": "Keep evidence types and missingness separate.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P02-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P02-S04",
+      "start_ms": 26000,
+      "end_ms": 34000,
+      "mode": "demo",
+      "visual": "Top-down B-roll: three original notes labelled problem, useful answer, clarifying visual; presenter fills one customer question.",
+      "on_screen_text": "PROBLEM / ANSWER / VISUAL",
+      "information_job": "Focus analysis on audience value.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P02-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P02-S05",
+      "start_ms": 34000,
+      "end_ms": 42000,
+      "mode": "motion_graphic",
+      "visual": "Presenter closes the reference folder and writes a real-customer-question placeholder on a fresh blank sheet.",
+      "on_screen_text": "OUR CUSTOMER ASKS: ____",
+      "information_job": "Set synthesis and review roles.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P02-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P02-S06",
+      "start_ms": 42000,
+      "end_ms": 52000,
+      "mode": "a_roll",
+      "visual": "A-roll with separate source observation card and new-idea test card; no connecting causal arrow.",
+      "on_screen_text": "NEW IDEA → TEST",
+      "information_job": "State the evidence limit and proper use.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P02-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P02-S07",
+      "start_ms": 52000,
+      "end_ms": 60000,
+      "mode": "motion_graphic",
+      "visual": "Held original post brief headed Our customer needs to understand, with one blank line and simple original example box.",
+      "on_screen_text": "OUR CUSTOMER NEEDS TO UNDERSTAND ____",
+      "information_job": "Give the creative next step.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P02-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 7000,
+      "spoken_text": "That competitor post got a lot of views. Which customer question made it worth watching?"
+    },
+    {
+      "start_ms": 7000,
+      "end_ms": 16000,
+      "spoken_text": "If you help market a small business, use the number to choose something to inspect. Keep the capture date beside it."
+    },
+    {
+      "start_ms": 16000,
+      "end_ms": 26000,
+      "spoken_text": "Compare it with the same account's usual views. Then read what was said and look at what the viewer could actually see."
+    },
+    {
+      "start_ms": 26000,
+      "end_ms": 34000,
+      "spoken_text": "Write three notes: the problem introduced, the useful answer, and the visual that made that answer clear."
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 42000,
+      "spoken_text": "Now close the reference. Pick a question your own customers ask, and answer it with your own example."
+    },
+    {
+      "start_ms": 42000,
+      "end_ms": 52000,
+      "spoken_text": "A high view count doesn't tell you which detail caused it. Treat your new idea as something to test, not a proven recipe."
+    },
+    {
+      "start_ms": 52000,
+      "end_ms": 60000,
+      "spoken_text": "Before borrowing a hook, finish this sentence: our customer needs to understand blank. Build the post around that."
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-P02-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: presenter moves a HIGH VIEWS card into a TO REVIEW tray.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P02-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Top-down original research worksheet with capture date and views fields; neutral reference-post card enters the inspection tray.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P02-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Split-screen fictional source transcript and original process diagram beside two distinct metric columns: views and account median.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P02-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Top-down B-roll: three original notes labelled problem, useful answer, clarifying visual; presenter fills one customer question.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P02-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Presenter closes the reference folder and writes a real-customer-question placeholder on a fresh blank sheet.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P02-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll with separate source observation card and new-idea test card; no connecting causal arrow.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P02-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Held original post brief headed Our customer needs to understand, with one blank line and simple original example box.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P02-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "51dc9bf5daca7bf6caa307ae58677563471dd14a4d643531395df4e4a6bb7853",
+  "source_reference_count": 3,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-P02.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

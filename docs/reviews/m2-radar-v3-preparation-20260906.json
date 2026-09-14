@@ -1,0 +1,134 @@
+{
+  "schema": "m2.radar-delivery-preparation.v1",
+  "receipt_id": "m2-radar-v3-preparation-20260906",
+  "created_at": "2026-09-06",
+  "state": "PREPARATION_INDEPENDENT_FINAL_REVIEW_PENDING",
+  "delivery": {
+    "repository": "portable-radar",
+    "base_commit": "5891b504d3f59ac0e5d1313983a467ad5ca4a277",
+    "manifest": "docs/shared-engine-sync-v3.json",
+    "manifest_sha256": "18c389f8670ba377d263460a6a8a480282277c1ac5955cd1201ff71905ef9b3c"
+  },
+  "scope": {
+    "purpose": "Portable package preparation for independently accepted media recovery R2 and structural features R6.",
+    "included_files": [
+      "docs/m2-operator-guide.md",
+      "knowledge/m2-media-recovery-lessons.md",
+      "knowledge/m2-media-recovery-promotion.json",
+      "m2_orchestrator/media_recovery.py",
+      "tests/test_media_recovery.py",
+      "m2_signal/structural_features.py",
+      "tests/test_structural_features.py",
+      "docs/shared-engine-sync-v3.json"
+    ],
+    "media_recovery_acceptance": "R2 independently accepted for one bounded default-helper pilot; video-only original audio and speech remain UNKNOWN.",
+    "structural_features_acceptance": "R6 independently accepted with limitations for bounded real export; frozen module hash is de8b38d225f089762390551542d16579d49da0c7d73bf5fdfcd501aa1bf0474c.",
+    "cluster_contrasts": "excluded_pending_independent_review"
+  },
+  "exact_bindings": [
+    {
+      "path": "docs/m2-operator-guide.md",
+      "sha256": "fd21a050e44b47dfa99f7d077d0538273e8091453c21bfe62fd8434c1b09d6d8",
+      "bytes": 23497
+    },
+    {
+      "path": "knowledge/m2-media-recovery-lessons.md",
+      "sha256": "bb54b4094d854208e97ce076347ec6b1eff7b065196bd967e031a4a35da897ee",
+      "bytes": 5276
+    },
+    {
+      "path": "knowledge/m2-media-recovery-promotion.json",
+      "sha256": "bedcd00063b8bdde7029835365adaa857f9225534fd32a950fc063e9db2db76d",
+      "bytes": 2341
+    },
+    {
+      "path": "m2_orchestrator/media_recovery.py",
+      "sha256": "9c3b5bc614abc8a2667bfca5293c67702c7496b7afa8d8bed01e5db9538de92a",
+      "bytes": 26263
+    },
+    {
+      "path": "tests/test_media_recovery.py",
+      "sha256": "0ef04a7b560000698ea63279518ecdbb33dc37a9a8e082b7c1a08b2b7309f1bc",
+      "bytes": 13585
+    },
+    {
+      "path": "m2_signal/structural_features.py",
+      "sha256": "de8b38d225f089762390551542d16579d49da0c7d73bf5fdfcd501aa1bf0474c",
+      "bytes": 50850
+    },
+    {
+      "path": "tests/test_structural_features.py",
+      "sha256": "dc68352cdc1f107f263a99907c1eb3e846adc7c1a90a658e51dffa539a62e547",
+      "bytes": 28539
+    },
+    {
+      "path": "docs/shared-engine-sync-v3.json",
+      "sha256": "18c389f8670ba377d263460a6a8a480282277c1ac5955cd1201ff71905ef9b3c",
+      "bytes": 2692
+    }
+  ],
+  "runtime": {
+    "implementation": "CPython",
+    "python_version": "3.12.9",
+    "platform": "Darwin",
+    "pytest_version": "9.0.3",
+    "dependency_manifest_changed": false
+  },
+  "validation": {
+    "commands": [
+      "PYTHONPATH=. python3 -m pytest -q tests/test_media_recovery.py tests/test_structural_features.py (CPython 3.12.9 environment)",
+      "PYTHONPATH=. python3 -m py_compile m2_orchestrator/media_recovery.py m2_signal/structural_features.py tests/test_media_recovery.py tests/test_structural_features.py",
+      "manifest-listed file SHA-256 and byte-size verification; public-safe secret/path audit"
+    ],
+    "focused_tests": "45 passed in 0.20s",
+    "compile": "passed",
+    "network": false,
+    "model_load": false,
+    "media_decode": false,
+    "inference": false,
+    "collection": false,
+    "external_write": false,
+    "test_environment": "Project Python 3.12.9 environment; executable path intentionally omitted from portable receipt.",
+    "whitespace_audit": "PASS"
+  },
+  "exclusions": {
+    "cluster_contrasts": true,
+    "raw_runs": true,
+    "source_media": true,
+    "raw_transcripts": true,
+    "reel_or_account_identities": true,
+    "source_urls": true,
+    "signed_urls": true,
+    "credentials": true,
+    "private_absolute_paths": true,
+    "dependency_changes": true,
+    "commit": true,
+    "push": true
+  },
+  "review": {
+    "maker": "luna-radar-package-maker-r3",
+    "independent_reviewer": "PENDING_ROOT_REVIEW",
+    "promotion": "NOT_CLAIMED"
+  },
+  "package_audit": {
+    "manifest_bindings": "PASS",
+    "public_safe_secret_and_private_path_scan": "PASS",
+    "system_aliases_in_source": "/tmp, /private/tmp, /var, /private/var are code-level platform aliases and are permitted",
+    "synthetic_fixture_urls": "tests contain only synthetic cdninstagram.com fixture values; no source URL or Reel identity is included",
+    "errors": [],
+    "violations": []
+  },
+  "new_files": [
+    "docs/reviews/m2-radar-v3-preparation-20260906.json",
+    "docs/shared-engine-sync-v3.json",
+    "m2_orchestrator/media_recovery.py",
+    "m2_signal/structural_features.py",
+    "tests/test_media_recovery.py",
+    "tests/test_structural_features.py"
+  ],
+  "modified_files": [
+    "docs/m2-operator-guide.md",
+    "knowledge/m2-media-recovery-lessons.md",
+    "knowledge/m2-media-recovery-promotion.json"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "m2.shared-engine-sync.v2-overlay",
+  "delivery_id": "m2-radar-v2-media-overlay",
+  "created_at": "2026-09-06",
+  "base_manifest": {
+    "path": "docs/shared-engine-sync.json",
+    "sha256": "ee5c30bf237208adc25f1949f66621eba0d8b230b2501d50c91823bb817c1055"
+  },
+  "scope": "portable reviewed overlay for eligibility inventory, scene candidate evidence, and optional offline transcript recovery",
+  "files": [
+    {
+      "path": "docs/m2-operator-guide.md",
+      "sha256": "dbd339c70243d539a524032bec389ee495b91fc618e83c95894c42f9155ee9c9",
+      "bytes": 21575
+    },
+    {
+      "path": "docs/reviews/media-recovery-20260906-v2.json",
+      "sha256": "f013c926cfb54e86183364071c4f66ea5d83d00069bd2108ed98e8159c9cde07",
+      "bytes": 4472
+    },
+    {
+      "path": "m2_orchestrator/scene_media.py",
+      "sha256": "f0899499d4e8710c4e7f180b04e127527c7bb73690620fd20f6573f77437cf42",
+      "bytes": 12538
+    },
+    {
+      "path": "m2_orchestrator/transcription_chunk_worker.py",
+      "sha256": "7ca8e606ec170f600312a28cda63bc98aa61e6b597414624f5d4710798521a31",
+      "bytes": 30721
+    },
+    {
+      "path": "m2_orchestrator/transcription_recovery.py",
+      "sha256": "aa97d29431c2e75df7aaec9e1996771b2299a5e30d9ad825dfc58d067f76b9a2",
+      "bytes": 37852
+    },
+    {
+      "path": "m2_signal/analysis_eligibility.py",
+      "sha256": "58adaf6157157e398ec0adf0e97c0fad425e23af3ef684d9ab920285c47eedd5",
+      "bytes": 26823
+    },
+    {
+      "path": "scripts/run_m2_transcription_recovery.py",
+      "sha256": "ecdfc594fcaff4aa39acfa9852d9fad0c8fae3d7022ff3da32b147c89b928a27",
+      "bytes": 12157
+    },
+    {
+      "path": "tests/test_analysis_eligibility.py",
+      "sha256": "6f03cecda29afde39100e873e57004db246caf741d12832286d924d3d8c7d156",
+      "bytes": 10776
+    },
+    {
+      "path": "tests/test_scene_media.py",
+      "sha256": "1fc52396789b9b84b07ed0e91599338c5a5e89fdf842b6150b78efe126d4cb45",
+      "bytes": 7039
+    },
+    {
+      "path": "tests/test_transcription_chunk_worker.py",
+      "sha256": "ad7b212565df3722834b21ac3cb970181391c5f0b0aa9291231978b826408eec",
+      "bytes": 22155
+    },
+    {
+      "path": "tests/test_transcription_recovery.py",
+      "sha256": "1f3f17be6b0498946b28b632b911d07bfd158465d95dab2454ddfa823a7e0a26",
+      "bytes": 12124
+    }
+  ],
+  "exclusions": {
+    "source_media_included": false,
+    "raw_transcripts_included": false,
+    "reel_or_account_identities_included": false,
+    "credentials_or_signed_urls_included": false,
+    "server_activated": false,
+    "network": false,
+    "model_load": false,
+    "media_decode": false,
+    "commit": false,
+    "push": false
+  },
+  "review_status": {
+    "analysis_eligibility": "ACCEPT_WITH_LIMITATIONS_FOR_COVERAGE_AND_ELIGIBILITY_INVENTORY",
+    "scene_candidate_extraction": "ACCEPT_WITH_LIMITATIONS_FOR_CANDIDATE_EXTRACTION",
+    "scene_semantics": "COARSE_REVIEWED_64_FRAMES_CANDIDATE_ONLY",
+    "transcription_recovery": "ACCEPT_WITH_LIMITATIONS_BOUNDED_R7_PILOT_COMPLETED_OUTPUT_REVIEW_PENDING",
+    "delivery": "CANDIDATE_STAGED_REVIEW_PENDING"
+  },
+  "candidate_digest": "400fc083e6e8419f1a0b8da6df750697f9ccb413cae737637615324377ba5ca2"
+}

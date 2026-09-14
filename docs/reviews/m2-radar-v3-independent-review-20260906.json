@@ -1,0 +1,28 @@
+{
+  "schema": "m2.radar-delivery-independent-review.v1",
+  "observed_at": "2026-09-06T21:58:33.548044+00:00",
+  "maker": "luna-radar-package-maker-r3",
+  "reviewer": "root-supervisor",
+  "verdict": "ACCEPT_WITH_LIMITATIONS_FOR_PORTABLE_GIT_DELIVERY",
+  "preparation_receipt_sha256": "63385d4ac7ffb4aa6d58cd8a1c16a328001fb539506514536bca2779064b0eea",
+  "candidate_files_checked": 8,
+  "shared_current_source_matches": 6,
+  "validation": {
+    "focused_tests": 106,
+    "python": "3.12.9",
+    "network": false,
+    "model_load": false,
+    "actual_media_decode": false,
+    "private_path_and_source_identity_scan": "PASS"
+  },
+  "limitations": [
+    "Component and portable package acceptance only; corpus completion, acoustic quality, final semantic analysis, free generation and deployment are not claimed.",
+    "Private source evidence remains retained locally and is excluded from public Git.",
+    "Default system Python lacked pytest; tests passed with project Python 3.12.9."
+  ],
+  "delivery_targets": [
+    "mcharniuk1-spec/m2lab-radar:main",
+    "MickaelAmpl/m2lab-radar:Latest"
+  ],
+  "partner_main_mutation": false
+}

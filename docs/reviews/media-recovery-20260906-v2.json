@@ -1,0 +1,92 @@
+{
+  "schema": "m2.radar-media-delivery-review.v2",
+  "review_id": "media-recovery-delivery-r2",
+  "reviewed_at": "2026-09-06",
+  "verdict": "CANDIDATE_STAGED_REVIEW_PENDING",
+  "scope": {
+    "analysis_inventory": [
+      "m2_signal/analysis_eligibility.py",
+      "tests/test_analysis_eligibility.py"
+    ],
+    "scene_candidate_extraction": [
+      "m2_orchestrator/scene_media.py",
+      "tests/test_scene_media.py"
+    ],
+    "optional_transcription_recovery": [
+      "m2_orchestrator/transcription_recovery.py",
+      "m2_orchestrator/transcription_chunk_worker.py",
+      "scripts/run_m2_transcription_recovery.py",
+      "tests/test_transcription_recovery.py",
+      "tests/test_transcription_chunk_worker.py"
+    ]
+  },
+  "checks": {
+    "focused_tests_command": "python3 -m pytest -q tests/test_analysis_eligibility.py tests/test_scene_media.py tests/test_transcription_recovery.py tests/test_transcription_chunk_worker.py",
+    "focused_tests_result": "61 passed in 0.23s",
+    "network": 0,
+    "model_load": 0,
+    "media_decode": 0,
+    "inference": 0,
+    "external_write": 0,
+    "source_media_included": false,
+    "raw_transcripts_included": false,
+    "server_activated": false,
+    "actual_recovery_r7_pilot": "COMPLETED_BOUNDED_PILOT_ONE_RETRY_OUTPUT_REVIEW_PENDING",
+    "full_corpus_completion": false,
+    "actual_recovery_r7_pilot_summary": {
+      "completed_chunks": 5,
+      "retry_count": 1,
+      "aggregate_observation_state": "SUSPICIOUS_TIMINGS",
+      "analysis_ready": false,
+      "approved": false,
+      "overlap_accounting": "NON_ADDITIVE_FOR_PADDING_OVERLAP",
+      "resource_receipt": "RETAINED_PRIVATE_OPERATOR_RECEIPT",
+      "chunk_metric_sums": {
+        "lexical_word_count": 276,
+        "aligned_word_count": 253,
+        "unaligned_word_count": 23
+      },
+      "additivity": "NON_ADDITIVE_FOR_PADDING_OVERLAP",
+      "owned_aligned_word_count": 229,
+      "aggregate_metrics": {
+        "lexical_word_count": null,
+        "aligned_word_count": null,
+        "unaligned_word_count": null
+      }
+    }
+  },
+  "scene_evidence_review": {
+    "frames_covered": 64,
+    "collages_inspected": 17,
+    "semantic_state": "CANDIDATE_NOT_ACCEPTED",
+    "technical_frame_evidence": "HASH_AND_PTS_BOUND",
+    "public_display_allowed": false,
+    "limitations": [
+      "64 frames were reviewed as coarse scene evidence; this does not establish complete visual coverage, confirmed shots, business claims, or semantic acceptance."
+    ]
+  },
+  "source_review_receipts": {
+    "scene_media_maker": "runs/20260906-media-acquisition-v1/lanes/scene-media-r1/scene-media-r1-receipt.json",
+    "scene_semantic_review": "runs/20260906-media-acquisition-v1/lanes/scene-semantic-review-r3/scene-semantic-review-r3-receipt.json",
+    "transcription_recovery_review": "runs/20260906-media-acquisition-v1/lanes/transcription-recovery-r7/transcription-recovery-review-r7-receipt.json",
+    "analysis_eligibility_review": "runs/20260906-media-acquisition-v1/lanes/analysis-eligibility-r3/independent-review-r1-receipt.json",
+    "actual_r7_execution": "runs/20260906-media-acquisition-v1/transcription-recovery-pilot-r7-inputs/execution-receipt.json"
+  },
+  "limitations": [
+    "This packet is a portable candidate overlay for independent review; it does not activate the server or alter the frozen corpus ledger.",
+    "The bounded R7 pilot completed with one retried chunk and remains evidence-only: independent output, boundary, timing, and acoustic review is pending.",
+    "The final recovery aggregate is SUSPICIOUS_TIMINGS with analysis_ready=false and approved=false; multi-window overlap counts are explicitly non-additive.",
+    "The analysis eligibility output is an inventory gate, not a fitted model, causal result, or acoustic-quality claim.",
+    "Scene extraction is technical candidate evidence only; independent semantic review remains required for later promotion.",
+    "Run-specific source media, transcripts, account/Reel identities, credentials, and private absolute paths are excluded."
+  ],
+  "next_action": "Independent reviewer verifies staged hashes and decides whether to admit the optional recovery preflight; no automatic acceptance.",
+  "source_review_receipt_sha256": {
+    "actual_r7_execution": "225707e530aa77b959922a70ed71fc1602b307ef0a3625de1b50a59c196011fa"
+  },
+  "preparer": "luna_acquisition_manifest",
+  "independent_review": {
+    "status": "PENDING",
+    "reviewer": "PENDING_INDEPENDENT_REVIEW"
+  }
+}

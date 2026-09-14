@@ -1,0 +1,224 @@
+{
+  "schema": "m2.editorial-scriptcard.v1",
+  "card_id": "M2-P01",
+  "title": "The appointment reply your workflow forgot",
+  "duration_seconds": 60,
+  "fps": 30,
+  "publication_group": "regular",
+  "synthesis": true,
+  "hooks": [
+    "What happens when the customer replies, 'Maybe next week'?",
+    "Before automating reminders, draw what happens when the answer is no.",
+    "The most useful box in an appointment map is the exception queue."
+  ],
+  "full_spoken_english": "What happens when the customer replies, 'Maybe next week'? An appointment demo might show a booking, a reminder, and a happy confirmation. Put that uncertain reply into the middle. Now draw three branches: confirmed, wants a change, and unclear. Add a fourth for no response. AI could suggest a category and draft the next message. In your first test, keep the original reply visible and check the suggestion. For 'maybe next week,' show the staff member a question to resolve. Don't quietly turn it into a confirmed date. Give each branch an owner and an agreed next step. You can sketch this with paper before connecting any software. Take one reminder your business sends. Write the most awkward reply underneath it. Does your process have somewhere for that reply to go?",
+  "word_count": 131,
+  "cta": "Take one reminder your business sends. Write the most awkward reply underneath it. Does your process have somewhere for that reply to go?",
+  "fixture": {
+    "input": "Customer reply: Maybe next week.",
+    "designed_output": "Suggested category: unclear; staff question: which date works? No confirmed reschedule.",
+    "check": "Uncertainty stays visible; decision assigned to staff.",
+    "state": "DESIGNED_NOT_MODEL_EXECUTED"
+  },
+  "audio_plan": "Natural recorded voice; no imitation. Quiet room; optional subtle licensed music only after voice intelligibility check. No sound needed to understand proof panels.",
+  "caption_plan": "Editable sentence captions, maximum two short lines; keep proof labels clear. Captions paraphrase nothing that changes a fact. Final platform safe-zone check after edit.",
+  "shots": [
+    {
+      "shot_id": "M2-P01-S01",
+      "start_ms": 0,
+      "end_ms": 4000,
+      "mode": "a_roll",
+      "visual": "A-roll: presenter folds away a straight-line booking diagram.",
+      "on_screen_text": "Text: TEST THE CHANGE.",
+      "information_job": "Reframe the process around exceptions.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P01-S01-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P01-S02",
+      "start_ms": 4000,
+      "end_ms": 13000,
+      "mode": "demo",
+      "visual": "B-roll: original three-node happy path appears.",
+      "on_screen_text": "Fictional path; text: HAPPY PATH.",
+      "information_job": "Show the incomplete model.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P01-S02-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P01-S03",
+      "start_ms": 13000,
+      "end_ms": 20000,
+      "mode": "demo",
+      "visual": "Top-down four-way branch diagram on paper: confirmed, change, unclear and no response.",
+      "on_screen_text": "CONFIRMED / CHANGE / UNCLEAR / NO RESPONSE",
+      "information_job": "Name the important exception types.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P01-S03-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P01-S04",
+      "start_ms": 20000,
+      "end_ms": 31000,
+      "mode": "demo",
+      "visual": "Split-screen: prepared route left; review queue right.",
+      "on_screen_text": "Text: UNCERTAIN → HUMAN REVIEW.",
+      "information_job": "Set an assistance and escalation boundary.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P01-S04-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P01-S05",
+      "start_ms": 31000,
+      "end_ms": 40000,
+      "mode": "demo",
+      "visual": "Close-up of original reply Maybe next week beside staff question Which date works?; confirmed-date box stays empty.",
+      "on_screen_text": "UNCLEAR → ASK",
+      "information_job": "Make authority and evidence inspectable.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P01-S05-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P01-S06",
+      "start_ms": 40000,
+      "end_ms": 49000,
+      "mode": "demo",
+      "visual": "Wide top-down branch map with a staff-role card and next-action card attached to every branch.",
+      "on_screen_text": "OWNER + NEXT STEP",
+      "information_job": "State the demonstration limit.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P01-S06-owner-visual"
+      ]
+    },
+    {
+      "shot_id": "M2-P01-S07",
+      "start_ms": 49000,
+      "end_ms": 60000,
+      "mode": "motion_graphic",
+      "visual": "Hold a blank four-branch appointment worksheet.",
+      "on_screen_text": "CONFIRMED / CHANGE / UNCLEAR / NO RESPONSE",
+      "information_job": "Give a concrete mapping action.",
+      "transition": "Cut on the named object or changed information; keep the same problem visible.",
+      "asset_ids": [
+        "M2-P01-S07-owner-visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 4000,
+      "spoken_text": "What happens when the customer replies, 'Maybe next week'?"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 13000,
+      "spoken_text": "An appointment demo might show a booking, a reminder, and a happy confirmation. Put that uncertain reply into the middle."
+    },
+    {
+      "start_ms": 13000,
+      "end_ms": 20000,
+      "spoken_text": "Now draw three branches: confirmed, wants a change, and unclear. Add a fourth for no response."
+    },
+    {
+      "start_ms": 20000,
+      "end_ms": 31000,
+      "spoken_text": "AI could suggest a category and draft the next message. In your first test, keep the original reply visible and check the suggestion."
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 40000,
+      "spoken_text": "For 'maybe next week,' show the staff member a question to resolve. Don't quietly turn it into a confirmed date."
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 49000,
+      "spoken_text": "Give each branch an owner and an agreed next step. You can sketch this with paper before connecting any software."
+    },
+    {
+      "start_ms": 49000,
+      "end_ms": 60000,
+      "spoken_text": "Take one reminder your business sends. Write the most awkward reply underneath it. Does your process have somewhere for that reply to go?"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "M2-P01-S01-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "A-roll: presenter folds away a straight-line booking diagram.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P01-S02-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "B-roll: original three-node happy path appears.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P01-S03-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Top-down four-way branch diagram on paper: confirmed, change, unclear and no response.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P01-S04-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Split-screen: prepared route left; review queue right.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P01-S05-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Close-up of original reply Maybe next week beside staff question Which date works?; confirmed-date box stays empty.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P01-S06-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Wide top-down branch map with a staff-role card and next-action card attached to every branch.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P01-S07-owner-visual",
+      "kind": "video",
+      "production_route": "owner_recording",
+      "purpose": "Hold a blank four-branch appointment worksheet.",
+      "state": "AWAITING_OWNER_ASSET"
+    },
+    {
+      "asset_id": "M2-P01-owner-speech",
+      "kind": "audio",
+      "production_route": "owner_recording",
+      "purpose": "Exact spoken track; real timing and alignment required",
+      "state": "AWAITING_OWNER_ASSET"
+    }
+  ],
+  "editorial_review_state": "ACCEPTED_WITH_LIMITATIONS_OWNER_SHOOT_PENDING",
+  "source_candidate_sha256": "51dc9bf5daca7bf6caa307ae58677563471dd14a4d643531395df4e4a6bb7853",
+  "source_reference_count": 3,
+  "source_evidence_scope": "Dated private reference packets; full-text and limited sampled-frame review. Private source mapping remains in Notion/run evidence.",
+  "storyboard": {
+    "path": "storyboards/M2-P01.png",
+    "kind": "ILLUSTRATED_CONTACT_SHEET",
+    "panels": 7,
+    "use": "Composition guide only; not an owner take, product output, or production asset binding."
+  },
+  "provider_execution": false
+}

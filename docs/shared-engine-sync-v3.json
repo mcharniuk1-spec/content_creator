@@ -1,0 +1,72 @@
+{
+  "schema": "m2.shared-engine-sync.v3",
+  "delivery_id": "m2-radar-v3-recovery-structural",
+  "created_at": "2026-09-06",
+  "base_manifest": {
+    "path": "docs/shared-engine-sync-v2.json",
+    "sha256": "293d1da4bf0f30ab05f8fb8558074a167cb429e84a8eb216f07c8b8349915f51"
+  },
+  "scope": "portable preparation overlay for independently accepted media recovery R2 and structural features R6",
+  "files": [
+    {
+      "path": "docs/m2-operator-guide.md",
+      "sha256": "fd21a050e44b47dfa99f7d077d0538273e8091453c21bfe62fd8434c1b09d6d8",
+      "bytes": 23497
+    },
+    {
+      "path": "knowledge/m2-media-recovery-lessons.md",
+      "sha256": "bb54b4094d854208e97ce076347ec6b1eff7b065196bd967e031a4a35da897ee",
+      "bytes": 5276
+    },
+    {
+      "path": "knowledge/m2-media-recovery-promotion.json",
+      "sha256": "bedcd00063b8bdde7029835365adaa857f9225534fd32a950fc063e9db2db76d",
+      "bytes": 2341
+    },
+    {
+      "path": "m2_orchestrator/media_recovery.py",
+      "sha256": "9c3b5bc614abc8a2667bfca5293c67702c7496b7afa8d8bed01e5db9538de92a",
+      "bytes": 26263
+    },
+    {
+      "path": "tests/test_media_recovery.py",
+      "sha256": "0ef04a7b560000698ea63279518ecdbb33dc37a9a8e082b7c1a08b2b7309f1bc",
+      "bytes": 13585
+    },
+    {
+      "path": "m2_signal/structural_features.py",
+      "sha256": "de8b38d225f089762390551542d16579d49da0c7d73bf5fdfcd501aa1bf0474c",
+      "bytes": 50850
+    },
+    {
+      "path": "tests/test_structural_features.py",
+      "sha256": "dc68352cdc1f107f263a99907c1eb3e846adc7c1a90a658e51dffa539a62e547",
+      "bytes": 28539
+    }
+  ],
+  "source_acceptance": {
+    "media_recovery": "media-recovery-r2 independently accepted for bounded default-helper pilot; video-only original audio and speech remain UNKNOWN",
+    "structural_features": "structural-features-r6 ACCEPT_WITH_LIMITATIONS_FOR_BOUNDED_REAL_EXPORT; module frozen at de8b38d225f089762390551542d16579d49da0c7d73bf5fdfcd501aa1bf0474c"
+  },
+  "exclusions": {
+    "cluster_contrasts": true,
+    "source_media_included": false,
+    "raw_runs_included": false,
+    "raw_transcripts_included": false,
+    "reel_or_account_identities_included": false,
+    "credentials_or_signed_urls_included": false,
+    "private_absolute_paths_included": false,
+    "network": false,
+    "model_load": false,
+    "media_decode": false,
+    "inference": false,
+    "collection_dependencies_changed": false,
+    "commit": false,
+    "push": false
+  },
+  "review_status": {
+    "media_recovery": "ACCEPT_WITH_LIMITATIONS_BOUNDED_DEFAULT_HELPER_PILOT",
+    "structural_features": "ACCEPT_WITH_LIMITATIONS_FOR_BOUNDED_REAL_EXPORT",
+    "delivery": "PREPARATION_INDEPENDENT_FINAL_REVIEW_PENDING"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "m2.repository-knowledge-promotion.v2",
+  "observed_at": "2026-09-06T21:37:08.577686+00:00",
+  "maker": "root-supervisor",
+  "reviewer": "luna-review",
+  "review_sha256": "873685b1362abb675d321caa88b703f69e19123bbddf80bbb539c893ad4d0393",
+  "candidate_sha256": "5e3689291e541cc2227922f3c661367ee3c146f89e009b33f2edc625f65a1ef0",
+  "previous_target_sha256": "c61a95aa60cf00df8a7b96032f999f7292669e566c976c3239d539b85ee45f66",
+  "target": "knowledge/m2-media-recovery-lessons.md",
+  "target_sha256": "bb54b4094d854208e97ce076347ec6b1eff7b065196bd967e031a4a35da897ee",
+  "scope": "REVIEWED_METHODS_ONLY",
+  "external_writes": false,
+  "source_receipts": {
+    "lanes/acquisition-review/dispatcher-review-r4-first8-receipt.json": "4b5810cbf254801e5578f6804785e1888af0006f03b6fed7db442f5ac48157ac",
+    "lanes/scene-review-r2/scene-pilot-r2-final-review-receipt.json": "d54cba38bc34947bddd2caf4bbef35268a0c2825fcab027936b1e5e676a4842a",
+    "lanes/transcript-structure-r2/independent-review-r1-receipt.json": "e03b5fc38fdf205541af6fdd436da2fdd8a1acba47f2336ff490811b60cc0896",
+    "lanes/transcript-structure-batch02-r1/independent-review-r1-receipt.json": "f856578ea870da0fb8d448762e79bffe674d0baa10e94e47204b5ea9e66ea615",
+    "lanes/video-backend-research/hosted-receipt.json": "962a68e36516c1e93049cb6f0b5fb0001822354b0b49280add6b76ac837a82fa",
+    "lanes/video-backend-research/official-preflight-r2/receipt.json": "3dd9e8245512eb36fdb99b4cc13f7f2b49948e8843af523560103573d85d822c",
+    "lanes/video-backend-research/official-preflight-r2/reconciliation-receipt.json": "83e6cc971ee96aacf3514e23a92b2e02acda723bae7bf161db0df8c5008570ea",
+    "lanes/loore-contract/contract-review.json": "c9a82b41c17b709ad3c936162fa6931c19f843e18f916f5f13f95532bff8e00a",
+    "transcription-recovery-pilot-r7-inputs/independent-review-receipt.json": "d9ad628a84330f2a1fe09449a82c4c2b2f39b6f2fa316003a41728c5f5b54d05",
+    "video-only-pilot-r2-inputs/independent-review-receipt.json": "ceb95159facb1c489a29fab40b0f485caeac981efc825700b62e1d45b4a806d0",
+    "lanes/scene-batch02-r2/independent-review-r1-receipt.json": "2439fd1edd758cfc9fe8e75c5296fd9bed94e7836b4a28b9f56074260427425c",
+    "corpus-local-r1/config.json": "f0d094f87768432069960da94adb87cd100ea8a657bb725bcfdbd69bd827bd48"
+  },
+  "run_root": "runs/20260906-media-acquisition-v1"
+}

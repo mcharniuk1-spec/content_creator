@@ -1,13 +1,20 @@
-> English rendering of RULES.md (Russian original is authoritative). Generated 2026-09-13 for Max.
+> English rendering of RULES.md (Russian original is authoritative). Generated 2026-09-13 for Max,
+> refreshed 2026-09-14 after the freshness window was rolled back to 14 days.
 
 # Rules for selecting topics for M2 Lab
 
 Layer 2: how a radar signal becomes a "take / don't take" decision.
 Draft from 1 September 2026. Written after a grilling session, needs edits from Misha.
 
+**Changes on 14 September 2026, decisions by Misha:** the freshness threshold goes **back to
+14 days**, cancelling point 1 of 12 September. The reason is resources, not editorial: a 30-day
+window lifted the candidate pool from 119 to 596 reels, and the server cannot take the top of
+that apart inside one run. Every other decision of 12 September stands.
+
 **Changes on 12 September 2026, decisions by Misha (applied in `cards.py`, the engine prompts,
 on the server, and in Notion):**
-1. Freshness threshold **30 days** instead of 14 (§1.1, §6, §8).
+1. Freshness threshold **30 days** instead of 14 (§1.1, §6, §8). *Rolled back to 14 days on
+   14 September 2026 — see the entry above.*
 2. Comment-bait **is allowed and should be used**: a call to "write a word in the comments"
    builds an audience and hooks it. Copying the call itself from the reference video is fine
    (§1.2, §7).
@@ -53,7 +60,7 @@ Criteria are objective and checked mechanically.
 | Account outside the niche: fashion, finance, trading, real estate, products, geopolitics | Irrelevant reach is not neutral: it hits engagement, and then distribution |
 | Humorous or entertainment video | Misha's decision from 1 September |
 | Not English-language | Mixing languages within an account is prohibited |
-| Topic older than 30 days | Single freshness threshold (14 → 30 as of 12 September 2026) |
+| Topic older than 14 days | Single freshness threshold (14 → 30 on 12 September 2026, back to 14 on 14 September 2026) |
 
 **Niche boundary, decision from 1 September.** "How to make money with AI" is an adjacent
 niche, not ours. Ours is AI in business processes. An account whose topic is income from AI
@@ -104,7 +111,7 @@ thousand views.** The format decides what we talk about and what we must prove, 
 metric we look at.
 
 **Creator, not video (as of 12 September 2026).** A creator enters the pool if at least one
-of their videos in the past 30 days exceeded their own baseline by 1.5x. From there we look
+of their videos in the past 14 days exceeded their own baseline by 1.5x. From there we look
 at **all** of their videos in the window: out of five posted, a card can also be built from
 the one that did not perform on its own, if it has high shares and saves. The "one video per
 creator" limit no longer exists.
@@ -283,7 +290,7 @@ Over a month this gives the stated 35 / 40 / 25.
 
 | Situation | What we do |
 |---|---|
-| Nothing found for a format within 30 days | We take from the POV list: five theses from the working document, each of which must become a video once a quarter |
+| Nothing found for a format within 14 days | We take from the POV list: five theses from the working document, each of which must become a video once a quarter |
 | Too many signals | We cut by priority; we don't stockpile the rest, it will go stale within a week |
 | Topic repeats for a third week running | Either move it to Teardown with more depth, or close it for a month |
 | Reference made the top on the strength of its rates, but fell short on views | We flag it and show it separately: it hasn't «залетело» (blown up), it has «резонировало у своих» (resonated with its own following) |
@@ -325,7 +332,7 @@ any conclusion.
 We compare: did the video the radar considered a strong angle land in the top third of our
 own videos by shares per thousand views.
 
-We adjust based on the results: the formula's weights, the 30-day freshness threshold, the
+We adjust based on the results: the formula's weights, the 14-day freshness threshold, the
 formats' pass criteria.
 
 We look at our own statistics, which no competitor measurement has: reach split by followers
